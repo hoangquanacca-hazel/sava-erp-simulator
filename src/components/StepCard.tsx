@@ -339,7 +339,7 @@ export const StepCard: React.FC<StepCardProps> = ({
                     PASS — Đạt chuẩn (Accept)
                   </span>
                   <span className="text-[11px] text-slate-400 mt-0.5 block leading-tight">
-                    Lô hàng đạt 100% tiêu chuẩn OEM. Chuyển sang Unrestricted Use và cho phép xuất giao hàng.
+                    Movement 321E: Quality Inspection → Unrestricted Use. Không sinh bút toán FI. Cho phép xuất giao hàng.
                   </span>
                 </div>
               </button>
@@ -361,7 +361,7 @@ export const StepCard: React.FC<StepCardProps> = ({
                     FAIL — Lỗi kiểm định (Reject / Block)
                   </span>
                   <span className="text-[11px] text-slate-400 mt-0.5 block leading-tight">
-                    Phát hiện bọt khí và ba-via khuôn. Khóa lô hàng vào Blocked Stock và CHẶN tiến trình giao hàng.
+                    Movement 350E: chuyển Blocked Stock. Không sinh bút toán FI. CHẶN tiến trình giao hàng.
                   </span>
                 </div>
               </button>

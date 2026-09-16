@@ -303,12 +303,13 @@ export const STEP_DEFINITIONS: StepDefinition[] = [
     id: 4,
     title: 'Kiểm Định Chất Lượng & Quyết Định Sử Dụng (UD)',
     sapModule: 'QM',
-    tCode: 'QA11',
+    tCode: 'QA11 · MM 321E/350E',
+    movementType: '321E / 350E',
     shortDesc: 'Bộ phận KCS kiểm tra độ co ngót, bọt khí, kích thước khuôn mẫu và đưa ra Usage Decision.',
     detailedAction:
-      'KCS mở Inspection Lot trên T-code QA11. Lựa chọn Quyết định sử dụng: Pass (Đạt - chuyển kho sử dụng) hoặc Fail (Lỗi - chặn xuất kho và kích hoạt nhánh Rework xử lý).',
+      'KCS mở Inspection Lot trên T-code QA11. Pass: movement 321E chuyển Quality Inspection → Unrestricted (không sinh FI). Fail: movement 350E chuyển → Blocked Stock (không sinh FI).',
     learningPoint:
-      'Nếu Fail, hệ thống KHÓA không cho thực hiện giao hàng bước 5. Doanh nghiệp bắt buộc phải xử lý nhánh Rework (Sửa chữa phát sinh chi phí hoặc Nhượng bộ kỹ thuật) mới được mở khóa.',
+      '321E (Pass→unrestricted) và 350E (Fail→blocked) là stock-status moves, KHÔNG sinh bút toán FI. Nếu Fail, hệ thống KHÓA giao hàng bước 5 cho đến khi Rework/Scrap/Concession.',
   },
   {
     id: 5,
