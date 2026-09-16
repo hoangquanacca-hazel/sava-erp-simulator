@@ -100,6 +100,75 @@ export interface MTOComputed {
   plannedCOGS: number;
   grossProfit: number;
   grossMarginPercent: number;
+  /** Alias of actualCostVariance — StepCard / AI tutor read this name. */
+  varianceAmount: number;
+}
+
+/** Universal Journal (ACDOCA) line — S/4HANA account-based actuals. */
+export interface AcdocaLine {
+  txnId: string;
+  lineId: string;
+  stepId: number;
+  tCode: string;
+  movementType?: string;
+  glAccount: string;
+  accountName: string;
+  drAmount: number;
+  crAmount: number;
+  kaufn?: string;
+  kposn?: string;
+  kunnr?: string;
+  matnr?: string;
+  werks?: string;
+  prctr?: string;
+  kostl?: string;
+  valuationView: 'legal';
+  currency: 'VND';
+  timestamp: string;
+}
+
+export interface AcdocaPostingLine {
+  glAccount: string;
+  accountName: string;
+  drAmount?: number;
+  crAmount?: number;
+  kaufn?: string;
+  kposn?: string;
+  kunnr?: string;
+  matnr?: string;
+  werks?: string;
+  prctr?: string;
+  kostl?: string;
+}
+
+export interface CogsSplitResult {
+  totalCogs: number;
+  rVL: number;
+  rNC: number;
+  rMay: number;
+  rSXC: number;
+  amtVL: number;
+  amtNC: number;
+  amtMay: number;
+  amtSXC: number;
+  sumSplit: number;
+  balanced: boolean;
+}
+
+export interface MarginAnalysisResult {
+  revenue511: number;
+  cogs632110: number;
+  cogs632120: number;
+  cogs632130: number;
+  cogs632140: number;
+  cogsSplitTotal: number;
+  cogsStatutory632: number;
+  settledVariance: number;
+  standardGrossProfit: number;
+  actualGrossProfit: number;
+  actualMarginPercent: number;
+  orderCardGrossProfit: number;
+  matchesOrderCard: boolean;
 }
 
 export interface JournalEntry {

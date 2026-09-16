@@ -5,8 +5,10 @@ import {
   MTOComputed,
   UIMode,
   TrialBalanceResult,
+  AcdocaLine,
 } from '../types';
 import { formatVND, computeTrialBalance } from '../utils/calculator';
+import { selectTrialBalance } from '../utils/acdoca';
 import { exportFullERPPackageExcel } from '../utils/excelService';
 import {
   BookOpen,
@@ -29,6 +31,7 @@ import {
 
 interface LedgerPanelProps {
   entries: JournalEntry[];
+  acdocaTable?: AcdocaLine[];
   params?: MTOParameters;
   computed?: MTOComputed;
   currentStepId?: number;
@@ -65,6 +68,7 @@ const STEP_ACTIVE_ACCOUNTS: Record<number, { accounts: string[]; label: string }
 
 export const LedgerPanel: React.FC<LedgerPanelProps> = ({
   entries,
+  acdocaTable,
   params,
   computed,
   currentStepId = 1,
@@ -85,10 +89,13 @@ export const LedgerPanel: React.FC<LedgerPanelProps> = ({
   const variance = totalDebit - totalCredit;
   const isBalanced = entries.length > 0 ? variance === 0 : true;
 
-  // Compute Trial Balance
+  // Trial Balance is always derived from ACDOCA selectors (Universal Journal).
   const trialBalance: TrialBalanceResult = useMemo(() => {
+    if (acdocaTable && acdocaTable.length > 0) {
+      return selectTrialBalance(acdocaTable);
+    }
     return computeTrialBalance(entries);
-  }, [entries]);
+  }, [entries, acdocaTable]);
 
   // Check if any filter is actively applied
   const isFiltered =

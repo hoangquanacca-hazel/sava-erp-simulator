@@ -21,6 +21,10 @@ import {
   exportEntriesToJSON,
   formatVND,
 } from './utils/calculator';
+import {
+  rebuildAcdocaFromJournal,
+  assertParity,
+} from './utils/acdoca';
 import { exportFullERPPackageExcel } from './utils/excelService';
 import { Header } from './components/Header';
 import { CommandBar } from './components/CommandBar';
@@ -134,6 +138,14 @@ export default function App() {
     }
     return list;
   }, [stepStates]);
+
+  const ACDOCA_TABLE = useMemo(() => {
+    const table = rebuildAcdocaFromJournal(allJournalEntries, params);
+    if (allJournalEntries.length > 0) {
+      assertParity(allJournalEntries, table, `${params.stockType} full ledger`);
+    }
+    return table;
+  }, [allJournalEntries, params]);
 
   // Inventory & Sales Order states updated in real-time
   const stockEState = useMemo(() => {
@@ -658,6 +670,7 @@ export default function App() {
               {/* General Ledger Panel (Full width) */}
               <LedgerPanel
                 entries={allJournalEntries}
+                acdocaTable={ACDOCA_TABLE}
                 params={params}
                 computed={computed}
                 currentStepId={currentStepId}
