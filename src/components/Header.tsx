@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   RotateCcw,
   Download,
@@ -28,6 +28,7 @@ import {
 } from 'lucide-react';
 import { PRESET_SCENARIOS, PresetScenario, SAP_TCODES_LIST, UIMode, AdminSettings } from '../types';
 import { TCodeLookupModal } from './TCodeLookupModal';
+import { UserGuideModal } from './UserGuideModal';
 
 interface HeaderProps {
   onReset: () => void;
@@ -71,6 +72,19 @@ export const Header: React.FC<HeaderProps> = ({
   onOpenAdminDashboard,
 }) => {
   const [tCodeModalOpen, setTCodeModalOpen] = useState(false);
+  const [guideModalOpen, setGuideModalOpen] = useState(false);
+
+  // Auto-open the user guide on the very first visit (once per browser).
+  useEffect(() => {
+    try {
+      if (!localStorage.getItem('sava_guide_seen')) {
+        setGuideModalOpen(true);
+        localStorage.setItem('sava_guide_seen', '1');
+      }
+    } catch {
+      /* localStorage unavailable — skip auto-open */
+    }
+  }, []);
   const [commandInput, setCommandInput] = useState('');
   const [commandFeedback, setCommandFeedback] = useState<string | null>(null);
 
@@ -344,6 +358,20 @@ export const Header: React.FC<HeaderProps> = ({
               <span>Tra cứu T-Code</span>
             </button>
 
+            {/* Hướng dẫn sử dụng */}
+            <button
+              onClick={() => setGuideModalOpen(true)}
+              className={`px-2.5 py-1.5 rounded border text-xs font-semibold flex items-center gap-1.5 transition-all cursor-pointer shadow-sm ${
+                isClassic
+                  ? 'bg-[#ece9d8] hover:bg-[#e0dcc8] text-[#333333] border-[#7f9db9]'
+                  : 'bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-300 border-emerald-500/40 hover:border-emerald-400'
+              }`}
+              title="Mở hướng dẫn sử dụng: cách chạy mô phỏng, đọc sổ sách và các điểm học cốt lõi"
+            >
+              <HelpCircle className="w-3.5 h-3.5 text-emerald-500" />
+              <span>Hướng dẫn</span>
+            </button>
+
             {/* Preset Selector */}
             <div className="relative">
               <select
@@ -471,6 +499,9 @@ export const Header: React.FC<HeaderProps> = ({
         onNavigateToStep={onNavigateToStep}
         onGoToSimulation={onGoToSimulation}
       />
+
+      {/* Hướng dẫn sử dụng Modal */}
+      <UserGuideModal isOpen={guideModalOpen} onClose={() => setGuideModalOpen(false)} uiMode={uiMode} />
     </>
   );
 };
