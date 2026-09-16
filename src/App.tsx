@@ -34,6 +34,7 @@ import { PDFReportModal } from './components/PDFReportModal';
 import { SAPClassicMenu } from './components/SAPClassicMenu';
 import { LeadCaptureModal } from './components/LeadCaptureModal';
 import { AdminDashboardModal } from './components/AdminDashboardModal';
+import { track } from './utils/analytics';
 import { SessionLimitBanner } from './components/SessionLimitBanner';
 import { OrderProfitDashboard } from './components/OrderProfitDashboard';
 import {
@@ -310,6 +311,7 @@ export default function App() {
   };
 
   const handleExecuteStep = (stepId: number) => {
+    track('step_executed', { step: stepId });
     // Step 1 & 2 are free. Step 3 (In-house production) triggers gatekeeper
     if (stepId >= 3 && !isRegistered && !adminSettings.bypassSessionLimits) {
       setLeadModalTriggerReason('step3');

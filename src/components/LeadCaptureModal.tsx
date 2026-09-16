@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { track } from '../utils/analytics';
 import {
   ShieldCheck,
   X,
@@ -125,6 +126,36 @@ export const LeadCaptureModal: React.FC<LeadCaptureModalProps> = ({
     } catch (err) {
       console.warn('Could not write lead to localStorage:', err);
     }
+
+    // Send the lead to Netlify Forms so it reaches the owner centrally
+    // (localStorage above only lives in the visitor's own browser).
+    // Non-blocking: a network failure must never stop the user from proceeding.
+    try {
+      const payload: Record<string, string> = {
+        'form-name': 'lead',
+        fullName: newUser.fullName,
+        email: newUser.email,
+        phone: newUser.phone,
+        role: newUser.role,
+        company: newUser.company,
+        receiveMaterials: String(newUser.receiveMaterials),
+        consentPolicy: String(newUser.consentPolicy),
+        registeredAt: newUser.registeredAt,
+        source: triggerReason || 'general',
+      };
+      const body = Object.keys(payload)
+        .map((k) => encodeURIComponent(k) + '=' + encodeURIComponent(payload[k]))
+        .join('&');
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body,
+      }).catch(() => {});
+    } catch {
+      /* ignore network/encoding errors */
+    }
+
+    track('lead_captured', { role: newUser.role, source: triggerReason || 'general' });
 
     onSuccess(newUser);
   };
