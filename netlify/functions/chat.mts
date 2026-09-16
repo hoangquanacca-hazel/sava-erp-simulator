@@ -164,7 +164,17 @@ function getApiKey(): string {
 
 // Hard cap so the function always responds well within Netlify's limit,
 // instead of hanging (and returning a 504) when Gemini is slow or the key is bad.
-const GEMINI_TIMEOUT_MS = 8000;
+const GEMINI_TIMEOUT_MS = 9500;
+
+// Model is overridable via env var so a future Google deprecation is a config
+// change, not a code change. Default tracks the current recommended flash model.
+function getModel(): string {
+  const raw =
+    (globalThis as any)?.Netlify?.env?.get?.('GEMINI_MODEL') ??
+    process.env.GEMINI_MODEL ??
+    '';
+  return String(raw).trim().replace(/^['"]|['"]$/g, '') || 'gemini-3.6-flash';
+}
 
 let geminiClient: GoogleGenAI | null = null;
 function getGeminiClient(): GoogleGenAI | null {
@@ -203,7 +213,7 @@ ${message}`;
 
     const geminiPromise = client.models
       .generateContent({
-        model: 'gemini-2.5-flash',
+        model: getModel(),
         contents: promptText,
         config: { systemInstruction, temperature: 0.3 },
       })
