@@ -41,13 +41,15 @@ export function accountNameOf(glAccount: string, fallback?: string): string {
   return fallback || ACCOUNT_NAMES[glAccount] || `Tài khoản ${glAccount}`;
 }
 
-function nextTxnId(table: AcdocaLine[]): string {
+function nextTxnId(table: AcdocaLine[], stepId: number): string {
+  const prefix = `S${stepId}-`;
   let max = 0;
   for (const row of table) {
-    const n = Number(String(row.txnId).replace(/\D/g, ''));
+    if (!String(row.txnId).startsWith(prefix)) continue;
+    const n = Number(String(row.txnId).slice(prefix.length).replace(/\D/g, ''));
     if (Number.isFinite(n) && n > max) max = n;
   }
-  return `ACDOC${String(max + 1).padStart(6, '0')}`;
+  return `${prefix}${String(max + 1).padStart(4, '0')}`;
 }
 
 function roundVnd(n: number): number {
@@ -85,7 +87,7 @@ export function postDocument(
     );
   }
 
-  const txnId = nextTxnId(ACDOCA_TABLE);
+  const txnId = nextTxnId(ACDOCA_TABLE, stepId);
   const timestamp = new Date().toISOString();
   const written: AcdocaLine[] = prepared.map((line, idx) => ({
     txnId,

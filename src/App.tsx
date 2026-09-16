@@ -41,6 +41,7 @@ import { AdminDashboardModal } from './components/AdminDashboardModal';
 import { track } from './utils/analytics';
 import { SessionLimitBanner } from './components/SessionLimitBanner';
 import { OrderProfitDashboard } from './components/OrderProfitDashboard';
+import { MarginAnalysisPanel } from './components/MarginAnalysisPanel';
 import {
   CheckCircle,
   Play,
@@ -685,6 +686,13 @@ export default function App() {
                 uiMode={uiMode}
                 onOpenPDFReport={() => setPdfReportOpen(true)}
                 onRequestExportExcel={handleRequestExcel}
+              />
+
+              <MarginAnalysisPanel
+                acdocaTable={ACDOCA_TABLE}
+                cardState={salesOrderCostCard}
+                currentStepId={currentStepId}
+                uiMode={uiMode}
               />
 
               {/* Order Profitability Dashboard (Recharts: Doanh thu 511, Giá vốn 632, Lợi nhuận gộp) */}

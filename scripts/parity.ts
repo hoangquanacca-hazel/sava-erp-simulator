@@ -8,6 +8,7 @@ import {
   selectTrialBalance,
   assertParity,
   nz,
+  selectMarginAnalysis,
 } from '../src/utils/acdoca.ts';
 
 function runScenario(id: string) {
@@ -56,8 +57,14 @@ function runScenario(id: string) {
   }
 
   const card = computeSalesOrderCostCard(7, params, computed, 0, 0);
+  const ma = selectMarginAnalysis(allAcdoca, card.actualGrossProfit);
+  if (!ma.matchesOrderCard) {
+    throw new Error(
+      `${id} margin GP ${ma.actualGrossProfit} ≠ order card ${card.actualGrossProfit} (rev=${ma.revenue511} split=${ma.cogsSplitTotal} var=${ma.settledVariance})`
+    );
+  }
   console.log(
-    `PASS ${id} (${params.stockType}) acdoca=${allAcdoca.length} TB Dr=${newTb.totalDebitTurnover} (old grid ${oldTb.totalDebitTurnover}) GP=${card.actualGrossProfit}`
+    `PASS ${id} (${params.stockType}) acdoca=${allAcdoca.length} TB Dr=${newTb.totalDebitTurnover} GP=${card.actualGrossProfit} margin%=${ma.actualMarginPercent}`
   );
 }
 
