@@ -152,11 +152,26 @@ function generateLocalExplanation(message: string, context: any, step: number): 
 - Bạn có thể bấm nút **"Giải thích bước này"** ở từng thẻ hoặc hỏi thêm về bất kỳ tài khoản nào (621, 622, 627, 154, 155, 632, 131, 511, 3331, 911).`;
 }
 
+// Read key from Netlify runtime env or process.env, and strip stray quotes/whitespace
+// (a value pasted as GEMINI_API_KEY="AIza..." would otherwise be malformed).
+function getApiKey(): string {
+  const raw =
+    (globalThis as any)?.Netlify?.env?.get?.('GEMINI_API_KEY') ??
+    process.env.GEMINI_API_KEY ??
+    '';
+  return String(raw).trim().replace(/^['"]|['"]$/g, '');
+}
+
+// Hard cap so the function always responds well within Netlify's limit,
+// instead of hanging (and returning a 504) when Gemini is slow or the key is bad.
+const GEMINI_TIMEOUT_MS = 8000;
+
 let geminiClient: GoogleGenAI | null = null;
 function getGeminiClient(): GoogleGenAI | null {
-  if (!geminiClient && process.env.GEMINI_API_KEY) {
+  const key = getApiKey();
+  if (!geminiClient && key) {
     geminiClient = new GoogleGenAI({
-      apiKey: process.env.GEMINI_API_KEY,
+      apiKey: key,
       httpOptions: { headers: { 'User-Agent': 'aistudio-build' } },
     });
   }
@@ -186,13 +201,26 @@ ${JSON.stringify(context, null, 2)}
 Câu hỏi hoặc yêu cầu giải thích của học viên kế toán:
 ${message}`;
 
-    const response = await client.models.generateContent({
-      model: 'gemini-2.5-flash',
-      contents: promptText,
-      config: { systemInstruction, temperature: 0.3 },
-    });
+    const geminiPromise = client.models
+      .generateContent({
+        model: 'gemini-2.5-flash',
+        contents: promptText,
+        config: { systemInstruction, temperature: 0.3 },
+      })
+      .then((response: any) => response.text || '');
 
-    const reply = response.text || 'Xin lỗi, không nhận được phản hồi từ mô hình AI.';
+    const timeoutPromise = new Promise<never>((_, reject) =>
+      setTimeout(() => reject(new Error('gemini-timeout')), GEMINI_TIMEOUT_MS)
+    );
+
+    const reply = (await Promise.race([geminiPromise, timeoutPromise])) as string;
+    if (!reply) {
+      return Response.json({
+        reply: generateLocalExplanation(message || '', context || {}, step || 1),
+        isFallback: true,
+        error: 'empty-gemini-response',
+      });
+    }
     return Response.json({ reply, isFallback: false });
   } catch (error: any) {
     return Response.json({
