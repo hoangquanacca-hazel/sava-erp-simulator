@@ -6,6 +6,7 @@ import {
   StepRuntimeState,
 } from '../types';
 import { formatVND, formatNumber } from '../utils/calculator';
+import { splitCogsByCk11n } from '../utils/acdoca';
 import { BOMVisualizer } from './BOMVisualizer';
 import {
   Play,
@@ -667,6 +668,78 @@ export const StepCard: React.FC<StepCardProps> = ({
                 </p>
               </div>
             )}
+          </div>
+        )}
+
+        {step.id === 5 && isExecuted && params.stockType === 'Valuated' && (
+          <div className="space-y-2 pt-2">
+            {(() => {
+              const delivered =
+                computed.plannedCost + (stepState.qmReworkCost || 0) + (stepState.qmScrapCost || 0);
+              // Rework/scrap live on step 4 state; Step 5 card does not copy those costs.
+              const split = splitCogsByCk11n(computed, computed.plannedCost);
+              return (
+                <div className="overflow-x-auto border border-cyan-800/60 rounded-lg">
+                  <div className="px-3 py-2 bg-cyan-950/40 border-b border-cyan-800/60 flex items-center justify-between">
+                    <span className="text-xs font-bold text-cyan-200">
+                      COGS Splitting tại PGI 601E (CK11N cost component)
+                    </span>
+                    <span className="text-[10px] font-mono text-cyan-400">
+                      632xxx = TK chi tiết quản trị (không phải mã luật định)
+                    </span>
+                  </div>
+                  <table className="w-full text-left text-xs border-collapse">
+                    <thead>
+                      <tr className="bg-slate-950 text-slate-400 font-semibold text-[11px]">
+                        <th className="py-2 px-3">TK quản trị</th>
+                        <th className="py-2 px-3">Thành phần CK11N</th>
+                        <th className="py-2 px-3 text-right">Tỷ trọng</th>
+                        <th className="py-2 px-3 text-right">Nợ (VND)</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-slate-800/60 font-mono">
+                      <tr>
+                        <td className="py-2 px-3 text-cyan-300 font-bold">632110</td>
+                        <td className="py-2 px-3 text-slate-300 font-sans">Vật liệu</td>
+                        <td className="py-2 px-3 text-right">{(split.rVL * 100).toFixed(2)}%</td>
+                        <td className="py-2 px-3 text-right text-white">{formatVND(split.amtVL)}</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2 px-3 text-cyan-300 font-bold">632120</td>
+                        <td className="py-2 px-3 text-slate-300 font-sans">Nhân công</td>
+                        <td className="py-2 px-3 text-right">{(split.rNC * 100).toFixed(2)}%</td>
+                        <td className="py-2 px-3 text-right text-white">{formatVND(split.amtNC)}</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2 px-3 text-cyan-300 font-bold">632130</td>
+                        <td className="py-2 px-3 text-slate-300 font-sans">Máy &amp; KH</td>
+                        <td className="py-2 px-3 text-right">{(split.rMay * 100).toFixed(2)}%</td>
+                        <td className="py-2 px-3 text-right text-white">{formatVND(split.amtMay)}</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2 px-3 text-cyan-300 font-bold">632140</td>
+                        <td className="py-2 px-3 text-slate-300 font-sans">SXC</td>
+                        <td className="py-2 px-3 text-right">{(split.rSXC * 100).toFixed(2)}%</td>
+                        <td className="py-2 px-3 text-right text-white">{formatVND(split.amtSXC)}</td>
+                      </tr>
+                      <tr className="bg-slate-950/80">
+                        <td className="py-2 px-3 text-teal-300 font-bold">155</td>
+                        <td className="py-2 px-3 text-slate-300 font-sans">Có thành phẩm (standard cost)</td>
+                        <td className="py-2 px-3 text-right">100%</td>
+                        <td className="py-2 px-3 text-right font-bold text-teal-200">{formatVND(split.totalCogs)}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p className="px-3 py-2 text-[11px] text-slate-400">
+                    ASSERT 632110+120+130+140 = {formatVND(split.sumSplit)} vs Cr 155 = {formatVND(split.totalCogs)}{' '}
+                    {split.sumSplit === split.totalCogs ? '✓ khớp' : '✗ lệch'}
+                    {delivered !== computed.plannedCost
+                      ? ` · COGS giao hàng (kèm rework/scrap) được tách trên sổ theo định mức CK11N của giá thành kế hoạch`
+                      : ''}
+                  </p>
+                </div>
+              );
+            })()}
           </div>
         )}
 

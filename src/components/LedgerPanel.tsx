@@ -53,8 +53,8 @@ const STEP_ACTIVE_ACCOUNTS: Record<number, { accounts: string[]; label: string }
     label: 'Bước 4: Nhập kho bán thành phẩm/thành phẩm MIGO 101E & Kiểm định KCS QA11',
   },
   5: {
-    accounts: ['155', '632'],
-    label: 'Bước 5: Xuất kho giao hàng OEM PGI VL01N/VL02N 601E (Valuated: Nợ 632 / Có 155)',
+    accounts: ['155', '632', '632110', '632120', '632130', '632140'],
+    label: 'Bước 5: PGI 601E — Valuated: COGS Splitting 632110-140 / Có 155 (TK chi tiết quản trị)',
   },
   6: {
     accounts: ['131', '511', '3331'],

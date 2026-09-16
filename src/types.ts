@@ -306,6 +306,7 @@ export interface StepRuntimeState {
   qmReworkHandled: boolean;
   actualVariancePercent: number;
   entries: JournalEntry[];
+  acdocaLines: AcdocaLine[];
 }
 
 export interface BOMComponentNode {
