@@ -1,0 +1,6 @@
+{
+  "name": "Sava SAP MTO Cockpit — Enterprise Simulation & Costing Engine",
+  "description": "SAVA Precision Technology — Mô phỏng quy trình sản xuất theo đơn hàng Make-to-Order (MTO) tích hợp SD-MM-PP-QM-FICO theo Thông tư 99/2025/TT-BTC & TT 200/2014/TT-BTC.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
