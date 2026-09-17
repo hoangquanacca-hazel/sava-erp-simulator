@@ -5,8 +5,10 @@ import {
   MTOComputed,
   UIMode,
   TrialBalanceResult,
+  AcdocaLine,
 } from '../types';
 import { formatVND, computeTrialBalance } from '../utils/calculator';
+import { selectTrialBalance } from '../utils/acdoca';
 import { exportFullERPPackageExcel } from '../utils/excelService';
 import {
   BookOpen,
@@ -29,6 +31,7 @@ import {
 
 interface LedgerPanelProps {
   entries: JournalEntry[];
+  acdocaTable?: AcdocaLine[];
   params?: MTOParameters;
   computed?: MTOComputed;
   currentStepId?: number;
@@ -50,8 +53,8 @@ const STEP_ACTIVE_ACCOUNTS: Record<number, { accounts: string[]; label: string }
     label: 'Bước 4: Nhập kho bán thành phẩm/thành phẩm MIGO 101E & Kiểm định KCS QA11',
   },
   5: {
-    accounts: ['155', '632'],
-    label: 'Bước 5: Xuất kho giao hàng OEM PGI VL01N/VL02N 601E (Valuated: Nợ 632 / Có 155)',
+    accounts: ['155', '632', '632110', '632120', '632130', '632140'],
+    label: 'Bước 5: PGI 601E — Valuated: COGS Splitting 632110-140 / Có 155 (TK chi tiết quản trị)',
   },
   6: {
     accounts: ['131', '511', '3331'],
@@ -65,6 +68,7 @@ const STEP_ACTIVE_ACCOUNTS: Record<number, { accounts: string[]; label: string }
 
 export const LedgerPanel: React.FC<LedgerPanelProps> = ({
   entries,
+  acdocaTable,
   params,
   computed,
   currentStepId = 1,
@@ -85,10 +89,13 @@ export const LedgerPanel: React.FC<LedgerPanelProps> = ({
   const variance = totalDebit - totalCredit;
   const isBalanced = entries.length > 0 ? variance === 0 : true;
 
-  // Compute Trial Balance
+  // Trial Balance is always derived from ACDOCA selectors (Universal Journal).
   const trialBalance: TrialBalanceResult = useMemo(() => {
+    if (acdocaTable && acdocaTable.length > 0) {
+      return selectTrialBalance(acdocaTable);
+    }
     return computeTrialBalance(entries);
-  }, [entries]);
+  }, [entries, acdocaTable]);
 
   // Check if any filter is actively applied
   const isFiltered =

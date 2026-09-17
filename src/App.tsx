@@ -9,6 +9,7 @@ import {
   UIMode,
   RegisteredUser,
   AdminSettings,
+  AcdocaLine,
 } from './types';
 import {
   computeMTO,
@@ -21,6 +22,9 @@ import {
   exportEntriesToJSON,
   formatVND,
 } from './utils/calculator';
+import {
+  assertParity,
+} from './utils/acdoca';
 import { exportFullERPPackageExcel } from './utils/excelService';
 import { Header } from './components/Header';
 import { CommandBar } from './components/CommandBar';
@@ -37,6 +41,7 @@ import { AdminDashboardModal } from './components/AdminDashboardModal';
 import { track } from './utils/analytics';
 import { SessionLimitBanner } from './components/SessionLimitBanner';
 import { OrderProfitDashboard } from './components/OrderProfitDashboard';
+import { MarginAnalysisPanel } from './components/MarginAnalysisPanel';
 import {
   CheckCircle,
   Play,
@@ -112,13 +117,13 @@ export default function App() {
 
   // Runtime state of each of the 7 steps
   const [stepStates, setStepStates] = useState<Record<number, StepRuntimeState>>({
-    1: { isExecuted: false, qmDecision: null, qmResolutionMethod: null, qmReworkHandled: false, qmReworkCost: 0, qmScrapCost: 0, actualVariancePercent: 0, entries: [] },
-    2: { isExecuted: false, qmDecision: null, qmResolutionMethod: null, qmReworkHandled: false, qmReworkCost: 0, qmScrapCost: 0, actualVariancePercent: 0, entries: [] },
-    3: { isExecuted: false, qmDecision: null, qmResolutionMethod: null, qmReworkHandled: false, qmReworkCost: 0, qmScrapCost: 0, actualVariancePercent: 0, entries: [] },
-    4: { isExecuted: false, qmDecision: null, qmResolutionMethod: null, qmReworkHandled: false, qmReworkCost: 0, qmScrapCost: 0, actualVariancePercent: 0, entries: [] },
-    5: { isExecuted: false, qmDecision: null, qmResolutionMethod: null, qmReworkHandled: false, qmReworkCost: 0, qmScrapCost: 0, actualVariancePercent: 0, entries: [] },
-    6: { isExecuted: false, qmDecision: null, qmResolutionMethod: null, qmReworkHandled: false, qmReworkCost: 0, qmScrapCost: 0, actualVariancePercent: 0, entries: [] },
-    7: { isExecuted: false, qmDecision: null, qmResolutionMethod: null, qmReworkHandled: false, qmReworkCost: 0, qmScrapCost: 0, actualVariancePercent: 0, entries: [] },
+    1: { isExecuted: false, qmDecision: null, qmResolutionMethod: null, qmReworkHandled: false, qmReworkCost: 0, qmScrapCost: 0, actualVariancePercent: 0, entries: [], acdocaLines: [] },
+    2: { isExecuted: false, qmDecision: null, qmResolutionMethod: null, qmReworkHandled: false, qmReworkCost: 0, qmScrapCost: 0, actualVariancePercent: 0, entries: [], acdocaLines: [] },
+    3: { isExecuted: false, qmDecision: null, qmResolutionMethod: null, qmReworkHandled: false, qmReworkCost: 0, qmScrapCost: 0, actualVariancePercent: 0, entries: [], acdocaLines: [] },
+    4: { isExecuted: false, qmDecision: null, qmResolutionMethod: null, qmReworkHandled: false, qmReworkCost: 0, qmScrapCost: 0, actualVariancePercent: 0, entries: [], acdocaLines: [] },
+    5: { isExecuted: false, qmDecision: null, qmResolutionMethod: null, qmReworkHandled: false, qmReworkCost: 0, qmScrapCost: 0, actualVariancePercent: 0, entries: [], acdocaLines: [] },
+    6: { isExecuted: false, qmDecision: null, qmResolutionMethod: null, qmReworkHandled: false, qmReworkCost: 0, qmScrapCost: 0, actualVariancePercent: 0, entries: [], acdocaLines: [] },
+    7: { isExecuted: false, qmDecision: null, qmResolutionMethod: null, qmReworkHandled: false, qmReworkCost: 0, qmScrapCost: 0, actualVariancePercent: 0, entries: [], acdocaLines: [] },
   });
 
   // Real-time computed parameters
@@ -134,6 +139,19 @@ export default function App() {
     }
     return list;
   }, [stepStates]);
+
+  const ACDOCA_TABLE = useMemo(() => {
+    const table: AcdocaLine[] = [];
+    for (let i = 1; i <= 7; i++) {
+      if (stepStates[i]?.isExecuted) {
+        table.push(...(stepStates[i].acdocaLines || []));
+      }
+    }
+    if (allJournalEntries.length > 0 && table.length > 0) {
+      assertParity(allJournalEntries, table, `${params.stockType} full ledger`);
+    }
+    return table;
+  }, [stepStates, allJournalEntries, params]);
 
   // Inventory & Sales Order states updated in real-time
   const stockEState = useMemo(() => {
@@ -163,13 +181,13 @@ export default function App() {
   // Reset function
   const handleReset = () => {
     setStepStates({
-      1: { isExecuted: false, qmDecision: null, qmResolutionMethod: null, qmReworkHandled: false, qmReworkCost: 0, qmScrapCost: 0, actualVariancePercent: 0, entries: [] },
-      2: { isExecuted: false, qmDecision: null, qmResolutionMethod: null, qmReworkHandled: false, qmReworkCost: 0, qmScrapCost: 0, actualVariancePercent: 0, entries: [] },
-      3: { isExecuted: false, qmDecision: null, qmResolutionMethod: null, qmReworkHandled: false, qmReworkCost: 0, qmScrapCost: 0, actualVariancePercent: 0, entries: [] },
-      4: { isExecuted: false, qmDecision: null, qmResolutionMethod: null, qmReworkHandled: false, qmReworkCost: 0, qmScrapCost: 0, actualVariancePercent: 0, entries: [] },
-      5: { isExecuted: false, qmDecision: null, qmResolutionMethod: null, qmReworkHandled: false, qmReworkCost: 0, qmScrapCost: 0, actualVariancePercent: 0, entries: [] },
-      6: { isExecuted: false, qmDecision: null, qmResolutionMethod: null, qmReworkHandled: false, qmReworkCost: 0, qmScrapCost: 0, actualVariancePercent: 0, entries: [] },
-      7: { isExecuted: false, qmDecision: null, qmResolutionMethod: null, qmReworkHandled: false, qmReworkCost: 0, qmScrapCost: 0, actualVariancePercent: 0, entries: [] },
+      1: { isExecuted: false, qmDecision: null, qmResolutionMethod: null, qmReworkHandled: false, qmReworkCost: 0, qmScrapCost: 0, actualVariancePercent: 0, entries: [], acdocaLines: [] },
+      2: { isExecuted: false, qmDecision: null, qmResolutionMethod: null, qmReworkHandled: false, qmReworkCost: 0, qmScrapCost: 0, actualVariancePercent: 0, entries: [], acdocaLines: [] },
+      3: { isExecuted: false, qmDecision: null, qmResolutionMethod: null, qmReworkHandled: false, qmReworkCost: 0, qmScrapCost: 0, actualVariancePercent: 0, entries: [], acdocaLines: [] },
+      4: { isExecuted: false, qmDecision: null, qmResolutionMethod: null, qmReworkHandled: false, qmReworkCost: 0, qmScrapCost: 0, actualVariancePercent: 0, entries: [], acdocaLines: [] },
+      5: { isExecuted: false, qmDecision: null, qmResolutionMethod: null, qmReworkHandled: false, qmReworkCost: 0, qmScrapCost: 0, actualVariancePercent: 0, entries: [], acdocaLines: [] },
+      6: { isExecuted: false, qmDecision: null, qmResolutionMethod: null, qmReworkHandled: false, qmReworkCost: 0, qmScrapCost: 0, actualVariancePercent: 0, entries: [], acdocaLines: [] },
+      7: { isExecuted: false, qmDecision: null, qmResolutionMethod: null, qmReworkHandled: false, qmReworkCost: 0, qmScrapCost: 0, actualVariancePercent: 0, entries: [], acdocaLines: [] },
     });
     setCurrentStepId(1);
   };
@@ -266,7 +284,7 @@ export default function App() {
             qmDecision: 'pass',
             isExecuted: true,
             qmReworkHandled: true,
-            entries: [],
+            entries: [], acdocaLines: [],
           },
         }));
         if (currentStepId === 4) setCurrentStepId(5);
@@ -282,14 +300,15 @@ export default function App() {
     const reworkCost = stepStates[4].qmReworkCost || 0;
     const scrapCost = stepStates[4].qmScrapCost || 0;
     const method = stepStates[4].qmResolutionMethod || null;
-    const generatedEntries = generateStepEntries(stepId, params, computed, reworkCost, scrapCost, method);
+    const generated = generateStepEntries(stepId, params, computed, reworkCost, scrapCost, method);
 
     setStepStates((prev) => ({
       ...prev,
       [stepId]: {
         ...prev[stepId],
         isExecuted: true,
-        entries: generatedEntries,
+        entries: generated.entries,
+        acdocaLines: generated.acdoca,
       },
     }));
 
@@ -334,7 +353,7 @@ export default function App() {
         qmReworkCost: 0,
         qmScrapCost: 0,
         isExecuted: decision === 'pass',
-        entries: [],
+        entries: [], acdocaLines: [],
       },
     }));
 
@@ -347,7 +366,7 @@ export default function App() {
   const handleQMResolution = (method: 'rework' | 'scrap' | 'concession', cost: number) => {
     const reworkCost = method === 'rework' ? cost : 0;
     const scrapCost = method === 'scrap' ? cost : 0;
-    const qmEntries = generateStepEntries(4, params, computed, reworkCost, scrapCost, method);
+    const qmPosted = generateStepEntries(4, params, computed, reworkCost, scrapCost, method);
 
     setStepStates((prev) => ({
       ...prev,
@@ -358,7 +377,8 @@ export default function App() {
         qmReworkCost: reworkCost,
         qmScrapCost: scrapCost,
         isExecuted: true,
-        entries: qmEntries,
+        entries: qmPosted.entries,
+        acdocaLines: qmPosted.acdoca,
       },
     }));
 
@@ -377,7 +397,7 @@ export default function App() {
         newStates[4].qmDecision = 'pass';
         newStates[4].qmReworkHandled = true;
       }
-      const entries = generateStepEntries(
+      const posted = generateStepEntries(
         s,
         params,
         computed,
@@ -388,7 +408,8 @@ export default function App() {
       newStates[s] = {
         ...newStates[s],
         isExecuted: true,
-        entries,
+        entries: posted.entries,
+        acdocaLines: posted.acdoca,
       };
     }
 
@@ -658,12 +679,20 @@ export default function App() {
               {/* General Ledger Panel (Full width) */}
               <LedgerPanel
                 entries={allJournalEntries}
+                acdocaTable={ACDOCA_TABLE}
                 params={params}
                 computed={computed}
                 currentStepId={currentStepId}
                 uiMode={uiMode}
                 onOpenPDFReport={() => setPdfReportOpen(true)}
                 onRequestExportExcel={handleRequestExcel}
+              />
+
+              <MarginAnalysisPanel
+                acdocaTable={ACDOCA_TABLE}
+                cardState={salesOrderCostCard}
+                currentStepId={currentStepId}
+                uiMode={uiMode}
               />
 
               {/* Order Profitability Dashboard (Recharts: Doanh thu 511, Giá vốn 632, Lợi nhuận gộp) */}

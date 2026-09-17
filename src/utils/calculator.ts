@@ -10,7 +10,17 @@ import {
   VARIANT_COLORS,
   VARIANT_TEXTURES,
   VARIANT_PACKAGINGS,
+  AcdocaLine,
 } from '../types';
+import {
+  nz,
+  postJournalVoucher,
+  assertParity,
+  postDocument,
+  splitCogsByCk11n,
+  assertCogsSplit,
+  postingDims,
+} from './acdoca';
 
 /**
  * Tính toán toàn bộ các chỉ số chi phí kế hoạch, doanh thu, thuế GTGT, giá vốn và lợi nhuận
@@ -18,6 +28,23 @@ import {
  * 100% tính toán thực sự từ công thức thực, hỗ trợ Strategy 25 (Variant Configuration) và Variance.
  */
 export function computeMTO(params: MTOParameters): MTOComputed {
+  // Missing numeric input → 0 (never invent random figures).
+  params = {
+    ...params,
+    orderQuantity: nz(params.orderQuantity),
+    sellingPrice: nz(params.sellingPrice),
+    materialNormKgPer1000: nz(params.materialNormKgPer1000),
+    resinPricePerKg: nz(params.resinPricePerKg),
+    laborRatePerHour: nz(params.laborRatePerHour),
+    laborHours: nz(params.laborHours),
+    laborTotal: nz(params.laborTotal),
+    machineRatePerHour: nz(params.machineRatePerHour),
+    machineHours: nz(params.machineHours),
+    machineTotal: nz(params.machineTotal),
+    vatRate: nz(params.vatRate),
+    actualVariancePercent: nz(params.actualVariancePercent),
+  };
+
   // 1. Kiểm tra cấu hình Variant nếu chọn Strategy 25
   let colorResinAddon = 0;
   let textureResinAddon = 0;
@@ -202,6 +229,7 @@ export function computeMTO(params: MTOParameters): MTOComputed {
     plannedCOGS,
     grossProfit,
     grossMarginPercent,
+    varianceAmount: actualCostVariance,
   };
 }
 
@@ -275,12 +303,13 @@ export const STEP_DEFINITIONS: StepDefinition[] = [
     id: 4,
     title: 'Kiểm Định Chất Lượng & Quyết Định Sử Dụng (UD)',
     sapModule: 'QM',
-    tCode: 'QA11',
+    tCode: 'QA11 · MM 321E/350E',
+    movementType: '321E / 350E',
     shortDesc: 'Bộ phận KCS kiểm tra độ co ngót, bọt khí, kích thước khuôn mẫu và đưa ra Usage Decision.',
     detailedAction:
-      'KCS mở Inspection Lot trên T-code QA11. Lựa chọn Quyết định sử dụng: Pass (Đạt - chuyển kho sử dụng) hoặc Fail (Lỗi - chặn xuất kho và kích hoạt nhánh Rework xử lý).',
+      'KCS mở Inspection Lot trên T-code QA11. Pass: movement 321E chuyển Quality Inspection → Unrestricted (không sinh FI). Fail: movement 350E chuyển → Blocked Stock (không sinh FI).',
     learningPoint:
-      'Nếu Fail, hệ thống KHÓA không cho thực hiện giao hàng bước 5. Doanh nghiệp bắt buộc phải xử lý nhánh Rework (Sửa chữa phát sinh chi phí hoặc Nhượng bộ kỹ thuật) mới được mở khóa.',
+      '321E (Pass→unrestricted) và 350E (Fail→blocked) là stock-status moves, KHÔNG sinh bút toán FI. Nếu Fail, hệ thống KHÓA giao hàng bước 5 cho đến khi Rework/Scrap/Concession.',
   },
   {
     id: 5,
@@ -328,15 +357,30 @@ export function generateStepEntries(
   reworkCost: number = 0,
   scrapCost: number = 0,
   resolutionMethod?: 'rework' | 'scrap' | 'concession' | null
-): JournalEntry[] {
+): { entries: JournalEntry[]; acdoca: AcdocaLine[] } {
   const isValuated = params.stockType === 'Valuated';
   const soCode = 'SO-PIC-2026-49281';
   const entries: JournalEntry[] = [];
   const today = '15/09/2026';
+  reworkCost = nz(reworkCost);
+  scrapCost = nz(scrapCost);
+
+  const ACDOCA_TABLE: AcdocaLine[] = [];
+  const emit = (entry: JournalEntry, uiOnly = false) => {
+    const voucher: JournalEntry = { ...entry, amount: nz(entry.amount) };
+    entries.push(voucher);
+    if (!uiOnly) {
+      postJournalVoucher(ACDOCA_TABLE, voucher, params);
+    }
+  };
+  const commit = (): { entries: JournalEntry[]; acdoca: AcdocaLine[] } => {
+    assertParity(entries, ACDOCA_TABLE, `step ${stepId} ${params.stockType}`);
+    return { entries, acdoca: ACDOCA_TABLE };
+  };
 
   if (stepId === 1 || stepId === 2) {
     // Bước 1 và 2: Lập Sales Order & Hoạch định MRP. Không sinh bút toán tài chính (FI).
-    return [];
+    return { entries: [], acdoca: [] };
   }
 
   if (stepId === 3) {
@@ -346,7 +390,7 @@ export function generateStepEntries(
         ? 'Strategy 20 (MTO Thuần): Vật tư hạt nhựa cách ly tuyệt đối cho Sales Order #49281, không điều chuyển chéo.'
         : `Strategy 25 (Variant Config): Bao gồm phụ gia ${params.variantColorName || 'Đặc thù'} và chi tiết định hình.`;
 
-    entries.push({
+    emit({
       id: `entry-3-1`,
       stepIndex: 3,
       voucherNo: `PKT-261E-01`,
@@ -364,7 +408,7 @@ export function generateStepEntries(
     });
 
     // 2. Ghi nhận nhân công trực tiếp ép nhựa (CO11N)
-    entries.push({
+    emit({
       id: `entry-3-2`,
       stepIndex: 3,
       voucherNo: `PKT-CO11N-01`,
@@ -382,7 +426,7 @@ export function generateStepEntries(
     });
 
     // 3. Ghi nhận chi phí máy móc, điện năng & sản xuất chung (CO11N)
-    entries.push({
+    emit({
       id: `entry-3-3`,
       stepIndex: 3,
       voucherNo: `PKT-CO11N-02`,
@@ -400,7 +444,7 @@ export function generateStepEntries(
     });
 
     // 4. Tập hợp chi phí sản xuất vào sản phẩm dở dang (TK 154 - Period-end / Order Collection)
-    entries.push({
+    emit({
       id: `entry-3-4a`,
       stepIndex: 3,
       voucherNo: `PKT-154-01`,
@@ -417,7 +461,7 @@ export function generateStepEntries(
       note: 'Kết chuyển chi phí 621 sang TK 154 theo Thông tư 200/2014/TT-BTC.',
     });
 
-    entries.push({
+    emit({
       id: `entry-3-4b`,
       stepIndex: 3,
       voucherNo: `PKT-154-02`,
@@ -434,7 +478,7 @@ export function generateStepEntries(
       note: 'Kết chuyển chi phí 622 sang TK 154 theo Thông tư 200.',
     });
 
-    entries.push({
+    emit({
       id: `entry-3-4c`,
       stepIndex: 3,
       voucherNo: `PKT-154-03`,
@@ -453,7 +497,7 @@ export function generateStepEntries(
 
     // 5. Nhập kho thành phẩm hoàn thành (MIGO 101E)
     if (isValuated) {
-      entries.push({
+      emit({
         id: `entry-3-5`,
         stepIndex: 3,
         voucherNo: `PKT-101E-01`,
@@ -474,7 +518,7 @@ export function generateStepEntries(
       // Hệ thống chỉ theo dõi về mặt số lượng vật lý trong kho E.
     }
 
-    return entries;
+    return commit();
   }
 
   if (stepId === 4) {
@@ -483,7 +527,7 @@ export function generateStepEntries(
       const reworkMaterial = Math.round(reworkCost * 0.45);
       const reworkLabor = reworkCost - reworkMaterial;
 
-      entries.push({
+      emit({
         id: `entry-4-rework-mat`,
         stepIndex: 4,
         voucherNo: `PKT-CO07-01`,
@@ -500,7 +544,7 @@ export function generateStepEntries(
         note: 'Quy trình Rework: Cấp thêm hạt nhựa ép bù xử lý lỗi khuôn/co ngót.',
       });
 
-      entries.push({
+      emit({
         id: `entry-4-rework-lab`,
         stepIndex: 4,
         voucherNo: `PKT-CO07-02`,
@@ -517,7 +561,7 @@ export function generateStepEntries(
         note: 'Công nhân nguội xử lý ba-via và mài phẳng theo tiêu chuẩn kỹ thuật OEM.',
       });
 
-      entries.push({
+      emit({
         id: `entry-4-rework-kc-mat`,
         stepIndex: 4,
         voucherNo: `PKT-CO07-03`,
@@ -534,7 +578,7 @@ export function generateStepEntries(
         note: 'Kết chuyển chi phí sửa chữa vào giá thành sản phẩm.',
       });
 
-      entries.push({
+      emit({
         id: `entry-4-rework-kc-lab`,
         stepIndex: 4,
         voucherNo: `PKT-CO07-04`,
@@ -552,7 +596,7 @@ export function generateStepEntries(
       });
 
       if (isValuated) {
-        entries.push({
+        emit({
           id: `entry-4-rework-gr`,
           stepIndex: 4,
           voucherNo: `PKT-CO07-05`,
@@ -571,7 +615,7 @@ export function generateStepEntries(
       }
     } else if (resolutionMethod === 'scrap' && scrapCost > 0) {
       // Nhánh Scrap: Hủy phế phẩm và kích hoạt Lệnh sản xuất bù số lượng
-      entries.push({
+      emit({
         id: `entry-4-scrap-loss`,
         stepIndex: 4,
         voucherNo: `PKT-QM-SCRAP01`,
@@ -594,7 +638,7 @@ export function generateStepEntries(
       const replMat = Math.round(scrapCost * 0.55);
       const replLaborOverhead = scrapCost - replMat;
 
-      entries.push({
+      emit({
         id: `entry-4-scrap-repl-mat`,
         stepIndex: 4,
         voucherNo: `PKT-QM-REPL01`,
@@ -611,7 +655,7 @@ export function generateStepEntries(
         note: 'Mở lệnh sản xuất bổ sung bù số lượng thành phẩm đạt chuẩn giao khách.',
       });
 
-      entries.push({
+      emit({
         id: `entry-4-scrap-repl-lab`,
         stepIndex: 4,
         voucherNo: `PKT-QM-REPL02`,
@@ -628,7 +672,7 @@ export function generateStepEntries(
         note: 'Xác nhận công thợ sản xuất bù lô hàng.',
       });
 
-      entries.push({
+      emit({
         id: `entry-4-scrap-repl-kc`,
         stepIndex: 4,
         voucherNo: `PKT-QM-REPL03`,
@@ -645,7 +689,7 @@ export function generateStepEntries(
         note: 'Tập hợp chi phí lô sản xuất bổ sung.',
       });
 
-      entries.push({
+      emit({
         id: `entry-4-scrap-repl-kc2`,
         stepIndex: 4,
         voucherNo: `PKT-QM-REPL04`,
@@ -663,7 +707,7 @@ export function generateStepEntries(
       });
 
       if (isValuated) {
-        entries.push({
+        emit({
           id: `entry-4-scrap-repl-gr`,
           stepIndex: 4,
           voucherNo: `PKT-QM-REPL05`,
@@ -681,38 +725,90 @@ export function generateStepEntries(
         });
       }
     }
-    return entries;
+    return commit();
   }
 
   if (stepId === 5) {
     // Bước 5: Xuất kho giao hàng (Delivery & PGI 601E)
+    // Non-valuated: logistics only — NO FI.
     if (isValuated) {
-      const totalCostDelivered = computed.plannedCost + reworkCost + scrapCost;
-      entries.push({
-        id: `entry-5-1`,
-        stepIndex: 5,
-        voucherNo: `PKT-601E-01`,
-        docType: 'WA - Xuất kho giao hàng PGI',
-        postingDate: today,
-        tCode: 'VL01N / MIGO 601E',
-        description: `Xuất giao ${formatNumber(params.orderQuantity)} cái ${params.componentCode} cho ${params.customer}`,
-        debitAccount: '632',
-        debitAccountName: 'Giá vốn hàng bán (COGS)',
-        creditAccount: '155',
-        creditAccountName: 'Thành phẩm (Kho riêng Sales Order E)',
-        amount: totalCostDelivered,
-        costObject: `Outbound Delivery #800142 (${soCode})`,
-        note: 'VALUATED STOCK: PGI 601E ghi nhận ngay Giá vốn hàng bán Nợ 632 / Có 155 khi xuất giao quyền sở hữu cho khách.',
-      });
+      const totalCostDelivered = nz(computed.plannedCost) + reworkCost + scrapCost;
+      const split = splitCogsByCk11n(computed, totalCostDelivered);
+      assertCogsSplit(split);
+      const dims = postingDims(params);
+      postDocument(ACDOCA_TABLE, 5, 'VL01N / MIGO 601E', '601E', [
+        {
+          glAccount: '632110',
+          accountName: 'TK chi tiết quản trị — COGS Vật liệu',
+          drAmount: split.amtVL,
+          crAmount: 0,
+          ...dims,
+        },
+        {
+          glAccount: '632120',
+          accountName: 'TK chi tiết quản trị — COGS Nhân công',
+          drAmount: split.amtNC,
+          crAmount: 0,
+          ...dims,
+        },
+        {
+          glAccount: '632130',
+          accountName: 'TK chi tiết quản trị — COGS Máy & KH',
+          drAmount: split.amtMay,
+          crAmount: 0,
+          ...dims,
+        },
+        {
+          glAccount: '632140',
+          accountName: 'TK chi tiết quản trị — COGS SXC',
+          drAmount: split.amtSXC,
+          crAmount: 0,
+          ...dims,
+        },
+        {
+          glAccount: '155',
+          accountName: 'Thành phẩm (Kho riêng Sales Order E)',
+          drAmount: 0,
+          crAmount: split.totalCogs,
+          ...dims,
+        },
+      ]);
+
+      const parts: Array<{ id: string; acc: string; name: string; amt: number }> = [
+        { id: 'vl', acc: '632110', name: 'TK chi tiết quản trị — COGS Vật liệu', amt: split.amtVL },
+        { id: 'nc', acc: '632120', name: 'TK chi tiết quản trị — COGS Nhân công', amt: split.amtNC },
+        { id: 'may', acc: '632130', name: 'TK chi tiết quản trị — COGS Máy & KH', amt: split.amtMay },
+        { id: 'sxc', acc: '632140', name: 'TK chi tiết quản trị — COGS SXC', amt: split.amtSXC },
+      ];
+      for (const p of parts) {
+        emit(
+          {
+            id: `entry-5-${p.id}`,
+            stepIndex: 5,
+            voucherNo: `PKT-601E-${p.acc}`,
+            docType: 'WA - PGI COGS Splitting',
+            postingDate: today,
+            tCode: 'VL01N / MIGO 601E',
+            description: `PGI 601E tách giá vốn ${p.name} (${formatNumber(params.orderQuantity)} cái ${params.componentCode})`,
+            debitAccount: p.acc,
+            debitAccountName: p.name,
+            creditAccount: '155',
+            creditAccountName: 'Thành phẩm (Kho riêng Sales Order E)',
+            amount: p.amt,
+            costObject: `Outbound Delivery #800142 (${soCode})`,
+            note: 'VALUATED STOCK: COGS Splitting tại PGI — 632xxx là TK chi tiết quản trị, không phải mã luật định. Cr 155 = tổng giá thành kế hoạch.',
+          },
+          true
+        );
+      }
     }
-    // Với Non-valuated Stock: PGI KHÔNG sinh bút toán tài chính Nợ 632/Có 155!
-    return entries;
+    return commit();
   }
 
   if (stepId === 6) {
     // Bước 6: Lập hóa đơn bán hàng thương mại (VF01)
     // 1. Ghi nhận doanh thu thuần
-    entries.push({
+    emit({
       id: `entry-6-1`,
       stepIndex: 6,
       voucherNo: `PKT-VF01-01`,
@@ -730,7 +826,7 @@ export function generateStepEntries(
     });
 
     // 2. Ghi nhận thuế GTGT đầu ra (10%)
-    entries.push({
+    emit({
       id: `entry-6-2`,
       stepIndex: 6,
       voucherNo: `PKT-VF01-02`,
@@ -747,7 +843,7 @@ export function generateStepEntries(
       note: 'Hạch toán thuế GTGT đầu ra theo quy định Thông tư 200.',
     });
 
-    return entries;
+    return commit();
   }
 
   if (stepId === 7) {
@@ -758,7 +854,7 @@ export function generateStepEntries(
     // ĐỐI VỚI NON-VALUATED STOCK: ĐÂY LÀ BƯỚC HẠCH TOÁN GIÁ VỐN TOÀN BỘ NỢ 632 / CÓ 154!
     if (!isValuated) {
       const totalActualCost = baseCost + actualVariance;
-      entries.push({
+      emit({
         id: `entry-7-cogs-nonval`,
         stepIndex: 7,
         voucherNo: `PKT-VA88-COGS`,
@@ -777,7 +873,7 @@ export function generateStepEntries(
     } else {
       // ĐỐI VỚI VALUATED STOCK: HẠCH TOÁN CHÊNH LỆCH GIÁ THÀNH THỰC TẾ (VARIANCE)
       if (actualVariance > 0) {
-        entries.push({
+        emit({
           id: `entry-7-variance-unfavorable`,
           stepIndex: 7,
           voucherNo: `PKT-VA88-VAR01`,
@@ -794,7 +890,7 @@ export function generateStepEntries(
           note: 'Quyết toán chênh lệch chi phí thực tế vượt chi phí kế hoạch (Hao hụt nhựa, tăng giờ máy) vào Giá vốn hàng bán.',
         });
       } else if (actualVariance < 0) {
-        entries.push({
+        emit({
           id: `entry-7-variance-favorable`,
           stepIndex: 7,
           voucherNo: `PKT-VA88-VAR02`,
@@ -818,7 +914,7 @@ export function generateStepEntries(
       ? baseCost + actualVariance
       : baseCost + actualVariance;
 
-    entries.push({
+    emit({
       id: `entry-7-settle-rev`,
       stepIndex: 7,
       voucherNo: `PKT-VA88-01`,
@@ -835,27 +931,112 @@ export function generateStepEntries(
       note: 'Tất toán tài khoản doanh thu 511 để xác định kết quả kinh doanh thực tế.',
     });
 
-    entries.push({
-      id: `entry-7-settle-cogs`,
-      stepIndex: 7,
-      voucherNo: `PKT-VA88-02`,
-      docType: 'CO - Kết chuyển Giá vốn CO-PA',
-      postingDate: today,
-      tCode: 'VA88',
-      description: `Kết chuyển Giá vốn hàng bán vào Tài khoản Xác định kết quả kinh doanh (CO-PA)`,
-      debitAccount: '911',
-      debitAccountName: 'Xác định kết quả kinh doanh',
-      creditAccount: '632',
-      creditAccountName: 'Giá vốn hàng bán (Thực tế)',
-      amount: totalRecognizedCOGS,
-      costObject: `CO-PA Segment: ${params.customer} / ${params.componentCode}`,
-      note: 'Tất toán tài khoản giá vốn 632 để xác định Lợi nhuận gộp thực tế của Đơn hàng.',
-    });
+    if (isValuated) {
+      const split = splitCogsByCk11n(computed, baseCost);
+      assertCogsSplit(split);
+      const dims = postingDims(params);
+      const settleLines = [
+        {
+          glAccount: '911',
+          accountName: 'Xác định kết quả kinh doanh',
+          drAmount: totalRecognizedCOGS,
+          crAmount: 0,
+          ...dims,
+        },
+        ...(actualVariance < 0
+          ? [
+              {
+                glAccount: '632',
+                accountName: 'Giá vốn hàng bán (Tiết kiệm định mức)',
+                drAmount: Math.abs(actualVariance),
+                crAmount: 0,
+                ...dims,
+              },
+            ]
+          : []),
+        {
+          glAccount: '632110',
+          accountName: 'TK chi tiết quản trị — COGS Vật liệu',
+          drAmount: 0,
+          crAmount: split.amtVL,
+          ...dims,
+        },
+        {
+          glAccount: '632120',
+          accountName: 'TK chi tiết quản trị — COGS Nhân công',
+          drAmount: 0,
+          crAmount: split.amtNC,
+          ...dims,
+        },
+        {
+          glAccount: '632130',
+          accountName: 'TK chi tiết quản trị — COGS Máy & KH',
+          drAmount: 0,
+          crAmount: split.amtMay,
+          ...dims,
+        },
+        {
+          glAccount: '632140',
+          accountName: 'TK chi tiết quản trị — COGS SXC',
+          drAmount: 0,
+          crAmount: split.amtSXC,
+          ...dims,
+        },
+        ...(actualVariance > 0
+          ? [
+              {
+                glAccount: '632',
+                accountName: 'Giá vốn hàng bán (Chi phí vượt định mức)',
+                drAmount: 0,
+                crAmount: actualVariance,
+                ...dims,
+              },
+            ]
+          : []),
+      ];
+      postDocument(ACDOCA_TABLE, 7, 'VA88', undefined, settleLines);
+      emit(
+        {
+          id: `entry-7-settle-cogs`,
+          stepIndex: 7,
+          voucherNo: `PKT-VA88-02`,
+          docType: 'CO - Kết chuyển Giá vốn Account-Based MA',
+          postingDate: today,
+          tCode: 'VA88',
+          description: `Kết chuyển 632110/120/130/140 (± VA88 variance) vào TK 911`,
+          debitAccount: '911',
+          debitAccountName: 'Xác định kết quả kinh doanh',
+          creditAccount: '632110-140',
+          creditAccountName: 'TK chi tiết quản trị — COGS split + variance',
+          amount: totalRecognizedCOGS,
+          costObject: `CO-PA Segment: ${params.customer} / ${params.componentCode}`,
+          note: 'Tất toán các TK chi tiết quản trị 632xxx (và 632 variance) để xác định LN gộp thực tế.',
+        },
+        true
+      );
+    } else {
+      emit({
+        id: `entry-7-settle-cogs`,
+        stepIndex: 7,
+        voucherNo: `PKT-VA88-02`,
+        docType: 'CO - Kết chuyển Giá vốn CO-PA',
+        postingDate: today,
+        tCode: 'VA88',
+        description: `Kết chuyển Giá vốn hàng bán vào Tài khoản Xác định kết quả kinh doanh (CO-PA)`,
+        debitAccount: '911',
+        debitAccountName: 'Xác định kết quả kinh doanh',
+        creditAccount: '632',
+        creditAccountName: 'Giá vốn hàng bán (Thực tế)',
+        amount: totalRecognizedCOGS,
+        costObject: `CO-PA Segment: ${params.customer} / ${params.componentCode}`,
+        note: 'Tất toán tài khoản giá vốn 632 để xác định Lợi nhuận gộp thực tế của Đơn hàng.',
+      });
+    }
 
-    return entries;
+    return commit();
   }
 
-  return [];
+  return { entries: [], acdoca: [] };
 }
 
 /**
@@ -1136,6 +1317,10 @@ export function computeTrialBalance(entries: JournalEntry[]): {
     '622': 'Chi phí nhân công trực tiếp',
     '627': 'Chi phí sản xuất chung (Khấu hao máy & điện năng)',
     '632': 'Giá vốn hàng bán (Cost of Goods Sold)',
+    '632110': 'TK chi tiết quản trị — COGS Vật liệu',
+    '632120': 'TK chi tiết quản trị — COGS Nhân công',
+    '632130': 'TK chi tiết quản trị — COGS Máy & KH',
+    '632140': 'TK chi tiết quản trị — COGS SXC',
     '911': 'Xác định kết quả kinh doanh',
   };
 

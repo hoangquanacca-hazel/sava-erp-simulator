@@ -100,6 +100,75 @@ export interface MTOComputed {
   plannedCOGS: number;
   grossProfit: number;
   grossMarginPercent: number;
+  /** Alias of actualCostVariance — StepCard / AI tutor read this name. */
+  varianceAmount: number;
+}
+
+/** Universal Journal (ACDOCA) line — S/4HANA account-based actuals. */
+export interface AcdocaLine {
+  txnId: string;
+  lineId: string;
+  stepId: number;
+  tCode: string;
+  movementType?: string;
+  glAccount: string;
+  accountName: string;
+  drAmount: number;
+  crAmount: number;
+  kaufn?: string;
+  kposn?: string;
+  kunnr?: string;
+  matnr?: string;
+  werks?: string;
+  prctr?: string;
+  kostl?: string;
+  valuationView: 'legal';
+  currency: 'VND';
+  timestamp: string;
+}
+
+export interface AcdocaPostingLine {
+  glAccount: string;
+  accountName: string;
+  drAmount?: number;
+  crAmount?: number;
+  kaufn?: string;
+  kposn?: string;
+  kunnr?: string;
+  matnr?: string;
+  werks?: string;
+  prctr?: string;
+  kostl?: string;
+}
+
+export interface CogsSplitResult {
+  totalCogs: number;
+  rVL: number;
+  rNC: number;
+  rMay: number;
+  rSXC: number;
+  amtVL: number;
+  amtNC: number;
+  amtMay: number;
+  amtSXC: number;
+  sumSplit: number;
+  balanced: boolean;
+}
+
+export interface MarginAnalysisResult {
+  revenue511: number;
+  cogs632110: number;
+  cogs632120: number;
+  cogs632130: number;
+  cogs632140: number;
+  cogsSplitTotal: number;
+  cogsStatutory632: number;
+  settledVariance: number;
+  standardGrossProfit: number;
+  actualGrossProfit: number;
+  actualMarginPercent: number;
+  orderCardGrossProfit: number;
+  matchesOrderCard: boolean;
 }
 
 export interface JournalEntry {
@@ -237,6 +306,7 @@ export interface StepRuntimeState {
   qmReworkHandled: boolean;
   actualVariancePercent: number;
   entries: JournalEntry[];
+  acdocaLines: AcdocaLine[];
 }
 
 export interface BOMComponentNode {
@@ -440,8 +510,30 @@ export const SAP_TCODES_LIST: TCodeInfo[] = [
     name: 'Record Usage Decision (UD)',
     vietnameseName: 'Kiểm định KCS & Quyết định sử dụng',
     purpose: 'KCS đánh giá dung sai kích thước, bọt khí, co ngót khuôn và cấp Quyết định sử dụng (Pass / Reject).',
-    accountingRole: 'Nếu Pass: Chuyển Quality Inspection -> Unrestricted. Nếu Reject: Khóa vào Blocked Stock.',
+    accountingRole: 'Nếu Pass: Movement 321E Quality Inspection → Unrestricted, KHÔNG sinh FI. Nếu Fail: Movement 350E → Blocked Stock, KHÔNG sinh FI.',
     sapTables: 'QALS, QAVE, QAMV',
+  },
+  {
+    tCode: 'QA11 (321E)',
+    stepId: 4,
+    module: 'QM / MM',
+    name: 'Transfer QI → Unrestricted',
+    vietnameseName: 'Chuyển kho kiểm định sang sử dụng tự do',
+    purpose: 'Usage Decision Pass: movement 321E đổi stock status Quality Inspection → Unrestricted Use.',
+    accountingRole: 'Stock-status move only. KHÔNG sinh bút toán FI / ACDOCA.',
+    sapTables: 'MSEG, MKPF',
+    movementType: '321E',
+  },
+  {
+    tCode: 'QA11 (350E)',
+    stepId: 4,
+    module: 'QM / MM',
+    name: 'Transfer QI → Blocked',
+    vietnameseName: 'Chuyển kho kiểm định sang kho bị chặn',
+    purpose: 'Usage Decision Fail: movement 350E đổi stock status → Blocked Stock, chặn PGI.',
+    accountingRole: 'Stock-status move only. KHÔNG sinh bút toán FI / ACDOCA.',
+    sapTables: 'MSEG, MKPF',
+    movementType: '350E',
   },
   {
     tCode: 'CO07',
