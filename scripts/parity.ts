@@ -11,6 +11,7 @@ import {
   selectMarginAnalysis,
 } from '../src/utils/acdoca.ts';
 import { computeFiveTypeVariance, assertFiveTypeVariance } from '../src/features/variance.ts';
+import { canRunCloseStep, EMPTY_CLOSE } from '../src/features/periodClose.ts';
 
 function runScenario(id: string) {
   const preset = PRESET_SCENARIOS.find((p) => p.id === id);
@@ -118,6 +119,16 @@ missingInputIsZero();
   console.log(
     `PASS 5-type drivers denso Vp=${five.Vp} Vq=${five.Vq} Vr=${five.Vr} Vs=${five.Vs} Vrem=${five.Vrem} TV=${five.TV}`
   );
+}
+
+{
+  const locked = canRunCloseStep(EMPTY_CLOSE, 'VA88');
+  if (locked.ok) throw new Error('VA88 must not run before MMPV');
+  const afterMmpv = canRunCloseStep({ ...EMPTY_CLOSE, MMPV: true, mmPeriodLocked: true }, 'CKMLCP');
+  if (!afterMmpv.ok) throw new Error('CKMLCP should run after MMPV');
+  const skip = canRunCloseStep({ ...EMPTY_CLOSE, MMPV: true, mmPeriodLocked: true }, 'KKA2');
+  if (skip.ok) throw new Error('KKA2 must not skip CKMLCP');
+  console.log('PASS close checklist order MMPV→CKMLCP→KKA2');
 }
 
 console.log('ALL PARITY CHECKS PASSED');

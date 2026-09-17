@@ -45,8 +45,10 @@ import { MarginAnalysisPanel } from './components/MarginAnalysisPanel';
 import { ModuleNav } from './components/ModuleNav';
 import { loadFeatureFlags } from './features/flags';
 import { AppHashRoute, parseHash } from './features/hashRoute';
+import { CloseChecklistState, EMPTY_CLOSE } from './features/periodClose';
 
 const VarianceWaterfallPage = lazy(() => import('./pages/VarianceWaterfallPage'));
+const CloseCockpitPage = lazy(() => import('./pages/CloseCockpitPage'));
 import {
   CheckCircle,
   Play,
@@ -80,6 +82,7 @@ export default function App() {
   const [flags] = useState(() =>
     typeof window !== 'undefined' ? loadFeatureFlags() : loadFeatureFlags()
   );
+  const [closeState, setCloseState] = useState<CloseChecklistState>(EMPTY_CLOSE);
 
   useEffect(() => {
     const onHash = () => setRoute(parseHash());
@@ -207,6 +210,7 @@ export default function App() {
       7: { isExecuted: false, qmDecision: null, qmResolutionMethod: null, qmReworkHandled: false, qmReworkCost: 0, qmScrapCost: 0, actualVariancePercent: 0, entries: [], acdocaLines: [] },
     });
     setCurrentStepId(1);
+    setCloseState(EMPTY_CLOSE);
   };
 
   const handleSelectPreset = (preset: PresetScenario) => {
@@ -290,6 +294,10 @@ export default function App() {
 
   // Execution of a step
   const executeStepInternal = (stepId: number) => {
+    if (closeState.fiPeriodLocked) {
+      window.alert('OB52 đã khóa kỳ FI — không ghi sổ thêm (MÔ PHỎNG).');
+      return;
+    }
     // Special validation for Step 4 (QM):
     if (stepId === 4) {
       if (!stepStates[4].qmDecision) {
@@ -404,6 +412,10 @@ export default function App() {
 
   // Fast forward execution for demonstration
   const handleExecuteAllInternal = () => {
+    if (closeState.fiPeriodLocked) {
+      window.alert('OB52 đã khóa kỳ FI — không ghi sổ thêm (MÔ PHỎNG).');
+      return;
+    }
     let currentReworkCost = stepStates[4].qmReworkCost || 0;
     let currentScrapCost = stepStates[4].qmScrapCost || 0;
     let currentMethod = stepStates[4].qmResolutionMethod || null;
@@ -517,6 +529,32 @@ export default function App() {
         {route === 'variance' && flags.m1Variance ? (
           <Suspense fallback={<div className="p-8 text-sm text-slate-400">Đang tải Variance…</div>}>
             <VarianceWaterfallPage params={params} computed={computed} uiMode={uiMode} />
+          </Suspense>
+        ) : route === 'close' && flags.m2CloseCockpit ? (
+          <Suspense fallback={<div className="p-8 text-sm text-slate-400">Đang tải Đóng sổ…</div>}>
+            <CloseCockpitPage
+              params={params}
+              computed={computed}
+              acdoca={ACDOCA_TABLE}
+              entries={allJournalEntries}
+              step7Executed={!!stepStates[7]?.isExecuted}
+              priorStepsReady={[1, 2, 3, 4, 5, 6].every((id) => stepStates[id]?.isExecuted)}
+              closeState={closeState}
+              onCloseState={setCloseState}
+              onPostStep7={(posted) => {
+                setStepStates((prev) => ({
+                  ...prev,
+                  7: {
+                    ...prev[7],
+                    isExecuted: true,
+                    entries: posted.entries,
+                    acdocaLines: posted.acdoca,
+                  },
+                }));
+              }}
+              onOpenPdf={() => setPdfReportOpen(true)}
+              uiMode={uiMode}
+            />
           </Suspense>
         ) : currentScreen === 'setup' ? (
           <SetupScreen

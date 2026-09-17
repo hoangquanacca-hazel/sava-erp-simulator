@@ -471,3 +471,42 @@ export async function parseParametersFromExcel(file: File): Promise<{
     };
   }
 }
+
+/** Close Pack: exec summary + waterfall 5-type + trial balance + control scorecard. */
+export function exportClosePackExcel(opts: {
+  params: MTOParameters;
+  computed: MTOComputed;
+  trialBalance: TrialBalanceResult;
+  waterfall: Array<{ name: string; signed: number }>;
+  summaryLines: Array<[string, string | number]>;
+  scorecard: Array<[string, string | number]>;
+}): void {
+  const wb = XLSX.utils.book_new();
+  const sumRows = [['Close Pack — MÔ PHỎNG', ''], ...opts.summaryLines];
+  XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(sumRows), 'Exec Summary');
+  const wf = [['Hạng mục', 'Số tiền (VND)'], ...opts.waterfall.map((r) => [r.name, r.signed])];
+  XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(wf), 'Waterfall');
+  const tb = [
+    ['TK', 'Tên', 'PS Nợ', 'PS Có', 'Dư Nợ', 'Dư Có'],
+    ...opts.trialBalance.items.map((i) => [
+      i.accountNumber,
+      i.accountName,
+      i.debitTurnover,
+      i.creditTurnover,
+      i.closingDebit,
+      i.closingCredit,
+    ]),
+    [
+      '',
+      'TỔNG',
+      opts.trialBalance.totalDebitTurnover,
+      opts.trialBalance.totalCreditTurnover,
+      opts.trialBalance.totalClosingDebit,
+      opts.trialBalance.totalClosingCredit,
+    ],
+  ];
+  XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(tb), 'Trial Balance');
+  XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet([['Control', 'Giá trị'], ...opts.scorecard]), 'Scorecard');
+  XLSX.writeFile(wb, `ClosePack_MTO_${opts.params.componentCode}.xlsx`);
+}
+
