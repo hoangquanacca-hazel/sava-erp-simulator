@@ -49,6 +49,7 @@ import { CloseChecklistState, EMPTY_CLOSE } from './features/periodClose';
 
 const VarianceWaterfallPage = lazy(() => import('./pages/VarianceWaterfallPage'));
 const CloseCockpitPage = lazy(() => import('./pages/CloseCockpitPage'));
+const WipSettlementPage = lazy(() => import('./pages/WipSettlementPage'));
 import {
   CheckCircle,
   Play,
@@ -553,6 +554,16 @@ export default function App() {
                 }));
               }}
               onOpenPdf={() => setPdfReportOpen(true)}
+              uiMode={uiMode}
+            />
+          </Suspense>
+        ) : route === 'wip' && flags.m3WipSettlement ? (
+          <Suspense fallback={<div className="p-8 text-sm text-slate-400">Đang tải WIP…</div>}>
+            <WipSettlementPage
+              params={params}
+              computed={computed}
+              acdoca={ACDOCA_TABLE}
+              onChangeDelivered={(qty) => setParams((p) => ({ ...p, deliveredQuantity: qty }))}
               uiMode={uiMode}
             />
           </Suspense>

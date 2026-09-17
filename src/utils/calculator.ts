@@ -21,6 +21,7 @@ import {
   assertCogsSplit,
   postingDims,
 } from './acdoca';
+import { roundShare, wipStatusOf } from '../features/wip';
 
 /**
  * Tính toán toàn bộ các chỉ số chi phí kế hoạch, doanh thu, thuế GTGT, giá vốn và lợi nhuận
@@ -364,6 +365,8 @@ export function generateStepEntries(
   const today = '15/09/2026';
   reworkCost = nz(reworkCost);
   scrapCost = nz(scrapCost);
+  const wip = wipStatusOf(params);
+  const deliveryRatio = wip.ratio;
 
   const ACDOCA_TABLE: AcdocaLine[] = [];
   const emit = (entry: JournalEntry, uiOnly = false) => {
@@ -509,7 +512,7 @@ export function generateStepEntries(
         debitAccountName: 'Thành phẩm (Kho riêng Sales Order E có định giá)',
         creditAccount: '154',
         creditAccountName: 'Chi phí sản xuất, kinh doanh dở dang',
-        amount: computed.plannedCost,
+        amount: roundShare(computed.plannedCost, deliveryRatio),
         costObject: `Sales Order Stock E (${soCode})`,
         note: 'VALUATED STOCK: Movement 101E ghi nhận giá trị thành phẩm nhập kho Nợ 155 / Có 154 theo giá thành kế hoạch.',
       });
@@ -732,7 +735,7 @@ export function generateStepEntries(
     // Bước 5: Xuất kho giao hàng (Delivery & PGI 601E)
     // Non-valuated: logistics only — NO FI.
     if (isValuated) {
-      const totalCostDelivered = nz(computed.plannedCost) + reworkCost + scrapCost;
+      const totalCostDelivered = roundShare(nz(computed.plannedCost) + reworkCost + scrapCost, deliveryRatio);
       const split = splitCogsByCk11n(computed, totalCostDelivered);
       assertCogsSplit(split);
       const dims = postingDims(params);
@@ -820,7 +823,7 @@ export function generateStepEntries(
       debitAccountName: `Phải thu khách hàng (${params.customer})`,
       creditAccount: '511',
       creditAccountName: 'Doanh thu bán hàng và cung cấp dịch vụ',
-      amount: computed.totalRevenue,
+      amount: roundShare(computed.totalRevenue, deliveryRatio),
       costObject: `Hóa đơn #90038101 (${soCode})`,
       note: 'Ghi nhận doanh thu bán hàng OEM theo hợp đồng.',
     });
@@ -838,7 +841,7 @@ export function generateStepEntries(
       debitAccountName: `Phải thu khách hàng (${params.customer})`,
       creditAccount: '3331',
       creditAccountName: 'Thuế giá trị gia tăng phải nộp (Thuế GTGT đầu ra)',
-      amount: computed.vatAmount,
+      amount: roundShare(computed.vatAmount, deliveryRatio),
       costObject: `Hóa đơn #90038101 (${soCode})`,
       note: 'Hạch toán thuế GTGT đầu ra theo quy định Thông tư 200.',
     });
@@ -853,7 +856,7 @@ export function generateStepEntries(
 
     // ĐỐI VỚI NON-VALUATED STOCK: ĐÂY LÀ BƯỚC HẠCH TOÁN GIÁ VỐN TOÀN BỘ NỢ 632 / CÓ 154!
     if (!isValuated) {
-      const totalActualCost = baseCost + actualVariance;
+      const totalActualCost = roundShare(baseCost + actualVariance, deliveryRatio);
       emit({
         id: `entry-7-cogs-nonval`,
         stepIndex: 7,
@@ -885,7 +888,7 @@ export function generateStepEntries(
           debitAccountName: 'Giá vốn hàng bán (Chi phí vượt định mức)',
           creditAccount: '154',
           creditAccountName: 'Chi phí sản xuất, kinh doanh dở dang',
-          amount: actualVariance,
+          amount: roundShare(actualVariance, deliveryRatio),
           costObject: `Quyết toán Sales Order ${soCode}`,
           note: 'Quyết toán chênh lệch chi phí thực tế vượt chi phí kế hoạch (Hao hụt nhựa, tăng giờ máy) vào Giá vốn hàng bán.',
         });
@@ -902,7 +905,7 @@ export function generateStepEntries(
           debitAccountName: 'Chi phí sản xuất, kinh doanh dở dang',
           creditAccount: '632',
           creditAccountName: 'Giá vốn hàng bán (Tiết kiệm định mức)',
-          amount: Math.abs(actualVariance),
+          amount: Math.abs(roundShare(actualVariance, deliveryRatio)),
           costObject: `Quyết toán Sales Order ${soCode}`,
           note: 'Chênh lệch chi phí có lợi (Favorable Variance): Giảm giá vốn hàng bán tương ứng số tiết kiệm được.',
         });
@@ -910,9 +913,9 @@ export function generateStepEntries(
     }
 
     // Kết chuyển doanh thu và giá vốn vào TK 911 để xác định kết quả kinh doanh cuối cùng
-    const totalRecognizedCOGS = isValuated
-      ? baseCost + actualVariance
-      : baseCost + actualVariance;
+    const deliveredBase = roundShare(baseCost, deliveryRatio);
+    const deliveredVar = roundShare(actualVariance, deliveryRatio);
+    const totalRecognizedCOGS = deliveredBase + deliveredVar;
 
     emit({
       id: `entry-7-settle-rev`,
@@ -926,13 +929,13 @@ export function generateStepEntries(
       debitAccountName: 'Doanh thu bán hàng và cung cấp dịch vụ',
       creditAccount: '911',
       creditAccountName: 'Xác định kết quả kinh doanh',
-      amount: computed.totalRevenue,
+      amount: roundShare(computed.totalRevenue, deliveryRatio),
       costObject: `CO-PA Segment: ${params.customer} / ${params.componentCode}`,
       note: 'Tất toán tài khoản doanh thu 511 để xác định kết quả kinh doanh thực tế.',
     });
 
     if (isValuated) {
-      const split = splitCogsByCk11n(computed, baseCost);
+      const split = splitCogsByCk11n(computed, deliveredBase);
       assertCogsSplit(split);
       const dims = postingDims(params);
       const settleLines = [
@@ -943,12 +946,12 @@ export function generateStepEntries(
           crAmount: 0,
           ...dims,
         },
-        ...(actualVariance < 0
+        ...(deliveredVar < 0
           ? [
               {
                 glAccount: '632',
                 accountName: 'Giá vốn hàng bán (Tiết kiệm định mức)',
-                drAmount: Math.abs(actualVariance),
+                drAmount: Math.abs(deliveredVar),
                 crAmount: 0,
                 ...dims,
               },
@@ -982,13 +985,13 @@ export function generateStepEntries(
           crAmount: split.amtSXC,
           ...dims,
         },
-        ...(actualVariance > 0
+        ...(deliveredVar > 0
           ? [
               {
                 glAccount: '632',
                 accountName: 'Giá vốn hàng bán (Chi phí vượt định mức)',
                 drAmount: 0,
-                crAmount: actualVariance,
+                crAmount: deliveredVar,
                 ...dims,
               },
             ]

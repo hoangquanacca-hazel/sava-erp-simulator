@@ -12,6 +12,7 @@ import {
 } from '../src/utils/acdoca.ts';
 import { computeFiveTypeVariance, assertFiveTypeVariance } from '../src/features/variance.ts';
 import { canRunCloseStep, EMPTY_CLOSE } from '../src/features/periodClose.ts';
+import { wipStatusOf } from '../src/features/wip.ts';
 
 function runScenario(id: string) {
   const preset = PRESET_SCENARIOS.find((p) => p.id === id);
@@ -129,6 +130,43 @@ missingInputIsZero();
   const skip = canRunCloseStep({ ...EMPTY_CLOSE, MMPV: true, mmPeriodLocked: true }, 'KKA2');
   if (skip.ok) throw new Error('KKA2 must not skip CKMLCP');
   console.log('PASS close checklist order MMPV→CKMLCP→KKA2');
+}
+
+{
+  const preset = PRESET_SCENARIOS.find((p) => p.id === 'canon-frame')!;
+  const params = { ...preset.params, deliveredQuantity: 1000 };
+  const wip = wipStatusOf(params);
+  if (wip.teco) throw new Error('half delivery must not be TECO');
+  const computed = computeMTO(params);
+  const allAcdoca = [];
+  for (let step = 1; step <= 7; step++) {
+    allAcdoca.push(...generateStepEntries(step, params, computed, 0, 0, null).acdoca);
+  }
+  const tb = selectTrialBalance(allAcdoca);
+  if (!tb.isBalanced) throw new Error('partial NV TB not balanced');
+  const step5_632 = allAcdoca.filter((l) => l.stepId === 5 && l.glAccount.startsWith('632'));
+  if (step5_632.length) throw new Error('partial NV 632 at step 5');
+  const settle632 = allAcdoca
+    .filter((l) => l.stepId === 7 && l.glAccount === '632' && l.drAmount > 0)
+    .reduce((s, l) => s + l.drAmount, 0);
+  const fullActual = computed.plannedCost + computed.actualCostVariance;
+  const expected = Math.round(fullActual * 0.5);
+  if (settle632 !== expected) throw new Error(`partial NV settle ${settle632} !== ${expected}`);
+  const acc154 = tb.items.find((i) => i.accountNumber === '154');
+  if (!acc154 || acc154.closingDebit <= 0) throw new Error('partial NV must keep WIP on 154');
+  console.log(`PASS M3 WIP NV delivered 1000/2000 settle632=${settle632} wip154=${acc154.closingDebit}`);
+}
+
+{
+  const preset = PRESET_SCENARIOS.find((p) => p.id === 'samsung-cover')!;
+  const computed = computeMTO(preset.params);
+  const allAcdoca = [];
+  for (let step = 1; step <= 7; step++) {
+    allAcdoca.push(...generateStepEntries(step, preset.params, computed, 0, 0, null).acdoca);
+  }
+  const tb = selectTrialBalance(allAcdoca);
+  if (!tb.isBalanced) throw new Error('full valuated after WIP patch TB fail');
+  console.log('PASS M3 TECO default still balances');
 }
 
 console.log('ALL PARITY CHECKS PASSED');

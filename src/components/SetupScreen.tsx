@@ -1005,6 +1005,23 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({
                 </label>
               ))}
             </div>
+            <label className="block text-[10px] text-slate-400 space-y-1 pt-3">
+              <span>M3 · SL đã giao (cái). Preset không điền = giao đủ (TECO). Nhỏ hơn SL đơn → WIP 154.</span>
+              <input
+                type="number"
+                min={0}
+                value={params.deliveredQuantity ?? params.orderQuantity}
+                onChange={(e) =>
+                  updateField(
+                    'deliveredQuantity',
+                    e.target.value === '' ? undefined : Number(e.target.value)
+                  )
+                }
+                className={`w-full max-w-xs text-xs rounded py-1.5 px-2 font-mono border ${
+                  isClassic ? 'bg-white border-[#7f9db9]' : 'bg-slate-950 border-slate-700 text-slate-100'
+                }`}
+              />
+            </label>
           </div>
         </div>
 
