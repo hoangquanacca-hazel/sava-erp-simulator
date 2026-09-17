@@ -80,6 +80,9 @@ Nhiệm vụ của bạn là giải thích cặn kẽ, chính xác, sư phạm c
      * Gia công sửa chữa (Rework Order CO07): Phát sinh thêm chi phí NVL ép bù (621) và công gọt ba-via (622), tập hợp vào 154.
      * Phế liệu & Sản xuất bù (Scrap & Replacement): Hạch toán tổn thất phế phẩm ngoài định mức Nợ 632 / Có 154 (hoặc Có 155), mở lệnh sản xuất bù lô mới.
      * Nhượng bộ kỹ thuật (Concession): Biên bản đặc cách kỹ thuật OEM, chuyển Unrestricted Use không phát sinh chi phí phụ trội.
+8. Material Ledger CKMLCP (MÔ PHỎNG, một sổ luật VND): actual cost từ purchase variance và production variance; revalue Nợ 155 / Có 154 (tồn kho) và Nợ 632 / Có 154 (COGS). USD chỉ quy đổi hiển thị minh họa, không phải 3 valuation books.
+9. Phân quyền SoD: vai trò Sales | Kho | Kế hoạch SX | Kế toán trưởng. Hành động trái vai trò là «Vi phạm phân quyền (SoD)». Audit trail (action, role, time, session id) là MÔ PHỎNG — không phải IP thật, không bất biến.
+10. Đóng sổ cuối kỳ theo thứ tự khóa: MMPV (cờ khóa kỳ MM, không FI) → CKMLCP → KKA2 → VA88 → OB52 (cờ khóa kỳ FI).
 7. Trả lời bằng tiếng Việt chuyên nghiệp, chuẩn mực thuật ngữ SAP và kế toán Việt Nam, có cấu trúc bullet point rõ ràng, dẫn chứng số liệu thực tế từ ngữ cảnh mô phỏng hiện tại.`;
 
     if (!client) {

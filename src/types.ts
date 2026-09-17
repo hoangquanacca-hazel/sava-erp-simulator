@@ -153,7 +153,7 @@ export interface AcdocaLine {
 
 export interface AcdocaPostingLine {
   glAccount: string;
-  accountName: string;
+  accountName?: string;
   drAmount?: number;
   crAmount?: number;
   kaufn?: string;
@@ -658,6 +658,10 @@ export const PRESET_SCENARIOS: PresetScenario[] = [
       strategy: 'Strategy 20',
       stockType: 'Valuated',
       actualVariancePercent: 0,
+      mdgMaterialApproved: true,
+      mdgBomApproved: true,
+      mdgRoutingApproved: true,
+      mdgRatesApproved: true,
     },
   },
   {
@@ -685,6 +689,10 @@ export const PRESET_SCENARIOS: PresetScenario[] = [
       strategy: 'Strategy 20',
       stockType: 'Non-valuated',
       actualVariancePercent: 0,
+      mdgMaterialApproved: true,
+      mdgBomApproved: true,
+      mdgRoutingApproved: true,
+      mdgRatesApproved: true,
     },
   },
   {
@@ -718,6 +726,10 @@ export const PRESET_SCENARIOS: PresetScenario[] = [
       variantPackagingId: 'p-ip68',
       variantPackagingName: 'Lắp thêm gioăng đệm cao su Silicone IP68',
       actualVariancePercent: 3.5, // 3.5% hao hụt thực tế tại xưởng
+      mdgMaterialApproved: true,
+      mdgBomApproved: true,
+      mdgRoutingApproved: true,
+      mdgRatesApproved: true,
     },
   },
 ];

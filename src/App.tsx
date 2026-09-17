@@ -24,6 +24,7 @@ import {
 } from './utils/calculator';
 import {
   assertParity,
+  selectGLLedgerAsJournal,
 } from './utils/acdoca';
 import { exportFullERPPackageExcel } from './utils/excelService';
 import { Header } from './components/Header';
@@ -46,10 +47,9 @@ import { ModuleNav } from './components/ModuleNav';
 import { loadFeatureFlags } from './features/flags';
 import { AppHashRoute, parseHash } from './features/hashRoute';
 import { CloseChecklistState, EMPTY_CLOSE } from './features/periodClose';
-
-const VarianceWaterfallPage = lazy(() => import('./pages/VarianceWaterfallPage'));
-const CloseCockpitPage = lazy(() => import('./pages/CloseCockpitPage'));
-const WipSettlementPage = lazy(() => import('./pages/WipSettlementPage'));
+import { mdgGateOpen } from './features/mdg';
+import { AuditEvent, SimRole, canRoleRunStep, newSessionId } from './features/sod';
+import { postCkmlcp } from './features/materialLedger';
 import {
   CheckCircle,
   Play,
@@ -63,6 +63,15 @@ import {
   FileCheck,
   FolderTree,
 } from 'lucide-react';
+
+const VarianceWaterfallPage = lazy(() => import('./pages/VarianceWaterfallPage'));
+const CloseCockpitPage = lazy(() => import('./pages/CloseCockpitPage'));
+const WipSettlementPage = lazy(() => import('./pages/WipSettlementPage'));
+const MdgGatePage = lazy(() => import('./pages/MdgGatePage'));
+const SodAuditPage = lazy(() => import('./pages/SodAuditPage'));
+const MaterialLedgerPage = lazy(() => import('./pages/MaterialLedgerPage'));
+const GrirPage = lazy(() => import('./pages/GrirPage'));
+const IntercompanyPage = lazy(() => import('./pages/IntercompanyPage'));
 
 const INITIAL_PARAMS: MTOParameters = PRESET_SCENARIOS[0].params;
 
@@ -84,6 +93,11 @@ export default function App() {
     typeof window !== 'undefined' ? loadFeatureFlags() : loadFeatureFlags()
   );
   const [closeState, setCloseState] = useState<CloseChecklistState>(EMPTY_CLOSE);
+  const [extraAcdoca, setExtraAcdoca] = useState<AcdocaLine[]>([]);
+  const [simRole, setSimRole] = useState<SimRole>('Kế toán trưởng');
+  const [sessionId] = useState(() => newSessionId());
+  const [audit, setAudit] = useState<AuditEvent[]>([]);
+  const [sodModal, setSodModal] = useState<string | null>(null);
 
   useEffect(() => {
     const onHash = () => setRoute(parseHash());
@@ -158,8 +172,9 @@ export default function App() {
         list.push(...stepStates[i].entries);
       }
     }
+    list.push(...selectGLLedgerAsJournal(extraAcdoca));
     return list;
-  }, [stepStates]);
+  }, [stepStates, extraAcdoca]);
 
   const ACDOCA_TABLE = useMemo(() => {
     const table: AcdocaLine[] = [];
@@ -168,11 +183,16 @@ export default function App() {
         table.push(...(stepStates[i].acdocaLines || []));
       }
     }
-    if (allJournalEntries.length > 0 && table.length > 0) {
-      assertParity(allJournalEntries, table, `${params.stockType} full ledger`);
+    const stepEntries: JournalEntry[] = [];
+    for (let i = 1; i <= 7; i++) {
+      if (stepStates[i]?.isExecuted) stepEntries.push(...stepStates[i].entries);
     }
+    if (stepEntries.length > 0 && table.length > 0) {
+      assertParity(stepEntries, table, `${params.stockType} full ledger`);
+    }
+    table.push(...extraAcdoca);
     return table;
-  }, [stepStates, allJournalEntries, params]);
+  }, [stepStates, params, extraAcdoca]);
 
   // Inventory & Sales Order states updated in real-time
   const stockEState = useMemo(() => {
@@ -212,6 +232,7 @@ export default function App() {
     });
     setCurrentStepId(1);
     setCloseState(EMPTY_CLOSE);
+    setExtraAcdoca([]);
   };
 
   const handleSelectPreset = (preset: PresetScenario) => {
@@ -299,6 +320,30 @@ export default function App() {
       window.alert('OB52 đã khóa kỳ FI — không ghi sổ thêm (MÔ PHỎNG).');
       return;
     }
+    if (flags.m4MdgGate && stepId === 1) {
+      const gate = mdgGateOpen(params);
+      if (!gate.ok) {
+        window.alert(`BLOCK Step 1 — master data chưa duyệt: ${gate.missing.join(', ')}`);
+        return;
+      }
+    }
+    if (flags.m5SodRbac) {
+      const sod = canRoleRunStep(simRole, stepId);
+      if (!sod.ok) {
+        setSodModal(sod.reason);
+        return;
+      }
+    }
+    setAudit((prev) => [
+      ...prev,
+      {
+        id: `a-${prev.length + 1}`,
+        action: `Execute step ${stepId}`,
+        role: simRole,
+        time: new Date().toISOString(),
+        sessionId,
+      },
+    ]);
     // Special validation for Step 4 (QM):
     if (stepId === 4) {
       if (!stepStates[4].qmDecision) {
@@ -417,6 +462,20 @@ export default function App() {
       window.alert('OB52 đã khóa kỳ FI — không ghi sổ thêm (MÔ PHỎNG).');
       return;
     }
+    if (flags.m4MdgGate) {
+      const gate = mdgGateOpen(params);
+      if (!gate.ok) {
+        window.alert(`BLOCK — master data chưa duyệt: ${gate.missing.join(', ')}`);
+        return;
+      }
+    }
+    if (flags.m5SodRbac) {
+      const sod = canRoleRunStep(simRole, 7);
+      if (!sod.ok) {
+        setSodModal('Vi phạm phân quyền (SoD): chạy hết 7 bước yêu cầu Kế toán trưởng.');
+        return;
+      }
+    }
     let currentReworkCost = stepStates[4].qmReworkCost || 0;
     let currentScrapCost = stepStates[4].qmScrapCost || 0;
     let currentMethod = stepStates[4].qmResolutionMethod || null;
@@ -524,6 +583,21 @@ export default function App() {
       />
 
       <ModuleNav current={route} flags={flags} uiMode={uiMode} />
+      {flags.m5SodRbac && (
+        <div className="max-w-7xl mx-auto px-4 py-1 text-[11px] text-slate-400">
+          Vai trò (MÔ PHỎNG):{' '}
+          <select
+            value={simRole}
+            onChange={(e) => setSimRole(e.target.value as SimRole)}
+            className="bg-slate-900 border border-slate-700 rounded text-slate-200 text-[11px] px-1 py-0.5"
+          >
+            <option>Sales</option>
+            <option>Kho</option>
+            <option>Kế hoạch SX</option>
+            <option>Kế toán trưởng</option>
+          </select>
+        </div>
+      )}
 
       {/* Main Content Area */}
       <main className="flex-1 pb-16">
@@ -554,6 +628,12 @@ export default function App() {
                 }));
               }}
               onOpenPdf={() => setPdfReportOpen(true)}
+              onCkmlcp={() => {
+                const table = [...ACDOCA_TABLE];
+                const lines = postCkmlcp(table, params, computed, 0);
+                if (lines.length) setExtraAcdoca((prev) => [...prev, ...lines]);
+              }}
+              skipVa88Variance={closeState.CKMLCP}
               uiMode={uiMode}
             />
           </Suspense>
@@ -564,6 +644,58 @@ export default function App() {
               computed={computed}
               acdoca={ACDOCA_TABLE}
               onChangeDelivered={(qty) => setParams((p) => ({ ...p, deliveredQuantity: qty }))}
+              uiMode={uiMode}
+            />
+          </Suspense>
+        ) : route === 'mdg' && flags.m4MdgGate ? (
+          <Suspense fallback={<div className="p-8 text-sm text-slate-400">Đang tải MDG…</div>}>
+            <MdgGatePage params={params} onChange={setParams} uiMode={uiMode} />
+          </Suspense>
+        ) : route === 'sod' && flags.m5SodRbac ? (
+          <Suspense fallback={<div className="p-8 text-sm text-slate-400">Đang tải SoD…</div>}>
+            <SodAuditPage
+              role={simRole}
+              onRole={setSimRole}
+              audit={audit}
+              sessionId={sessionId}
+              uiMode={uiMode}
+            />
+          </Suspense>
+        ) : route === 'ml' && flags.m6MaterialLedger ? (
+          <Suspense fallback={<div className="p-8 text-sm text-slate-400">Đang tải ML…</div>}>
+            <MaterialLedgerPage
+              params={params}
+              computed={computed}
+              acdoca={ACDOCA_TABLE}
+              onParams={setParams}
+              onPosted={(lines) => {
+                if (lines.length) setExtraAcdoca((prev) => [...prev, ...lines]);
+              }}
+              uiMode={uiMode}
+            />
+          </Suspense>
+        ) : route === 'grir' && flags.m7GrIr ? (
+          <Suspense fallback={<div className="p-8 text-sm text-slate-400">Đang tải GR/IR…</div>}>
+            <GrirPage
+              params={params}
+              acdoca={ACDOCA_TABLE}
+              onParams={setParams}
+              onPosted={(lines) => {
+                if (lines.length) setExtraAcdoca((prev) => [...prev, ...lines]);
+              }}
+              uiMode={uiMode}
+            />
+          </Suspense>
+        ) : route === 'ic' && flags.m8Intercompany ? (
+          <Suspense fallback={<div className="p-8 text-sm text-slate-400">Đang tải IC…</div>}>
+            <IntercompanyPage
+              params={params}
+              computed={computed}
+              acdoca={ACDOCA_TABLE}
+              onParams={setParams}
+              onPosted={(lines) => {
+                if (lines.length) setExtraAcdoca((prev) => [...prev, ...lines]);
+              }}
               uiMode={uiMode}
             />
           </Suspense>
@@ -719,8 +851,8 @@ export default function App() {
               onChangeVariancePercent={handleChangeVariancePercent}
               onExplainStep={handleExplainStep}
               canExecute={
-                activeStepDef.id === 1 ||
-                stepStates[activeStepDef.id - 1]?.isExecuted === true
+                (activeStepDef.id === 1 || stepStates[activeStepDef.id - 1]?.isExecuted === true) &&
+                !(flags.m4MdgGate && activeStepDef.id === 1 && !mdgGateOpen(params).ok)
               }
             />
 
@@ -847,7 +979,22 @@ export default function App() {
         stockEState={stockEState}
       />
 
-      {/* Gatekeeper Lead Capture Modal (Step 3, Excel Export, AI Tutor) */}
+      {sodModal && (
+        <div className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center p-4">
+          <div className="max-w-md w-full rounded-xl border-2 border-rose-600 bg-rose-950 p-5 text-rose-100 shadow-2xl">
+            <div className="text-lg font-black mb-2">Vi phạm phân quyền (SoD)</div>
+            <p className="text-sm mb-4">{sodModal}</p>
+            <p className="text-[11px] text-rose-300 mb-4">MÔ PHỎNG — không phải SAP GRC / IP thật.</p>
+            <button
+              type="button"
+              onClick={() => setSodModal(null)}
+              className="px-3 py-1.5 rounded bg-rose-700 text-white text-xs font-bold cursor-pointer"
+            >
+              Đóng
+            </button>
+          </div>
+        </div>
+      )}
       <LeadCaptureModal
         isOpen={leadModalOpen}
         onClose={() => {

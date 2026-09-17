@@ -13,6 +13,11 @@ import {
 import { computeFiveTypeVariance, assertFiveTypeVariance } from '../src/features/variance.ts';
 import { canRunCloseStep, EMPTY_CLOSE } from '../src/features/periodClose.ts';
 import { wipStatusOf } from '../src/features/wip.ts';
+import { mdgGateOpen } from '../src/features/mdg.ts';
+import { canRoleRunStep } from '../src/features/sod.ts';
+import { postCkmlcp, usdOf } from '../src/features/materialLedger.ts';
+import { grirAmounts, hanging3388, postGr, postMiro, postMr11 } from '../src/features/grir.ts';
+import { postIntercompany, icAmounts } from '../src/features/intercompany.ts';
 
 function runScenario(id: string) {
   const preset = PRESET_SCENARIOS.find((p) => p.id === id);
@@ -167,6 +172,72 @@ missingInputIsZero();
   const tb = selectTrialBalance(allAcdoca);
   if (!tb.isBalanced) throw new Error('full valuated after WIP patch TB fail');
   console.log('PASS M3 TECO default still balances');
+}
+
+{
+  const blocked = mdgGateOpen({ ...PRESET_SCENARIOS[0].params, mdgMaterialApproved: false });
+  if (blocked.ok) throw new Error('MDG must block when material unapproved');
+  const open = mdgGateOpen(PRESET_SCENARIOS[0].params);
+  if (!open.ok) throw new Error('preset MDG should be approved');
+  console.log('PASS M4 MDG gate');
+}
+
+{
+  if (canRoleRunStep('Sales', 7).ok) throw new Error('Sales must not VA88');
+  if (!canRoleRunStep('Kế toán trưởng', 7).ok) throw new Error('Controller must VA88');
+  if (canRoleRunStep('Kho', 1).ok) throw new Error('Kho must not VA01');
+  console.log('PASS M5 SoD roles');
+}
+
+{
+  const preset = PRESET_SCENARIOS.find((p) => p.id === 'denso-sensor')!;
+  const computed = computeMTO(preset.params);
+  const allAcdoca = [];
+  for (let s = 1; s <= 5; s++) {
+    allAcdoca.push(...generateStepEntries(s, preset.params, computed, 0, 0, null).acdoca);
+  }
+  const before = allAcdoca.length;
+  postCkmlcp(allAcdoca, preset.params, computed, 0);
+  const tb = selectTrialBalance(allAcdoca);
+  if (!tb.isBalanced) throw new Error('CKMLCP TB not balanced');
+  if (usdOf(100000, 0) !== 0) throw new Error('missing FX rate must display 0');
+  if (computed.actualCostVariance === 0) throw new Error('denso must have production variance');
+  console.log(`PASS M6 CKMLCP after PGI lines ${before}->${allAcdoca.length} TB Dr=${tb.totalDebitTurnover}`);
+}
+
+{
+  const preset = PRESET_SCENARIOS.find((p) => p.id === 'samsung-cover')!;
+  const params = { ...preset.params, grQtyKg: 10, grPricePerKg: 1000, miroQtyKg: 10, miroPricePerKg: 900 };
+  const amts = grirAmounts(params);
+  if (amts.hanging3388 !== 1000) throw new Error(`expected hang 1000 got ${amts.hanging3388}`);
+  const table = [];
+  postGr(table, params);
+  postMiro(table, params);
+  if (hanging3388(table) !== 1000) throw new Error('3388 hang after GR/MIRO');
+  postMr11(table, params, '632');
+  if (hanging3388(table) !== 0) throw new Error('MR11 must clear 3388');
+  const tb = selectTrialBalance(table);
+  if (!tb.isBalanced) throw new Error('GR/IR TB not balanced');
+  const zero = grirAmounts({ ...preset.params });
+  if (zero.grAmt !== 0 || zero.miroAmt !== 0) throw new Error('missing GR/IR inputs must be 0');
+  console.log('PASS M7 GR/IR MR11');
+}
+
+{
+  const preset = PRESET_SCENARIOS.find((p) => p.id === 'samsung-cover')!;
+  const computed = computeMTO(preset.params);
+  const params = { ...preset.params, intercompanyMto: true, icMarkupPercent: 10 };
+  const amts = icAmounts(params, computed);
+  const table = [];
+  postIntercompany(table, params, computed);
+  const tb = selectTrialBalance(table);
+  if (!tb.isBalanced) throw new Error('IC TB not balanced');
+  if (amts.unrealized !== Math.round(computed.plannedCost * 0.1)) {
+    throw new Error(`UIP ${amts.unrealized}`);
+  }
+  const off = postIntercompany([], { ...preset.params, intercompanyMto: false }, computed);
+  if (off.length) throw new Error('IC off must not post');
+  console.log(`PASS M8 IC markup10 UIP=${amts.unrealized}`);
 }
 
 console.log('ALL PARITY CHECKS PASSED');

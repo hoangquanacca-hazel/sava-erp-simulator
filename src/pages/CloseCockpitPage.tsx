@@ -33,6 +33,8 @@ export const CloseCockpitPage: React.FC<{
   closeState: CloseChecklistState;
   onCloseState: (next: CloseChecklistState) => void;
   onPostStep7: (posted: { entries: JournalEntry[]; acdoca: AcdocaLine[] }) => void;
+  onCkmlcp?: () => void;
+  skipVa88Variance?: boolean;
   onOpenPdf: () => void;
   uiMode?: UIMode;
 }> = ({
@@ -45,6 +47,8 @@ export const CloseCockpitPage: React.FC<{
   closeState,
   onCloseState,
   onPostStep7,
+  onCkmlcp,
+  skipVa88Variance,
   onOpenPdf,
   uiMode = 'fiori',
 }) => {
@@ -73,13 +77,22 @@ export const CloseCockpitPage: React.FC<{
     const next = { ...closeState, [step]: true };
     if (step === 'MMPV') next.mmPeriodLocked = true;
     if (step === 'OB52') next.fiPeriodLocked = true;
+    if (step === 'CKMLCP') {
+      if (!priorStepsReady) {
+        window.alert('Cần hoàn thành bước 1–6 trước CKMLCP.');
+        return;
+      }
+      onCkmlcp?.();
+    }
     if (step === 'VA88') {
       if (!priorStepsReady) {
         window.alert('Cần hoàn thành bước 1–6 trên Cockpit trước khi VA88.');
         return;
       }
       if (!step7Executed) {
-        const posted = generateStepEntries(7, params, computed, 0, 0, null);
+        const posted = generateStepEntries(7, params, computed, 0, 0, null, {
+          skipVa88Variance: !!skipVa88Variance || step === 'VA88' && closeState.CKMLCP,
+        });
         onPostStep7(posted);
       }
     }

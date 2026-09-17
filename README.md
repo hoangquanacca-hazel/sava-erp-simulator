@@ -22,7 +22,7 @@ Parity / acceptance (Valuated + Non-valuated, missing input → 0, 5-type varian
 npm run test:parity
 ```
 
-Lazy modules (hash routes, feature-flagged): `#/variance` Waterfall 5-type; `#/close` Đóng sổ cuối kỳ (MMPV→OB52).
+Lazy hash modules (feature-flagged): `#/variance` `#/close` `#/wip` `#/mdg` `#/sod` `#/ml` `#/grir` `#/ic`.
 
 ## ACDOCA
 

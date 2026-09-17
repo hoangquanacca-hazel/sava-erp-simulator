@@ -357,7 +357,8 @@ export function generateStepEntries(
   computed: MTOComputed,
   reworkCost: number = 0,
   scrapCost: number = 0,
-  resolutionMethod?: 'rework' | 'scrap' | 'concession' | null
+  resolutionMethod?: 'rework' | 'scrap' | 'concession' | null,
+  options?: { skipVa88Variance?: boolean }
 ): { entries: JournalEntry[]; acdoca: AcdocaLine[] } {
   const isValuated = params.stockType === 'Valuated';
   const soCode = 'SO-PIC-2026-49281';
@@ -873,7 +874,7 @@ export function generateStepEntries(
         costObject: `Quyết toán Sales Order ${soCode}`,
         note: 'ĐIỂM ĐẶC THÙ NON-VALUATED STOCK: Toàn bộ chi phí sản xuất thực tế trên TK 154 được kết chuyển thành Giá vốn hàng bán ở bước Quyết toán Settlement!',
       });
-    } else {
+    } else if (!options?.skipVa88Variance) {
       // ĐỐI VỚI VALUATED STOCK: HẠCH TOÁN CHÊNH LỆCH GIÁ THÀNH THỰC TẾ (VARIANCE)
       if (actualVariance > 0) {
         emit({
