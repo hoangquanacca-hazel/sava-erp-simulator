@@ -10,6 +10,7 @@ import {
   nz,
   selectMarginAnalysis,
 } from '../src/utils/acdoca.ts';
+import { computeFiveTypeVariance, assertFiveTypeVariance } from '../src/features/variance.ts';
 
 function runScenario(id: string) {
   const preset = PRESET_SCENARIOS.find((p) => p.id === id);
@@ -63,6 +64,13 @@ function runScenario(id: string) {
       `${id} margin GP ${ma.actualGrossProfit} ≠ order card ${card.actualGrossProfit} (rev=${ma.revenue511} split=${ma.cogsSplitTotal} var=${ma.settledVariance})`
     );
   }
+
+  const five = computeFiveTypeVariance(params, computed);
+  assertFiveTypeVariance(five);
+  if (five.Vp + five.Vq + five.Vr + five.Vs + five.Vrem !== five.TV) {
+    throw new Error(`${id} 5-type identity fail`);
+  }
+
   console.log(
     `PASS ${id} (${params.stockType}) acdoca=${allAcdoca.length} TB Dr=${newTb.totalDebitTurnover} GP=${card.actualGrossProfit} margin%=${ma.actualMarginPercent}`
   );
@@ -78,6 +86,12 @@ function missingInputIsZero() {
   });
   if (nz(computed.totalRevenue) !== 0) throw new Error('missing selling/qty must yield revenue 0');
   if (!Number.isFinite(computed.plannedCost)) throw new Error('plannedCost must be finite');
+  const five = computeFiveTypeVariance(
+    { ...preset.params, variancePmPercent: undefined, varianceQmPercent: undefined, scrapUnits: undefined },
+    computed
+  );
+  if (five.Vp !== 0 || five.Vq !== 0 || five.Vs !== 0) throw new Error('missing 5-type drivers must be 0');
+  assertFiveTypeVariance(five);
   console.log('PASS missing-input → 0');
 }
 
@@ -85,4 +99,25 @@ runScenario('samsung-cover');
 runScenario('canon-frame');
 runScenario('denso-sensor');
 missingInputIsZero();
+
+{
+  const preset = PRESET_SCENARIOS.find((p) => p.id === 'denso-sensor')!;
+  const params = {
+    ...preset.params,
+    variancePmPercent: 2,
+    varianceQmPercent: 1,
+    varianceRePercent: 0.5,
+    scrapUnits: 3,
+  };
+  const computed = computeMTO(params);
+  const five = computeFiveTypeVariance(params, computed);
+  assertFiveTypeVariance(five);
+  if (five.TV !== computed.actualCostVariance) {
+    throw new Error(`TV ${five.TV} !== actualCostVariance ${computed.actualCostVariance}`);
+  }
+  console.log(
+    `PASS 5-type drivers denso Vp=${five.Vp} Vq=${five.Vq} Vr=${five.Vr} Vs=${five.Vs} Vrem=${five.Vrem} TV=${five.TV}`
+  );
+}
+
 console.log('ALL PARITY CHECKS PASSED');

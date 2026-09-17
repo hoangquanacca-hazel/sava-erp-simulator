@@ -739,28 +739,28 @@ export function generateStepEntries(
       postDocument(ACDOCA_TABLE, 5, 'VL01N / MIGO 601E', '601E', [
         {
           glAccount: '632110',
-          accountName: 'TK chi tiết quản trị — COGS Vật liệu',
+          accountName: 'TK chi tiết quản trị (không phải mã luật) — COGS Vật liệu',
           drAmount: split.amtVL,
           crAmount: 0,
           ...dims,
         },
         {
           glAccount: '632120',
-          accountName: 'TK chi tiết quản trị — COGS Nhân công',
+          accountName: 'TK chi tiết quản trị (không phải mã luật) — COGS Nhân công',
           drAmount: split.amtNC,
           crAmount: 0,
           ...dims,
         },
         {
           glAccount: '632130',
-          accountName: 'TK chi tiết quản trị — COGS Máy & KH',
+          accountName: 'TK chi tiết quản trị (không phải mã luật) — COGS Máy & KH',
           drAmount: split.amtMay,
           crAmount: 0,
           ...dims,
         },
         {
           glAccount: '632140',
-          accountName: 'TK chi tiết quản trị — COGS SXC',
+          accountName: 'TK chi tiết quản trị (không phải mã luật) — COGS SXC',
           drAmount: split.amtSXC,
           crAmount: 0,
           ...dims,
@@ -775,10 +775,10 @@ export function generateStepEntries(
       ]);
 
       const parts: Array<{ id: string; acc: string; name: string; amt: number }> = [
-        { id: 'vl', acc: '632110', name: 'TK chi tiết quản trị — COGS Vật liệu', amt: split.amtVL },
-        { id: 'nc', acc: '632120', name: 'TK chi tiết quản trị — COGS Nhân công', amt: split.amtNC },
-        { id: 'may', acc: '632130', name: 'TK chi tiết quản trị — COGS Máy & KH', amt: split.amtMay },
-        { id: 'sxc', acc: '632140', name: 'TK chi tiết quản trị — COGS SXC', amt: split.amtSXC },
+        { id: 'vl', acc: '632110', name: 'TK chi tiết quản trị (không phải mã luật) — COGS Vật liệu', amt: split.amtVL },
+        { id: 'nc', acc: '632120', name: 'TK chi tiết quản trị (không phải mã luật) — COGS Nhân công', amt: split.amtNC },
+        { id: 'may', acc: '632130', name: 'TK chi tiết quản trị (không phải mã luật) — COGS Máy & KH', amt: split.amtMay },
+        { id: 'sxc', acc: '632140', name: 'TK chi tiết quản trị (không phải mã luật) — COGS SXC', amt: split.amtSXC },
       ];
       for (const p of parts) {
         emit(
@@ -956,28 +956,28 @@ export function generateStepEntries(
           : []),
         {
           glAccount: '632110',
-          accountName: 'TK chi tiết quản trị — COGS Vật liệu',
+          accountName: 'TK chi tiết quản trị (không phải mã luật) — COGS Vật liệu',
           drAmount: 0,
           crAmount: split.amtVL,
           ...dims,
         },
         {
           glAccount: '632120',
-          accountName: 'TK chi tiết quản trị — COGS Nhân công',
+          accountName: 'TK chi tiết quản trị (không phải mã luật) — COGS Nhân công',
           drAmount: 0,
           crAmount: split.amtNC,
           ...dims,
         },
         {
           glAccount: '632130',
-          accountName: 'TK chi tiết quản trị — COGS Máy & KH',
+          accountName: 'TK chi tiết quản trị (không phải mã luật) — COGS Máy & KH',
           drAmount: 0,
           crAmount: split.amtMay,
           ...dims,
         },
         {
           glAccount: '632140',
-          accountName: 'TK chi tiết quản trị — COGS SXC',
+          accountName: 'TK chi tiết quản trị (không phải mã luật) — COGS SXC',
           drAmount: 0,
           crAmount: split.amtSXC,
           ...dims,
@@ -1007,7 +1007,7 @@ export function generateStepEntries(
           debitAccount: '911',
           debitAccountName: 'Xác định kết quả kinh doanh',
           creditAccount: '632110-140',
-          creditAccountName: 'TK chi tiết quản trị — COGS split + variance',
+          creditAccountName: 'TK chi tiết quản trị (không phải mã luật) — COGS split + variance',
           amount: totalRecognizedCOGS,
           costObject: `CO-PA Segment: ${params.customer} / ${params.componentCode}`,
           note: 'Tất toán các TK chi tiết quản trị 632xxx (và 632 variance) để xác định LN gộp thực tế.',
@@ -1317,10 +1317,10 @@ export function computeTrialBalance(entries: JournalEntry[]): {
     '622': 'Chi phí nhân công trực tiếp',
     '627': 'Chi phí sản xuất chung (Khấu hao máy & điện năng)',
     '632': 'Giá vốn hàng bán (Cost of Goods Sold)',
-    '632110': 'TK chi tiết quản trị — COGS Vật liệu',
-    '632120': 'TK chi tiết quản trị — COGS Nhân công',
-    '632130': 'TK chi tiết quản trị — COGS Máy & KH',
-    '632140': 'TK chi tiết quản trị — COGS SXC',
+    '632110': 'TK chi tiết quản trị (không phải mã luật) — COGS Vật liệu',
+    '632120': 'TK chi tiết quản trị (không phải mã luật) — COGS Nhân công',
+    '632130': 'TK chi tiết quản trị (không phải mã luật) — COGS Máy & KH',
+    '632140': 'TK chi tiết quản trị (không phải mã luật) — COGS SXC',
     '911': 'Xác định kết quả kinh doanh',
   };
 

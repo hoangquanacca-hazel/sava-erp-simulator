@@ -976,6 +976,35 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({
                 />
               </div>
             </div>
+
+            <p className={`text-[11px] pt-2 ${isClassic ? 'text-[#444444]' : 'text-slate-500'}`}>
+              Phân rã 5 loại (CO-PA, không tách FI 632): pₘ giá NVL %, qₘ SL NVL %, rₑ nguồn lực %, Su phế phẩm.
+              Ô trống = 0.
+            </p>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1">
+              {(
+                [
+                  ['variancePmPercent', 'pₘ % giá NVL'],
+                  ['varianceQmPercent', 'qₘ % SL NVL'],
+                  ['varianceRePercent', 'rₑ % nguồn lực'],
+                  ['scrapUnits', 'Su phế phẩm (cái)'],
+                ] as const
+              ).map(([key, label]) => (
+                <label key={key} className="text-[10px] text-slate-400 space-y-1">
+                  <span className="block">{label}</span>
+                  <input
+                    type="number"
+                    value={params[key] ?? 0}
+                    onChange={(e) =>
+                      updateField(key, e.target.value === '' ? 0 : Number(e.target.value))
+                    }
+                    className={`w-full text-xs rounded py-1.5 px-2 font-mono border ${
+                      isClassic ? 'bg-white border-[#7f9db9]' : 'bg-slate-950 border-slate-700 text-slate-100'
+                    }`}
+                  />
+                </label>
+              ))}
+            </div>
           </div>
         </div>
 

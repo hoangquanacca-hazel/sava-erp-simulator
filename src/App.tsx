@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useRef, useEffect } from 'react';
+import React, { useState, useMemo, useRef, useEffect, lazy, Suspense } from 'react';
 import {
   MTOParameters,
   MTOComputed,
@@ -42,6 +42,11 @@ import { track } from './utils/analytics';
 import { SessionLimitBanner } from './components/SessionLimitBanner';
 import { OrderProfitDashboard } from './components/OrderProfitDashboard';
 import { MarginAnalysisPanel } from './components/MarginAnalysisPanel';
+import { ModuleNav } from './components/ModuleNav';
+import { loadFeatureFlags } from './features/flags';
+import { AppHashRoute, parseHash } from './features/hashRoute';
+
+const VarianceWaterfallPage = lazy(() => import('./pages/VarianceWaterfallPage'));
 import {
   CheckCircle,
   Play,
@@ -69,6 +74,18 @@ export default function App() {
   const [aiTutorOpen, setAiTutorOpen] = useState<boolean>(false);
   const [aiInitialQuestion, setAiInitialQuestion] = useState<string | undefined>(undefined);
   const [pdfReportOpen, setPdfReportOpen] = useState<boolean>(false);
+  const [route, setRoute] = useState<AppHashRoute>(() =>
+    typeof window !== 'undefined' ? parseHash() : 'cockpit'
+  );
+  const [flags] = useState(() =>
+    typeof window !== 'undefined' ? loadFeatureFlags() : loadFeatureFlags()
+  );
+
+  useEffect(() => {
+    const onHash = () => setRoute(parseHash());
+    window.addEventListener('hashchange', onHash);
+    return () => window.removeEventListener('hashchange', onHash);
+  }, []);
 
   // User Registration & Gatekeeper Funnel State
   const [isRegistered, setIsRegistered] = useState<boolean>(() => {
@@ -493,9 +510,15 @@ export default function App() {
         onOpenAdminDashboard={() => setAdminDashboardOpen(true)}
       />
 
+      <ModuleNav current={route} flags={flags} uiMode={uiMode} />
+
       {/* Main Content Area */}
       <main className="flex-1 pb-16">
-        {currentScreen === 'setup' ? (
+        {route === 'variance' && flags.m1Variance ? (
+          <Suspense fallback={<div className="p-8 text-sm text-slate-400">Đang tải Variance…</div>}>
+            <VarianceWaterfallPage params={params} computed={computed} uiMode={uiMode} />
+          </Suspense>
+        ) : currentScreen === 'setup' ? (
           <SetupScreen
             params={params}
             computed={computed}

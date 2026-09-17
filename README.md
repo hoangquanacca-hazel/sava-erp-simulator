@@ -16,11 +16,13 @@ npm run build
 npm start
 ```
 
-Parity / acceptance (Valuated + Non-valuated, missing input → 0):
+Parity / acceptance (Valuated + Non-valuated, missing input → 0, 5-type variance identity):
 
 ```bash
 npm run test:parity
 ```
+
+Lazy modules (hash routes, feature-flagged): `#/variance` Waterfall 5-type (CO-PA display). FI 632 net at VA88 unchanged.
 
 ## ACDOCA
 

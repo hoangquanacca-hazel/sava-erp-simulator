@@ -60,6 +60,30 @@ export interface MTOParameters {
   variantPackagingName?: string;
   // Step 3 Actual Variance % (Input by user at shop floor)
   actualVariancePercent: number; // e.g. 0, 3, 5, -2%
+  /** Material price variance driver % (M1). Missing → 0. */
+  variancePmPercent?: number;
+  /** Material quantity variance driver % (M1). Missing → 0. */
+  varianceQmPercent?: number;
+  /** Resource (labor+OH) variance driver % (M1). Missing → 0. */
+  varianceRePercent?: number;
+  /** Scrap units for Vs = c·Su (M1). Missing → 0. */
+  scrapUnits?: number;
+  /** Qty delivered at period-end (M3). Undefined = fully delivered (TECO). Explicit 0 = no delivery. */
+  deliveredQuantity?: number;
+  mdgMaterialApproved?: boolean;
+  mdgBomApproved?: boolean;
+  mdgRoutingApproved?: boolean;
+  mdgRatesApproved?: boolean;
+  /** M6 display FX VND per 1 USD (minh họa). Missing → 0 display. */
+  usdDisplayRate?: number;
+  /** M7 GR vs MIRO mismatch drivers. Missing → 0. */
+  grQtyKg?: number;
+  grPricePerKg?: number;
+  miroQtyKg?: number;
+  miroPricePerKg?: number;
+  /** M8 intercompany MTO (MÔ PHỎNG). */
+  intercompanyMto?: boolean;
+  icMarkupPercent?: number;
   // Dynamic Master Data BOM & Routing Engine (MM/PP - CK11N)
   bomItems?: RawMaterialBOMItem[];
   routing?: RoutingWorkCenter;

@@ -30,10 +30,15 @@ const ACCOUNT_NAMES: Record<string, string> = {
   '622': 'Chi phí nhân công trực tiếp',
   '627': 'Chi phí sản xuất chung (Khấu hao máy & điện năng)',
   '632': 'Giá vốn hàng bán (Cost of Goods Sold)',
-  '632110': 'TK chi tiết quản trị — COGS Vật liệu',
-  '632120': 'TK chi tiết quản trị — COGS Nhân công',
-  '632130': 'TK chi tiết quản trị — COGS Máy & KH',
-  '632140': 'TK chi tiết quản trị — COGS SXC',
+  '632110': 'TK chi tiết quản trị (không phải mã luật) — COGS Vật liệu',
+  '632120': 'TK chi tiết quản trị (không phải mã luật) — COGS Nhân công',
+  '632130': 'TK chi tiết quản trị (không phải mã luật) — COGS Máy & KH',
+  '632140': 'TK chi tiết quản trị (không phải mã luật) — COGS SXC',
+  '3388': 'Phải trả GR/IR (MÔ PHỎNG — clearing MM)',
+  '131IC': 'Phải thu liên công ty (MÔ PHỎNG)',
+  '331IC': 'Phải trả liên công ty (MÔ PHỎNG)',
+  '511IC': 'Doanh thu nội bộ (MÔ PHỎNG)',
+  '632IC': 'Giá vốn nội bộ (MÔ PHỎNG)',
   '911': 'Xác định kết quả kinh doanh',
 };
 
@@ -366,7 +371,7 @@ export function selectGLLedgerAsJournal(ACDOCA_TABLE: AcdocaLine[]): JournalEntr
         amount: nz(dr.drAmount),
         costObject: dr.kaufn || '',
         note: dr.glAccount.startsWith('6321')
-          ? 'TK chi tiết quản trị (không phải mã luật định)'
+          ? 'TK chi tiết quản trị (không phải mã luật)'
           : dr.movementType
             ? `Movement ${dr.movementType}`
             : '',
