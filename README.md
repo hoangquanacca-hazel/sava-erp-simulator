@@ -1,6 +1,6 @@
 # Sava SAP MTO Cockpit
 
-Enterprise simulation of SAVA Precision Technology make-to-order (MTO) flow: SD · MM · PP · QM · FICO, Thông tư 200/2014/TT-BTC, and S/4HANA Universal Journal (`ACDOCA`).
+Enterprise simulation of SAVA Precision Technology make-to-order (MTO) flow: SD · MM · PP · QM · FICO, Thông tư 99/2025/TT-BTC, and S/4HANA Universal Journal (`ACDOCA`).
 
 ## Run locally
 

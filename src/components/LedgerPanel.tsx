@@ -225,7 +225,7 @@ export const LedgerPanel: React.FC<LedgerPanelProps> = ({
                     : 'bg-slate-800 text-slate-300 border-slate-700'
                 }`}
               >
-                Thông tư 99/2025/TT-BTC & TT 200/2014/TT-BTC
+                Thông tư 99/2025/TT-BTC
               </span>
             </div>
             <p className={`text-xs ${isClassic ? 'text-[#555555]' : 'text-slate-400'}`}>
