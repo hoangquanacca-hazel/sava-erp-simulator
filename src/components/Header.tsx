@@ -147,7 +147,7 @@ export const Header: React.FC<HeaderProps> = ({
           <AlertTriangle className="w-3.5 h-3.5 text-amber-500 shrink-0" />
           <span>
             <strong className="tracking-wide uppercase font-bold">MÔ PHỎNG — Không phải hệ thống SAP thật</strong>{' '}
-            | SAVA Precision Technology · Đào tạo thực chiến quy trình Make-to-Order (MTO) chuẩn Thông tư 99/2025/TT-BTC & TT 200/2014/TT-BTC
+            | SAVA Precision Technology · Đào tạo thực chiến quy trình Make-to-Order (MTO) chuẩn Thông tư 99/2025/TT-BTC
           </span>
         </div>
 
@@ -200,7 +200,7 @@ export const Header: React.FC<HeaderProps> = ({
                     isClassic ? 'text-[#0a246a]' : 'text-white'
                   }`}
                 >
-                  Sava SAP MTO Cockpit{' '}
+                  Sava ERP Cockpit{' '}
                   <span className={isClassic ? 'text-[#316ac5] font-semibold' : 'text-cyan-400 font-semibold'}>
                     — Enterprise Simulation & Costing Engine
                   </span>

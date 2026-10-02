@@ -922,7 +922,7 @@ export default function App() {
         }`}
       >
         <div className={`font-bold ${uiMode === 'classic' ? 'text-[#0a246a]' : 'text-slate-200'}`}>
-          Sava SAP MTO Cockpit — Enterprise Simulation & Costing Engine
+          Sava ERP Cockpit — Enterprise Simulation & Costing Engine
         </div>
         <p className="max-w-4xl mx-auto leading-relaxed">
           Bản demo / prototype · dữ liệu minh họa SAVA (Công ty TNHH Công nghệ Chính xác SAVA — hư cấu), không phải số liệu doanh nghiệp thật.
