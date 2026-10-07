@@ -5,6 +5,7 @@ import { computeMTO, generateStepEntries } from '../src/utils/calculator.ts';
 import { selectTrialBalance } from '../src/utils/acdoca.ts';
 import { buildManifest, sha256Hex, toRawExport } from '../src/reports/core.ts';
 import { buildFagll03, fagll03Totals } from '../src/reports/fagll03.ts';
+import { SIM_CONFIG, SIM_POSTING_DATE_DMY } from '../src/config/simConfig.ts';
 
 function tableOf(id: string): AcdocaLine[] {
   const p = PRESET_SCENARIOS.find((s) => s.id === id);
@@ -23,6 +24,18 @@ async function main() {
 
     // 1. Bảo toàn số dòng
     if (rep.rows.length !== table.length) throw new Error(`${p.id}: số dòng ${rep.rows.length} ≠ nguồn ${table.length}`);
+
+    // 1b. Cấu hình trong báo cáo = cấu hình/nguồn chứng từ (F03): plant, ngày hạch toán, kỳ
+    const col = (f: string) => rep.columns.findIndex((c) => c.field === f);
+    const uniq = (f: string) => [...new Set(rep.rows.map((r) => r[col(f)]))];
+    if (uniq('WERKS').join() !== SIM_CONFIG.plant) throw new Error(`${p.id}: WERKS ${uniq('WERKS')} ≠ ${SIM_CONFIG.plant}`);
+    if (uniq('BUDAT').join() !== SIM_CONFIG.postingDate) throw new Error(`${p.id}: BUDAT ${uniq('BUDAT')} ≠ ${SIM_CONFIG.postingDate}`);
+    const pc = computeMTO(p.params);
+    for (let st = 3; st <= 7; st++) {
+      for (const e of generateStepEntries(st, p.params, pc, 0, 0, null).entries) {
+        if (e.postingDate !== SIM_POSTING_DATE_DMY) throw new Error(`${p.id}: voucher bước ${st} ngày ${e.postingDate} ≠ ${SIM_POSTING_DATE_DMY}`);
+      }
+    }
 
     // 2. Tổng báo cáo khớp bảng cân đối từ nguồn, và Σ = 0
     const t = fagll03Totals(rep);

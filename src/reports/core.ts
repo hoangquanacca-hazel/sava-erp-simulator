@@ -45,11 +45,9 @@ export function documentNumbers(table: AcdocaLine[]): Map<string, string> {
   return map;
 }
 
-/** Ngày hạch toán (YYYY-MM-DD) tất định theo stepId. */
-export function postingDateOf(stepId: number): string {
-  const d = new Date(`${SIM_CONFIG.postingBaseDate}T00:00:00Z`);
-  d.setUTCDate(d.getUTCDate() + Math.max(0, stepId - 1));
-  return d.toISOString().slice(0, 10);
+/** Ngày hạch toán (YYYY-MM-DD): một nguồn chung với journal (SIM_CONFIG.postingDate). */
+export function postingDateOf(_stepId?: number): string {
+  return SIM_CONFIG.postingDate;
 }
 
 export function fiscalYearOf(date: string): string {

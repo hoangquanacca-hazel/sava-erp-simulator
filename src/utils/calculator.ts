@@ -1,3 +1,4 @@
+import { SIM_POSTING_DATE_DMY } from '../config/simConfig';
 import {
   MTOParameters,
   MTOComputed,
@@ -194,6 +195,15 @@ export function computeMTO(params: MTOParameters): MTOComputed {
   const actualCostVariance = Math.round(plannedCost * (variancePercent / 100));
   const actualCostBeforeRework = plannedCost + actualCostVariance;
 
+  // A0: phân bổ chênh lệch theo tỷ trọng kế hoạch (phần dư dồn vào yếu tố cuối để tổng khớp tuyệt đối).
+  const plannedOverheadPosted = effectiveMachineCost + variantAddonTotal;
+  const varMaterial = plannedCost > 0 ? Math.round((actualCostVariance * materialCost) / plannedCost) : 0;
+  const varLabor = plannedCost > 0 ? Math.round((actualCostVariance * effectiveLaborCost) / plannedCost) : 0;
+  const varOverhead = actualCostVariance - varMaterial - varLabor;
+  const actualMaterialCost = materialCost + varMaterial;
+  const actualLaborCost = effectiveLaborCost + varLabor;
+  const actualOverheadCost = plannedOverheadPosted + varOverhead;
+
   // 7. Doanh thu & Thuế GTGT:
   const totalRevenue = Math.round(params.orderQuantity * params.sellingPrice);
   const vatAmount = Math.round(totalRevenue * params.vatRate);
@@ -231,6 +241,9 @@ export function computeMTO(params: MTOParameters): MTOComputed {
     grossProfit,
     grossMarginPercent,
     varianceAmount: actualCostVariance,
+    actualMaterialCost,
+    actualLaborCost,
+    actualOverheadCost,
   };
 }
 
@@ -363,7 +376,7 @@ export function generateStepEntries(
   const isValuated = params.stockType === 'Valuated';
   const soCode = 'SO-PIC-2026-49281';
   const entries: JournalEntry[] = [];
-  const today = '15/09/2026';
+  const today = SIM_POSTING_DATE_DMY;
   reworkCost = nz(reworkCost);
   scrapCost = nz(scrapCost);
   const wip = wipStatusOf(params);
@@ -406,7 +419,7 @@ export function generateStepEntries(
       debitAccountName: 'Chi phí nguyên liệu, vật liệu trực tiếp',
       creditAccount: '152',
       creditAccountName: 'Nguyên liệu, vật liệu (Kho hạt nhựa kỹ thuật)',
-      amount: computed.materialCost,
+      amount: computed.actualMaterialCost,
       costObject: `Lệnh SX #PRD-01 (${soCode})`,
       note: `Movement 261E: Xuất kho hạt nhựa cho Lệnh sản xuất riêng của Sales Order Stock E. ${strategyNote}`,
     });
@@ -424,7 +437,7 @@ export function generateStepEntries(
       debitAccountName: 'Chi phí nhân công trực tiếp',
       creditAccount: '334',
       creditAccountName: 'Phải trả người lao động (Lương thợ ép)',
-      amount: computed.effectiveLaborCost,
+      amount: computed.actualLaborCost,
       costObject: `Lệnh SX #PRD-01 (${soCode})`,
       note: 'Confirmation xác nhận giờ công lao động trực tiếp tại xưởng ép phun nhựa.',
     });
@@ -442,7 +455,7 @@ export function generateStepEntries(
       debitAccountName: 'Chi phí sản xuất chung (Máy & Điện xưởng ép)',
       creditAccount: '214',
       creditAccountName: 'Hao mòn TSCĐ & Chi phí phải trả (Máy ép/Điện lực)',
-      amount: computed.effectiveMachineCost + computed.variantAddonTotal,
+      amount: computed.actualOverheadCost,
       costObject: `Lệnh SX #PRD-01 (${soCode})`,
       note: 'Xác nhận chi phí máy ép phun và phân bổ phụ trợ sản xuất theo Routing.',
     });
@@ -460,7 +473,7 @@ export function generateStepEntries(
       debitAccountName: 'Chi phí sản xuất, kinh doanh dở dang',
       creditAccount: '621',
       creditAccountName: 'Chi phí nguyên liệu, vật liệu trực tiếp',
-      amount: computed.materialCost,
+      amount: computed.actualMaterialCost,
       costObject: `Đối tượng tính giá thành: ${soCode}`,
       note: 'Kết chuyển chi phí 621 sang TK 154 theo Thông tư 200/2014/TT-BTC.',
     });
@@ -477,7 +490,7 @@ export function generateStepEntries(
       debitAccountName: 'Chi phí sản xuất, kinh doanh dở dang',
       creditAccount: '622',
       creditAccountName: 'Chi phí nhân công trực tiếp',
-      amount: computed.effectiveLaborCost,
+      amount: computed.actualLaborCost,
       costObject: `Đối tượng tính giá thành: ${soCode}`,
       note: 'Kết chuyển chi phí 622 sang TK 154 theo Thông tư 200.',
     });
@@ -494,7 +507,7 @@ export function generateStepEntries(
       debitAccountName: 'Chi phí sản xuất, kinh doanh dở dang',
       creditAccount: '627',
       creditAccountName: 'Chi phí sản xuất chung',
-      amount: computed.effectiveMachineCost + computed.variantAddonTotal,
+      amount: computed.actualOverheadCost,
       costObject: `Đối tượng tính giá thành: ${soCode}`,
       note: 'Kết chuyển chi phí 627 sang TK 154 theo Thông tư 200.',
     });
@@ -1018,6 +1031,30 @@ export function generateStepEntries(
         },
         true
       );
+      if (deliveredVar < 0) {
+        // Chênh lệch có lợi: ACDOCA ghi Nợ 632 (|var|) tách riêng và Có 632xxx theo GỐC (base).
+        // Voucher cũ trên chỉ ghi Nợ 911 / Có 632xxx theo số thuần (base − |var|); bổ sung cặp còn lại
+        // để cùng tổng gộp với ACDOCA (parity so sánh gộp Nợ/Có, không bị tắt).
+        emit(
+          {
+            id: `entry-7-settle-cogs-fav`,
+            stepIndex: 7,
+            voucherNo: `PKT-VA88-02B`,
+            docType: 'CO - Kết chuyển chênh lệch có lợi',
+            postingDate: today,
+            tCode: 'VA88',
+            description: `Đối ứng chênh lệch có lợi: Nợ 632 / Có 632110-140 (cùng bản chất với dòng ACDOCA)`,
+            debitAccount: '632',
+            debitAccountName: 'Giá vốn hàng bán (Tiết kiệm định mức)',
+            creditAccount: '632110-140',
+            creditAccountName: 'TK chi tiết quản trị (không phải mã luật) — COGS split + variance',
+            amount: Math.abs(deliveredVar),
+            costObject: `CO-PA Segment: ${params.customer} / ${params.componentCode}`,
+            note: 'Chỉ để voucher cũ cùng tổng gộp với ACDOCA khi variance có lợi.',
+          },
+          true
+        );
+      }
     } else {
       emit({
         id: `entry-7-settle-cogs`,

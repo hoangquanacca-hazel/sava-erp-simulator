@@ -16,8 +16,8 @@ export const SIM_CONFIG = {
   costingVersion: '0',
   currency: 'VND',
   ledger: '0L',
-  /** Ngày hạch toán của bước 1; bước n = ngày này + (n-1) ngày. Tất định, không dùng đồng hồ máy. */
-  postingBaseDate: '2026-10-01',
+  /** Ngày hạch toán DUY NHẤT của mọi chứng từ mô phỏng (YYYY-MM-DD). Nguồn chung cho journal, ACDOCA và báo cáo. */
+  postingDate: '2026-09-15',
   accountingStandard: 'TT99',
   /** Lệnh sản xuất kết chuyển chênh lệch vào 632 / CO-PA khi chạy VA88. */
   productionVarianceTarget: '632',
@@ -64,3 +64,6 @@ export const ACCOUNT_MAP: readonly AccountMapEntry[] = [
 export function accountEntry(code: string): AccountMapEntry | undefined {
   return ACCOUNT_MAP.find((a) => a.code === code);
 }
+
+/** Cùng ngày hạch toán ở dạng dd/mm/yyyy cho voucher cũ. */
+export const SIM_POSTING_DATE_DMY = SIM_CONFIG.postingDate.split('-').reverse().join('/');

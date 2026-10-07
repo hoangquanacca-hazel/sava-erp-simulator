@@ -1,3 +1,4 @@
+import { SIM_CONFIG, SIM_POSTING_DATE_DMY } from '../config/simConfig';
 import {
   AcdocaLine,
   AcdocaPostingLine,
@@ -46,12 +47,22 @@ export function accountNameOf(glAccount: string, fallback?: string): string {
   return fallback || ACCOUNT_NAMES[glAccount] || `Tài khoản ${glAccount}`;
 }
 
-function nextTxnId(table: AcdocaLine[], stepId: number): string {
-  const prefix = `S${stepId}-`;
+/** Nguồn phát sinh ngoài luồng 7 bước, suy từ tCode: mã chứng từ mang tiền tố riêng để không trùng khi gộp bảng. */
+function originOf(tCode: string): string | undefined {
+  if (tCode === 'CKMLCP') return 'ML';
+  if (tCode === 'MIGO' || tCode === 'MIRO' || tCode === 'MR11') return 'GRIR';
+  if (tCode.endsWith('-IC') || tCode === 'ELIM-UIP') return 'IC';
+  return undefined;
+}
+
+function nextTxnId(table: AcdocaLine[], stepId: number, origin?: string): string {
+  const prefix = origin ? `S${stepId}-${origin}-` : `S${stepId}-`;
   let max = 0;
   for (const row of table) {
     if (!String(row.txnId).startsWith(prefix)) continue;
-    const n = Number(String(row.txnId).slice(prefix.length).replace(/\D/g, ''));
+    const rest = String(row.txnId).slice(prefix.length);
+    if (!/^\d+$/.test(rest)) continue; // bỏ qua mã của nguồn khác (vd S7-ML-0001)
+    const n = Number(rest);
     if (Number.isFinite(n) && n > max) max = n;
   }
   return `${prefix}${String(max + 1).padStart(4, '0')}`;
@@ -70,7 +81,9 @@ export function postDocument(
   stepId: number,
   tCode: string,
   movementType: string | undefined,
-  lines: AcdocaPostingLine[]
+  lines: AcdocaPostingLine[],
+  /** Nguồn phát sinh ngoài luồng 7 bước (ML, GRIR, IC): tránh trùng mã chứng từ khi gộp bảng. */
+  origin?: string
 ): AcdocaLine[] {
   const prepared = (lines || []).map((line) => {
     const dr = roundVnd(line.drAmount);
@@ -92,7 +105,7 @@ export function postDocument(
     );
   }
 
-  const txnId = nextTxnId(ACDOCA_TABLE, stepId);
+  const txnId = nextTxnId(ACDOCA_TABLE, stepId, origin ?? originOf(tCode));
   const timestamp = new Date().toISOString();
   const written: AcdocaLine[] = prepared.map((line, idx) => ({
     txnId,
@@ -139,7 +152,7 @@ export function postingDims(params: MTOParameters): Pick<
     kposn: '000010',
     kunnr: params.customer,
     matnr: params.componentCode,
-    werks: 'PIC1',
+    werks: SIM_CONFIG.plant,
     prctr: 'PC-MTO',
     kostl: params.routing?.workCenterCode || 'WC-INJ-01',
   };
@@ -332,7 +345,7 @@ export function selectGLLedgerAsJournal(ACDOCA_TABLE: AcdocaLine[]): JournalEntr
     const crLines = lines.filter((l) => nz(l.crAmount) > 0);
     const stepId = lines[0].stepId;
     const tCode = lines[0].tCode;
-    const postingDate = '15/09/2026';
+    const postingDate = SIM_POSTING_DATE_DMY;
 
     if (drLines.length === 1 && crLines.length === 1) {
       entries.push({

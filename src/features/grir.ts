@@ -1,4 +1,5 @@
 import { AcdocaLine, JournalEntry, MTOParameters } from '../types';
+import { SIM_POSTING_DATE_DMY } from '../config/simConfig';
 import { nz, postDocument, postingDims, selectByAccount } from '../utils/acdoca';
 
 function roundVnd(n: number): number {
@@ -33,7 +34,7 @@ export function postGr(
       stepIndex: 2,
       voucherNo: lines[0].txnId,
       docType: 'WE - GR resin',
-      postingDate: '15/09/2026',
+      postingDate: SIM_POSTING_DATE_DMY,
       tCode: 'MIGO',
       description: 'GR hạt nhựa Dr 152 / Cr 3388 (MÔ PHỎNG GR/IR)',
       debitAccount: '152',
@@ -65,7 +66,7 @@ export function postMiro(
       stepIndex: 2,
       voucherNo: lines[0].txnId,
       docType: 'RE - MIRO',
-      postingDate: '15/09/2026',
+      postingDate: SIM_POSTING_DATE_DMY,
       tCode: 'MIRO',
       description: 'MIRO Dr 3388 / Cr 331 (MÔ PHỎNG)',
       debitAccount: '3388',
@@ -113,7 +114,7 @@ export function postMr11(
       stepIndex: 7,
       voucherNo: lines[0].txnId,
       docType: 'MR11',
-      postingDate: '15/09/2026',
+      postingDate: SIM_POSTING_DATE_DMY,
       tCode: 'MR11',
       description: `MR11 clear 3388 ↔ ${offsetAccount} (MÔ PHỎNG)`,
       debitAccount: hang > 0 ? '3388' : offsetAccount,

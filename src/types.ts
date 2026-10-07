@@ -126,6 +126,14 @@ export interface MTOComputed {
   grossMarginPercent: number;
   /** Alias of actualCostVariance — StepCard / AI tutor read this name. */
   varianceAmount: number;
+  /**
+   * Chi phí THỰC TẾ phát sinh theo yếu tố (A0, 07/10/2026). Chênh lệch tổng được phân bổ theo
+   * tỷ trọng kế hoạch — GIẢ ĐỊNH SỐ LIỆU MÔ PHỎNG, không phải bằng chứng nguyên nhân.
+   * Tổng ba yếu tố luôn bằng actualCostBeforeRework.
+   */
+  actualMaterialCost: number;
+  actualLaborCost: number;
+  actualOverheadCost: number;
 }
 
 /** Universal Journal (ACDOCA) line — S/4HANA account-based actuals. */
