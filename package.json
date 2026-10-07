@@ -12,7 +12,7 @@
     "test:parity": "tsx scripts/parity.ts",
     "test:s1": "tsx scripts/s1-config.ts",
     "test:s2": "tsx scripts/s2-fagll03.ts",
-    "test:a0": "tsx scripts/a0-expected.ts && tsx scripts/a0-ids.ts"
+    "test:a0": "tsx scripts/a0-expected.ts && tsx scripts/a0-ids.ts && tsx scripts/a0-ckmlcp.ts"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",

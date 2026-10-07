@@ -1,5 +1,6 @@
 import { AcdocaLine, MTOComputed, MTOParameters } from '../types';
 import { nz, postDocument, postingDims, selectTrialBalance } from '../utils/acdoca';
+import { roundShare, wipStatusOf } from './wip';
 
 export const USD_RATE_LABEL = 'Tỷ giá USD minh họa (1 USD) — không phải tỷ giá thật';
 
@@ -20,10 +21,14 @@ export function postCkmlcp(
   computed: MTOComputed,
   purchaseVariance: number
 ): AcdocaLine[] {
+  // Hàng không định giá (Special Stock E non-valuated) không có Material Ledger: toàn bộ chi phí đã đi qua
+  // VA88 ở bước 7. Ghi thêm ở đây sẽ tính trùng chênh lệch (AUD-006).
+  if (params.stockType !== 'Valuated') return [];
   const va88VarPosted = ACDOCA_TABLE.some(
     (l) => (l.tCode || '').includes('VA88') && l.glAccount === '632' && l.stepId === 7
   );
-  const prod = va88VarPosted ? 0 : roundVnd(computed.actualCostVariance);
+  // Chỉ phần chênh lệch của lượng đã giao được kết chuyển (cùng chính sách với VA88); phần chưa giao nằm lại WIP.
+  const prod = va88VarPosted ? 0 : roundShare(computed.actualCostVariance, wipStatusOf(params).ratio);
   const purch = roundVnd(purchaseVariance);
   const total = prod + purch;
   if (total === 0) return [];
