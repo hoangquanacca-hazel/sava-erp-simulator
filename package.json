@@ -10,7 +10,8 @@
     "clean": "rm -rf dist server.js",
     "lint": "tsc --noEmit",
     "test:parity": "tsx scripts/parity.ts",
-    "test:s1": "tsx scripts/s1-config.ts"
+    "test:s1": "tsx scripts/s1-config.ts",
+    "test:s2": "tsx scripts/s2-fagll03.ts"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",

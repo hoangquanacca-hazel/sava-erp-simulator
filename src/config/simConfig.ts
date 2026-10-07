@@ -16,6 +16,8 @@ export const SIM_CONFIG = {
   costingVersion: '0',
   currency: 'VND',
   ledger: '0L',
+  /** Ngày hạch toán của bước 1; bước n = ngày này + (n-1) ngày. Tất định, không dùng đồng hồ máy. */
+  postingBaseDate: '2026-10-01',
   accountingStandard: 'TT99',
   /** Lệnh sản xuất kết chuyển chênh lệch vào 632 / CO-PA khi chạy VA88. */
   productionVarianceTarget: '632',
