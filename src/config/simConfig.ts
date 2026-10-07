@@ -21,6 +21,8 @@ export const SIM_CONFIG = {
   accountingStandard: 'TT99',
   /** Lệnh sản xuất kết chuyển chênh lệch vào 632 / CO-PA khi chạy VA88. */
   productionVarianceTarget: '632',
+  /** Số lệnh sản xuất mô phỏng (một lệnh cho mỗi kịch bản). */
+  productionOrder: '1000001',
 } as const;
 
 export type PdfCheck = 'chua_doi_chieu' | 'da_doi_chieu';

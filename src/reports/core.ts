@@ -36,13 +36,32 @@ export interface RawManifest {
   config: { companyCode: string; plant: string; ledger: string; standard: string; label: string };
 }
 
-/** Số chứng từ 10 chữ số, đánh theo thứ tự xuất hiện của txnId trong bảng. */
+const ORIGIN_DIGIT: Record<string, string> = { '': '0', ML: '1', GRIR: '2', IC: '3' };
+
+/**
+ * Số chứng từ 10 chữ số suy RA TỪ mã chứng từ (txnId), không phụ thuộc thứ tự/tập chứng từ đầu vào:
+ * '49' + bước(1) + nguồn(1: 0 luồng chính, 1 ML, 2 GRIR, 3 IC) + số thứ tự(6).
+ * Lọc, sắp xếp hay bỏ bớt chứng từ không làm đổi số của chứng từ còn lại (AUD-003).
+ */
+export function documentNumberOf(txnId: string): string {
+  const m = /^S(\d)(?:-([A-Z]+))?-(\d{1,6})$/.exec(txnId);
+  if (!m) throw new Error(`Mã chứng từ không hợp lệ: ${txnId}`);
+  const origin = ORIGIN_DIGIT[m[2] ?? ''];
+  if (origin === undefined) throw new Error(`Nguồn chứng từ chưa đăng ký: ${m[2]} (${txnId})`);
+  return `49${m[1]}${origin}${m[3].padStart(6, '0')}`;
+}
+
 export function documentNumbers(table: AcdocaLine[]): Map<string, string> {
   const map = new Map<string, string>();
-  for (const l of table) {
-    if (!map.has(l.txnId)) map.set(l.txnId, String(100000000 + map.size + 1));
-  }
+  for (const l of table) if (!map.has(l.txnId)) map.set(l.txnId, documentNumberOf(l.txnId));
   return map;
+}
+
+/** Số dòng trong chứng từ, lấy từ hậu tố của lineId (bền theo dòng, không đếm theo bảng). */
+export function lineNumberOf(lineId: string): string {
+  const m = /-(\d{3})$/.exec(lineId);
+  if (!m) throw new Error(`lineId không hợp lệ: ${lineId}`);
+  return m[1].padStart(6, '0');
 }
 
 /** Ngày hạch toán (YYYY-MM-DD): một nguồn chung với journal (SIM_CONFIG.postingDate). */

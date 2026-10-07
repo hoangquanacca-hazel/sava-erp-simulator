@@ -29,6 +29,24 @@ import { roundShare, wipStatusOf } from '../features/wip';
  * từ các tham số người dùng nhập vào.
  * 100% tính toán thực sự từ công thức thực, hỗ trợ Strategy 25 (Variant Configuration) và Variance.
  */
+/** Routing đang dùng để tính giá thành: của người dùng hoặc mặc định (dùng chung cho cost và sự kiện logistics). */
+export function resolveRouting(params: MTOParameters): NonNullable<MTOParameters['routing']> {
+  return (
+    params.routing || {
+      workCenterCode: 'WC-INJ-01',
+      workCenterName: 'Máy ép Haitian Mars II 350T & Thợ bậc 4',
+      machineSetupTimeHours: 1.5,
+      cycleTimeSeconds:
+        params.orderQuantity > 0 && params.machineHours > 0
+          ? Math.max(10, Math.round((params.machineHours * 3600) / params.orderQuantity))
+          : 26,
+      machineHourlyRate: params.machineRatePerHour || 145000,
+      laborHourlyRate: params.laborRatePerHour || 75000,
+      factoryOverheadRatePercent: 8.0,
+    }
+  );
+}
+
 export function computeMTO(params: MTOParameters): MTOComputed {
   // Missing numeric input → 0 (never invent random figures).
   params = {
@@ -136,19 +154,7 @@ export function computeMTO(params: MTOParameters): MTOComputed {
   const materialCost = directMaterialCost621;
 
   // 4. Routing & Work Center Engine (CA01 / CR01 / CK11N):
-  const routing =
-    params.routing || {
-      workCenterCode: 'WC-INJ-01',
-      workCenterName: 'Máy ép Haitian Mars II 350T & Thợ bậc 4',
-      machineSetupTimeHours: 1.5,
-      cycleTimeSeconds:
-        params.orderQuantity > 0 && params.machineHours > 0
-          ? Math.max(10, Math.round((params.machineHours * 3600) / params.orderQuantity))
-          : 26,
-      machineHourlyRate: params.machineRatePerHour || 145000,
-      laborHourlyRate: params.laborRatePerHour || 75000,
-      factoryOverheadRatePercent: 8.0,
-    };
+  const routing = resolveRouting(params);
 
   const cycleHours = (routing.cycleTimeSeconds * params.orderQuantity) / 3600;
   const operatingHours = Number((cycleHours + (routing.machineSetupTimeHours || 0)).toFixed(2));

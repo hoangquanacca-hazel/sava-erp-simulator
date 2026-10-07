@@ -1,7 +1,7 @@
 /** FAGLL03 (G/L line items) — bố cục MÔ PHỎNG theo trường ACDOCA. */
 import { SIM_CONFIG } from '../config/simConfig';
 import type { AcdocaLine } from '../types';
-import { documentNumbers, fiscalYearOf, periodOf, postingDateOf, type ReportOutput } from './core';
+import { documentNumbers, fiscalYearOf, lineNumberOf, periodOf, postingDateOf, type ReportOutput } from './core';
 
 export const FAGLL03_COLUMNS = [
   { field: 'RLDNR', label: 'Ledger' },
@@ -27,10 +27,7 @@ export const FAGLL03_COLUMNS = [
 
 export function buildFagll03(table: AcdocaLine[]): ReportOutput {
   const belnr = documentNumbers(table);
-  const perDoc = new Map<string, number>();
   const rows = table.map((l) => {
-    const n = (perDoc.get(l.txnId) ?? 0) + 1;
-    perDoc.set(l.txnId, n);
     const budat = postingDateOf(l.stepId);
     const hsl = l.drAmount - l.crAmount;
     return [
@@ -38,7 +35,7 @@ export function buildFagll03(table: AcdocaLine[]): ReportOutput {
       SIM_CONFIG.companyCode,
       fiscalYearOf(budat),
       belnr.get(l.txnId) as string,
-      String(n).padStart(6, '0'),
+      lineNumberOf(l.lineId),
       budat,
       periodOf(budat),
       l.tCode,
