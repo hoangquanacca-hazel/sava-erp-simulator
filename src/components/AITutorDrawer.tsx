@@ -48,10 +48,10 @@ export const AITutorDrawer: React.FC<AITutorDrawerProps> = ({
     {
       id: 'welcome',
       role: 'assistant',
-      content: `Xin chào bạn! Tôi là **Trợ Giảng AI Chuyên Gia SAP ERP & Kế Toán TT200** tại PIC Vietnam. 🎓
+      content: `Xin chào bạn! Tôi là **Trợ Giảng AI Chuyên Gia SAP ERP & Kế Toán TT99** tại PIC Vietnam. 🎓
 
 Tôi sẵn sàng giải thích chi tiết cho bạn về:
-- Các bút toán hạch toán theo **Thông tư 200/2014/TT-BTC** (TK 621, 622, 627, 154, 155, 632, 511, 3331, 131).
+- Các bút toán hạch toán theo **Thông tư 99/2025/TT-BTC** (TK 621, 622, 627, 154, 155, 632, 511, 3331, 131).
 - Chuyển động kho đặc thù **Movement 261E, 101E, 601E** cho Special Stock E.
 - Khác biệt bản chất giữa **Valuated Stock** và **Non-valuated Stock**.
 - Bất kỳ thắc mắc nào ở bước **${currentStep}** hiện tại!`,
@@ -192,7 +192,7 @@ Tôi sẵn sàng giải thích chi tiết cho bạn về:
             <h3 className="text-sm font-bold text-white flex items-center gap-1.5">
               <span>Trợ Giảng AI Kế Toán SAP</span>
               <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-teal-950 text-teal-300 border border-teal-800">
-                TT 200
+                TT99
               </span>
             </h3>
             <p className="text-[11px] text-slate-400">
@@ -266,7 +266,7 @@ Tôi sẵn sàng giải thích chi tiết cho bạn về:
         {loading && (
           <div className="flex items-center gap-2 text-xs text-slate-400 p-2 bg-slate-950 rounded-lg border border-slate-800 w-fit animate-pulse">
             <RefreshCw className="w-3.5 h-3.5 animate-spin text-cyan-400" />
-            <span>Trợ giảng AI đang suy nghĩ và tra cứu chuẩn mực SAP TT200...</span>
+            <span>Trợ giảng AI đang suy nghĩ và tra cứu chuẩn mực SAP TT99...</span>
           </div>
         )}
 

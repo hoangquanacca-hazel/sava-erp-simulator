@@ -112,7 +112,7 @@ export const PDFReportModal: React.FC<PDFReportModalProps> = ({
               <h3 className="text-sm sm:text-base font-bold text-white flex items-center gap-2">
                 <span>Xem Trước & Xuất Báo Cáo Kế Toán MTO (PDF Lưu Trữ)</span>
                 <span className="text-[11px] font-mono px-2 py-0.5 rounded-full bg-rose-950 text-rose-300 border border-rose-800 font-semibold">
-                  Mẫu TT 200/2014/TT-BTC
+                  Mẫu TT 99/2025/TT-BTC
                 </span>
               </h3>
               <p className="text-xs text-slate-400">
@@ -153,7 +153,7 @@ export const PDFReportModal: React.FC<PDFReportModalProps> = ({
               fontFamily: "'Times New Roman', Times, serif, sans-serif",
             }}
           >
-            {/* 1. Header Đơn Vị & Quốc Hiệu Chuẩn TT200 */}
+            {/* 1. Header Đơn Vị & Quốc Hiệu Chuẩn TT99 */}
             <div className="flex items-start justify-between border-b-2 border-slate-800 pb-4 mb-5">
               <div className="w-1/2 space-y-0.5">
                 <div className="font-bold text-sm uppercase text-slate-900 tracking-wide">
@@ -363,7 +363,7 @@ export const PDFReportModal: React.FC<PDFReportModalProps> = ({
             {/* 5. Phần III: Bảng Cân Đối Số Phát Sinh Tài Khoản Kế Toán (Trial Balance) */}
             <div className="mb-6">
               <div className="font-bold text-xs uppercase bg-slate-100 px-3 py-1.5 border-l-4 border-slate-800 text-slate-900 mb-2.5 flex items-center justify-between">
-                <span>III. BẢNG CÂN ĐỐI SỐ PHÁT SINH CÁC TÀI KHOẢN (TRIAL BALANCE — TT 200/2014/TT-BTC)</span>
+                <span>III. BẢNG CÂN ĐỐI SỐ PHÁT SINH CÁC TÀI KHOẢN (TRIAL BALANCE — TT 99/2025/TT-BTC)</span>
                 <span className="font-mono text-[10px] font-semibold text-emerald-800">
                   {trialBalance.isBalanced ? '✓ BẢNG CÂN ĐỐI HOÀN HẢO' : '⚠ CẦN ĐỐI CHIẾU'}
                 </span>
