@@ -1,0 +1,35 @@
+{
+  "codeCommit": "1556e48445eb86b365e25de770da71bfd9f8ed7a",
+  "files": [
+    {
+      "file": "invalidation-snapshot.txt",
+      "bytes": 25108,
+      "sha256": "a2a5c110ab40c0fd0bfe363d5707e560e94712861f1b1312dbb6ace213350c90"
+    },
+    {
+      "file": "mart-snapshot.txt",
+      "bytes": 39580,
+      "sha256": "0fa1320d315ed1fdca39d0eff034ce7b281dab834a73bece497436f82ead0e3f"
+    },
+    {
+      "file": "mart-viewport.jpg",
+      "bytes": 108848,
+      "sha256": "474e30d891a41dbc07408bb7a35e6af6a06121e9781511c13f732819430f0fe5"
+    },
+    {
+      "file": "qa-results.json",
+      "bytes": 1778,
+      "sha256": "256484f8896a52dfe7fad50c115a7dfc1ffb28748515ae419e25817526d3d111"
+    },
+    {
+      "file": "QA_REPORT.md",
+      "bytes": 1378,
+      "sha256": "6d3509224138f543be79e750633b7aefb7cb1b716a4de097b7b80c43c799e0c2"
+    },
+    {
+      "file": "webinar-restored-off.jpg",
+      "bytes": 54752,
+      "sha256": "1b0729e2abd55541901ec86b40190fcb61bc2844a987d9fe21e59c2ea49cfe34"
+    }
+  ]
+}

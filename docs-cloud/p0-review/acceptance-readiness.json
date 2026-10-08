@@ -1,0 +1,158 @@
+{
+  "version": "p0-acceptance-readiness-1",
+  "sourceCommit": "1556e48445eb86b365e25de770da71bfd9f8ed7a",
+  "releaseEligibility": "NOT_READY_FOR_PILOT",
+  "approval": "PENDING_HUMAN",
+  "gates": [
+    {
+      "gateId": "P0-MFG-M01",
+      "name": "Scope/source profile",
+      "technicalEvidence": "PARTIAL_VERIFIED",
+      "businessAcceptance": "NOT_ACCEPTED",
+      "reviewer": null,
+      "approvedAt": null,
+      "gaps": [
+        "approved namespace/variant and scope decision"
+      ],
+      "evidence": [
+        "docs-cloud/REPORT-CONTRACTS.md",
+        "docs-cloud/s3/README.md"
+      ]
+    },
+    {
+      "gateId": "P0-MFG-M02",
+      "name": "RAW preservation/download",
+      "technicalEvidence": "PARTIAL_VERIFIED",
+      "businessAcceptance": "NOT_ACCEPTED",
+      "reviewer": null,
+      "approvedAt": null,
+      "gaps": [
+        "actual downloaded byte/hash verification; RAM is not write-once storage"
+      ],
+      "evidence": [
+        "docs-cloud/p0-review/downloads/QA_REPORT.md",
+        "docs-cloud/s3/evidence/test-s3.log"
+      ]
+    },
+    {
+      "gateId": "P0-MFG-M03",
+      "name": "Adapters/DQ",
+      "technicalEvidence": "PARTIAL_VERIFIED",
+      "businessAcceptance": "NOT_ACCEPTED",
+      "reviewer": null,
+      "approvedAt": null,
+      "gaps": [
+        "SME approved fixtures and independent formal gate review"
+      ],
+      "evidence": [
+        "docs-cloud/s3/evidence/test-s3.log",
+        "docs-cloud/s3/independent-review/S3_RETEST.md"
+      ]
+    },
+    {
+      "gateId": "P0-MFG-M04",
+      "name": "Consumption",
+      "technicalEvidence": "PARTIAL_VERIFIED",
+      "businessAcceptance": "NOT_ACCEPTED",
+      "reviewer": null,
+      "approvedAt": null,
+      "gaps": [
+        "reservation mapping; reversal262/crossperiod/conversion corpus"
+      ],
+      "evidence": [
+        "docs-cloud/s4/README.md",
+        "docs-cloud/s4/independent-review/IMPLEMENTATION_REVIEW.md"
+      ]
+    },
+    {
+      "gateId": "P0-MFG-M05",
+      "name": "Delivered/GR",
+      "technicalEvidence": "PARTIAL_VERIFIED",
+      "businessAcceptance": "NOT_ACCEPTED",
+      "reviewer": null,
+      "approvedAt": null,
+      "gaps": [
+        "opening/by-product/reversal102/multiorder corpus and scope approval"
+      ],
+      "evidence": [
+        "docs-cloud/s4/evidence/test-s4.log",
+        "docs-cloud/s4/browser-qa/QA_REPORT.md"
+      ]
+    },
+    {
+      "gateId": "P0-MFG-M06",
+      "name": "CO control-cost basis",
+      "technicalEvidence": "PARTIAL_VERIFIED",
+      "businessAcceptance": "NOT_ACCEPTED",
+      "reviewer": null,
+      "approvedAt": null,
+      "gaps": [
+        "CO area/period/target version/approved adjustments"
+      ],
+      "evidence": [
+        "docs-cloud/p0-review/business-gap-register.json",
+        "docs-cloud/s4/evidence/test-s4.log"
+      ]
+    },
+    {
+      "gateId": "P0-MFG-M07",
+      "name": "Settlement",
+      "technicalEvidence": "PARTIAL_VERIFIED",
+      "businessAcceptance": "NOT_ACCEPTED",
+      "reviewer": null,
+      "approvedAt": null,
+      "gaps": [
+        "receiver/run/eligible variance allocation and sender-policy approval"
+      ],
+      "evidence": [
+        "docs-cloud/p0-review/business-gap-register.json",
+        "docs-cloud/s4/evidence/test-s4.log"
+      ]
+    },
+    {
+      "gateId": "P0-MFG-M08",
+      "name": "CK13N",
+      "technicalEvidence": "PARTIAL_VERIFIED",
+      "businessAcceptance": "NOT_ACCEPTED",
+      "reviewer": null,
+      "approvedAt": null,
+      "gaps": [
+        "estimateversion/costview/additive-leaf evidence and SME acceptance"
+      ],
+      "evidence": [
+        "docs-cloud/REPORT-CONTRACTS.md",
+        "docs-cloud/s4/evidence/test-s4.log"
+      ]
+    },
+    {
+      "gateId": "P0-MFG-M09",
+      "name": "Variance/commentary",
+      "technicalEvidence": "PARTIAL_VERIFIED",
+      "businessAcceptance": "NOT_ACCEPTED",
+      "reviewer": null,
+      "approvedAt": null,
+      "gaps": [
+        "independent driver/category evidence and approved MART; C08 only numeric template technical checks"
+      ],
+      "evidence": [
+        "docs-cloud/s5/evidence/test-s5.log",
+        "docs-cloud/s5/independent-review/REVIEW.md"
+      ]
+    },
+    {
+      "gateId": "P0-MFG-M10",
+      "name": "Release",
+      "technicalEvidence": "PARTIAL_VERIFIED",
+      "businessAcceptance": "NOT_ACCEPTED",
+      "reviewer": null,
+      "approvedAt": null,
+      "gaps": [
+        "human independent signoff, TT99/golden, remaining security/performance/replay/release checks"
+      ],
+      "evidence": [
+        "docs-cloud/s5/evidence/results.json",
+        "docs-cloud/P0-FOCUS-DECISION.md"
+      ]
+    }
+  ]
+}

@@ -31,3 +31,8 @@ Agent đã bấmRAW/CLEAN/CONTROL và wait download trướcclick; cả3timeout1
 ## S5 đang thực hiện trong khi chờ review
 
 MART chỉ DIAGNOSTIC_ONLY, technicalFAIL/BLOCKED hoặccontrolsnapshot bịsửa sẽ chặn tạo. C08 chỉ chứng minh numeric claims/text từ exact metric trong snapshot, không giải thíchrootcause/không approveMART. Không gửi AI nội dung hồ sơ hay gọi mạng. S6 evidence pack có thể chuẩn bị kỹ thuật nhưnghuman gates giữpending.
+
+
+## Trạng thái review hiện hành
+
+[Sẵn sàng M01–M10](acceptance-readiness.json): tất cảNOT_ACCEPTED, có evidence kỹthuật vàgap cho từnggate; releaseEligibilityNOT_READY_FOR_PILOT. [Nguồn TT99/chưa đối chiếu](TT99-SOURCE-REVIEW.md); originalVBPL403, chưaPDFreview. [S5](../s5/README.md) diagnosticđã kiểm kỹthuật vàfocusedbrowser; khôngthayhumanapproval.

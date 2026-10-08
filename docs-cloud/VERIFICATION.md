@@ -87,3 +87,14 @@ QA xác minh parameterchange vô hiệu hóa RAW/CLEAN/CONTROL/journal, khôi ph
 `s4/evidence/build-provenance.json`: script phục vụ ở3017 khớp byte localdist/S4label, asset SHA256135c42ae14c65d54a9a84d2e345486782652b435c7b3dfc65664179289d82b02. Buildidentity hỗ trợ nối bằng chứng với codecommit, không tự nghiệm thu nghiệp vụ. Main926837a giữ nguyên; protected posting/oracle/config không đổi. Không push/merge/deploy.
 
 Đã lưu bàn giao `D:\Sava_Second Brain\00_Inbox\AI\SAP_Simulator_S4_Controls_2026-10-08.md`. Tiếp theo bổ sung authoritative contract/evidence cho businessblocks và goldenreview; S5 có thể dựng mart mô phỏng nhưng không được gắn approved khi input gate chưa đạt.
+
+
+## Chốt kỹ thuật S5 và review P0 — 08/10/2026
+
+Code `1556e48445eb86b365e25de770da71bfd9f8ed7a`.10checks lint/S5/S4/S3/UI-finance/parity/A0/reports/build/start exit0;54oracle snapshots/648metric records.24focusedindependent probesPASS. S5 có12metrics/3costelementbridge, RAWdrill, deterministicC08facts/manifest; giữDIAGNOSTIC_ONLY/PENDING_HUMAN_SME và4businessblocks. Testzerooutputphát hiện−0revenue; sửa thànhpositive0, không sửaoracleđểđạt.
+
+FreshagentbrowserQA [báo cáo](s5/browser-qa/QA_REPORT.md) kiểmCanonNonValuated−3,5%, giao1.000/2.000:12metricsđúng,3costelementrows/C08pendingapproval, CK13N RAWhash/rawLine; thêmEXPLAIN làmMARTcũẩn, regenerateđạt; đổi115000→115001invalidatesRAW/CLEAN/CONTROL/MART, khôi phục115000/WebinarOFF/leads0. Đây là1focusedcaseUI, khôngfull54manualbusinessreview. Resumeproviderfailurehistorical được giữ ởbrowser-retest-blocked/, khôngappFAIL và khôngthaybằng chứngfinalfreshPASS.
+
+Buildbinding tại s5/evidence/build-provenance.json; technicalhash khôngauthentication/WORM. Actualbrowserdownloadcompletion/content/hash cònUNVERIFIED với3timeout10s, khôngclaimfileđãlưu. Protectedcalculator/acdoca/materialLedger/oracle/netlify/mainkhôngđổi. KhôngP1/P2, no push/merge/deploy.
+
+Userxácnhậnchưacóbộchuẩn; [hồ sơreviewP0](p0-review/README.md) gồm18Canonproposedcases,4businessgaprequirements,response template vàM01–M10readinessledgerallNOT_ACCEPTED. TT99primarysourcepointers đãtìm nhưngVBPL403 chưaoriginalPDF/appendixreview, accountmappingvẫnpending. Đây làS6evidencepreparation, khôngS6acceptance. Reviewer cần xác nhận expectednumbers/assumptions, supportingdata vàsourceevidence; khôngautoapprove từtestPASS.
