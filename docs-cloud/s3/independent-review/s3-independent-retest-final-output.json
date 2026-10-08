@@ -1,0 +1,92 @@
+{
+  "baseline": {
+    "status": "PASS",
+    "issues": [],
+    "retainedBytes": 214,
+    "cleanRows": 1
+  },
+  "wrongMaterial": {
+    "status": "BLOCKED",
+    "issues": [
+      {
+        "code": "SCOPE_MISMATCH",
+        "message": "Material khác selection.",
+        "severity": "BLOCK",
+        "row": 4
+      }
+    ],
+    "retainedBytes": 214,
+    "cleanRows": null
+  },
+  "wrongDelivery": {
+    "status": "BLOCKED",
+    "issues": [
+      {
+        "code": "SELECTION_DELIVERY_MISMATCH",
+        "message": "Số lượng giao không khớp selection/kế hoạch.",
+        "severity": "BLOCK",
+        "row": 4
+      }
+    ],
+    "retainedBytes": 214,
+    "cleanRows": null
+  },
+  "missingSelection": {
+    "status": "BLOCKED",
+    "issues": [
+      {
+        "code": "SCOPE_MISMATCH",
+        "message": "Material/delivery selection thiếu hoặc sai.",
+        "severity": "BLOCK"
+      }
+    ],
+    "retainedBytes": 214,
+    "cleanRows": null
+  },
+  "validManifestMutatedAfterCall": {
+    "status": "PASS",
+    "issues": [],
+    "retainedBytes": 214,
+    "cleanRows": 1
+  },
+  "invalidManifestRepairedAfterCall": {
+    "status": "BLOCKED",
+    "issues": [
+      {
+        "code": "SCOPE_MISMATCH",
+        "message": "Manifest không thuộc cấu hình mô phỏng đã chốt.",
+        "severity": "BLOCK"
+      }
+    ],
+    "retainedBytes": 214,
+    "cleanRows": null
+  },
+  "prototypes": [
+    {
+      "reportId": "__proto__",
+      "status": "BLOCKED",
+      "issues": [
+        {
+          "code": "REPORT_UNSUPPORTED",
+          "message": "Báo cáo chưa có adapter mô phỏng.",
+          "severity": "BLOCK"
+        }
+      ],
+      "retainedBytes": 214,
+      "cleanRows": null
+    },
+    {
+      "reportId": "toString",
+      "status": "BLOCKED",
+      "issues": [
+        {
+          "code": "REPORT_UNSUPPORTED",
+          "message": "Báo cáo chưa có adapter mô phỏng.",
+          "severity": "BLOCK"
+        }
+      ],
+      "retainedBytes": 214,
+      "cleanRows": null
+    }
+  ]
+}

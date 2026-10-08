@@ -14,3 +14,7 @@ S3 adapters, S4 workflow controls, S5 mart/root-cause, S6 human acceptance chưa
 ## Sửa lỗi sau UAT độc lập
 
 Đã sửa4lỗi hiển thị BOM/kho/settlement/COGS; projections mới từ computed và ACDOCA. Regression54oraclecases + HTMLrender. Xem qa/2026-10-08/UI-FIXES.md và retest-evidence; chưa nghiệm thu SME.
+
+## S3 RAW→CLEAN
+
+Thêmregistry11profiles, frameworkstrict/preserveRAW/qualitylog/typedCLEAN/lineage, JSONexports+cleanmanifest, DataLabUI vớipreview/download.594roundtripcases vànegativefixtures;3reviewfindings sửa,8independentprobes đạt. Không đổi calculator/oracle/generator. Scope/docs/limits ở s3/README.md.

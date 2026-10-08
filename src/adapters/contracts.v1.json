@@ -1,0 +1,801 @@
+{
+  "profile": "sava-sim-tsv-v1",
+  "status": "SIM_PROFILE_IMPLEMENTED_PENDING_SME",
+  "schemaVersion": "sim-report-v1",
+  "generatorVersion": "s2-pack-1.0.0",
+  "adapterVersion": "1.0.0",
+  "reports": {
+    "FAGLL03": {
+      "id": "FAGLL03",
+      "title": "G/L Account Line Items (FAGLL03)",
+      "keys": [
+        "ledger",
+        "company_code",
+        "fiscal_year",
+        "accounting_document",
+        "line_item"
+      ],
+      "fields": [
+        {
+          "source": "RLDNR",
+          "canonical": "ledger",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "RBUKRS",
+          "canonical": "company_code",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "GJAHR",
+          "canonical": "fiscal_year",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "BELNR",
+          "canonical": "accounting_document",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "DOCLN",
+          "canonical": "line_item",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "BUDAT",
+          "canonical": "posting_date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "source": "POPER",
+          "canonical": "fiscal_period",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "TCODE",
+          "canonical": "transaction",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "RACCT",
+          "canonical": "gl_account",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "DRCRK",
+          "canonical": "debit_credit",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "HSL",
+          "canonical": "amount_lc",
+          "type": "signed_money",
+          "required": true
+        },
+        {
+          "source": "RHCUR",
+          "canonical": "local_currency",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "MATNR",
+          "canonical": "material",
+          "type": "string",
+          "required": false
+        },
+        {
+          "source": "WERKS",
+          "canonical": "plant",
+          "type": "string",
+          "required": false
+        },
+        {
+          "source": "KDAUF",
+          "canonical": "sales_order",
+          "type": "string",
+          "required": false
+        },
+        {
+          "source": "KDPOS",
+          "canonical": "sales_order_item",
+          "type": "string",
+          "required": false
+        },
+        {
+          "source": "KUNNR",
+          "canonical": "customer",
+          "type": "string",
+          "required": false
+        },
+        {
+          "source": "PRCTR",
+          "canonical": "profit_center",
+          "type": "string",
+          "required": false
+        },
+        {
+          "source": "KOSTL",
+          "canonical": "cost_center",
+          "type": "string",
+          "required": false
+        }
+      ]
+    },
+    "MB51": {
+      "id": "MB51",
+      "title": "MB51 — SIMULATED layout",
+      "keys": [
+        "fiscal_year",
+        "material_document",
+        "material_document_item"
+      ],
+      "fields": [
+        {
+          "source": "MJAHR",
+          "canonical": "fiscal_year",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "MBLNR",
+          "canonical": "material_document",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "ZEILE",
+          "canonical": "material_document_item",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "BUDAT",
+          "canonical": "posting_date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "source": "BWART",
+          "canonical": "movement_type",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "MATNR",
+          "canonical": "material",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "WERKS",
+          "canonical": "plant",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "MENGE",
+          "canonical": "quantity",
+          "type": "quantity",
+          "required": true
+        },
+        {
+          "source": "MEINS",
+          "canonical": "base_uom",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "DMBTR",
+          "canonical": "amount_lc",
+          "type": "money",
+          "required": true
+        },
+        {
+          "source": "WAERS",
+          "canonical": "local_currency",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "SHKZG",
+          "canonical": "debit_credit",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "AUFNR",
+          "canonical": "production_order",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "KDAUF",
+          "canonical": "sales_order",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "ZSIM_FI_BELNR",
+          "canonical": "fi_document",
+          "type": "string",
+          "required": false
+        }
+      ]
+    },
+    "COOIS_HEADER": {
+      "id": "COOIS_HEADER",
+      "title": "COOIS_HEADER — SIMULATED layout",
+      "keys": [
+        "production_order"
+      ],
+      "fields": [
+        {
+          "source": "AUFNR",
+          "canonical": "production_order",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "MATNR",
+          "canonical": "material",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "WERKS",
+          "canonical": "plant",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "GAMNG",
+          "canonical": "planned_quantity",
+          "type": "quantity",
+          "required": true
+        },
+        {
+          "source": "WEMNG",
+          "canonical": "delivered_quantity",
+          "type": "quantity",
+          "required": true
+        },
+        {
+          "source": "GMEIN",
+          "canonical": "base_uom",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "KDAUF",
+          "canonical": "sales_order",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "KDPOS",
+          "canonical": "sales_order_item",
+          "type": "string",
+          "required": true
+        }
+      ]
+    },
+    "COOIS_COMPONENTS": {
+      "id": "COOIS_COMPONENTS",
+      "title": "COOIS_COMPONENTS — SIMULATED layout",
+      "keys": [
+        "production_order",
+        "reservation_item"
+      ],
+      "fields": [
+        {
+          "source": "AUFNR",
+          "canonical": "production_order",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "RSPOS",
+          "canonical": "reservation_item",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "MATNR",
+          "canonical": "component_material",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "BDMNG",
+          "canonical": "required_quantity",
+          "type": "quantity",
+          "required": true
+        },
+        {
+          "source": "ENMNG",
+          "canonical": "withdrawn_quantity",
+          "type": "quantity",
+          "required": true
+        },
+        {
+          "source": "MEINS",
+          "canonical": "base_uom",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "ZSIM_PLAN_VALUE",
+          "canonical": "planned_value",
+          "type": "money",
+          "required": true
+        },
+        {
+          "source": "ZSIM_ACTUAL_VALUE",
+          "canonical": "actual_value",
+          "type": "money",
+          "required": true
+        }
+      ]
+    },
+    "COOIS_OPERATIONS": {
+      "id": "COOIS_OPERATIONS",
+      "title": "COOIS_OPERATIONS — SIMULATED layout",
+      "keys": [
+        "production_order",
+        "operation"
+      ],
+      "fields": [
+        {
+          "source": "AUFNR",
+          "canonical": "production_order",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "VORNR",
+          "canonical": "operation",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "ARBPL",
+          "canonical": "work_center",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "ZSIM_SETUP_H",
+          "canonical": "setup_hours",
+          "type": "quantity",
+          "required": true
+        },
+        {
+          "source": "ZSIM_PLAN_MACHINE_H",
+          "canonical": "planned_machine_hours",
+          "type": "quantity",
+          "required": true
+        },
+        {
+          "source": "ZSIM_PLAN_LABOR_H",
+          "canonical": "planned_labor_hours",
+          "type": "quantity",
+          "required": true
+        },
+        {
+          "source": "ZSIM_ACT_MACHINE_H",
+          "canonical": "actual_machine_hours",
+          "type": "quantity",
+          "required": true
+        },
+        {
+          "source": "ZSIM_ACT_LABOR_H",
+          "canonical": "actual_labor_hours",
+          "type": "quantity",
+          "required": true
+        }
+      ]
+    },
+    "COOIS_CONFIRMATIONS": {
+      "id": "COOIS_CONFIRMATIONS",
+      "title": "COOIS_CONFIRMATIONS — SIMULATED layout",
+      "keys": [
+        "production_order",
+        "confirmation"
+      ],
+      "fields": [
+        {
+          "source": "AUFNR",
+          "canonical": "production_order",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "VORNR",
+          "canonical": "operation",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "RUECK",
+          "canonical": "confirmation",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "GMNGA",
+          "canonical": "yield_quantity",
+          "type": "quantity",
+          "required": true
+        },
+        {
+          "source": "ZSIM_LABOR_H",
+          "canonical": "labor_hours",
+          "type": "quantity",
+          "required": true
+        },
+        {
+          "source": "ZSIM_MACHINE_H",
+          "canonical": "machine_hours",
+          "type": "quantity",
+          "required": true
+        },
+        {
+          "source": "ZSIM_LABOR_VALUE",
+          "canonical": "labor_value",
+          "type": "money",
+          "required": true
+        },
+        {
+          "source": "ZSIM_OVERHEAD_VALUE",
+          "canonical": "overhead_value",
+          "type": "money",
+          "required": true
+        }
+      ]
+    },
+    "COOIS_GOODS_MOVEMENTS": {
+      "id": "COOIS_GOODS_MOVEMENTS",
+      "title": "COOIS_GOODS_MOVEMENTS — SIMULATED layout",
+      "keys": [
+        "fiscal_year",
+        "material_document",
+        "material_document_item"
+      ],
+      "fields": [
+        {
+          "source": "MJAHR",
+          "canonical": "fiscal_year",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "MBLNR",
+          "canonical": "material_document",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "ZEILE",
+          "canonical": "material_document_item",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "BUDAT",
+          "canonical": "posting_date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "source": "BWART",
+          "canonical": "movement_type",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "MATNR",
+          "canonical": "material",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "WERKS",
+          "canonical": "plant",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "MENGE",
+          "canonical": "quantity",
+          "type": "quantity",
+          "required": true
+        },
+        {
+          "source": "MEINS",
+          "canonical": "base_uom",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "DMBTR",
+          "canonical": "amount_lc",
+          "type": "money",
+          "required": true
+        },
+        {
+          "source": "WAERS",
+          "canonical": "local_currency",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "SHKZG",
+          "canonical": "debit_credit",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "AUFNR",
+          "canonical": "production_order",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "KDAUF",
+          "canonical": "sales_order",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "ZSIM_FI_BELNR",
+          "canonical": "fi_document",
+          "type": "string",
+          "required": false
+        }
+      ]
+    },
+    "KOB1": {
+      "id": "KOB1",
+      "title": "KOB1 — SIMULATED layout",
+      "keys": [
+        "production_order",
+        "source_line"
+      ],
+      "fields": [
+        {
+          "source": "AUFNR",
+          "canonical": "production_order",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "BELNR",
+          "canonical": "accounting_document",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "BUZEI",
+          "canonical": "line_item",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "BUDAT",
+          "canonical": "posting_date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "source": "KSTAR",
+          "canonical": "cost_element",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "WTG001",
+          "canonical": "amount_lc",
+          "type": "money",
+          "required": true
+        },
+        {
+          "source": "TWAER",
+          "canonical": "local_currency",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "ZSIM_SOURCE_LINE",
+          "canonical": "source_line",
+          "type": "string",
+          "required": true
+        }
+      ]
+    },
+    "KKS1": {
+      "id": "KKS1",
+      "title": "KKS1 — SIMULATED layout",
+      "keys": [
+        "production_order"
+      ],
+      "fields": [
+        {
+          "source": "AUFNR",
+          "canonical": "production_order",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "ZSIM_PLAN",
+          "canonical": "planned_cost",
+          "type": "money",
+          "required": true
+        },
+        {
+          "source": "ZSIM_ACTUAL",
+          "canonical": "actual_cost",
+          "type": "money",
+          "required": true
+        },
+        {
+          "source": "ZSIM_VARIANCE",
+          "canonical": "variance",
+          "type": "signed_money",
+          "required": true
+        },
+        {
+          "source": "ZSIM_SETTLED",
+          "canonical": "settled_cost",
+          "type": "signed_money",
+          "required": true
+        },
+        {
+          "source": "ZSIM_WIP",
+          "canonical": "wip_cost",
+          "type": "signed_money",
+          "required": true
+        },
+        {
+          "source": "WAERS",
+          "canonical": "local_currency",
+          "type": "string",
+          "required": true
+        }
+      ]
+    },
+    "CK13N": {
+      "id": "CK13N",
+      "title": "CK13N — SIMULATED layout",
+      "keys": [
+        "cost_estimate",
+        "record_type",
+        "cost_element"
+      ],
+      "fields": [
+        {
+          "source": "ZSIM_RECORD",
+          "canonical": "record_type",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "KALNR",
+          "canonical": "cost_estimate",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "MATNR",
+          "canonical": "material",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "WERKS",
+          "canonical": "plant",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "KSTAR",
+          "canonical": "cost_element",
+          "type": "string",
+          "required": false
+        },
+        {
+          "source": "ZSIM_LOT_QTY",
+          "canonical": "lot_quantity",
+          "type": "quantity",
+          "required": true
+        },
+        {
+          "source": "ZSIM_VALUE",
+          "canonical": "total_value",
+          "type": "money",
+          "required": true
+        },
+        {
+          "source": "ZSIM_UNIT_COST",
+          "canonical": "unit_cost",
+          "type": "quantity",
+          "required": true
+        },
+        {
+          "source": "WAERS",
+          "canonical": "local_currency",
+          "type": "string",
+          "required": true
+        }
+      ]
+    },
+    "SUP01": {
+      "id": "SUP01",
+      "title": "SUP01 — SIMULATED layout",
+      "keys": [
+        "production_order",
+        "source_line"
+      ],
+      "fields": [
+        {
+          "source": "AUFNR",
+          "canonical": "production_order",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "BELNR",
+          "canonical": "accounting_document",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "BUZEI",
+          "canonical": "line_item",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "TCODE",
+          "canonical": "transaction",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "RACCT",
+          "canonical": "gl_account",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "ZSIM_SETTLED",
+          "canonical": "settled_cost",
+          "type": "signed_money",
+          "required": true
+        },
+        {
+          "source": "WAERS",
+          "canonical": "local_currency",
+          "type": "string",
+          "required": true
+        },
+        {
+          "source": "ZSIM_SOURCE_LINE",
+          "canonical": "source_line",
+          "type": "string",
+          "required": true
+        }
+      ]
+    }
+  }
+}

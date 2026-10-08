@@ -17,7 +17,8 @@
     "test:health": "tsx scripts/health-security.ts",
     "test:security": "node scripts/scan-secrets.mjs",
     "test:start": "node scripts/production-smoke.mjs",
-    "test:ui-finance": "tsx scripts/ui-finance-regression.tsx"
+    "test:ui-finance": "tsx scripts/ui-finance-regression.tsx",
+    "test:s3": "tsx scripts/s3-adapters.ts"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",

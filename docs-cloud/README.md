@@ -29,3 +29,7 @@ Phạm vi 11 báo cáo chỉ kịch bản cơ sở hoàn thành. Chặn QM rewor
 [Báo cáo QA 08/10/2026](qa/2026-10-08/RESULT.md): 3 ca tạo báo cáo đạt trong chế độ giảng viên;4 lỗi UI kế thừa; download content/hash chưa xác minh. Sửa lỗi và retest trước release.
 
 Cập nhật sau sửa: code71cd3f8 đã sửa4lỗi và regression54ca đạt. [Bản sửa](qa/2026-10-08/UI-FIXES.md); [retestđộc lập](qa/2026-10-08/RETEST.md) BLOCKED bởi kết nối trình duyệt agent, còn chờ UAT/downloads/SME.
+
+## S3 được triển khai kỹ thuật
+
+[S3browserRAW→CLEAN](s3/README.md):11profiles, strictadapter, DQ/lineage/CLEANmanifest vàDataLab. Technicaltests +independentcodeprobes cóbằngchứng; browserUAT/SME vẫnpending. Tiếp S4controls trướcMART. Các dòng S3“chưa làm” trên đây là lịch sử củaSession1, được thay bởi mục cập nhật này.

@@ -10,3 +10,6 @@ Không coi kiểm thử của tác giả là nghiệm thu. Các AUD dưới đâ
 - **AUD-018 — AI/legal:** sửa prompt server hai đường sang TT99 có nhãn chưa đối chiếu; không tuyên bố hoàn tất dọn mọi nội dung TT200 legacy. Không thay máy tính kế toán. Cần review riêng toàn bộ nội dung học/AI trước claim tuân thủ.
 - **AUD-019 — Provenance:** content runId loại bỏ timestamp máy để tái lập; cùng payload nhưng object key order khác có thể hash khác. Chưa là RFC8785 canonical JSON; không dùng sourceHash để xác nhận hai payload nghiệp vụ tương đương.
 - **AUD-020 — UI và hiệu năng:** bảng download gọn, không auto-download11 file. Bundle cũ lớn; tối ưu tách chunk là backlog, tránh rewrite toàn UI. Manual browser UAT và kiểm nhiều browser cần ghi riêng trạng thái thật.
+
+- **AUD-021 — S3simprofile:** chỉ11generatedTSVlayouts. Strictversion/header/locale;1MiB/5000rows; RAM/privatebytes phù hợpdatasets nhỏ. Không WORM/realSAPintake/crossreportreconciliation. Unparsedcount=null. CLEANJSON giữleadingzeros; S4pending.
+- **AUD-022 — Independent review:** 3manifest/inputbugs được probe và sửa;8focusedindependentcases xác nhận. BrowserUAT cònblocked; khôngselfapproveSME/gates. Hash củamanifest không có signature/authenticity.

@@ -1,0 +1,42 @@
+[
+  {
+    "task": "lint",
+    "exitCode": 0
+  },
+  {
+    "task": "test:s3",
+    "exitCode": 0
+  },
+  {
+    "task": "test:ui-finance",
+    "exitCode": 0
+  },
+  {
+    "task": "test:parity",
+    "exitCode": 0
+  },
+  {
+    "task": "test:s1",
+    "exitCode": 0
+  },
+  {
+    "task": "test:s2",
+    "exitCode": 0
+  },
+  {
+    "task": "test:a0",
+    "exitCode": 0
+  },
+  {
+    "task": "test:reports",
+    "exitCode": 0
+  },
+  {
+    "task": "build",
+    "exitCode": 0
+  },
+  {
+    "task": "test:start",
+    "exitCode": 0
+  }
+]
