@@ -1,0 +1,25 @@
+{
+  "conversation_id": "6ac58cd0-40b8-83ec-ac9c-f95bc5a4dfd8",
+  "title": "Mô phỏng Tcode SAP S4HANA",
+  "source": "user-supplied bounded preview",
+  "full_history_retrieved": false,
+  "read_thread_result": "Invalid app tool request (-32602)",
+  "list_threads_result": "Invalid app tool request (-32602)",
+  "mirror_sources_file_count": 0,
+  "known_preview_user_statements": [
+    "Đồng ý bạn kiểm tra và xây Report Master Dictionary.",
+    "Đồng ý, tiếp theo",
+    "Yêu cầu kế hoạch triển khai tổng thể và lưu vào D:\\sava-erp-simulator"
+  ],
+  "assistant_proposals_visible": [
+    "Keep existing simulator/assets and extend report/data layer",
+    "18-field Report Master Dictionary plus run metadata",
+    "Manufacturing Cost & Variance first vertical slice",
+    "D01 MB51, D02 COOIS Header, D03 COOIS Components schema excerpts; D04 truncated"
+  ],
+  "limitations": [
+    "Not a verbatim full transcript archive",
+    "Previous artefacts mentioned in chat not accessible here",
+    "No invented prior approvals or truncated schema content"
+  ]
+}

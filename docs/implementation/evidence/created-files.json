@@ -1,0 +1,198 @@
+{
+  "created": [
+    {
+      "path": "docs/implementation/00-BASELINE-AND-SOURCES.md",
+      "action": "CREATED",
+      "size_bytes": 7017,
+      "sha256": "0abbcf707c9a04771aaa2e92b3b5a9a98057b6d0692824b9682203ede7a7b47e"
+    },
+    {
+      "path": "docs/implementation/01-MASTER-PLAN.md",
+      "action": "CREATED",
+      "size_bytes": 4476,
+      "sha256": "8f7771ca51d992065f33ffb78d9d991e0cf72e8929a1d47b6202c7a8b36a35c9"
+    },
+    {
+      "path": "docs/implementation/02-ARCHITECTURE.md",
+      "action": "CREATED",
+      "size_bytes": 7745,
+      "sha256": "69137f26e3a52bb4a8acd19e0ed1905d4df70a89a0af387fbba961236b1a8ba2"
+    },
+    {
+      "path": "docs/implementation/03-MODULES-AND-FLOWS.md",
+      "action": "CREATED",
+      "size_bytes": 3493,
+      "sha256": "4799c6d0bbfc430e942d72ac5ad08e9f25fc1586c51faf3de3217ce2c3fa3678"
+    },
+    {
+      "path": "docs/implementation/04-REPORT-MASTER-DICTIONARY.md",
+      "action": "CREATED",
+      "size_bytes": 74466,
+      "sha256": "bb02c381149858184c54f146170d736e9d7efe06732b1d066d1e73669263484c"
+    },
+    {
+      "path": "docs/implementation/05-EXPORT-VARIANTS.md",
+      "action": "CREATED",
+      "size_bytes": 3526,
+      "sha256": "93af0fccfbd6051e67d9a56848eb94d6efdf575611dff4f613d055d3553adff1"
+    },
+    {
+      "path": "docs/implementation/06-DATA-GOVERNANCE.md",
+      "action": "CREATED",
+      "size_bytes": 5115,
+      "sha256": "8d273fefb909869c6950c27d34f33863a53a5a890d21e7090eb56969ffcaa5ba"
+    },
+    {
+      "path": "docs/implementation/07-ADAPTER-FRAMEWORK.md",
+      "action": "CREATED",
+      "size_bytes": 4752,
+      "sha256": "b1d2b591137f0f16856faa7041a4f9bd1555a49ac3894238a7266d2a7e30eb55"
+    },
+    {
+      "path": "docs/implementation/08-VERTICAL-SLICES.md",
+      "action": "CREATED",
+      "size_bytes": 6637,
+      "sha256": "30059c128da2e6ec8172681d57c91f6b84875f4a1e945fa55f18ab5eaf1ec4d2"
+    },
+    {
+      "path": "docs/implementation/09-TECHNICAL-REQUIREMENTS.md",
+      "action": "CREATED",
+      "size_bytes": 7142,
+      "sha256": "2104a24f9f7043134d43740cceb696b19d82e665e4b4004d66a4252a49c6c00e"
+    },
+    {
+      "path": "docs/implementation/10-BACKLOG-ROADMAP.md",
+      "action": "CREATED",
+      "size_bytes": 3894,
+      "sha256": "05e87eae52e35f00115a2411110d6cc95efa35e36f314d0032f853bf85bf2f94"
+    },
+    {
+      "path": "docs/implementation/11-DELIVERY-RACI-GATES.md",
+      "action": "CREATED",
+      "size_bytes": 4996,
+      "sha256": "fc003555283765592a79f06d86715b09e796754561c4d605b5756366333aab93"
+    },
+    {
+      "path": "docs/implementation/12-ACCEPTANCE-M01-M10.md",
+      "action": "CREATED",
+      "size_bytes": 4173,
+      "sha256": "a4da5c896d0bd9109047f3c31d88edf01b4d43198e9792099a7e5031ef0ae4a9"
+    },
+    {
+      "path": "docs/implementation/13-DECISION-LOG.md",
+      "action": "CREATED",
+      "size_bytes": 5145,
+      "sha256": "2d14443264c4c1b476348032fdc55859a67fd4d510e89d47e14faadcde8aa000"
+    },
+    {
+      "path": "docs/implementation/14-RISKS-ASSUMPTIONS.md",
+      "action": "CREATED",
+      "size_bytes": 4654,
+      "sha256": "5eb3599e895f9e02f58b584db8504b921bfa474f0857279fb6c3146c84edff5f"
+    },
+    {
+      "path": "docs/implementation/15-AGENT-HANDOFF.md",
+      "action": "CREATED",
+      "size_bytes": 1781,
+      "sha256": "ca102d3c0e9ec6814efef223389f75fcd08fedb1bc159d485ab0246c0f4cf37a"
+    },
+    {
+      "path": "docs/implementation/16-REQUIREMENTS-COVERAGE.md",
+      "action": "CREATED",
+      "size_bytes": 1941,
+      "sha256": "db0e400c52aba975b29bc5147d1dbf79440239dce33440b6bf9897c81f717afa"
+    },
+    {
+      "path": "docs/implementation/contracts/acceptance-gates.v1.json",
+      "action": "CREATED",
+      "size_bytes": 4494,
+      "sha256": "a1192bc0f256bd7c290bbb5baba4b89344c6e9e3f91835990780bdd5374f3839"
+    },
+    {
+      "path": "docs/implementation/contracts/backlog.v1.json",
+      "action": "CREATED",
+      "size_bytes": 5427,
+      "sha256": "86a5e60b47952c3d9a415e2ca9f3a2049ca1d43c44ccb110f262ecd01d0c8078"
+    },
+    {
+      "path": "docs/implementation/contracts/control-rules.v1.json",
+      "action": "CREATED",
+      "size_bytes": 7146,
+      "sha256": "9108b63212d1064f673ad9b24a4b10e1880543dd7e8732a1b7fd02c3820b71a0"
+    },
+    {
+      "path": "docs/implementation/contracts/export-variants.v1.json",
+      "action": "CREATED",
+      "size_bytes": 44146,
+      "sha256": "46f2e33a4e93d60b34c4ce21c156f325475d8ba78c5c5987db2a6b58e1a17050"
+    },
+    {
+      "path": "docs/implementation/contracts/report-contracts.v1.json",
+      "action": "CREATED",
+      "size_bytes": 376474,
+      "sha256": "f4935f52e203f7abffe88702f059cd8444a75c3ae2d27c376f7e42f42452426c"
+    },
+    {
+      "path": "docs/implementation/contracts/run-manifest.example.json",
+      "action": "CREATED",
+      "size_bytes": 1852,
+      "sha256": "56d441bef513caf7286312ec4ec5692abc1c48a9fc535ff07eb6bc4f0826d143"
+    },
+    {
+      "path": "docs/implementation/contracts/run-manifest.schema.json",
+      "action": "CREATED",
+      "size_bytes": 8863,
+      "sha256": "d1c0ed0883ac2633c644c44bb8c5059fcb99bc7012cacd03794c3f1cfb973241"
+    },
+    {
+      "path": "docs/implementation/evidence/baseline-files.json",
+      "action": "CREATED",
+      "size_bytes": 10055,
+      "sha256": "0a211c281eec11922b2169f31fd5b169c39b1e4422eaf178a6b1a64ef33ce4a5"
+    },
+    {
+      "path": "docs/implementation/evidence/conversation-scope.json",
+      "action": "CREATED",
+      "size_bytes": 1086,
+      "sha256": "940dac9eeb62d1892a918a9a51d7569385cc91d1b1bfc9a96999d05633488b27"
+    },
+    {
+      "path": "docs/implementation/evidence/document-validation.json",
+      "action": "CREATED",
+      "size_bytes": 4152,
+      "sha256": "9a4dd418db6ca501ce187fe5714449f064cfe6aaad67d6cc787c7afe8f8d055b"
+    },
+    {
+      "path": "docs/implementation/journal/2026-10-07.md",
+      "action": "CREATED",
+      "size_bytes": 1042,
+      "sha256": "8be9f815a0ebf466ae71dacf600941b5b563950a2bd67ddc180847900142a519"
+    },
+    {
+      "path": "docs/implementation/README.md",
+      "action": "CREATED",
+      "size_bytes": 3166,
+      "sha256": "e8f0e609c275a4697706e4979212b53c50919a340ebe00cb0175a3c4116564ec"
+    },
+    {
+      "path": "docs/implementation/templates/EVIDENCE-PACK.md",
+      "action": "CREATED",
+      "size_bytes": 1067,
+      "sha256": "a82e5a3cb52143563bbc32c78bb19e85637b05c01c5889c3086e32d1029bd8c2"
+    },
+    {
+      "path": "docs/implementation/templates/VARIANT-APPROVAL.md",
+      "action": "CREATED",
+      "size_bytes": 992,
+      "sha256": "26d845f066b147f7be83eae58c23cc2fbbe3000e94f80b268c8f8be0449f292f"
+    },
+    {
+      "path": "docs/implementation/evidence/created-files.json",
+      "action": "CREATED",
+      "sha256": null,
+      "note": "Self-hash excluded to avoid recursion"
+    }
+  ],
+  "updated_existing_files": [],
+  "deleted_files": []
+}

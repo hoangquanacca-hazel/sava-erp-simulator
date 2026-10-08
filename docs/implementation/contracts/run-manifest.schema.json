@@ -1,0 +1,466 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:sava:run-manifest:1.0",
+  "title": "SAVA report processing manifest v1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "run_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "report_id": {
+      "enum": [
+        "D01",
+        "D02",
+        "D03",
+        "D04",
+        "D05",
+        "D06",
+        "D07",
+        "D08",
+        "D09",
+        "D10",
+        "D11",
+        "D12",
+        "D13",
+        "D14",
+        "D15",
+        "D16",
+        "D17",
+        "D18",
+        "D19",
+        "SUP01",
+        "ZFIR009A",
+        "ZFIR159"
+      ]
+    },
+    "source_kind": {
+      "enum": [
+        "SIMULATED",
+        "SAP_EXPORT"
+      ]
+    },
+    "source_system": {
+      "type": "string",
+      "minLength": 1
+    },
+    "client": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sap_edition": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sap_release": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "company_codes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "plants": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "selection": {
+      "type": "object",
+      "required": [
+        "ranges",
+        "status_scope",
+        "key_date"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "ranges": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "field",
+              "sign",
+              "option",
+              "low",
+              "high"
+            ],
+            "properties": {
+              "field": {
+                "type": "string"
+              },
+              "sign": {
+                "enum": [
+                  "I",
+                  "E"
+                ]
+              },
+              "option": {
+                "enum": [
+                  "EQ",
+                  "BT",
+                  "GE",
+                  "LE",
+                  "CP"
+                ]
+              },
+              "low": {
+                "type": "string"
+              },
+              "high": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          }
+        },
+        "status_scope": {
+          "type": "string"
+        },
+        "key_date": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        }
+      }
+    },
+    "fiscal_year_variant": {
+      "type": "string"
+    },
+    "period": {
+      "type": "string"
+    },
+    "timezone": {
+      "type": "string"
+    },
+    "cutoff_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "extracted_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "ingested_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "operator_id": {
+      "type": "string"
+    },
+    "selection_variant": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "layout_variant": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "export_profile_id": {
+      "type": "string"
+    },
+    "original_filename": {
+      "type": "string"
+    },
+    "mime": {
+      "type": "string"
+    },
+    "encoding": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "size_bytes": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "raw_object_uri": {
+      "type": "string"
+    },
+    "schema_version": {
+      "type": "string"
+    },
+    "adapter_id": {
+      "type": "string"
+    },
+    "adapter_version": {
+      "type": "string"
+    },
+    "code_commit": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{40}$"
+    },
+    "config_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "parent_run_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "row_counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "physical_rows",
+        "data_rows",
+        "header_rows",
+        "footer_rows",
+        "subtotal_rows",
+        "blank_rows",
+        "accepted_rows",
+        "rejected_rows",
+        "duplicate_rows",
+        "emitted_clean_rows"
+      ],
+      "properties": {
+        "physical_rows": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "data_rows": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "header_rows": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "footer_rows": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "subtotal_rows": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "blank_rows": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "accepted_rows": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "rejected_rows": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "duplicate_rows": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "emitted_clean_rows": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "control_totals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "measure",
+          "unit",
+          "source_total",
+          "clean_total"
+        ],
+        "properties": {
+          "measure": {
+            "type": "string"
+          },
+          "unit": {
+            "type": "string"
+          },
+          "source_total": {
+            "type": "string",
+            "pattern": "^-?\\d+(\\.\\d+)?$"
+          },
+          "clean_total": {
+            "type": "string",
+            "pattern": "^-?\\d+(\\.\\d+)?$"
+          }
+        }
+      }
+    },
+    "state": {
+      "enum": [
+        "RECEIVED",
+        "QUARANTINED",
+        "RAW_REGISTERED",
+        "PROCESSING",
+        "CLEAN_READY",
+        "CONTROL_PENDING",
+        "CONTROL_FAILED",
+        "REVIEW_PENDING",
+        "APPROVED",
+        "PUBLISHED"
+      ]
+    },
+    "scenario_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ruleset_version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "seed": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "example_only": {
+      "type": "boolean"
+    },
+    "approval_evidence_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "source_kind": {
+            "const": "SAP_EXPORT"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "sap_edition": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sap_release": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "source_kind": {
+            "const": "SIMULATED"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "scenario_id",
+          "ruleset_version",
+          "seed"
+        ],
+        "properties": {
+          "scenario_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "ruleset_version": {
+            "type": "string",
+            "minLength": 1
+          },
+          "seed": {
+            "type": "integer"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "state": {
+            "enum": [
+              "APPROVED",
+              "PUBLISHED"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "approval_evidence_id": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  ],
+  "required": [
+    "run_id",
+    "report_id",
+    "source_kind",
+    "source_system",
+    "client",
+    "sap_edition",
+    "sap_release",
+    "company_codes",
+    "plants",
+    "selection",
+    "fiscal_year_variant",
+    "period",
+    "timezone",
+    "cutoff_at",
+    "extracted_at",
+    "ingested_at",
+    "operator_id",
+    "selection_variant",
+    "layout_variant",
+    "export_profile_id",
+    "original_filename",
+    "mime",
+    "encoding",
+    "size_bytes",
+    "sha256",
+    "raw_object_uri",
+    "schema_version",
+    "adapter_id",
+    "adapter_version",
+    "code_commit",
+    "config_hash",
+    "parent_run_id",
+    "row_counts",
+    "control_totals",
+    "state",
+    "approval_evidence_id"
+  ]
+}

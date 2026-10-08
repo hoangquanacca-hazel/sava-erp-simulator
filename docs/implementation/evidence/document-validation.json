@@ -1,0 +1,169 @@
+{
+  "validated_at_utc": "2026-10-07T01:16:37.895755+00:00",
+  "scope": "documentation and contract structural validation; not independent business acceptance or runtime testing",
+  "checks": [
+    {
+      "check": "Existing file byte hashes preserved",
+      "passed": true
+    },
+    {
+      "check": "HEAD and branch unchanged",
+      "passed": true
+    },
+    {
+      "check": "Tracked changes absent",
+      "passed": true
+    },
+    {
+      "check": "All JSON parse",
+      "passed": true
+    },
+    {
+      "check": "22 unique report descriptors",
+      "passed": true
+    },
+    {
+      "check": "Requested reports covered",
+      "passed": true
+    },
+    {
+      "check": "D01 unique fields and keys represented",
+      "passed": true
+    },
+    {
+      "check": "D02 unique fields and keys represented",
+      "passed": true
+    },
+    {
+      "check": "D03 unique fields and keys represented",
+      "passed": true
+    },
+    {
+      "check": "D04 unique fields and keys represented",
+      "passed": true
+    },
+    {
+      "check": "D05 unique fields and keys represented",
+      "passed": true
+    },
+    {
+      "check": "D06 unique fields and keys represented",
+      "passed": true
+    },
+    {
+      "check": "D07 unique fields and keys represented",
+      "passed": true
+    },
+    {
+      "check": "D08 unique fields and keys represented",
+      "passed": true
+    },
+    {
+      "check": "D09 unique fields and keys represented",
+      "passed": true
+    },
+    {
+      "check": "D10 unique fields and keys represented",
+      "passed": true
+    },
+    {
+      "check": "D11 unique fields and keys represented",
+      "passed": true
+    },
+    {
+      "check": "D12 unique fields and keys represented",
+      "passed": true
+    },
+    {
+      "check": "D13 unique fields and keys represented",
+      "passed": true
+    },
+    {
+      "check": "D14 unique fields and keys represented",
+      "passed": true
+    },
+    {
+      "check": "D15 unique fields and keys represented",
+      "passed": true
+    },
+    {
+      "check": "D16 unique fields and keys represented",
+      "passed": true
+    },
+    {
+      "check": "D17 unique fields and keys represented",
+      "passed": true
+    },
+    {
+      "check": "D18 unique fields and keys represented",
+      "passed": true
+    },
+    {
+      "check": "D19 unique fields and keys represented",
+      "passed": true
+    },
+    {
+      "check": "SUP01 unique fields and keys represented",
+      "passed": true
+    },
+    {
+      "check": "All variants pending; no false SAP approvals",
+      "passed": true
+    },
+    {
+      "check": "M01-M10 unique and not self-accepted",
+      "passed": true
+    },
+    {
+      "check": "Controls reference known datasets",
+      "passed": true
+    },
+    {
+      "check": "Example count conservation",
+      "passed": true
+    },
+    {
+      "check": "Manifest JSON Schema and example validated with jsonschema",
+      "passed": true
+    },
+    {
+      "check": "Markdown relative links resolve",
+      "passed": true
+    },
+    {
+      "check": "No unexpected Git changes outside new docs folder",
+      "passed": true
+    },
+    {
+      "check": "Schema rejects SAP_EXPORT without edition/release",
+      "passed": true
+    },
+    {
+      "check": "Schema rejects APPROVED without approval evidence",
+      "passed": true
+    },
+    {
+      "check": "Schema rejects invalid SHA-256",
+      "passed": true
+    },
+    {
+      "check": "Schema rejects negative row counts",
+      "passed": true
+    },
+    {
+      "check": "Schema accepts signed decimal control totals",
+      "passed": true
+    },
+    {
+      "check": "Final revised documents: links and all 60 preexisting file hashes rechecked",
+      "passed": true
+    }
+  ],
+  "runtime_tests_executed": false,
+  "sap_exports_validated": false,
+  "independent_acceptance": "NOT_EXECUTED",
+  "source_file_count_preserved": 60,
+  "report_descriptor_count": 22,
+  "canonical_field_count": 436,
+  "git_status_after": "?? docs/"
+}
