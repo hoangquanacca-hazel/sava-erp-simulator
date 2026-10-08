@@ -27,3 +27,5 @@ Phạm vi 11 báo cáo chỉ kịch bản cơ sở hoàn thành. Chặn QM rewor
 ## Kiểm thử giao diện độc lập
 
 [Báo cáo QA 08/10/2026](qa/2026-10-08/RESULT.md): 3 ca tạo báo cáo đạt trong chế độ giảng viên;4 lỗi UI kế thừa; download content/hash chưa xác minh. Sửa lỗi và retest trước release.
+
+Cập nhật sau sửa: code71cd3f8 đã sửa4lỗi và regression54ca đạt. [Bản sửa](qa/2026-10-08/UI-FIXES.md); [retestđộc lập](qa/2026-10-08/RETEST.md) BLOCKED bởi kết nối trình duyệt agent, còn chờ UAT/downloads/SME.

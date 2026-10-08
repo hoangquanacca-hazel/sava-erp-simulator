@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-08",
+  "url": "http://127.0.0.1:3017/",
+  "commit_parent_reported": "71cd3f8",
+  "status": "BLOCKED_BROWSER_UNAVAILABLE",
+  "browser_inventory": [],
+  "attempts": ["reload_previous_tab_browser2_unavailable", "listBrowsers_empty", "createBrowserTab_iab_unavailable", "runtime_reset_then_exact_getTab_iab_unavailable"],
+  "four_fix_retests": "NOT_RUN",
+  "eleven_report_regression": "NOT_RUN",
+  "stale_export_regression": "NOT_RUN",
+  "download_content_hash": "UNVERIFIED",
+  "instructor_mode_changed_this_retest": false,
+  "previous_run_instructor_mode_restored": "OFF",
+  "repo_modified": false,
+  "lead_data_submitted": false,
+  "author_test_results_independently_accepted": false
+}

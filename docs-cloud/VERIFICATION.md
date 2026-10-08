@@ -42,3 +42,14 @@ Theo yêu cầu Mr Quân, một agent khác tác giả đã thao tác trình duy
 Nút tải4 file đã được bấm, nhưng completion/content/hash chưa xác minh do API download timeout. Phân loại UNVERIFIED, không kết luận download PASS hoặc FAIL. Chưa kiểm QM/ML unsupported gating, browser khác, hoặc golden/SME.
 
 QA ghi nhận4 vấn đề giao diện kế thừa: BOM visualization lệch chi phí; inventory trình bày xuất kho trước execution; diễn giải settlement giao một phần nói154về0; breakdownCOGS giao một phần cộng207,2% và favorable variance hiển thị dương. Chưa sửa trong đợt QA này. Đây là lý do tiếp tục sửa UI trước release; kết quả3ca không chứng nhận toànP0/M01–M10.
+
+
+## Bản sửa4lỗi — commit71cd3f8
+
+Đã sửa trong source/build và chạy lại lint, UI-finance54/54oracle + HTMLrender, parity,S1,S2,A0,reports594,build,start; tất cảexit0. Logs tại qa/2026-10-08/retest-evidence. Calculator/acdoca/materialLedger/oracle không thay đổi.
+
+Bản sửa: BOM dùng canonicalcomputed; kho dùng bước đã thực thi + balance154/155; settlement nêu phần đã giao/WIP; COGS loại closing911, bridge theo deliveryshare và delta có dấu. Xem [UI-FIXES](qa/2026-10-08/UI-FIXES.md).
+
+**Independent browser retest BLOCKED:** agent QA mất provider/browser, reset/directURL cũng không khôi phục; root đọc được tab người dùng nhưng chưa thay thế QA độc lập. [RETEST](qa/2026-10-08/RETEST.md) và JSON ghi4live checks NOTRUN. Không kết luận ứng dụngFAIL từ lỗi công cụ; không nâng regression thành independentPASS. File download completion/hash cònUNVERIFIED. SME/legal/P0gates chưa nghiệm thu.
+
+Server đang phục vụ bảnbuildmới ở http://127.0.0.1:3017/; tab mở trướcbuild có thể vẫn giữ bundlecũ, cần tải lại để dùng bản sửa. Codecommit71cd3f8, các commit ghiQA sau đó chỉ tài liệu.
