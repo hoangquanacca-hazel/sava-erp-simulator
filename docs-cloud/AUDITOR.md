@@ -14,7 +14,9 @@ AUD-001…AUD-009, AUD-011, AUD-012 được tham chiếu trong mã (`scenarioEv
 - Quét `AIza[0-9A-Za-z_-]{30,}`: working tree (trừ node_modules) 0; `dist/` 0; toàn bộ lịch sử git mọi ref (25 commit, không shallow; diff + message) 0. Chỉ có chuỗi `AIza` trơn trong regex/ghi chú.
 - Rủi ro còn lại: không kiểm được khóa đã từng lộ qua kênh khác (log Netlify, ảnh chụp). Nếu từng chia sẻ URL `/api/health` kèm `keyPrefix`, cân nhắc xoay khóa.
 
-## AUD-014 — "SUP01" không phải T-code SAP chuẩn — DIỄN GIẢI TẠM, CẦN CHỦ DỰ ÁN XÁC NHẬN
+## AUD-014 — SUP01 bị HIỂU SAI — cần làm lại (đính chính 08/10/2026)
+- Theo `contracts/report-contracts.v1.json` (nhánh `docs/implementation-pack`): SUP01 = **Settlement Evidence / Document Bridge** — truy KKS1 eligible variance → lần quyết toán (run/sender/receiver/allocation) → dòng FI (`fi_document`, `gl_document_line`). Bản trong PR này đáp ứng 0/13 trường bắt buộc; nó là bảng đối chiếu tổng hợp, nên đổi tên (vd. RECON01) và dựng SUP01 mới theo contract.
+- Ghi chú cũ (giữ để truy vết):
 - Đã hiện thực SUP01 = *Supporting reconciliation* của simulator: mỗi dòng so tổng 1 báo cáo logistics/CO với tổng ACDOCA theo TK + mã giao dịch, có DIFF/STATUS.
 - Nếu SUP01 trong golden set mang nghĩa khác (vd. danh sách NCC, báo cáo Z nội bộ), cần đổi; lõi đối soát vẫn tái dùng được.
 - PASS-3 ghi "11 báo cáo": phiên này giao 10 báo cáo mới (MB51, COOIS×5, KOB1, KKS1, CK13N, SUP01) + FAGLL03 đã có = 11.
