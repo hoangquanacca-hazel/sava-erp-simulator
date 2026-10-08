@@ -46,3 +46,8 @@ S3 đã triển khai (`3eb5bd1`), UI sửa bổ sung (`cbfa51a`); [QA browser cu
 
 
 S4 code `da7bd0b`: browser QA2cases Samsung/Canon đạt technical7/7; [bằng chứng](s4/browser-qa/) và [bàn giao](s4/README.md). Downloads/humanacceptance chưa xácminh/hoànthành; businessblocks vẫn giữ.
+
+
+## Quyết định ưu tiên mới nhất — 08/10/2026
+
+Mr Quân chốt mục tiêu gần **P0 Manufacturing được nghiệm thu để chạy pilot**; P1/P2 triển khai sau. [Quyết định và thứ tự P0 còn lại](P0-FOCUS-DECISION.md), [metadata](p0-focus-decision.json). Không hạ gate, không tự triển khai ngoài phạm vi P0 hoặc tự release.

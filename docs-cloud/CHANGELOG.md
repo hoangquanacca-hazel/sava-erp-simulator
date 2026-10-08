@@ -28,3 +28,8 @@ Commit3eb5bd1 bổ sung S3; cbfa51a đồng bộ master editor với computed BO
 ## S4 manufacturing controls
 
 Thêm7 CLEAN tieouts và source coordinates/orphans/metrics, SIM policy JSON, ControlsPanel, giải trình/review request/hashchain export. Sửa nhãn Non-valuated settlement thành giá vốn632.54×7 checks và22 independent probes đạt; real business gates giữblocked/pending. Phạm vi và evidence ở s4/README.md.
+
+
+## Quyết định ưu tiên P0
+
+Theo chỉ thị Mr Quân, chỉ thực thi P0 Manufacturing; P1/P2 để giai đoạn sau. Ghi quyết định P0-FOCUS-DECISION.md và JSON; giữ acceptance gates và tài sản cũ. Không thay đổi code hoặc tự nghiệm thu/deploy.
