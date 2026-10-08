@@ -22,6 +22,7 @@ export const MarginAnalysisPanel: React.FC<MarginAnalysisPanelProps> = ({
     [acdocaTable, cardState.actualGrossProfit]
   );
 
+  const hasStandardCogs = ma.standardGrossProfit !== ma.revenue511;
   const isClassic = uiMode === 'classic';
   const empty = acdocaTable.length === 0 || ma.revenue511 === 0;
 
@@ -57,7 +58,7 @@ export const MarginAnalysisPanel: React.FC<MarginAnalysisPanelProps> = ({
           <div className="rounded-lg border border-slate-800 bg-slate-950/50 p-3 space-y-2">
             <div className="flex items-center gap-2 text-xs font-bold text-slate-200">
               <SplitSquareVertical className="w-4 h-4 text-cyan-400" />
-              LN gộp ĐỊNH MỨC
+              {hasStandardCogs ? 'LN gộp ĐỊNH MỨC' : 'LN trước giá vốn settlement'}
             </div>
             <p className="text-[11px] text-slate-400 font-mono">
               DT 511 − (632110 + 632120 + 632130 + 632140)
@@ -84,7 +85,7 @@ export const MarginAnalysisPanel: React.FC<MarginAnalysisPanelProps> = ({
                 <dd>{formatVND(ma.cogs632140)}</dd>
               </div>
               <div className="flex justify-between border-t border-slate-800 pt-1 font-bold text-cyan-200">
-                <dt>LN gộp định mức</dt>
+                <dt>{hasStandardCogs ? 'LN gộp định mức' : 'LN trước giá vốn settlement'}</dt>
                 <dd>{formatVND(ma.standardGrossProfit)}</dd>
               </div>
             </dl>
@@ -95,10 +96,10 @@ export const MarginAnalysisPanel: React.FC<MarginAnalysisPanelProps> = ({
               <TrendingUp className="w-4 h-4 text-emerald-400" />
               LN gộp THỰC TẾ
             </div>
-            <p className="text-[11px] text-slate-400 font-mono">Định mức ± chênh lệch VA88</p>
+            <p className="text-[11px] text-slate-400 font-mono">Sau ghi nhận giá vốn / chênh lệch settlement</p>
             <dl className="text-xs space-y-1 font-mono">
               <div className="flex justify-between">
-                <dt className="text-slate-400">Variance VA88</dt>
+                <dt className="text-slate-400">{hasStandardCogs ? 'Chênh lệch settlement (632)' : 'Giá vốn settlement (632)'}</dt>
                 <dd className={ma.settledVariance > 0 ? 'text-rose-300' : 'text-emerald-300'}>
                   {ma.settledVariance > 0 ? '+' : ''}
                   {formatVND(ma.settledVariance)}

@@ -1,0 +1,24 @@
+{
+  "version": "sava-sim-controls-1.0.0",
+  "label": "SIMULATED",
+  "namespace": "local-single-scenario-only",
+  "cutoff": "2026-09-15",
+  "openingQuantity": 0,
+  "moneyToleranceVND": 0,
+  "quantityTolerance": 1e-07,
+  "costBasis": "full-order production cost; not delivered COGS",
+  "businessAcceptance": "PENDING_HUMAN_SME",
+  "businessBlocks": {
+    "C02": "BLOCKED_RESERVATION_MAPPING",
+    "C04": "BLOCKED_CO_COST_BASIS",
+    "C05": "BLOCKED_RECEIVER_ELIGIBLE_VARIANCE",
+    "C07": "BLOCKED_SAP_VARIANCE_CATEGORIES"
+  },
+  "limits": [
+    "Generated S3 CLEAN only; no real SAP intake",
+    "Aggregate unique component material/UoM is diagnostic, not reservation matching",
+    "SUP01 ties signed collector settlements to GL, not eligible variance to receiver",
+    "Cost-element deltas are arithmetic, not price/usage root cause",
+    "No authentication; explanation/review request in RAM is not reviewer approval"
+  ]
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "check": "lint",
+    "exitCode": 0,
+    "log": "lint.log"
+  },
+  {
+    "check": "test:s4",
+    "exitCode": 0,
+    "log": "test-s4.log"
+  },
+  {
+    "check": "test:s3",
+    "exitCode": 0,
+    "log": "test-s3.log"
+  },
+  {
+    "check": "test:ui-finance",
+    "exitCode": 0,
+    "log": "test-ui-finance.log"
+  },
+  {
+    "check": "test:parity",
+    "exitCode": 0,
+    "log": "test-parity.log"
+  },
+  {
+    "check": "test:a0",
+    "exitCode": 0,
+    "log": "test-a0.log"
+  },
+  {
+    "check": "test:reports",
+    "exitCode": 0,
+    "log": "test-reports.log"
+  },
+  {
+    "check": "build",
+    "exitCode": 0,
+    "log": "build.log"
+  },
+  {
+    "check": "test:start",
+    "exitCode": 0,
+    "log": "test-start.log"
+  }
+]

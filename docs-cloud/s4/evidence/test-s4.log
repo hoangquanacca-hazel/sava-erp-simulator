@@ -1,0 +1,5 @@
+
+> react-example@0.0.0 test:s4
+> tsx scripts/s4-controls.ts
+
+PASS S4: 54×7 simulation tieouts; unchanged WIP oracle; orphan/duplicate/mixed/null/NaN/lineage/amount/quantity/hour mutations rejected; business gaps BLOCKED; explanation cannot approve; isolated hash-chain exports.

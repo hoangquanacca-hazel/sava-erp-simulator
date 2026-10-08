@@ -18,7 +18,8 @@
     "test:security": "node scripts/scan-secrets.mjs",
     "test:start": "node scripts/production-smoke.mjs",
     "test:ui-finance": "tsx scripts/ui-finance-regression.tsx",
-    "test:s3": "tsx scripts/s3-adapters.ts"
+    "test:s3": "tsx scripts/s3-adapters.ts",
+    "test:s4": "tsx scripts/s4-controls.ts"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",

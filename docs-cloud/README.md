@@ -38,3 +38,8 @@ Cập nhật sau sửa: code71cd3f8 đã sửa4lỗi và regression54ca đạt. 
 ## Trạng thái mới nhất
 
 S3 đã triển khai (`3eb5bd1`), UI sửa bổ sung (`cbfa51a`); [QA browser cuối](s3/browser-qa-final/QA_REPORT.md) đạt phạm vi Samsung/Canon và Data Lab11/11. [S3 và giới hạn nghiệm thu](s3/README.md) là nguồn trạng thái hiện hành; các dòng BLOCKED/pending browser trước đó là lịch sử. Downloads/SME/P0 gates vẫn chưa nghiệm thu. Tiếp S4 trước MART.
+
+
+## S4 — cập nhật hiện hành
+
+[S4 CLEAN controls và giải trình](s4/README.md):7 phép đối chiếu mô phỏng, evidence/metrics/diffs, local audit chain và review request.54×7 checks +22 probes độc lập đạt. C02/C04/C05/C07 vẫn có business blocks; C01/C03/C06 pendingSME. Không tự đóng P0 hoặc duyệt MART.

@@ -23,3 +23,8 @@ Thêmregistry11profiles, frameworkstrict/preserveRAW/qualitylog/typedCLEAN/linea
 ## Chốt S3 và QA
 
 Commit3eb5bd1 bổ sung S3; cbfa51a đồng bộ master editor với computed BOM/routing, rút gọn tỷ lệ, Collector nhận số đã post, billing UI theo giao thực tế. Kiểm kỹ thuật và focused QA độc lập đạt; giữ protected posting/oracle. Bằng chứng cuối s3/browser-qa-final; downloads và SME/gates chưa nghiệm thu.
+
+
+## S4 manufacturing controls
+
+Thêm7 CLEAN tieouts và source coordinates/orphans/metrics, SIM policy JSON, ControlsPanel, giải trình/review request/hashchain export. Sửa nhãn Non-valuated settlement thành giá vốn632.54×7 checks và22 independent probes đạt; real business gates giữblocked/pending. Phạm vi và evidence ở s4/README.md.

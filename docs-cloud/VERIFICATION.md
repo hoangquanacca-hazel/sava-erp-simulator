@@ -71,3 +71,8 @@ Kiểm kỹ thuật:594 adapter conversions và594 hash mutations;54 UI/oracle c
 - Billing narrative trên UI đã sửa theo giao thực tế; description gốc trong legacy CSV/PDF cần kiểm riêng. Bundle lớn ~1,48MB vẫn backlog hiệu năng.
 
 Tiếp theo S4: controls đối soát liên dataset CLEAN và exceptions C01–C07, giữ lineage và dữ liệu bị chặn; reviewer độc lập kiểm bằng chứng trước human gate. MART/CFO dashboard mở rộng sau lớp control. Không dùng hash thay chứng minh nguồn tin cậy, không gọi RAW trong RAM là WORM. Không merge/push/deploy.
+
+
+## S4 technical verification — 08/10/2026
+
+54×7 SIM controls; mutation/exception/audit isolation+hashchain+export checks PASS;22 independent probes PASS, [review](s4/independent-review/IMPLEMENTATION_REVIEW.md).9check logs ở s4/evidence/results.json tất cảexit0. [Phạm vi S4](s4/README.md); business blocks C02/C04/C05/C07 retained, còn pendingSME/golden/TT99/M01–M10. Browser/download status được bổ sung riêng khi hoàn tất, không selfaccept.

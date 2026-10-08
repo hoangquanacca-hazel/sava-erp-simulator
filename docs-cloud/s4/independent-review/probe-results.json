@@ -1,0 +1,93 @@
+{
+  "technicalReviewOnly": true,
+  "outcomes": [
+    {
+      "name": "baseline7technicalPass/businessNotAccepted",
+      "status": "PASS"
+    },
+    {
+      "name": "partialNonValuatedFavorable",
+      "status": "PASS"
+    },
+    {
+      "name": "missingReportBlocked",
+      "status": "PASS"
+    },
+    {
+      "name": "duplicateReportBlocked",
+      "status": "PASS"
+    },
+    {
+      "name": "mixedSnapshotBlocked",
+      "status": "PASS"
+    },
+    {
+      "name": "lineageMismatchBlocked",
+      "status": "PASS"
+    },
+    {
+      "name": "duplicateNaturalKeyBlocked",
+      "status": "PASS"
+    },
+    {
+      "name": "nonfiniteMoneyBlocked",
+      "status": "PASS"
+    },
+    {
+      "name": "currencyScopeBlocked",
+      "status": "PASS"
+    },
+    {
+      "name": "orphanMaterialDocumentDetected",
+      "status": "PASS"
+    },
+    {
+      "name": "unitMismatchDetected",
+      "status": "PASS"
+    },
+    {
+      "name": "signedQuantityMismatchDetected",
+      "status": "PASS"
+    },
+    {
+      "name": "KobCostMismatchDetected",
+      "status": "PASS"
+    },
+    {
+      "name": "settlementGLKeyMissingDetected",
+      "status": "PASS"
+    },
+    {
+      "name": "CKHeaderMismatchDetected",
+      "status": "PASS"
+    },
+    {
+      "name": "varianceResidualDetected",
+      "status": "PASS"
+    },
+    {
+      "name": "sameMaterialReservationAmbiguous",
+      "status": "PASS"
+    },
+    {
+      "name": "requestReviewWithoutExplanationRejected",
+      "status": "PASS"
+    },
+    {
+      "name": "reviewRequestDoesNotApproveFailingControl",
+      "status": "PASS"
+    },
+    {
+      "name": "appendEventAsyncSnapshotIsolation",
+      "status": "PASS"
+    },
+    {
+      "name": "tamperedPriorHashRejectedOnAppend",
+      "status": "PASS"
+    },
+    {
+      "name": "tamperedPriorHashRejectedOnExport",
+      "status": "PASS"
+    }
+  ]
+}

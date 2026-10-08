@@ -1,0 +1,632 @@
+[
+  {
+    "reportId": "FAGLL03",
+    "schemaVersion": "sava-clean-v1",
+    "adapterVersion": "1.0.0",
+    "sourceHash": "a506f599cc3b0225153ce2bc89708c1564a32a6b857932299da6662f895294f8",
+    "runId": "SIM-a506f599cc3b0225",
+    "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+    "rows": [
+      {
+        "values": {
+          "ledger": "0L",
+          "company_code": "1000",
+          "fiscal_year": "2026",
+          "accounting_document": "4930000001",
+          "line_item": "000001",
+          "posting_date": "2026-09-15",
+          "fiscal_period": "009",
+          "transaction": "MIGO 261E",
+          "gl_account": "621",
+          "debit_credit": "S",
+          "amount_lc": 8302500,
+          "local_currency": "VND",
+          "material": "PL-SEVT-CAM08",
+          "plant": "1100",
+          "sales_order": "SO-PIC-2026-49281",
+          "sales_order_item": "000010",
+          "customer": "Samsung Electronics Vietnam (SEVT)",
+          "profit_center": "PC-MTO",
+          "cost_center": "WC-INJ-01"
+        },
+        "lineage": {
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 4
+        }
+      },
+      {
+        "values": {
+          "ledger": "0L",
+          "company_code": "1000",
+          "fiscal_year": "2026",
+          "accounting_document": "4930000001",
+          "line_item": "000002",
+          "posting_date": "2026-09-15",
+          "fiscal_period": "009",
+          "transaction": "MIGO 261E",
+          "gl_account": "152",
+          "debit_credit": "H",
+          "amount_lc": -8302500,
+          "local_currency": "VND",
+          "material": "PL-SEVT-CAM08",
+          "plant": "1100",
+          "sales_order": "SO-PIC-2026-49281",
+          "sales_order_item": "000010",
+          "customer": "Samsung Electronics Vietnam (SEVT)",
+          "profit_center": "PC-MTO",
+          "cost_center": "WC-INJ-01"
+        },
+        "lineage": {
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 5
+        }
+      },
+      {
+        "values": {
+          "ledger": "0L",
+          "company_code": "1000",
+          "fiscal_year": "2026",
+          "accounting_document": "4930000002",
+          "line_item": "000001",
+          "posting_date": "2026-09-15",
+          "fiscal_period": "009",
+          "transaction": "CO11N",
+          "gl_account": "622",
+          "debit_credit": "S",
+          "amount_lc": 14361100,
+          "local_currency": "VND",
+          "material": "PL-SEVT-CAM08",
+          "plant": "1100",
+          "sales_order": "SO-PIC-2026-49281",
+          "sales_order_item": "000010",
+          "customer": "Samsung Electronics Vietnam (SEVT)",
+          "profit_center": "PC-MTO",
+          "cost_center": "WC-INJ-01"
+        },
+        "lineage": {
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 6
+        }
+      },
+      {
+        "values": {
+          "ledger": "0L",
+          "company_code": "1000",
+          "fiscal_year": "2026",
+          "accounting_document": "4930000002",
+          "line_item": "000002",
+          "posting_date": "2026-09-15",
+          "fiscal_period": "009",
+          "transaction": "CO11N",
+          "gl_account": "334",
+          "debit_credit": "H",
+          "amount_lc": -14361100,
+          "local_currency": "VND",
+          "material": "PL-SEVT-CAM08",
+          "plant": "1100",
+          "sales_order": "SO-PIC-2026-49281",
+          "sales_order_item": "000010",
+          "customer": "Samsung Electronics Vietnam (SEVT)",
+          "profit_center": "PC-MTO",
+          "cost_center": "WC-INJ-01"
+        },
+        "lineage": {
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 7
+        }
+      },
+      {
+        "values": {
+          "ledger": "0L",
+          "company_code": "1000",
+          "fiscal_year": "2026",
+          "accounting_document": "4930000003",
+          "line_item": "000001",
+          "posting_date": "2026-09-15",
+          "fiscal_period": "009",
+          "transaction": "CO11N",
+          "gl_account": "627",
+          "debit_credit": "S",
+          "amount_lc": 26116488,
+          "local_currency": "VND",
+          "material": "PL-SEVT-CAM08",
+          "plant": "1100",
+          "sales_order": "SO-PIC-2026-49281",
+          "sales_order_item": "000010",
+          "customer": "Samsung Electronics Vietnam (SEVT)",
+          "profit_center": "PC-MTO",
+          "cost_center": "WC-INJ-01"
+        },
+        "lineage": {
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 8
+        }
+      },
+      {
+        "values": {
+          "ledger": "0L",
+          "company_code": "1000",
+          "fiscal_year": "2026",
+          "accounting_document": "4930000003",
+          "line_item": "000002",
+          "posting_date": "2026-09-15",
+          "fiscal_period": "009",
+          "transaction": "CO11N",
+          "gl_account": "214",
+          "debit_credit": "H",
+          "amount_lc": -26116488,
+          "local_currency": "VND",
+          "material": "PL-SEVT-CAM08",
+          "plant": "1100",
+          "sales_order": "SO-PIC-2026-49281",
+          "sales_order_item": "000010",
+          "customer": "Samsung Electronics Vietnam (SEVT)",
+          "profit_center": "PC-MTO",
+          "cost_center": "WC-INJ-01"
+        },
+        "lineage": {
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 9
+        }
+      },
+      {
+        "values": {
+          "ledger": "0L",
+          "company_code": "1000",
+          "fiscal_year": "2026",
+          "accounting_document": "4930000004",
+          "line_item": "000001",
+          "posting_date": "2026-09-15",
+          "fiscal_period": "009",
+          "transaction": "CO01",
+          "gl_account": "154",
+          "debit_credit": "S",
+          "amount_lc": 8302500,
+          "local_currency": "VND",
+          "material": "PL-SEVT-CAM08",
+          "plant": "1100",
+          "sales_order": "SO-PIC-2026-49281",
+          "sales_order_item": "000010",
+          "customer": "Samsung Electronics Vietnam (SEVT)",
+          "profit_center": "PC-MTO",
+          "cost_center": "WC-INJ-01"
+        },
+        "lineage": {
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 10
+        }
+      },
+      {
+        "values": {
+          "ledger": "0L",
+          "company_code": "1000",
+          "fiscal_year": "2026",
+          "accounting_document": "4930000004",
+          "line_item": "000002",
+          "posting_date": "2026-09-15",
+          "fiscal_period": "009",
+          "transaction": "CO01",
+          "gl_account": "621",
+          "debit_credit": "H",
+          "amount_lc": -8302500,
+          "local_currency": "VND",
+          "material": "PL-SEVT-CAM08",
+          "plant": "1100",
+          "sales_order": "SO-PIC-2026-49281",
+          "sales_order_item": "000010",
+          "customer": "Samsung Electronics Vietnam (SEVT)",
+          "profit_center": "PC-MTO",
+          "cost_center": "WC-INJ-01"
+        },
+        "lineage": {
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 11
+        }
+      },
+      {
+        "values": {
+          "ledger": "0L",
+          "company_code": "1000",
+          "fiscal_year": "2026",
+          "accounting_document": "4930000005",
+          "line_item": "000001",
+          "posting_date": "2026-09-15",
+          "fiscal_period": "009",
+          "transaction": "CO01",
+          "gl_account": "154",
+          "debit_credit": "S",
+          "amount_lc": 14361100,
+          "local_currency": "VND",
+          "material": "PL-SEVT-CAM08",
+          "plant": "1100",
+          "sales_order": "SO-PIC-2026-49281",
+          "sales_order_item": "000010",
+          "customer": "Samsung Electronics Vietnam (SEVT)",
+          "profit_center": "PC-MTO",
+          "cost_center": "WC-INJ-01"
+        },
+        "lineage": {
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 12
+        }
+      },
+      {
+        "values": {
+          "ledger": "0L",
+          "company_code": "1000",
+          "fiscal_year": "2026",
+          "accounting_document": "4930000005",
+          "line_item": "000002",
+          "posting_date": "2026-09-15",
+          "fiscal_period": "009",
+          "transaction": "CO01",
+          "gl_account": "622",
+          "debit_credit": "H",
+          "amount_lc": -14361100,
+          "local_currency": "VND",
+          "material": "PL-SEVT-CAM08",
+          "plant": "1100",
+          "sales_order": "SO-PIC-2026-49281",
+          "sales_order_item": "000010",
+          "customer": "Samsung Electronics Vietnam (SEVT)",
+          "profit_center": "PC-MTO",
+          "cost_center": "WC-INJ-01"
+        },
+        "lineage": {
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 13
+        }
+      },
+      {
+        "values": {
+          "ledger": "0L",
+          "company_code": "1000",
+          "fiscal_year": "2026",
+          "accounting_document": "4930000006",
+          "line_item": "000001",
+          "posting_date": "2026-09-15",
+          "fiscal_period": "009",
+          "transaction": "CO01",
+          "gl_account": "154",
+          "debit_credit": "S",
+          "amount_lc": 26116488,
+          "local_currency": "VND",
+          "material": "PL-SEVT-CAM08",
+          "plant": "1100",
+          "sales_order": "SO-PIC-2026-49281",
+          "sales_order_item": "000010",
+          "customer": "Samsung Electronics Vietnam (SEVT)",
+          "profit_center": "PC-MTO",
+          "cost_center": "WC-INJ-01"
+        },
+        "lineage": {
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 14
+        }
+      },
+      {
+        "values": {
+          "ledger": "0L",
+          "company_code": "1000",
+          "fiscal_year": "2026",
+          "accounting_document": "4930000006",
+          "line_item": "000002",
+          "posting_date": "2026-09-15",
+          "fiscal_period": "009",
+          "transaction": "CO01",
+          "gl_account": "627",
+          "debit_credit": "H",
+          "amount_lc": -26116488,
+          "local_currency": "VND",
+          "material": "PL-SEVT-CAM08",
+          "plant": "1100",
+          "sales_order": "SO-PIC-2026-49281",
+          "sales_order_item": "000010",
+          "customer": "Samsung Electronics Vietnam (SEVT)",
+          "profit_center": "PC-MTO",
+          "cost_center": "WC-INJ-01"
+        },
+        "lineage": {
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 15
+        }
+      },
+      {
+        "values": {
+          "ledger": "0L",
+          "company_code": "1000",
+          "fiscal_year": "2026",
+          "accounting_document": "4960000001",
+          "line_item": "000001",
+          "posting_date": "2026-09-15",
+          "fiscal_period": "009",
+          "transaction": "VF01",
+          "gl_account": "131",
+          "debit_credit": "S",
+          "amount_lc": 210000000,
+          "local_currency": "VND",
+          "material": "PL-SEVT-CAM08",
+          "plant": "1100",
+          "sales_order": "SO-PIC-2026-49281",
+          "sales_order_item": "000010",
+          "customer": "Samsung Electronics Vietnam (SEVT)",
+          "profit_center": "PC-MTO",
+          "cost_center": "WC-INJ-01"
+        },
+        "lineage": {
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 16
+        }
+      },
+      {
+        "values": {
+          "ledger": "0L",
+          "company_code": "1000",
+          "fiscal_year": "2026",
+          "accounting_document": "4960000001",
+          "line_item": "000002",
+          "posting_date": "2026-09-15",
+          "fiscal_period": "009",
+          "transaction": "VF01",
+          "gl_account": "511",
+          "debit_credit": "H",
+          "amount_lc": -210000000,
+          "local_currency": "VND",
+          "material": "PL-SEVT-CAM08",
+          "plant": "1100",
+          "sales_order": "SO-PIC-2026-49281",
+          "sales_order_item": "000010",
+          "customer": "Samsung Electronics Vietnam (SEVT)",
+          "profit_center": "PC-MTO",
+          "cost_center": "WC-INJ-01"
+        },
+        "lineage": {
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 17
+        }
+      },
+      {
+        "values": {
+          "ledger": "0L",
+          "company_code": "1000",
+          "fiscal_year": "2026",
+          "accounting_document": "4960000002",
+          "line_item": "000001",
+          "posting_date": "2026-09-15",
+          "fiscal_period": "009",
+          "transaction": "VF01",
+          "gl_account": "131",
+          "debit_credit": "S",
+          "amount_lc": 21000000,
+          "local_currency": "VND",
+          "material": "PL-SEVT-CAM08",
+          "plant": "1100",
+          "sales_order": "SO-PIC-2026-49281",
+          "sales_order_item": "000010",
+          "customer": "Samsung Electronics Vietnam (SEVT)",
+          "profit_center": "PC-MTO",
+          "cost_center": "WC-INJ-01"
+        },
+        "lineage": {
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 18
+        }
+      },
+      {
+        "values": {
+          "ledger": "0L",
+          "company_code": "1000",
+          "fiscal_year": "2026",
+          "accounting_document": "4960000002",
+          "line_item": "000002",
+          "posting_date": "2026-09-15",
+          "fiscal_period": "009",
+          "transaction": "VF01",
+          "gl_account": "3331",
+          "debit_credit": "H",
+          "amount_lc": -21000000,
+          "local_currency": "VND",
+          "material": "PL-SEVT-CAM08",
+          "plant": "1100",
+          "sales_order": "SO-PIC-2026-49281",
+          "sales_order_item": "000010",
+          "customer": "Samsung Electronics Vietnam (SEVT)",
+          "profit_center": "PC-MTO",
+          "cost_center": "WC-INJ-01"
+        },
+        "lineage": {
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 19
+        }
+      },
+      {
+        "values": {
+          "ledger": "0L",
+          "company_code": "1000",
+          "fiscal_year": "2026",
+          "accounting_document": "4970000001",
+          "line_item": "000001",
+          "posting_date": "2026-09-15",
+          "fiscal_period": "009",
+          "transaction": "VA88 / KKA2",
+          "gl_account": "632",
+          "debit_credit": "S",
+          "amount_lc": 48780088,
+          "local_currency": "VND",
+          "material": "PL-SEVT-CAM08",
+          "plant": "1100",
+          "sales_order": "SO-PIC-2026-49281",
+          "sales_order_item": "000010",
+          "customer": "Samsung Electronics Vietnam (SEVT)",
+          "profit_center": "PC-MTO",
+          "cost_center": "WC-INJ-01"
+        },
+        "lineage": {
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 20
+        }
+      },
+      {
+        "values": {
+          "ledger": "0L",
+          "company_code": "1000",
+          "fiscal_year": "2026",
+          "accounting_document": "4970000001",
+          "line_item": "000002",
+          "posting_date": "2026-09-15",
+          "fiscal_period": "009",
+          "transaction": "VA88 / KKA2",
+          "gl_account": "154",
+          "debit_credit": "H",
+          "amount_lc": -48780088,
+          "local_currency": "VND",
+          "material": "PL-SEVT-CAM08",
+          "plant": "1100",
+          "sales_order": "SO-PIC-2026-49281",
+          "sales_order_item": "000010",
+          "customer": "Samsung Electronics Vietnam (SEVT)",
+          "profit_center": "PC-MTO",
+          "cost_center": "WC-INJ-01"
+        },
+        "lineage": {
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 21
+        }
+      },
+      {
+        "values": {
+          "ledger": "0L",
+          "company_code": "1000",
+          "fiscal_year": "2026",
+          "accounting_document": "4970000002",
+          "line_item": "000001",
+          "posting_date": "2026-09-15",
+          "fiscal_period": "009",
+          "transaction": "VA88",
+          "gl_account": "511",
+          "debit_credit": "S",
+          "amount_lc": 210000000,
+          "local_currency": "VND",
+          "material": "PL-SEVT-CAM08",
+          "plant": "1100",
+          "sales_order": "SO-PIC-2026-49281",
+          "sales_order_item": "000010",
+          "customer": "Samsung Electronics Vietnam (SEVT)",
+          "profit_center": "PC-MTO",
+          "cost_center": "WC-INJ-01"
+        },
+        "lineage": {
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 22
+        }
+      },
+      {
+        "values": {
+          "ledger": "0L",
+          "company_code": "1000",
+          "fiscal_year": "2026",
+          "accounting_document": "4970000002",
+          "line_item": "000002",
+          "posting_date": "2026-09-15",
+          "fiscal_period": "009",
+          "transaction": "VA88",
+          "gl_account": "911",
+          "debit_credit": "H",
+          "amount_lc": -210000000,
+          "local_currency": "VND",
+          "material": "PL-SEVT-CAM08",
+          "plant": "1100",
+          "sales_order": "SO-PIC-2026-49281",
+          "sales_order_item": "000010",
+          "customer": "Samsung Electronics Vietnam (SEVT)",
+          "profit_center": "PC-MTO",
+          "cost_center": "WC-INJ-01"
+        },
+        "lineage": {
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 23
+        }
+      },
+      {
+        "values": {
+          "ledger": "0L",
+          "company_code": "1000",
+          "fiscal_year": "2026",
+          "accounting_document": "4970000003",
+          "line_item": "000001",
+          "posting_date": "2026-09-15",
+          "fiscal_period": "009",
+          "transaction": "VA88",
+          "gl_account": "911",
+          "debit_credit": "S",
+          "amount_lc": 48780088,
+          "local_currency": "VND",
+          "material": "PL-SEVT-CAM08",
+          "plant": "1100",
+          "sales_order": "SO-PIC-2026-49281",
+          "sales_order_item": "000010",
+          "customer": "Samsung Electronics Vietnam (SEVT)",
+          "profit_center": "PC-MTO",
+          "cost_center": "WC-INJ-01"
+        },
+        "lineage": {
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 24
+        }
+      },
+      {
+        "values": {
+          "ledger": "0L",
+          "company_code": "1000",
+          "fiscal_year": "2026",
+          "accounting_document": "4970000003",
+          "line_item": "000002",
+          "posting_date": "2026-09-15",
+          "fiscal_period": "009",
+          "transaction": "VA88",
+          "gl_account": "632",
+          "debit_credit": "H",
+          "amount_lc": -48780088,
+          "local_currency": "VND",
+          "material": "PL-SEVT-CAM08",
+          "plant": "1100",
+          "sales_order": "SO-PIC-2026-49281",
+          "sales_order_item": "000010",
+          "customer": "Samsung Electronics Vietnam (SEVT)",
+          "profit_center": "PC-MTO",
+          "cost_center": "WC-INJ-01"
+        },
+        "lineage": {
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 25
+        }
+      }
+    ]
+  },
+  {
+    "reportId": "SUP01",
+    "schemaVersion": "sava-clean-v1",
+    "adapterVersion": "1.0.0",
+    "sourceHash": "a506f599cc3b0225153ce2bc89708c1564a32a6b857932299da6662f895294f8",
+    "runId": "SIM-a506f599cc3b0225",
+    "rawHash": "513a5a316c581754bcd36e1f48af43d52f412190e16a1a3cf14acdd926243221",
+    "rows": [
+      {
+        "values": {
+          "production_order": "1000001",
+          "accounting_document": "4970000001",
+          "line_item": "000002",
+          "transaction": "VA88 / KKA2",
+          "gl_account": "154",
+          "settled_cost": 48780088,
+          "local_currency": "VND",
+          "source_line": "S7-0001-002"
+        },
+        "lineage": {
+          "rawHash": "513a5a316c581754bcd36e1f48af43d52f412190e16a1a3cf14acdd926243221",
+          "rawLine": 4
+        }
+      }
+    ]
+  }
+]

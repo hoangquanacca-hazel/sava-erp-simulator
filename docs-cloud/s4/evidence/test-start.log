@@ -1,0 +1,5 @@
+
+> react-example@0.0.0 test:start
+> node scripts/production-smoke.mjs
+
+PASS production: ESM startup; health allowlist; index and built JS HTTP200; no AI request
