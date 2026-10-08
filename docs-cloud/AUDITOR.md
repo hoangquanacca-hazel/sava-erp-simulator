@@ -13,3 +13,5 @@ Không coi kiểm thử của tác giả là nghiệm thu. Các AUD dưới đâ
 
 - **AUD-021 — S3simprofile:** chỉ11generatedTSVlayouts. Strictversion/header/locale;1MiB/5000rows; RAM/privatebytes phù hợpdatasets nhỏ. Không WORM/realSAPintake/crossreportreconciliation. Unparsedcount=null. CLEANJSON giữleadingzeros; S4pending.
 - **AUD-022 — Independent review:** 3manifest/inputbugs được probe và sửa;8focusedindependentcases xác nhận. BrowserUAT cònblocked; khôngselfapproveSME/gates. Hash củamanifest không có signature/authenticity.
+
+- **AUD-023 — Final focused browser QA:** phiên mới kiểm cbfa51a đạt Samsung/Canon và DataLab11/11; thay BLOCKED lịch sử trong phạm vi đã chạy. Downloads UNVERIFIED; chưa human/SME acceptance. Margin VA88 label, production/delivery assumptions và legacy descriptions cần rà soát S4. Xem s3/browser-qa-final/QA_REPORT.md và diễn giải tác giả tại s3/README.md; giữ riêng quan sát QA với giả định mô hình.

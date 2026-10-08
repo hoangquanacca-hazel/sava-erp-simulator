@@ -33,3 +33,8 @@ Cập nhật sau sửa: code71cd3f8 đã sửa4lỗi và regression54ca đạt. 
 ## S3 được triển khai kỹ thuật
 
 [S3browserRAW→CLEAN](s3/README.md):11profiles, strictadapter, DQ/lineage/CLEANmanifest vàDataLab. Technicaltests +independentcodeprobes cóbằngchứng; browserUAT/SME vẫnpending. Tiếp S4controls trướcMART. Các dòng S3“chưa làm” trên đây là lịch sử củaSession1, được thay bởi mục cập nhật này.
+
+
+## Trạng thái mới nhất
+
+S3 đã triển khai (`3eb5bd1`), UI sửa bổ sung (`cbfa51a`); [QA browser cuối](s3/browser-qa-final/QA_REPORT.md) đạt phạm vi Samsung/Canon và Data Lab11/11. [S3 và giới hạn nghiệm thu](s3/README.md) là nguồn trạng thái hiện hành; các dòng BLOCKED/pending browser trước đó là lịch sử. Downloads/SME/P0 gates vẫn chưa nghiệm thu. Tiếp S4 trước MART.

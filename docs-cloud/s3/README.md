@@ -39,3 +39,21 @@ PhiênQA browser mới đã chạy2cases Samsung/Canon: DataLab11/11PASS, canoni
 QA còn ghi nhận mastergrid dùngDEFAULT_BOM/ROUTING không cùng nguồncalc, tỷ lệBOM hiển thị quá dài, CostCollector vẫn dùng fullorderP&L ở giao50%, billing narrative dùng fullquantity. Đã sửa ở presentation/SetupScreen/Collector/Ledger: editorfallback phản ánhcomputedBOM, routing dùngresolveRouting, tỷ lệ1decimal, Collector nhận revenue/COGS/GP từACDOCA nhưdashboard, diễn giảiUIbilling theoSLđãgiao. Original posting descriptions/metadata vàcalculator không bị sửa; CSV/PDF legacy cần audit riêng nếu dùngdescription gốc.
 
 MởStep3khi chưa thựcthiMRP thì nhãn“Chưa lập” đúng, không phải lỗi. Khi đãexecuteStep2nhãnMRP; trướcexecuteStep3không nói đãxuất. UI-finance54cases mởrộng kiểm renderededitor, masterlinecost/metadata, Collector↔Margin Analysis↔oracle và billingquantity. Không đổi đápánexpected.
+
+
+## Chốt S3 và QA mới — 08/10/2026
+
+Code S3: `3eb5bd1`; sửa bổ sung UI: `cbfa51a`. QA độc lập mở phiên trình duyệt mới đã kiểm bản UI phục vụ tại http://127.0.0.1:3017/: Samsung master/BOM và trạng thái MRP; Canon Non-valuated, variance -3,5%, giao 1.000/2.000. Phạm vi kiểm trực tiếp đạt: Collector/Margin/dashboard khớp, billing 1.000 cái, settlement và WIP154 mỗi phần25.614.019, variance có dấu -929.006; tạo11RAW, Data Lab11/11 đạt, typed CLEAN/leading zeros/lineage, đổi tham số vô hiệu hóa RAW+CLEAN. Webinar được khôi phục OFF, không tạo lead.
+
+[Báo cáo QA nguyên bản](browser-qa-final/QA_REPORT.md), [quan sát](browser-qa-final/qa-results.json), ảnh và SHA256 manifest nằm trong browser-qa-final/. Đây là focused browser QA, không phải54case thủ công hoặc nghiệm thu nghiệp vụ. Agent nhận commit từ tác giả; bằng chứng trình duyệt chứng minh UI được phục vụ, không tự chứng minh toàn bộ source-to-build provenance. Kết quả mới thay thế trạng thái browser BLOCKED lịch sử cho đúng phạm vi trên.
+
+Kiểm kỹ thuật:594 adapter conversions và594 hash mutations;54 UI/oracle cases;8 probes độc lập; lint/parity/S1/S2/A0/reports/build/start đềuexit0. Logs tại evidence/ và independent-review/. Download completion/content/hash vẫn UNVERIFIED. S3 hoàn thành kỹ thuật trong phạm vi simulator; S4/S5/S6, golden Mr Quân, SME/TT99/legal và P0-MFG M01–M10 chưa nghiệm thu.
+
+### Chênh lệch còn cần xử lý / quyết định tiếp
+
+- Nhãn Margin Analysis Non-valuated gọi toàn bộ COGS là “Variance VA88”: số tổng khớp nhưng ý nghĩa nhãn chưa được chấp nhận; rà soát trong S4 trước release.
+- TP còn0 sau PGI trong ca giao50%: mô hình hiện tại ghi101=1.000 và601=1.000, nên tồnFG0. Phần kế hoạch còn lại chưa có production/GR event, cònWIP. Đây là giả định cần SME xác nhận; không tự thêm1.000TP vào kho khi không có chứng từ.
+- Đổi giá giữ ledger đã post nhưng vô hiệu hóa report artefacts; cần thực thi lại kịch bản để tạo bộ số mới. Không sửa ngược chứng từ đã ghi.
+- Billing narrative trên UI đã sửa theo giao thực tế; description gốc trong legacy CSV/PDF cần kiểm riêng. Bundle lớn ~1,48MB vẫn backlog hiệu năng.
+
+Tiếp theo S4: controls đối soát liên dataset CLEAN và exceptions C01–C07, giữ lineage và dữ liệu bị chặn; reviewer độc lập kiểm bằng chứng trước human gate. MART/CFO dashboard mở rộng sau lớp control. Không dùng hash thay chứng minh nguồn tin cậy, không gọi RAW trong RAM là WORM. Không merge/push/deploy.

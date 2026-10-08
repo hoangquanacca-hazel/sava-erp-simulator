@@ -18,3 +18,8 @@ S3 adapters, S4 workflow controls, S5 mart/root-cause, S6 human acceptance chưa
 ## S3 RAW→CLEAN
 
 Thêmregistry11profiles, frameworkstrict/preserveRAW/qualitylog/typedCLEAN/lineage, JSONexports+cleanmanifest, DataLabUI vớipreview/download.594roundtripcases vànegativefixtures;3reviewfindings sửa,8independentprobes đạt. Không đổi calculator/oracle/generator. Scope/docs/limits ở s3/README.md.
+
+
+## Chốt S3 và QA
+
+Commit3eb5bd1 bổ sung S3; cbfa51a đồng bộ master editor với computed BOM/routing, rút gọn tỷ lệ, Collector nhận số đã post, billing UI theo giao thực tế. Kiểm kỹ thuật và focused QA độc lập đạt; giữ protected posting/oracle. Bằng chứng cuối s3/browser-qa-final; downloads và SME/gates chưa nghiệm thu.
