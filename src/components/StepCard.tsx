@@ -7,7 +7,7 @@ import {
   StepRuntimeState,
 } from '../types';
 import { formatVND, formatNumber } from '../utils/calculator';
-import { settlementView } from '../presentation/finance';
+import { journalDescription, settlementView } from '../presentation/finance';
 import { splitCogsByCk11n } from '../utils/acdoca';
 import { BOMVisualizer } from './BOMVisualizer';
 import {
@@ -159,7 +159,7 @@ export const StepCard: React.FC<StepCardProps> = ({
 
       {/* Body: Action details & Special SAP / TT200 modules */}
       <div className="p-4 sm:p-5 space-y-4 text-xs sm:text-sm">
-        <p className="text-slate-300 leading-relaxed">{step.id===7 ? 'Quyết toán phần doanh thu và giá vốn đã ghi nhận; chi phí phần chưa giao tiếp tục theo dõi trên TK 154 trong mô hình mô phỏng.' : step.detailedAction}</p>
+        <p className="text-slate-300 leading-relaxed">{step.id===6 ? `Lập hóa đơn cho phần đã giao, theo số lượng và số tiền của chứng từ được ghi nhận trong mô phỏng.` : step.id===7 ? 'Quyết toán phần doanh thu và giá vốn đã ghi nhận; chi phí phần chưa giao tiếp tục theo dõi trên TK 154 trong mô hình mô phỏng.' : step.detailedAction}</p>
 
         {/* Special Learning Point Box */}
         <div className="p-3 rounded-lg bg-slate-950/80 border border-slate-800 flex items-start gap-2.5 text-xs text-slate-300">
@@ -776,7 +776,7 @@ export const StepCard: React.FC<StepCardProps> = ({
                     <tr key={e.id} className="hover:bg-slate-800/30 transition-colors">
                       <td className="py-2 px-3 text-cyan-400 font-semibold">{e.voucherNo}</td>
                       <td className="py-2 px-3 text-slate-400 font-sans text-[11px]">{e.tCode}</td>
-                      <td className="py-2 px-3 text-slate-200 font-sans max-w-xs">{e.description}</td>
+                      <td className="py-2 px-3 text-slate-200 font-sans max-w-xs">{journalDescription(e,params)}</td>
                       <td className="py-2 px-3 text-center">
                         <span className="px-1.5 py-0.5 rounded bg-cyan-950 text-cyan-300 font-bold border border-cyan-800 text-[11px]">
                           {e.debitAccount}

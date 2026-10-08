@@ -1,4 +1,5 @@
-import type { AcdocaLine, BOMComponentNode, MTOComputed, MTOParameters } from '../types';
+import { VARIANT_COLORS, VARIANT_PACKAGINGS } from '../types';
+import type { AcdocaLine, BOMComponentNode, MTOComputed, MTOParameters, RawMaterialBOMItem, SalesOrderCostCardState, JournalEntry } from '../types';
 import { roundShare, wipStatusOf } from '../features/wip';
 
 export interface PlanItem {name:string;code:string;qty:number;uom:string;cost:number;account:string;}
@@ -65,4 +66,33 @@ export function dashboardView(p:MTOParameters,c:MTOComputed,t:AcdocaLine[]) {
   ];
   return {revenue,cogs,plannedRevenue,plannedCogs,plannedProfit:plannedRevenue-plannedCogs,
     grossProfit:revenue-cogs,hasCompletedStep7:t.some(l=>l.stepId===7),recognized,breakdown};
+}
+
+
+/** Master editor fallback describes the SAME inputs currently used by computeMTO. */
+export function displayedBomInputs(p:MTOParameters,c:MTOComputed):RawMaterialBOMItem[]{
+  if(p.bomItems?.length)return p.bomItems;
+  const color=p.strategy==='Strategy 25'?VARIANT_COLORS.find(v=>v.id===p.variantColorId):undefined;
+  const packaging=p.strategy==='Strategy 25'?VARIANT_PACKAGINGS.find(v=>v.id===p.variantPackagingId):undefined;
+  return (c.bomItemBreakdowns??[]).map((b,index)=>({
+    id:`computed-bom-${index}`,itemCode:b.itemCode,name:b.name,materialType:b.itemCode.startsWith('VERP')?'VERP':'ROH',
+    qtyPer1000:index===0?p.materialNormKgPer1000:b.itemCode==='ROH-MB-COLOR'?Number((p.materialNormKgPer1000*0.02).toFixed(2)):1000,
+    scrapRatePercent:index===0?2.5:1,
+    unitPrice:index===0?c.effectiveResinPricePerKg:b.itemCode==='ROH-MB-COLOR'?(color?.resinCostAddonPerKg??0)*50:packaging?.unitCostAddon??0,uom:b.uom
+  }));
+}
+export function postedCostCard(base:SalesOrderCostCardState,p:MTOParameters,c:MTOComputed,t:AcdocaLine[]):SalesOrderCostCardState{
+  const view=dashboardView(p,c,t);
+  const debit=(account:string)=>t.filter(l=>l.stepId===3&&l.glAccount===account).reduce((s,l)=>s+l.drAmount,0);
+  const material=debit('621'),labor=debit('622'),overhead=debit('627');
+  return {...base,accumulatedMaterialCost:material,accumulatedLaborCost:labor,accumulatedMachineCost:overhead,
+    totalAccumulatedCost:material+labor+overhead+base.qmReworkCost+base.qmScrapCost,
+    recognizedRevenue:view.revenue,recognizedCOGS:view.cogs,actualGrossProfit:view.grossProfit};
+}
+/** Preserve original posting metadata; only the screen description reflects delivery scope. */
+export function journalDescription(entry:JournalEntry,p?:MTOParameters){
+  if(p&&entry.stepIndex===6&&entry.tCode==='VF01'&&entry.creditAccount==='511'){
+    const w=wipStatusOf(p);return `Doanh thu phần đã giao ${roundShare(w.ordered,w.ratio).toLocaleString('vi-VN')} cái ${p.componentCode} cho ${p.customer}`;
+  }
+  return entry.description;
 }

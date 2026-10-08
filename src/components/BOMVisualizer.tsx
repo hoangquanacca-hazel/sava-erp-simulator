@@ -107,7 +107,7 @@ export const BOMVisualizer: React.FC<BOMVisualizerProps> = ({
     return Object.fromEntries(planGroups(params,computed).map(g=>{
       const style=styles[g.id];
       return [g.id,{category:g.id,name:g.name,sapCostElement:`CK11N / ${g.account}`,tt200Account:`TK ${g.account}`,
-        totalCost:g.cost,unitCost:Math.round(g.cost/qty),sharePercent:g.cost/total*100,
+        totalCost:g.cost,unitCost:Math.round(g.cost/qty),sharePercent:Number((g.cost/total*100).toFixed(1)),
         colorClass:style.text,borderClass:style.border,bgClass:style.bg,icon:style.icon,
         description:'Chi tiết từ cùng nguồn kế hoạch CK11N.',
         items:g.items.map(i=>({name:i.name,code:i.code,spec:`${formatNumber(i.qty,2)} ${i.uom}`,cost:i.cost,unitCost:Math.round(i.cost/qty),share:i.cost/total*100}))}];
@@ -250,7 +250,7 @@ export const BOMVisualizer: React.FC<BOMVisualizerProps> = ({
                 {formatVND(node.unitCost)}/{node.unitOfMeasure}
               </span>
               <span className="text-[10px] font-mono font-bold px-1.5 py-0.2 rounded bg-slate-800 text-cyan-400 border border-slate-700">
-                {node.costSharePercent}%
+                {node.costSharePercent.toFixed(1)}%
               </span>
             </div>
           </div>
@@ -498,7 +498,7 @@ export const BOMVisualizer: React.FC<BOMVisualizerProps> = ({
                   {selectedNode.materialType} · Item #{selectedNode.itemNumber}
                 </span>
                 <span className="text-xs font-mono font-bold text-cyan-400">
-                  {selectedNode.costSharePercent}% tổng giá thành
+                  {selectedNode.costSharePercent.toFixed(1)}% tổng giá thành
                 </span>
               </div>
               <h4 className="text-base font-bold text-white font-mono tracking-tight">

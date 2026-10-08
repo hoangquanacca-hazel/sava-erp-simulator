@@ -30,3 +30,12 @@ Live browserUAT vẫnBLOCKED do provider của agentkhông khả dụng. Không 
 ## Bước tiếp S4
 
 Đối soát CLEAN giữa11datasets và exceptions C01–C07; orphanjoins/multi-reportselection/totals theoUoM; giải trình/reviewerworkflow trongbrowser. Root-cause/MART/S5 sau S4. ZFIR009A/ZFIR159 vẫn BLOCKED_NO_SAMPLE. Không overwriteRAW, không merge/deploytrongphiênnày.
+
+
+## UAT mới và sửa bổ sung sau commit3eb5bd1
+
+PhiênQA browser mới đã chạy2cases Samsung/Canon: DataLab11/11PASS, canonicalpreview/lineage, kế thừa settlement/WIP/dashboard đúng, staleRAW+CLEANẩn khi đổi dữliệu. Bằng chứng trước sửa bổ sung ở browser-qa/REPORT.md; downloadedcontent/hash vẫnUNVERIFIED(timeout).
+
+QA còn ghi nhận mastergrid dùngDEFAULT_BOM/ROUTING không cùng nguồncalc, tỷ lệBOM hiển thị quá dài, CostCollector vẫn dùng fullorderP&L ở giao50%, billing narrative dùng fullquantity. Đã sửa ở presentation/SetupScreen/Collector/Ledger: editorfallback phản ánhcomputedBOM, routing dùngresolveRouting, tỷ lệ1decimal, Collector nhận revenue/COGS/GP từACDOCA nhưdashboard, diễn giảiUIbilling theoSLđãgiao. Original posting descriptions/metadata vàcalculator không bị sửa; CSV/PDF legacy cần audit riêng nếu dùngdescription gốc.
+
+MởStep3khi chưa thựcthiMRP thì nhãn“Chưa lập” đúng, không phải lỗi. Khi đãexecuteStep2nhãnMRP; trướcexecuteStep3không nói đãxuất. UI-finance54cases mởrộng kiểm renderededitor, masterlinecost/metadata, Collector↔Margin Analysis↔oracle và billingquantity. Không đổi đápánexpected.

@@ -31,6 +31,7 @@ import { Header } from './components/Header';
 import { CommandBar } from './components/CommandBar';
 import { SetupScreen } from './components/SetupScreen';
 import { StepCard } from './components/StepCard';
+import { postedCostCard } from './presentation/finance';
 import { SapReportsPanel } from './components/SapReportsPanel';
 import { LedgerPanel } from './components/LedgerPanel';
 import { SalesOrderCard } from './components/SalesOrderCard';
@@ -213,14 +214,15 @@ export default function App() {
   const salesOrderCostCard = useMemo(() => {
     const executedSteps = [1, 2, 3, 4, 5, 6, 7].filter((id) => stepStates[id]?.isExecuted);
     const highestStep = executedSteps.length > 0 ? Math.max(...executedSteps) : 0;
-    return computeSalesOrderCostCard(
+    const base=computeSalesOrderCostCard(
       highestStep,
       params,
       computed,
       stepStates[4].qmReworkCost || 0,
       stepStates[4].qmScrapCost || 0
     );
-  }, [stepStates, params, computed]);
+    return postedCostCard(base,params,computed,ACDOCA_TABLE);
+  }, [stepStates, params, computed, ACDOCA_TABLE]);
 
   // Reset function
   const handleReset = () => {

@@ -9,24 +9,24 @@ rendering chunks...
 computing gzip size...
 dist/index.html                                    2.58 kB │ gzip:   1.09 kB
 dist/assets/index-Dg6iqaYx.css                   104.37 kB │ gzip:  15.05 kB
-dist/assets/MdgGatePage-BQoN1-eT.js                1.32 kB │ gzip:   0.75 kB
-dist/assets/variance-cXQyEK5z.js                   1.51 kB │ gzip:   0.81 kB
-dist/assets/MaterialLedgerPage-DAwDA9Av.js         2.04 kB │ gzip:   1.03 kB
-dist/assets/SodAuditPage-Cm7rRoY4.js               2.78 kB │ gzip:   1.30 kB
-dist/assets/IntercompanyPage-BEX1ZPkf.js           3.02 kB │ gzip:   1.33 kB
-dist/assets/WipSettlementPage-mFNla-xJ.js          3.17 kB │ gzip:   1.31 kB
-dist/assets/VarianceWaterfallPage-Bmay9agS.js      3.96 kB │ gzip:   1.83 kB
-dist/assets/GrirPage-imGpHGb8.js                   4.37 kB │ gzip:   1.59 kB
-dist/assets/CloseCockpitPage-CmdKlrNB.js           5.82 kB │ gzip:   2.34 kB
-dist/assets/index-BO8jrsoa.js                  1,499.95 kB │ gzip: 442.98 kB
+dist/assets/MdgGatePage-B6nUK8Db.js                1.32 kB │ gzip:   0.75 kB
+dist/assets/variance-D0ZnEKkx.js                   1.51 kB │ gzip:   0.82 kB
+dist/assets/MaterialLedgerPage-CDVjcfIT.js         2.04 kB │ gzip:   1.03 kB
+dist/assets/SodAuditPage-Cf1px-cJ.js               2.78 kB │ gzip:   1.30 kB
+dist/assets/IntercompanyPage-Dp0R0q3u.js           3.02 kB │ gzip:   1.33 kB
+dist/assets/WipSettlementPage-CRe6BOuI.js          3.17 kB │ gzip:   1.31 kB
+dist/assets/VarianceWaterfallPage-Ds_FKHYt.js      3.96 kB │ gzip:   1.83 kB
+dist/assets/GrirPage-cASw6xZi.js                   4.37 kB │ gzip:   1.59 kB
+dist/assets/CloseCockpitPage-DM2uShaf.js           5.82 kB │ gzip:   2.34 kB
+dist/assets/index-OebH--kS.js                  1,500.63 kB │ gzip: 443.35 kB
 
 (!) Some chunks are larger than 500 kB after minification. Consider:
 - Using dynamic import() to code-split the application
 - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
 - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
-✓ built in 12.95s
+✓ built in 11.24s
 
   dist\server.mjs      23.4kb
   dist\server.mjs.map  28.5kb
 
-Done in 11ms
+Done in 8ms

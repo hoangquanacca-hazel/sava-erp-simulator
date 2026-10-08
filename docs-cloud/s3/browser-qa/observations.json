@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-08",
+  "url": "http://127.0.0.1:3017/",
+  "claimedCommit": "3eb5bd1",
+  "commitBinding": "Parent supplied; no independent server-source binding",
+  "scope": "Two browser cases only; not54matrix/human/SME/legal acceptance",
+  "browser": "Fresh own hidden IABtab1; reload performed",
+  "checks": [
+    {
+      "name": "Samsung material total",
+      "status": "PASS",
+      "observed": 8302500
+    },
+    {
+      "name": "Samsung old8100000absence",
+      "status": "PASS",
+      "observed": "Not present in observed BOM panels"
+    },
+    {
+      "name": "Mastergrid and canonicaltree identities",
+      "status": "FAIL",
+      "observed": "Samsung mastergridChiMeiABS/masterbatch/tray; treeSabicCycoloy genericmaterial. Canon mastergrid remains sameChiMei rows while canonicaltreePA66GF30; no name consistency acceptance."
+    },
+    {
+      "name": "Initialstep3 pendingMRPlabel",
+      "status": "FAIL",
+      "observed": "AfterCO01navigationbeforeexecutionstockpanelChưa lập/Chưa tạo PR mua hàng, notMRP; executiondisabled."
+    },
+    {
+      "name": "BOM percentage formatting",
+      "status": "FAIL",
+      "observed": "17.020264498087826/29.44049629430763/53.53923920760455 Samsung; Canon31.182862541100718/23.735049038306673/45.082088420592605"
+    },
+    {
+      "name": "Samsung 11RAW/DataLab",
+      "status": "PASS",
+      "observed": "11/11Đạt; FAGLL03numericamount8302500, stringline_item000001, rawHash546fb7cecc21da97de7e6c510ce51ac2aff0f26a841b9a6b3a50d1295063a200/rawLine4..6"
+    },
+    {
+      "name": "Scenario change invalidation",
+      "status": "PASS",
+      "observed": "Samsung RAW/CLEAN lists disappeared when Canon selected; generatebuttondisabled beforeexecution"
+    },
+    {
+      "name": "Canon partialdelivery narrative",
+      "status": "PASS",
+      "observed": "-3.5%,1000/2000; settled25614019 andWIP25614019"
+    },
+    {
+      "name": "Canon OrderProfitDashboard",
+      "status": "PASS",
+      "observed": "COGS25614019; GP89385981; revenue115000000; signedvariance-929006/-3.6%;32.3+24.6+46.7-3.6=100.0"
+    },
+    {
+      "name": "Canon collector versus ledger",
+      "status": "FAIL",
+      "observed": "Collector revenue230000000,COGS51228038,GP178771962; marginpanelGP89385981 and Thẻ đơn hàng178771962✗lệch; dashboard correct. Billingnarrative says2000units butamount115000000."
+    },
+    {
+      "name": "Canon 11RAW/DataLab",
+      "status": "PASS",
+      "observed": "11/11Đạt; KKS1CLEANplanned53086050 actual51228038 variance-1858012 settled25614019 wip25614019; rawHash3e3c73a652eeaaed249f8d457f19e8838b8afe2e372c60cbd5f760800eaa6c5a/rawLine4"
+    },
+    {
+      "name": "Parameter invalidation",
+      "status": "PASS",
+      "observed": "Change-3.5to-3.4 removed allRAW/CLEANbuttons(count0/0); priorledgerremains renderedwhileparameteractualupdates"
+    },
+    {
+      "name": "Downloadedcontent/hash",
+      "status": "UNVERIFIED",
+      "observed": "waitForEvent(download) registeredbeforefirstTảiCLEANclick; Timedoutafter10000ms waitingfordownload. No localfileclaimed."
+    },
+    {
+      "name": "Live restore",
+      "status": "PASS",
+      "observed": "InitiallyOFF; enabledfortests; restoredOFFverifiedĐangTắt; leadcountremains0."
+    }
+  ],
+  "notRun": [
+    "AI",
+    "uploads",
+    "lead/contact/accountidentities",
+    "consent",
+    "deploy",
+    "repoedits",
+    "54matrix",
+    "SME/legalacceptance"
+  ]
+}
