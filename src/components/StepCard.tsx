@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import {
+  AcdocaLine,
   MTOParameters,
   MTOComputed,
   StepDefinition,
   StepRuntimeState,
 } from '../types';
 import { formatVND, formatNumber } from '../utils/calculator';
+import { settlementView } from '../presentation/finance';
 import { splitCogsByCk11n } from '../utils/acdoca';
 import { BOMVisualizer } from './BOMVisualizer';
 import {
@@ -48,6 +50,7 @@ interface StepCardProps {
   onChangeVariancePercent?: (percent: number) => void;
   onExplainStep: (step: StepDefinition) => void;
   canExecute: boolean;
+  acdocaTable: AcdocaLine[];
 }
 
 export const StepCard: React.FC<StepCardProps> = ({
@@ -63,7 +66,9 @@ export const StepCard: React.FC<StepCardProps> = ({
   onChangeVariancePercent,
   onExplainStep,
   canExecute,
+  acdocaTable,
 }) => {
+  const settlement=settlementView(params,computed,acdocaTable,isExecuted);
   const [selectedMethod, setSelectedMethod] = useState<'rework' | 'scrap' | 'concession'>('rework');
   const defaultReworkCost = Math.round(computed.plannedCost * 0.02); // 2% chi phí sửa chữa
   const defaultScrapCost = Math.round(computed.plannedCost * 0.05); // 5% tổn thất phế phẩm
@@ -154,14 +159,14 @@ export const StepCard: React.FC<StepCardProps> = ({
 
       {/* Body: Action details & Special SAP / TT200 modules */}
       <div className="p-4 sm:p-5 space-y-4 text-xs sm:text-sm">
-        <p className="text-slate-300 leading-relaxed">{step.detailedAction}</p>
+        <p className="text-slate-300 leading-relaxed">{step.id===7 ? 'Quyết toán phần doanh thu và giá vốn đã ghi nhận; chi phí phần chưa giao tiếp tục theo dõi trên TK 154 trong mô hình mô phỏng.' : step.detailedAction}</p>
 
         {/* Special Learning Point Box */}
         <div className="p-3 rounded-lg bg-slate-950/80 border border-slate-800 flex items-start gap-2.5 text-xs text-slate-300">
           <Info className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
           <div>
             <strong className="text-cyan-300 block mb-0.5">Bản chất hạch toán kế toán & SAP:</strong>
-            <p className="leading-relaxed">{step.learningPoint}</p>
+            <p className="leading-relaxed">{step.id===7 ? `Phần chi phí quyết toán qua TK 154: ${formatVND(settlement.settled)}. Số dư TK 154 sau quyết toán: ${formatVND(settlement.wip)}. Kết chuyển 511 và 632 đã ghi nhận vào 911; không giả định toàn bộ đơn hàng đã giao.` : step.learningPoint}</p>
           </div>
         </div>
 
@@ -641,11 +646,12 @@ export const StepCard: React.FC<StepCardProps> = ({
                 <Info className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                 <p className="text-amber-200">
                   ⚡ <strong>Quyết toán Non-valuated Stock:</strong> Tại bước này hệ thống hạch toán kết chuyển chi phí từ Sales Order{' '}
-                  <span className="font-mono font-bold text-white">Nợ TK 632 / Có TK 154</span> (tổng chi phí thực tế{' '}
-                  <span className="font-mono font-bold text-cyan-300">
-                    {formatVND(computed.plannedCost + computed.varianceAmount)}
-                  </span>
-                  ) để tất toán tài khoản 154 về 0, đồng thời kết chuyển xác định kết quả kinh doanh sang TK 911!
+                  <span className="font-mono font-bold text-white">Nợ TK 632 / Có TK 154</span> cho phần đã giao{' '}
+                  <span className="font-mono font-bold text-rose-300">{formatVND(settlement.settled)}</span>
+                  . Dở dang còn lại trên TK 154:{' '}
+                  <span className="font-mono font-bold">{formatVND(settlement.wip)}</span>.
+                  {settlement.ratio < 1 ? ' Chi phí phần chưa giao tiếp tục theo dõi ở WIP.' : ' Đơn hàng đã giao đủ.'}
+                  {' '}Sau đó kết chuyển phần doanh thu và giá vốn đã ghi nhận vào TK 911.
                 </p>
               </div>
             ) : (
@@ -655,16 +661,16 @@ export const StepCard: React.FC<StepCardProps> = ({
                   ⚡ <strong>Quyết toán Valuated Stock:</strong> Bút toán xử lý chênh lệch giá thành:{' '}
                   {computed.varianceAmount > 0 ? (
                     <span className="text-rose-300 font-semibold">
-                      Nợ 632 / Có 154: {formatVND(computed.varianceAmount)} (Chênh lệch bất lợi - chi phí vượt định mức)
+                      Nợ 632 / Có 154: {formatVND(settlement.variance)} (Chênh lệch bất lợi - chi phí vượt định mức)
                     </span>
                   ) : computed.varianceAmount < 0 ? (
                     <span className="text-emerald-300 font-semibold">
-                      Nợ 154 / Có 632: {formatVND(Math.abs(computed.varianceAmount))} (Chênh lệch thuận lợi - tiết kiệm chi phí)
+                      Nợ 154 / Có 632: {formatVND(Math.abs(settlement.variance))} (Chênh lệch thuận lợi - tiết kiệm chi phí)
                     </span>
                   ) : (
                     <span className="text-slate-400 font-semibold">Không phát sinh chênh lệch định mức.</span>
                   )}
-                  . Sau đó kết chuyển 511 và 632 vào 911 để xác định lãi gộp thực tế.
+                  . Chênh lệch chỉ tính cho phần đã giao; WIP còn lại: {formatVND(settlement.wip)}. Sau đó kết chuyển 511 và 632 vào 911 để xác định lãi gộp thực tế.
                 </p>
               </div>
             )}
@@ -793,10 +799,10 @@ export const StepCard: React.FC<StepCardProps> = ({
         )}
 
         {/* If no financial entries for this step (e.g. Step 1 and 2) */}
-        {isExecuted && stepState.entries.length === 0 && (
+        {isExecuted && stepState.entries.length === 0 && !acdocaTable.some(l=>l.stepId===step.id) && (
           <div className="p-3 rounded-lg bg-slate-950/40 border border-slate-800/80 text-xs text-slate-400 italic">
             ℹ️ Bước này chỉ ghi nhận chứng từ logistics/kế hoạch và đối tượng chi phí trong SAP (SD/CO/PP/MM),
-            chưa phát sinh bút toán tài chính trên Sổ Cái (FI) theo chuẩn Thông tư 200.
+            chưa phát sinh bút toán tài chính trên Sổ Cái (FI) theo cấu hình mô phỏng TT99.
           </div>
         )}
       </div>

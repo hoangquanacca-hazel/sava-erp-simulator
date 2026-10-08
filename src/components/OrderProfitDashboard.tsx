@@ -25,12 +25,14 @@ import {
   Info,
 } from 'lucide-react';
 import {
+  AcdocaLine,
   MTOParameters,
   MTOComputed,
   SalesOrderCostCardState,
   JournalEntry,
   UIMode,
 } from '../types';
+import { dashboardView } from '../presentation/finance';
 import { formatVND, formatNumber } from '../utils/calculator';
 
 export interface OrderProfitDashboardProps {
@@ -38,6 +40,7 @@ export interface OrderProfitDashboardProps {
   computed: MTOComputed;
   cardState: SalesOrderCostCardState;
   entries: JournalEntry[];
+  acdocaTable: AcdocaLine[];
   currentStepId: number;
   uiMode?: UIMode;
 }
@@ -47,49 +50,18 @@ export const OrderProfitDashboard: React.FC<OrderProfitDashboardProps> = ({
   computed,
   cardState,
   entries,
+  acdocaTable,
   currentStepId,
   uiMode = 'fiori',
 }) => {
   const isClassic = uiMode === 'classic';
 
-  // Extract posted financial transactions from Journal Entries
-  const { postedRevenue511, postedCOGS632, hasCompletedStep7 } = useMemo(() => {
-    const rev511 = entries
-      .filter((e) => e.creditAccount.startsWith('511'))
-      .reduce((acc, curr) => acc + curr.amount, 0);
-
-    const cogs632 = entries
-      .filter((e) => e.debitAccount.startsWith('632'))
-      .reduce((acc, curr) => acc + curr.amount, 0);
-
-    const step7Done = entries.some((e) => e.stepIndex === 7);
-
-    return {
-      postedRevenue511: rev511,
-      postedCOGS632: cogs632,
-      hasCompletedStep7: step7Done,
-    };
-  }, [entries]);
-
-  // Actual vs Planned Calculation
-  // If step 6 has posted revenue, use it; otherwise show planned revenue as preview
-  const actualRevenue = postedRevenue511 > 0 ? postedRevenue511 : computed.totalRevenue;
-  // If step 7 or step 5 has posted COGS, use it; otherwise use accumulated actual production cost
-  const actualCOGS =
-    postedCOGS632 > 0
-      ? postedCOGS632
-      : cardState.totalAccumulatedCost > 0
-      ? cardState.totalAccumulatedCost
-      : computed.plannedCost + (computed.actualCostVariance || 0);
-
-  const actualGrossProfit = actualRevenue - actualCOGS;
-  const actualMarginPercent =
-    actualRevenue > 0 ? (actualGrossProfit / actualRevenue) * 100 : 0;
-
-  const plannedRevenue = computed.totalRevenue;
-  const plannedCOGS = computed.plannedCost;
-  const plannedGrossProfit = computed.grossProfit;
-  const plannedMarginPercent = computed.grossMarginPercent;
+  const view=useMemo(()=>dashboardView(params,computed,acdocaTable),[params,computed,acdocaTable]);
+  const postedRevenue511=view.revenue, postedCOGS632=view.cogs, hasCompletedStep7=view.hasCompletedStep7;
+  const actualRevenue=view.revenue, actualCOGS=view.cogs, actualGrossProfit=view.grossProfit;
+  const actualMarginPercent=actualRevenue>0?actualGrossProfit/actualRevenue*100:0;
+  const plannedRevenue=view.plannedRevenue,plannedCOGS=view.plannedCogs,plannedGrossProfit=view.plannedProfit;
+  const plannedMarginPercent=plannedRevenue>0?plannedGrossProfit/plannedRevenue*100:0;
 
   const profitVariance = actualGrossProfit - plannedGrossProfit;
   const isProfitFavorable = profitVariance >= 0;
@@ -138,36 +110,7 @@ export const OrderProfitDashboard: React.FC<OrderProfitDashboardProps> = ({
     actualGrossProfit,
   ]);
 
-  // Breakdown of actual COGS components for analytical depth
-  const cogsBreakdownData = useMemo(() => {
-    const rawMaterial = computed.materialCost;
-    const directLabor = computed.effectiveLaborCost;
-    const overhead = computed.effectiveMachineCost + computed.variantAddonTotal;
-    const shopFloorVariance = computed.actualCostVariance;
-    const reworkCost = cardState.qmReworkCost || 0;
-    const scrapCost = cardState.qmScrapCost || 0;
-
-    return [
-      { name: 'NVL trực tiếp (621)', value: rawMaterial, color: '#38bdf8' },
-      { name: 'Nhân công TT (622)', value: directLabor, color: '#818cf8' },
-      { name: 'Sản xuất chung (627)', value: overhead, color: '#a78bfa' },
-      ...(shopFloorVariance !== 0
-        ? [
-            {
-              name: 'Biến động xưởng (Variance)',
-              value: Math.abs(shopFloorVariance),
-              color: shopFloorVariance > 0 ? '#fb923c' : '#4ade80',
-            },
-          ]
-        : []),
-      ...(reworkCost > 0
-        ? [{ name: 'Sửa chữa QM (CO07)', value: reworkCost, color: '#f43f5e' }]
-        : []),
-      ...(scrapCost > 0
-        ? [{ name: 'Tổn thất phế phẩm (Scrap)', value: scrapCost, color: '#e11d48' }]
-        : []),
-    ];
-  }, [computed, cardState]);
+  const cogsBreakdownData=view.breakdown;
 
   return (
     <div
@@ -260,7 +203,7 @@ export const OrderProfitDashboard: React.FC<OrderProfitDashboardProps> = ({
               Doanh Thu Thuần (TK 511)
             </span>
             <span className="font-mono text-[11px] px-1.5 py-0.5 rounded bg-cyan-950 text-cyan-300 border border-cyan-800/60">
-              {postedRevenue511 > 0 ? 'Đã hạch toán VF01' : 'Kế hoạch VA01'}
+              {postedRevenue511 > 0 ? 'Đã hạch toán VF01' : 'Chưa ghi nhận doanh thu'}
             </span>
           </div>
           <div className="text-xl font-black text-cyan-400 mt-2 font-mono">
@@ -286,7 +229,7 @@ export const OrderProfitDashboard: React.FC<OrderProfitDashboardProps> = ({
               Giá Vốn Hàng Bán (TK 632)
             </span>
             <span className="font-mono text-[11px] px-1.5 py-0.5 rounded bg-amber-950 text-amber-300 border border-amber-800/60">
-              {postedCOGS632 > 0 ? 'Đã quyết toán VA88' : 'Chi phí ước tính'}
+              {view.recognized ? 'Giá vốn đã ghi nhận' : 'Chưa ghi nhận giá vốn'}
             </span>
           </div>
           <div className="text-xl font-black text-amber-400 mt-2 font-mono">
@@ -567,7 +510,7 @@ export const OrderProfitDashboard: React.FC<OrderProfitDashboardProps> = ({
               </span>
             </div>
             <p className="text-xs text-slate-400 mt-1">
-              Bóc tách chi tiết các khoản chi phí sản xuất cấu thành giá vốn đơn hàng
+              Kế hoạch phần đã giao và chênh lệch đối chiếu với giá vốn đã ghi nhận; chưa xác định nguyên nhân chênh lệch.
             </p>
 
             {/* Visual breakdown list */}
@@ -594,7 +537,7 @@ export const OrderProfitDashboard: React.FC<OrderProfitDashboardProps> = ({
                     <div className="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden">
                       <div
                         className="h-full rounded-full transition-all duration-500"
-                        style={{ width: `${Math.min(pct, 100)}%`, backgroundColor: item.color }}
+                        style={{ width: `${Math.min(Math.abs(pct), 100)}%`, backgroundColor: item.color }}
                       />
                     </div>
                   </div>

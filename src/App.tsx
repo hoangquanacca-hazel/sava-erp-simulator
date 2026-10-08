@@ -199,14 +199,16 @@ export default function App() {
   const stockEState = useMemo(() => {
     const executedSteps = [1, 2, 3, 4, 5, 6, 7].filter((id) => stepStates[id]?.isExecuted);
     const highestStep = executedSteps.length > 0 ? Math.max(...executedSteps) : 0;
-    return computeStockEState(
+    const stock=computeStockEState(
       highestStep,
       params,
       computed,
       stepStates[4].qmDecision,
       stepStates[4].qmReworkHandled
     );
-  }, [stepStates, params, computed]);
+    const balance=(account:string)=>ACDOCA_TABLE.filter(l=>l.glAccount===account).reduce((sum,l)=>sum+l.drAmount-l.crAmount,0);
+    return {...stock,wipValueVND:balance('154'),finishedGoodsValueVND:balance('155')};
+  }, [stepStates, params, computed, ACDOCA_TABLE]);
 
   const salesOrderCostCard = useMemo(() => {
     const executedSteps = [1, 2, 3, 4, 5, 6, 7].filter((id) => stepStates[id]?.isExecuted);
@@ -849,6 +851,7 @@ export default function App() {
               onExecute={() => handleExecuteStep(activeStepDef.id)}
               onQMDecision={handleQMDecision}
               onHandleQMResolution={handleQMResolution}
+              acdocaTable={ACDOCA_TABLE}
               onChangeVariancePercent={handleChangeVariancePercent}
               onExplainStep={handleExplainStep}
               canExecute={
@@ -877,7 +880,7 @@ export default function App() {
                 <SpecialStockPanel
                   stockState={stockEState}
                   params={params}
-                  currentStep={currentStepId}
+                  lastExecutedStep={Math.max(0,...[1,2,3,4,5,6,7].filter(id=>stepStates[id]?.isExecuted))}
                 />
               </div>
 
@@ -905,6 +908,7 @@ export default function App() {
 
               {/* Order Profitability Dashboard (Recharts: Doanh thu 511, Giá vốn 632, Lợi nhuận gộp) */}
               <OrderProfitDashboard
+                acdocaTable={ACDOCA_TABLE}
                 params={params}
                 computed={computed}
                 cardState={salesOrderCostCard}

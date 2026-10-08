@@ -10,3 +10,7 @@ Baseline `28dc655` trên `docs/implementation-pack`; tạo `cloud/s1-report-comp
 - Test pack54×11, numeric mutation/missing report, hash/RAW corruption, oracle WIP/material; không dùng fallback tạo PASS.
 
 S3 adapters, S4 workflow controls, S5 mart/root-cause, S6 human acceptance chưa được thực hiện trong Session1. Xem VERIFICATION để biết kết quả thật và giới hạn.
+
+## Sửa lỗi sau UAT độc lập
+
+Đã sửa4lỗi hiển thị BOM/kho/settlement/COGS; projections mới từ computed và ACDOCA. Regression54oraclecases + HTMLrender. Xem qa/2026-10-08/UI-FIXES.md và retest-evidence; chưa nghiệm thu SME.
