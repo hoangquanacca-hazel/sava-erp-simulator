@@ -1,4 +1,5 @@
 import React,{useState} from 'react';
+import {ManufacturingMartPanel} from './ManufacturingMartPanel';
 import type {AdapterResult} from '../adapters/framework';
 import {reconcile,CONTROL_POLICY} from '../controls/reconcile';
 import {startCase,appendEvent,exportControlCase,type ControlCase} from '../controls/workflow';
@@ -33,6 +34,7 @@ export function ControlsPanel({quality}:{quality:readonly AdapterResult[]}){
     <div className="flex gap-3"><button disabled={busy} className="text-cyan-300 underline" onClick={()=>record('EXPLAIN')}>Lưu giải trình</button><button disabled={busy} className="text-cyan-300 underline" onClick={()=>record('REQUEST_REVIEW')}>Yêu cầu review</button><button disabled={busy} className="text-cyan-300 underline" onClick={exportCase}>Tải hồ sơ đối soát và nhật ký</button></div>
     <ol>{work.events.map(e=><li key={e.sequence}>{e.sequence}. {e.controlId} · {e.action} · {e.actor} · {e.note}</li>)}</ol>
    </div>
+   <ManufacturingMartPanel quality={quality} work={work}/>
   </>}
  </section>;
 }

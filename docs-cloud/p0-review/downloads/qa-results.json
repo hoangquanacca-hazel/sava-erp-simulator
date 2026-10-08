@@ -1,0 +1,41 @@
+{
+  "target": "http://127.0.0.1:3017/",
+  "date": "2026-10-08",
+  "status": "UNVERIFIED_DOWNLOAD_COMPLETION",
+  "attempts": [
+    {
+      "type": "RAW FAGLL03",
+      "click": "FULFILLED",
+      "event": "REJECTED",
+      "error": "Error: Timed out after 10000ms waiting for download.",
+      "downloadPath": null,
+      "bytesHash": "UNVERIFIED"
+    },
+    {
+      "type": "CLEAN FAGLL03",
+      "click": "FULFILLED",
+      "event": "REJECTED",
+      "error": "Error: Timed out after 10000ms waiting for download.",
+      "downloadPath": null,
+      "bytesHash": "UNVERIFIED"
+    },
+    {
+      "type": "CONTROL bundle",
+      "click": "FULFILLED",
+      "event": "REJECTED",
+      "error": "Error: Timed out after 10000ms waiting for download.",
+      "downloadPath": null,
+      "bytesHash": "UNVERIFIED"
+    }
+  ],
+  "ui": {
+    "cleanPass": 11,
+    "controlsTechnicalMatches": 7
+  },
+  "webinar": {
+    "initial": "OFF",
+    "temporary": "ON",
+    "restored": "OFF"
+  },
+  "leads": 0
+}

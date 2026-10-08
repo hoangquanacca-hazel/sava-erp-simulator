@@ -1,0 +1,66 @@
+{
+  "version": "p0-review-1",
+  "approval": "PENDING_HUMAN_SME",
+  "items": [
+    {
+      "control": "C02",
+      "status": "BLOCKED_RESERVATION_MAPPING",
+      "required": [
+        "source namespace/client",
+        "order + reservation number/item",
+        "material document year/document/item",
+        "component material/UoM",
+        "allocation quantity and rule",
+        "cutoff/reversal handling"
+      ],
+      "decision": "Approve evidence-backed mapping; multiple same-material reservations must not arbitrary-match",
+      "approvedEvidence": null
+    },
+    {
+      "control": "C04",
+      "status": "BLOCKED_CO_COST_BASIS",
+      "required": [
+        "controlling area/order/period/currency",
+        "target cost version and control-cost view",
+        "cost category/source documents",
+        "WIP/overhead/scrap basis and approved adjustments"
+      ],
+      "decision": "Define SIM collector comparison vs SAP cost basis; total154 debit is not variance",
+      "approvedEvidence": null
+    },
+    {
+      "control": "C05",
+      "status": "BLOCKED_RECEIVER_ELIGIBLE_VARIANCE",
+      "required": [
+        "sender object type and identity",
+        "receiver type and identity",
+        "settlement rule/run/period",
+        "eligible variance or full-cost amount type",
+        "source accounting document/line allocations"
+      ],
+      "decision": "Approve separate Valuated variance vs Non-valuated full-cost policy; retain sign, do not call every settlement variance",
+      "approvedEvidence": null
+    },
+    {
+      "control": "C07",
+      "status": "BLOCKED_SAP_VARIANCE_CATEGORIES",
+      "required": [
+        "standard/actual independent price and quantity observations",
+        "allowed consumption for actual output",
+        "standard/actual activity quantities and rates",
+        "scrap/rework policy to avoid double count",
+        "category map/target-cost version and explicit residual"
+      ],
+      "decision": "Choose evidence-backed decomposition; cost-ratio-derived quantities cannot prove price/usage root cause",
+      "approvedEvidence": null
+    }
+  ],
+  "additionalAcceptanceGaps": [
+    "approved namespace/profile/variant and tolerance",
+    "actual browser download bytes/hash",
+    "TT99 original authoritative text/PDF not supplied",
+    "reversal/cross-period/multi-order/conversion fixtures and explicit scope approval",
+    "CK13N estimate version/cost view",
+    "M01-M10 human acceptance"
+  ]
+}

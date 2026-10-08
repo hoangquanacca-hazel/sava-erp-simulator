@@ -18,3 +18,6 @@ Không coi kiểm thử của tác giả là nghiệm thu. Các AUD dưới đâ
 
 - **AUD-024 — S4 SIM basis:** fixed single-scenario namespace/cutoff/opening0; quantity1e-7/VND0 tolerance chỉ mô phỏng. Technical tieouts không thay C02 reservation match/C04 CO basis/C05 eligible variance receiver/C07 SAP categories. Business blocks retained; không sửa draft contract để hạ gate.
 - **AUD-025 — Local workflow:** self-declared actor/evidence, EXPLAIN/REQUEST_REVIEW, hashchain bound entire run verified before append/export, clone-before-await. No authenticated reviewer/approval/storage/WORM. Explanation never overrides control status; MANIFEST always pendinghuman.
+
+- **AUD-026 — P0 review corpus:** user reports no independentgolden/TT99corpus; candidateexpected values copiedtechnicalPythonoracle andflaggedDRAFT, notSMEapproval. Supportingfields for4blocks proposedasrequirements, notinventeddata. OriginalM01–M10scopegapsremain.
+- **AUD-027 — S5 diagnostic/C08:** strictrecomputedcontrols andprivatecopies, frozen12metrics/costbridge/lineage/hash; noapprovedpublication. C08boundednumerictemplate entailment, notLLMgeneralvalidation. Full-orderandposteddeliveredbasisseparate; costratio-derivedquantitiesnotphysicalcauseevidence.

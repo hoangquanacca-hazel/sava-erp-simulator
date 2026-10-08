@@ -33,3 +33,8 @@ Thêm7 CLEAN tieouts và source coordinates/orphans/metrics, SIM policy JSON, Co
 ## Quyết định ưu tiên P0
 
 Theo chỉ thị Mr Quân, chỉ thực thi P0 Manufacturing; P1/P2 để giai đoạn sau. Ghi quyết định P0-FOCUS-DECISION.md và JSON; giữ acceptance gates và tài sản cũ. Không thay đổi code hoặc tự nghiệm thu/deploy.
+
+
+## P0 review pack / S5 diagnostic
+
+Prepared concreteSMEreview packet/candidategolden/gapregister, preservedactualdownloadQAUNVERIFIED. AddedbrowserMART12metrics/3costelements, RAWdrill/formula/basis, deterministicC08facts andhashmanifest; preservesbusinessblocks andnoofficialpublication. NoP1/P2work.

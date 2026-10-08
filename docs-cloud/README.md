@@ -51,3 +51,8 @@ S4 code `da7bd0b`: browser QA2cases Samsung/Canon đạt technical7/7; [bằng c
 ## Quyết định ưu tiên mới nhất — 08/10/2026
 
 Mr Quân chốt mục tiêu gần **P0 Manufacturing được nghiệm thu để chạy pilot**; P1/P2 triển khai sau. [Quyết định và thứ tự P0 còn lại](P0-FOCUS-DECISION.md), [metadata](p0-focus-decision.json). Không hạ gate, không tự triển khai ngoài phạm vi P0 hoặc tự release.
+
+
+## P0 tiếp tục theo thứ tự — S4 review và S5 diagnostic
+
+Mr Quân xác nhận chưa có bộ chuẩn và yêu cầu [hồ sơ review](p0-review/README.md). C02/C04/C05/C07 giữbusinessBLOCKED; tải thực tooltimeoutUNVERIFIED. [S5 Manufacturing MART/C08](s5/README.md) triển khai diagnostictrongkhi chờreview, khôngapprovedMART hoặcđóngP0. P1/P2 hoãn.
