@@ -13,9 +13,5 @@ export default async (): Promise<Response> => {
     status: 'ok',
     app: 'Savafinlab MTO ERP Simulator',
     hasApiKey: Boolean(key),
-    // Safe diagnostics only — never the key itself.
-    keyLen: key.length,
-    keyPrefix: key.slice(0, 4),
-    looksValid: /^AIza[0-9A-Za-z_-]{20,}$/.test(key),
   });
 };

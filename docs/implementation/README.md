@@ -1,5 +1,7 @@
 # SAVA SAP S/4HANA Manufacturing Simulator — Implementation Pack v1.0
 
+> **Cập nhật 08/10/2026:** đọc [quyết định A/B/C và triển khai hiện hành](../../docs-cloud/README.md) trước. Các đề xuất backend ingestion, worker, object store, SAP thật trong bộ kế hoạch này là dài hạn/deferred; không áp dụng cho Phase A browser-only.
+
 Ngày tổng hợp: **07/10/2026 (Asia/Saigon)**. Làm trực tiếp trên repo `D:\sava-erp-simulator`.
 Trạng thái: **planning baseline / đề xuất kỹ thuật để review**, không phải chứng nhận triển khai hay nghiệm thu SAP.
 

@@ -267,7 +267,7 @@ export const OrderProfitDashboard: React.FC<OrderProfitDashboardProps> = ({
             {formatVND(actualRevenue)}
           </div>
           <div className="text-[11px] text-slate-500 mt-1 flex items-center justify-between">
-            <span>Đơn giá: {formatVND(params.sellingPricePerUnit)} / cái</span>
+            <span>Đơn giá: {formatVND(params.sellingPrice)} / cái</span>
             <span>SL: {formatNumber(params.orderQuantity)}</span>
           </div>
         </div>
@@ -639,7 +639,7 @@ export const OrderProfitDashboard: React.FC<OrderProfitDashboardProps> = ({
             </p>
             <div className="text-[10px] text-slate-400 pt-1 border-t border-slate-700/60 flex items-center justify-between">
               <span>Chế độ kho: {params.stockType} Stock</span>
-              <span>Khấu hao máy: {formatNumber(params.machineOperatingHours, 1)}h</span>
+              <span>Khấu hao máy: {formatNumber(computed.operatingHours, 1)}h</span>
             </div>
           </div>
         </div>

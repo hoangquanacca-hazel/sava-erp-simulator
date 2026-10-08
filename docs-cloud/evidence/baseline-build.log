@@ -1,0 +1,41 @@
+
+> react-example@0.0.0 build
+> vite build && esbuild server.ts --bundle --platform=node --format=cjs --packages=external --sourcemap --outfile=dist/server.cjs
+
+vite v6.4.3 building for production...
+transforming...
+✓ 2306 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                    2.58 kB │ gzip:   1.09 kB
+dist/assets/index-CIBcdVm2.css                   103.91 kB │ gzip:  14.99 kB
+dist/assets/MdgGatePage-DUoOw8kS.js                1.32 kB │ gzip:   0.75 kB
+dist/assets/variance-DdkqZT3n.js                   1.51 kB │ gzip:   0.82 kB
+dist/assets/MaterialLedgerPage-CA7GomBx.js         2.04 kB │ gzip:   1.03 kB
+dist/assets/SodAuditPage-D-PI-pyB.js               2.78 kB │ gzip:   1.30 kB
+dist/assets/IntercompanyPage-B09zg1Dl.js           3.02 kB │ gzip:   1.33 kB
+dist/assets/WipSettlementPage-C2sWJmsK.js          3.17 kB │ gzip:   1.31 kB
+dist/assets/VarianceWaterfallPage-DqMKOt5l.js      3.96 kB │ gzip:   1.83 kB
+dist/assets/GrirPage-pnnyFgtq.js                   4.37 kB │ gzip:   1.59 kB
+dist/assets/CloseCockpitPage-D5b2Q8iu.js           5.82 kB │ gzip:   2.34 kB
+dist/assets/index-CP7MULbJ.js                  1,462.14 kB │ gzip: 430.95 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 35.00s
+▲ [WARNING] "import.meta" is not available with the "cjs" output format and will be empty [empty-import-meta]
+
+    server.ts:10:33:
+      10 │ const __filename = fileURLToPath(import.meta.url);
+         ╵                                  ~~~~~~~~~~~
+
+  You need to set the output format to "esm" for "import.meta" to work correctly.
+
+1 warning
+
+  dist\server.cjs      24.3kb
+  dist\server.cjs.map  28.7kb
+
+Done in 9ms

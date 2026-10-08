@@ -31,6 +31,7 @@ import { Header } from './components/Header';
 import { CommandBar } from './components/CommandBar';
 import { SetupScreen } from './components/SetupScreen';
 import { StepCard } from './components/StepCard';
+import { SapReportsPanel } from './components/SapReportsPanel';
 import { LedgerPanel } from './components/LedgerPanel';
 import { SalesOrderCard } from './components/SalesOrderCard';
 import { SpecialStockPanel } from './components/SpecialStockPanel';
@@ -122,7 +123,7 @@ export default function App() {
     }
   });
   const [leadModalOpen, setLeadModalOpen] = useState<boolean>(false);
-  const [leadModalTriggerReason, setLeadModalTriggerReason] = useState<'step3' | 'excel' | 'aitutor' | 'general'>('step3');
+  const [leadModalTriggerReason, setLeadModalTriggerReason] = useState<'step3' | 'excel' | 'ai_tutor' | 'general'>('step3');
   const [pendingActionAfterLead, setPendingActionAfterLead] = useState<(() => void) | null>(null);
 
   // Simulated Session Limits & Licencing State
@@ -290,7 +291,7 @@ export default function App() {
 
   const handleToggleAITutor = () => {
     if (!aiTutorOpen && !isRegistered && !adminSettings.bypassSessionLimits) {
-      setLeadModalTriggerReason('aitutor');
+      setLeadModalTriggerReason('ai_tutor');
       setPendingActionAfterLead(() => () => setAiTutorOpen(true));
       setLeadModalOpen(true);
       return;
@@ -544,7 +545,7 @@ export default function App() {
     setAiInitialQuestion(question);
 
     if (!isRegistered && !adminSettings.bypassSessionLimits) {
-      setLeadModalTriggerReason('aitutor');
+      setLeadModalTriggerReason('ai_tutor');
       setPendingActionAfterLead(() => () => setAiTutorOpen(true));
       setLeadModalOpen(true);
       return;
@@ -880,6 +881,9 @@ export default function App() {
                 />
               </div>
 
+              <SapReportsPanel params={params} computed={computed} table={ACDOCA_TABLE}
+                ready={[1,2,3,4,5,6,7].every(id=>stepStates[id]?.isExecuted) && extraAcdoca.length===0 &&
+                  [1,2,3,4,5,6,7].every(id=>!stepStates[id]?.qmReworkCost && !stepStates[id]?.qmScrapCost)} />
               {/* General Ledger Panel (Full width) */}
               <LedgerPanel
                 entries={allJournalEntries}

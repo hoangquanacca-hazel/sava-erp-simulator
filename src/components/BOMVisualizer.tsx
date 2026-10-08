@@ -181,7 +181,7 @@ export const BOMVisualizer: React.FC<BOMVisualizerProps> = ({
             spec:
               params.laborCostMode === 'hourly'
                 ? `${params.laborHours} giờ @ ${formatVND(params.laborRatePerHour)}/h`
-                : `${formatVND(params.laborCostPerUnit)}/cái`,
+                : `${formatVND(totalLabor / qty)}/cái`,
             cost: totalLabor,
             unitCost: Math.round(totalLabor / qty),
             share: Number(((totalLabor / totalPlanned) * 100).toFixed(1)),
@@ -208,7 +208,7 @@ export const BOMVisualizer: React.FC<BOMVisualizerProps> = ({
             spec:
               params.machineCostMode === 'hourly'
                 ? `${params.machineHours} giờ @ ${formatVND(params.machineRatePerHour)}/h`
-                : `${formatVND(params.machineCostPerUnit)}/cái`,
+                : `${formatVND(machineCost / qty)}/cái`,
             cost: machineCost,
             unitCost: Math.round(machineCost / qty),
             share: Number(((machineCost / totalPlanned) * 100).toFixed(1)),

@@ -5,14 +5,18 @@
   "type": "module",
   "scripts": {
     "dev": "tsx server.ts",
-    "build": "vite build && esbuild server.ts --bundle --platform=node --format=cjs --packages=external --sourcemap --outfile=dist/server.cjs",
-    "start": "node dist/server.cjs",
+    "build": "vite build && esbuild server.ts --bundle --platform=node --format=esm --packages=external --sourcemap --outfile=dist/server.mjs",
+    "start": "node dist/server.mjs",
     "clean": "rm -rf dist server.js",
     "lint": "tsc --noEmit",
     "test:parity": "tsx scripts/parity.ts",
     "test:s1": "tsx scripts/s1-config.ts",
     "test:s2": "tsx scripts/s2-fagll03.ts",
-    "test:a0": "tsx scripts/a0-expected.ts && tsx scripts/a0-ids.ts && tsx scripts/a0-ckmlcp.ts && tsx scripts/a01-identity-events.ts"
+    "test:a0": "tsx scripts/a0-expected.ts && tsx scripts/a0-ids.ts && tsx scripts/a0-ckmlcp.ts && tsx scripts/a01-identity-events.ts",
+    "test:reports": "tsx scripts/s2-report-pack.ts",
+    "test:health": "tsx scripts/health-security.ts",
+    "test:security": "node scripts/scan-secrets.mjs",
+    "test:start": "node scripts/production-smoke.mjs"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",

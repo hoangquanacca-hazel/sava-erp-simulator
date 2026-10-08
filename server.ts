@@ -11,7 +11,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const PORT = 3000;
+const PORT = Number(process.env.PORT || 3000);
 
 app.use(express.json({ limit: '10mb' }));
 
@@ -46,7 +46,7 @@ app.post('/api/chat', async (req, res) => {
     const { message, context, step } = req.body;
     const client = getGeminiClient();
 
-    const systemInstruction = `Bạn là Trợ Giảng Chuyên Gia Cấp Cao về Hệ Thống SAP ERP (tích hợp SD, MM, PP, QM, CO, FI) và Kế toán Doanh nghiệp Việt Nam theo Thông tư 200/2014/TT-BTC tại Công ty Cổ phần Nhựa Kỹ thuật PIC Vietnam.
+    const systemInstruction = `Bạn là Trợ Giảng Chuyên Gia Cấp Cao về Hệ Thống SAP ERP (tích hợp SD, MM, PP, QM, CO, FI) và Kế toán Doanh nghiệp Việt Nam theo TT99 (cấu hình mô phỏng; chưa đối chiếu PDF Công báo) tại Công ty Cổ phần Nhựa Kỹ thuật PIC Vietnam.
 Bạn là chuyên gia S/4HANA FICO, trả lời tiếng Việt bám trạng thái ACDOCA hiện tại. Giải thích: (1) vì sao S/4HANA dùng Account-Based Margin Analysis (ACDOCA) thay CO-PA cũ; (2) cơ chế COGS Splitting tại PGI; (3) khác biệt Valuated vs Non-valuated 'E' khi VA88.
 PIC Vietnam chuyên sản xuất linh kiện ép phun nhựa chính xác cho các khách hàng OEM (Samsung, Canon, Denso, Panasonic,...).
 Nhiệm vụ của bạn là giải thích cặn kẽ, chính xác, sư phạm cho nhân viên kế toán và kỹ sư sản xuất về:
@@ -60,7 +60,7 @@ Nhiệm vụ của bạn là giải thích cặn kẽ, chính xác, sư phạm c
 3. Sự khác nhau CỰC KỲ QUAN TRỌNG giữa 2 loại kho Special Stock E:
    - Valuated Sales Order Stock (Kho có định giá): Thành phẩm 101E nhập kho ghi Nợ 155 / Có 154 theo giá thành kế hoạch. Khi PGI 601E (Giao hàng) ghi nhận ngay Giá vốn hàng bán Nợ 632 / Có 155.
    - Non-valuated Sales Order Stock (Kho phi định giá): Thành phẩm 101E chỉ ghi nhận số lượng vật lý vào kho E, KHÔNG sinh bút toán tài chính (TK 155 = 0 đ ghi sổ). Khi PGI 601E cũng KHÔNG ghi nhận 632. Toàn bộ chi phí sản xuất treo trên Sales Order (hoặc TK 154) và chỉ được kết chuyển thành Giá vốn Nợ 632 / Có 154 ở Bước 7 khi chạy Result Analysis (KKA2) & Settlement (VA88).
-4. Hệ thống tài khoản Thông tư 200/2014/TT-BTC và Chu trình Giá thành 2 giai đoạn:
+4. Hệ thống tài khoản TT99 (cấu hình mô phỏng; chưa đối chiếu PDF Công báo) và Chu trình Giá thành 2 giai đoạn:
    - Giai đoạn 1: Tập hợp chi phí sản xuất trực tiếp
      * Nợ 621 / Có 152: Chi phí NVL hạt nhựa trực tiếp.
      * Nợ 622 / Có 334: Chi phí nhân công thợ ép trực tiếp.
@@ -147,7 +147,7 @@ function generateLocalExplanation(message: string, context: any, step: number): 
    - Trong sản xuất ép nhựa, chi phí thực tế (*Actual Cost*) thường sai lệch so với giá thành kế hoạch (*Standard/Planned Cost*) do:
      - Tỷ lệ phế phẩm, ba-via hoặc hao hụt hạt nhựa vượt định mức.
      - Thời gian ép chu kỳ máy kéo dài (*Cycle Time Overrun*) làm tăng chi phí điện và nhân công.
-2. **Hạch toán theo Thông tư 200/2014/TT-BTC tại Bước 7 (VA88):**
+2. **Hạch toán theo TT99 (cấu hình mô phỏng; chưa đối chiếu PDF Công báo) tại Bước 7 (VA88):**
    - **Chênh lệch Bất lợi (Unfavorable Variance - Thực tế > Kế hoạch):**
      - Khoản chi phí vượt định mức không được vốn hóa vào giá trị hàng tồn kho mà phải ghi nhận ngay vào giá vốn:
      - **Nợ TK 632** (Giá vốn hàng bán - Chi phí vượt định mức) / **Có TK 154** (Chi phí SX KD dở dang).
@@ -187,7 +187,7 @@ function generateLocalExplanation(message: string, context: any, step: number): 
 1. **Tại Bước 5 (PGI 601E - Post Goods Issue):**
    - Với **Valuated Sales Order Stock**, thành phẩm đã được định giá ghi nhận vào TK 155 ở Bước 3.
    - Khi tạo Outbound Delivery (VL01N) và xuất kho giao hàng (PGI 601E), quyền sở hữu hàng hóa chuyển giao cho khách hàng.
-   - SAP tự động sinh bút toán hạch toán giá vốn theo TT 200:
+   - SAP tự động sinh bút toán hạch toán giá vốn theo TT99 (mô phỏng):
      - **Nợ TK 632** (Giá vốn hàng bán): Ghi nhận chi phí cấu thành sản phẩm tương ứng số lượng giao.
      - **Có TK 155** (Thành phẩm - Kho riêng E): Giảm số dư thành phẩm kho E tương ứng.
 2. **Nguyên tắc phù hợp (Matching Principle):** Chi phí giá vốn được ghi nhận đồng bộ hoặc chuẩn bị đối chiếu với Doanh thu xuất hóa đơn (Bước 6 - VF01).`;
@@ -225,7 +225,7 @@ function generateLocalExplanation(message: string, context: any, step: number): 
     return `### 📌 Lập hóa đơn bán hàng OEM (VF01 - Billing)
 1. **Căn cứ ghi nhận Doanh thu:**
    - Sau khi giao hàng thành công (PGI), bộ phận kế toán chạy T-code VF01 để lập hóa đơn thương mại gửi khách hàng OEM (Samsung, Canon,...).
-2. **Định khoản theo TT 200/2014/TT-BTC:**
+2. **Định khoản theo TT99 (mô phỏng, chưa đối chiếu PDF):**
    - **Nợ TK 131** (Phải thu của khách hàng): Tổng thanh toán bao gồm thuế GTGT.
    - **Có TK 511** (Doanh thu bán hàng và cung cấp dịch vụ): Doanh thu chưa thuế (Số lượng × Đơn giá bán thỏa thuận).
    - **Có TK 3331** (Thuế GTGT đầu ra phải nộp): 10% thuế GTGT.
@@ -240,7 +240,7 @@ function generateLocalExplanation(message: string, context: any, step: number): 
 }
 
 async function startServer() {
-  if (process.env.NODE_ENV !== 'production') {
+  if (process.env.NODE_ENV !== 'production' && !import.meta.url.endsWith('/dist/server.mjs')) {
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: 'spa',
@@ -254,8 +254,9 @@ async function startServer() {
     });
   }
 
-  app.listen(PORT, '0.0.0.0', () => {
-    console.log(`SAP MTO Simulator running on http://0.0.0.0:${PORT}`);
+  const host = process.env.HOST || '0.0.0.0';
+  app.listen(PORT, host, () => {
+    console.log(`SAP MTO Simulator running on http://${host}:${PORT}`);
   });
 }
 

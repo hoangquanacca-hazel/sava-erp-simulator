@@ -20,13 +20,16 @@ export interface ReportOutput {
 }
 
 export interface RawExport {
-  fileName: string;
-  text: string;
-  bytes: Uint8Array;
+  readonly fileName: string;
+  readonly text: string;
+  readonly bytes: Uint8Array;
 }
 
 export interface RawManifest {
   reportId: string;
+  schemaVersion: string;
+  generatorVersion: string;
+  selection: { postingDate: string; scope: string };
   fileName: string;
   sha256: string;
   bytes: number;
@@ -83,7 +86,7 @@ function cell(v: string): string {
 
 /** Tab-delimited UTF-8, LF. Banner SIMULATED + cấu hình ở đầu file. */
 export function toRawExport(r: ReportOutput): RawExport {
-  const banner = `${r.title} | ${SIM_CONFIG.label} | BUKRS ${SIM_CONFIG.companyCode} | WERKS ${SIM_CONFIG.plant} | ${SIM_CONFIG.accountingStandard} | Dr(+)/Cr(-)`;
+  const banner = `${r.title} | ${SIM_CONFIG.label} | BUKRS ${SIM_CONFIG.companyCode} | WERKS ${SIM_CONFIG.plant} | ${SIM_CONFIG.accountingStandard} | Signs: SHKZG/DRCRK or report contract`;
   const lines = [
     banner,
     '',
@@ -91,7 +94,10 @@ export function toRawExport(r: ReportOutput): RawExport {
     ...r.rows.map((row) => row.map(cell).join('\t')),
   ];
   const text = lines.join('\n') + '\n';
-  return { fileName: `${r.reportId}_${SIM_CONFIG.label}.txt`, text, bytes: new TextEncoder().encode(text) };
+  const bytes = new TextEncoder().encode(text);
+  // No mutable reference to retained bytes escapes. Every read returns a copy.
+  return Object.freeze({ fileName: `${r.reportId}_${SIM_CONFIG.label}.txt`, text,
+    get bytes() { return bytes.slice(); } });
 }
 
 export async function sha256Hex(bytes: Uint8Array): Promise<string> {
@@ -107,20 +113,27 @@ export async function buildManifest(
   sourceLineCount: number,
   totals: Record<string, number>
 ): Promise<RawManifest> {
-  return {
+  if (raw.text !== toRawExport(r).text || raw.fileName !== toRawExport(r).fileName)
+    throw new Error('RAW/report mismatch');
+  if (await sha256Hex(raw.bytes) !== await sha256Hex(new TextEncoder().encode(raw.text)))
+    throw new Error('RAW bytes/text mismatch');
+  return Object.freeze({
     reportId: r.reportId,
+    schemaVersion: 'sim-report-v1',
+    generatorVersion: 's2-pack-1.0.0',
+    selection: Object.freeze({ postingDate: SIM_CONFIG.postingDate, scope: 'provided-scenario-snapshot' }),
     fileName: raw.fileName,
     sha256: await sha256Hex(raw.bytes),
     bytes: raw.bytes.length,
     rowCount: r.rows.length,
     sourceLineCount,
-    totals,
-    config: {
+    totals: Object.freeze({ ...totals }),
+    config: Object.freeze({
       companyCode: SIM_CONFIG.companyCode,
       plant: SIM_CONFIG.plant,
       ledger: SIM_CONFIG.ledger,
       standard: SIM_CONFIG.accountingStandard,
       label: SIM_CONFIG.label,
-    },
-  };
+    }),
+  });
 }
