@@ -166,6 +166,9 @@
     "reviewCases": 6,
     "oracleComparisons": 42,
     "browserSavedDownload": "UNVERIFIED",
-    "approval": "NOT_APPROVED"
+    "approval": "NOT_APPROVED",
+    "sourceCommit": "cec245ab1b5f50feefa5a316e1f12f27e327bd68",
+    "browserGeneratedPack": "SCOPED_VERIFIED_CANON",
+    "browserFileReplay": "UNVERIFIED"
   }
 }

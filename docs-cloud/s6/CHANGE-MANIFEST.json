@@ -1,0 +1,255 @@
+{
+  "baselineCommit": "70556f0",
+  "sourceCommit": "cec245ab1b5f50feefa5a316e1f12f27e327bd68",
+  "changes": [
+    {
+      "status": "M",
+      "path": "docs-cloud/README.md"
+    },
+    {
+      "status": "M",
+      "path": "docs-cloud/p0-review/README.md"
+    },
+    {
+      "status": "M",
+      "path": "docs-cloud/p0-review/acceptance-readiness.json"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/.gitattributes"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/BUILD-PROVENANCE.json"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/JOURNAL-2026-10-08.md"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/README.md"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/evidence/build.log"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/evidence/evidence-p0.log"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/evidence/hardened/build.log"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/evidence/hardened/evidence-p0.log"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/evidence/hardened/lint.log"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/evidence/hardened/results.json"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/evidence/hardened/test-a0.log"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/evidence/hardened/test-parity.log"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/evidence/hardened/test-reports.log"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/evidence/hardened/test-s3.log"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/evidence/hardened/test-s4.log"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/evidence/hardened/test-s5.log"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/evidence/hardened/test-s6.log"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/evidence/hardened/test-start.log"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/evidence/hardened/test-ui-finance.log"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/evidence/lint.log"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/evidence/results.json"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/evidence/test-a0.log"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/evidence/test-parity.log"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/evidence/test-reports.log"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/evidence/test-s3.log"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/evidence/test-s4.log"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/evidence/test-s5.log"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/evidence/test-s6.log"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/evidence/test-start.log"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/evidence/test-ui-finance.log"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/independent-review/RETEST.md"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/independent-review/REVIEW.md"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/independent-review/cli-received-file.json"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/independent-review/extended-before-fix.json"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/independent-review/probe-results.json"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/independent-review/probe.ts"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/independent-review/retest-output.txt"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/independent-review/retest-results.json"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/independent-review/retest.ts"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/review-cases/README.md"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/review-cases/canon-frame_Non-valuated_-3.5_0.5_P0.json"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/review-cases/canon-frame_Valuated_-3.5_0.5_P0.json"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/review-cases/case-index.json"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/review-cases/samsung-cover_Non-valuated_0_0_P0.json"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/review-cases/samsung-cover_Non-valuated_3.5_1_P0.json"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/review-cases/samsung-cover_Valuated_0_0_P0.json"
+    },
+    {
+      "status": "A",
+      "path": "docs-cloud/s6/review-cases/samsung-cover_Valuated_3.5_1_P0.json"
+    },
+    {
+      "status": "M",
+      "path": "package.json"
+    },
+    {
+      "status": "A",
+      "path": "scripts/p0-evidence-fixture.ts"
+    },
+    {
+      "status": "A",
+      "path": "scripts/p0-review-evidence.ts"
+    },
+    {
+      "status": "A",
+      "path": "scripts/s6-evidence.ts"
+    },
+    {
+      "status": "A",
+      "path": "scripts/verify-p0-evidence.ts"
+    },
+    {
+      "status": "M",
+      "path": "src/components/ControlsPanel.tsx"
+    },
+    {
+      "status": "A",
+      "path": "src/components/EvidencePackPanel.tsx"
+    },
+    {
+      "status": "M",
+      "path": "src/components/ManufacturingMartPanel.tsx"
+    },
+    {
+      "status": "M",
+      "path": "src/components/SapReportsPanel.tsx"
+    },
+    {
+      "status": "M",
+      "path": "src/controls/workflow.ts"
+    },
+    {
+      "status": "A",
+      "path": "src/evidence/pack.ts"
+    },
+    {
+      "status": "M",
+      "path": "src/mart/commentary.ts"
+    }
+  ],
+  "documentationFinalization": "See subsequent docs commit and git log for final QA, Obsidian record, readability polish and this manifest; no evidence JSON changed."
+}

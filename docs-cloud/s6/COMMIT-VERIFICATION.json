@@ -1,0 +1,51 @@
+{
+  "sourceCommit": "cec245ab1b5f50feefa5a316e1f12f27e327bd68",
+  "protectedFilesUnchangedFromBaseline": [
+    "src/utils/calculator.ts",
+    "src/utils/acdoca.ts",
+    "src/features/materialLedger.ts",
+    "scripts/a0_expected.json",
+    "netlify.toml"
+  ],
+  "mainRefUnchanged": "926837af5edd922b7c4889ebacbb0bdec113098d",
+  "cases": [
+    {
+      "file": "docs-cloud/s6/review-cases/samsung-cover_Valuated_3.5_1_P0.json",
+      "committedBytes": 134851,
+      "committedSha256": "f0c5045d828098cb9676f99d262a2f3d012e6f5a106addd4e4f0333dc4bd71e4",
+      "manifestHashMatches": true
+    },
+    {
+      "file": "docs-cloud/s6/review-cases/samsung-cover_Valuated_0_0_P0.json",
+      "committedBytes": 106228,
+      "committedSha256": "535f052edf02239bf4746041224def2ff7484b8e6d1cb6a3fa73ac411f89d51e",
+      "manifestHashMatches": true
+    },
+    {
+      "file": "docs-cloud/s6/review-cases/samsung-cover_Non-valuated_3.5_1_P0.json",
+      "committedBytes": 111938,
+      "committedSha256": "7834b783a80e7474f7fd6763beaf782ec1f83bac63153f3fc348af8ea6811def",
+      "manifestHashMatches": true
+    },
+    {
+      "file": "docs-cloud/s6/review-cases/samsung-cover_Non-valuated_0_0_P0.json",
+      "committedBytes": 85522,
+      "committedSha256": "2574e49aa7cd920a39e67fa1cd02e05ba8fc2528f50eae97c035ee535c0515cf",
+      "manifestHashMatches": true
+    },
+    {
+      "file": "docs-cloud/s6/review-cases/canon-frame_Valuated_-3.5_0.5_P0.json",
+      "committedBytes": 135124,
+      "committedSha256": "a5c4d571ea48c258fcfa1476fb44cdbd0534aae502bc0f2511dd901665de39d0",
+      "manifestHashMatches": true
+    },
+    {
+      "file": "docs-cloud/s6/review-cases/canon-frame_Non-valuated_-3.5_0.5_P0.json",
+      "committedBytes": 112162,
+      "committedSha256": "5c0fd64b42cb34af01f1b13529950c3900dbbfc9232f65cfeb7973ed4a7cfbf9",
+      "manifestHashMatches": true
+    }
+  ],
+  "workingTreeClean": false,
+  "preservedConcurrentReportingWork": true
+}
