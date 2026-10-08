@@ -1,0 +1,717 @@
+- navigation "Hệ sinh thái Savafinlab":
+  - link "savafinlab":
+    - /url: https://www.savafinlab.com.vn/
+    - generic: savafinlab
+  - generic: /
+  - generic: Sava ERP Cockpit
+  - generic "Sava Lab ▾"
+  - link "Đặt lịch tư vấn":
+    - /url: https://tally.so/r/xXl2ey
+- banner:
+  - strong: MÔ PHỎNG — Không phải hệ thống SAP thật
+  - text: "| SAVA Precision Technology · Đào tạo thực chiến quy trình Make-to-Order (MTO) chuẩn Thông tư 99/2025/TT-BTC"
+  - heading "Sava ERP Cockpit — Enterprise Simulation & Costing Engine" [level=1]
+  - generic: SD · MM · PP · QM · FICO (TT 99/2025)
+  - paragraph: SAVA Precision Technology — Sản xuất linh kiện ép nhựa chính xác theo đơn hàng OEM
+  - generic: OK-Code
+  - textbox "/nVA01, CK11N..."
+  - button "✓"
+  - generic "Mô phỏng giới hạn số lượng người dùng đồng thời trên giấy phép SAP Demo (Tối đa 5 active sessions)":
+    - generic: "Số Session còn trống: 2/5"
+  - button "SAP Fiori":
+    - generic: SAP Fiori
+  - button "SAP Classic GUI":
+    - generic: SAP Classic GUI
+  - button "Tra cứu T-Code":
+    - generic: Tra cứu T-Code
+  - button "Hướng dẫn":
+    - generic: Hướng dẫn
+  - combobox "Chọn tình huống mẫu":
+    - option "📋 Chọn tình huống mẫu..." [disabled] [selected]
+    - 'option "Tình huống 1: Vỏ camera Samsung (MTO Thuần - Kho Định Giá)"'
+    - 'option "Tình huống 2: Khung máy in Canon (Kho Phi Định Giá - Non-valuated)"'
+    - 'option "Tình huống 3: Nắp cảm biến Denso (Strategy 25 - MTO Biến Thể)"'
+  - button "Tham số CK11N":
+    - generic: Tham số CK11N
+  - button "7 Bước SAP MTO":
+    - generic: 7 Bước SAP MTO
+  - button "Báo cáo PDF":
+    - generic: Báo cáo PDF
+  - button "Reset":
+    - generic: Reset
+  - button "Trợ giảng AI":
+    - generic: Trợ giảng AI
+- navigation:
+  - button "Cockpit 7 bước"
+  - button "Variance 5-type"
+  - button "Đóng sổ cuối kỳ"
+  - button "WIP / KKA2"
+  - button "MDG Gate"
+  - button "SoD / Audit"
+  - button "Material Ledger"
+  - button "GR/IR MR11"
+  - button "Intercompany TP"
+- text: "Vai trò (MÔ PHỎNG):"
+- combobox:
+  - option "Sales"
+  - option "Kho"
+  - option "Kế hoạch SX"
+  - option "Kế toán trưởng" [selected]
+- main:
+  - generic: 🎉 Đã hoàn thành 8 chu trình Simulation
+  - text: Chứng nhận hoàn thành phiên trải nghiệm
+  - paragraph: Bạn đã hoàn thành phiên dùng thử miễn phí! Để đăng ký tài khoản VIP không giới hạn hoặc tham gia Khóa đào tạo Thực chiến SAP FICO & FP&A, vui lòng liên hệ Mr. Hoàng Quân - Savafinlab.
+  - paragraph: "Chương trình đào tạo chuyên sâu: Kế toán chi phí giá thành Make-to-Order (MTO), kết chuyển dở dang KKA2/VA88, đối chiếu tài khoản Thông tư 99 và xây dựng mô hình FP&A tự động hóa."
+  - button "Chạy Lại Demo":
+    - generic: Chạy Lại Demo
+  - link "Liên hệ Tư vấn / Đăng ký Khóa học":
+    - /url: https://savafinlab.com.vn
+    - generic: Liên hệ Tư vấn / Đăng ký Khóa học
+  - button "Tạm ẩn thông báo":
+  - generic: PRD
+  - generic: /
+  - generic: "100"
+  - button "Thực thi T-Code (Enter / Execute transaction)":
+  - 'textbox "Nhập mã SAP T-Code (vd: VA01, MD02, CO01, QA11, VL01N, VF01, VA88)..."'
+  - button "Danh sách T-Code gợi ý":
+  - generic: "T-Code nhanh:"
+  - button "VA01 B1":
+    - generic: VA01
+    - generic: B1
+  - button "MD02 B2":
+    - generic: MD02
+    - generic: B2
+  - button "CO01 B3":
+    - generic: CO01
+    - generic: B3
+  - button "QA11 B4":
+    - generic: QA11
+    - generic: B4
+  - button "VL01N B5":
+    - generic: VL01N
+    - generic: B5
+  - button "VF01 B6":
+    - generic: VF01
+    - generic: B6
+  - button "VA88 B7":
+    - generic: VA88
+    - generic: B7
+  - strong: SAP Command Field
+  - text: ": Nhập T-Code (vd:"
+  - code: VA01
+  - text: ","
+  - code: MD02
+  - text: ","
+  - code: CO01
+  - text: ","
+  - code: QA11
+  - text: ","
+  - code: VL01N
+  - text: ","
+  - code: VF01
+  - text: ","
+  - code: VA88
+  - text: ) rồi nhấn
+  - strong: Enter
+  - text: để điều hướng.
+  - generic: "Hỗ trợ cả cú pháp: /nVA01"
+  - generic: Canon Vietnam Co., Ltd (Thăng Long)
+  - generic: PL-CANON-FRM02
+  - paragraph:
+    - text: "SL: 2.000 cái · Strategy 20 ·"
+    - strong: Non-valuated Stock
+  - button "Chạy hết 7 bước":
+    - generic: Chạy hết 7 bước
+  - button "Bắt đầu lại":
+    - generic: Bắt đầu lại
+  - button "BƯỚC 1 VA01 / CK51N SD · CO":
+    - generic: BƯỚC 1
+    - generic: VA01 / CK51N
+    - generic: SD · CO
+  - button "BƯỚC 2 MD02 PP · MM":
+    - generic: BƯỚC 2
+    - generic: MD02
+    - generic: PP · MM
+  - button "BƯỚC 3 CO01 · MIGO 261E · CO11N · MIGO 101E PP · MM · FI":
+    - generic: BƯỚC 3
+    - generic: CO01 · MIGO 261E · CO11N · MIGO 101E
+    - generic: PP · MM · FI
+  - button "BƯỚC 4 QA11 · MM 321E/350E QM":
+    - generic: BƯỚC 4
+    - generic: QA11 · MM 321E/350E
+    - generic: QM
+  - button "BƯỚC 5 VL01N · MIGO 601E SD · MM · FI":
+    - generic: BƯỚC 5
+    - generic: VL01N · MIGO 601E
+    - generic: SD · MM · FI
+  - button "BƯỚC 6 VF01 SD · FICO":
+    - generic: BƯỚC 6
+    - generic: VF01
+    - generic: SD · FICO
+  - button "BƯỚC 7 KKA2 · VA88 CO · FI":
+    - generic: BƯỚC 7
+    - generic: KKA2 · VA88
+    - generic: CO · FI
+  - generic: CO · FI
+  - generic: "T-Code: KKA2 · VA88"
+  - 'heading "Bước 7: Phân Tích Kết Quả & Quyết Toán Đơn Hàng (Settlement)" [level=3]'
+  - button "Giải thích bước này":
+    - generic: Giải thích bước này
+  - generic: Đã hoàn thành
+  - paragraph: Quyết toán phần doanh thu và giá vốn đã ghi nhận; chi phí phần chưa giao tiếp tục theo dõi trên TK 154 trong mô hình mô phỏng.
+  - strong: "Bản chất hạch toán kế toán & SAP:"
+  - paragraph: "Phần chi phí quyết toán qua TK 154: 25.614.019 ₫. Số dư TK 154 sau quyết toán: 25.614.019 ₫. Kết chuyển 511 và 632 đã ghi nhận vào 911; không giả định toàn bộ đơn hàng đã giao."
+  - strong: Bảng Phân Tích Chênh Lệch Định Mức & Thực Tế (Target vs. Actual Variance — VA88)
+  - generic: CO-PA Settlement
+  - generic: "Giá thành kế hoạch (Standard):"
+  - text: 53.086.050 ₫
+  - generic: "Tỷ lệ chênh lệch thực tế (-3.5%):"
+  - text: "-1.858.012 ₫"
+  - generic: "Giá thành thực tế (Actual Cost):"
+  - text: 51.228.038 ₫
+  - paragraph:
+    - text: ⚡
+    - strong: "Quyết toán Non-valuated Stock:"
+    - text: "Tại bước này hệ thống hạch toán kết chuyển chi phí từ Sales Order Nợ TK 632 / Có TK 154 cho phần đã giao 25.614.019 ₫. Dở dang còn lại trên TK 154: 25.614.019 ₫. Chi phí phần chưa giao tiếp tục theo dõi ở WIP. Sau đó kết chuyển phần doanh thu và giá vốn đã ghi nhận vào TK 911."
+  - generic: Bút toán phát sinh tại bước này (3 chứng từ)
+  - generic: Theo TT 200/2014/TT-BTC
+  - table:
+    - rowgroup:
+      - row "Số Chứng Từ T-Code Diễn Giải Nghiệp Vụ Nợ (Dr) Có (Cr) Số Tiền (VND)":
+        - columnheader "Số Chứng Từ"
+        - columnheader "T-Code"
+        - columnheader "Diễn Giải Nghiệp Vụ"
+        - columnheader "Nợ (Dr)"
+        - columnheader "Có (Cr)"
+        - columnheader "Số Tiền (VND)"
+    - rowgroup:
+      - row "PKT-VA88-COGS VA88 / KKA2 Kết chuyển chi phí tập hợp trên Sales Order sang Giá vốn hàng bán (Non-valuated Stock) 632 154 25.614.019 ₫":
+        - cell "PKT-VA88-COGS"
+        - cell "VA88 / KKA2"
+        - cell "Kết chuyển chi phí tập hợp trên Sales Order sang Giá vốn hàng bán (Non-valuated Stock)"
+        - cell "632"
+        - cell "154"
+        - cell "25.614.019 ₫"
+      - row "PKT-VA88-01 VA88 Kết chuyển Doanh thu thuần bán hàng vào Tài khoản Xác định kết quả kinh doanh (CO-PA) 511 911 115.000.000 ₫":
+        - cell "PKT-VA88-01"
+        - cell "VA88"
+        - cell "Kết chuyển Doanh thu thuần bán hàng vào Tài khoản Xác định kết quả kinh doanh (CO-PA)"
+        - cell "511"
+        - cell "911"
+        - cell "115.000.000 ₫"
+      - row "PKT-VA88-02 VA88 Kết chuyển Giá vốn hàng bán vào Tài khoản Xác định kết quả kinh doanh (CO-PA) 911 632 25.614.019 ₫":
+        - cell "PKT-VA88-02"
+        - cell "VA88"
+        - cell "Kết chuyển Giá vốn hàng bán vào Tài khoản Xác định kết quả kinh doanh (CO-PA)"
+        - cell "911"
+        - cell "632"
+        - cell "25.614.019 ₫"
+  - heading "Bảng Điều Khiển Theo Dõi Kế Toán & Tồn Kho (Always-Visible Panels)" [level=2]
+  - heading "Thẻ Đơn Hàng Bán — Sales Order Cost Collector" [level=3]
+  - generic: SO-PIC-2026-49281
+  - paragraph: Đối tượng tập hợp chi phí & doanh thu theo dõi lãi lỗ MTO
+  - generic: Đã quyết toán CO-PA (VA88)
+  - generic: "Khách hàng OEM:"
+  - generic: Canon Vietnam Co., Ltd (Thăng Long)
+  - generic: "Mã linh kiện:"
+  - generic: PL-CANON-FRM02
+  - generic: "Số lượng đặt:"
+  - generic: 2.000 cái
+  - generic: "Loại kho Stock E:"
+  - generic: Non-valuated Stock
+  - generic: Chi Phí Sản Xuất Tích Lũy (Accumulated Costs)
+  - generic: 51.228.038 ₫
+  - text: NVL Hạt nhựa (621)
+  - generic: 15.974.369 ₫
+  - text: Nhân công ép (622)
+  - generic: 12.159.000 ₫
+  - text: Máy ép & SXC (627)
+  - generic: 23.094.669 ₫
+  - generic: Doanh thu ghi nhận (TK 511)
+  - text: 115.000.000 ₫
+  - generic: Đã xuất hóa đơn VF01
+  - generic: Giá vốn ghi nhận (TK 632)
+  - text: 25.614.019 ₫
+  - generic: Đã quyết toán tại VA88 (Bước 7)
+  - generic: Lợi nhuận gộp thực tế (Gross Profit)
+  - text: 89.385.981 ₫
+  - generic: "Biên lãi gộp:"
+  - strong: 77.73%
+  - heading "Kho Riêng Đơn Hàng — Special Stock E" [level=3]
+  - generic: SO Stock (Ind. Cust.)
+  - paragraph: Quản lý tách biệt tồn kho vật lý & giá trị theo số hiệu Sales Order
+  - generic: Đã xuất kho giao khách (PGI Completed)
+  - generic: NVL Hạt Nhựa (TK 152)
+  - generic: Mvt 261E
+  - generic: 0,00 kg
+  - generic: 0 ₫
+  - generic: Đã xuất kho đưa vào ép phun (261E)
+  - generic: Sản Phẩm Dở Dang (TK 154)
+  - generic: Routing/Ord
+  - generic: Số dư chi phí TK 154
+  - generic: 25.614.019 ₫
+  - generic: Theo số dư chứng từ đã ghi nhận
+  - generic: Thành Phẩm Kho E (TK 155)
+  - generic: 101E / 601E
+  - generic: 0 cái
+  - generic: 0 ₫
+  - generic: Đã xuất giao khách (PGI 601E)
+  - region "SAP Reports":
+    - heading "SAP Reports · SIMULATED" [level=2]
+    - paragraph: 11 báo cáo cho kịch bản cơ sở đã hoàn thành 7 bước. Bố cục mô phỏng; TT99 chưa được đối chiếu PDF Công báo. Xuất và kiểm tra ngay trong trình duyệt.
+    - button "Kiểm tra và tạo báo cáo"
+    - paragraph: Đối soát kỹ thuật đạt. Chưa phải nghiệm thu nghiệp vụ độc lập. RAW và manifest phải được tải cùng nhau.
+    - list:
+      - generic: FAGLL03 · 22 dòng
+      - button "Tải RAW"
+      - button "Tải manifest"
+      - generic: MB51 · 3 dòng
+      - button "Tải RAW"
+      - button "Tải manifest"
+      - generic: COOIS_HEADER · 1 dòng
+      - button "Tải RAW"
+      - button "Tải manifest"
+      - generic: COOIS_COMPONENTS · 1 dòng
+      - button "Tải RAW"
+      - button "Tải manifest"
+      - generic: COOIS_OPERATIONS · 1 dòng
+      - button "Tải RAW"
+      - button "Tải manifest"
+      - generic: COOIS_CONFIRMATIONS · 1 dòng
+      - button "Tải RAW"
+      - button "Tải manifest"
+      - generic: COOIS_GOODS_MOVEMENTS · 3 dòng
+      - button "Tải RAW"
+      - button "Tải manifest"
+      - generic: KOB1 · 3 dòng
+      - button "Tải RAW"
+      - button "Tải manifest"
+      - generic: KKS1 · 1 dòng
+      - button "Tải RAW"
+      - button "Tải manifest"
+      - generic: CK13N · 4 dòng
+      - button "Tải RAW"
+      - button "Tải manifest"
+      - generic: SUP01 · 1 dòng
+      - button "Tải RAW"
+      - button "Tải manifest"
+    - generic "Data Lab":
+      - heading "Data Lab · RAW → CLEAN" [level=3]
+      - paragraph: Kiểm hash, cột, kiểu dữ liệu, khóa và tổng tiền từ RAW vừa tạo. Chưa nghiệm thu đối soát nghiệp vụ.
+      - button "Chuẩn hóa và kiểm tra dữ liệu"
+      - paragraph: 11/11 báo cáo đạt kiểm tra chất lượng dữ liệu.
+      - list:
+        - generic: FAGLL03 · Đạt · 22 dòng CLEAN
+        - button "Tải nhật ký chất lượng"
+        - generic "Xem tối đa 3 dòng CLEAN và nguồn RAW"
+        - generic: MB51 · Đạt · 3 dòng CLEAN
+        - button "Tải nhật ký chất lượng"
+        - generic "Xem tối đa 3 dòng CLEAN và nguồn RAW"
+        - generic: COOIS_HEADER · Đạt · 1 dòng CLEAN
+        - button "Tải nhật ký chất lượng"
+        - generic "Xem tối đa 3 dòng CLEAN và nguồn RAW"
+        - generic: COOIS_COMPONENTS · Đạt · 1 dòng CLEAN
+        - button "Tải nhật ký chất lượng"
+        - generic "Xem tối đa 3 dòng CLEAN và nguồn RAW"
+        - generic: COOIS_OPERATIONS · Đạt · 1 dòng CLEAN
+        - button "Tải nhật ký chất lượng"
+        - generic "Xem tối đa 3 dòng CLEAN và nguồn RAW"
+        - generic: COOIS_CONFIRMATIONS · Đạt · 1 dòng CLEAN
+        - button "Tải nhật ký chất lượng"
+        - generic "Xem tối đa 3 dòng CLEAN và nguồn RAW"
+        - generic: COOIS_GOODS_MOVEMENTS · Đạt · 3 dòng CLEAN
+        - button "Tải nhật ký chất lượng"
+        - generic "Xem tối đa 3 dòng CLEAN và nguồn RAW"
+        - generic: KOB1 · Đạt · 3 dòng CLEAN
+        - button "Tải nhật ký chất lượng"
+        - generic "Xem tối đa 3 dòng CLEAN và nguồn RAW"
+        - generic: KKS1 · Đạt · 1 dòng CLEAN
+        - button "Tải nhật ký chất lượng"
+        - generic "Xem tối đa 3 dòng CLEAN và nguồn RAW"
+        - generic: CK13N · Đạt · 4 dòng CLEAN
+        - button "Tải nhật ký chất lượng"
+        - generic "Xem tối đa 3 dòng CLEAN và nguồn RAW"
+        - generic: SUP01 · Đạt · 1 dòng CLEAN
+        - button "Tải nhật ký chất lượng"
+        - generic "Xem tối đa 3 dòng CLEAN và nguồn RAW"
+      - list:
+        - text: SIM-0ca91a3854067d51_FAGLL03_CLEAN_v1.json
+        - button "Tải CLEAN"
+        - button "Tải manifest CLEAN"
+        - text: SIM-0ca91a3854067d51_MB51_CLEAN_v1.json
+        - button "Tải CLEAN"
+        - button "Tải manifest CLEAN"
+        - text: SIM-0ca91a3854067d51_COOIS_HEADER_CLEAN_v1.json
+        - button "Tải CLEAN"
+        - button "Tải manifest CLEAN"
+        - text: SIM-0ca91a3854067d51_COOIS_COMPONENTS_CLEAN_v1.json
+        - button "Tải CLEAN"
+        - button "Tải manifest CLEAN"
+        - text: SIM-0ca91a3854067d51_COOIS_OPERATIONS_CLEAN_v1.json
+        - button "Tải CLEAN"
+        - button "Tải manifest CLEAN"
+        - text: SIM-0ca91a3854067d51_COOIS_CONFIRMATIONS_CLEAN_v1.json
+        - button "Tải CLEAN"
+        - button "Tải manifest CLEAN"
+        - text: SIM-0ca91a3854067d51_COOIS_GOODS_MOVEMENTS_CLEAN_v1.json
+        - button "Tải CLEAN"
+        - button "Tải manifest CLEAN"
+        - text: SIM-0ca91a3854067d51_KOB1_CLEAN_v1.json
+        - button "Tải CLEAN"
+        - button "Tải manifest CLEAN"
+        - text: SIM-0ca91a3854067d51_KKS1_CLEAN_v1.json
+        - button "Tải CLEAN"
+        - button "Tải manifest CLEAN"
+        - text: SIM-0ca91a3854067d51_CK13N_CLEAN_v1.json
+        - button "Tải CLEAN"
+        - button "Tải manifest CLEAN"
+        - text: SIM-0ca91a3854067d51_SUP01_CLEAN_v1.json
+        - button "Tải CLEAN"
+        - button "Tải manifest CLEAN"
+      - region "Manufacturing Controls":
+        - heading "Controls · Đối soát Manufacturing" [level=3]
+        - paragraph: Đối chiếu dữ liệu CLEAN trong cùng kịch bản. Phạm vi mô phỏng, chưa nghiệm thu nghiệp vụ. Giải trình và nhật ký chỉ giữ trong phiên; tải hồ sơ trước khi tải lại trang.
+        - button "Chạy đối soát CLEAN" [disabled]
+        - paragraph: "7/7 phép đối chiếu mô phỏng khớp. Nghiệm thu nghiệp vụ: đang chờ."
+        - list:
+          - paragraph: "C01 · Material documents: COOIS ↔ MB51 · Khớp mô phỏng"
+          - paragraph: "Nghiệp vụ: PENDING_SME"
+          - generic: "{ \"documents\": 3 }"
+          - generic "Nguồn RAW của phép đối chiếu"
+          - paragraph: C02 · Component aggregate ↔ goods issues · Khớp mô phỏng
+          - paragraph: "Nghiệp vụ: BLOCKED_RESERVATION_MAPPING"
+          - generic: "{ \"componentGroups\": 1 }"
+          - generic "Nguồn RAW của phép đối chiếu"
+          - paragraph: C03 · Order delivered ↔ goods receipts · Khớp mô phỏng
+          - paragraph: "Nghiệp vụ: PENDING_SME"
+          - generic: "{ \"delivered\": 1000 }"
+          - generic "Nguồn RAW của phép đối chiếu"
+          - paragraph: C04 · SIM 154 collector ↔ KKS actual · Khớp mô phỏng
+          - paragraph: "Nghiệp vụ: BLOCKED_CO_COST_BASIS"
+          - generic: "{ \"actual\": 51228038 }"
+          - generic "Nguồn RAW của phép đối chiếu"
+          - paragraph: C05 · SIM settlement ↔ GL + WIP · Khớp mô phỏng
+          - paragraph: "Nghiệp vụ: BLOCKED_RECEIVER_ELIGIBLE_VARIANCE"
+          - generic: "{ \"settled\": 25614019, \"wip\": 25614019 }"
+          - generic "Nguồn RAW của phép đối chiếu"
+          - paragraph: C06 · CK13N header ↔ additive items · Khớp mô phỏng
+          - paragraph: "Nghiệp vụ: PENDING_SME"
+          - generic: "{ \"standardCost\": 53086050 }"
+          - generic "Nguồn RAW của phép đối chiếu"
+          - paragraph: C07 · Full-order cost-element variance bridge · Khớp mô phỏng
+          - paragraph: "Nghiệp vụ: BLOCKED_SAP_VARIANCE_CATEGORIES"
+          - generic: "{ \"materialDelta\": -579381, \"laborDelta\": -441000, \"overheadDelta\": -837631, \"residual\": 0, \"fullOrderVariance\": -1858012 }"
+          - generic "Nguồn RAW của phép đối chiếu"
+        - generic "Phạm vi và dữ liệu còn thiếu"
+        - heading "Giải trình / yêu cầu người khác review" [level=4]
+        - paragraph: Tên do người dùng tự khai, chưa xác thực vai trò. Yêu cầu review không phải phê duyệt và không xóa chênh lệch.
+        - text: Control
+        - combobox "Control cần giải trình":
+          - option "C01" [selected]
+          - option "C02"
+          - option "C03"
+          - option "C04"
+          - option "C05"
+          - option "C06"
+          - option "C07"
+        - text: Người giải trình
+        - textbox "Người giải trình"
+        - text: Giải trình
+        - textbox "Giải trình"
+        - text: Tham chiếu bằng chứng (mỗi dòng một tham chiếu)
+        - textbox "Tham chiếu bằng chứng"
+        - button "Lưu giải trình"
+        - button "Yêu cầu review"
+        - button "Tải hồ sơ đối soát và nhật ký"
+        - list
+  - heading "Hệ Thống Sổ Kế Toán & Cân Đối Phát Sinh" [level=3]
+  - generic: Thông tư 99/2025/TT-BTC
+  - paragraph: Tự động hạch toán đồng thời giữa Kế toán tài chính (FI) và Kế toán quản trị SAP CO
+  - button "Sổ Nhật Ký Chung (11)":
+    - generic: Sổ Nhật Ký Chung (11)
+  - button "Bảng Cân Đối Phát Sinh":
+    - generic: Bảng Cân Đối Phát Sinh
+  - button "Xuất Excel ERP (Full)":
+    - generic: Xuất Excel ERP (Full)
+  - button "In PDF":
+    - generic: In PDF
+  - generic: "CÂN SỔ ✓ (Nợ = Có: 395.184.114 ₫)"
+  - generic: "Trọng tâm hạch toán Bước 7:"
+  - generic: "Bước 7: Quyết toán đơn hàng KKA2 / VA88 & Khóa sổ xác định KQKD (TK 911)"
+  - generic: "Tài khoản ảnh hưởng:"
+  - generic: TK 154
+  - generic: TK 632
+  - generic: TK 511
+  - generic: TK 911
+  - textbox "Lọc theo số TK ('154', '632'...), Bước ('3', 'B3'...), T-Code, số CT..."
+  - generic: "Bước:"
+  - combobox:
+    - option "Tất cả các bước (1-7)" [selected]
+    - 'option "Bước 1: SO & CK51N (VA01)"'
+    - 'option "Bước 2: MRP Vật tư (MD02)"'
+    - 'option "Bước 3: SX & Xuất NVL (MIGO 261E, CO11N)"'
+    - 'option "Bước 4: Nhập kho TP & KCS (MIGO 101E)"'
+    - 'option "Bước 5: Giao hàng & PGI (VL01N, 601E)"'
+    - 'option "Bước 6: Hóa đơn & Doanh thu (VF01)"'
+    - 'option "Bước 7: Quyết toán & Khóa sổ (VA88, KKA2)"'
+  - generic: "Lọc TK:"
+  - combobox:
+    - option "Tất cả tài khoản Sổ Cái" [selected]
+    - option "TK 154 — CP SXKD dở dang"
+    - option "TK 632 — Giá vốn hàng bán"
+    - option "TK 155 — Thành phẩm kho E"
+    - option "TK 152 — Hạt nhựa nguyên liệu"
+    - option "TK 621 — CP NVL trực tiếp"
+    - option "TK 622 — CP Nhân công trực tiếp"
+    - option "TK 627 — CP Sản xuất chung"
+    - option "TK 511 — Doanh thu bán hàng"
+    - option "TK 131 — Phải thu khách hàng"
+    - option "TK 3331 — Thuế GTGT đầu ra"
+    - option "TK 334 — Phải trả người lao động"
+    - option "TK 214 — Hao mòn TSCĐ máy ép"
+    - option "TK 911 — Xác định kết quả KD"
+  - generic: "Phím tắt lọc:"
+  - button "TK 154"
+  - button "TK 632"
+  - button "TK 155"
+  - button "TK 621"
+  - button "TK 622"
+  - button "TK 627"
+  - button "TK 511"
+  - button "TK 131"
+  - generic: "|"
+  - button "B3"
+  - button "B4"
+  - button "B5"
+  - button "B6"
+  - button "B7"
+  - table:
+    - rowgroup:
+      - row "STT Số CT Bước / T-Code Diễn Giải Nghiệp Vụ Nợ (Dr) Có (Cr) Số Tiền (VND) Đối Tượng Chi Phí":
+        - columnheader "STT"
+        - columnheader "Số CT"
+        - columnheader "Bước / T-Code"
+        - columnheader "Diễn Giải Nghiệp Vụ"
+        - columnheader "Nợ (Dr)"
+        - columnheader "Có (Cr)"
+        - columnheader "Số Tiền (VND)"
+        - columnheader "Đối Tượng Chi Phí"
+    - rowgroup:
+      - 'row "1 PKT-261E-01 B3: MIGO 261E Xuất 190,00 kg Hạt nhựa PA66 + 30% Glass Fiber chống cháy V0 cho Đơn hàng SO-PIC-2026-49281 621 152 15.974.369 ₫ Lệnh SX #PRD-01 (SO-PIC-2026-49281)"':
+        - cell "1"
+        - cell "PKT-261E-01"
+        - 'cell "B3: MIGO 261E"':
+          - generic: "B3: MIGO 261E"
+        - cell "Xuất 190,00 kg Hạt nhựa PA66 + 30% Glass Fiber chống cháy V0 cho Đơn hàng SO-PIC-2026-49281"
+        - cell "621"
+        - cell "152"
+        - cell "15.974.369 ₫"
+        - 'cell "Lệnh SX #PRD-01 (SO-PIC-2026-49281)"'
+      - 'row "2 PKT-CO11N-01 B3: CO11N Chi phí nhân công thợ vận hành máy ép nhựa cho Đơn hàng SO-PIC-2026-49281 622 334 12.159.000 ₫ Lệnh SX #PRD-01 (SO-PIC-2026-49281)"':
+        - cell "2"
+        - cell "PKT-CO11N-01"
+        - 'cell "B3: CO11N"':
+          - generic: "B3: CO11N"
+        - cell "Chi phí nhân công thợ vận hành máy ép nhựa cho Đơn hàng SO-PIC-2026-49281"
+        - cell "622"
+        - cell "334"
+        - cell "12.159.000 ₫"
+        - 'cell "Lệnh SX #PRD-01 (SO-PIC-2026-49281)"'
+      - 'row "3 PKT-CO11N-02 B3: CO11N Khấu hao máy ép phun, khuôn mẫu, điện 3 pha và phụ kiện bao bì chi tiết PL-CANON-FRM02 627 214 23.094.669 ₫ Lệnh SX #PRD-01 (SO-PIC-2026-49281)"':
+        - cell "3"
+        - cell "PKT-CO11N-02"
+        - 'cell "B3: CO11N"':
+          - generic: "B3: CO11N"
+        - cell "Khấu hao máy ép phun, khuôn mẫu, điện 3 pha và phụ kiện bao bì chi tiết PL-CANON-FRM02"
+        - cell "627"
+        - cell "214"
+        - cell "23.094.669 ₫"
+        - 'cell "Lệnh SX #PRD-01 (SO-PIC-2026-49281)"'
+      - 'row "4 PKT-154-01 B3: CO01 Kết chuyển chi phí NVL trực tiếp sang chi phí sản xuất dở dang 154 621 15.974.369 ₫ Đối tượng tính giá thành: SO-PIC-2026-49281"':
+        - cell "4"
+        - cell "PKT-154-01"
+        - 'cell "B3: CO01"':
+          - generic: "B3: CO01"
+        - cell "Kết chuyển chi phí NVL trực tiếp sang chi phí sản xuất dở dang"
+        - cell "154"
+        - cell "621"
+        - cell "15.974.369 ₫"
+        - 'cell "Đối tượng tính giá thành: SO-PIC-2026-49281"'
+      - 'row "5 PKT-154-02 B3: CO01 Kết chuyển chi phí nhân công trực tiếp sang chi phí sản xuất dở dang 154 622 12.159.000 ₫ Đối tượng tính giá thành: SO-PIC-2026-49281"':
+        - cell "5"
+        - cell "PKT-154-02"
+        - 'cell "B3: CO01"':
+          - generic: "B3: CO01"
+        - cell "Kết chuyển chi phí nhân công trực tiếp sang chi phí sản xuất dở dang"
+        - cell "154"
+        - cell "622"
+        - cell "12.159.000 ₫"
+        - 'cell "Đối tượng tính giá thành: SO-PIC-2026-49281"'
+      - 'row "6 PKT-154-03 B3: CO01 Kết chuyển chi phí sản xuất chung máy & điện sang chi phí sản xuất dở dang 154 627 23.094.669 ₫ Đối tượng tính giá thành: SO-PIC-2026-49281"':
+        - cell "6"
+        - cell "PKT-154-03"
+        - 'cell "B3: CO01"':
+          - generic: "B3: CO01"
+        - cell "Kết chuyển chi phí sản xuất chung máy & điện sang chi phí sản xuất dở dang"
+        - cell "154"
+        - cell "627"
+        - cell "23.094.669 ₫"
+        - 'cell "Đối tượng tính giá thành: SO-PIC-2026-49281"'
+      - 'row "7 PKT-VF01-01 B6: VF01 Doanh thu phần đã giao 1.000 cái PL-CANON-FRM02 cho Canon Vietnam Co., Ltd (Thăng Long) 131 511 115.000.000 ₫ Hóa đơn #90038101 (SO-PIC-2026-49281)"':
+        - cell "7"
+        - cell "PKT-VF01-01"
+        - 'cell "B6: VF01"':
+          - generic: "B6: VF01"
+        - cell "Doanh thu phần đã giao 1.000 cái PL-CANON-FRM02 cho Canon Vietnam Co., Ltd (Thăng Long)"
+        - cell "131"
+        - cell "511"
+        - cell "115.000.000 ₫"
+        - 'cell "Hóa đơn #90038101 (SO-PIC-2026-49281)"'
+      - 'row "8 PKT-VF01-02 B6: VF01 Thuế GTGT 10% theo Hóa đơn bán hàng OEM cho Canon Vietnam Co., Ltd (Thăng Long) 131 3331 11.500.000 ₫ Hóa đơn #90038101 (SO-PIC-2026-49281)"':
+        - cell "8"
+        - cell "PKT-VF01-02"
+        - 'cell "B6: VF01"':
+          - generic: "B6: VF01"
+        - cell "Thuế GTGT 10% theo Hóa đơn bán hàng OEM cho Canon Vietnam Co., Ltd (Thăng Long)"
+        - cell "131"
+        - cell "3331"
+        - cell "11.500.000 ₫"
+        - 'cell "Hóa đơn #90038101 (SO-PIC-2026-49281)"'
+      - 'row "9 PKT-VA88-COGS B7: VA88 / KKA2 Kết chuyển chi phí tập hợp trên Sales Order sang Giá vốn hàng bán (Non-valuated Stock) 632 154 25.614.019 ₫ Quyết toán Sales Order SO-PIC-2026-49281"':
+        - cell "9"
+        - cell "PKT-VA88-COGS"
+        - 'cell "B7: VA88 / KKA2"':
+          - generic: "B7: VA88 / KKA2"
+        - cell "Kết chuyển chi phí tập hợp trên Sales Order sang Giá vốn hàng bán (Non-valuated Stock)"
+        - cell "632"
+        - cell "154"
+        - cell "25.614.019 ₫"
+        - cell "Quyết toán Sales Order SO-PIC-2026-49281"
+      - 'row "10 PKT-VA88-01 B7: VA88 Kết chuyển Doanh thu thuần bán hàng vào Tài khoản Xác định kết quả kinh doanh (CO-PA) 511 911 115.000.000 ₫ CO-PA Segment: Canon Vietnam Co., Ltd (Thăng Long) / PL-CANON-FRM02"':
+        - cell "10"
+        - cell "PKT-VA88-01"
+        - 'cell "B7: VA88"':
+          - generic: "B7: VA88"
+        - cell "Kết chuyển Doanh thu thuần bán hàng vào Tài khoản Xác định kết quả kinh doanh (CO-PA)"
+        - cell "511"
+        - cell "911"
+        - cell "115.000.000 ₫"
+        - 'cell "CO-PA Segment: Canon Vietnam Co., Ltd (Thăng Long) / PL-CANON-FRM02"'
+      - 'row "11 PKT-VA88-02 B7: VA88 Kết chuyển Giá vốn hàng bán vào Tài khoản Xác định kết quả kinh doanh (CO-PA) 911 632 25.614.019 ₫ CO-PA Segment: Canon Vietnam Co., Ltd (Thăng Long) / PL-CANON-FRM02"':
+        - cell "11"
+        - cell "PKT-VA88-02"
+        - 'cell "B7: VA88"':
+          - generic: "B7: VA88"
+        - cell "Kết chuyển Giá vốn hàng bán vào Tài khoản Xác định kết quả kinh doanh (CO-PA)"
+        - cell "911"
+        - cell "632"
+        - cell "25.614.019 ₫"
+        - 'cell "CO-PA Segment: Canon Vietnam Co., Ltd (Thăng Long) / PL-CANON-FRM02"'
+  - heading "Phân tích Lợi nhuận (Account-Based Margin Analysis)" [level=3]:
+    - text: Phân tích Lợi nhuận (Account-Based Margin Analysis)
+  - paragraph: Đọc từ selectMarginAnalysis() trên ACDOCA — không phải costing-based CO-PA.
+  - generic: S/4HANA · ACDOCA · bước 7
+  - text: LN trước giá vốn settlement
+  - paragraph: DT 511 − (632110 + 632120 + 632130 + 632140)
+  - term: 511 Doanh thu
+  - definition: 115.000.000 ₫
+  - term: 632110 Vật liệu
+  - definition: 0 ₫
+  - term: 632120 Nhân công
+  - definition: 0 ₫
+  - term: 632130 Máy & KH
+  - definition: 0 ₫
+  - term: 632140 SXC
+  - definition: 0 ₫
+  - term: LN trước giá vốn settlement
+  - definition: 115.000.000 ₫
+  - text: LN gộp THỰC TẾ
+  - paragraph: Sau ghi nhận giá vốn / chênh lệch settlement
+  - term: Giá vốn settlement (632)
+  - definition: +25.614.019 ₫
+  - term: LN gộp thực tế
+  - definition: 89.385.981 ₫
+  - term:
+    - text: Biên LN
+  - definition: 77.73%
+  - term: Thẻ đơn hàng
+  - definition: 89.385.981 ₫ ✓ khớp
+  - generic: SAP CO-PA · PROFITABILITY ANALYSIS
+  - generic: Đã Quyết Toán Xong 7 Bước (VA88 Settled)
+  - heading "Order Profit Dashboard — Phân Tích Hiệu Quả & Lợi Nhuận Đơn Hàng MTO" [level=2]
+  - generic: SO:SO-PIC-2026-49281|Canon Vietnam Co., Ltd (Thăng Long)
+  - text: Doanh Thu Thuần (TK 511)
+  - generic: Đã hạch toán VF01
+  - generic: 115.000.000 ₫
+  - generic: "Đơn giá: 115.000 ₫ / cái"
+  - generic: "SL: 2.000"
+  - text: Giá Vốn Hàng Bán (TK 632)
+  - generic: Giá vốn đã ghi nhận
+  - generic: 25.614.019 ₫
+  - generic: "Định mức KH: 26.543.025 ₫"
+  - generic: Tiết kiệm
+  - text: Lợi Nhuận Gộp Thực Tế
+  - generic: 511 - 632
+  - generic: 89.385.981 ₫
+  - text: +929.006 ₫
+  - generic: so với KH (88.456.975 ₫)
+  - text: Tỷ Suất LN Gộp (Gross Margin)
+  - generic: "% Biên Lãi"
+  - generic: 77.7%
+  - generic: "Kế hoạch: 76.9%"
+  - generic: Đạt KPI
+  - heading "Biểu Đồ So Sánh Doanh Thu (511), Giá Vốn (632) & Lợi Nhuận Gộp" [level=3]:
+    - generic: Biểu Đồ So Sánh Doanh Thu (511), Giá Vốn (632) & Lợi Nhuận Gộp
+  - paragraph: Đối chiếu trực quan giữa Kế hoạch (BOM/Routing) và Thực tế sản xuất theo đơn hàng
+  - generic: Kế hoạch
+  - generic: Thực tế
+  - application:
+    - generic: Doanh Thu 511
+    - generic: Giá Vốn 632
+    - generic: Lợi Nhuận Gộp
+    - generic: "0"
+    - generic: 30M
+    - generic: 60M
+    - generic: 90M
+    - generic: 120M
+  - generic: Doanh Thu 511
+  - text: 115.000.000 ₫
+  - generic: Giá Vốn 632
+  - text: 25.614.019 ₫
+  - generic: Lợi Nhuận Gộp
+  - text: 89.385.981 ₫
+  - heading "Cơ Cấu Giá Vốn Thực Tế (TK 632)" [level=3]:
+    - text: Cơ Cấu Giá Vốn Thực Tế (TK 632)
+  - generic: 25.614.019 ₫
+  - paragraph: Kế hoạch phần đã giao và chênh lệch đối chiếu với giá vốn đã ghi nhận; chưa xác định nguyên nhân chênh lệch.
+  - generic: NVL kế hoạch phần đã giao (621)
+  - text: 8.276.875 ₫
+  - generic: (32.3%)
+  - generic: Nhân công kế hoạch phần đã giao (622)
+  - text: 6.300.000 ₫
+  - generic: (24.6%)
+  - generic: SXC kế hoạch phần đã giao (627)
+  - text: 11.966.150 ₫
+  - generic: (46.7%)
+  - generic: Chênh lệch so với kế hoạch đã giao
+  - text: "-929.006 ₫"
+  - generic: (-3.6%)
+  - generic: Nhận Định Quản Trị Giá Thành (FP&A Insight)
+  - paragraph:
+    - text: Đơn hàng đạt biên lợi nhuận gộp lý tưởng
+    - strong: 77.7%
+    - text: (vượt ngưỡng an toàn 20% cho dòng sản phẩm ép nhựa kỹ thuật cao OEM).
+  - generic: "Chế độ kho: Non-valuated Stock"
+  - generic: "Khấu hao máy: 161,5h"
+- contentinfo:
+  - generic: Sava ERP Cockpit — Enterprise Simulation & Costing Engine
+  - paragraph: Bản demo / prototype · dữ liệu minh họa SAVA (Công ty TNHH Công nghệ Chính xác SAVA — hư cấu), không phải số liệu doanh nghiệp thật.
+  - paragraph:
+    - text: Thiết kế & phát triển bởi
+    - strong: Hoàng Quân (Mr Quân)
+    - text: — chuyên gia Tài chính · Kế toán · FP&A · Kiểm soát nội bộ, kết hợp nghiệp vụ tài chính/kiểm toán với công nghệ AI.
+  - paragraph:
+    - text: "Savafinlab — Tư vấn Tài chính, Thuế & Kế toán · Liên hệ hợp tác / tư vấn qua website:"
+    - link "savafinlab.com.vn":
+      - /url: https://savafinlab.com.vn
+- generic: 30M

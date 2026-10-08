@@ -42,3 +42,14 @@ Business blocks giữ nguyên kể cả7 phép mô phỏng khớp. S4 kỹ thu�
 Margin Analysis phân biệt “Giá vốn settlement (632)” khi không có giá vốn định mức đã ghi với “Chênh lệch settlement (632)” khi có; không gọi toàn bộ Non-valuated COGS là variance. Không đổi posting arithmetic. Legacy export descriptions và giả định GR/yield=delivered vẫn cần SME xem xét.
 
 Tiếp theo ưu tiên bổ sung bằng chứng/contract cho4business blocks và kiểm tải thực; rồi S5 mart/commentary chỉ đọc CONTROL đủ điều kiện, phân biệt facts/hypotheses, không dựng root cause từ arithmetic deltas. Real SAP API, database/storage, multi-period/UoM conversions, CFO expansion và ZFIR009A/ZFIR159 chưa cósamples tiếp tục deferred. Không push/merge/deploy.
+
+
+## Chốt browser QA và bàn giao — 08/10/2026
+
+Codecommit `da7bd0b4b764a66a4929158da10a0b962bb1a589`. Agent QA trình duyệt độc lập đã chạy Samsung/Valuated giao đủ và Canon/Non-valuated -3,5% giao1.000/2.000: DataLab11/11 và Controls7/7 kỹ thuật khớp. C02/C04/C05/C07 giữ businessBLOCKED, C01/C03/C06 PENDING_SME. EXPLAIN→REQUEST_REVIEW ghi vào nhật ký nhưng không hiện nút approve hoặc thay nghiệm thu. Canon actual51.228.038, settled/WIP mỗi25.614.019, full-order variance-1.858.012/residual0; không đem full-order variance so với delivered dashboard variance-929.006. Nhãn giá vốn settlement632 đã đúng theo scopeNonValuated.
+
+QA xác minh parameterchange vô hiệu hóa RAW/CLEAN/CONTROL/journal, khôi phục tham số và WebinarOFF, không tạo lead. Bằng chứng nguyên bản tại browser-qa/, kèm SHA256evidence-manifest. Focused2case browser QA không phải54casesmanual/golden/SME/legalacceptance. Downloads completion/content/hash còn UNVERIFIED.
+
+`evidence/build-provenance.json`: script phục vụ ở3017 khớp byte localdist/S4label, asset SHA256135c42ae14c65d54a9a84d2e345486782652b435c7b3dfc65664179289d82b02. Buildidentity hỗ trợ nối bằng chứng với codecommit, không tự nghiệm thu nghiệp vụ. Main926837a giữ nguyên; protected posting/oracle/config không đổi. Không push/merge/deploy.
+
+Đã lưu bàn giao `D:\Sava_Second Brain\00_Inbox\AI\SAP_Simulator_S4_Controls_2026-10-08.md`. Tiếp theo bổ sung authoritative contract/evidence cho businessblocks và goldenreview; S5 có thể dựng mart mô phỏng nhưng không được gắn approved khi input gate chưa đạt.

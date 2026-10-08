@@ -1,0 +1,94 @@
+Controls · Đối soát Manufacturing
+
+Đối chiếu dữ liệu CLEAN trong cùng kịch bản. Phạm vi mô phỏng, chưa nghiệm thu nghiệp vụ. Giải trình và nhật ký chỉ giữ trong phiên; tải hồ sơ trước khi tải lại trang.
+
+Chạy đối soát CLEAN
+
+7/7 phép đối chiếu mô phỏng khớp. Nghiệm thu nghiệp vụ: đang chờ.
+
+C01 · Material documents: COOIS ↔ MB51 · Khớp mô phỏng
+
+Nghiệp vụ: PENDING_SME
+
+{
+  "documents": 3
+}
+Nguồn RAW của phép đối chiếu
+
+C02 · Component aggregate ↔ goods issues · Khớp mô phỏng
+
+Nghiệp vụ: BLOCKED_RESERVATION_MAPPING
+
+{
+  "componentGroups": 1
+}
+Nguồn RAW của phép đối chiếu
+
+C03 · Order delivered ↔ goods receipts · Khớp mô phỏng
+
+Nghiệp vụ: PENDING_SME
+
+{
+  "delivered": 1000
+}
+Nguồn RAW của phép đối chiếu
+
+C04 · SIM 154 collector ↔ KKS actual · Khớp mô phỏng
+
+Nghiệp vụ: BLOCKED_CO_COST_BASIS
+
+{
+  "actual": 51228038
+}
+Nguồn RAW của phép đối chiếu
+
+C05 · SIM settlement ↔ GL + WIP · Khớp mô phỏng
+
+Nghiệp vụ: BLOCKED_RECEIVER_ELIGIBLE_VARIANCE
+
+{
+  "settled": 25614019,
+  "wip": 25614019
+}
+Nguồn RAW của phép đối chiếu
+
+C06 · CK13N header ↔ additive items · Khớp mô phỏng
+
+Nghiệp vụ: PENDING_SME
+
+{
+  "standardCost": 53086050
+}
+Nguồn RAW của phép đối chiếu
+
+C07 · Full-order cost-element variance bridge · Khớp mô phỏng
+
+Nghiệp vụ: BLOCKED_SAP_VARIANCE_CATEGORIES
+
+{
+  "materialDelta": -579381,
+  "laborDelta": -441000,
+  "overheadDelta": -837631,
+  "residual": 0,
+  "fullOrderVariance": -1858012
+}
+Nguồn RAW của phép đối chiếu
+Phạm vi và dữ liệu còn thiếu
+Giải trình / yêu cầu người khác review
+
+Tên do người dùng tự khai, chưa xác thực vai trò. Yêu cầu review không phải phê duyệt và không xóa chênh lệch.
+
+Control
+C01
+C02
+C03
+C04
+C05
+C06
+C07
+Người giải trình
+Giải trình
+Tham chiếu bằng chứng (mỗi dòng một tham chiếu)
+Lưu giải trình
+Yêu cầu review
+Tải hồ sơ đối soát và nhật ký

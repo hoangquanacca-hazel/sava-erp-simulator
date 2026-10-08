@@ -1,0 +1,82 @@
+{
+  "target": "http://127.0.0.1:3017/",
+  "date": "2026-10-08",
+  "codeCommit": "da7bd0b4b764a66a4929158da10a0b962bb1a589",
+  "commitProvenance": "Parent supplied source-to-served asset binding, not inferred from UI",
+  "status": "PASS_FOCUSED_UI",
+  "cases": [
+    {
+      "scenario": "Samsung Valuated full delivery",
+      "dataLab": "11/11 PASS",
+      "controls": "7/7 simulation match",
+      "actual": 48780088,
+      "settled": 0,
+      "wip": 0
+    },
+    {
+      "scenario": "Canon Non-valuated -3.5%, delivered1000/2000",
+      "dataLab": "11/11 PASS",
+      "controls": "7/7 simulation match",
+      "actual": 51228038,
+      "settled": 25614019,
+      "wip": 25614019,
+      "standardCost": 53086050,
+      "fullOrderVariance": -1858012,
+      "residual": 0,
+      "deliveredDashboardVariance": -929006,
+      "marginLabel": "Giá vốn settlement (632)",
+      "grossProfit": 89385981
+    }
+  ],
+  "businessStatuses": {
+    "C01": "PENDING_SME",
+    "C02": "BLOCKED_RESERVATION_MAPPING",
+    "C03": "PENDING_SME",
+    "C04": "BLOCKED_CO_COST_BASIS",
+    "C05": "BLOCKED_RECEIVER_ELIGIBLE_VARIANCE",
+    "C06": "PENDING_SME",
+    "C07": "BLOCKED_SAP_VARIANCE_CATEGORIES"
+  },
+  "workflow": {
+    "actor": "QA local",
+    "actions": [
+      "EXPLAIN",
+      "REQUEST_REVIEW"
+    ],
+    "approvalButtons": 0,
+    "acceptanceUnchanged": true,
+    "rawLineage": "MB51 rawLine4 and64hexhash displayed"
+  },
+  "staleInvalidation": {
+    "priceBefore": 115000,
+    "priceChanged": 115001,
+    "rawButtonsAfter": 0,
+    "dataLabAfter": false,
+    "controlsAfter": false,
+    "journalAfter": false,
+    "priceRestored": 115000
+  },
+  "restoration": {
+    "initialWebinar": "OFF",
+    "finalWebinar": "OFF verified",
+    "leads": 0,
+    "personalDataSubmitted": false,
+    "AIProviderCalled": false
+  },
+  "limitations": [
+    "Downloads skipped: completion/filehash UNVERIFIED as previously unsupported protocol",
+    "Two focused browser cases, not54manualcases",
+    "Human SME/SAP/legal/M01-M10 acceptance NOTRUN"
+  ],
+  "artifacts": [
+    "samsung-controls-review.jpg",
+    "samsung-controls.txt",
+    "canon-controls.jpg",
+    "canon-controls.txt",
+    "canon-snapshot.txt",
+    "invalidated-snapshot.txt",
+    "restored-snapshot.txt",
+    "webinar-restored-off.jpg",
+    "controls-viewport.jpg"
+  ]
+}

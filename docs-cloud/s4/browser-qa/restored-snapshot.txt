@@ -1,0 +1,371 @@
+- navigation "Hệ sinh thái Savafinlab":
+  - link "savafinlab":
+    - /url: https://www.savafinlab.com.vn/
+    - generic: savafinlab
+  - generic: /
+  - generic: Sava ERP Cockpit
+  - generic "Sava Lab ▾"
+  - link "Đặt lịch tư vấn":
+    - /url: https://tally.so/r/xXl2ey
+- banner:
+  - strong: MÔ PHỎNG — Không phải hệ thống SAP thật
+  - text: "| SAVA Precision Technology · Đào tạo thực chiến quy trình Make-to-Order (MTO) chuẩn Thông tư 99/2025/TT-BTC"
+  - heading "Sava ERP Cockpit — Enterprise Simulation & Costing Engine" [level=1]
+  - generic: SD · MM · PP · QM · FICO (TT 99/2025)
+  - paragraph: SAVA Precision Technology — Sản xuất linh kiện ép nhựa chính xác theo đơn hàng OEM
+  - generic: OK-Code
+  - textbox "/nVA01, CK11N..."
+  - button "✓"
+  - generic "Mô phỏng giới hạn số lượng người dùng đồng thời trên giấy phép SAP Demo (Tối đa 5 active sessions)":
+    - generic: "Số Session còn trống: 2/5"
+  - button "SAP Fiori":
+    - generic: SAP Fiori
+  - button "SAP Classic GUI":
+    - generic: SAP Classic GUI
+  - button "Tra cứu T-Code":
+    - generic: Tra cứu T-Code
+  - button "Hướng dẫn":
+    - generic: Hướng dẫn
+  - combobox "Chọn tình huống mẫu":
+    - option "📋 Chọn tình huống mẫu..." [disabled] [selected]
+    - 'option "Tình huống 1: Vỏ camera Samsung (MTO Thuần - Kho Định Giá)"'
+    - 'option "Tình huống 2: Khung máy in Canon (Kho Phi Định Giá - Non-valuated)"'
+    - 'option "Tình huống 3: Nắp cảm biến Denso (Strategy 25 - MTO Biến Thể)"'
+  - button "Tham số CK11N":
+    - generic: Tham số CK11N
+  - button "7 Bước SAP MTO":
+    - generic: 7 Bước SAP MTO
+  - button "Báo cáo PDF":
+    - generic: Báo cáo PDF
+  - button "Reset":
+    - generic: Reset
+  - button "Trợ giảng AI":
+    - generic: Trợ giảng AI
+- navigation:
+  - button "Cockpit 7 bước"
+  - button "Variance 5-type"
+  - button "Đóng sổ cuối kỳ"
+  - button "WIP / KKA2"
+  - button "MDG Gate"
+  - button "SoD / Audit"
+  - button "Material Ledger"
+  - button "GR/IR MR11"
+  - button "Intercompany TP"
+- text: "Vai trò (MÔ PHỎNG):"
+- combobox:
+  - option "Sales"
+  - option "Kho"
+  - option "Kế hoạch SX"
+  - option "Kế toán trưởng" [selected]
+- main:
+  - generic: Khởi Tạo Tham Số Đơn Hàng & Tính Giá Thành (CK11N / CK24)
+  - heading "Cấu hình Thông số Đơn hàng & Bảng Định Mức Sản Xuất MTO" [level=2]
+  - paragraph: Nhập các chỉ tiêu kỹ thuật BOM & Routing của đơn hàng gia công ép nhựa OEM tại SAVA Precision Technology. Hệ thống tự động tính toán giá thành kế hoạch (Cost Rollup), doanh thu, VAT và biên lợi nhuận theo thời gian thực.
+  - button "Tải file Excel mẫu":
+    - generic: Tải file Excel mẫu
+  - button "Import Excel Tham Số":
+    - generic: Import Excel Tham Số
+  - button "Vào 7 bước SAP MTO":
+    - generic: Vào 7 bước SAP MTO
+  - generic: 1. Thông tin Khách hàng OEM & Sản phẩm Ép Nhựa
+  - generic: Khách hàng OEM (Customer)
+  - 'textbox "Ví dụ: Samsung Electronics Vietnam"': Canon Vietnam Co., Ltd (Thăng Long)
+  - generic: Mã linh kiện nhựa (Component Code)
+  - 'textbox "Ví dụ: PL-SEVT-CAM08"': PL-CANON-FRM02
+  - generic: Tên chi tiết sản phẩm / Mô tả kỹ thuật
+  - 'textbox "Ví dụ: Vỏ bảo vệ cụm camera Polycarbonate chịu lực"': Khung máy in Laser chính xác cao sợi thủy tinh 30%
+  - generic: 2. Số lượng Đặt hàng & Đơn giá Thương mại (VA01)
+  - generic: Số lượng sản xuất (Cái / Units)
+  - spinbutton: "2000"
+  - generic: Quy mô lô đơn hàng OEM
+  - generic: Đơn giá bán (VND / Cái)
+  - spinbutton: "115000"
+  - generic: ≈ 115.000 ₫ / cái
+  - generic: Thuế suất GTGT (VAT)
+  - combobox:
+    - option "10% (Chuẩn linh kiện nhựa TT99/TT200)" [selected]
+    - option "8% (Ưu đãi chính phủ)"
+    - option "0% (Khu chế xuất / Xuất khẩu EPE)"
+  - generic: Tài khoản 3331 đầu ra
+  - generic: 3. Định Mức Nguyên Vật Liệu BOM (CS01 / CK11N — TK 621 / 152)
+  - button "Thêm vật tư":
+    - generic: Thêm vật tư
+  - paragraph: "Cơ cấu các nguyên liệu cấu thành 1.000 sản phẩm ép nhựa. Chi phí trực tiếp (TK 621) được tự động tính bằng: Tổng [ Định mức × (1 + Hao hụt%) × Đơn giá × Sản lượng ]."
+  - table:
+    - rowgroup:
+      - row "Mã vật tư Tên nguyên vật liệu Định mức/1000 Hao hụt % Đơn giá (VND) ĐVT Thành tiền NVL Xóa":
+        - columnheader "Mã vật tư"
+        - columnheader "Tên nguyên vật liệu"
+        - columnheader "Định mức/1000"
+        - columnheader "Hao hụt %"
+        - columnheader "Đơn giá (VND)"
+        - columnheader "ĐVT"
+        - columnheader "Thành tiền NVL"
+        - columnheader "Xóa"
+    - rowgroup:
+      - row "ROH-H-T-NH-A-P Hạt nhựa kỹ thuật Hạt nhựa PA66 + 30% Glass Fiber chống cháy V0 95 2.5 85000 KG 16.553.750 ₫":
+        - cell "ROH-H-T-NH-A-P":
+          - textbox: ROH-H-T-NH-A-P
+        - cell "Hạt nhựa kỹ thuật Hạt nhựa PA66 + 30% Glass Fiber chống cháy V0":
+          - textbox: Hạt nhựa kỹ thuật Hạt nhựa PA66 + 30% Glass Fiber chống cháy V0
+        - cell "95":
+          - spinbutton: "95"
+        - cell "2.5":
+          - spinbutton: "2.5"
+        - cell "85000":
+          - spinbutton: "85000"
+        - cell "KG"
+        - cell "16.553.750 ₫"
+        - cell:
+          - button "Xóa vật tư này khỏi BOM":
+  - generic: "Tổng Chi Phí Nguyên Liệu Trực Tiếp (TK 621 - Direct Material Cost):"
+  - strong: 16.553.750 ₫
+  - generic: 4. Định Mức Chuyền Ép & Work Center Routing (CA01 / CR01 — TK 622 & 627)
+  - generic: Mã & Tên Work Center (Xưởng máy ép)
+  - textbox: WC-INJ-01
+  - textbox: Máy ép Haitian Mars II 350T & Thợ bậc 4
+  - generic: Setup máy (Giờ)
+  - spinbutton: "1.5"
+  - generic: Chu kỳ ép (Giây/SP)
+  - spinbutton: "288"
+  - generic: Đơn giá giờ máy ép (VND/giờ — TK 627)
+  - spinbutton: "135000"
+  - generic: Khấu hao máy ép 350T & điện năng 3 pha
+  - generic: Đơn giá giờ nhân công (VND/giờ — TK 622)
+  - spinbutton: "70000"
+  - generic: Lương thợ kỹ thuật bậc 4 đứng máy ép
+  - generic: Tỷ lệ Phân bổ Chi phí Chung nhà máy (%) (Factory Overhead Rate — TK 627)
+  - slider: "8"
+  - generic: 8%
+  - generic: Phân bổ chi phí quản lý xưởng, bảo trì khuôn đúc, xử lý nước làm mát
+  - generic: "Thời gian chạy máy:"
+  - strong: 161.5 giờ làm việc
+  - generic: "Nhân công trực tiếp (622):"
+  - strong: 12.600.000 ₫
+  - generic: "Máy & SXC nhà máy (627):"
+  - strong: 23.932.300 ₫
+  - generic: 5. Chiến Lược Sản Xuất SAP & Loại Kho Sales Order Stock E
+  - generic: Chiến lược MTO (Strategy)
+  - combobox:
+    - option "Strategy 20 — MTO Thuần Túy (Make-to-Order Standard)" [selected]
+    - option "Strategy 25 — MTO Đa Biến Thể (Variant Configuration LO-VC)"
+  - generic: Loại kho Sales Order Stock (Special Stock E)
+  - combobox:
+    - option "Valuated Stock E (Định giá tức thời — PGI ghi nhận Nợ 632 / Có 155)"
+    - option "Non-valuated Stock E (Phi định giá — COGS ghi nhận tại VA88 Settlement)" [selected]
+  - generic: 6. Chênh Lệch Chi Phí Thực Tế Tại Xưởng (Actual Cost Variance %)
+  - generic: "-3.5%"
+  - paragraph: Mô phỏng sai lệch giữa định mức kế hoạch (Standard Costing) và chi phí thực tế phát sinh tại xưởng (hao hụt NVL hoặc tăng giờ chạy máy). Được xử lý chênh lệch giá thành tại Bước 7 (VA88 Settlement).
+  - slider: "-3"
+  - spinbutton: "-3.5"
+  - paragraph: "Phân rã 5 loại (CO-PA, không tách FI 632): pₘ giá NVL %, qₘ SL NVL %, rₑ nguồn lực %, Su phế phẩm. Ô trống = 0."
+  - generic: pₘ % giá NVL
+  - spinbutton "pₘ % giá NVL": "0"
+  - generic: qₘ % SL NVL
+  - spinbutton "qₘ % SL NVL": "0"
+  - generic: rₑ % nguồn lực
+  - spinbutton "rₑ % nguồn lực": "0"
+  - generic: Su phế phẩm (cái)
+  - spinbutton "Su phế phẩm (cái)": "0"
+  - text: M3 · SL đã giao (cái). Preset không điền = giao đủ (TECO). Nhỏ hơn SL đơn → WIP 154.
+  - spinbutton "M3 · SL đã giao (cái). Preset không điền = giao đủ (TECO). Nhỏ hơn SL đơn → WIP 154.": "1000"
+  - heading "Bảng Tính Giá Thành CK11N (Cost Rollup)" [level=3]
+  - paragraph: Tự động bóc tách 621 · 622 · 627
+  - generic: REAL-TIME
+  - text: Tổng Giá Thành Sản Xuất Kế Hoạch (Planned Cost — CK11N)
+  - generic: 53.086.050 ₫
+  - generic: "Giá thành đơn vị / cái:"
+  - strong: 26.543 ₫
+  - text: "Chi phí NVL trực tiếp (TK 621):"
+  - generic: 16.553.750 ₫
+  - text: "Chi phí Nhân công trực tiếp (TK 622):"
+  - generic: 12.600.000 ₫
+  - text: "Chi phí Máy ép & SXC (TK 627):"
+  - generic: 23.932.300 ₫
+  - text: "Tổng Doanh thu chưa thuế (TK 511):"
+  - generic: 230.000.000 ₫
+  - generic: "Thuế GTGT đầu ra (TK 3331 - 10%):"
+  - generic: 23.000.000 ₫
+  - generic: "Tổng thanh toán Hóa đơn (TK 131):"
+  - generic: 253.000.000 ₫
+  - generic: "Giá vốn hàng bán kế hoạch (TK 632):"
+  - generic: 53.086.050 ₫
+  - generic: Lợi Nhuận Gộp Kế Hoạch (Gross Profit)
+  - text: 176.913.950 ₫
+  - generic: Tỷ suất lãi gộp
+  - generic: 76.92%
+  - button "Vào Quy Trình 7 Bước SAP MTO":
+    - generic: Vào Quy Trình 7 Bước SAP MTO
+  - heading "Cấu Trúc Cây BOM & Bóc Tách Chi Phí Định Mức (BOM Visualizer)" [level=3]
+  - generic: SAP CS03 & CK51N
+  - paragraph: Nhấp vào linh kiện trong cây để khoan sâu (drill-down) bóc tách 3 nhóm chi phí cấu thành:Raw Material,Labor, vàOverhead.
+  - button "Mở hết cây":
+    - generic: Mở hết cây
+  - button "Thu gọn":
+    - generic: Thu gọn
+  - generic: 1. Raw Material (TK 621)
+  - generic: 31.2%
+  - generic: 16.553.750 ₫
+  - generic: "Đơn vị: 8.277 ₫/cái"
+  - generic: Hạt nhựa & Masterbatch
+  - generic: 2. Labor (TK 622)
+  - generic: 23.7%
+  - generic: 12.600.000 ₫
+  - generic: "Đơn vị: 6.300 ₫/cái"
+  - generic: Thợ đứng máy ép
+  - generic: 3. Overhead (TK 627)
+  - generic: 45.1%
+  - generic: 23.932.300 ₫
+  - generic: "Đơn vị: 11.966 ₫/cái"
+  - generic: Máy 350T & Bao bì OEM
+  - generic: "Cơ Cấu Giá Thành Kế Hoạch (Planned Cost Rollup = Material + Labor + Overhead):"
+  - generic: 53.086.050 ₫ (26.543 ₫/cái)
+  - 'generic "Raw Material: 31.2%"'
+  - 'generic "Labor: 23.7%"'
+  - 'generic "Overhead: 45.1%"'
+  - generic: "Raw Material: 31.2%"
+  - generic: "Labor: 23.7%"
+  - generic: "Overhead: 45.1%"
+  - generic: SƠ ĐỒ CÂY BOM (CSS RECURSIVE FLEXBOX)
+  - generic: "Đang chọn: #PL-CANON-FRM02 PL-CANON-FRM02"
+  - button "Thu gọn nhánh":
+  - generic: FERT
+  - generic: PL-CANON-FRM02
+  - generic: Khung máy in Laser chính xác cao sợi thủy tinh 30%
+  - text: "Định mức:"
+  - strong: 1,0000 PC/cái
+  - generic: •
+  - text: "Tổng lô:"
+  - strong: 2.000,00 PC
+  - generic: 53.086.050 ₫
+  - generic: 26.543 ₫/PC
+  - generic: 100.0%
+  - button "Mở rộng nhánh":
+  - generic: ROH
+  - generic: "621"
+  - generic: Nguyên vật liệu
+  - text: "Định mức:"
+  - strong: 0,0005 LOT/cái
+  - generic: •
+  - text: "Tổng lô:"
+  - strong: 1,00 LOT
+  - generic: 16.553.750 ₫
+  - generic: 16.553.750 ₫/LOT
+  - generic: 31.2%
+  - button "Mở rộng nhánh":
+  - generic: ACT
+  - generic: "622"
+  - generic: Nhân công
+  - text: "Định mức:"
+  - strong: 0,0005 LOT/cái
+  - generic: •
+  - text: "Tổng lô:"
+  - strong: 1,00 LOT
+  - generic: 12.600.000 ₫
+  - generic: 12.600.000 ₫/LOT
+  - generic: 23.7%
+  - button "Mở rộng nhánh":
+  - generic: ACT
+  - generic: "627"
+  - generic: Sản xuất chung
+  - text: "Định mức:"
+  - strong: 0,0005 LOT/cái
+  - generic: •
+  - text: "Tổng lô:"
+  - strong: 1,00 LOT
+  - generic: 23.932.300 ₫
+  - generic: 23.932.300 ₫/LOT
+  - generic: 45.1%
+  - generic: Nhấp chuột vào bất kỳ linh kiện nào để mở bảng bóc tách chi phí bên phải
+  - text: "Tổng số linh kiện:"
+  - strong: 9 mục
+  - generic: KHOAN SÂU CHI TIẾT (ITEMIZED DRILL-DOWN)
+  - generic: Cấp bậc 0
+  - generic: "FERT · Item #PL-CANON-FRM02"
+  - generic: 100.0% tổng giá thành
+  - heading "PL-CANON-FRM02" [level=4]
+  - paragraph: Khung máy in Laser chính xác cao sợi thủy tinh 30%
+  - generic: "Tổng Chi Phí Kế Hoạch:"
+  - generic: 53.086.050 ₫
+  - generic: "Định mức cho 1 SP:"
+  - generic: 1,0000 PC
+  - generic: "Chi phí trên 1 SP:"
+  - generic: 26.543 ₫/cái
+  - generic: "Khoan Sâu 3 Nhóm Chi Phí Cấu Thành:"
+  - button "Tất cả"
+  - button "NVL"
+  - button "Công"
+  - button "SXC"
+  - generic: Raw Material (TK 621)
+  - generic: 16.553.750 ₫
+  - generic: Hạt nhựa kỹ thuật Hạt nhựa PA66 + 30% Glass Fiber chống cháy V0
+  - text: 194,75 KG
+  - generic: 16.553.750 ₫
+  - generic: Direct Labor (TK 622)
+  - generic: 12.600.000 ₫
+  - generic: Nhân công theo routing
+  - text: 161,50 H
+  - generic: 12.600.000 ₫
+  - generic: Manufacturing Overhead (TK 627)
+  - generic: 23.932.300 ₫
+  - generic: Chi phí máy theo routing
+  - text: 161,50 H
+  - generic: 21.600.000 ₫
+  - generic: Chi phí chung nhà máy
+  - text: 1,00 LOT
+  - generic: 2.332.300 ₫
+  - generic: Phụ phí cấu hình theo CK11N
+  - text: 1,00 LOT
+  - generic: 0 ₫
+  - generic: "Công Thức Tập Hợp Chi Phí Giá Thành (CK51N):"
+  - paragraph:
+    - text: Giá thành kế hoạch =
+    - strong: NVL (621)
+    - text: +
+    - strong: Nhân công (622)
+    - text: +
+    - strong: SXC (627)
+  - generic: "Hạch toán Thông tư 200:"
+  - generic: TK 154
+- contentinfo:
+  - generic: Sava ERP Cockpit — Enterprise Simulation & Costing Engine
+  - paragraph: Bản demo / prototype · dữ liệu minh họa SAVA (Công ty TNHH Công nghệ Chính xác SAVA — hư cấu), không phải số liệu doanh nghiệp thật.
+  - paragraph:
+    - text: Thiết kế & phát triển bởi
+    - strong: Hoàng Quân (Mr Quân)
+    - text: — chuyên gia Tài chính · Kế toán · FP&A · Kiểm soát nội bộ, kết hợp nghiệp vụ tài chính/kiểm toán với công nghệ AI.
+  - paragraph:
+    - text: "Savafinlab — Tư vấn Tài chính, Thuế & Kế toán · Liên hệ hợp tác / tư vấn qua website:"
+    - link "savafinlab.com.vn":
+      - /url: https://savafinlab.com.vn
+- generic: CONFIDENTIAL · SAVA ADMIN CENTER
+- generic: (Dành riêng cho Mr. Hoàng Quân)
+- heading "Trung Tâm Quản Trị Khách Hàng Tiềm Năng & Điều Phối Phiên Dùng Thử" [level=2]
+- button:
+- button "Danh Sách Lead Thu Thập (0)" [active]:
+  - generic: Danh Sách Lead Thu Thập (0)
+- button "Cấu Hình Phiên & Webinar Live":
+  - generic: Cấu Hình Phiên & Webinar Live
+- button "Xuất CSV CRM (0)" [disabled]:
+  - generic: Xuất CSV CRM (0)
+- button "Nạp Lead Mẫu":
+  - generic: Nạp Lead Mẫu
+- generic: Tổng số Lead đăng ký
+- generic: "0"
+- generic: Thu thập từ Demo MTO
+- generic: Muốn nhận Tài liệu TT99
+- text: "0"
+- generic: (0%)
+- generic: Sẵn sàng gửi cẩm nang
+- generic: Chế độ Giảng dạy Live
+- generic: Đang Tắt (Bật Gatekeeper)
+- generic: Không bị chặn khi Demo
+- generic: Session trống hiện tại
+- generic: 2/5
+- generic: Tối đa 5 demo user
+- textbox "Tìm kiếm Lead theo tên, email, số điện thoại, công ty..."
+- paragraph: Chưa có Lead nào được ghi nhận qua form đăng ký.
+- button "+ Nạp dữ liệu Lead mẫu để trải nghiệm thử"
+- generic: Savafinlab Admin Protocol · Phiên bản 2026
+- button "Đóng bảng điều khiển"
+- generic: 30M

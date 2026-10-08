@@ -43,3 +43,6 @@ S3 đã triển khai (`3eb5bd1`), UI sửa bổ sung (`cbfa51a`); [QA browser cu
 ## S4 — cập nhật hiện hành
 
 [S4 CLEAN controls và giải trình](s4/README.md):7 phép đối chiếu mô phỏng, evidence/metrics/diffs, local audit chain và review request.54×7 checks +22 probes độc lập đạt. C02/C04/C05/C07 vẫn có business blocks; C01/C03/C06 pendingSME. Không tự đóng P0 hoặc duyệt MART.
+
+
+S4 code `da7bd0b`: browser QA2cases Samsung/Canon đạt technical7/7; [bằng chứng](s4/browser-qa/) và [bàn giao](s4/README.md). Downloads/humanacceptance chưa xácminh/hoànthành; businessblocks vẫn giữ.
