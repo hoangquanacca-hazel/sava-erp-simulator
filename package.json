@@ -20,7 +20,10 @@
     "test:ui-finance": "tsx scripts/ui-finance-regression.tsx",
     "test:s3": "tsx scripts/s3-adapters.ts",
     "test:s4": "tsx scripts/s4-controls.ts",
-    "test:s5": "tsx scripts/s5-mart.ts"
+    "test:s5": "tsx scripts/s5-mart.ts",
+    "test:s6": "tsx scripts/s6-evidence.ts",
+    "verify:p0-evidence": "tsx scripts/verify-p0-evidence.ts",
+    "evidence:p0": "tsx scripts/p0-review-evidence.ts"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",

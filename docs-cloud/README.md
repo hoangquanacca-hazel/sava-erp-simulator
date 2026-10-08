@@ -61,3 +61,8 @@ Mr Quân xác nhận chưa có bộ chuẩn và yêu cầu [hồ sơ review](p0-
 ## Chốt S5 / P0 review
 
 Code1556e48: S5diagnostic12metrics/C08,54oraclecases+24independentprobes+focusedCanonbrowserPASS. [QA](s5/browser-qa/QA_REPORT.md); [hồ sơ bạnreview](p0-review/README.md). S6 mớichuẩnbịevidenceledger,10gateschưaaccept;4S4businessblocksgiữ, tải thậtUNVERIFIED.
+
+
+## S6 — hồ sơ review một file và replay
+
+[S6](s6/README.md): 11RAW/CLEAN/CONTROL/MART/C08 trong một JSON, verifier UI/CLI hash byte thực, 6 ca/42 expected-vs-actual checks và 35 probes độc lập sau hardening. [Ca review](s6/review-cases/README.md). Human golden/TT99/M01–M10 vẫn chưa nghiệm thu; browser download xem QA S6, không suy từ test RAM.

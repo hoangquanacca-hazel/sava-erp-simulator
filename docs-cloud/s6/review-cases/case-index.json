@@ -1,0 +1,534 @@
+{
+  "version": "p0-review-evidence-1",
+  "approval": "NOT_APPROVED",
+  "cases": [
+    {
+      "case": {
+        "src": "samsung-cover",
+        "stock": "Valuated",
+        "pct": 3.5,
+        "ratio": 1
+      },
+      "file": "samsung-cover_Valuated_3.5_1_P0.json",
+      "fileSha256": "f0c5045d828098cb9676f99d262a2f3d012e6f5a106addd4e4f0333dc4bd71e4",
+      "bytes": 134851,
+      "checks": [
+        {
+          "id": "standard_cost",
+          "expected": 48780088,
+          "actual": 48780088,
+          "difference": 0
+        },
+        {
+          "id": "actual_cost",
+          "expected": 50487391,
+          "actual": 50487391,
+          "difference": 0
+        },
+        {
+          "id": "variance",
+          "expected": 1707303,
+          "actual": 1707303,
+          "difference": 0
+        },
+        {
+          "id": "wip",
+          "expected": 0,
+          "actual": 0,
+          "difference": 0
+        },
+        {
+          "id": "revenue",
+          "expected": 210000000,
+          "actual": 210000000,
+          "difference": 0
+        },
+        {
+          "id": "cogs",
+          "expected": 50487391,
+          "actual": 50487391,
+          "difference": 0
+        },
+        {
+          "id": "gross_profit",
+          "expected": 159512609,
+          "actual": 159512609,
+          "difference": 0
+        }
+      ],
+      "technicalReplay": "PASS",
+      "businessAcceptance": "NOT_APPROVED",
+      "expectedSource": "Historical Python technical oracle; pending human golden",
+      "controlGaps": [
+        {
+          "controlId": "C01",
+          "status": "PENDING_SME"
+        },
+        {
+          "controlId": "C02",
+          "status": "BLOCKED_RESERVATION_MAPPING"
+        },
+        {
+          "controlId": "C03",
+          "status": "PENDING_SME"
+        },
+        {
+          "controlId": "C04",
+          "status": "BLOCKED_CO_COST_BASIS"
+        },
+        {
+          "controlId": "C05",
+          "status": "BLOCKED_RECEIVER_ELIGIBLE_VARIANCE"
+        },
+        {
+          "controlId": "C06",
+          "status": "PENDING_SME"
+        },
+        {
+          "controlId": "C07",
+          "status": "BLOCKED_SAP_VARIANCE_CATEGORIES"
+        }
+      ]
+    },
+    {
+      "case": {
+        "src": "samsung-cover",
+        "stock": "Valuated",
+        "pct": 0,
+        "ratio": 0
+      },
+      "file": "samsung-cover_Valuated_0_0_P0.json",
+      "fileSha256": "535f052edf02239bf4746041224def2ff7484b8e6d1cb6a3fa73ac411f89d51e",
+      "bytes": 106228,
+      "checks": [
+        {
+          "id": "standard_cost",
+          "expected": 48780088,
+          "actual": 48780088,
+          "difference": 0
+        },
+        {
+          "id": "actual_cost",
+          "expected": 48780088,
+          "actual": 48780088,
+          "difference": 0
+        },
+        {
+          "id": "variance",
+          "expected": 0,
+          "actual": 0,
+          "difference": 0
+        },
+        {
+          "id": "wip",
+          "expected": 48780088,
+          "actual": 48780088,
+          "difference": 0
+        },
+        {
+          "id": "revenue",
+          "expected": 0,
+          "actual": 0,
+          "difference": 0
+        },
+        {
+          "id": "cogs",
+          "expected": 0,
+          "actual": 0,
+          "difference": 0
+        },
+        {
+          "id": "gross_profit",
+          "expected": 0,
+          "actual": 0,
+          "difference": 0
+        }
+      ],
+      "technicalReplay": "PASS",
+      "businessAcceptance": "NOT_APPROVED",
+      "expectedSource": "Historical Python technical oracle; pending human golden",
+      "controlGaps": [
+        {
+          "controlId": "C01",
+          "status": "PENDING_SME"
+        },
+        {
+          "controlId": "C02",
+          "status": "BLOCKED_RESERVATION_MAPPING"
+        },
+        {
+          "controlId": "C03",
+          "status": "PENDING_SME"
+        },
+        {
+          "controlId": "C04",
+          "status": "BLOCKED_CO_COST_BASIS"
+        },
+        {
+          "controlId": "C05",
+          "status": "BLOCKED_RECEIVER_ELIGIBLE_VARIANCE"
+        },
+        {
+          "controlId": "C06",
+          "status": "PENDING_SME"
+        },
+        {
+          "controlId": "C07",
+          "status": "BLOCKED_SAP_VARIANCE_CATEGORIES"
+        }
+      ]
+    },
+    {
+      "case": {
+        "src": "samsung-cover",
+        "stock": "Non-valuated",
+        "pct": 3.5,
+        "ratio": 1
+      },
+      "file": "samsung-cover_Non-valuated_3.5_1_P0.json",
+      "fileSha256": "7834b783a80e7474f7fd6763beaf782ec1f83bac63153f3fc348af8ea6811def",
+      "bytes": 111938,
+      "checks": [
+        {
+          "id": "standard_cost",
+          "expected": 48780088,
+          "actual": 48780088,
+          "difference": 0
+        },
+        {
+          "id": "actual_cost",
+          "expected": 50487391,
+          "actual": 50487391,
+          "difference": 0
+        },
+        {
+          "id": "variance",
+          "expected": 1707303,
+          "actual": 1707303,
+          "difference": 0
+        },
+        {
+          "id": "wip",
+          "expected": 0,
+          "actual": 0,
+          "difference": 0
+        },
+        {
+          "id": "revenue",
+          "expected": 210000000,
+          "actual": 210000000,
+          "difference": 0
+        },
+        {
+          "id": "cogs",
+          "expected": 50487391,
+          "actual": 50487391,
+          "difference": 0
+        },
+        {
+          "id": "gross_profit",
+          "expected": 159512609,
+          "actual": 159512609,
+          "difference": 0
+        }
+      ],
+      "technicalReplay": "PASS",
+      "businessAcceptance": "NOT_APPROVED",
+      "expectedSource": "Historical Python technical oracle; pending human golden",
+      "controlGaps": [
+        {
+          "controlId": "C01",
+          "status": "PENDING_SME"
+        },
+        {
+          "controlId": "C02",
+          "status": "BLOCKED_RESERVATION_MAPPING"
+        },
+        {
+          "controlId": "C03",
+          "status": "PENDING_SME"
+        },
+        {
+          "controlId": "C04",
+          "status": "BLOCKED_CO_COST_BASIS"
+        },
+        {
+          "controlId": "C05",
+          "status": "BLOCKED_RECEIVER_ELIGIBLE_VARIANCE"
+        },
+        {
+          "controlId": "C06",
+          "status": "PENDING_SME"
+        },
+        {
+          "controlId": "C07",
+          "status": "BLOCKED_SAP_VARIANCE_CATEGORIES"
+        }
+      ]
+    },
+    {
+      "case": {
+        "src": "samsung-cover",
+        "stock": "Non-valuated",
+        "pct": 0,
+        "ratio": 0
+      },
+      "file": "samsung-cover_Non-valuated_0_0_P0.json",
+      "fileSha256": "2574e49aa7cd920a39e67fa1cd02e05ba8fc2528f50eae97c035ee535c0515cf",
+      "bytes": 85522,
+      "checks": [
+        {
+          "id": "standard_cost",
+          "expected": 48780088,
+          "actual": 48780088,
+          "difference": 0
+        },
+        {
+          "id": "actual_cost",
+          "expected": 48780088,
+          "actual": 48780088,
+          "difference": 0
+        },
+        {
+          "id": "variance",
+          "expected": 0,
+          "actual": 0,
+          "difference": 0
+        },
+        {
+          "id": "wip",
+          "expected": 48780088,
+          "actual": 48780088,
+          "difference": 0
+        },
+        {
+          "id": "revenue",
+          "expected": 0,
+          "actual": 0,
+          "difference": 0
+        },
+        {
+          "id": "cogs",
+          "expected": 0,
+          "actual": 0,
+          "difference": 0
+        },
+        {
+          "id": "gross_profit",
+          "expected": 0,
+          "actual": 0,
+          "difference": 0
+        }
+      ],
+      "technicalReplay": "PASS",
+      "businessAcceptance": "NOT_APPROVED",
+      "expectedSource": "Historical Python technical oracle; pending human golden",
+      "controlGaps": [
+        {
+          "controlId": "C01",
+          "status": "PENDING_SME"
+        },
+        {
+          "controlId": "C02",
+          "status": "BLOCKED_RESERVATION_MAPPING"
+        },
+        {
+          "controlId": "C03",
+          "status": "PENDING_SME"
+        },
+        {
+          "controlId": "C04",
+          "status": "BLOCKED_CO_COST_BASIS"
+        },
+        {
+          "controlId": "C05",
+          "status": "BLOCKED_RECEIVER_ELIGIBLE_VARIANCE"
+        },
+        {
+          "controlId": "C06",
+          "status": "PENDING_SME"
+        },
+        {
+          "controlId": "C07",
+          "status": "BLOCKED_SAP_VARIANCE_CATEGORIES"
+        }
+      ]
+    },
+    {
+      "case": {
+        "src": "canon-frame",
+        "stock": "Valuated",
+        "pct": -3.5,
+        "ratio": 0.5
+      },
+      "file": "canon-frame_Valuated_-3.5_0.5_P0.json",
+      "fileSha256": "a5c4d571ea48c258fcfa1476fb44cdbd0534aae502bc0f2511dd901665de39d0",
+      "bytes": 135124,
+      "checks": [
+        {
+          "id": "standard_cost",
+          "expected": 53086050,
+          "actual": 53086050,
+          "difference": 0
+        },
+        {
+          "id": "actual_cost",
+          "expected": 51228038,
+          "actual": 51228038,
+          "difference": 0
+        },
+        {
+          "id": "variance",
+          "expected": -1858012,
+          "actual": -1858012,
+          "difference": 0
+        },
+        {
+          "id": "wip",
+          "expected": 25614019,
+          "actual": 25614019,
+          "difference": 0
+        },
+        {
+          "id": "revenue",
+          "expected": 115000000,
+          "actual": 115000000,
+          "difference": 0
+        },
+        {
+          "id": "cogs",
+          "expected": 25614019,
+          "actual": 25614019,
+          "difference": 0
+        },
+        {
+          "id": "gross_profit",
+          "expected": 89385981,
+          "actual": 89385981,
+          "difference": 0
+        }
+      ],
+      "technicalReplay": "PASS",
+      "businessAcceptance": "NOT_APPROVED",
+      "expectedSource": "Historical Python technical oracle; pending human golden",
+      "controlGaps": [
+        {
+          "controlId": "C01",
+          "status": "PENDING_SME"
+        },
+        {
+          "controlId": "C02",
+          "status": "BLOCKED_RESERVATION_MAPPING"
+        },
+        {
+          "controlId": "C03",
+          "status": "PENDING_SME"
+        },
+        {
+          "controlId": "C04",
+          "status": "BLOCKED_CO_COST_BASIS"
+        },
+        {
+          "controlId": "C05",
+          "status": "BLOCKED_RECEIVER_ELIGIBLE_VARIANCE"
+        },
+        {
+          "controlId": "C06",
+          "status": "PENDING_SME"
+        },
+        {
+          "controlId": "C07",
+          "status": "BLOCKED_SAP_VARIANCE_CATEGORIES"
+        }
+      ]
+    },
+    {
+      "case": {
+        "src": "canon-frame",
+        "stock": "Non-valuated",
+        "pct": -3.5,
+        "ratio": 0.5
+      },
+      "file": "canon-frame_Non-valuated_-3.5_0.5_P0.json",
+      "fileSha256": "5c0fd64b42cb34af01f1b13529950c3900dbbfc9232f65cfeb7973ed4a7cfbf9",
+      "bytes": 112162,
+      "checks": [
+        {
+          "id": "standard_cost",
+          "expected": 53086050,
+          "actual": 53086050,
+          "difference": 0
+        },
+        {
+          "id": "actual_cost",
+          "expected": 51228038,
+          "actual": 51228038,
+          "difference": 0
+        },
+        {
+          "id": "variance",
+          "expected": -1858012,
+          "actual": -1858012,
+          "difference": 0
+        },
+        {
+          "id": "wip",
+          "expected": 25614019,
+          "actual": 25614019,
+          "difference": 0
+        },
+        {
+          "id": "revenue",
+          "expected": 115000000,
+          "actual": 115000000,
+          "difference": 0
+        },
+        {
+          "id": "cogs",
+          "expected": 25614019,
+          "actual": 25614019,
+          "difference": 0
+        },
+        {
+          "id": "gross_profit",
+          "expected": 89385981,
+          "actual": 89385981,
+          "difference": 0
+        }
+      ],
+      "technicalReplay": "PASS",
+      "businessAcceptance": "NOT_APPROVED",
+      "expectedSource": "Historical Python technical oracle; pending human golden",
+      "controlGaps": [
+        {
+          "controlId": "C01",
+          "status": "PENDING_SME"
+        },
+        {
+          "controlId": "C02",
+          "status": "BLOCKED_RESERVATION_MAPPING"
+        },
+        {
+          "controlId": "C03",
+          "status": "PENDING_SME"
+        },
+        {
+          "controlId": "C04",
+          "status": "BLOCKED_CO_COST_BASIS"
+        },
+        {
+          "controlId": "C05",
+          "status": "BLOCKED_RECEIVER_ELIGIBLE_VARIANCE"
+        },
+        {
+          "controlId": "C06",
+          "status": "PENDING_SME"
+        },
+        {
+          "controlId": "C07",
+          "status": "BLOCKED_SAP_VARIANCE_CATEGORIES"
+        }
+      ]
+    }
+  ]
+}

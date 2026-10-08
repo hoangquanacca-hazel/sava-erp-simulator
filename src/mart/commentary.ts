@@ -10,8 +10,9 @@ export function createFacts(mart:ManufacturingMart):Fact[]{return mart.metrics.m
 export async function validateFacts(input:ManufacturingMart,claims:readonly Fact[]){
  const mart=structuredClone(input),facts=structuredClone(claims);await verifyMartSnapshot(mart);
  const expected=createFacts(mart),seen=new Set<string>(),issues:string[]=[];
+ if(!Array.isArray(facts))return {controlId:'C08',numericTraceability:'BLOCKED',businessStatus:'PENDING_APPROVED_MART',issues:['FACT_SHAPE']};
  if(facts.length!==expected.length)issues.push('FACT_INVENTORY');
- for(const c of facts){const e=expected.find(x=>x.metricId===c.metricId);if(!e||seen.has(c.metricId)){issues.push('UNKNOWN_OR_DUPLICATE_METRIC');continue;}seen.add(c.metricId);
+ for(const c of facts){if(!c||Object.keys(c).sort().join('|')!==['metricId','value','unit','basis','snapshotHash','text','refs'].sort().join('|')){issues.push('FACT_SHAPE');continue;}const e=expected.find(x=>x.metricId===c.metricId);if(!e||seen.has(c.metricId)){issues.push('UNKNOWN_OR_DUPLICATE_METRIC');continue;}seen.add(c.metricId);
   if(c.value!==e.value||c.unit!==e.unit||c.basis!==e.basis||c.snapshotHash!==e.snapshotHash||c.text!==e.text||JSON.stringify(c.refs)!==JSON.stringify(e.refs))issues.push(`CLAIM_NOT_ENTAILED:${c.metricId}`);
  }
  return {controlId:'C08',numericTraceability:issues.length?'BLOCKED':'PASS',businessStatus:'PENDING_APPROVED_MART',issues};

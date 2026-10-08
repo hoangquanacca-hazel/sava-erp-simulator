@@ -1,9 +1,11 @@
 import React,{useState} from 'react';
+import {EvidencePackPanel} from './EvidencePackPanel';
+import type {exportReportSnapshot} from '../reports/snapshot';
 import type {AdapterResult} from '../adapters/framework';
 import type {ControlCase} from '../controls/workflow';
 import {buildManufacturingMart,type ManufacturingMart} from '../mart/manufacturing';
 import {createFacts,validateFacts,displayMetric,exportMart} from '../mart/commentary';
-export function ManufacturingMartPanel({quality,work}:{quality:readonly AdapterResult[];work:ControlCase}){
+export function ManufacturingMartPanel({quality,work,snapshots}:{quality:readonly AdapterResult[];work:ControlCase;snapshots:Awaited<ReturnType<typeof exportReportSnapshot>>}){
  const [mart,setMart]=useState<ManufacturingMart|null>(null),[savedKey,setSavedKey]=useState(''),[busy,setBusy]=useState(false),[error,setError]=useState('');
  const currentKey=JSON.stringify(work),current=savedKey===currentKey?mart:null;
  const generate=async()=>{setBusy(true);setError('');setMart(null);try{const m=await buildManufacturingMart(quality,work);const c08=await validateFacts(m,createFacts(m));if(c08.numericTraceability!=='PASS')throw new Error('Không công bố facts: C08 bị chặn.');setMart(m);setSavedKey(currentKey);}catch(e){setError(e instanceof Error?e.message:'Không dựng được phân tích.');}finally{setBusy(false);}};
@@ -23,6 +25,7 @@ export function ManufacturingMartPanel({quality,work}:{quality:readonly AdapterR
    <p className="text-sm text-amber-300">Chưa xác định nguyên nhân giá, tiêu hao hoặc năng suất. Cần dữ liệu và người review độc lập trước khi kết luận.</p>
    <button disabled={busy} className="text-cyan-300 underline" onClick={download}>Tải phân tích và hồ sơ truy vết</button>
    <details><summary>Giới hạn và nghiệm thu còn thiếu</summary><ul className="text-sm">{current.limitations.map((l,i)=><li key={i}>{l}</li>)}</ul><pre className="text-xs overflow-auto">{JSON.stringify(current.businessGaps,null,2)}</pre></details>
+   <EvidencePackPanel snapshots={snapshots} work={work} mart={current}/>
   </>}
  </section>;
 }

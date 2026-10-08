@@ -31,7 +31,8 @@
       ],
       "evidence": [
         "docs-cloud/p0-review/downloads/QA_REPORT.md",
-        "docs-cloud/s3/evidence/test-s3.log"
+        "docs-cloud/s3/evidence/test-s3.log",
+        "docs-cloud/s6/README.md"
       ]
     },
     {
@@ -136,7 +137,8 @@
       ],
       "evidence": [
         "docs-cloud/s5/evidence/test-s5.log",
-        "docs-cloud/s5/independent-review/REVIEW.md"
+        "docs-cloud/s5/independent-review/REVIEW.md",
+        "docs-cloud/s6/README.md"
       ]
     },
     {
@@ -151,8 +153,19 @@
       ],
       "evidence": [
         "docs-cloud/s5/evidence/results.json",
-        "docs-cloud/P0-FOCUS-DECISION.md"
+        "docs-cloud/P0-FOCUS-DECISION.md",
+        "docs-cloud/s6/README.md"
       ]
     }
-  ]
+  ],
+  "s6Evidence": {
+    "baselineCommit": "70556f0479dab4f028edab5469e0d3b10e523a77",
+    "technicalStatus": "SCOPED_VERIFIED",
+    "reference": "docs-cloud/s6/README.md",
+    "independentProbes": 35,
+    "reviewCases": 6,
+    "oracleComparisons": 42,
+    "browserSavedDownload": "UNVERIFIED",
+    "approval": "NOT_APPROVED"
+  }
 }

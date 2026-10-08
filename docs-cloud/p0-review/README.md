@@ -36,3 +36,8 @@ MART chỉ DIAGNOSTIC_ONLY, technicalFAIL/BLOCKED hoặccontrolsnapshot bịsử
 ## Trạng thái review hiện hành
 
 [Sẵn sàng M01–M10](acceptance-readiness.json): tất cảNOT_ACCEPTED, có evidence kỹthuật vàgap cho từnggate; releaseEligibilityNOT_READY_FOR_PILOT. [Nguồn TT99/chưa đối chiếu](TT99-SOURCE-REVIEW.md); originalVBPL403, chưaPDFreview. [S5](../s5/README.md) diagnosticđã kiểm kỹthuật vàfocusedbrowser; khôngthayhumanapproval.
+
+
+## S6: hồ sơ cụ thể để review
+
+[6 ca có toàn bộ RAW→MART và expected/actual/diff](../s6/review-cases/README.md), [hướng dẫn kiểm file UI/CLI](../s6/README.md). Đây là candidate technical evidence; không chuyển golden hoặc gate thành approved. Review một ca Canon giao50% trước, ghi căn cứ và số kỳ vọng độc lập theo mẫu phản hồi.

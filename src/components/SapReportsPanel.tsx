@@ -71,7 +71,7 @@ export function SapReportsPanel({params,computed,table,ready}: {
             <button className="ml-3 text-cyan-300 underline" onClick={()=>download(file.fileName,file.text,'application/json')}>Tải CLEAN</button>
             <button className="ml-3 text-cyan-300 underline" onClick={()=>download(`${file.fileName}.manifest.json`,JSON.stringify(file.manifest,null,2),'application/json')}>Tải manifest CLEAN</button>
           </li>)}</ul>
-          <ControlsPanel quality={quality}/>
+          <ControlsPanel quality={quality} snapshots={current}/>
         </>}
       </div>
       </>}

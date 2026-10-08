@@ -28,11 +28,17 @@ export async function exportControlCase(input:ControlCase){
 }
 
 async function verifySnapshot(snapshot:ControlCase){
+ if(!snapshot || Object.keys(snapshot).sort().join('|')!=='events|run'||!Array.isArray(snapshot.events))throw new Error('Control case shape invalid');
  if(snapshot.events.length>1000)throw new Error('Local audit limit1000events; export and start a new case.');
  const runHash=await sha256Hex(new TextEncoder().encode(JSON.stringify(snapshot.run)));
  let previous='';
  for(let i=0;i<snapshot.events.length;i++){
   const e=snapshot.events[i];
+  if(!e||Object.keys(e).sort().join('|')!==['sequence','controlId','action','actor','note','evidence','at','previousHash','hash'].sort().join('|'))throw new Error('Audit event shape invalid');
+  if(!snapshot.run.controls.some(c=>c.id===e.controlId)||!['EXPLAIN','REQUEST_REVIEW'].includes(e.action))throw new Error('Unknown control/action');
+  if(typeof e.actor!=='string'||!e.actor.trim()||e.actor.length>100||typeof e.note!=='string'||!e.note.trim()||e.note.length>2000||!Array.isArray(e.evidence)||e.evidence.length<1||e.evidence.length>20||e.evidence.some(x=>typeof x!=='string'||!x.trim()||x.length>500))throw new Error('Audit required fields invalid');
+  if(typeof e.at!=='string'||!/^\d{4}-\d{2}-\d{2}T/.test(e.at)||!Number.isFinite(Date.parse(e.at)))throw new Error('Invalid timestamp');
+  if(e.action==='REQUEST_REVIEW'&&snapshot.events.slice(0,i).filter(x=>x.controlId===e.controlId).at(-1)?.action!=='EXPLAIN')throw new Error('Review requires prior explanation');
   if(e.sequence!==i+1||e.previousHash!==previous)throw new Error('Audit sequence/chain invalid');
   const payload={sequence:e.sequence,controlId:e.controlId,action:e.action,actor:e.actor,note:e.note,evidence:e.evidence,at:e.at,previousHash:e.previousHash};
   const hash=await sha256Hex(new TextEncoder().encode(JSON.stringify({runHash,...payload})));

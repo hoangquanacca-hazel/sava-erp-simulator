@@ -1,0 +1,5 @@
+
+> react-example@0.0.0 test:s5
+> tsx scripts/s5-mart.ts
+
+PASS S5:54 oracle snapshots/648metrics; typed null zero-revenue; full-order vs posted-delivered basis; no closing double count; blocked/stale/audit mutation rejection;8 C08 claim corruptions; hash/frozen/async isolation; always DIAGNOSTIC_ONLY.

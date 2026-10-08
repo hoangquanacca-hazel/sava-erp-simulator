@@ -1,0 +1,41 @@
+{
+  "technicalStatus": "PASS",
+  "fileSha256": "a56ec63af7229234325d652779166023d82f45cf38645643d47bb8331545ff89",
+  "bytes": 112499,
+  "runId": "SIM-26b8e617373fa8db",
+  "reportCount": 11,
+  "controlCount": 7,
+  "metricCount": 12,
+  "businessAcceptance": "NOT_APPROVED",
+  "comparedWithExport": true,
+  "businessGaps": [
+    {
+      "controlId": "C01",
+      "status": "PENDING_SME"
+    },
+    {
+      "controlId": "C02",
+      "status": "BLOCKED_RESERVATION_MAPPING"
+    },
+    {
+      "controlId": "C03",
+      "status": "PENDING_SME"
+    },
+    {
+      "controlId": "C04",
+      "status": "BLOCKED_CO_COST_BASIS"
+    },
+    {
+      "controlId": "C05",
+      "status": "BLOCKED_RECEIVER_ELIGIBLE_VARIANCE"
+    },
+    {
+      "controlId": "C06",
+      "status": "PENDING_SME"
+    },
+    {
+      "controlId": "C07",
+      "status": "BLOCKED_SAP_VARIANCE_CATEGORIES"
+    }
+  ]
+}
