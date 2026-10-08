@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-08",
+  "url": "http://127.0.0.1:3017/",
+  "commit_parent_verified": "35a6b8a",
+  "branch_parent_verified": "cloud/s1-report-completion",
+  "role": "independent_browser_qa",
+  "anonymous_completion": "BLOCKED_REGISTRATION",
+  "instructor_mode": {"method":"existing ADMIN UI shortcut and Webinar Live toggle","before":"OFF","during":"ON","after":"OFF_VISUALLY_VERIFIED"},
+  "cases": [
+    {"scenario":"Samsung","stock":"Valuated","variancePct":0,"delivered":5000,"reports":11,"result":"PASS_UI_GENERATION","FAGLL03":30,"MB51":3,"SUP01":0},
+    {"scenario":"Canon","stock":"Non-valuated","variancePct":0,"delivered":2000,"reports":11,"result":"PASS_UI_GENERATION","FAGLL03":22,"MB51":3,"SUP01":1},
+    {"scenario":"Canon","stock":"Non-valuated","variancePct":-3.5,"delivered":1000,"orderQty":2000,"reports":11,"result":"PASS_UI_GENERATION","actualCost":51228038,"settled":25614019,"revenue":115000000}
+  ],
+  "scenario_change_stale_list_removed":"PASS",
+  "parameter_change_stale_list_removed":"PASS",
+  "download_buttons_exercised":["MB51_RAW","MB51_manifest","FAGLL03_RAW","FAGLL03_manifest"],
+  "download_completion_hash_content":"UNVERIFIED_DOWNLOAD_EVENT_TIMEOUT",
+  "console_errors_after_download_clicks":[],
+  "not_run":["QM_ML_unsupported_gating","other_browsers","54case_matrix","SME_acceptance","legal_validation","live_AI"],
+  "inherited_findings":["BOM_visual_material_diff","inventory_labels_preexecute","partial_settlement_narrative","partial_COGS_breakdown_over100pct"],
+  "repo_modified":false,
+  "lead_data_submitted":false
+}

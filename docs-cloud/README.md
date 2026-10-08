@@ -23,3 +23,7 @@ Phase A theo `CLOUD_BRIEF.md`: 11 báo cáo (CK13N gồm header và item trong m
 5. Procurement/AP → Sales/AR → ML nâng cao; ZFIR009A/ZFIR159 chờ spec/approved samples, không đoán logic.
 
 Phạm vi 11 báo cáo chỉ kịch bản cơ sở hoàn thành. Chặn QM rework/scrap và bút toán tùy chọn ML/GRIR/IC thay vì xuất bộ số chưa được kiểm chứng. Không merge main hoặc deploy trong phiên này.
+
+## Kiểm thử giao diện độc lập
+
+[Báo cáo QA 08/10/2026](qa/2026-10-08/RESULT.md): 3 ca tạo báo cáo đạt trong chế độ giảng viên;4 lỗi UI kế thừa; download content/hash chưa xác minh. Sửa lỗi và retest trước release.

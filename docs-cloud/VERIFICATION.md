@@ -31,3 +31,14 @@ Logs nguyên bản trong `evidence/`, máy đọc `evidence/test-results.json`. 
 Chưa chạy browser UAT tương tác/download, AI provider live, Netlify deploy/preview, kiểm tải đa browser, golden của Mr Quân hoặc đối chiếu PDF TT99. HTTP200 không chứng minh UI/business readiness. P0-MFG M01–M10 chưa được tự đánh dấu đạt. Reviewer độc lập cần kiểm lại code và bằng chứng; chưa merge/deploy/push.
 
 S3 RAW→CLEAN adapters, S4 exception workflow, S5 MART/root-cause/commentary, S6 SME/auditor chưa hoàn thành. Current controls chỉ là validator Phase A trước xuất, không có claim workflow signoff.
+
+
+## Bổ sung UAT bởi agent độc lập — 08/10/2026
+
+Theo yêu cầu Mr Quân, một agent khác tác giả đã thao tác trình duyệt trên commit `35a6b8a`, URL `http://127.0.0.1:3017/`. [Báo cáo gốc](qa/2026-10-08/RESULT.md) và [quan sát máy đọc](qa/2026-10-08/observations.json) được giữ nguyên nội dung của QA.
+
+3 ca tạo đủ11 báo cáo: Samsung/Valuated/giao đủ; Canon/Non-valuated/giao đủ; Canon/Non-valuated/-3,5%/giao50%. Danh sách xuất cũ bị xóa khi đổi kịch bản/tham số. Luồng mặc định bị registration gate tại bước3; QA dùng chức năng giảng viên có sẵn qua ADMIN, khôi phụcOFF, không nhập lead/cá nhân hay gọiAI.
+
+Nút tải4 file đã được bấm, nhưng completion/content/hash chưa xác minh do API download timeout. Phân loại UNVERIFIED, không kết luận download PASS hoặc FAIL. Chưa kiểm QM/ML unsupported gating, browser khác, hoặc golden/SME.
+
+QA ghi nhận4 vấn đề giao diện kế thừa: BOM visualization lệch chi phí; inventory trình bày xuất kho trước execution; diễn giải settlement giao một phần nói154về0; breakdownCOGS giao một phần cộng207,2% và favorable variance hiển thị dương. Chưa sửa trong đợt QA này. Đây là lý do tiếp tục sửa UI trước release; kết quả3ca không chứng nhận toànP0/M01–M10.
