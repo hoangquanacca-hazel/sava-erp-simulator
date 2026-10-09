@@ -118,7 +118,7 @@ export function buildCk13n(computed: MTOComputed, matnr: string, lotSize: number
 
 /**
  * SUP01 — Tổng hợp lệnh sản xuất ↔ đơn bán MTO (báo cáo tổng hợp của simulator, KHÔNG phải T-code SAP chuẩn;
- * diễn giải chờ chủ dự án xác nhận — AUD-015). Doanh thu/giá vốn/dở dang đọc từ ACDOCA theo đơn bán.
+ * diễn giải đã được chủ dự án chốt 09/10/2026 — AUD-015). Doanh thu/giá vốn/dở dang đọc từ ACDOCA theo đơn bán.
  */
 export function buildSup01(ev: ScenarioEvents, computed: MTOComputed, table: AcdocaLine[]): ReportOutput {
   const o = ev.order;

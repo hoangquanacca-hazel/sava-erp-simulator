@@ -19,9 +19,9 @@
 - Bút toán CO01 (Nợ 154 / Có 621-622-627) là luồng kết chuyển FI theo TT99, không phải chi phí mới → bỏ khỏi KOB1 để không đếm 2 lần. Σ KOB1 = số dư 154.
 - Khác SAP thật: SAP dùng yếu tố chi phí thứ cấp cho nhập kho/kết chuyển (vd 895000, settlement CE); simulator hiển thị số TK 154. Đổi sang CE riêng sẽ phải đổi test.
 
-## AUD-015 — SUP01 không phải T-code SAP chuẩn — CẦN CHỦ DỰ ÁN XÁC NHẬN
+## AUD-015 — SUP01 không phải T-code SAP chuẩn — ĐÃ CHỐT (09/10/2026)
 - Brief liệt kê SUP01 nhưng không định nghĩa; trong repo không có tham chiếu. Diễn giải tạm: **báo cáo tổng hợp lệnh SX ↔ đơn bán MTO** (SL đặt/giao, giá thành KH/TT, dở dang 154, giá vốn kết chuyển 911, doanh thu 511, lãi gộp).
-- Nếu ý định khác (vd báo cáo nhà cung cấp, báo cáo bổ sung) → thay `buildSup01` và phần SUP01 trong `scripts/s3-reports.ts`.
+- **Quyết định chủ dự án 09/10/2026: giữ diễn giải trên.** Muốn đổi sau này → thay `buildSup01` và phần SUP01 trong `scripts/s3-reports.ts`.
 
 ## AUD-016 — KKS1: định nghĩa chi phí mục tiêu và chênh lệch
 - Mục tiêu = round(Kế hoạch × SL giao/SL lệnh); Dở dang = Thực tế − Có nhập kho − Kết chuyển VA88; Chênh lệch = Thực tế − Mục tiêu − Dở dang.
