@@ -31,3 +31,6 @@
 ## Session 3 — nhánh `cloud/s3-costing` (PR #10, gốc `feat` @cc527f2) — ĐỔI SỐ HỌC, chờ duyệt
 - T2: oracle giá thành độc lập `scripts/oracle_costing.py` (đầu vào tham số `costing_inputs.json`), `a0_oracle.py` bỏ `/tmp/planned.json`, `npm run test:costing` (40 ca) + bước CI.
 - Trước sửa: 25/40 FAIL (log `docs-cloud/evidence/s3_costing_before_fix.log`). Sửa `calculator.ts:184` (bỏ `packagingUnitAddon` khỏi `variantAddonTotal`, AUD-030). `a0_expected.json` sinh lại bằng oracle: Denso P 113.882.210 → 99.482.210; Samsung/Canon không đổi. Bảng 18 ca: `docs-cloud/S3_COSTING_BEFORE_AFTER.md`.
+
+## Session 3 — nhánh `cloud/s3-pycache` (chủ dự án cho phép 09/10/2026)
+- Gỡ khỏi git `scripts/__pycache__/oracle_costing.cpython-313.pyc` (file cache Python lọt vào qua PR #10 do `git add -A`); thêm `__pycache__/`, `*.pyc` vào `.gitignore`. File vẫn còn trên đĩa máy cục bộ (`git rm --cached`).
