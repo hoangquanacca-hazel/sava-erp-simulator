@@ -19,7 +19,7 @@ if (expected.length !== 54) throw new Error(`oracle phải có 54 ca, có ${expe
 const sum = (t: AcdocaLine[], acc: string, side: 'dr' | 'cr') =>
   t.filter((l) => l.glAccount === acc).reduce((s, l) => s + (side === 'dr' ? l.drAmount : l.crAmount), 0);
 
-let fails: string[] = [];
+const fails: string[] = [];
 for (const e of expected) {
   const preset = PRESET_SCENARIOS.find((p) => p.id === e.src)!;
   const params = {

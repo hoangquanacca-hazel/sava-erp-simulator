@@ -4,13 +4,6 @@ import {
   Search,
   BookOpen,
   ArrowRight,
-  ExternalLink,
-  Layers,
-  Database,
-  Filter,
-  CheckCircle2,
-  FileSpreadsheet,
-  FileText,
   Copy,
   Check,
 } from 'lucide-react';

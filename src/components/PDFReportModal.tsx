@@ -1,20 +1,6 @@
 import React, { useRef } from 'react';
 import { useReactToPrint } from 'react-to-print';
-import {
-  Printer,
-  X,
-  FileText,
-  Building2,
-  Calendar,
-  CheckCircle2,
-  FileSpreadsheet,
-  Layers,
-  Scale,
-  AlertCircle,
-  HelpCircle,
-  ShieldCheck,
-  Download,
-} from 'lucide-react';
+import { Printer, X, ShieldCheck } from 'lucide-react';
 import {
   MTOParameters,
   MTOComputed,
@@ -175,7 +161,7 @@ export const PDFReportModal: React.FC<PDFReportModalProps> = ({
                   Mẫu số: B01-DN & S03b-DN
                 </div>
                 <div className="text-[10px] text-slate-600 italic">
-                  (Ban hành theo Thông tư số 200/2014/TT-BTC ngày 22/12/2014 của Bộ Tài chính)
+                  (Ban hành theo Thông tư số 99/2025/TT-BTC của Bộ Tài chính)
                 </div>
                 <div className="text-[11px] font-mono text-slate-800 font-semibold pt-1">
                   Mã lưu trữ: BC-MTO-{isValuated ? 'VAL' : 'NONVAL'}-{params.componentCode}
@@ -507,7 +493,7 @@ export const PDFReportModal: React.FC<PDFReportModalProps> = ({
             {/* 7. Phần V: Thuyết Minh & Đánh Giá Đối Chiếu Kế Toán Trưởng */}
             <div className="mb-8 border border-slate-300 p-3.5 rounded bg-slate-50/70 text-[11px] space-y-1.5">
               <div className="font-bold text-slate-900 uppercase">
-                V. KẾT LUẬN & THUYẾT MINH PHƯƠNG PHÁP HẠCH TOÁN THEO THÔNG TƯ 200/2014/TT-BTC:
+                V. KẾT LUẬN & THUYẾT MINH PHƯƠNG PHÁP HẠCH TOÁN THEO THÔNG TƯ 99/2025/TT-BTC:
               </div>
               <p className="text-slate-700 text-justify">
                 1. <strong>Đặc thù hạch toán kho Special Stock E:</strong> Đơn hàng áp dụng phương thức{' '}

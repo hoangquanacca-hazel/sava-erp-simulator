@@ -6,8 +6,6 @@ import {
   TrialBalanceResult,
   RawMaterialBOMItem,
   RoutingWorkCenter,
-  DEFAULT_BOM_ITEMS,
-  DEFAULT_ROUTING,
 } from '../types';
 
 /**

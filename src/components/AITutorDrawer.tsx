@@ -3,13 +3,10 @@ import {
   Bot,
   X,
   Send,
-  Sparkles,
   HelpCircle,
   RefreshCw,
   Copy,
   Check,
-  BookOpen,
-  MessageSquare,
 } from 'lucide-react';
 import { MTOParameters, MTOComputed, StepDefinition, JournalEntry } from '../types';
 

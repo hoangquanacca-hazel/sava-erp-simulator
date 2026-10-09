@@ -18,3 +18,16 @@
 - `test:s3` bổ sung 48 trạng thái giao diện (bảng dở dang bước 1..k, CKMLCP) + kiểm danh mục = registry.
 - Không đổi số học (`calculator.ts`, `acdoca.ts`, `materialLedger.ts`), không đổi `a0_expected.json`, không xóa file.
 - Ghi chú kỹ thuật: `package.json` dùng CRLF lẫn LF — sửa bằng tay để giữ nguyên; `package-lock.json` được giữ LF như gốc.
+
+## Session 3 — nhánh `cloud/s3-hygiene` (gốc `feat/sim-p0-mfg` @cc527f2)
+- Bước 0: PR mở duy nhất là #3; #4, #5, #8 đã merge vào `feat` trước phiên; không có nhánh `cloud/s3-*` khác → không trùng việc.
+- T0: #4 kiểm lại `npm start` + `/api/health` OK (AUD-032). #5 quét lại TT200: sửa 5 chuỗi giao diện còn sót (AUD-031). #3: chuyển phát hiện vào sổ (AUD-033…036), comment trỏ sang #6.
+- T1: bảng ánh xạ số AUD trong `AUDITOR.md`; mục mới từ AUD-030.
+- T3: rà phụ phí màu/texture (AUD-037), phát hiện thêm AUD-038. Chỉ báo cáo.
+- T4: `SAPClassicMenu.tsx` đưa `return null` xuống sau hook; bỏ 108 import thừa (18 file, script cơ học chỉ xoá specifier trong câu `import`); `prefer-const` ×4 (`App.tsx`, `scripts/a0-expected.ts`). ESLint toàn repo **158 → 42 lỗi**, `rules-of-hooks` 4 → 0. Kiểm trình duyệt (Playwright, build production): Fiori → Classic (mở cây Easy Access) → Fiori × 3 vòng, 0 lỗi React.
+- T5: bỏ theo Q2 = (a); ghi quyết định vào AUD-020.
+- Không đổi `calculator.ts`, `acdoca.ts`, `materialLedger.ts`, `a0_expected.json`; không xóa file.
+
+## Session 3 — nhánh `cloud/s3-costing` (PR #10, gốc `feat` @cc527f2) — ĐỔI SỐ HỌC, chờ duyệt
+- T2: oracle giá thành độc lập `scripts/oracle_costing.py` (đầu vào tham số `costing_inputs.json`), `a0_oracle.py` bỏ `/tmp/planned.json`, `npm run test:costing` (40 ca) + bước CI.
+- Trước sửa: 25/40 FAIL (log `docs-cloud/evidence/s3_costing_before_fix.log`). Sửa `calculator.ts:184` (bỏ `packagingUnitAddon` khỏi `variantAddonTotal`, AUD-030). `a0_expected.json` sinh lại bằng oracle: Denso P 113.882.210 → 99.482.210; Samsung/Canon không đổi. Bảng 18 ca: `docs-cloud/S3_COSTING_BEFORE_AFTER.md`.

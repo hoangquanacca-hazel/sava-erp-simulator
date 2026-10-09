@@ -10,8 +10,6 @@ import {
   Package,
   Layers,
   Cpu,
-  UserCheck,
-  Sparkles,
   ChevronDown,
   ChevronRight,
   Info,
@@ -19,12 +17,8 @@ import {
   Minimize2,
   Table,
   CheckCircle2,
-  ShieldCheck,
-  FileCode,
   Tag,
   Boxes,
-  ArrowDownRight,
-  ExternalLink,
 } from 'lucide-react';
 
 interface BOMTreeViewProps {

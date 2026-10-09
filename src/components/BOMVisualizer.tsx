@@ -19,15 +19,9 @@ import {
   ChevronDown,
   ChevronRight,
   Calculator,
-  ArrowDownRight,
-  Percent,
-  CheckCircle2,
-  Sparkles,
   Info,
   Maximize2,
   Minimize2,
-  Flame,
-  Wrench,
   Factory,
 } from 'lucide-react';
 
