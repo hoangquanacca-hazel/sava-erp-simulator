@@ -41,6 +41,8 @@ jobs:
         run: npm run test:health
       - name: S2 FAGLL03
         run: npm run test:s2
+      - name: Oracle giá thành độc lập (tham số → Python) + đáp án không sửa tay
+        run: npm run test:costing
       - name: A0 oracle 54 ca
         run: npm run test:a0
       - name: S3 11 báo cáo × 54 ca

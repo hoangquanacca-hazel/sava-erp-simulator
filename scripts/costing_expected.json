@@ -1,0 +1,843 @@
+[
+ {
+  "id": "samsung-cover",
+  "src": "samsung-cover",
+  "override": {},
+  "M": 8302500,
+  "L": 14361100,
+  "O": 26116488,
+  "P": 48780088,
+  "Rev": 210000000,
+  "machine": 24303400,
+  "sxc": 1813088,
+  "addon": 0,
+  "bom": {
+   "ROH-RESIN": 8302500
+  }
+ },
+ {
+  "id": "canon-frame",
+  "src": "canon-frame",
+  "override": {},
+  "M": 16553750,
+  "L": 12600000,
+  "O": 23932300,
+  "P": 53086050,
+  "Rev": 230000000,
+  "machine": 21600000,
+  "sxc": 2332300,
+  "addon": 0,
+  "bom": {
+   "ROH-RESIN": 16553750
+  }
+ },
+ {
+  "id": "denso-sensor",
+  "src": "denso-sensor",
+  "override": {},
+  "M": 27237668,
+  "L": 19897480,
+  "O": 52347062,
+  "P": 99482210,
+  "Rev": 228000000,
+  "machine": 36576250,
+  "sxc": 3770812,
+  "addon": 12000000,
+  "bom": {
+   "ROH-RESIN": 11958388,
+   "ROH-MB-COLOR": 735280,
+   "VERP-PACKAGING": 14544000
+  }
+ },
+ {
+  "id": "denso/c-std/t-std/p-std",
+  "src": "denso-sensor",
+  "override": {
+   "variantColorId": "c-std",
+   "variantTextureId": "t-std",
+   "variantPackagingId": "p-std"
+  },
+  "M": 11061800,
+  "L": 19897480,
+  "O": 39052992,
+  "P": 70012272,
+  "Rev": 228000000,
+  "machine": 36576250,
+  "sxc": 2476742,
+  "addon": 0,
+  "bom": {
+   "ROH-RESIN": 11061800
+  }
+ },
+ {
+  "id": "denso/c-std/t-std/p-vacuum",
+  "src": "denso-sensor",
+  "override": {
+   "variantColorId": "c-std",
+   "variantTextureId": "t-std",
+   "variantPackagingId": "p-vacuum"
+  },
+  "M": 17929800,
+  "L": 19897480,
+  "O": 39602432,
+  "P": 77429712,
+  "Rev": 228000000,
+  "machine": 36576250,
+  "sxc": 3026182,
+  "addon": 0,
+  "bom": {
+   "ROH-RESIN": 11061800,
+   "VERP-PACKAGING": 6868000
+  }
+ },
+ {
+  "id": "denso/c-std/t-std/p-ip68",
+  "src": "denso-sensor",
+  "override": {
+   "variantColorId": "c-std",
+   "variantTextureId": "t-std",
+   "variantPackagingId": "p-ip68"
+  },
+  "M": 25605800,
+  "L": 19897480,
+  "O": 40216512,
+  "P": 85719792,
+  "Rev": 228000000,
+  "machine": 36576250,
+  "sxc": 3640262,
+  "addon": 0,
+  "bom": {
+   "ROH-RESIN": 11061800,
+   "VERP-PACKAGING": 14544000
+  }
+ },
+ {
+  "id": "denso/c-std/t-matte/p-std",
+  "src": "denso-sensor",
+  "override": {
+   "variantColorId": "c-std",
+   "variantTextureId": "t-matte",
+   "variantPackagingId": "p-std"
+  },
+  "M": 11061800,
+  "L": 19897480,
+  "O": 44652992,
+  "P": 75612272,
+  "Rev": 228000000,
+  "machine": 36576250,
+  "sxc": 2476742,
+  "addon": 5600000,
+  "bom": {
+   "ROH-RESIN": 11061800
+  }
+ },
+ {
+  "id": "denso/c-std/t-matte/p-vacuum",
+  "src": "denso-sensor",
+  "override": {
+   "variantColorId": "c-std",
+   "variantTextureId": "t-matte",
+   "variantPackagingId": "p-vacuum"
+  },
+  "M": 17929800,
+  "L": 19897480,
+  "O": 45202432,
+  "P": 83029712,
+  "Rev": 228000000,
+  "machine": 36576250,
+  "sxc": 3026182,
+  "addon": 5600000,
+  "bom": {
+   "ROH-RESIN": 11061800,
+   "VERP-PACKAGING": 6868000
+  }
+ },
+ {
+  "id": "denso/c-std/t-matte/p-ip68",
+  "src": "denso-sensor",
+  "override": {
+   "variantColorId": "c-std",
+   "variantTextureId": "t-matte",
+   "variantPackagingId": "p-ip68"
+  },
+  "M": 25605800,
+  "L": 19897480,
+  "O": 45816512,
+  "P": 91319792,
+  "Rev": 228000000,
+  "machine": 36576250,
+  "sxc": 3640262,
+  "addon": 5600000,
+  "bom": {
+   "ROH-RESIN": 11061800,
+   "VERP-PACKAGING": 14544000
+  }
+ },
+ {
+  "id": "denso/c-std/t-esd/p-std",
+  "src": "denso-sensor",
+  "override": {
+   "variantColorId": "c-std",
+   "variantTextureId": "t-esd",
+   "variantPackagingId": "p-std"
+  },
+  "M": 11201528,
+  "L": 19897480,
+  "O": 51064171,
+  "P": 82163179,
+  "Rev": 228000000,
+  "machine": 36576250,
+  "sxc": 2487921,
+  "addon": 12000000,
+  "bom": {
+   "ROH-RESIN": 11201528
+  }
+ },
+ {
+  "id": "denso/c-std/t-esd/p-vacuum",
+  "src": "denso-sensor",
+  "override": {
+   "variantColorId": "c-std",
+   "variantTextureId": "t-esd",
+   "variantPackagingId": "p-vacuum"
+  },
+  "M": 18069528,
+  "L": 19897480,
+  "O": 51613611,
+  "P": 89580619,
+  "Rev": 228000000,
+  "machine": 36576250,
+  "sxc": 3037361,
+  "addon": 12000000,
+  "bom": {
+   "ROH-RESIN": 11201528,
+   "VERP-PACKAGING": 6868000
+  }
+ },
+ {
+  "id": "denso/c-std/t-esd/p-ip68",
+  "src": "denso-sensor",
+  "override": {
+   "variantColorId": "c-std",
+   "variantTextureId": "t-esd",
+   "variantPackagingId": "p-ip68"
+  },
+  "M": 25745528,
+  "L": 19897480,
+  "O": 52227691,
+  "P": 97870699,
+  "Rev": 228000000,
+  "machine": 36576250,
+  "sxc": 3651441,
+  "addon": 12000000,
+  "bom": {
+   "ROH-RESIN": 11201528,
+   "VERP-PACKAGING": 14544000
+  }
+ },
+ {
+  "id": "denso/c-blk/t-std/p-std",
+  "src": "denso-sensor",
+  "override": {
+   "variantColorId": "c-blk",
+   "variantTextureId": "t-std",
+   "variantPackagingId": "p-std"
+  },
+  "M": 11865260,
+  "L": 19897480,
+  "O": 39117269,
+  "P": 70880009,
+  "Rev": 228000000,
+  "machine": 36576250,
+  "sxc": 2541019,
+  "addon": 0,
+  "bom": {
+   "ROH-RESIN": 11469340,
+   "ROH-MB-COLOR": 395920
+  }
+ },
+ {
+  "id": "denso/c-blk/t-std/p-vacuum",
+  "src": "denso-sensor",
+  "override": {
+   "variantColorId": "c-blk",
+   "variantTextureId": "t-std",
+   "variantPackagingId": "p-vacuum"
+  },
+  "M": 18733260,
+  "L": 19897480,
+  "O": 39666709,
+  "P": 78297449,
+  "Rev": 228000000,
+  "machine": 36576250,
+  "sxc": 3090459,
+  "addon": 0,
+  "bom": {
+   "ROH-RESIN": 11469340,
+   "ROH-MB-COLOR": 395920,
+   "VERP-PACKAGING": 6868000
+  }
+ },
+ {
+  "id": "denso/c-blk/t-std/p-ip68",
+  "src": "denso-sensor",
+  "override": {
+   "variantColorId": "c-blk",
+   "variantTextureId": "t-std",
+   "variantPackagingId": "p-ip68"
+  },
+  "M": 26409260,
+  "L": 19897480,
+  "O": 40280789,
+  "P": 86587529,
+  "Rev": 228000000,
+  "machine": 36576250,
+  "sxc": 3704539,
+  "addon": 0,
+  "bom": {
+   "ROH-RESIN": 11469340,
+   "ROH-MB-COLOR": 395920,
+   "VERP-PACKAGING": 14544000
+  }
+ },
+ {
+  "id": "denso/c-blk/t-matte/p-std",
+  "src": "denso-sensor",
+  "override": {
+   "variantColorId": "c-blk",
+   "variantTextureId": "t-matte",
+   "variantPackagingId": "p-std"
+  },
+  "M": 11865260,
+  "L": 19897480,
+  "O": 44717269,
+  "P": 76480009,
+  "Rev": 228000000,
+  "machine": 36576250,
+  "sxc": 2541019,
+  "addon": 5600000,
+  "bom": {
+   "ROH-RESIN": 11469340,
+   "ROH-MB-COLOR": 395920
+  }
+ },
+ {
+  "id": "denso/c-blk/t-matte/p-vacuum",
+  "src": "denso-sensor",
+  "override": {
+   "variantColorId": "c-blk",
+   "variantTextureId": "t-matte",
+   "variantPackagingId": "p-vacuum"
+  },
+  "M": 18733260,
+  "L": 19897480,
+  "O": 45266709,
+  "P": 83897449,
+  "Rev": 228000000,
+  "machine": 36576250,
+  "sxc": 3090459,
+  "addon": 5600000,
+  "bom": {
+   "ROH-RESIN": 11469340,
+   "ROH-MB-COLOR": 395920,
+   "VERP-PACKAGING": 6868000
+  }
+ },
+ {
+  "id": "denso/c-blk/t-matte/p-ip68",
+  "src": "denso-sensor",
+  "override": {
+   "variantColorId": "c-blk",
+   "variantTextureId": "t-matte",
+   "variantPackagingId": "p-ip68"
+  },
+  "M": 26409260,
+  "L": 19897480,
+  "O": 45880789,
+  "P": 92187529,
+  "Rev": 228000000,
+  "machine": 36576250,
+  "sxc": 3704539,
+  "addon": 5600000,
+  "bom": {
+   "ROH-RESIN": 11469340,
+   "ROH-MB-COLOR": 395920,
+   "VERP-PACKAGING": 14544000
+  }
+ },
+ {
+  "id": "denso/c-blk/t-esd/p-std",
+  "src": "denso-sensor",
+  "override": {
+   "variantColorId": "c-blk",
+   "variantTextureId": "t-esd",
+   "variantPackagingId": "p-std"
+  },
+  "M": 12004988,
+  "L": 19897480,
+  "O": 51128447,
+  "P": 83030915,
+  "Rev": 228000000,
+  "machine": 36576250,
+  "sxc": 2552197,
+  "addon": 12000000,
+  "bom": {
+   "ROH-RESIN": 11609068,
+   "ROH-MB-COLOR": 395920
+  }
+ },
+ {
+  "id": "denso/c-blk/t-esd/p-vacuum",
+  "src": "denso-sensor",
+  "override": {
+   "variantColorId": "c-blk",
+   "variantTextureId": "t-esd",
+   "variantPackagingId": "p-vacuum"
+  },
+  "M": 18872988,
+  "L": 19897480,
+  "O": 51677887,
+  "P": 90448355,
+  "Rev": 228000000,
+  "machine": 36576250,
+  "sxc": 3101637,
+  "addon": 12000000,
+  "bom": {
+   "ROH-RESIN": 11609068,
+   "ROH-MB-COLOR": 395920,
+   "VERP-PACKAGING": 6868000
+  }
+ },
+ {
+  "id": "denso/c-blk/t-esd/p-ip68",
+  "src": "denso-sensor",
+  "override": {
+   "variantColorId": "c-blk",
+   "variantTextureId": "t-esd",
+   "variantPackagingId": "p-ip68"
+  },
+  "M": 26548988,
+  "L": 19897480,
+  "O": 52291967,
+  "P": 98738435,
+  "Rev": 228000000,
+  "machine": 36576250,
+  "sxc": 3715717,
+  "addon": 12000000,
+  "bom": {
+   "ROH-RESIN": 11609068,
+   "ROH-MB-COLOR": 395920,
+   "VERP-PACKAGING": 14544000
+  }
+ },
+ {
+  "id": "denso/c-wht/t-std/p-std",
+  "src": "denso-sensor",
+  "override": {
+   "variantColorId": "c-wht",
+   "variantTextureId": "t-std",
+   "variantPackagingId": "p-std"
+  },
+  "M": 12209600,
+  "L": 19897480,
+  "O": 39144816,
+  "P": 71251896,
+  "Rev": 228000000,
+  "machine": 36576250,
+  "sxc": 2568566,
+  "addon": 0,
+  "bom": {
+   "ROH-RESIN": 11644000,
+   "ROH-MB-COLOR": 565600
+  }
+ },
+ {
+  "id": "denso/c-wht/t-std/p-vacuum",
+  "src": "denso-sensor",
+  "override": {
+   "variantColorId": "c-wht",
+   "variantTextureId": "t-std",
+   "variantPackagingId": "p-vacuum"
+  },
+  "M": 19077600,
+  "L": 19897480,
+  "O": 39694256,
+  "P": 78669336,
+  "Rev": 228000000,
+  "machine": 36576250,
+  "sxc": 3118006,
+  "addon": 0,
+  "bom": {
+   "ROH-RESIN": 11644000,
+   "ROH-MB-COLOR": 565600,
+   "VERP-PACKAGING": 6868000
+  }
+ },
+ {
+  "id": "denso/c-wht/t-std/p-ip68",
+  "src": "denso-sensor",
+  "override": {
+   "variantColorId": "c-wht",
+   "variantTextureId": "t-std",
+   "variantPackagingId": "p-ip68"
+  },
+  "M": 26753600,
+  "L": 19897480,
+  "O": 40308336,
+  "P": 86959416,
+  "Rev": 228000000,
+  "machine": 36576250,
+  "sxc": 3732086,
+  "addon": 0,
+  "bom": {
+   "ROH-RESIN": 11644000,
+   "ROH-MB-COLOR": 565600,
+   "VERP-PACKAGING": 14544000
+  }
+ },
+ {
+  "id": "denso/c-wht/t-matte/p-std",
+  "src": "denso-sensor",
+  "override": {
+   "variantColorId": "c-wht",
+   "variantTextureId": "t-matte",
+   "variantPackagingId": "p-std"
+  },
+  "M": 12209600,
+  "L": 19897480,
+  "O": 44744816,
+  "P": 76851896,
+  "Rev": 228000000,
+  "machine": 36576250,
+  "sxc": 2568566,
+  "addon": 5600000,
+  "bom": {
+   "ROH-RESIN": 11644000,
+   "ROH-MB-COLOR": 565600
+  }
+ },
+ {
+  "id": "denso/c-wht/t-matte/p-vacuum",
+  "src": "denso-sensor",
+  "override": {
+   "variantColorId": "c-wht",
+   "variantTextureId": "t-matte",
+   "variantPackagingId": "p-vacuum"
+  },
+  "M": 19077600,
+  "L": 19897480,
+  "O": 45294256,
+  "P": 84269336,
+  "Rev": 228000000,
+  "machine": 36576250,
+  "sxc": 3118006,
+  "addon": 5600000,
+  "bom": {
+   "ROH-RESIN": 11644000,
+   "ROH-MB-COLOR": 565600,
+   "VERP-PACKAGING": 6868000
+  }
+ },
+ {
+  "id": "denso/c-wht/t-matte/p-ip68",
+  "src": "denso-sensor",
+  "override": {
+   "variantColorId": "c-wht",
+   "variantTextureId": "t-matte",
+   "variantPackagingId": "p-ip68"
+  },
+  "M": 26753600,
+  "L": 19897480,
+  "O": 45908336,
+  "P": 92559416,
+  "Rev": 228000000,
+  "machine": 36576250,
+  "sxc": 3732086,
+  "addon": 5600000,
+  "bom": {
+   "ROH-RESIN": 11644000,
+   "ROH-MB-COLOR": 565600,
+   "VERP-PACKAGING": 14544000
+  }
+ },
+ {
+  "id": "denso/c-wht/t-esd/p-std",
+  "src": "denso-sensor",
+  "override": {
+   "variantColorId": "c-wht",
+   "variantTextureId": "t-esd",
+   "variantPackagingId": "p-std"
+  },
+  "M": 12349328,
+  "L": 19897480,
+  "O": 51155995,
+  "P": 83402803,
+  "Rev": 228000000,
+  "machine": 36576250,
+  "sxc": 2579745,
+  "addon": 12000000,
+  "bom": {
+   "ROH-RESIN": 11783728,
+   "ROH-MB-COLOR": 565600
+  }
+ },
+ {
+  "id": "denso/c-wht/t-esd/p-vacuum",
+  "src": "denso-sensor",
+  "override": {
+   "variantColorId": "c-wht",
+   "variantTextureId": "t-esd",
+   "variantPackagingId": "p-vacuum"
+  },
+  "M": 19217328,
+  "L": 19897480,
+  "O": 51705435,
+  "P": 90820243,
+  "Rev": 228000000,
+  "machine": 36576250,
+  "sxc": 3129185,
+  "addon": 12000000,
+  "bom": {
+   "ROH-RESIN": 11783728,
+   "ROH-MB-COLOR": 565600,
+   "VERP-PACKAGING": 6868000
+  }
+ },
+ {
+  "id": "denso/c-wht/t-esd/p-ip68",
+  "src": "denso-sensor",
+  "override": {
+   "variantColorId": "c-wht",
+   "variantTextureId": "t-esd",
+   "variantPackagingId": "p-ip68"
+  },
+  "M": 26893328,
+  "L": 19897480,
+  "O": 52319515,
+  "P": 99110323,
+  "Rev": 228000000,
+  "machine": 36576250,
+  "sxc": 3743265,
+  "addon": 12000000,
+  "bom": {
+   "ROH-RESIN": 11783728,
+   "ROH-MB-COLOR": 565600,
+   "VERP-PACKAGING": 14544000
+  }
+ },
+ {
+  "id": "denso/c-ylw/t-std/p-std",
+  "src": "denso-sensor",
+  "override": {
+   "variantColorId": "c-ylw",
+   "variantTextureId": "t-std",
+   "variantPackagingId": "p-std"
+  },
+  "M": 12553940,
+  "L": 19897480,
+  "O": 39172364,
+  "P": 71623784,
+  "Rev": 228000000,
+  "machine": 36576250,
+  "sxc": 2596114,
+  "addon": 0,
+  "bom": {
+   "ROH-RESIN": 11818660,
+   "ROH-MB-COLOR": 735280
+  }
+ },
+ {
+  "id": "denso/c-ylw/t-std/p-vacuum",
+  "src": "denso-sensor",
+  "override": {
+   "variantColorId": "c-ylw",
+   "variantTextureId": "t-std",
+   "variantPackagingId": "p-vacuum"
+  },
+  "M": 19421940,
+  "L": 19897480,
+  "O": 39721804,
+  "P": 79041224,
+  "Rev": 228000000,
+  "machine": 36576250,
+  "sxc": 3145554,
+  "addon": 0,
+  "bom": {
+   "ROH-RESIN": 11818660,
+   "ROH-MB-COLOR": 735280,
+   "VERP-PACKAGING": 6868000
+  }
+ },
+ {
+  "id": "denso/c-ylw/t-std/p-ip68",
+  "src": "denso-sensor",
+  "override": {
+   "variantColorId": "c-ylw",
+   "variantTextureId": "t-std",
+   "variantPackagingId": "p-ip68"
+  },
+  "M": 27097940,
+  "L": 19897480,
+  "O": 40335884,
+  "P": 87331304,
+  "Rev": 228000000,
+  "machine": 36576250,
+  "sxc": 3759634,
+  "addon": 0,
+  "bom": {
+   "ROH-RESIN": 11818660,
+   "ROH-MB-COLOR": 735280,
+   "VERP-PACKAGING": 14544000
+  }
+ },
+ {
+  "id": "denso/c-ylw/t-matte/p-std",
+  "src": "denso-sensor",
+  "override": {
+   "variantColorId": "c-ylw",
+   "variantTextureId": "t-matte",
+   "variantPackagingId": "p-std"
+  },
+  "M": 12553940,
+  "L": 19897480,
+  "O": 44772364,
+  "P": 77223784,
+  "Rev": 228000000,
+  "machine": 36576250,
+  "sxc": 2596114,
+  "addon": 5600000,
+  "bom": {
+   "ROH-RESIN": 11818660,
+   "ROH-MB-COLOR": 735280
+  }
+ },
+ {
+  "id": "denso/c-ylw/t-matte/p-vacuum",
+  "src": "denso-sensor",
+  "override": {
+   "variantColorId": "c-ylw",
+   "variantTextureId": "t-matte",
+   "variantPackagingId": "p-vacuum"
+  },
+  "M": 19421940,
+  "L": 19897480,
+  "O": 45321804,
+  "P": 84641224,
+  "Rev": 228000000,
+  "machine": 36576250,
+  "sxc": 3145554,
+  "addon": 5600000,
+  "bom": {
+   "ROH-RESIN": 11818660,
+   "ROH-MB-COLOR": 735280,
+   "VERP-PACKAGING": 6868000
+  }
+ },
+ {
+  "id": "denso/c-ylw/t-matte/p-ip68",
+  "src": "denso-sensor",
+  "override": {
+   "variantColorId": "c-ylw",
+   "variantTextureId": "t-matte",
+   "variantPackagingId": "p-ip68"
+  },
+  "M": 27097940,
+  "L": 19897480,
+  "O": 45935884,
+  "P": 92931304,
+  "Rev": 228000000,
+  "machine": 36576250,
+  "sxc": 3759634,
+  "addon": 5600000,
+  "bom": {
+   "ROH-RESIN": 11818660,
+   "ROH-MB-COLOR": 735280,
+   "VERP-PACKAGING": 14544000
+  }
+ },
+ {
+  "id": "denso/c-ylw/t-esd/p-std",
+  "src": "denso-sensor",
+  "override": {
+   "variantColorId": "c-ylw",
+   "variantTextureId": "t-esd",
+   "variantPackagingId": "p-std"
+  },
+  "M": 12693668,
+  "L": 19897480,
+  "O": 51183542,
+  "P": 83774690,
+  "Rev": 228000000,
+  "machine": 36576250,
+  "sxc": 2607292,
+  "addon": 12000000,
+  "bom": {
+   "ROH-RESIN": 11958388,
+   "ROH-MB-COLOR": 735280
+  }
+ },
+ {
+  "id": "denso/c-ylw/t-esd/p-vacuum",
+  "src": "denso-sensor",
+  "override": {
+   "variantColorId": "c-ylw",
+   "variantTextureId": "t-esd",
+   "variantPackagingId": "p-vacuum"
+  },
+  "M": 19561668,
+  "L": 19897480,
+  "O": 51732982,
+  "P": 91192130,
+  "Rev": 228000000,
+  "machine": 36576250,
+  "sxc": 3156732,
+  "addon": 12000000,
+  "bom": {
+   "ROH-RESIN": 11958388,
+   "ROH-MB-COLOR": 735280,
+   "VERP-PACKAGING": 6868000
+  }
+ },
+ {
+  "id": "denso/c-ylw/t-esd/p-ip68",
+  "src": "denso-sensor",
+  "override": {
+   "variantColorId": "c-ylw",
+   "variantTextureId": "t-esd",
+   "variantPackagingId": "p-ip68"
+  },
+  "M": 27237668,
+  "L": 19897480,
+  "O": 52347062,
+  "P": 99482210,
+  "Rev": 228000000,
+  "machine": 36576250,
+  "sxc": 3770812,
+  "addon": 12000000,
+  "bom": {
+   "ROH-RESIN": 11958388,
+   "ROH-MB-COLOR": 735280,
+   "VERP-PACKAGING": 14544000
+  }
+ },
+ {
+  "id": "samsung/S20+variant-ids",
+  "src": "samsung-cover",
+  "override": {
+   "variantColorId": "c-ylw",
+   "variantTextureId": "t-esd",
+   "variantPackagingId": "p-ip68"
+  },
+  "M": 8302500,
+  "L": 14361100,
+  "O": 26116488,
+  "P": 48780088,
+  "Rev": 210000000,
+  "machine": 24303400,
+  "sxc": 1813088,
+  "addon": 0,
+  "bom": {
+   "ROH-RESIN": 8302500
+  }
+ }
+]

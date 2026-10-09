@@ -15,6 +15,7 @@
     "test:a0": "tsx scripts/a0-expected.ts && tsx scripts/a0-ids.ts && tsx scripts/a0-ckmlcp.ts && tsx scripts/a01-identity-events.ts",
     "test:s3": "tsx scripts/s3-reports.ts",
     "test:health": "tsx scripts/s1-health.ts",
+    "test:costing": "tsx scripts/export-costing-inputs.ts --check && python3 scripts/oracle_costing.py --check && python3 scripts/a0_oracle.py --check && tsx scripts/costing.ts",
     "lint:eslint": "eslint .",
     "lint:eslint:strict": "eslint src/reports src/events src/pages/ReportsPage.tsx scripts/s3-reports.ts scripts/s1-health.ts eslint.config.js"
   },
