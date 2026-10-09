@@ -27,3 +27,7 @@
 - T4: `SAPClassicMenu.tsx` đưa `return null` xuống sau hook; bỏ 108 import thừa (18 file, script cơ học chỉ xoá specifier trong câu `import`); `prefer-const` ×4 (`App.tsx`, `scripts/a0-expected.ts`). ESLint toàn repo **158 → 42 lỗi**, `rules-of-hooks` 4 → 0. Kiểm trình duyệt (Playwright, build production): Fiori → Classic (mở cây Easy Access) → Fiori × 3 vòng, 0 lỗi React.
 - T5: bỏ theo Q2 = (a); ghi quyết định vào AUD-020.
 - Không đổi `calculator.ts`, `acdoca.ts`, `materialLedger.ts`, `a0_expected.json`; không xóa file.
+
+## Session 3 — nhánh `cloud/s3-costing` (PR #10, gốc `feat` @cc527f2) — ĐỔI SỐ HỌC, chờ duyệt
+- T2: oracle giá thành độc lập `scripts/oracle_costing.py` (đầu vào tham số `costing_inputs.json`), `a0_oracle.py` bỏ `/tmp/planned.json`, `npm run test:costing` (40 ca) + bước CI.
+- Trước sửa: 25/40 FAIL (log `docs-cloud/evidence/s3_costing_before_fix.log`). Sửa `calculator.ts:184` (bỏ `packagingUnitAddon` khỏi `variantAddonTotal`, AUD-030). `a0_expected.json` sinh lại bằng oracle: Denso P 113.882.210 → 99.482.210; Samsung/Canon không đổi. Bảng 18 ca: `docs-cloud/S3_COSTING_BEFORE_AFTER.md`.

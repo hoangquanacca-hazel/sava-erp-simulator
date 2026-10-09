@@ -114,3 +114,6 @@ Số Denso (8.000 cái, định mức 14,2 kg/1.000 → 113,6 kg; hao hụt nh�
 - Cố ý KHÔNG sửa (quy tắc 3, file số học): `acdoca.ts:214` `netTurnover`, `acdoca.ts:565` `standardCogs`, `acdoca.ts:479` `prefer-const remain`, `calculator.ts:1510, 1515` `laborUnitCost`/`machineUnitCost`.
 - Còn lại cần đọc nghiệp vụ trước khi bỏ (có thể là tính năng dở): `App.tsx` `registeredUser`, `footerClicks`; `Header.tsx` `onExportCSV/JSON`; `SetupScreen.tsx` `selectedColor/Texture/Packaging`; `PDFReportModal.tsx` `stockEState`; `SalesOrderCard.tsx` `computed`; `BOMTreeView.tsx`, `BOMVisualizer.tsx`, `parity.ts` `oldTb`.
 - CI vẫn để `lint:eslint` toàn repo `continue-on-error` cho tới khi về 0.
+
+## AUD-040 — Màn hình bóc tách giá thành chưa theo Q1 = (a) (CHỈ HIỂN THỊ)
+- `BOMVisualizer.tsx:112–129` và `buildBOMTree` (`calculator.ts:1490+`) tự tính lại: bao bì xếp vào SXC (`packagingCost`), màu tính theo /kg trên nhựa. Sau PR #10, bút toán theo BOM (bao bì → 621) nhưng hai màn hình này vẫn hiển thị kiểu cũ. Không ảnh hưởng ACDOCA; sửa sau khi chốt AUD-037.
