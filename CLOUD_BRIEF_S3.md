@@ -18,17 +18,18 @@ S1 đã bị làm trùng hai lần (#3 và #6) vì phiên sau không kiểm PR m
 9. Sửa số học hoặc sinh lại `a0_expected.json` CHỈ khi: (a) chủ dự án đã chốt Q1 bên dưới, (b) có test oracle độc lập
    FAIL trước khi sửa, (c) PR riêng kèm bảng số trước/sau cho từng ca, chủ dự án duyệt bảng đó trước khi merge.
 
-## Quyết định chủ dự án cần chốt TRƯỚC khi chạy (điền vào đây)
+## Quyết định chủ dự án (ĐÃ CHỐT 09/10/2026)
 - **Q1 — Bao bì Strategy 25 (đã kiểm chứng tính trùng trên mã, `calculator.ts` dòng 122–133 và 184):**
   Denso: BOM `VERP-PACKAGING` 14.544.000 (8.080 cái × 1.800, gồm 1% hao hụt) **và** `variantAddonTotal` cộng thêm
   8.000 × 1.800 = 14.400.000 → giá thành kế hoạch P = 113.882.210 bị đội ~14,4 tr (~12,6%).
   - (a) Chỉ tính trong BOM (vật tư VERP → 621/152), bỏ khỏi add-on — **đề xuất**, đúng cách SAP coi bao bì là vật tư BOM.
   - (b) Chỉ tính trong add-on (SXC/627), bỏ dòng BOM.
   - (c) Giữ nguyên (cố ý) — ghi lý do nghiệp vụ.
-  - Chốt: `___`
+  - **Chốt: (a)** — bao bì chỉ là vật tư VERP trong BOM (621/152); bỏ phần bao bì khỏi `variantAddonTotal`.
+    Texture add-on/cái giữ nguyên trừ khi T3 chứng minh trùng.
 - **Q2 — Cổng đăng ký bước 3 (AUD-020 bản S2):** chỉ kiểm bằng localStorage, ai cũng bỏ qua được.
-  (a) giữ, chấp nhận rủi ro; (b) kiểm phía Netlify Function. Chốt: `___`
-- **Q3 — Golden set:** có bộ số liệu chuẩn của chủ dự án để đưa vào `golden/` không? Chốt: `___`
+  (a) giữ, chấp nhận rủi ro; (b) kiểm phía Netlify Function. **Chốt: (a)** — giữ nguyên, ghi nhận rủi ro trong sổ AUD, không làm T5.
+- **Q3 — Golden set:** **chưa có.** S3 không chờ golden set; oracle T2 là chốt kiểm độc lập duy nhất cho giá thành.
 
 ## Nhiệm vụ Session 3 (theo thứ tự)
 T0. **Dọn PR tồn đọng** (đã kiểm `git merge-tree` với `feat` @9667e55):
@@ -45,15 +46,18 @@ T2. **Oracle độc lập cho GIÁ THÀNH KẾ HOẠCH** (điểm mù lớn nh�
     → Khâu giá thành (CK11N) chưa từng được kiểm độc lập; lỗi bao bì lọt qua vì vậy.
   - Việc: (1) đưa bước sinh đầu vào vào repo, chỉ xuất THAM SỐ preset (không xuất kết quả TS);
     (2) viết `scripts/oracle_costing.py` tính M, L, O, Rev, P từ tham số theo chính sách đã chốt ở Q1;
-    (3) test `test:costing` so `computeMTO` trên 3 preset + biến thể Strategy 25. Q1 = (a)/(b) → test PHẢI FAIL trên Denso
-    trước khi sửa (lưu log làm bằng chứng), rồi mới sửa `calculator.ts` + sinh lại `a0_expected.json` theo quy tắc 9.
-    Q1 chưa chốt → chỉ làm (1)(2), để test ở chế độ báo cáo, KHÔNG sửa số.
+    (3) test `test:costing` so `computeMTO` trên 3 preset + biến thể Strategy 25. Theo Q1 = (a), test PHẢI FAIL trên Denso
+    trước khi sửa (lưu log làm bằng chứng; Samsung/Canon là Strategy 20 nên phải PASS ngay);
+    (4) sửa `calculator.ts` (bỏ `packagingUnitAddon` khỏi `variantAddonTotal`) → `test:costing` PASS;
+    (5) sinh lại `a0_expected.json` bằng oracle (KHÔNG bằng TS) → `test:a0`, `test:s3` PASS; đề xuất mức kỳ vọng Denso
+    P ≈ 99.482.210 (= 113.882.210 − 14.400.000) — con số này phải do oracle tự tính ra, không chép từ đây;
+    (6) PR RIÊNG cho (4)(5), kèm bảng trước/sau từng ca (P, Δ, 154, 632, 911) để chủ dự án duyệt trước khi merge.
 T3. **Rà các phụ phí biến thể còn lại** (chỉ báo cáo, không sửa): màu (`colorResinAddon` vừa cộng vào giá hạt nhựa/kg vừa
    sinh dòng masterbatch `ROH-MB-COLOR`), texture (cộng vào giá/kg và vào add-on/cái). Kết luận từng khoản: trùng / cố ý / cần hỏi.
 T4. **Giảm nợ ESLint (AUD-018 bản S2, 158 lỗi)**: sửa 4 lỗi `react-hooks/rules-of-hooks` ở `SAPClassicMenu.tsx`
    (đưa `return null` xuống sau các hook) + import thừa/`prefer-const` (thay đổi cơ học). KHÔNG sửa trong 3 file số học
    (quy tắc 3) — liệt kê riêng. Kiểm trình duyệt chuyển Fiori ↔ Classic không lỗi.
-T5. (Chỉ khi Q2 = b) Kiểm đăng ký phía Netlify Function, có test.
+T5. ~~Kiểm đăng ký phía server~~ — BỎ theo Q2 = (a). Chỉ cập nhật sổ AUD: rủi ro được chấp nhận, ngày, người quyết.
 
 ## Tiêu chí nghiệm thu (PASS/FAIL)
 - PASS-1: CI xanh trên mọi PR S3; T0 xử lý xong #4, #5 (merge hoặc lý do), #3 có comment chuyển giao.
@@ -67,4 +71,4 @@ T5. (Chỉ khi Q2 = b) Kiểm đăng ký phía Netlify Function, có test.
 ## Tiết kiệm credit
 Thứ tự rẻ → đắt: T0, T1 (≈ 20%) → T3 (≈ 10%) → T4 (≈ 20%) → T2 (≈ 40–50%, phụ thuộc Q1).
 Đọc trước: `docs-cloud/AUDITOR.md`, `scripts/a0_oracle.py`, `src/utils/calculator.ts` dòng 60–200, `scripts/s3-reports.ts`.
-Dừng và báo nếu một task vượt ~25% dự kiến, hoặc nếu Q1 chưa chốt khi tới bước sửa số.
+Dừng và báo nếu một task vượt ~25% dự kiến, hoặc nếu chênh lệch sau sửa ở Denso KHÁC 14.400.000 ± làm tròn (dấu hiệu còn khoản trùng/thiếu khác).
