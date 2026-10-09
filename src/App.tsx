@@ -72,6 +72,7 @@ const SodAuditPage = lazy(() => import('./pages/SodAuditPage'));
 const MaterialLedgerPage = lazy(() => import('./pages/MaterialLedgerPage'));
 const GrirPage = lazy(() => import('./pages/GrirPage'));
 const IntercompanyPage = lazy(() => import('./pages/IntercompanyPage'));
+const ReportsPage = lazy(() => import('./pages/ReportsPage'));
 
 const INITIAL_PARAMS: MTOParameters = PRESET_SCENARIOS[0].params;
 
@@ -698,6 +699,10 @@ export default function App() {
               }}
               uiMode={uiMode}
             />
+          </Suspense>
+        ) : route === 'reports' && flags.m9Reports ? (
+          <Suspense fallback={<div className="p-8 text-sm text-slate-400">Đang tải Báo cáo…</div>}>
+            <ReportsPage params={params} computed={computed} acdoca={ACDOCA_TABLE} uiMode={uiMode} />
           </Suspense>
         ) : currentScreen === 'setup' ? (
           <SetupScreen

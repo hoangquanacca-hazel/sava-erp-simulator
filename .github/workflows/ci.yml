@@ -1,0 +1,53 @@
+# CI — kiểm chứng độc lập (không do agent tự báo): typecheck, toàn bộ test oracle/đối soát, build.
+# Mọi test sai là exit != 0 → job đỏ. continue-on-error CHỈ dùng cho ESLint toàn repo (nợ tồn đọng), không bao giờ cho test.
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main, 'feat/**', 'cloud/**']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Typecheck (lint)
+        run: npm run lint
+      - name: ESLint — mã báo cáo/đối soát (CHẶN)
+        run: npm run lint:eslint:strict
+      - name: ESLint — toàn repo (CHỈ BÁO CÁO, nợ tồn đọng AUD-018)
+        continue-on-error: true
+        run: npm run lint:eslint
+      - name: Parity M1–M8
+        run: npm run test:parity
+      - name: S1 cấu hình TT99
+        run: npm run test:s1
+      - name: S1 /api/health không lộ khóa
+        run: npm run test:health
+      - name: S2 FAGLL03
+        run: npm run test:s2
+      - name: A0 oracle 54 ca
+        run: npm run test:a0
+      - name: S3 11 báo cáo × 54 ca
+        run: npm run test:s3
+      - name: Build
+        run: npm run build
+      - name: Quét chuỗi dạng khóa Gemini trong mã nguồn và bundle
+        run: |
+          if grep -rEl 'AIza[0-9A-Za-z_-]{30,}' --exclude-dir=node_modules --exclude-dir=.git . ; then
+            echo "Phát hiện chuỗi dạng khóa Gemini" ; exit 1
+          fi

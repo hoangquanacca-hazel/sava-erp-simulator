@@ -31,3 +31,17 @@
 ## AUD-017 — Báo cáo logistics dùng giả định số lượng của A0.1
 - MB51/COOIS kế thừa giả định AUD-001/AUD-012 (lượng thực tế = kế hoạch × hệ số chi phí). Một công đoạn (0010), một xác nhận, một lệnh/kịch bản. Mở rộng nhiều công đoạn/xác nhận cần cập nhật `scenarioEvents.ts` trước.
 - `COOIS_GM` bỏ 601 (xuất giao hàng thuộc giao hàng, không thuộc lệnh) — giống SAP.
+
+## AUD-018 — Nợ ESLint tồn đọng (S2)
+- ESLint 9 + typescript-eslint + react-hooks (cấu hình `eslint.config.js`). Toàn repo @ S2: **158 lỗi, 1 cảnh báo, 29 file** — 124 `no-unused-vars`, 24 `no-explicit-any`, 5 `prefer-const`, 4 `react-hooks/rules-of-hooks`, 1 `exhaustive-deps`, 1 `prefer-rest-params`. Tất cả có từ trước S1/S2.
+- CI: `lint:eslint:strict` (mã báo cáo/đối soát/sự kiện) **chặn**; `lint:eslint` toàn repo **chỉ báo cáo** (`continue-on-error`). Gỡ `continue-on-error` khi nợ về 0.
+- **Ưu tiên cao nhất**: `src/components/SAPClassicMenu.tsx:588–682` gọi `useState/useMemo` SAU `if (uiMode !== 'classic') return null`. Hiện không sập vì App chỉ gắn component khi ở chế độ Classic (đã thử chuyển Fiori→Classic trên trình duyệt: không lỗi). Nếu ai đó gắn component vô điều kiện → React crash "Rendered more hooks". Sửa: đưa `return null` xuống sau các hook.
+
+## AUD-019 — Trang "Báo cáo SAP" dựng trên bảng ACDOCA đang chạy (S2)
+- `#/reports` (cờ `m9Reports`) dùng `buildAllReports` (src/reports/registry.ts) — CÙNG danh mục mà `test:s3` đối soát. Kiểm chứng trình duyệt: sau 7 bước, SHA-256 FAGLL03 trên UI = hash `test:s2` (cd5ac66eadab…) → file người dùng tải = file đã kiểm.
+- Đối soát với oracle KHÔNG chạy trong trình duyệt (oracle chỉ có 54 ca cố định); UI hiển thị hash + manifest, đối soát chạy ở CI. Bảng có bút toán bổ sung (CKMLCP, GR/IR, IC) vẫn dựng được (48 trạng thái kiểm trong `test:s3`) nhưng chưa có oracle cho GR/IR/IC.
+- Xem trước tối đa 200 dòng/báo cáo; file tải về đủ dòng.
+
+## AUD-020 — Cổng đăng ký (lead) bước 3 chỉ kiểm ở phía trình duyệt — RỦI RO KINH DOANH
+- `App.tsx:407` chặn bước ≥ 3 nếu `localStorage.sava_registered_user` rỗng. Ai cũng tự đặt khóa này (DevTools) để bỏ qua đăng ký; test UI của S2 dùng đúng cách này (KHÔNG gửi form).
+- Danh sách lead `sava_captured_leads` cũng chỉ nằm trong localStorage của người truy cập; nguồn thật là Netlify Forms (`fetch('/')`). Nếu mô hình kinh doanh dựa vào cổng này để thu lead → cần kiểm phía server. Không sửa trong S2 (ngoài phạm vi, cần quyết định sản phẩm).

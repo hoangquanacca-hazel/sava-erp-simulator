@@ -9,12 +9,10 @@ import { PRESET_SCENARIOS } from '../src/types.ts';
 import type { AcdocaLine, MTOParameters } from '../src/types.ts';
 import { computeMTO, generateStepEntries } from '../src/utils/calculator.ts';
 import { buildScenarioEvents } from '../src/events/scenarioEvents.ts';
-import { buildManifest, columnIndex, documentNumberOf, sha256Hex, sumColumn, toRawExport, type ReportOutput } from '../src/reports/core.ts';
-import { buildFagll03, fagll03Totals } from '../src/reports/fagll03.ts';
-import {
-  buildCooisComponents, buildCooisConfirmations, buildCooisGoodsMovements, buildCooisHeader, buildCooisOperations, buildMb51,
-} from '../src/reports/logistics.ts';
-import { buildCk13n, buildKks1, buildKob1, buildSup01 } from '../src/reports/controlling.ts';
+import { columnIndex, documentNumberOf, buildManifest, sha256Hex, sumColumn, toRawExport, type ReportOutput } from '../src/reports/core.ts';
+import { fagll03Totals } from '../src/reports/fagll03.ts';
+import { buildAllReports, REPORT_IDS } from '../src/reports/registry.ts';
+import { postCkmlcp } from '../src/features/materialLedger.ts';
 
 interface Expected {
   src: string; stock: 'Valuated' | 'Non-valuated'; pct: number; ratio: number; P: number; delta: number;
@@ -36,13 +34,9 @@ function scenario(e: Expected) {
   return { params, computed, table, ev };
 }
 
+/** Dùng ĐÚNG danh mục mà giao diện dùng (src/reports/registry.ts). */
 function buildAll(s: ReturnType<typeof scenario>): ReportOutput[] {
-  const { params, computed, table, ev } = s;
-  return [
-    buildFagll03(table), buildMb51(ev), buildCooisHeader(ev, computed.plannedCost), buildCooisComponents(ev),
-    buildCooisOperations(ev), buildCooisConfirmations(ev), buildCooisGoodsMovements(ev), buildKob1(table),
-    buildKks1(ev, computed, table), buildCk13n(computed, params.componentCode, params.orderQuantity), buildSup01(ev, computed, table),
-  ];
+  return buildAllReports(s.params, s.computed, s.table);
 }
 
 // ---- Phía FI: tính thẳng từ dòng ACDOCA, không qua code báo cáo ------------------------------
@@ -214,13 +208,50 @@ async function main() {
     cases++;
   }
   if (cases !== 54) fails.push(`chỉ chạy ${cases}/54 ca`);
-  if (reportIds.size !== 11) fails.push(`chỉ có ${reportIds.size}/11 báo cáo`);
+
+  // Trạng thái giao diện: bảng dở dang (mới chạy bước 1..k) và bảng có CKMLCP — dựng được, đúng danh mục, FAGLL03 cân.
+  let uiStates = 0;
+  for (const preset of PRESET_SCENARIOS) {
+    for (const stock of ['Valuated', 'Non-valuated'] as const) {
+      const params: MTOParameters = { ...preset.params, stockType: stock, actualVariancePercent: 3.5 };
+      const c = computeMTO(params);
+      const tables: [string, AcdocaLine[]][] = [];
+      for (let k = 1; k <= 7; k++) {
+        const t: AcdocaLine[] = [];
+        for (let st = 1; st <= k; st++) t.push(...generateStepEntries(st, params, c, 0, 0, null).acdoca);
+        tables.push([`bước 1..${k}`, t]);
+      }
+      const ml: AcdocaLine[] = [];
+      for (let st = 1; st <= 6; st++) ml.push(...generateStepEntries(st, params, c, 0, 0, null).acdoca);
+      postCkmlcp(ml, params, c, 0);
+      ml.push(...generateStepEntries(7, params, c, 0, 0, null, { skipVa88Variance: true }).acdoca);
+      tables.push(['CKMLCP + bước 7', ml]);
+      for (const [name, t] of tables) {
+        const tag = `${preset.id}/${stock}/${name}`;
+        try {
+          const reps = buildAllReports(params, c, t);
+          if (reps.map((r) => r.reportId).join() !== REPORT_IDS.join()) fails.push(`${tag}: danh mục lệch`);
+          const fg = fagll03Totals(reps[0]);
+          if (fg.net !== 0 || fg.debit !== t.reduce((x, l) => x + l.drAmount, 0)) fails.push(`${tag}: FAGLL03 không khớp bảng`);
+          const kob = reps.find((r) => r.reportId === 'KOB1')!;
+          const net154 = t.filter((l) => l.glAccount === '154').reduce((x, l) => x + l.drAmount - l.crAmount, 0);
+          const co01Done = t.some((l) => l.tCode === 'CO01');
+          if (co01Done && sumColumn(kob, 'WKGBTR') !== net154) fails.push(`${tag}: KOB1 ${sumColumn(kob, 'WKGBTR')} ≠ số dư 154 ${net154}`);
+        } catch (err) {
+          fails.push(`${tag}: THROW ${String(err instanceof Error ? err.message : err).split('\n')[0]}`);
+        }
+        uiStates++;
+      }
+    }
+  }
+  if ([...reportIds].join() !== REPORT_IDS.join()) fails.push(`danh mục báo cáo ${[...reportIds].join()} ≠ registry`);
+  if (Object.keys(TAMPER).sort().join() !== [...REPORT_IDS].sort().join()) fails.push('TAMPER không phủ đủ danh mục báo cáo');
   if (fails.length) {
     console.error(`FAIL ${fails.length}:\n` + fails.slice(0, 40).join('\n'));
     process.exit(1);
   }
   console.log(`PASS S3 ${reportIds.size} báo cáo × ${cases}/54 ca: Σ báo cáo = Σ ACDOCA = oracle; tất định; manifest; ${negatives} test âm tính đều bị bắt`);
-  console.log(`   báo cáo: ${[...reportIds].join(', ')}`);
+  console.log(`   báo cáo: ${[...reportIds].join(', ')}; ${uiStates} trạng thái giao diện (bảng dở dang/CKMLCP) dựng được`);
 }
 main().catch((err) => {
   console.error(err);
