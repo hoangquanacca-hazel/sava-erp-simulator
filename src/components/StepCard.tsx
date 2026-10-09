@@ -5,30 +5,21 @@ import {
   StepDefinition,
   StepRuntimeState,
 } from '../types';
-import { formatVND, formatNumber } from '../utils/calculator';
+import { formatVND } from '../utils/calculator';
 import { splitCogsByCk11n } from '../utils/acdoca';
 import { BOMVisualizer } from './BOMVisualizer';
 import {
   Play,
   CheckCircle,
-  HelpCircle,
   AlertOctagon,
   ShieldCheck,
   ShieldAlert,
   ArrowRight,
-  RotateCcw,
   Sparkles,
   Info,
   Check,
-  XCircle,
-  Lock,
   Unlock,
-  Package,
-  UserCheck,
-  Cpu,
   Layers,
-  TrendingUp,
-  TrendingDown,
   Scale,
   Trash2,
   Wrench,
@@ -182,7 +173,7 @@ export const StepCard: React.FC<StepCardProps> = ({
               <div className="flex items-center gap-2">
                 <Layers className="w-4 h-4 text-cyan-400" />
                 <strong className="text-white text-xs font-bold">
-                  Quy Trình Chi Phí Giá Thành 2 Giai Đoạn (Circular 200/2014/TT-BTC)
+                  Quy Trình Chi Phí Giá Thành 2 Giai Đoạn (Circular 99/2025/TT-BTC)
                 </strong>
               </div>
               <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">

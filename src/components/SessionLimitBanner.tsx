@@ -2,7 +2,6 @@ import React from 'react';
 import {
   Sparkles,
   ExternalLink,
-  PhoneCall,
   GraduationCap,
   X,
   RotateCcw,

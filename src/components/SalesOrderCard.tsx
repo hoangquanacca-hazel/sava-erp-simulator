@@ -3,15 +3,11 @@ import { SalesOrderCostCardState, MTOParameters, MTOComputed } from '../types';
 import { formatVND } from '../utils/calculator';
 import {
   FileText,
-  TrendingUp,
   Package,
-  Layers,
   CheckCircle,
   Clock,
-  DollarSign,
   Cpu,
   UserCheck,
-  Award,
 } from 'lucide-react';
 
 interface SalesOrderCardProps {

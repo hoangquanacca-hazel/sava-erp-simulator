@@ -1,7 +1,6 @@
 import React, { useState, useMemo, useRef, useEffect, lazy, Suspense } from 'react';
 import {
   MTOParameters,
-  MTOComputed,
   StepRuntimeState,
   JournalEntry,
   PresetScenario,
@@ -20,7 +19,6 @@ import {
   computeTrialBalance,
   exportEntriesToCSV,
   exportEntriesToJSON,
-  formatVND,
 } from './utils/calculator';
 import {
   assertParity,
@@ -52,11 +50,7 @@ import { AuditEvent, SimRole, canRoleRunStep, newSessionId } from './features/so
 import { postCkmlcp } from './features/materialLedger';
 import {
   CheckCircle,
-  Play,
   RotateCcw,
-  Sparkles,
-  ArrowRight,
-  ArrowLeft,
   FastForward,
   AlertTriangle,
   Layers,
@@ -477,9 +471,9 @@ export default function App() {
         return;
       }
     }
-    let currentReworkCost = stepStates[4].qmReworkCost || 0;
-    let currentScrapCost = stepStates[4].qmScrapCost || 0;
-    let currentMethod = stepStates[4].qmResolutionMethod || null;
+    const currentReworkCost = stepStates[4].qmReworkCost || 0;
+    const currentScrapCost = stepStates[4].qmScrapCost || 0;
+    const currentMethod = stepStates[4].qmResolutionMethod || null;
     const newStates = { ...stepStates };
 
     for (let s = 1; s <= 7; s++) {

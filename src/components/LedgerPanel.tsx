@@ -25,8 +25,6 @@ import {
   Table,
   Scale,
   ArrowRight,
-  TrendingUp,
-  Eye,
 } from 'lucide-react';
 
 interface LedgerPanelProps {

@@ -1,20 +1,13 @@
 import React, { useState, useRef, useEffect } from 'react';
 import {
   Check,
-  Search,
   Terminal,
   X,
   AlertCircle,
   CheckCircle2,
-  HelpCircle,
   ChevronDown,
-  ArrowRight,
-  Sparkles,
-  Layers,
-  FileSpreadsheet,
   BookOpen,
 } from 'lucide-react';
-import { SAP_TCODES_LIST, TCodeInfo } from '../types';
 
 export interface CommandBarProps {
   onNavigateToStep: (stepId: number, tCode: string) => void;

@@ -78,7 +78,7 @@ export const UserGuideModal: React.FC<UserGuideModalProps> = ({ isOpen, onClose,
             </div>
             <div>
               <h3 className="font-bold text-sm sm:text-base tracking-tight">Hướng dẫn sử dụng — Sava SAP MTO Cockpit</h3>
-              <p className="text-[11px] opacity-80">Cách vận hành mô phỏng chu trình sản xuất theo đơn hàng (MTO) & hạch toán TT200/TT99</p>
+              <p className="text-[11px] opacity-80">Cách vận hành mô phỏng chu trình sản xuất theo đơn hàng (MTO) & hạch toán TT99</p>
             </div>
           </div>
           <button onClick={onClose} className="p-1.5 rounded-lg hover:bg-black/20 transition-colors cursor-pointer" title="Đóng">
