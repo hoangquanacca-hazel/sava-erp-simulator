@@ -124,3 +124,28 @@ export async function buildManifest(
     },
   };
 }
+
+/** Chỉ số cột theo tên trường; thiếu cột là lỗi (không âm thầm trả 0). */
+export function columnIndex(r: ReportOutput, field: string): number {
+  const i = r.columns.findIndex((c) => c.field === field);
+  if (i < 0) throw new Error(`${r.reportId}: không có cột ${field}`);
+  return i;
+}
+
+/** Σ một cột số đọc TỪ CHÍNH BÁO CÁO (không từ nguồn); ô không phải số là lỗi. */
+export function sumColumn(r: ReportOutput, field: string, where?: (row: string[]) => boolean): number {
+  const i = columnIndex(r, field);
+  let s = 0;
+  for (const row of r.rows) {
+    if (where && !where(row)) continue;
+    const v = Number(row[i]);
+    if (row[i] === '' || !Number.isFinite(v)) throw new Error(`${r.reportId} ${field} không phải số: "${row[i]}"`);
+    s += v;
+  }
+  return Math.round(s * 1000) / 1000; // số lượng 3 chữ số thập phân; tiền VND nguyên không bị ảnh hưởng
+}
+
+/** Số lượng định dạng cố định 3 chữ số thập phân (MENGE) — tất định giữa các lần chạy. */
+export function qty(n: number): string {
+  return n.toFixed(3);
+}
