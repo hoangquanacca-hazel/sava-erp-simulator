@@ -541,7 +541,7 @@ export default function App() {
 
   // AI step explainer trigger
   const handleExplainStep = (stepDef: (typeof STEP_DEFINITIONS)[0]) => {
-    const question = `Hãy giải thích chi tiết Bước ${stepDef.id}: ${stepDef.title} (T-code ${stepDef.tCode}, Module ${stepDef.sapModule}) trong quy trình MTO của PIC Vietnam. Hãy phân tích các tài khoản kế toán theo Thông tư 200/2014/TT-BTC và cơ chế kho ${params.stockType} Stock.`;
+    const question = `Hãy giải thích chi tiết Bước ${stepDef.id}: ${stepDef.title} (T-code ${stepDef.tCode}, Module ${stepDef.sapModule}) trong quy trình MTO của PIC Vietnam. Hãy phân tích các tài khoản kế toán theo Thông tư 99/2025/TT-BTC và cơ chế kho ${params.stockType} Stock.`;
     setAiInitialQuestion(question);
 
     if (!isRegistered && !adminSettings.bypassSessionLimits) {

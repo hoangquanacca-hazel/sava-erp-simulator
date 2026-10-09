@@ -152,7 +152,7 @@ export const StepCard: React.FC<StepCardProps> = ({
         </div>
       </div>
 
-      {/* Body: Action details & Special SAP / TT200 modules */}
+      {/* Body: Action details & Special SAP / TT99 modules */}
       <div className="p-4 sm:p-5 space-y-4 text-xs sm:text-sm">
         <p className="text-slate-300 leading-relaxed">{step.detailedAction}</p>
 
@@ -750,7 +750,7 @@ export const StepCard: React.FC<StepCardProps> = ({
               <span className="font-bold text-slate-300 flex items-center gap-1.5">
                 <span>Bút toán phát sinh tại bước này ({stepState.entries.length} chứng từ)</span>
               </span>
-              <span className="text-[11px] text-emerald-400 font-mono">Theo TT 200/2014/TT-BTC</span>
+              <span className="text-[11px] text-emerald-400 font-mono">Theo TT 99/2025/TT-BTC</span>
             </div>
 
             <div className="overflow-x-auto border border-slate-800 rounded-lg">
@@ -796,7 +796,7 @@ export const StepCard: React.FC<StepCardProps> = ({
         {isExecuted && stepState.entries.length === 0 && (
           <div className="p-3 rounded-lg bg-slate-950/40 border border-slate-800/80 text-xs text-slate-400 italic">
             ℹ️ Bước này chỉ ghi nhận chứng từ logistics/kế hoạch và đối tượng chi phí trong SAP (SD/CO/PP/MM),
-            chưa phát sinh bút toán tài chính trên Sổ Cái (FI) theo chuẩn Thông tư 200.
+            chưa phát sinh bút toán tài chính trên Sổ Cái (FI) theo chuẩn Thông tư 99.
           </div>
         )}
       </div>

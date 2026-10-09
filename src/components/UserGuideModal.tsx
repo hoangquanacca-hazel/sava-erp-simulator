@@ -113,7 +113,7 @@ export const UserGuideModal: React.FC<UserGuideModalProps> = ({ isOpen, onClose,
                 <AlertTriangle className="w-4 h-4 mt-0.5 text-amber-500 shrink-0" />
                 <p><b>MÔ PHỎNG ĐÀO TẠO — không phải hệ thống SAP thật.</b> Mọi số liệu do bạn nhập và được tính bằng công thức thật (giá thành, giá vốn, cân đối Nợ = Có), không có kết quả "PASS" giả.</p>
               </div>
-              <p className={sub}>Mục tiêu: giúp kế toán viên, sinh viên và tư vấn ERP hiểu trọn <b>chu trình Make-to-Order (sản xuất theo đơn hàng bán)</b> tích hợp SD · MM · PP · QM · FICO, với các bút toán theo <b>Thông tư 200/2014/TT-BTC</b> và <b>Thông tư 99/2025/TT-BTC</b>. Bối cảnh: công ty ép nhựa chính xác giao hàng cho khách OEM.</p>
+              <p className={sub}>Mục tiêu: giúp kế toán viên, sinh viên và tư vấn ERP hiểu trọn <b>chu trình Make-to-Order (sản xuất theo đơn hàng bán)</b> tích hợp SD · MM · PP · QM · FICO, với các bút toán theo <b>Thông tư 99/2025/TT-BTC</b> và <b>Thông tư 99/2025/TT-BTC</b>. Bối cảnh: công ty ép nhựa chính xác giao hàng cho khách OEM.</p>
             </section>
 
             {/* 2. Quick start */}
@@ -194,7 +194,7 @@ export const UserGuideModal: React.FC<UserGuideModalProps> = ({ isOpen, onClose,
               <ul className="space-y-1.5">
                 <li><b>Xuất CSV / JSON:</b> tải nhật ký chứng từ để mở bằng Excel hoặc xử lý dữ liệu.</li>
                 <li><b>Xuất Excel (3 sheet):</b> Sổ Nhật ký · Bảng Cân đối Phát sinh · Báo cáo KQKD đơn hàng.</li>
-                <li><b>Báo cáo PDF:</b> bản in A4 chuẩn TT200 để lưu trữ hồ sơ.</li>
+                <li><b>Báo cáo PDF:</b> bản in A4 chuẩn TT99 để lưu trữ hồ sơ.</li>
               </ul>
             </section>
 
