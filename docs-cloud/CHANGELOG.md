@@ -34,3 +34,11 @@
 
 ## Session 3 — nhánh `cloud/s3-pycache` (chủ dự án cho phép 09/10/2026)
 - Gỡ khỏi git `scripts/__pycache__/oracle_costing.cpython-313.pyc` (file cache Python lọt vào qua PR #10 do `git add -A`); thêm `__pycache__/`, `*.pyc` vào `.gitignore`. File vẫn còn trên đĩa máy cục bộ (`git rm --cached`).
+
+## Session 4 — nhánh `cloud/s4-q4q5` (gốc `feat` @31c7fd2) — ĐỔI SỐ HỌC, chờ duyệt bảng `S4_COSTING_BEFORE_AFTER.md`
+- T0: `npm ci` + lint, eslint:strict, parity, s1, health, s2, costing, a0, s3, build đều exit 0 trên gốc.
+- T1 (Q4 = a, commit c5a9936): oracle trước → `test:costing` FAIL 28/40 (`docs-cloud/evidence/s4_q4_before_fix.log`) → `calculator.ts` bỏ màu/kg khỏi giá nhựa → PASS. Denso ΔP −817.409.
+- T2 (Q5 = a, commit 87366d6): oracle thêm `ROH-ADD-ESD` → FAIL 13/40 (`s4_q5_before_fix.log`) → `calculator.ts` thêm dòng BOM → PASS. ΔP = 0. `controlling.ts` CK13N tách 101 theo BOM; `s3-reports.ts` thêm kiểm dòng ESD; `costing.ts` ánh xạ mã `ROH-ADD*`.
+- Quy tắc 11: `oracle_costing.py --off=q4,q5 --stdout` / `a0_oracle.py --off=q4,q5 --stdout` tái tạo đúng từng byte đáp án của `feat`; `--off=q5` tái tạo từng byte đáp án sau Q4.
+- Không đổi `acdoca.ts`, `materialLedger.ts`; không xóa file; `git add` từng file.
+

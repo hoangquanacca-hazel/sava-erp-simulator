@@ -5,8 +5,11 @@ scripts/export-costing-inputs.ts xuất thẳng từ src/types.ts).
 
 Chính sách giá thành (đã chốt):
   M (621)  = Σ dòng BOM: SL_gộp = SL_đơn/1000 × định mức × (1 + hao hụt%), tiền = làm tròn(SL_gộp × đơn giá)
-             - ROH nhựa nền: định mức kg/1000, hao hụt 2,5%, đơn giá = giá nhựa/kg + màu/kg + texture/kg (Strategy 25)
+             - ROH nhựa nền: định mức kg/1000, hao hụt 2,5%, đơn giá = giá nhựa/kg (Strategy 25: phụ phí màu/texture không cộng vào đây)
+               (Q4 = (a): KHÔNG cộng màu/kg — màu chỉ nằm ở dòng ROH-MB-COLOR)
              - ROH-MB-COLOR (nếu màu > 0): định mức = 2% định mức nhựa (2 chữ số), hao hụt 1%, đơn giá = màu/kg × 50
+             - ROH-ADD-ESD (nếu texture có phụ phí/kg > 0): định mức = định mức nhựa kg/1000, hao hụt 2,5%, đơn giá = texture/kg
+               (Q5 = (a): giá nhựa nền KHÔNG cộng texture/kg; phần texture/cái vẫn là add-on 627)
              - VERP bao bì (nếu bao bì > 0): 1000 cái/1000, hao hụt 1%, đơn giá = phụ phí bao bì/cái
   L (622)  = theo giờ: làm tròn(giờ vận hành × đơn giá nhân công/h); theo tổng: làm tròn(laborTotal)
              giờ vận hành = 2 chữ số(chu kỳ(s) × SL / 3600 + 1,5 h setup); chu kỳ = max(10, làm tròn(giờ máy × 3600 / SL))
@@ -26,6 +29,12 @@ import json, math, os, sys
 from decimal import Decimal, ROUND_HALF_UP
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+# Chính sách đã chốt. Mỗi quyết định có thể TẮT riêng (--off=q4) để chứng minh (quy tắc 11 CLOUD_BRIEF_S4)
+# rằng oracle mới + tắt quyết định đó tái tạo đúng từng byte đáp án của commit trước.
+POLICY_OFF = set()
+for _a in sys.argv:
+    if _a.startswith('--off='):
+        POLICY_OFF |= set(_a[6:].split(','))
 SXC_RATE = 8.0
 SETUP_H = 1.5
 DEFAULT_LABOR_RATE, DEFAULT_MACHINE_RATE = 75000, 145000
@@ -56,9 +65,15 @@ def cost(p, variants):
         if k: pack_unit = k['unitCostAddon']
     assert not p.get('bomItems') and not p.get('routing'), 'oracle chỉ hỗ trợ BOM/routing mặc định'
 
-    bom = [('ROH-RESIN', norm, 2.5, (p.get('resinPricePerKg') or 0) + color_kg + tex_kg)]
+    # Q4 = (a) 10/10/2026 (AUD-037): màu chỉ là dòng masterbatch; giá nhựa nền KHÔNG cộng phụ phí màu/kg.
+    resin_color = color_kg if 'q4' in POLICY_OFF else 0
+    # Q5 = (a) 10/10/2026 (AUD-037): phụ gia ESD/kg tách thành dòng BOM ROH-ADD-ESD (621/152); phần /cái giữ add-on 627.
+    resin_tex = tex_kg if 'q5' in POLICY_OFF else 0
+    bom = [('ROH-RESIN', norm, 2.5, (p.get('resinPricePerKg') or 0) + resin_color + resin_tex)]
     if color_kg > 0:
         bom.append(('ROH-MB-COLOR', fixed2(norm * 0.02), 1.0, color_kg * 50))
+    if tex_kg > 0 and 'q5' not in POLICY_OFF:
+        bom.append(('ROH-ADD-ESD', norm, 2.5, tex_kg))
     if pack_unit > 0:
         bom.append(('VERP-PACKAGING', 1000, 1.0, pack_unit))
     lines = {code: jsr((q / 1000) * per1000 * (1 + scrap / 100) * price) for code, per1000, scrap, price in bom}
@@ -106,6 +121,9 @@ def planned_by_preset():
 if __name__ == '__main__':
     cases = build_cases()
     text = json.dumps(cases, ensure_ascii=False, indent=1) + '\n'
+    if '--stdout' in sys.argv:
+        sys.stdout.write(text)
+        sys.exit(0)
     out = os.path.join(HERE, 'costing_expected.json')
     if '--check' in sys.argv:
         if open(out, encoding='utf-8').read() != text:

@@ -38,6 +38,8 @@ for pid, d in planned.items():
                     gp911_credit=gp911, closing632_dr_minus_cr=closing632, revenue_recognized=rs(Rev)))
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'a0_expected.json')
 text = json.dumps(cases, ensure_ascii=False, indent=1)
+if '--stdout' in sys.argv:
+    sys.stdout.write(text); sys.exit(0)
 if '--check' in sys.argv:
     if open(OUT, encoding='utf-8').read().rstrip('\n') != text:
         print('FAIL a0_expected.json khác kết quả oracle — không sửa tay đáp án; chạy lại oracle'); sys.exit(1)

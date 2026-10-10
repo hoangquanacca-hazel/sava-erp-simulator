@@ -84,7 +84,9 @@ export function computeMTO(params: MTOParameters): MTOComputed {
     if (packaging) packagingUnitAddon = packaging.unitCostAddon;
   }
 
-  const effectiveResinPricePerKg = params.resinPricePerKg + colorResinAddon + textureResinAddon;
+  // Q4 = (a), Q5 = (a), 10/10/2026 (AUD-037): phụ phí màu/kg và texture/kg KHÔNG cộng vào giá nhựa nền;
+  // màu là dòng ROH-MB-COLOR, phụ gia ESD là dòng ROH-ADD-ESD (phần texture/cái vẫn là add-on 627).
+  const effectiveResinPricePerKg = params.resinPricePerKg;
 
   // 2. Định mức hạt nhựa resin kỹ thuật cơ bản:
   const totalResinKg = (params.orderQuantity / 1000) * params.materialNormKgPer1000;
@@ -115,6 +117,20 @@ export function computeMTO(params: MTOParameters): MTOComputed {
                   qtyPer1000: Number((params.materialNormKgPer1000 * 0.02).toFixed(2)),
                   scrapRatePercent: 1.0,
                   unitPrice: colorResinAddon * 50,
+                  uom: 'KG',
+                },
+              ]
+            : []),
+          ...(textureResinAddon > 0
+            ? [
+                {
+                  id: 'bom-esd-default',
+                  itemCode: 'ROH-ADD-ESD',
+                  name: `Phụ gia texture (${params.variantTextureName || 'ESD'})`,
+                  materialType: 'ROH' as const,
+                  qtyPer1000: params.materialNormKgPer1000,
+                  scrapRatePercent: 2.5,
+                  unitPrice: textureResinAddon,
                   uom: 'KG',
                 },
               ]

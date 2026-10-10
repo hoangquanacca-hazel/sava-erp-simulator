@@ -6,6 +6,7 @@
 | Bước | Giao dịch SAP | Nợ | Có | Điều kiện | Báo cáo phản ánh |
 |---|---|---|---|---|---|
 | 3 | MIGO 261E — xuất NVL cho lệnh | 621 | 152 | mọi ca | FAGLL03, MB51 (261), COOIS Components, COOIS GM, KOB1 (Nợ lệnh) |
+| 3a | (S4) dòng BOM mới `ROH-ADD-ESD` (phụ gia texture/kg, khi texture ESD) — cùng MIGO 261E | 621 | 152 | Denso (Strategy 25 + texture phụ phí/kg > 0) | MB51, COOIS Components, CK13N (yếu tố 101 theo dòng BOM); Σ vẫn = `cr152` |
 | 3 | CO11N — xác nhận nhân công | 622 | 334 | mọi ca | FAGLL03, COOIS Operations, COOIS Confirmations, KOB1 |
 | 3 | CO11N — xác nhận máy/SXC | 627 | 214 | mọi ca | FAGLL03, COOIS Operations, COOIS Confirmations, KOB1 |
 | 3 | CO01 — kết chuyển CP vào dở dang | 154 | 621 / 622 / 627 | mọi ca | FAGLL03; KOB1 **không** lặp lại (AUD-014); test dùng Σ Nợ 154 CO01 = Σ CP ban đầu KOB1 |

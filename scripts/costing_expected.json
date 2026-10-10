@@ -35,17 +35,18 @@
   "id": "denso-sensor",
   "src": "denso-sensor",
   "override": {},
-  "M": 27237668,
+  "M": 26480808,
   "L": 19897480,
-  "O": 52347062,
-  "P": 99482210,
+  "O": 52286513,
+  "P": 98664801,
   "Rev": 228000000,
   "machine": 36576250,
-  "sxc": 3770812,
+  "sxc": 3710263,
   "addon": 12000000,
   "bom": {
-   "ROH-RESIN": 11958388,
+   "ROH-RESIN": 11061800,
    "ROH-MB-COLOR": 735280,
+   "ROH-ADD-ESD": 139728,
    "VERP-PACKAGING": 14544000
   }
  },
@@ -190,7 +191,8 @@
   "sxc": 2487921,
   "addon": 12000000,
   "bom": {
-   "ROH-RESIN": 11201528
+   "ROH-RESIN": 11061800,
+   "ROH-ADD-ESD": 139728
   }
  },
  {
@@ -210,7 +212,8 @@
   "sxc": 3037361,
   "addon": 12000000,
   "bom": {
-   "ROH-RESIN": 11201528,
+   "ROH-RESIN": 11061800,
+   "ROH-ADD-ESD": 139728,
    "VERP-PACKAGING": 6868000
   }
  },
@@ -231,7 +234,8 @@
   "sxc": 3651441,
   "addon": 12000000,
   "bom": {
-   "ROH-RESIN": 11201528,
+   "ROH-RESIN": 11061800,
+   "ROH-ADD-ESD": 139728,
    "VERP-PACKAGING": 14544000
   }
  },
@@ -243,16 +247,16 @@
    "variantTextureId": "t-std",
    "variantPackagingId": "p-std"
   },
-  "M": 11865260,
+  "M": 11457720,
   "L": 19897480,
-  "O": 39117269,
-  "P": 70880009,
+  "O": 39084666,
+  "P": 70439866,
   "Rev": 228000000,
   "machine": 36576250,
-  "sxc": 2541019,
+  "sxc": 2508416,
   "addon": 0,
   "bom": {
-   "ROH-RESIN": 11469340,
+   "ROH-RESIN": 11061800,
    "ROH-MB-COLOR": 395920
   }
  },
@@ -264,16 +268,16 @@
    "variantTextureId": "t-std",
    "variantPackagingId": "p-vacuum"
   },
-  "M": 18733260,
+  "M": 18325720,
   "L": 19897480,
-  "O": 39666709,
-  "P": 78297449,
+  "O": 39634106,
+  "P": 77857306,
   "Rev": 228000000,
   "machine": 36576250,
-  "sxc": 3090459,
+  "sxc": 3057856,
   "addon": 0,
   "bom": {
-   "ROH-RESIN": 11469340,
+   "ROH-RESIN": 11061800,
    "ROH-MB-COLOR": 395920,
    "VERP-PACKAGING": 6868000
   }
@@ -286,16 +290,16 @@
    "variantTextureId": "t-std",
    "variantPackagingId": "p-ip68"
   },
-  "M": 26409260,
+  "M": 26001720,
   "L": 19897480,
-  "O": 40280789,
-  "P": 86587529,
+  "O": 40248186,
+  "P": 86147386,
   "Rev": 228000000,
   "machine": 36576250,
-  "sxc": 3704539,
+  "sxc": 3671936,
   "addon": 0,
   "bom": {
-   "ROH-RESIN": 11469340,
+   "ROH-RESIN": 11061800,
    "ROH-MB-COLOR": 395920,
    "VERP-PACKAGING": 14544000
   }
@@ -308,16 +312,16 @@
    "variantTextureId": "t-matte",
    "variantPackagingId": "p-std"
   },
-  "M": 11865260,
+  "M": 11457720,
   "L": 19897480,
-  "O": 44717269,
-  "P": 76480009,
+  "O": 44684666,
+  "P": 76039866,
   "Rev": 228000000,
   "machine": 36576250,
-  "sxc": 2541019,
+  "sxc": 2508416,
   "addon": 5600000,
   "bom": {
-   "ROH-RESIN": 11469340,
+   "ROH-RESIN": 11061800,
    "ROH-MB-COLOR": 395920
   }
  },
@@ -329,16 +333,16 @@
    "variantTextureId": "t-matte",
    "variantPackagingId": "p-vacuum"
   },
-  "M": 18733260,
+  "M": 18325720,
   "L": 19897480,
-  "O": 45266709,
-  "P": 83897449,
+  "O": 45234106,
+  "P": 83457306,
   "Rev": 228000000,
   "machine": 36576250,
-  "sxc": 3090459,
+  "sxc": 3057856,
   "addon": 5600000,
   "bom": {
-   "ROH-RESIN": 11469340,
+   "ROH-RESIN": 11061800,
    "ROH-MB-COLOR": 395920,
    "VERP-PACKAGING": 6868000
   }
@@ -351,16 +355,16 @@
    "variantTextureId": "t-matte",
    "variantPackagingId": "p-ip68"
   },
-  "M": 26409260,
+  "M": 26001720,
   "L": 19897480,
-  "O": 45880789,
-  "P": 92187529,
+  "O": 45848186,
+  "P": 91747386,
   "Rev": 228000000,
   "machine": 36576250,
-  "sxc": 3704539,
+  "sxc": 3671936,
   "addon": 5600000,
   "bom": {
-   "ROH-RESIN": 11469340,
+   "ROH-RESIN": 11061800,
    "ROH-MB-COLOR": 395920,
    "VERP-PACKAGING": 14544000
   }
@@ -373,17 +377,18 @@
    "variantTextureId": "t-esd",
    "variantPackagingId": "p-std"
   },
-  "M": 12004988,
+  "M": 11597448,
   "L": 19897480,
-  "O": 51128447,
-  "P": 83030915,
+  "O": 51095844,
+  "P": 82590772,
   "Rev": 228000000,
   "machine": 36576250,
-  "sxc": 2552197,
+  "sxc": 2519594,
   "addon": 12000000,
   "bom": {
-   "ROH-RESIN": 11609068,
-   "ROH-MB-COLOR": 395920
+   "ROH-RESIN": 11061800,
+   "ROH-MB-COLOR": 395920,
+   "ROH-ADD-ESD": 139728
   }
  },
  {
@@ -394,17 +399,18 @@
    "variantTextureId": "t-esd",
    "variantPackagingId": "p-vacuum"
   },
-  "M": 18872988,
+  "M": 18465448,
   "L": 19897480,
-  "O": 51677887,
-  "P": 90448355,
+  "O": 51645284,
+  "P": 90008212,
   "Rev": 228000000,
   "machine": 36576250,
-  "sxc": 3101637,
+  "sxc": 3069034,
   "addon": 12000000,
   "bom": {
-   "ROH-RESIN": 11609068,
+   "ROH-RESIN": 11061800,
    "ROH-MB-COLOR": 395920,
+   "ROH-ADD-ESD": 139728,
    "VERP-PACKAGING": 6868000
   }
  },
@@ -416,17 +422,18 @@
    "variantTextureId": "t-esd",
    "variantPackagingId": "p-ip68"
   },
-  "M": 26548988,
+  "M": 26141448,
   "L": 19897480,
-  "O": 52291967,
-  "P": 98738435,
+  "O": 52259364,
+  "P": 98298292,
   "Rev": 228000000,
   "machine": 36576250,
-  "sxc": 3715717,
+  "sxc": 3683114,
   "addon": 12000000,
   "bom": {
-   "ROH-RESIN": 11609068,
+   "ROH-RESIN": 11061800,
    "ROH-MB-COLOR": 395920,
+   "ROH-ADD-ESD": 139728,
    "VERP-PACKAGING": 14544000
   }
  },
@@ -438,16 +445,16 @@
    "variantTextureId": "t-std",
    "variantPackagingId": "p-std"
   },
-  "M": 12209600,
+  "M": 11627400,
   "L": 19897480,
-  "O": 39144816,
-  "P": 71251896,
+  "O": 39098240,
+  "P": 70623120,
   "Rev": 228000000,
   "machine": 36576250,
-  "sxc": 2568566,
+  "sxc": 2521990,
   "addon": 0,
   "bom": {
-   "ROH-RESIN": 11644000,
+   "ROH-RESIN": 11061800,
    "ROH-MB-COLOR": 565600
   }
  },
@@ -459,16 +466,16 @@
    "variantTextureId": "t-std",
    "variantPackagingId": "p-vacuum"
   },
-  "M": 19077600,
+  "M": 18495400,
   "L": 19897480,
-  "O": 39694256,
-  "P": 78669336,
+  "O": 39647680,
+  "P": 78040560,
   "Rev": 228000000,
   "machine": 36576250,
-  "sxc": 3118006,
+  "sxc": 3071430,
   "addon": 0,
   "bom": {
-   "ROH-RESIN": 11644000,
+   "ROH-RESIN": 11061800,
    "ROH-MB-COLOR": 565600,
    "VERP-PACKAGING": 6868000
   }
@@ -481,16 +488,16 @@
    "variantTextureId": "t-std",
    "variantPackagingId": "p-ip68"
   },
-  "M": 26753600,
+  "M": 26171400,
   "L": 19897480,
-  "O": 40308336,
-  "P": 86959416,
+  "O": 40261760,
+  "P": 86330640,
   "Rev": 228000000,
   "machine": 36576250,
-  "sxc": 3732086,
+  "sxc": 3685510,
   "addon": 0,
   "bom": {
-   "ROH-RESIN": 11644000,
+   "ROH-RESIN": 11061800,
    "ROH-MB-COLOR": 565600,
    "VERP-PACKAGING": 14544000
   }
@@ -503,16 +510,16 @@
    "variantTextureId": "t-matte",
    "variantPackagingId": "p-std"
   },
-  "M": 12209600,
+  "M": 11627400,
   "L": 19897480,
-  "O": 44744816,
-  "P": 76851896,
+  "O": 44698240,
+  "P": 76223120,
   "Rev": 228000000,
   "machine": 36576250,
-  "sxc": 2568566,
+  "sxc": 2521990,
   "addon": 5600000,
   "bom": {
-   "ROH-RESIN": 11644000,
+   "ROH-RESIN": 11061800,
    "ROH-MB-COLOR": 565600
   }
  },
@@ -524,16 +531,16 @@
    "variantTextureId": "t-matte",
    "variantPackagingId": "p-vacuum"
   },
-  "M": 19077600,
+  "M": 18495400,
   "L": 19897480,
-  "O": 45294256,
-  "P": 84269336,
+  "O": 45247680,
+  "P": 83640560,
   "Rev": 228000000,
   "machine": 36576250,
-  "sxc": 3118006,
+  "sxc": 3071430,
   "addon": 5600000,
   "bom": {
-   "ROH-RESIN": 11644000,
+   "ROH-RESIN": 11061800,
    "ROH-MB-COLOR": 565600,
    "VERP-PACKAGING": 6868000
   }
@@ -546,16 +553,16 @@
    "variantTextureId": "t-matte",
    "variantPackagingId": "p-ip68"
   },
-  "M": 26753600,
+  "M": 26171400,
   "L": 19897480,
-  "O": 45908336,
-  "P": 92559416,
+  "O": 45861760,
+  "P": 91930640,
   "Rev": 228000000,
   "machine": 36576250,
-  "sxc": 3732086,
+  "sxc": 3685510,
   "addon": 5600000,
   "bom": {
-   "ROH-RESIN": 11644000,
+   "ROH-RESIN": 11061800,
    "ROH-MB-COLOR": 565600,
    "VERP-PACKAGING": 14544000
   }
@@ -568,17 +575,18 @@
    "variantTextureId": "t-esd",
    "variantPackagingId": "p-std"
   },
-  "M": 12349328,
+  "M": 11767128,
   "L": 19897480,
-  "O": 51155995,
-  "P": 83402803,
+  "O": 51109419,
+  "P": 82774027,
   "Rev": 228000000,
   "machine": 36576250,
-  "sxc": 2579745,
+  "sxc": 2533169,
   "addon": 12000000,
   "bom": {
-   "ROH-RESIN": 11783728,
-   "ROH-MB-COLOR": 565600
+   "ROH-RESIN": 11061800,
+   "ROH-MB-COLOR": 565600,
+   "ROH-ADD-ESD": 139728
   }
  },
  {
@@ -589,17 +597,18 @@
    "variantTextureId": "t-esd",
    "variantPackagingId": "p-vacuum"
   },
-  "M": 19217328,
+  "M": 18635128,
   "L": 19897480,
-  "O": 51705435,
-  "P": 90820243,
+  "O": 51658859,
+  "P": 90191467,
   "Rev": 228000000,
   "machine": 36576250,
-  "sxc": 3129185,
+  "sxc": 3082609,
   "addon": 12000000,
   "bom": {
-   "ROH-RESIN": 11783728,
+   "ROH-RESIN": 11061800,
    "ROH-MB-COLOR": 565600,
+   "ROH-ADD-ESD": 139728,
    "VERP-PACKAGING": 6868000
   }
  },
@@ -611,17 +620,18 @@
    "variantTextureId": "t-esd",
    "variantPackagingId": "p-ip68"
   },
-  "M": 26893328,
+  "M": 26311128,
   "L": 19897480,
-  "O": 52319515,
-  "P": 99110323,
+  "O": 52272939,
+  "P": 98481547,
   "Rev": 228000000,
   "machine": 36576250,
-  "sxc": 3743265,
+  "sxc": 3696689,
   "addon": 12000000,
   "bom": {
-   "ROH-RESIN": 11783728,
+   "ROH-RESIN": 11061800,
    "ROH-MB-COLOR": 565600,
+   "ROH-ADD-ESD": 139728,
    "VERP-PACKAGING": 14544000
   }
  },
@@ -633,16 +643,16 @@
    "variantTextureId": "t-std",
    "variantPackagingId": "p-std"
   },
-  "M": 12553940,
+  "M": 11797080,
   "L": 19897480,
-  "O": 39172364,
-  "P": 71623784,
+  "O": 39111815,
+  "P": 70806375,
   "Rev": 228000000,
   "machine": 36576250,
-  "sxc": 2596114,
+  "sxc": 2535565,
   "addon": 0,
   "bom": {
-   "ROH-RESIN": 11818660,
+   "ROH-RESIN": 11061800,
    "ROH-MB-COLOR": 735280
   }
  },
@@ -654,16 +664,16 @@
    "variantTextureId": "t-std",
    "variantPackagingId": "p-vacuum"
   },
-  "M": 19421940,
+  "M": 18665080,
   "L": 19897480,
-  "O": 39721804,
-  "P": 79041224,
+  "O": 39661255,
+  "P": 78223815,
   "Rev": 228000000,
   "machine": 36576250,
-  "sxc": 3145554,
+  "sxc": 3085005,
   "addon": 0,
   "bom": {
-   "ROH-RESIN": 11818660,
+   "ROH-RESIN": 11061800,
    "ROH-MB-COLOR": 735280,
    "VERP-PACKAGING": 6868000
   }
@@ -676,16 +686,16 @@
    "variantTextureId": "t-std",
    "variantPackagingId": "p-ip68"
   },
-  "M": 27097940,
+  "M": 26341080,
   "L": 19897480,
-  "O": 40335884,
-  "P": 87331304,
+  "O": 40275335,
+  "P": 86513895,
   "Rev": 228000000,
   "machine": 36576250,
-  "sxc": 3759634,
+  "sxc": 3699085,
   "addon": 0,
   "bom": {
-   "ROH-RESIN": 11818660,
+   "ROH-RESIN": 11061800,
    "ROH-MB-COLOR": 735280,
    "VERP-PACKAGING": 14544000
   }
@@ -698,16 +708,16 @@
    "variantTextureId": "t-matte",
    "variantPackagingId": "p-std"
   },
-  "M": 12553940,
+  "M": 11797080,
   "L": 19897480,
-  "O": 44772364,
-  "P": 77223784,
+  "O": 44711815,
+  "P": 76406375,
   "Rev": 228000000,
   "machine": 36576250,
-  "sxc": 2596114,
+  "sxc": 2535565,
   "addon": 5600000,
   "bom": {
-   "ROH-RESIN": 11818660,
+   "ROH-RESIN": 11061800,
    "ROH-MB-COLOR": 735280
   }
  },
@@ -719,16 +729,16 @@
    "variantTextureId": "t-matte",
    "variantPackagingId": "p-vacuum"
   },
-  "M": 19421940,
+  "M": 18665080,
   "L": 19897480,
-  "O": 45321804,
-  "P": 84641224,
+  "O": 45261255,
+  "P": 83823815,
   "Rev": 228000000,
   "machine": 36576250,
-  "sxc": 3145554,
+  "sxc": 3085005,
   "addon": 5600000,
   "bom": {
-   "ROH-RESIN": 11818660,
+   "ROH-RESIN": 11061800,
    "ROH-MB-COLOR": 735280,
    "VERP-PACKAGING": 6868000
   }
@@ -741,16 +751,16 @@
    "variantTextureId": "t-matte",
    "variantPackagingId": "p-ip68"
   },
-  "M": 27097940,
+  "M": 26341080,
   "L": 19897480,
-  "O": 45935884,
-  "P": 92931304,
+  "O": 45875335,
+  "P": 92113895,
   "Rev": 228000000,
   "machine": 36576250,
-  "sxc": 3759634,
+  "sxc": 3699085,
   "addon": 5600000,
   "bom": {
-   "ROH-RESIN": 11818660,
+   "ROH-RESIN": 11061800,
    "ROH-MB-COLOR": 735280,
    "VERP-PACKAGING": 14544000
   }
@@ -763,17 +773,18 @@
    "variantTextureId": "t-esd",
    "variantPackagingId": "p-std"
   },
-  "M": 12693668,
+  "M": 11936808,
   "L": 19897480,
-  "O": 51183542,
-  "P": 83774690,
+  "O": 51122993,
+  "P": 82957281,
   "Rev": 228000000,
   "machine": 36576250,
-  "sxc": 2607292,
+  "sxc": 2546743,
   "addon": 12000000,
   "bom": {
-   "ROH-RESIN": 11958388,
-   "ROH-MB-COLOR": 735280
+   "ROH-RESIN": 11061800,
+   "ROH-MB-COLOR": 735280,
+   "ROH-ADD-ESD": 139728
   }
  },
  {
@@ -784,17 +795,18 @@
    "variantTextureId": "t-esd",
    "variantPackagingId": "p-vacuum"
   },
-  "M": 19561668,
+  "M": 18804808,
   "L": 19897480,
-  "O": 51732982,
-  "P": 91192130,
+  "O": 51672433,
+  "P": 90374721,
   "Rev": 228000000,
   "machine": 36576250,
-  "sxc": 3156732,
+  "sxc": 3096183,
   "addon": 12000000,
   "bom": {
-   "ROH-RESIN": 11958388,
+   "ROH-RESIN": 11061800,
    "ROH-MB-COLOR": 735280,
+   "ROH-ADD-ESD": 139728,
    "VERP-PACKAGING": 6868000
   }
  },
@@ -806,17 +818,18 @@
    "variantTextureId": "t-esd",
    "variantPackagingId": "p-ip68"
   },
-  "M": 27237668,
+  "M": 26480808,
   "L": 19897480,
-  "O": 52347062,
-  "P": 99482210,
+  "O": 52286513,
+  "P": 98664801,
   "Rev": 228000000,
   "machine": 36576250,
-  "sxc": 3770812,
+  "sxc": 3710263,
   "addon": 12000000,
   "bom": {
-   "ROH-RESIN": 11958388,
+   "ROH-RESIN": 11061800,
    "ROH-MB-COLOR": 735280,
+   "ROH-ADD-ESD": 139728,
    "VERP-PACKAGING": 14544000
   }
  },
