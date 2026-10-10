@@ -1,14 +1,14 @@
 import {writeFileSync} from 'node:fs';
-import {PRESET_SCENARIOS} from 'file:///D:/sava-erp-simulator/src/types.ts';
-import {computeMTO,generateStepEntries} from 'file:///D:/sava-erp-simulator/src/utils/calculator.ts';
-import {exportReportSnapshot} from 'file:///D:/sava-erp-simulator/src/reports/snapshot.ts';
-import {adaptRaw} from 'file:///D:/sava-erp-simulator/src/adapters/framework.ts';
-import {reconcile} from 'file:///D:/sava-erp-simulator/src/controls/reconcile.ts';
-import {startCase,appendEvent} from 'file:///D:/sava-erp-simulator/src/controls/workflow.ts';
-import {buildManufacturingMart} from 'file:///D:/sava-erp-simulator/src/mart/manufacturing.ts';
-import {createFacts,validateFacts} from 'file:///D:/sava-erp-simulator/src/mart/commentary.ts';
-import {sha256Hex} from 'file:///D:/sava-erp-simulator/src/reports/core.ts';
-import {createEvidencePack,verifyEvidencePack} from 'file:///D:/sava-erp-simulator/src/evidence/pack.ts';
+import {PRESET_SCENARIOS} from '../../../src/types.ts';
+import {computeMTO,generateStepEntries} from '../../../src/utils/calculator.ts';
+import {exportReportSnapshot} from '../../../src/reports/snapshot.ts';
+import {adaptRaw} from '../../../src/adapters/framework.ts';
+import {reconcile} from '../../../src/controls/reconcile.ts';
+import {startCase,appendEvent} from '../../../src/controls/workflow.ts';
+import {buildManufacturingMart} from '../../../src/mart/manufacturing.ts';
+import {createFacts,validateFacts} from '../../../src/mart/commentary.ts';
+import {sha256Hex} from '../../../src/reports/core.ts';
+import {createEvidencePack,verifyEvidencePack} from '../../../src/evidence/pack.ts';
 const enc=(s:string)=>new TextEncoder().encode(s), results:any[]=[];
 async function test(name:string,text:string|Uint8Array,expected:string,hash?:string){const r=await verifyEvidencePack(text,hash);results.push({name,expected,actual:r.technicalStatus,reason:(r as any).reason,ok:r.technicalStatus===expected});}
 async function rehash(e:any){const b=enc(JSON.stringify(e.payload));e.manifest.payloadBytes=b.length;e.manifest.payloadSha256=await sha256Hex(b);return JSON.stringify(e);}
