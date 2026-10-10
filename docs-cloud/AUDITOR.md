@@ -106,7 +106,7 @@ Số Denso (8.000 cái, định mức 14,2 kg/1.000 → 113,6 kg; hao hụt nh�
 | t-matte (700/cái) | chỉ add-on/cái | — | Cố ý (ăn mòn khuôn ≈ chi phí gia công) |
 | Hệ quả gián tiếp | SXC 8% tính trên (621 + 622) → mọi khoản cộng vào giá nhựa/BOM kéo theo +8% SXC | — | Cần lưu ý khi sửa |
 
-## AUD-038 — Chế độ "theo giờ": nhân công tính theo giờ MÁY, bỏ qua `laborHours` (CẦN HỎI)
+## AUD-038 — Chế độ "theo giờ": nhân công tính theo giờ MÁY, bỏ qua `laborHours` (ĐÃ CHỐT Q6 = b 10/10/2026 → AUD-043)
 - `computeMTO`: `directLaborCost622 = operatingHours × laborRate`, với `operatingHours` suy từ `machineHours` (chu kỳ = machineHours × 3600 / SL, + 1,5 h setup). Tham số `laborHours` (Samsung 250 h, Denso 320 h) không vào giá thành, nhưng `BOMVisualizer.tsx:177` hiển thị "250 giờ @ …/h" và `calculator.ts:1509` dùng `laborHours` cho bảng định mức → hai nơi khác nhau. Không sửa (vùng số học bảo vệ, chưa có quyết định).
 
 ## AUD-039 — Nợ ESLint sau S3
@@ -115,7 +115,7 @@ Số Denso (8.000 cái, định mức 14,2 kg/1.000 → 113,6 kg; hao hụt nh�
 - Còn lại cần đọc nghiệp vụ trước khi bỏ (có thể là tính năng dở): `App.tsx` `registeredUser`, `footerClicks`; `Header.tsx` `onExportCSV/JSON`; `SetupScreen.tsx` `selectedColor/Texture/Packaging`; `PDFReportModal.tsx` `stockEState`; `SalesOrderCard.tsx` `computed`; `BOMTreeView.tsx`, `BOMVisualizer.tsx`, `parity.ts` `oldTb`.
 - CI vẫn để `lint:eslint` toàn repo `continue-on-error` cho tới khi về 0.
 
-## AUD-040 — Màn hình bóc tách giá thành chưa theo Q1 = (a) (CHỈ HIỂN THỊ)
+## AUD-040 — Màn hình bóc tách giá thành chưa theo Q1 = (a) (ĐÃ SỬA ở S4, xem AUD-044)
 - `BOMVisualizer.tsx:112–129` và `buildBOMTree` (`calculator.ts:1490+`) tự tính lại: bao bì xếp vào SXC (`packagingCost`), màu tính theo /kg trên nhựa. Sau PR #10, bút toán theo BOM (bao bì → 621) nhưng hai màn hình này vẫn hiển thị kiểu cũ. Không ảnh hưởng ACDOCA; sửa sau khi chốt AUD-037.
 
 ## AUD-041 — Q4 = (a): bỏ phụ phí màu/kg khỏi giá nhựa nền (ĐÃ SỬA, chờ duyệt bảng)
@@ -126,4 +126,15 @@ Số Denso (8.000 cái, định mức 14,2 kg/1.000 → 113,6 kg; hao hụt nh�
 - Dòng mới khi texture có phụ phí/kg > 0 (chỉ Strategy 25): định mức = định mức nhựa, hao hụt 2,5%, đơn giá = phụ phí/kg, TK 621/152. Giá nhựa nền không còn cộng texture/kg. P không đổi (11.201.528 + 139.728 = giá nhựa gộp cũ, 0 VND làm tròn). Phần /cái (12.000.000) vẫn là add-on 627.
 - `CK13N`: yếu tố 101 tách theo dòng BOM (Σ = 621); nhãn add-on đổi thành "Công đoạn phủ texture theo cái". `s3-reports.ts` kiểm `ROH-ADD-ESD` có ở MB51/COOIS_CMP/CK13N đúng cho Denso, không có ở Samsung/Canon.
 - Nợ: add-on /cái vẫn chưa là công đoạn routing thật (gom vào SXC 632140) — xem AUD-036.
+
+## AUD-043 — Q6 = (b): giờ công/giờ máy hiển thị = giờ vận hành thực tính (ĐÃ SỬA, KHÔNG đổi số)
+- Số học 622/627 giữ nguyên (1 thợ/máy, giờ công = giờ vận hành gồm 1,5 h setup). `resolveDisplayHours()` (calculator.ts) là nguồn duy nhất cho mọi nơi hiển thị giờ; `BOMVisualizer` và `buildBOMTree` không còn dùng `laborHours`/`machineHours`. Chế độ "tổng": không hiển thị giờ (không có cơ sở giờ).
+- Ngoài phạm vi brief nhưng cùng lỗi: giờ MÁY hiển thị cũng từng là `machineHours` nhập tay (Denso 320 h) trong khi 627 máy tính theo giờ vận hành → sửa cùng chỗ.
+- **Lệch giả định của brief:** `SetupScreen.tsx` KHÔNG có ô nhập `laborHours` (grep: 0 kết quả); màn hình đó chỉ hiện `computed.operatingHours` (dòng 739) nên không cần sửa/khóa ô nào. Trường `laborHours` vẫn nằm trong kiểu dữ liệu/preset (không xóa), chỉ còn dùng cho dữ liệu cũ.
+- Test: `npm run test:s4` — giờ hiển thị × đơn giá = 622 (và máy 627) theo oracle cho Samsung, Denso (theo giờ); Canon (tổng) không hiển thị giờ.
+
+## AUD-044 — Đồng bộ màn hình bóc tách với chính sách đã chốt (ĐÃ SỬA, chỉ hiển thị)
+- `buildBOMTree` và `BOMVisualizer` lấy số trực tiếp từ `computeMTO` (`bomItemBreakdowns`, 622, `machineOverhead627`, `factoryOverhead627`, `variantAddonTotal`) qua `buildCostBreakdown()`; hết tính lại riêng. Bao bì → dòng VERP 621/152 (không còn xếp vào SXC); màu → `ROH-MB-COLOR`; phụ gia ESD → `ROH-ADD-ESD`; SXC 8% thành dòng riêng; phủ texture /cái là công đoạn 627. Cây BOM: mã vật tư màu đổi từ `ROH-MB-<mã màu>` sang `ROH-MB-COLOR` để khớp MB51/CS03.
+- Nợ: màn hình "Xử lý bề mặt" ở gốc BOM vẫn gom trong cây (nút 0200) chứ chưa phải thao tác routing thật (AUD-036).
+- Test: `npm run test:s4` — Σ lá cây = Σ nhóm bóc tách = plannedCost = P oracle trên 40 ca `test:costing`; 79 test âm tính bị bắt.
 
