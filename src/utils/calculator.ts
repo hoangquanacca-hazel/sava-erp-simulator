@@ -197,7 +197,8 @@ export function computeMTO(params: MTOParameters): MTOComputed {
   const effectiveMachineCost = totalOverhead627;
 
   // Chi phí biến thể gia tăng trên từng đơn vị sản phẩm (khử tĩnh điện, phụ kiện bề mặt):
-  const variantAddonTotal = Math.round(params.orderQuantity * (textureUnitAddon + packagingUnitAddon));
+  // Q1 = (a), 09/10/2026 (AUD-030): bao bì CHỈ là vật tư VERP trong BOM (621/152) — không cộng lại vào add-on.
+  const variantAddonTotal = Math.round(params.orderQuantity * textureUnitAddon);
 
   const laborOverheadTotal = effectiveLaborCost + effectiveMachineCost + variantAddonTotal;
 
