@@ -84,7 +84,8 @@ export function computeMTO(params: MTOParameters): MTOComputed {
     if (packaging) packagingUnitAddon = packaging.unitCostAddon;
   }
 
-  const effectiveResinPricePerKg = params.resinPricePerKg + colorResinAddon + textureResinAddon;
+  // Q4 = (a), 10/10/2026 (AUD-037): màu chỉ là dòng masterbatch ROH-MB-COLOR — giá nhựa nền KHÔNG cộng màu/kg.
+  const effectiveResinPricePerKg = params.resinPricePerKg + textureResinAddon;
 
   // 2. Định mức hạt nhựa resin kỹ thuật cơ bản:
   const totalResinKg = (params.orderQuantity / 1000) * params.materialNormKgPer1000;
