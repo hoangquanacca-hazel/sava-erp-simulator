@@ -93,7 +93,7 @@ Tham chiếu "AUD-018" trong commit `0cb7958` (#5) và "AUD-019" trong commit `8
 ## AUD-036 — SXC máy Nợ 627 / Có 214 là đơn giản hoá (từ #3 AUD-022)
 - CO11N ghi toàn bộ chi phí máy + SXC thực tế vào Có 214. Thực tế gồm điện, bảo trì, vật tư phụ (Có 331/152/334…). Số dư 214 trên BCTC mô phỏng bị phóng đại. Chưa đổi số học.
 
-## AUD-037 — T3: rà phụ phí biến thể Strategy 25 còn lại (CHỈ BÁO CÁO, chưa sửa)
+## AUD-037 — T3: rà phụ phí biến thể Strategy 25 còn lại (ĐÃ CHỐT 10/10/2026 Q4 = a, Q5 = a → thực hiện ở AUD-041, AUD-042)
 Số Denso (8.000 cái, định mức 14,2 kg/1.000 → 113,6 kg; hao hụt nhựa 2,5%):
 
 | Khoản | Cơ chế trong `computeMTO` | Denso (VND) | Kết luận |
@@ -117,3 +117,13 @@ Số Denso (8.000 cái, định mức 14,2 kg/1.000 → 113,6 kg; hao hụt nh�
 
 ## AUD-040 — Màn hình bóc tách giá thành chưa theo Q1 = (a) (CHỈ HIỂN THỊ)
 - `BOMVisualizer.tsx:112–129` và `buildBOMTree` (`calculator.ts:1490+`) tự tính lại: bao bì xếp vào SXC (`packagingCost`), màu tính theo /kg trên nhựa. Sau PR #10, bút toán theo BOM (bao bì → 621) nhưng hai màn hình này vẫn hiển thị kiểu cũ. Không ảnh hưởng ACDOCA; sửa sau khi chốt AUD-037.
+
+## AUD-041 — Q4 = (a): bỏ phụ phí màu/kg khỏi giá nhựa nền (ĐÃ SỬA, chờ duyệt bảng)
+- `calculator.ts`: `effectiveResinPricePerKg` không còn cộng `colorResinAddon`; dòng `ROH-MB-COLOR` giữ nguyên. Oracle sửa trước (`oracle_costing.py`), log FAIL `docs-cloud/evidence/s4_q4_before_fix.log` (28/40 ca lệch). Denso P 99.482.210 → 98.664.801 (Δ −817.409, đúng số chủ dự án dự kiến); Samsung/Canon không đổi.
+- Khó đảo ngược: không (cờ oracle `--off=q4` tái tạo đáp án cũ từng byte). Nợ kỹ thuật: dòng masterbatch vẫn dựng theo công thức "2% định mức nhựa × (màu/kg × 50)" — là heuristic của simulator, chưa phải master data CS03.
+
+## AUD-042 — Q5 = (a): phụ gia ESD/kg thành dòng BOM `ROH-ADD-ESD` (ĐÃ SỬA, P không đổi)
+- Dòng mới khi texture có phụ phí/kg > 0 (chỉ Strategy 25): định mức = định mức nhựa, hao hụt 2,5%, đơn giá = phụ phí/kg, TK 621/152. Giá nhựa nền không còn cộng texture/kg. P không đổi (11.201.528 + 139.728 = giá nhựa gộp cũ, 0 VND làm tròn). Phần /cái (12.000.000) vẫn là add-on 627.
+- `CK13N`: yếu tố 101 tách theo dòng BOM (Σ = 621); nhãn add-on đổi thành "Công đoạn phủ texture theo cái". `s3-reports.ts` kiểm `ROH-ADD-ESD` có ở MB51/COOIS_CMP/CK13N đúng cho Denso, không có ở Samsung/Canon.
+- Nợ: add-on /cái vẫn chưa là công đoạn routing thật (gom vào SXC 632140) — xem AUD-036.
+
