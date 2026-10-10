@@ -580,11 +580,6 @@ export const SAPClassicMenu: React.FC<SAPClassicMenuProps> = ({
   stepStates = {},
   uiMode,
 }) => {
-  // CRITICAL REQUIREMENT: Strictly ensure it only appears when UI Mode is set to 'classic'
-  if (uiMode !== 'classic') {
-    return null;
-  }
-
   const [expandedNodes, setExpandedNodes] = useState<Record<string, boolean>>(() => {
     const init: Record<string, boolean> = {
       favorites: true,
@@ -711,6 +706,12 @@ export const SAPClassicMenu: React.FC<SAPClassicMenuProps> = ({
 
     return filterNodes(SAP_EASY_ACCESS_TREE);
   }, [searchTerm]);
+
+  // CRITICAL REQUIREMENT: Strictly ensure it only appears when UI Mode is set to 'classic'
+  // (đặt SAU mọi hook để tuân thủ rules-of-hooks; kết quả hiển thị không đổi)
+  if (uiMode !== 'classic') {
+    return null;
+  }
 
   if (!isOpen) {
     return null;
