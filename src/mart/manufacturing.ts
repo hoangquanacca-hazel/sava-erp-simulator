@@ -1,4 +1,4 @@
-import type {AdapterResult,CleanDataset,CleanRow} from '../adapters/framework';
+import type {AdapterResult,CleanRow} from '../adapters/framework';
 import {reconcile,type SourceRef} from '../controls/reconcile';
 import {exportControlCase,type ControlCase} from '../controls/workflow';
 import {sha256Hex} from '../reports/core';
