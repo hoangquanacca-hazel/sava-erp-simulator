@@ -64,6 +64,9 @@ jobs:
       - name: S6 evidence
         if: ${{ !cancelled() }}
         run: npm run test:s6
+      - name: Oracle giá thành độc lập (Q1+Q4+Q5; a0_oracle đọc từ oracle_costing)
+        if: ${{ !cancelled() }}
+        run: npm run test:costing
       - name: Build
         if: ${{ !cancelled() }}
         run: npm run build
@@ -81,21 +84,3 @@ jobs:
           if grep -rEl 'AIza[0-9A-Za-z_-]{30,}' --exclude-dir=node_modules --exclude-dir=.git . ; then
             echo "Phát hiện chuỗi dạng khóa Gemini" ; exit 1
           fi
-
-  # Job RIÊNG, ĐỎ CÓ CHỦ ĐÍCH tới khi PR-3 merge (sửa Q1/Q4/Q5 trong mã tính): mã Codex hiện lệch oracle giá thành ở Denso
-  # (35/40 ca, xem docs-cloud/PR2_MEASURE.md). Không dùng continue-on-error — job phải đỏ thật để không che lỗi.
-  # Tách khỏi `verify` để job `verify` vẫn xanh. KHÔNG được coi là lỗi mới của PR khác; không bỏ job này, chỉ PR-3 làm nó xanh.
-  costing-oracle:
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    steps:
-      - uses: actions/checkout@v5
-      - uses: actions/setup-node@v5
-        with:
-          node-version: 22
-          cache: npm
-      - run: npm ci
-      - name: Oracle giá thành độc lập (known-red until PR-3)
-        continue-on-error: false
-        run: npm run test:costing
-
