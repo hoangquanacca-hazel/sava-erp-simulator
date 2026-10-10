@@ -1,3 +1,5 @@
+> **Cập nhật 10/10/2026:** đọc `17-DECISION-LOG-CONSOLIDATED.md` (quyết định hiệu lực) và `18-BRANCH-AND-STATE-MAP.md` (nhánh nào có gì, thứ tự hợp nhất) trước tài liệu này.
+
 # PRODUCT / IMPLEMENTATION MASTER PLAN
 
 ## Sản phẩm và giá trị
