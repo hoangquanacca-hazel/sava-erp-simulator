@@ -334,7 +334,7 @@ export const STEP_DEFINITIONS: StepDefinition[] = [
     detailedAction:
       'Chuyển Lệnh kế hoạch thành Lệnh sản xuất CO01. Xuất kho hạt nhựa (MIGO 261E), xác nhận công nhân và máy ép (CO11N), nhập kho thành phẩm hoàn thành (MIGO 101E).',
     learningPoint:
-      'Định khoản Thông tư 200: Nợ 621/Có 152 (NVL), Nợ 622/Có 334 (Nhân công), Nợ 627/Có 214 (SXC), sau đó kết chuyển Nợ 154/Có 621,622,627. Nếu là Kho Valuated Stock E: Nhập kho ghi Nợ 155/Có 154. Nếu Non-valuated Stock E: KHÔNG sinh bút toán Nợ 155/Có 154 (chỉ ghi nhận số lượng vật lý vào kho E)!',
+      'Định khoản Thông tư 99: Nợ 621/Có 152 (NVL), Nợ 622/Có 334 (Nhân công), Nợ 627/Có 214 (SXC), sau đó kết chuyển Nợ 154/Có 621,622,627. Nếu là Kho Valuated Stock E: Nhập kho ghi Nợ 155/Có 154. Nếu Non-valuated Stock E: KHÔNG sinh bút toán Nợ 155/Có 154 (chỉ ghi nhận số lượng vật lý vào kho E)!',
   },
   {
     id: 4,
@@ -369,7 +369,7 @@ export const STEP_DEFINITIONS: StepDefinition[] = [
     detailedAction:
       'Kế toán lập Billing Document trên T-code VF01, ghi nhận Doanh thu bán hàng và Thuế GTGT 10% gửi cho Samsung/Canon/Denso.',
     learningPoint:
-      'Hạch toán Doanh thu và Thuế theo TT 200: Nợ TK 131 (Phải thu khách hàng) / Có TK 511 (Doanh thu bán hàng) và Có TK 3331 (Thuế GTGT đầu ra phải nộp).',
+      'Hạch toán Doanh thu và Thuế theo TT99: Nợ TK 131 (Phải thu khách hàng) / Có TK 511 (Doanh thu bán hàng) và Có TK 3331 (Thuế GTGT đầu ra phải nộp).',
   },
   {
     id: 7,
@@ -498,7 +498,7 @@ export function generateStepEntries(
       creditAccountName: 'Chi phí nguyên liệu, vật liệu trực tiếp',
       amount: computed.actualMaterialCost,
       costObject: `Đối tượng tính giá thành: ${soCode}`,
-      note: 'Kết chuyển chi phí 621 sang TK 154 theo Thông tư 200/2014/TT-BTC.',
+      note: 'Kết chuyển chi phí 621 sang TK 154 theo Thông tư 99/2025/TT-BTC.',
     });
 
     emit({
@@ -515,7 +515,7 @@ export function generateStepEntries(
       creditAccountName: 'Chi phí nhân công trực tiếp',
       amount: computed.actualLaborCost,
       costObject: `Đối tượng tính giá thành: ${soCode}`,
-      note: 'Kết chuyển chi phí 622 sang TK 154 theo Thông tư 200.',
+      note: 'Kết chuyển chi phí 622 sang TK 154 theo Thông tư 99.',
     });
 
     emit({
@@ -532,7 +532,7 @@ export function generateStepEntries(
       creditAccountName: 'Chi phí sản xuất chung',
       amount: computed.actualOverheadCost,
       costObject: `Đối tượng tính giá thành: ${soCode}`,
-      note: 'Kết chuyển chi phí 627 sang TK 154 theo Thông tư 200.',
+      note: 'Kết chuyển chi phí 627 sang TK 154 theo Thông tư 99.',
     });
 
     // 5. Nhập kho thành phẩm hoàn thành (MIGO 101E)
@@ -662,7 +662,7 @@ export function generateStepEntries(
         docType: 'QM - Tổn thất phế phẩm không thể phục hồi',
         postingDate: today,
         tCode: 'QA11 (Scrap)',
-        description: `Ghi nhận tổn thất phế phẩm ép nhựa nứt vỡ/bọt khí không thể phục hồi theo TT 200`,
+        description: `Ghi nhận tổn thất phế phẩm ép nhựa nứt vỡ/bọt khí không thể phục hồi theo TT99`,
         debitAccount: '632',
         debitAccountName: 'Giá vốn hàng bán (Tổn thất sản xuất hao hụt vượt định mức)',
         creditAccount: isValuated ? '155' : '154',
@@ -671,7 +671,7 @@ export function generateStepEntries(
           : 'Chi phí sản xuất, kinh doanh dở dang',
         amount: scrapCost,
         costObject: `Phiếu thanh lý phế phẩm #SCRAP-01 (${soCode})`,
-        note: 'Theo TT 200: Giá trị sản phẩm hỏng không sửa chữa được vượt định mức hạch toán vào Giá vốn hàng bán (hoặc TK 811).',
+        note: 'Theo TT99: Giá trị sản phẩm hỏng không sửa chữa được vượt định mức hạch toán vào Giá vốn hàng bán (hoặc TK 811).',
       });
 
       // Bút toán sản xuất bù lô hàng mới thay thế:
@@ -880,7 +880,7 @@ export function generateStepEntries(
       creditAccountName: 'Thuế giá trị gia tăng phải nộp (Thuế GTGT đầu ra)',
       amount: roundShare(computed.vatAmount, deliveryRatio),
       costObject: `Hóa đơn #90038101 (${soCode})`,
-      note: 'Hạch toán thuế GTGT đầu ra theo quy định Thông tư 200.',
+      note: 'Hạch toán thuế GTGT đầu ra theo quy định Thông tư 99.',
     });
 
     return commit();
@@ -1348,7 +1348,7 @@ export function exportEntriesToJSON(entries: JournalEntry[], params: MTOParamete
 
 /**
  * Tính toán Bảng Cân đối Số phát sinh & Số dư các Tài khoản (Trial Balance)
- * chuẩn Thông tư 200/2014/TT-BTC từ tập hợp chứng từ ghi sổ
+ * chuẩn Thông tư 99/2025/TT-BTC từ tập hợp chứng từ ghi sổ
  */
 export function computeTrialBalance(entries: JournalEntry[]): {
   items: TrialBalanceItem[];

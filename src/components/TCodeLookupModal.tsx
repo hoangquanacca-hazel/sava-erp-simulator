@@ -108,7 +108,7 @@ export const COMPREHENSIVE_TCODE_LIST: TCodeMasterDetail[] = [
     sapDescription:
       'Xuất kho hạt nhựa kỹ thuật (PC/ABS, PA66, PBT) từ kho nguyên liệu Special Stock E vào dây chuyền máy ép phun theo định mức BOM đơn hàng.',
     accountingRole:
-      'Ghi nhận Chi phí Nguyên vật liệu trực tiếp (TT200): Nợ TK 621 / Có TK 152. Đồng thời cập nhật giá trị tiêu hao vào Lệnh sản xuất trong phân hệ Controlling (CO).',
+      'Ghi nhận Chi phí Nguyên vật liệu trực tiếp (TT99): Nợ TK 621 / Có TK 152. Đồng thời cập nhật giá trị tiêu hao vào Lệnh sản xuất trong phân hệ Controlling (CO).',
     debitCreditEntries: ['Nợ TK 621: Chi phí nguyên vật liệu trực tiếp', 'Có TK 152: Nguyên liệu, vật liệu hạt nhựa'],
     sapTables: 'MSEG (Material Doc Segment), MKPF (Header), BKPF (FI Doc Header), BSEG (FI Doc Item)',
     keyFields: 'MBLNR (Material Doc), MJAHR (Year), BWART=261, SOBKZ=E',
@@ -122,7 +122,7 @@ export const COMPREHENSIVE_TCODE_LIST: TCodeMasterDetail[] = [
     sapDescription:
       'Công nhân xưởng bấm thẻ ghi nhận sản lượng chi tiết ép xong, thời gian vận hành máy ép (Machine Hours) và số giờ công nhân đứng máy (Labor Hours) thực tế.',
     accountingRole:
-      'Tự động ghi nhận Chi phí Nhân công trực tiếp và Chi phí Sản xuất chung theo TT200: Nợ TK 622 / Có TK 334 và Nợ TK 627 / Có TK 214, 331. Cuối kỳ kết chuyển toàn bộ chi phí 621, 622, 627 sang Nợ TK 154.',
+      'Tự động ghi nhận Chi phí Nhân công trực tiếp và Chi phí Sản xuất chung theo TT99: Nợ TK 622 / Có TK 334 và Nợ TK 627 / Có TK 214, 331. Cuối kỳ kết chuyển toàn bộ chi phí 621, 622, 627 sang Nợ TK 154.',
     debitCreditEntries: [
       'Nợ TK 622: Chi phí nhân công trực tiếp / Có TK 334: Phải trả người lao động',
       'Nợ TK 627: Chi phí sản xuất chung / Có TK 214: Khấu hao máy ép & Có TK 331: Điện năng',
@@ -188,7 +188,7 @@ export const COMPREHENSIVE_TCODE_LIST: TCodeMasterDetail[] = [
     sapDescription:
       'Ghi nhận xuất kho thực tế chuyển giao quyền sở hữu hàng hóa cho đối tác OEM khi xe rời khỏi cổng nhà máy PIC.',
     accountingRole:
-      'Phân nhánh theo cơ chế kho:\n• Nếu Valuated Stock E: Tự động ghi nhận Giá vốn hàng bán theo TT200: Nợ TK 632 / Có TK 155 (theo Giá thành Kế hoạch).\n• Nếu Non-valuated Stock E: KHÔNG hạch toán TK 632 tại đây! Toàn bộ giá vốn sẽ được ghi nhận một lần tại Bước 7 (Quyết toán VA88).',
+      'Phân nhánh theo cơ chế kho:\n• Nếu Valuated Stock E: Tự động ghi nhận Giá vốn hàng bán theo TT99: Nợ TK 632 / Có TK 155 (theo Giá thành Kế hoạch).\n• Nếu Non-valuated Stock E: KHÔNG hạch toán TK 632 tại đây! Toàn bộ giá vốn sẽ được ghi nhận một lần tại Bước 7 (Quyết toán VA88).',
     debitCreditEntries: [
       '[Valuated Stock]: Nợ TK 632: Giá vốn hàng bán / Có TK 155: Thành phẩm',
       '[Non-valuated Stock]: Không ghi nhận giá vốn ở bước này (hoãn lại đến VA88)',
@@ -205,7 +205,7 @@ export const COMPREHENSIVE_TCODE_LIST: TCodeMasterDetail[] = [
     sapDescription:
       'Phát hành Hóa đơn tài chính bán hàng (Billing Invoice) gửi cho đối tác OEM dựa trên số lượng giao hàng đã xác nhận thành công tại bước 5.',
     accountingRole:
-      'Ghi nhận Doanh thu bán hàng và Công nợ phải thu khách hàng theo TT200:\n• Nợ TK 131: Phải thu của khách hàng OEM (Tổng thanh toán)\n• Có TK 511: Doanh thu bán hàng và cung cấp dịch vụ (Doanh thu thuần)\n• Có TK 3331: Thuế GTGT đầu ra phải nộp (Thuế suất 10%).',
+      'Ghi nhận Doanh thu bán hàng và Công nợ phải thu khách hàng theo TT99:\n• Nợ TK 131: Phải thu của khách hàng OEM (Tổng thanh toán)\n• Có TK 511: Doanh thu bán hàng và cung cấp dịch vụ (Doanh thu thuần)\n• Có TK 3331: Thuế GTGT đầu ra phải nộp (Thuế suất 10%).',
     debitCreditEntries: [
       'Nợ TK 131: Phải thu của khách hàng (Tổng giá trị thanh toán)',
       'Có TK 511: Doanh thu bán hàng và cung cấp dịch vụ',
@@ -236,7 +236,7 @@ export const COMPREHENSIVE_TCODE_LIST: TCodeMasterDetail[] = [
     sapDescription:
       'Chạy chương trình quyết toán cuối cùng, chuyển toàn bộ chênh lệch chi phí, giá vốn và doanh thu từ Sales Order sang phân hệ Phân tích Lợi nhuận (CO-PA) và Sổ Cái kế toán FI.',
     accountingRole:
-      'Bút toán quyết toán toàn diện theo TT200:\n1. Non-valuated Stock: Ghi nhận Giá vốn thực tế: Nợ TK 632 / Có TK 154.\n2. Valuated Stock: Hạch toán Chênh lệch giá thành (Variance):\n   - Chênh lệch bất lợi (Chi phí thực tế > Kế hoạch): Nợ TK 632 / Có TK 154.\n   - Chênh lệch có lợi (Chi phí thực tế < Kế hoạch): Nợ TK 154 / Có TK 632.\n3. Kết chuyển Xác định kết quả kinh doanh cuối kỳ:\n   - Kết chuyển doanh thu: Nợ TK 511 / Có TK 911.\n   - Kết chuyển giá vốn: Nợ TK 911 / Có TK 632.',
+      'Bút toán quyết toán toàn diện theo TT99:\n1. Non-valuated Stock: Ghi nhận Giá vốn thực tế: Nợ TK 632 / Có TK 154.\n2. Valuated Stock: Hạch toán Chênh lệch giá thành (Variance):\n   - Chênh lệch bất lợi (Chi phí thực tế > Kế hoạch): Nợ TK 632 / Có TK 154.\n   - Chênh lệch có lợi (Chi phí thực tế < Kế hoạch): Nợ TK 154 / Có TK 632.\n3. Kết chuyển Xác định kết quả kinh doanh cuối kỳ:\n   - Kết chuyển doanh thu: Nợ TK 511 / Có TK 911.\n   - Kết chuyển giá vốn: Nợ TK 911 / Có TK 632.',
     debitCreditEntries: [
       '[Non-Valuated]: Nợ TK 632 / Có TK 154 (Toàn bộ giá thành thực tế)',
       '[Valuated Unfavorable Variance]: Nợ TK 632 / Có TK 154 (Chênh lệch thiếu/vượt định mức)',
@@ -272,7 +272,7 @@ export const COMPREHENSIVE_TCODE_LIST: TCodeMasterDetail[] = [
     englishName: 'G/L Account Balance Display',
     vietnameseName: 'Xem Số dư & Bảng Cân đối Sổ Cái FI',
     sapDescription:
-      'Kiểm tra bảng tổng hợp số phát sinh Nợ/Có và số dư cuối kỳ của các tài khoản Sổ Cái (General Ledger) phục vụ lập Báo cáo tài chính chuẩn TT200.',
+      'Kiểm tra bảng tổng hợp số phát sinh Nợ/Có và số dư cuối kỳ của các tài khoản Sổ Cái (General Ledger) phục vụ lập Báo cáo tài chính chuẩn TT99.',
     accountingRole:
       'Đối chiếu đối ứng tài khoản: Kiểm tra số dư TK 152, 154 (về 0 khi đơn hàng hoàn tất), TK 155, TK 621, 622, 627 (đã kết chuyển hết sang 154), TK 632, 511, 131 và 911 đảm bảo Tổng Nợ = Tổng Có.',
     sapTables: 'GLT0, FAGLFLEXT',
@@ -368,7 +368,7 @@ export const TCodeLookupModal: React.FC<TCodeLookupModalProps> = ({
             <div>
               <div className="flex items-center gap-2">
                 <h2 id="tcode-modal-title" className="text-base sm:text-lg font-bold text-white tracking-tight">
-                  Tra cứu T-Code SAP & Bút toán Kế toán MTO (Thông tư 200)
+                  Tra cứu T-Code SAP & Bút toán Kế toán MTO (Thông tư 99)
                 </h2>
                 <span className="hidden sm:inline-flex px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-cyan-950 text-cyan-300 border border-cyan-800">
                   SAP S/4HANA ERP
@@ -477,7 +477,7 @@ export const TCodeLookupModal: React.FC<TCodeLookupModalProps> = ({
                     <th className="py-3 px-3 sm:px-4 w-[90px] shrink-0">Quy trình</th>
                     <th className="py-3 px-3 sm:px-4 w-[240px]">Tên giao dịch & Mô tả SAP</th>
                     <th className="py-3 px-3 sm:px-4 min-w-[280px]">
-                      Vai trò Kế toán trong chu trình MTO (TT200)
+                      Vai trò Kế toán trong chu trình MTO (TT99)
                     </th>
                     <th className="py-3 px-3 sm:px-4 w-[160px] hidden lg:table-cell">Bảng CSDL SAP</th>
                     <th className="py-3 px-3 sm:px-4 w-[110px] text-right">Điều hướng</th>
