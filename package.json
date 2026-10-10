@@ -19,7 +19,7 @@
     "test:start": "node scripts/production-smoke.mjs",
     "test:ui-finance": "tsx scripts/ui-finance-regression.tsx",
     "lint:eslint": "eslint .",
-    "lint:eslint:strict": "eslint src/reports src/events src/pages/ReportsPage.tsx scripts/s3-reports.ts scripts/s1-health.ts eslint.config.js",
+    "lint:eslint:strict": "eslint src/reports src/events src/controls eslint.config.js",
     "test:costing": "tsx scripts/export-costing-inputs.ts --check && python3 scripts/oracle_costing.py --check && python3 scripts/a0_oracle.py --check && tsx scripts/costing.ts",
     "test:s3": "tsx scripts/s3-adapters.ts",
     "test:s4": "tsx scripts/s4-controls.ts",
