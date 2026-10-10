@@ -157,7 +157,7 @@ export const StepCard: React.FC<StepCardProps> = ({
         </div>
       </div>
 
-      {/* Body: Action details & Special SAP / TT200 modules */}
+      {/* Body: Action details & Special SAP / TT99 modules */}
       <div className="p-4 sm:p-5 space-y-4 text-xs sm:text-sm">
         <p className="text-slate-300 leading-relaxed">{step.id===6 ? `Lập hóa đơn cho phần đã giao, theo số lượng và số tiền của chứng từ được ghi nhận trong mô phỏng.` : step.id===7 ? 'Quyết toán phần doanh thu và giá vốn đã ghi nhận; chi phí phần chưa giao tiếp tục theo dõi trên TK 154 trong mô hình mô phỏng.' : step.detailedAction}</p>
 
@@ -187,7 +187,7 @@ export const StepCard: React.FC<StepCardProps> = ({
               <div className="flex items-center gap-2">
                 <Layers className="w-4 h-4 text-cyan-400" />
                 <strong className="text-white text-xs font-bold">
-                  Quy Trình Chi Phí Giá Thành 2 Giai Đoạn (Circular 200/2014/TT-BTC)
+                  Quy Trình Chi Phí Giá Thành 2 Giai Đoạn (Circular99/2025/TT-BTC)
                 </strong>
               </div>
               <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">
@@ -756,7 +756,7 @@ export const StepCard: React.FC<StepCardProps> = ({
               <span className="font-bold text-slate-300 flex items-center gap-1.5">
                 <span>Bút toán phát sinh tại bước này ({stepState.entries.length} chứng từ)</span>
               </span>
-              <span className="text-[11px] text-emerald-400 font-mono">Theo TT 200/2014/TT-BTC</span>
+              <span className="text-[11px] text-emerald-400 font-mono">Theo TT99/2025/TT-BTC</span>
             </div>
 
             <div className="overflow-x-auto border border-slate-800 rounded-lg">

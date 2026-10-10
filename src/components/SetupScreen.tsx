@@ -438,7 +438,7 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({
                       : 'bg-slate-950 border-slate-700 text-slate-100 focus:border-cyan-500'
                   }`}
                 >
-                  <option value={0.1}>10% (Chuẩn linh kiện nhựa TT99/TT200)</option>
+                  <option value={0.1}>10% (Chuẩn linh kiện nhựa TT99)</option>
                   <option value={0.08}>8% (Ưu đãi chính phủ)</option>
                   <option value={0}>0% (Khu chế xuất / Xuất khẩu EPE)</option>
                 </select>

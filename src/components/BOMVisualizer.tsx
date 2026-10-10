@@ -678,7 +678,7 @@ export const BOMVisualizer: React.FC<BOMVisualizerProps> = ({
                 <strong className="text-violet-300">SXC (627)</strong>
               </p>
               <div className="text-[11px] text-slate-400 pt-1 border-t border-slate-800 flex justify-between font-mono">
-                <span>Hạch toán Thông tư 200:</span>
+                <span>Hạch toán Thông tư 99:</span>
                 <span className="text-indigo-300 font-bold">{selectedNode.tt200Account}</span>
               </div>
             </div>

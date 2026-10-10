@@ -368,7 +368,7 @@ export const CommandBar: React.FC<CommandBarProps> = ({
                 className="text-[11px] text-amber-400 hover:text-amber-300 font-medium flex items-center gap-1.5 py-1 transition-colors cursor-pointer w-full justify-center bg-amber-500/10 hover:bg-amber-500/20 rounded-lg border border-amber-500/30"
               >
                 <BookOpen className="w-3.5 h-3.5" />
-                <span>Mở Sổ Tay Tra Cứu Toàn Bộ T-Code & Bút Toán TT200</span>
+                <span>Mở Sổ Tay Tra Cứu Toàn Bộ T-Code & Bút Toán TT99</span>
               </button>
             </div>
           )}

@@ -309,7 +309,7 @@ export const BOMTreeView: React.FC<BOMTreeViewProps> = ({
               </span>
             </div>
             <p className="text-xs text-slate-400">
-              Nhấp vào từng linh kiện trong cây phân cấp để xem chi phí định mức dự kiến, tỷ trọng và tài khoản hạch toán Thông tư 200.
+              Nhấp vào từng linh kiện trong cây phân cấp để xem chi phí định mức dự kiến, tỷ trọng và tài khoản hạch toán Thông tư 99.
             </p>
           </div>
         </div>
@@ -577,7 +577,7 @@ export const BOMTreeView: React.FC<BOMTreeViewProps> = ({
               )}
 
               <div className="flex justify-between py-1.5">
-                <span className="text-slate-400">Tài khoản kế toán (TT200/2014):</span>
+                <span className="text-slate-400">Tài khoản kế toán (TT99):</span>
                 <span className="font-mono font-bold text-indigo-300">
                   {selectedNode.tt200Account}
                 </span>
