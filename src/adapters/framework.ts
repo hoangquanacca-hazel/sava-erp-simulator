@@ -31,7 +31,7 @@ export async function adaptRaw(input:Uint8Array, manifestInput:unknown):Promise<
   const rawHash=await sha256Hex(bytes);
   const issues:QualityIssue[]=[],stages:string[]=['LOAD'];let sourceRows:number|null=null;
   let reportId='',sourceHash='',runId='',fileName='UNKNOWN_SIMULATED.txt';
-  let rows:CleanRow[]=[];const totals:Record<string,number>={};
+  const rows:CleanRow[]=[];const totals:Record<string,number>={};
   const issue=(code:string,message:string,row?:number,column?:string)=>{issues.push({code,message,severity:'BLOCK',...(row===undefined?{}:{row}),...(column?{column}:{})});};
   const finish=():AdapterResult=>{
     if(!stages.includes('PRESERVE RAW'))stages.push('PRESERVE RAW'); // quarantine evidence survives early failure

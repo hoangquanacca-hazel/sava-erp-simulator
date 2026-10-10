@@ -1,0 +1,8 @@
+# PR-5 — báo cáo (nhánh `cloud/pr5-hooks-strict`, xếp chồng trên `cloud/pr4-eslint` vì #19 chưa merge)
+
+**Đã làm:** (1) 4 lỗi `rules-of-hooks` (`SAPClassicMenu.tsx`: 3×useState, 1×useMemo) cùng một nguyên nhân — `return null` khi `uiMode !== 'classic'` đứng trước hook; đưa điều kiện xuống sau mọi hook, **1 commit** vì không tách được từng chỗ; hiển thị không đổi. (2) `src/adapters/framework.ts:34` let→const; `src/mart/manufacturing.ts:1` bỏ import `CleanDataset` không dùng — 2 commit riêng; thêm `src/adapters`, `src/mart` vào `lint:eslint:strict`. (3) Sửa chú thích đầu `ci.yml`.
+**ESLint lỗi trước→sau (toàn repo 263→257, rules-of-hooks 4→0):** reports 0→0 · events 0→0 · adapters 1→0 · controls 0→0 · mart 1→0 · pages 0→0 · scripts 51→51 · còn lại 210→206.
+**Kiểm:** lint, eslint:strict, parity, s1, s2, a0, reports, health, security, s3–s6, costing, build, start, ui-finance đều exit 0; `lint:eslint` toàn repo exit 1 (257 lỗi tồn, không chặn).
+**Không đụng:** `calculator.ts`, `acdoca.ts`, `materialLedger.ts`, `a0_expected.json`, assert test; không có chỗ nào cần đổi hành vi.
+**Chưa làm:** 257 lỗi còn lại ngoài strict (chủ yếu `src/components` ~114 no-explicit-any/unused-vars, `docs-cloud` 49, `scripts` 51, `src/utils` 17, `src/App.tsx` 11, `netlify` 7, `src/evidence` 6) và 1 cảnh báo; `src/pages` chưa có file lỗi nhưng chưa vào strict (không có file trong danh sách strict của nhánh này).
+**Rủi ro:** PR xếp chồng — merge #19 trước (hoặc cùng lúc) kẻo diff lẫn; hook chuyển lên đầu nên `SAPClassicMenu` giờ khởi tạo state cả khi `uiMode !== 'classic'` (không hiển thị gì, chi phí không đáng kể); CI GitHub của PR chưa kiểm.
