@@ -1,0 +1,17 @@
+import {adaptRaw} from 'D:/sava-erp-simulator/src/adapters/framework';
+import {toRawExport,sha256Hex} from 'D:/sava-erp-simulator/src/reports/core';
+import {SIM_CONFIG} from 'D:/sava-erp-simulator/src/config/simConfig';
+async function main(){
+ const raw=toRawExport({reportId:'COOIS_HEADER',title:'COOIS_HEADER — SIMULATED layout',columns:['AUFNR','MATNR','WERKS','GAMNG','WEMNG','GMEIN','KDAUF','KDPOS'].map(field=>({field,label:field})),rows:[['PRD-01','MATERIAL_A',SIM_CONFIG.plant,'100','50','PC','SO01','000010']]});
+ const sourceHash='a'.repeat(64);
+ const base={reportId:'COOIS_HEADER',schemaVersion:'sim-report-v1',generatorVersion:'s2-pack-1.0.0',fileName:raw.fileName,sha256:await sha256Hex(raw.bytes),bytes:raw.bytes.length,rowCount:1,sourceLineCount:0,totals:{},sourceHash,runId:'SIM-'+sourceHash.slice(0,16),phase:'GENERATED_RAW',config:{companyCode:SIM_CONFIG.companyCode,plant:SIM_CONFIG.plant,ledger:SIM_CONFIG.ledger,standard:'TT99',label:'SIMULATED'},selection:{postingDate:SIM_CONFIG.postingDate,stockType:'Valuated',material:'MATERIAL_A',deliveredQuantity:50}};
+ const wrongSelection=structuredClone(base);wrongSelection.selection.material='MATERIAL_OTHER';wrongSelection.selection.deliveredQuantity=999;
+ const wrongResult=await adaptRaw(raw.bytes,wrongSelection);
+ const missingSelection=structuredClone(base) as any;delete missingSelection.selection.material;delete missingSelection.selection.deliveredQuantity;
+ const missingResult=await adaptRaw(raw.bytes,missingSelection);
+ const race=structuredClone(base);const pending=adaptRaw(raw.bytes,race);race.config.companyCode='WRONG';const raceResult=await pending;
+ const protoRaw=new TextEncoder().encode('irrelevant\n');const protoManifest={...base,reportId:'__proto__',sha256:await sha256Hex(protoRaw),bytes:protoRaw.length};
+ let protoResult;try{protoResult=await adaptRaw(protoRaw,protoManifest);}catch(e){protoResult={thrown:String(e)};}
+ console.log(JSON.stringify({wrongSelection:{status:wrongResult.status,issues:wrongResult.quality.issues},missingSelection:{status:missingResult.status,issues:missingResult.quality.issues},manifestRace:{status:raceResult.status,issues:raceResult.quality.issues},prototypeReport:protoResult},null,2));
+}
+main();

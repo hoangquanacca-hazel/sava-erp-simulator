@@ -1,0 +1,6 @@
+{
+  "command": "npm run test:reports -- --tamper",
+  "expectedExitCode": 1,
+  "observedExitCode": 1,
+  "failure": "CONTROL: MB51 value mismatch by 1 VND"
+}

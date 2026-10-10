@@ -1,0 +1,126 @@
+[
+  {
+    "name": "baseline",
+    "expected": "PASS",
+    "actual": "PASS",
+    "ok": true
+  },
+  {
+    "name": "wrongfilehash",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED",
+    "reason": "EXPORTED_FILE_HASH_MISMATCH",
+    "ok": true
+  },
+  {
+    "name": "malformed",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED",
+    "reason": "ENVELOPE_SHAPE",
+    "ok": true
+  },
+  {
+    "name": "version",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED",
+    "reason": "MANIFEST_VERSION",
+    "ok": true
+  },
+  {
+    "name": "extra manifest",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED",
+    "reason": "MANIFEST_VERSION",
+    "ok": true
+  },
+  {
+    "name": "payload approval",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED",
+    "reason": "PUBLICATION_SCOPE",
+    "ok": true
+  },
+  {
+    "name": "factsvalue",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED",
+    "reason": "C08_MISMATCH",
+    "ok": true
+  },
+  {
+    "name": "cleannumber",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED",
+    "reason": "RAW_CLEAN_MISMATCH",
+    "ok": true
+  },
+  {
+    "name": "reportcount",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED",
+    "reason": "REPORT_INVENTORY",
+    "ok": true
+  },
+  {
+    "name": "stalerun",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED",
+    "reason": "CONTROL_MART_MISMATCH",
+    "ok": true
+  },
+  {
+    "name": "controlchanged",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED",
+    "reason": "MART bị chặn: control snapshot khác CLEAN hoặc bị sửa.",
+    "ok": true
+  },
+  {
+    "name": "eventnote",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED",
+    "reason": "Audit event/control snapshot was modified",
+    "ok": true
+  },
+  {
+    "name": "duplicate",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED",
+    "reason": "MART bị chặn: quality/control kỹ thuật chưa đạt.",
+    "ok": true
+  },
+  {
+    "name": "claimapproval",
+    "expected": "BLOCKED",
+    "actual": "PASS",
+    "ok": false
+  },
+  {
+    "name": "rehashed invalid workflow APPROVE",
+    "expected": "BLOCKED",
+    "actual": "PASS",
+    "ok": false
+  },
+  {
+    "name": "rehashed invalid workflow REQUEST_REVIEW",
+    "expected": "BLOCKED",
+    "actual": "PASS",
+    "ok": false
+  },
+  {
+    "name": "async isolation",
+    "expected": "PASS",
+    "actual": "PASS",
+    "ok": true
+  },
+  {
+    "name": "zero delivery",
+    "expected": "PASS",
+    "actual": "PASS",
+    "ok": true
+  },
+  {
+    "name": "zero margin",
+    "ok": true
+  }
+]

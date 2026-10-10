@@ -1,0 +1,60 @@
+{
+  "codeCommit": "da7bd0b4b764a66a4929158da10a0b962bb1a589",
+  "files": [
+    {
+      "file": "canon-controls.jpg",
+      "bytes": 1084266,
+      "sha256": "b05286c3c070fae7d5dac17025fa7859b12c41d6df220cfa8878fa5d8b11f6c1"
+    },
+    {
+      "file": "canon-controls.txt",
+      "bytes": 2115,
+      "sha256": "bebf0aaab867e38fbb2e613c40b4500f6fb043128df9b84fe941c18715c33097"
+    },
+    {
+      "file": "canon-snapshot.txt",
+      "bytes": 33564,
+      "sha256": "d4582e0d6f5ba96912830c8fc4f76a3598cf4c002c1040763517cb00b7e5bb43"
+    },
+    {
+      "file": "controls-viewport.jpg",
+      "bytes": 91304,
+      "sha256": "08ffca653f15a2db1265c80ba1e5afbe3f8a65a95b1cc656adf9412b0ad7f981"
+    },
+    {
+      "file": "invalidated-snapshot.txt",
+      "bytes": 25107,
+      "sha256": "aef80b870f8cf3e0fa31d402c075a134e9e052893b4f6efe9fbf103a20da7c13"
+    },
+    {
+      "file": "qa-results.json",
+      "bytes": 2310,
+      "sha256": "3f13bfbc34a21f64ae5507afc303aeb1616a258c3600e6b1aeed7333adcf05b1"
+    },
+    {
+      "file": "QA_REPORT.md",
+      "bytes": 1775,
+      "sha256": "a04d9a4c0802502d3fc9d713b1a5a498fb77e2672ef03a1aeea8fce332587b82"
+    },
+    {
+      "file": "restored-snapshot.txt",
+      "bytes": 16060,
+      "sha256": "2c522c71fd54c5b78522a767281ee6b9194581ca98d928603d89002bc8f72f2d"
+    },
+    {
+      "file": "samsung-controls-review.jpg",
+      "bytes": 1112196,
+      "sha256": "0a94a896d0f476acd87b8b2ba11d492443b64304932b8f1c020f2164c6a3c18c"
+    },
+    {
+      "file": "samsung-controls.txt",
+      "bytes": 3207,
+      "sha256": "50c8c3be7eaef4b3b10eaf5f1ace95c61b2e018c6a7108d0f85a3f9b415605ee"
+    },
+    {
+      "file": "webinar-restored-off.jpg",
+      "bytes": 54751,
+      "sha256": "9f81b0688d57081b7691acd21c31e18b8809d08fb59d1977d1d20e7125632df0"
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "items": [
+    {
+      "id": "P0-01",
+      "priority": "P0",
+      "deliverable": "Baseline, history gap register, artefact inventory",
+      "responsible": "Architect",
+      "depends_on": "none",
+      "exit_gate": "G0",
+      "effort_person_days": "2–3",
+      "status": "PLANNED"
+    },
+    {
+      "id": "P0-02",
+      "priority": "P0",
+      "deliverable": "SAP sample corpus, layout/selection/profile approval",
+      "responsible": "Finance SME",
+      "depends_on": "P0-01",
+      "exit_gate": "G1",
+      "effort_person_days": "4–7",
+      "status": "PLANNED"
+    },
+    {
+      "id": "P0-03",
+      "priority": "P0",
+      "deliverable": "Contract/key/period/sign design and independent oracle",
+      "responsible": "Data Engineer",
+      "depends_on": "P0-02",
+      "exit_gate": "G1",
+      "effort_person_days": "4–6",
+      "status": "PLANNED"
+    },
+    {
+      "id": "P0-04",
+      "priority": "P0",
+      "deliverable": "Namespace, private RAW storage, manifest, hash, state/RBAC",
+      "responsible": "Backend",
+      "depends_on": "P0-03",
+      "exit_gate": "G2",
+      "effort_person_days": "6–9",
+      "status": "PLANNED"
+    },
+    {
+      "id": "P0-05",
+      "priority": "P0",
+      "deliverable": "MB51 + five COOIS adapters and DQ",
+      "responsible": "Data Engineer",
+      "depends_on": "P0-04",
+      "exit_gate": "G3",
+      "effort_person_days": "8–12",
+      "status": "PLANNED"
+    },
+    {
+      "id": "P0-06",
+      "priority": "P0",
+      "deliverable": "KOB1/KKS1/CK13N/GL/settlement adapters",
+      "responsible": "Data Engineer",
+      "depends_on": "P0-04",
+      "exit_gate": "G3",
+      "effort_person_days": "8–12",
+      "status": "PLANNED"
+    },
+    {
+      "id": "P0-07",
+      "priority": "P0",
+      "deliverable": "Data Lab, report selection, raw evidence UI",
+      "responsible": "Frontend",
+      "depends_on": "P0-03",
+      "exit_gate": "G3",
+      "effort_person_days": "6–9",
+      "status": "PLANNED"
+    },
+    {
+      "id": "P0-08",
+      "priority": "P0",
+      "deliverable": "C01–C07 controls and exception/reviewer workflow",
+      "responsible": "Backend",
+      "depends_on": "P0-05,P0-06",
+      "exit_gate": "G4",
+      "effort_person_days": "7–10",
+      "status": "PLANNED"
+    },
+    {
+      "id": "P0-09",
+      "priority": "P0",
+      "deliverable": "Manufacturing MART + variance drill/commentary",
+      "responsible": "Frontend",
+      "depends_on": "P0-07,P0-08",
+      "exit_gate": "G4",
+      "effort_person_days": "5–8",
+      "status": "PLANNED"
+    },
+    {
+      "id": "P0-10",
+      "priority": "P0",
+      "deliverable": "M01–M10 independent QA, security, replay, release",
+      "responsible": "QA",
+      "depends_on": "P0-09",
+      "exit_gate": "G5",
+      "effort_person_days": "6–10",
+      "status": "PLANNED"
+    },
+    {
+      "id": "P1-01",
+      "priority": "P1",
+      "deliverable": "Procurement/AP samples and PO-history dependency",
+      "responsible": "Finance SME",
+      "depends_on": "P0-10",
+      "exit_gate": "G1",
+      "effort_person_days": "4–6",
+      "status": "PLANNED"
+    },
+    {
+      "id": "P1-02",
+      "priority": "P1",
+      "deliverable": "ME2N/GRIR/AP adapters, controls, aging/DPO",
+      "responsible": "Data Engineer",
+      "depends_on": "P1-01",
+      "exit_gate": "G4",
+      "effort_person_days": "10–15",
+      "status": "PLANNED"
+    },
+    {
+      "id": "P1-03",
+      "priority": "P1",
+      "deliverable": "Sales/AR billing-document bridge and fixtures",
+      "responsible": "Finance SME",
+      "depends_on": "P0-10",
+      "exit_gate": "G1",
+      "effort_person_days": "4–6",
+      "status": "PLANNED"
+    },
+    {
+      "id": "P1-04",
+      "priority": "P1",
+      "deliverable": "VF05/AR/GL controls, aging/DSO",
+      "responsible": "Data Engineer",
+      "depends_on": "P1-03",
+      "exit_gate": "G4",
+      "effort_person_days": "10–15",
+      "status": "PLANNED"
+    },
+    {
+      "id": "P1-05",
+      "priority": "P1",
+      "deliverable": "Learning cases, close dependencies, independent acceptance",
+      "responsible": "QA",
+      "depends_on": "P1-02,P1-04",
+      "exit_gate": "G5",
+      "effort_person_days": "6–9",
+      "status": "PLANNED"
+    },
+    {
+      "id": "P2-01",
+      "priority": "P2",
+      "deliverable": "ML valuation/profile/spec and sample approval",
+      "responsible": "Finance SME",
+      "depends_on": "P1-05",
+      "exit_gate": "G1",
+      "effort_person_days": "4–7",
+      "status": "PLANNED"
+    },
+    {
+      "id": "P2-02",
+      "priority": "P2",
+      "deliverable": "CKM3N/CKMLCP/MB5L controls and standard→actual bridge",
+      "responsible": "Data Engineer",
+      "depends_on": "P2-01",
+      "exit_gate": "G4",
+      "effort_person_days": "10–16",
+      "status": "PLANNED"
+    },
+    {
+      "id": "P2-03",
+      "priority": "P2",
+      "deliverable": "CFO/CCC dashboard after MART approval",
+      "responsible": "Frontend",
+      "depends_on": "P2-02,P1-05",
+      "exit_gate": "G5",
+      "effort_person_days": "5–9",
+      "status": "PLANNED"
+    },
+    {
+      "id": "P2-04",
+      "priority": "P2",
+      "deliverable": "ZFIR009A/ZFIR159 adapters when specs arrive",
+      "responsible": "Data Engineer",
+      "depends_on": "P0-04 + custom spec approval",
+      "exit_gate": "G3",
+      "effort_person_days": "TBD after samples",
+      "status": "PLANNED"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "target": "http://127.0.0.1:3017/",
+  "scenario": "Canon Non-valuated -3.5% delivered 1000/2000",
+  "rawReports": 11,
+  "cleanPassed": 11,
+  "technicalControlsPassed": 7,
+  "martMetrics": 12,
+  "businessApproval": "PENDING_HUMAN_SME",
+  "generatedPack": {
+    "fileName": "SIM-0ca91a3854067d51_P0_EVIDENCE_v1.json",
+    "bytes": 112162,
+    "sha256": "5c0fd64b42cb34af01f1b13529950c3900dbbfc9232f65cfeb7973ed4a7cfbf9"
+  },
+  "actualBrowserSave": "UNVERIFIED_DOWNLOAD_EVENT_TIMEOUT",
+  "fileReplay": "UNVERIFIED_CHOOSER_ABORTED",
+  "staleParameterCheck": "NOT_RUN_BROWSER_UNAVAILABLE",
+  "initialWebinar": "OFF",
+  "initialLeadCount": 0,
+  "temporaryWebinar": "ON",
+  "finalWebinarRestoration": "UNVERIFIED_BROWSER_UNAVAILABLE",
+  "leadsCreatedByQA": 0,
+  "screenshots": []
+}

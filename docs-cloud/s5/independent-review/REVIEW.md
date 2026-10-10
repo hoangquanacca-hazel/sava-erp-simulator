@@ -1,0 +1,11 @@
+# Independent S5 review — 2026-10-08
+
+Scope: new uncommitted S5 source in `D:\sava-erp-simulator`, `src/mart/manufacturing.ts`, `src/mart/commentary.ts`, `src/components/ManufacturingMartPanel.tsx`, integration in `ControlsPanel.tsx`. Read P0 focus decision; diagnostic synthetic development allowed while SME gates remain blocked. No repository edits, oracle changes, service operations, network/AI calls or acceptance decisions by reviewer.
+
+Result: 24 independent probes PASS, no actionable defect found in focused source/probe scope. See `probe.mts`, `results.json`. Primary scenario is Canon frame, Non-valuated, -3.5% full-order variance, 50% delivered. Probe arithmetic checks unchanged A0 expected revenue, gross profit, actual cost and WIP; zero-revenue branch adds a synthetic altered CLEAN fixture (not a new business oracle).
+
+Verified: generated baseline C08, recursively frozen MART, diagnostic/pending labels, exclusion of closing911 documents, altered claim value/unit/basis/hash/text/refs, duplicated/missing claims, modified MART content, stale/blocked/quality inputs, forged control run, edited prior workflow chain, pre-await input capture for build/claims/export, serialized export bytes/hash and scope, explicit unavailable margin reason when revenue is zero.
+
+Source review: panel identifies saved work snapshot with JSON key; workflow append hides stale MART because case changes. Parent Data Lab controls must remain mounted only for matching valid report/CLEAN snapshot, as already designed. Source cards include per-metric basis/formula and RAW refs. Arithmetic cost-element bridge is explicitly distinguished from causal explanations and official reports. Full-order cost and posted-delivered profit are kept on separate bases.
+
+Limits: no browser interaction or download file capture in this review; no 54-case manual review, real SAP fixture or TT99/golden approval; no legal/SME/business acceptance. SHA256 is a local content integrity comparison, not authentication/signature or WORM: a person who can rewrite all data and recompute all hashes is outside generated browser-only trust scope. `verifyMartSnapshot` is not a real SAP import validator. No public import or API intake is implemented. Business blocks remain active; the technical PASS cannot close P0.

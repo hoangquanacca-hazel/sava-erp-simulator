@@ -1,0 +1,237 @@
+[
+  {
+    "name": "baseline",
+    "expected": "PASS",
+    "actual": "PASS",
+    "ok": true
+  },
+  {
+    "name": "wrongfilehash",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED",
+    "reason": "EXPORTED_FILE_HASH_MISMATCH",
+    "ok": true
+  },
+  {
+    "name": "malformed",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED",
+    "reason": "ENVELOPE_SHAPE",
+    "ok": true
+  },
+  {
+    "name": "version",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED",
+    "reason": "MANIFEST_VERSION",
+    "ok": true
+  },
+  {
+    "name": "extra manifest",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED",
+    "reason": "MANIFEST_VERSION",
+    "ok": true
+  },
+  {
+    "name": "payload approval",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED",
+    "reason": "PUBLICATION_SCOPE",
+    "ok": true
+  },
+  {
+    "name": "factsvalue",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED",
+    "reason": "C08_MISMATCH",
+    "ok": true
+  },
+  {
+    "name": "cleannumber",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED",
+    "reason": "RAW_CLEAN_MISMATCH",
+    "ok": true
+  },
+  {
+    "name": "reportcount",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED",
+    "reason": "REPORT_INVENTORY",
+    "ok": true
+  },
+  {
+    "name": "stalerun",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED",
+    "reason": "CONTROL_MART_MISMATCH",
+    "ok": true
+  },
+  {
+    "name": "controlchanged",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED",
+    "reason": "MART bị chặn: control snapshot khác CLEAN hoặc bị sửa.",
+    "ok": true
+  },
+  {
+    "name": "eventnote",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED",
+    "reason": "Audit event/control snapshot was modified",
+    "ok": true
+  },
+  {
+    "name": "duplicate",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED",
+    "reason": "MART bị chặn: quality/control kỹ thuật chưa đạt.",
+    "ok": true
+  },
+  {
+    "name": "claimapproval",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED",
+    "reason": "C08_MISMATCH",
+    "ok": true
+  },
+  {
+    "name": "rawlegalapproval",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED",
+    "reason": "RAW_METADATA_SCOPE",
+    "ok": true
+  },
+  {
+    "name": "rawcontrol",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED",
+    "reason": "RAW_METADATA_SCOPE",
+    "ok": true
+  },
+  {
+    "name": "rawadapter",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED",
+    "reason": "RAW_METADATA_SCOPE",
+    "ok": true
+  },
+  {
+    "name": "rehashed invalid workflow APPROVE",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED_AT_MART",
+    "ok": true,
+    "reason": "Error: Unknown control/action"
+  },
+  {
+    "name": "rehashed invalid workflow REQUEST_REVIEW",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED_AT_MART",
+    "ok": true,
+    "reason": "Error: Review requires prior explanation"
+  },
+  {
+    "name": "rehashed invalid workflow blankactor",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED_AT_MART",
+    "ok": true,
+    "reason": "Error: Audit required fields invalid"
+  },
+  {
+    "name": "rehashed invalid workflow unknowncontrol",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED_AT_MART",
+    "ok": true,
+    "reason": "Error: Unknown control/action"
+  },
+  {
+    "name": "rehashed invalid workflow emptyrefs",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED_AT_MART",
+    "ok": true,
+    "reason": "Error: Audit required fields invalid"
+  },
+  {
+    "name": "rehashed invalid workflow badtime",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED_AT_MART",
+    "ok": true,
+    "reason": "Error: Invalid timestamp"
+  },
+  {
+    "name": "rehashed invalid workflow eventapproval",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED_AT_MART",
+    "ok": true,
+    "reason": "Error: Audit event shape invalid"
+  },
+  {
+    "name": "rehashed invalid workflow caseapproval",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED_AT_MART",
+    "ok": true,
+    "reason": "Error: Control case shape invalid"
+  },
+  {
+    "name": "async isolation",
+    "expected": "PASS",
+    "actual": "PASS",
+    "ok": true
+  },
+  {
+    "name": "zero delivery",
+    "expected": "PASS",
+    "actual": "PASS",
+    "ok": true
+  },
+  {
+    "name": "zero margin",
+    "ok": true
+  },
+  {
+    "name": "bytes baseline",
+    "expected": "PASS",
+    "actual": "PASS",
+    "ok": true
+  },
+  {
+    "name": "fatal UTF8",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED",
+    "reason": "The encoded data was not valid for encoding utf-8",
+    "ok": true
+  },
+  {
+    "name": "BOM rejected",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED",
+    "reason": "UTF8_BOM_NOT_ALLOWED",
+    "ok": true
+  },
+  {
+    "name": "byte async isolation",
+    "ok": true
+  },
+  {
+    "name": "byte maximum",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED",
+    "reason": "FILE_TOO_LARGE",
+    "ok": true
+  },
+  {
+    "name": "direct verifier illegal workflow APPROVE",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED",
+    "reason": "Unknown control/action",
+    "ok": true
+  },
+  {
+    "name": "direct verifier illegal workflow REQUEST_REVIEW",
+    "expected": "BLOCKED",
+    "actual": "BLOCKED",
+    "reason": "Review requires prior explanation",
+    "ok": true
+  }
+]

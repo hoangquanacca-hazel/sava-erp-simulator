@@ -1,0 +1,32 @@
+
+> react-example@0.0.0 build
+> vite build && esbuild server.ts --bundle --platform=node --format=esm --packages=external --sourcemap --outfile=dist/server.mjs
+
+vite v6.4.3 building for production...
+transforming...
+✓ 2312 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                    2.58 kB │ gzip:   1.09 kB
+dist/assets/index-CuXhn88S.css                   104.25 kB │ gzip:  15.03 kB
+dist/assets/MdgGatePage-CfqwZl1Y.js                1.32 kB │ gzip:   0.75 kB
+dist/assets/variance-DGdK4-89.js                   1.51 kB │ gzip:   0.81 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+dist/assets/MaterialLedgerPage-DW8K0JrK.js         2.04 kB │ gzip:   1.03 kB
+dist/assets/SodAuditPage-BLsP8UEU.js               2.78 kB │ gzip:   1.30 kB
+dist/assets/IntercompanyPage-D5TWC1kw.js           3.02 kB │ gzip:   1.33 kB
+dist/assets/WipSettlementPage-BiAl1z_h.js          3.17 kB │ gzip:   1.30 kB
+dist/assets/VarianceWaterfallPage-DfGUmUu0.js      3.96 kB │ gzip:   1.83 kB
+dist/assets/GrirPage-C4iqXySX.js                   4.37 kB │ gzip:   1.59 kB
+dist/assets/CloseCockpitPage-BXb37lK6.js           5.82 kB │ gzip:   2.34 kB
+dist/assets/index-DPcngw3r.js                  1,481.45 kB │ gzip: 438.62 kB
+✓ built in 9.56s
+
+  dist\server.mjs      23.4kb
+  dist\server.mjs.map  28.5kb
+
+Done in 66ms

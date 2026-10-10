@@ -9,11 +9,10 @@ import {
   VARIANT_PACKAGINGS,
   RawMaterialBOMItem,
   RoutingWorkCenter,
-  DEFAULT_BOM_ITEMS,
-  DEFAULT_ROUTING,
   UIMode,
 } from '../types';
-import { formatVND, formatNumber } from '../utils/calculator';
+import { displayedBomInputs } from '../presentation/finance';
+import { resolveRouting, formatVND, formatNumber } from '../utils/calculator';
 import { BOMVisualizer } from './BOMVisualizer';
 import {
   exportFullERPPackageExcel,
@@ -82,8 +81,8 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({
     });
   };
 
-  const bomItems = params.bomItems && params.bomItems.length > 0 ? params.bomItems : DEFAULT_BOM_ITEMS;
-  const routing = params.routing || DEFAULT_ROUTING;
+  const bomItems = displayedBomInputs(params,computed);
+  const routing = resolveRouting(params);
 
   // Handlers for BOM Items table
   const handleUpdateBOMItem = (index: number, updated: Partial<RawMaterialBOMItem>) => {

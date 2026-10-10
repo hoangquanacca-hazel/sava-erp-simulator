@@ -1,0 +1,123 @@
+{
+  "scope": "Independent generated-input diagnostic S5 probes; no business acceptance",
+  "case": {
+    "src": "canon-frame",
+    "stock": "Non-valuated",
+    "pct": -3.5,
+    "ratio": 0.5,
+    "P": 53086050,
+    "delta": -1858012,
+    "dM": -579381,
+    "dL": -441000,
+    "dO": -837631,
+    "actual": 51228038,
+    "cr152": 15974369,
+    "cr334": 12159000,
+    "cr214": 23094669,
+    "wip154_dr_minus_cr": 25614019,
+    "closing155": 0,
+    "gp911_credit": 89385981,
+    "closing632_dr_minus_cr": 0,
+    "revenue_recognized": 115000000
+  },
+  "checks": [
+    {
+      "name": "Partial recognized revenue oracle",
+      "status": "PASS"
+    },
+    {
+      "name": "Partial gross profit oracle and excluded closing911",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual cost and WIP oracle",
+      "status": "PASS"
+    },
+    {
+      "name": "Diagnostic no approval and frozen recursively",
+      "status": "PASS"
+    },
+    {
+      "name": "Baseline C08",
+      "status": "PASS"
+    },
+    {
+      "name": "Claim changed value",
+      "status": "PASS"
+    },
+    {
+      "name": "Claim changed unit",
+      "status": "PASS"
+    },
+    {
+      "name": "Claim changed basis",
+      "status": "PASS"
+    },
+    {
+      "name": "Claim changed snapshotHash",
+      "status": "PASS"
+    },
+    {
+      "name": "Claim changed text",
+      "status": "PASS"
+    },
+    {
+      "name": "Claim changed refs",
+      "status": "PASS"
+    },
+    {
+      "name": "Duplicate fact",
+      "status": "PASS"
+    },
+    {
+      "name": "Missing fact",
+      "status": "PASS"
+    },
+    {
+      "name": "Edited snapshot rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "Workflow snapshot forged",
+      "status": "PASS"
+    },
+    {
+      "name": "Status blocked",
+      "status": "PASS"
+    },
+    {
+      "name": "Quality blocked",
+      "status": "PASS"
+    },
+    {
+      "name": "Stale mixed snapshot",
+      "status": "PASS"
+    },
+    {
+      "name": "Build async mutation isolation",
+      "status": "PASS"
+    },
+    {
+      "name": "Claim async mutation isolation",
+      "status": "PASS"
+    },
+    {
+      "name": "Prior chain edited",
+      "status": "PASS"
+    },
+    {
+      "name": "Export bytes hash and scope",
+      "status": "PASS"
+    },
+    {
+      "name": "Export async mutation isolation",
+      "status": "PASS"
+    },
+    {
+      "name": "Zero revenue unavailable explicit reason",
+      "status": "PASS"
+    }
+  ],
+  "total": 24,
+  "failed": 0
+}

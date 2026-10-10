@@ -1,0 +1,10 @@
+
+> react-example@0.0.0 test:a0
+> tsx scripts/a0-expected.ts && tsx scripts/a0-ids.ts && tsx scripts/a0-ckmlcp.ts && tsx scripts/a01-identity-events.ts
+
+PASS A0 54/54 ca khớp oracle độc lập; 154 không dư Có; chứng từ cân; lineId duy nhất
+PASS A0-ID samsung-cover: 33 dòng, 13 chứng từ, CKMLCP=S7-ML-0001
+PASS A0-ID canon-frame: 33 dòng, 13 chứng từ, CKMLCP=S7-ML-0001
+PASS A0-ID denso-sensor: 33 dòng, 13 chứng từ, CKMLCP=S7-ML-0001
+PASS AUD-006 36 ca đường CKMLCP khớp oracle (có/không định giá, ±3,5%, giao 100/50/0%)
+PASS A0.1: số chứng từ bền (lọc/đảo thứ tự), sự kiện logistics khớp FI 54/54 ca, kiểm soát bắt được sai lệch cố ý

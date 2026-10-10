@@ -1,0 +1,504 @@
+{
+  "version": "sava-sim-controls-1.0.0",
+  "runId": "SIM-a506f599cc3b0225",
+  "sourceHash": "a506f599cc3b0225153ce2bc89708c1564a32a6b857932299da6662f895294f8",
+  "label": "SIMULATED",
+  "businessAcceptance": "PENDING_HUMAN_SME",
+  "controls": [
+    {
+      "id": "C01",
+      "name": "Material documents: COOIS ↔ MB51",
+      "technicalStatus": "PASS",
+      "businessStatus": "PENDING_SME",
+      "findings": [],
+      "evidence": [
+        {
+          "reportId": "MB51",
+          "rawHash": "c94d12e26eb2080cf146c55afa9016a87f4a61efdc04fb6deeb6748f290adf9a",
+          "rawLine": 4
+        },
+        {
+          "reportId": "MB51",
+          "rawHash": "c94d12e26eb2080cf146c55afa9016a87f4a61efdc04fb6deeb6748f290adf9a",
+          "rawLine": 5
+        },
+        {
+          "reportId": "MB51",
+          "rawHash": "c94d12e26eb2080cf146c55afa9016a87f4a61efdc04fb6deeb6748f290adf9a",
+          "rawLine": 6
+        },
+        {
+          "reportId": "COOIS_GOODS_MOVEMENTS",
+          "rawHash": "5b02e4707ef9b337908fce67e67431372da7eabdb5cc92b47cb2294ce04c3aed",
+          "rawLine": 4
+        },
+        {
+          "reportId": "COOIS_GOODS_MOVEMENTS",
+          "rawHash": "5b02e4707ef9b337908fce67e67431372da7eabdb5cc92b47cb2294ce04c3aed",
+          "rawLine": 5
+        },
+        {
+          "reportId": "COOIS_GOODS_MOVEMENTS",
+          "rawHash": "5b02e4707ef9b337908fce67e67431372da7eabdb5cc92b47cb2294ce04c3aed",
+          "rawLine": 6
+        }
+      ],
+      "metrics": {
+        "documents": 3
+      }
+    },
+    {
+      "id": "C02",
+      "name": "Component aggregate ↔ goods issues",
+      "technicalStatus": "PASS",
+      "businessStatus": "BLOCKED_RESERVATION_MAPPING",
+      "findings": [],
+      "evidence": [
+        {
+          "reportId": "MB51",
+          "rawHash": "c94d12e26eb2080cf146c55afa9016a87f4a61efdc04fb6deeb6748f290adf9a",
+          "rawLine": 4
+        },
+        {
+          "reportId": "MB51",
+          "rawHash": "c94d12e26eb2080cf146c55afa9016a87f4a61efdc04fb6deeb6748f290adf9a",
+          "rawLine": 5
+        },
+        {
+          "reportId": "MB51",
+          "rawHash": "c94d12e26eb2080cf146c55afa9016a87f4a61efdc04fb6deeb6748f290adf9a",
+          "rawLine": 6
+        },
+        {
+          "reportId": "COOIS_COMPONENTS",
+          "rawHash": "2d0cbd5eaa777e7c6e637e86d7c9b70c1f3101443ebbdb057224058ef92cdd5e",
+          "rawLine": 4
+        }
+      ],
+      "metrics": {
+        "componentGroups": 1
+      }
+    },
+    {
+      "id": "C03",
+      "name": "Order delivered ↔ goods receipts",
+      "technicalStatus": "PASS",
+      "businessStatus": "PENDING_SME",
+      "findings": [],
+      "evidence": [
+        {
+          "reportId": "MB51",
+          "rawHash": "c94d12e26eb2080cf146c55afa9016a87f4a61efdc04fb6deeb6748f290adf9a",
+          "rawLine": 4
+        },
+        {
+          "reportId": "MB51",
+          "rawHash": "c94d12e26eb2080cf146c55afa9016a87f4a61efdc04fb6deeb6748f290adf9a",
+          "rawLine": 5
+        },
+        {
+          "reportId": "MB51",
+          "rawHash": "c94d12e26eb2080cf146c55afa9016a87f4a61efdc04fb6deeb6748f290adf9a",
+          "rawLine": 6
+        },
+        {
+          "reportId": "COOIS_HEADER",
+          "rawHash": "ecbb728541729f731bab37ae24ebcd8fe2a8133ad210ad43c52d5d45b96bb878",
+          "rawLine": 4
+        }
+      ],
+      "metrics": {
+        "delivered": 5000
+      }
+    },
+    {
+      "id": "C04",
+      "name": "SIM 154 collector ↔ KKS actual",
+      "technicalStatus": "PASS",
+      "businessStatus": "BLOCKED_CO_COST_BASIS",
+      "findings": [],
+      "evidence": [
+        {
+          "reportId": "KOB1",
+          "rawHash": "a42b3e2269875e4cbeaa3b9747bbff34c026b5831c4ddacb724599f50fd8c43a",
+          "rawLine": 4
+        },
+        {
+          "reportId": "KOB1",
+          "rawHash": "a42b3e2269875e4cbeaa3b9747bbff34c026b5831c4ddacb724599f50fd8c43a",
+          "rawLine": 5
+        },
+        {
+          "reportId": "KOB1",
+          "rawHash": "a42b3e2269875e4cbeaa3b9747bbff34c026b5831c4ddacb724599f50fd8c43a",
+          "rawLine": 6
+        },
+        {
+          "reportId": "KKS1",
+          "rawHash": "d63bd5e1f0fab9e4ee1e1e0a943352ebc8a3241a40ad1444b0b0af10585ae994",
+          "rawLine": 4
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 4
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 5
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 6
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 7
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 8
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 9
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 10
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 11
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 12
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 13
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 14
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 15
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 16
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 17
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 18
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 19
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 20
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 21
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 22
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 23
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 24
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 25
+        }
+      ],
+      "metrics": {
+        "actual": 48780088
+      }
+    },
+    {
+      "id": "C05",
+      "name": "SIM settlement ↔ GL + WIP",
+      "technicalStatus": "PASS",
+      "businessStatus": "BLOCKED_RECEIVER_ELIGIBLE_VARIANCE",
+      "findings": [],
+      "evidence": [
+        {
+          "reportId": "SUP01",
+          "rawHash": "513a5a316c581754bcd36e1f48af43d52f412190e16a1a3cf14acdd926243221",
+          "rawLine": 4
+        },
+        {
+          "reportId": "KKS1",
+          "rawHash": "d63bd5e1f0fab9e4ee1e1e0a943352ebc8a3241a40ad1444b0b0af10585ae994",
+          "rawLine": 4
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 4
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 5
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 6
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 7
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 8
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 9
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 10
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 11
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 12
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 13
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 14
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 15
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 16
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 17
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 18
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 19
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 20
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 21
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 22
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 23
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 24
+        },
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "b0b8dd9464a622c0fbab6ba52c0eed963d49b579610502934fc8543e525f28b1",
+          "rawLine": 25
+        }
+      ],
+      "metrics": {
+        "settled": 48780088,
+        "wip": 0
+      }
+    },
+    {
+      "id": "C06",
+      "name": "CK13N header ↔ additive items",
+      "technicalStatus": "PASS",
+      "businessStatus": "PENDING_SME",
+      "findings": [],
+      "evidence": [
+        {
+          "reportId": "CK13N",
+          "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+          "rawLine": 4
+        },
+        {
+          "reportId": "CK13N",
+          "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+          "rawLine": 5
+        },
+        {
+          "reportId": "CK13N",
+          "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+          "rawLine": 6
+        },
+        {
+          "reportId": "CK13N",
+          "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+          "rawLine": 7
+        },
+        {
+          "reportId": "COOIS_HEADER",
+          "rawHash": "ecbb728541729f731bab37ae24ebcd8fe2a8133ad210ad43c52d5d45b96bb878",
+          "rawLine": 4
+        }
+      ],
+      "metrics": {
+        "standardCost": 48780088
+      }
+    },
+    {
+      "id": "C07",
+      "name": "Full-order cost-element variance bridge",
+      "technicalStatus": "PASS",
+      "businessStatus": "BLOCKED_SAP_VARIANCE_CATEGORIES",
+      "findings": [],
+      "evidence": [
+        {
+          "reportId": "COOIS_COMPONENTS",
+          "rawHash": "2d0cbd5eaa777e7c6e637e86d7c9b70c1f3101443ebbdb057224058ef92cdd5e",
+          "rawLine": 4
+        },
+        {
+          "reportId": "COOIS_OPERATIONS",
+          "rawHash": "f62f82f3bf3407a15c085057030065a972ea595c13669e7ad4be804af37c190a",
+          "rawLine": 4
+        },
+        {
+          "reportId": "COOIS_CONFIRMATIONS",
+          "rawHash": "6a1fd3131104983b0a1feabe64a980b3ddc0db679ad98118cfaf9867b221e531",
+          "rawLine": 4
+        },
+        {
+          "reportId": "KOB1",
+          "rawHash": "a42b3e2269875e4cbeaa3b9747bbff34c026b5831c4ddacb724599f50fd8c43a",
+          "rawLine": 4
+        },
+        {
+          "reportId": "KOB1",
+          "rawHash": "a42b3e2269875e4cbeaa3b9747bbff34c026b5831c4ddacb724599f50fd8c43a",
+          "rawLine": 5
+        },
+        {
+          "reportId": "KOB1",
+          "rawHash": "a42b3e2269875e4cbeaa3b9747bbff34c026b5831c4ddacb724599f50fd8c43a",
+          "rawLine": 6
+        },
+        {
+          "reportId": "KKS1",
+          "rawHash": "d63bd5e1f0fab9e4ee1e1e0a943352ebc8a3241a40ad1444b0b0af10585ae994",
+          "rawLine": 4
+        },
+        {
+          "reportId": "CK13N",
+          "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+          "rawLine": 4
+        },
+        {
+          "reportId": "CK13N",
+          "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+          "rawLine": 5
+        },
+        {
+          "reportId": "CK13N",
+          "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+          "rawLine": 6
+        },
+        {
+          "reportId": "CK13N",
+          "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+          "rawLine": 7
+        },
+        {
+          "reportId": "COOIS_HEADER",
+          "rawHash": "ecbb728541729f731bab37ae24ebcd8fe2a8133ad210ad43c52d5d45b96bb878",
+          "rawLine": 4
+        }
+      ],
+      "metrics": {
+        "materialDelta": 0,
+        "laborDelta": 0,
+        "overheadDelta": 0,
+        "residual": 0,
+        "fullOrderVariance": 0
+      }
+    }
+  ],
+  "technicalStatus": "PASS"
+}

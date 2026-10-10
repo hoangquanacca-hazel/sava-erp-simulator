@@ -1,0 +1,11 @@
+{
+  "sourceCommit": "da7bd0b4b764a66a4929158da10a0b962bb1a589",
+  "origin": "http://127.0.0.1:3017",
+  "asset": "/assets/index-CriE0zSv.js",
+  "sha256": "135c42ae14c65d54a9a84d2e345486782652b435c7b3dfc65664179289d82b02",
+  "bytes": 1520526,
+  "servedMatchesLocalBuild": true,
+  "s4ControlLabelPresent": true,
+  "at": "2026-10-08T04:33:08.480863+00:00",
+  "limits": "Build identity only; UI/business acceptance separately reported"
+}

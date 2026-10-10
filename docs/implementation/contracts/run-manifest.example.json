@@ -1,0 +1,69 @@
+{
+  "run_id": "00000000-0000-4000-8000-000000000001",
+  "report_id": "D01",
+  "source_kind": "SIMULATED",
+  "source_system": "SAVA-DEMO",
+  "client": "SIM",
+  "sap_edition": null,
+  "sap_release": null,
+  "company_codes": [
+    "SIM01"
+  ],
+  "plants": [
+    "SIMPLANT"
+  ],
+  "selection": {
+    "ranges": [
+      {
+        "field": "posting_date",
+        "sign": "I",
+        "option": "BT",
+        "low": "2026-09-01",
+        "high": "2026-09-30"
+      }
+    ],
+    "status_scope": "all incl reversals",
+    "key_date": "2026-09-30"
+  },
+  "fiscal_year_variant": "DEMO_CALENDAR",
+  "period": "2026-09",
+  "timezone": "Asia/Saigon",
+  "cutoff_at": "2026-09-30T16:59:59Z",
+  "extracted_at": "2026-10-01T01:00:00Z",
+  "ingested_at": "2026-10-01T01:01:00Z",
+  "operator_id": "EXAMPLE_ONLY",
+  "selection_variant": null,
+  "layout_variant": null,
+  "export_profile_id": "SAVA_D01_V1",
+  "original_filename": "EXAMPLE_NOT_AN_ACTUAL_EXPORT.csv",
+  "mime": "text/csv",
+  "encoding": "UTF-8",
+  "size_bytes": 0,
+  "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "raw_object_uri": "example://not-stored/empty-file",
+  "schema_version": "1.0.0-draft",
+  "adapter_id": "sava.mb51",
+  "adapter_version": "0.0.0-proposed",
+  "code_commit": "c629d2ad68a0e95130effefd889a315462b32cc4",
+  "config_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+  "parent_run_id": null,
+  "row_counts": {
+    "physical_rows": 0,
+    "data_rows": 0,
+    "header_rows": 0,
+    "footer_rows": 0,
+    "subtotal_rows": 0,
+    "blank_rows": 0,
+    "accepted_rows": 0,
+    "rejected_rows": 0,
+    "duplicate_rows": 0,
+    "emitted_clean_rows": 0
+  },
+  "control_totals": [],
+  "state": "QUARANTINED",
+  "scenario_id": "EXAMPLE",
+  "ruleset_version": "draft",
+  "seed": 0,
+  "example_only": true,
+  "approval_evidence_id": null
+}

@@ -1,0 +1,94 @@
+# CI — kiểm chứng độc lập (không do agent tự báo): typecheck, ESLint, toàn bộ test (gồm oracle giá thành), build.
+# Mọi test sai là exit != 0 → job đỏ. KHÔNG test nào có continue-on-error; chỉ bước "ESLint — toàn repo" (ghi nợ tồn)
+# được continue-on-error. Mỗi bước chạy `if: !cancelled()` để một bước đỏ không che kết quả các bước sau;
+# job vẫn đỏ nếu bất kỳ bước chặn nào đỏ.
+name: CI
+
+on:
+  pull_request:
+  push:
+    # Nhánh con (cloud/pr*) chạy qua sự kiện pull_request — không chạy trùng khi push.
+    branches: [main, 'feat/**', cloud/s1-report-completion]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Typecheck (lint = tsc --noEmit)
+        if: ${{ !cancelled() }}
+        run: npm run lint
+      - name: ESLint — thư mục strict (CHẶN)
+        if: ${{ !cancelled() }}
+        run: npm run lint:eslint:strict
+      # CHỈ ESLint toàn repo mới được continue-on-error (nợ tồn đọng, xem docs-cloud/PR4_ESLINT_MEASURE.md). KHÔNG bao giờ cho test.
+      - name: ESLint — toàn repo (CHỈ GHI NỢ TỒN, không chặn)
+        if: ${{ !cancelled() }}
+        continue-on-error: true
+        run: npm run lint:eslint
+      - name: Parity M1–M8
+        if: ${{ !cancelled() }}
+        run: npm run test:parity
+      - name: S1 cấu hình TT99
+        if: ${{ !cancelled() }}
+        run: npm run test:s1
+      - name: S2 FAGLL03
+        if: ${{ !cancelled() }}
+        run: npm run test:s2
+      - name: A0 oracle 54 ca
+        if: ${{ !cancelled() }}
+        run: npm run test:a0
+      - name: Báo cáo SAP (report pack)
+        if: ${{ !cancelled() }}
+        run: npm run test:reports
+      - name: /api/health không lộ khóa
+        if: ${{ !cancelled() }}
+        run: npm run test:health
+      - name: Quét bí mật (scan-secrets)
+        if: ${{ !cancelled() }}
+        run: npm run test:security
+      - name: S3 adapter RAW→CLEAN
+        if: ${{ !cancelled() }}
+        run: npm run test:s3
+      - name: S4 controls
+        if: ${{ !cancelled() }}
+        run: npm run test:s4
+      - name: S5 MART
+        if: ${{ !cancelled() }}
+        run: npm run test:s5
+      - name: S6 evidence
+        if: ${{ !cancelled() }}
+        run: npm run test:s6
+      - name: Oracle giá thành độc lập (Q1+Q4+Q5; a0_oracle đọc từ oracle_costing)
+        if: ${{ !cancelled() }}
+        run: npm run test:costing
+      - name: Build
+        if: ${{ !cancelled() }}
+        run: npm run build
+      # Cần dist/ từ bước Build; chạy server ESM thật trên cổng cục bộ, không cần trình duyệt, không gọi AI.
+      - name: Production smoke (test:start)
+        if: ${{ !cancelled() }}
+        run: npm run test:start
+      # Render phía server bằng tsx, không cần trình duyệt.
+      - name: UI finance regression (test:ui-finance)
+        if: ${{ !cancelled() }}
+        run: npm run test:ui-finance
+      - name: Quét chuỗi dạng khóa Gemini trong mã nguồn và bundle
+        if: ${{ !cancelled() }}
+        run: |
+          if grep -rEl 'AIza[0-9A-Za-z_-]{30,}' --exclude-dir=node_modules --exclude-dir=.git . ; then
+            echo "Phát hiện chuỗi dạng khóa Gemini" ; exit 1
+          fi

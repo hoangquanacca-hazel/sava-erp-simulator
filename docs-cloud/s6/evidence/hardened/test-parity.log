@@ -1,0 +1,18 @@
+
+> react-example@0.0.0 test:parity
+> tsx scripts/parity.ts
+
+PASS samsung-cover (Valuated) acdoca=30 TB Dr=684900440 GP=161219912 margin%=76.77
+PASS canon-frame (Non-valuated) acdoca=22 TB Dr=695344200 GP=176913950 margin%=76.92
+PASS denso-sensor (Valuated) acdoca=33 TB Dr=1064154558 GP=110131913 margin%=48.3
+PASS missing-input → 0
+PASS 5-type drivers denso Vp=544753 Vq=272377 Vr=433223 Vs=42705 Vrem=2692819 TV=3985877
+PASS close checklist order MMPV→CKMLCP→KKA2
+PASS M3 WIP NV delivered 1000/2000 settle632=26543025 wip154=26543025
+PASS M3 TECO default still balances
+PASS M4 MDG gate
+PASS M5 SoD roles
+PASS M6 CKMLCP after PGI lines 19->21 TB Dr=467486471
+PASS M7 GR/IR MR11
+PASS M8 IC markup10 UIP=4878009
+ALL PARITY CHECKS PASSED

@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-08",
+  "codeUnderTest": "1556e48445eb86b365e25de770da71bfd9f8ed7a",
+  "url": "http://127.0.0.1:3017/",
+  "status": "PASS_FOCUSED_UI",
+  "case": {
+    "quantity": 2000,
+    "deliveredQuantity": 1000,
+    "sellingPrice": 115000,
+    "actualVariancePct": -3.5
+  },
+  "metrics": {
+    "standardCost": 53086050,
+    "actualCost": 51228038,
+    "variance": -1858012,
+    "settled": 25614019,
+    "wip154": 25614019,
+    "revenue": 115000000,
+    "cogs": 25614019,
+    "grossProfit": 89385981,
+    "marginPct": 77.73,
+    "plannedQty": 2000,
+    "deliveredQty": 1000,
+    "residual": 0
+  },
+  "bridge": [
+    {
+      "element": "material",
+      "plan": 16553750,
+      "actual": 15974369,
+      "delta": -579381
+    },
+    {
+      "element": "labor",
+      "plan": 12600000,
+      "actual": 12159000,
+      "delta": -441000
+    },
+    {
+      "element": "overhead",
+      "plan": 23932300,
+      "actual": 23094669,
+      "delta": -837631
+    }
+  ],
+  "checks": {
+    "rawReports": 11,
+    "clean": "11/11",
+    "controls": "7/7 technical",
+    "c08": "traceability matches, businessapproval pending",
+    "drill": {
+      "reportId": "CK13N",
+      "rawHash": "adadb0199fd8a3c47a72b7946d3d390b86b2a9eb27d424ce7a144ba3af1ba601",
+      "rawLines": [
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "explainInvalidation": "PASS C02",
+    "regeneration": "PASS",
+    "priceInvalidation": "PASS 115000 to115001 removes RAW/CLEAN/CONTROL/MART",
+    "priceRestored": 115000,
+    "webinarInitial": "OFF",
+    "webinarDuring": "ON",
+    "webinarRestored": "OFF",
+    "leads": 0
+  },
+  "unverified": [
+    "Downloads skipped due prior eventtimeouts",
+    "54manual combinations notrun",
+    "SME golden legal acceptance unavailable"
+  ],
+  "newDefects": []
+}

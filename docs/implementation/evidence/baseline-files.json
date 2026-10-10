@@ -1,0 +1,308 @@
+{
+  "captured_at_utc": "2026-10-07T01:15:31.625575+00:00",
+  "branch": "feat/sava-brand-l1",
+  "head": "c629d2ad68a0e95130effefd889a315462b32cc4",
+  "status_before": "",
+  "files": [
+    {
+      "path": ".env.example",
+      "size_bytes": 454,
+      "sha256": "997fd4cabe96dd692f1dde691a3ea157e86d97c577dfa7198690a91169278bad"
+    },
+    {
+      "path": ".gitignore",
+      "size_bytes": 45,
+      "sha256": "ab80d487a7f6b59bc13ab298cdd8df6595d0120807bf9d1d319c0b67e079fb58"
+    },
+    {
+      "path": "index.html",
+      "size_bytes": 2483,
+      "sha256": "405b1d02532698f9af2a0b449267ad5d0d708ef256abc3533356e288956590c0"
+    },
+    {
+      "path": "metadata.json",
+      "size_bytes": 371,
+      "sha256": "284f939cce9cc1bad33d1bdbc20d7019f2bcad4c5ba56d36f41a0b0e188e7185"
+    },
+    {
+      "path": "netlify.toml",
+      "size_bytes": 545,
+      "sha256": "6c81a2547d1a38d20a9dc896dbe05874ef7b527de509797a81b231d91fe0c85e"
+    },
+    {
+      "path": "package-lock.json",
+      "size_bytes": 172888,
+      "sha256": "ffe3ad41c6b371062d77826ddd4c0a43795aedcbd8ec814daf12865f437d3645"
+    },
+    {
+      "path": "package.json",
+      "size_bytes": 1115,
+      "sha256": "15f2f9ffdbb695ab87bc222cc7456a4bb1c8628189211ebaa21b3e13d14ff10d"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 992,
+      "sha256": "65c6f5a1b54e678350d72a9e8b033760426c123437410f24168be80147a51c10"
+    },
+    {
+      "path": "server.ts",
+      "size_bytes": 19406,
+      "sha256": "84ea30c8b4c22ef224f0590edd8282ae8573cbce83410013fc0623c503639914"
+    },
+    {
+      "path": "tsconfig.json",
+      "size_bytes": 534,
+      "sha256": "3c6abfb62d861145b657e37a6bbf96d1626752b6145e3bf9c218a0e66112cdd6"
+    },
+    {
+      "path": "vite.config.ts",
+      "size_bytes": 730,
+      "sha256": "b990c4afdfb5195bdc994739210dbfeb0b5eece38bd0caf2a76d44b2ee97c6bb"
+    },
+    {
+      "path": "netlify/functions/chat.mts",
+      "size_bytes": 19543,
+      "sha256": "732767aea81984b56400a139acd8dd846607a79a3646a2a6dc00209f9b07e081"
+    },
+    {
+      "path": "netlify/functions/health.mts",
+      "size_bytes": 625,
+      "sha256": "9678f411a92dabf624eac4f75f5bb5765ecb35113e5ea49b41110e850d81562b"
+    },
+    {
+      "path": "scripts/parity.ts",
+      "size_bytes": 11503,
+      "sha256": "996a6e079a6370c09f0466e44acc66989763394cfedc79a6ee2ea4e3517ec9ca"
+    },
+    {
+      "path": "src/App.tsx",
+      "size_bytes": 43520,
+      "sha256": "c3abbc8725fb76ac9d0567b09513026647618e99e0ddce7919a95e05d4c15926"
+    },
+    {
+      "path": "src/index.css",
+      "size_bytes": 24,
+      "sha256": "8a760a784f79570e06fdcb0c6a2677ea66c304230b7925ea313d63b46d8ba407"
+    },
+    {
+      "path": "src/main.tsx",
+      "size_bytes": 311,
+      "sha256": "e3087501b5af029fd2d07f00a01b3b8d0e1515fa512bd3c4bc19ae43eab09170"
+    },
+    {
+      "path": "src/types.ts",
+      "size_bytes": 25320,
+      "sha256": "6e1ac7309780dfeacbb80ef493f908a6372222a4e6a279ccb6e211848a08e189"
+    },
+    {
+      "path": "src/components/AdminDashboardModal.tsx",
+      "size_bytes": 23637,
+      "sha256": "f845d24788ecd8037b104c7d4e51163629035d732ccffd4b0ff9477041c318c5"
+    },
+    {
+      "path": "src/components/AITutorDrawer.tsx",
+      "size_bytes": 12287,
+      "sha256": "26169241cd76d08f67977d7015abc10c7e7ebdc6a8905999076b44345751e5eb"
+    },
+    {
+      "path": "src/components/BOMTreeView.tsx",
+      "size_bytes": 27892,
+      "sha256": "87595e7e16282cfaf87ef1c9f04b22bc21df9ec4297d670e28a46ffafef2a204"
+    },
+    {
+      "path": "src/components/BOMVisualizer.tsx",
+      "size_bytes": 37984,
+      "sha256": "f919dc45cd7d23a4f7d71569a202f5ad4b1f2c5ffef0ff6487bc9a4edd6ef30f"
+    },
+    {
+      "path": "src/components/CommandBar.tsx",
+      "size_bytes": 20946,
+      "sha256": "c720d2d23dcdd51a17a7952ab74b2ea57590b8a13ff05aa4622eeca447cc6486"
+    },
+    {
+      "path": "src/components/Header.tsx",
+      "size_bytes": 21949,
+      "sha256": "cee474b127f695dd25dae66a9b7d208905fb8eb66f668f0362df576a64e14cee"
+    },
+    {
+      "path": "src/components/LeadCaptureModal.tsx",
+      "size_bytes": 20756,
+      "sha256": "ab030bba15f1f6de461e59ba72e1523c554669c40c96ef128d0c5e7d60e0bcd5"
+    },
+    {
+      "path": "src/components/LedgerPanel.tsx",
+      "size_bytes": 35586,
+      "sha256": "ac8b77f7ae75ef468d24b52f85780f66a6302588dc55a982c25979f9d112568d"
+    },
+    {
+      "path": "src/components/MarginAnalysisPanel.tsx",
+      "size_bytes": 5830,
+      "sha256": "84eb12515b3d508295a3c6df8904ae4aa9e5f2faada440e0109c0a3dd3f66cfa"
+    },
+    {
+      "path": "src/components/ModuleNav.tsx",
+      "size_bytes": 2391,
+      "sha256": "bed32576dead9334847f51cecffcfa45a4f354514e86c262878de442b9a6486d"
+    },
+    {
+      "path": "src/components/OrderProfitDashboard.tsx",
+      "size_bytes": 27194,
+      "sha256": "b53e91a30269d6884ae9faf6e67309f3c8985300a16b175fcc836efc6f108960"
+    },
+    {
+      "path": "src/components/PDFReportModal.tsx",
+      "size_bytes": 36793,
+      "sha256": "f5860235056dba76f38e21423385eb638400587410e32ffc9d3d2ffd3862761e"
+    },
+    {
+      "path": "src/components/SalesOrderCard.tsx",
+      "size_bytes": 8042,
+      "sha256": "b3f5314c8617513035a694ed503016e88d03fa03d6f414a4f1353247d2e397f1"
+    },
+    {
+      "path": "src/components/SAPClassicMenu.tsx",
+      "size_bytes": 35493,
+      "sha256": "f9f3330a3c83f5aa4c3651a6fd5db1c1350cfce631b35266d86dc6ebaad01c17"
+    },
+    {
+      "path": "src/components/SessionLimitBanner.tsx",
+      "size_bytes": 5119,
+      "sha256": "dc8abfaa88027abe7694de05fa6594d73cade9a00b609eeba237e91956f68ae8"
+    },
+    {
+      "path": "src/components/SetupScreen.tsx",
+      "size_bytes": 55938,
+      "sha256": "a2f49700409d2f4501e4098d79e75e35dbd9d7c5c9a8cf40d8a337162334a696"
+    },
+    {
+      "path": "src/components/SpecialStockPanel.tsx",
+      "size_bytes": 7050,
+      "sha256": "c233d32e0ce31e0aef3559b1475c23150c66251748f58b10e0240ff0b21ca96f"
+    },
+    {
+      "path": "src/components/StepCard.tsx",
+      "size_bytes": 43109,
+      "sha256": "55a6741a17786cc5d8fa5ab7128560180a32146c1b6522199292c104cf2933e8"
+    },
+    {
+      "path": "src/components/TCodeLookupModal.tsx",
+      "size_bytes": 34146,
+      "sha256": "02a10512bf13b8b7fd882df1b44c87589508146b7894921789623dfd56dfa48e"
+    },
+    {
+      "path": "src/components/UserGuideModal.tsx",
+      "size_bytes": 16833,
+      "sha256": "086768d0c541325b9035d554d8c2c9a9c076d93f14adb403bfc30f70028494d4"
+    },
+    {
+      "path": "src/features/flags.ts",
+      "size_bytes": 1155,
+      "sha256": "a49fdf9d3e63ca11d4f169cddf07c2b5b10e84d156ae37c9a619d2ac2a6813f1"
+    },
+    {
+      "path": "src/features/grir.ts",
+      "size_bytes": 4490,
+      "sha256": "0bc01aae52f1c47057370c7ec1e2b32697a1e7e55c2a0e7373a617f91e086eb8"
+    },
+    {
+      "path": "src/features/hashRoute.ts",
+      "size_bytes": 1008,
+      "sha256": "e8c464590782a1a94c09e17d85a5fd7affaf98fba303422fb725cfdeb1565b63"
+    },
+    {
+      "path": "src/features/intercompany.ts",
+      "size_bytes": 2733,
+      "sha256": "32b99cb7e36bd3ec63715046faea178bedaa924ad454bc5f784de24d6214d049"
+    },
+    {
+      "path": "src/features/materialLedger.ts",
+      "size_bytes": 2260,
+      "sha256": "6b73662b41551e0df7dfe50a14e7595faaad25f27fda43e01c589bf6ecb6129e"
+    },
+    {
+      "path": "src/features/mdg.ts",
+      "size_bytes": 1016,
+      "sha256": "4130c639e4dcebe128b4de4c98875d6eca7bc63b0e1e25e66dce7a618d57b7a9"
+    },
+    {
+      "path": "src/features/periodClose.ts",
+      "size_bytes": 2251,
+      "sha256": "8bc405597063b4487aacf1c70f51bca056217eb4bf0b6aa9d74220e8e2d47cfa"
+    },
+    {
+      "path": "src/features/sod.ts",
+      "size_bytes": 1216,
+      "sha256": "cae474991918b285b617b6360c4987ea2291f04a7a9640630bb2a155cc73b937"
+    },
+    {
+      "path": "src/features/variance.ts",
+      "size_bytes": 3594,
+      "sha256": "206d2010c9130da114aac0c98cabd532850bd5a2ca500e0112873fdc93aab880"
+    },
+    {
+      "path": "src/features/wip.ts",
+      "size_bytes": 962,
+      "sha256": "c230dff159db76bf241c3e443c060af3f0f9e5231da588df9646e3dc33dea0c1"
+    },
+    {
+      "path": "src/pages/CloseCockpitPage.tsx",
+      "size_bytes": 9595,
+      "sha256": "07e54e0f8272173e02cba29b2d3ce9a3ba0db4e2e4a5969f016489326034fc32"
+    },
+    {
+      "path": "src/pages/GrirPage.tsx",
+      "size_bytes": 3730,
+      "sha256": "ddcd7037f7dd35acf02f3bab2e8d02fe17f058fd4aeccd72e547f12a1718d9a2"
+    },
+    {
+      "path": "src/pages/IntercompanyPage.tsx",
+      "size_bytes": 2552,
+      "sha256": "034eee806533ae15dd17d83325e8001156b19112a4a92e0b875f5a8a2c9d225d"
+    },
+    {
+      "path": "src/pages/MaterialLedgerPage.tsx",
+      "size_bytes": 2903,
+      "sha256": "7c5c49aa1a8d36a77fe2f3d2457b0b16389e8941943f7a5de7c84e39f8461564"
+    },
+    {
+      "path": "src/pages/MdgGatePage.tsx",
+      "size_bytes": 1961,
+      "sha256": "74eb56a933dd0883deda53ddafbe9d8b605379df435726279f0b4a12464ea366"
+    },
+    {
+      "path": "src/pages/SodAuditPage.tsx",
+      "size_bytes": 3193,
+      "sha256": "9de5aa7363ff6aab79dd7028457645f16c9b5aceb4e7b42eb284873a610b1445"
+    },
+    {
+      "path": "src/pages/VarianceWaterfallPage.tsx",
+      "size_bytes": 5246,
+      "sha256": "2ac081fcc01a9c1ce9fffe2919359cef72d8a69860bd475b52d5c01d05cf9db4"
+    },
+    {
+      "path": "src/pages/WipSettlementPage.tsx",
+      "size_bytes": 4212,
+      "sha256": "543ef707babbde65c2a5b24331e2a11d531c75c6ab3970e379ec9d2cbbd1a709"
+    },
+    {
+      "path": "src/utils/acdoca.ts",
+      "size_bytes": 18871,
+      "sha256": "776921a8b15135b405208867afba1f58bc9905486cfab25fe31ed8212b1d921b"
+    },
+    {
+      "path": "src/utils/analytics.ts",
+      "size_bytes": 1065,
+      "sha256": "661928d8c7f6a32b5cfddad76d0248d52f8c6242762274b0d4c2d276f13be866"
+    },
+    {
+      "path": "src/utils/calculator.ts",
+      "size_bytes": 68604,
+      "sha256": "6f93b604cf81bdb1aa93f4a076692833a91ad81bf9f8cedabf2bfc047a9335b0"
+    },
+    {
+      "path": "src/utils/excelService.ts",
+      "size_bytes": 19003,
+      "sha256": "f3d5822726b88c3d9b478962e589dcb82e3269554ebffc5ae347c58318c61b26"
+    }
+  ]
+}

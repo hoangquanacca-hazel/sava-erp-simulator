@@ -1,0 +1,18 @@
+
+> react-example@0.0.0 test:reports
+> tsx scripts/s2-report-pack.ts --tamper
+
+D:\sava-erp-simulator\src\reports\manufacturing.ts:71
+  const fail = (msg: string): never => { throw new Error(`CONTROL: ${msg}`); };
+                                               ^
+
+Error: CONTROL: MB51 value: 8593088 != 8593087
+    at fail (D:\sava-erp-simulator\src\reports\manufacturing.ts:71:48)
+    at eq (D:\sava-erp-simulator\src\reports\manufacturing.ts:85:78)
+    at validateReportPack (D:\sava-erp-simulator\src\reports\manufacturing.ts:106:59)
+    at <anonymous> (D:\sava-erp-simulator\scripts\s2-report-pack.ts:24:3)
+    at ModuleJob.run (node:internal/modules/esm/module_job:430:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:661:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.14.0

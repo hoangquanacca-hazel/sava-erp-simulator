@@ -1,0 +1,2867 @@
+{
+  "manifest": {
+    "version": "sava-p0-evidence-1.0.0",
+    "payloadSha256": "23346a5d3dbfe95e059a6fce8763cd87293ba1a38f45105590e5b803ed262998",
+    "payloadBytes": 70423,
+    "reportCount": 11
+  },
+  "payload": {
+    "version": "sava-p0-evidence-1.0.0",
+    "label": "SIMULATED",
+    "approval": "NOT_APPROVED",
+    "publicationStatus": "DIAGNOSTIC_ONLY",
+    "runId": "SIM-6fb11bcf8960ab94",
+    "sourceHash": "6fb11bcf8960ab94b999519106c1d11d09e9d780d0d978f8f40c6a77980c63ab",
+    "datasets": [
+      {
+        "rawText": "G/L Account Line Items (FAGLL03) | SIMULATED | BUKRS 1000 | WERKS 1100 | TT99 | Signs: SHKZG/DRCRK or report contract\n\nRLDNR\tRBUKRS\tGJAHR\tBELNR\tDOCLN\tBUDAT\tPOPER\tTCODE\tRACCT\tDRCRK\tHSL\tRHCUR\tMATNR\tWERKS\tKDAUF\tKDPOS\tKUNNR\tPRCTR\tKOSTL\n0L\t1000\t2026\t4930000001\t000001\t2026-09-15\t009\tMIGO 261E\t621\tS\t8593087\tVND\tPL-SEVT-CAM08\t1100\tSO-PIC-2026-49281\t000010\tSamsung Electronics Vietnam (SEVT)\tPC-MTO\tWC-INJ-01\n0L\t1000\t2026\t4930000001\t000002\t2026-09-15\t009\tMIGO 261E\t152\tH\t-8593087\tVND\tPL-SEVT-CAM08\t1100\tSO-PIC-2026-49281\t000010\tSamsung Electronics Vietnam (SEVT)\tPC-MTO\tWC-INJ-01\n0L\t1000\t2026\t4930000002\t000001\t2026-09-15\t009\tCO11N\t622\tS\t14863738\tVND\tPL-SEVT-CAM08\t1100\tSO-PIC-2026-49281\t000010\tSamsung Electronics Vietnam (SEVT)\tPC-MTO\tWC-INJ-01\n0L\t1000\t2026\t4930000002\t000002\t2026-09-15\t009\tCO11N\t334\tH\t-14863738\tVND\tPL-SEVT-CAM08\t1100\tSO-PIC-2026-49281\t000010\tSamsung Electronics Vietnam (SEVT)\tPC-MTO\tWC-INJ-01\n0L\t1000\t2026\t4930000003\t000001\t2026-09-15\t009\tCO11N\t627\tS\t27030566\tVND\tPL-SEVT-CAM08\t1100\tSO-PIC-2026-49281\t000010\tSamsung Electronics Vietnam (SEVT)\tPC-MTO\tWC-INJ-01\n0L\t1000\t2026\t4930000003\t000002\t2026-09-15\t009\tCO11N\t214\tH\t-27030566\tVND\tPL-SEVT-CAM08\t1100\tSO-PIC-2026-49281\t000010\tSamsung Electronics Vietnam (SEVT)\tPC-MTO\tWC-INJ-01\n0L\t1000\t2026\t4930000004\t000001\t2026-09-15\t009\tCO01\t154\tS\t8593087\tVND\tPL-SEVT-CAM08\t1100\tSO-PIC-2026-49281\t000010\tSamsung Electronics Vietnam (SEVT)\tPC-MTO\tWC-INJ-01\n0L\t1000\t2026\t4930000004\t000002\t2026-09-15\t009\tCO01\t621\tH\t-8593087\tVND\tPL-SEVT-CAM08\t1100\tSO-PIC-2026-49281\t000010\tSamsung Electronics Vietnam (SEVT)\tPC-MTO\tWC-INJ-01\n0L\t1000\t2026\t4930000005\t000001\t2026-09-15\t009\tCO01\t154\tS\t14863738\tVND\tPL-SEVT-CAM08\t1100\tSO-PIC-2026-49281\t000010\tSamsung Electronics Vietnam (SEVT)\tPC-MTO\tWC-INJ-01\n0L\t1000\t2026\t4930000005\t000002\t2026-09-15\t009\tCO01\t622\tH\t-14863738\tVND\tPL-SEVT-CAM08\t1100\tSO-PIC-2026-49281\t000010\tSamsung Electronics Vietnam (SEVT)\tPC-MTO\tWC-INJ-01\n0L\t1000\t2026\t4930000006\t000001\t2026-09-15\t009\tCO01\t154\tS\t27030566\tVND\tPL-SEVT-CAM08\t1100\tSO-PIC-2026-49281\t000010\tSamsung Electronics Vietnam (SEVT)\tPC-MTO\tWC-INJ-01\n0L\t1000\t2026\t4930000006\t000002\t2026-09-15\t009\tCO01\t627\tH\t-27030566\tVND\tPL-SEVT-CAM08\t1100\tSO-PIC-2026-49281\t000010\tSamsung Electronics Vietnam (SEVT)\tPC-MTO\tWC-INJ-01\n0L\t1000\t2026\t4960000001\t000001\t2026-09-15\t009\tVF01\t131\tS\t210000000\tVND\tPL-SEVT-CAM08\t1100\tSO-PIC-2026-49281\t000010\tSamsung Electronics Vietnam (SEVT)\tPC-MTO\tWC-INJ-01\n0L\t1000\t2026\t4960000001\t000002\t2026-09-15\t009\tVF01\t511\tH\t-210000000\tVND\tPL-SEVT-CAM08\t1100\tSO-PIC-2026-49281\t000010\tSamsung Electronics Vietnam (SEVT)\tPC-MTO\tWC-INJ-01\n0L\t1000\t2026\t4960000002\t000001\t2026-09-15\t009\tVF01\t131\tS\t21000000\tVND\tPL-SEVT-CAM08\t1100\tSO-PIC-2026-49281\t000010\tSamsung Electronics Vietnam (SEVT)\tPC-MTO\tWC-INJ-01\n0L\t1000\t2026\t4960000002\t000002\t2026-09-15\t009\tVF01\t3331\tH\t-21000000\tVND\tPL-SEVT-CAM08\t1100\tSO-PIC-2026-49281\t000010\tSamsung Electronics Vietnam (SEVT)\tPC-MTO\tWC-INJ-01\n0L\t1000\t2026\t4970000001\t000001\t2026-09-15\t009\tVA88 / KKA2\t632\tS\t50487391\tVND\tPL-SEVT-CAM08\t1100\tSO-PIC-2026-49281\t000010\tSamsung Electronics Vietnam (SEVT)\tPC-MTO\tWC-INJ-01\n0L\t1000\t2026\t4970000001\t000002\t2026-09-15\t009\tVA88 / KKA2\t154\tH\t-50487391\tVND\tPL-SEVT-CAM08\t1100\tSO-PIC-2026-49281\t000010\tSamsung Electronics Vietnam (SEVT)\tPC-MTO\tWC-INJ-01\n0L\t1000\t2026\t4970000002\t000001\t2026-09-15\t009\tVA88\t511\tS\t210000000\tVND\tPL-SEVT-CAM08\t1100\tSO-PIC-2026-49281\t000010\tSamsung Electronics Vietnam (SEVT)\tPC-MTO\tWC-INJ-01\n0L\t1000\t2026\t4970000002\t000002\t2026-09-15\t009\tVA88\t911\tH\t-210000000\tVND\tPL-SEVT-CAM08\t1100\tSO-PIC-2026-49281\t000010\tSamsung Electronics Vietnam (SEVT)\tPC-MTO\tWC-INJ-01\n0L\t1000\t2026\t4970000003\t000001\t2026-09-15\t009\tVA88\t911\tS\t50487391\tVND\tPL-SEVT-CAM08\t1100\tSO-PIC-2026-49281\t000010\tSamsung Electronics Vietnam (SEVT)\tPC-MTO\tWC-INJ-01\n0L\t1000\t2026\t4970000003\t000002\t2026-09-15\t009\tVA88\t632\tH\t-50487391\tVND\tPL-SEVT-CAM08\t1100\tSO-PIC-2026-49281\t000010\tSamsung Electronics Vietnam (SEVT)\tPC-MTO\tWC-INJ-01\n",
+        "rawManifest": {
+          "reportId": "FAGLL03",
+          "schemaVersion": "sim-report-v1",
+          "generatorVersion": "s2-pack-1.0.0",
+          "selection": {
+            "postingDate": "2026-09-15",
+            "scope": "provided-scenario-snapshot",
+            "material": "PL-SEVT-CAM08",
+            "stockType": "Non-valuated",
+            "deliveredQuantity": 5000
+          },
+          "fileName": "FAGLL03_SIMULATED.txt",
+          "sha256": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+          "bytes": 3924,
+          "rowCount": 22,
+          "sourceLineCount": 22,
+          "totals": {
+            "HSL": 0
+          },
+          "config": {
+            "companyCode": "1000",
+            "plant": "1100",
+            "ledger": "0L",
+            "standard": "TT99",
+            "label": "SIMULATED"
+          },
+          "sourceHash": "6fb11bcf8960ab94b999519106c1d11d09e9d780d0d978f8f40c6a77980c63ab",
+          "runId": "SIM-6fb11bcf8960ab94",
+          "adapterVersion": null,
+          "phase": "GENERATED_RAW",
+          "controls": "technical-pass",
+          "legalApproval": "pending"
+        },
+        "clean": {
+          "reportId": "FAGLL03",
+          "schemaVersion": "sava-clean-v1",
+          "adapterVersion": "1.0.0",
+          "sourceHash": "6fb11bcf8960ab94b999519106c1d11d09e9d780d0d978f8f40c6a77980c63ab",
+          "runId": "SIM-6fb11bcf8960ab94",
+          "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+          "rows": [
+            {
+              "values": {
+                "ledger": "0L",
+                "company_code": "1000",
+                "fiscal_year": "2026",
+                "accounting_document": "4930000001",
+                "line_item": "000001",
+                "posting_date": "2026-09-15",
+                "fiscal_period": "009",
+                "transaction": "MIGO 261E",
+                "gl_account": "621",
+                "debit_credit": "S",
+                "amount_lc": 8593087,
+                "local_currency": "VND",
+                "material": "PL-SEVT-CAM08",
+                "plant": "1100",
+                "sales_order": "SO-PIC-2026-49281",
+                "sales_order_item": "000010",
+                "customer": "Samsung Electronics Vietnam (SEVT)",
+                "profit_center": "PC-MTO",
+                "cost_center": "WC-INJ-01"
+              },
+              "lineage": {
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 4
+              }
+            },
+            {
+              "values": {
+                "ledger": "0L",
+                "company_code": "1000",
+                "fiscal_year": "2026",
+                "accounting_document": "4930000001",
+                "line_item": "000002",
+                "posting_date": "2026-09-15",
+                "fiscal_period": "009",
+                "transaction": "MIGO 261E",
+                "gl_account": "152",
+                "debit_credit": "H",
+                "amount_lc": -8593087,
+                "local_currency": "VND",
+                "material": "PL-SEVT-CAM08",
+                "plant": "1100",
+                "sales_order": "SO-PIC-2026-49281",
+                "sales_order_item": "000010",
+                "customer": "Samsung Electronics Vietnam (SEVT)",
+                "profit_center": "PC-MTO",
+                "cost_center": "WC-INJ-01"
+              },
+              "lineage": {
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 5
+              }
+            },
+            {
+              "values": {
+                "ledger": "0L",
+                "company_code": "1000",
+                "fiscal_year": "2026",
+                "accounting_document": "4930000002",
+                "line_item": "000001",
+                "posting_date": "2026-09-15",
+                "fiscal_period": "009",
+                "transaction": "CO11N",
+                "gl_account": "622",
+                "debit_credit": "S",
+                "amount_lc": 14863738,
+                "local_currency": "VND",
+                "material": "PL-SEVT-CAM08",
+                "plant": "1100",
+                "sales_order": "SO-PIC-2026-49281",
+                "sales_order_item": "000010",
+                "customer": "Samsung Electronics Vietnam (SEVT)",
+                "profit_center": "PC-MTO",
+                "cost_center": "WC-INJ-01"
+              },
+              "lineage": {
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 6
+              }
+            },
+            {
+              "values": {
+                "ledger": "0L",
+                "company_code": "1000",
+                "fiscal_year": "2026",
+                "accounting_document": "4930000002",
+                "line_item": "000002",
+                "posting_date": "2026-09-15",
+                "fiscal_period": "009",
+                "transaction": "CO11N",
+                "gl_account": "334",
+                "debit_credit": "H",
+                "amount_lc": -14863738,
+                "local_currency": "VND",
+                "material": "PL-SEVT-CAM08",
+                "plant": "1100",
+                "sales_order": "SO-PIC-2026-49281",
+                "sales_order_item": "000010",
+                "customer": "Samsung Electronics Vietnam (SEVT)",
+                "profit_center": "PC-MTO",
+                "cost_center": "WC-INJ-01"
+              },
+              "lineage": {
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 7
+              }
+            },
+            {
+              "values": {
+                "ledger": "0L",
+                "company_code": "1000",
+                "fiscal_year": "2026",
+                "accounting_document": "4930000003",
+                "line_item": "000001",
+                "posting_date": "2026-09-15",
+                "fiscal_period": "009",
+                "transaction": "CO11N",
+                "gl_account": "627",
+                "debit_credit": "S",
+                "amount_lc": 27030566,
+                "local_currency": "VND",
+                "material": "PL-SEVT-CAM08",
+                "plant": "1100",
+                "sales_order": "SO-PIC-2026-49281",
+                "sales_order_item": "000010",
+                "customer": "Samsung Electronics Vietnam (SEVT)",
+                "profit_center": "PC-MTO",
+                "cost_center": "WC-INJ-01"
+              },
+              "lineage": {
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 8
+              }
+            },
+            {
+              "values": {
+                "ledger": "0L",
+                "company_code": "1000",
+                "fiscal_year": "2026",
+                "accounting_document": "4930000003",
+                "line_item": "000002",
+                "posting_date": "2026-09-15",
+                "fiscal_period": "009",
+                "transaction": "CO11N",
+                "gl_account": "214",
+                "debit_credit": "H",
+                "amount_lc": -27030566,
+                "local_currency": "VND",
+                "material": "PL-SEVT-CAM08",
+                "plant": "1100",
+                "sales_order": "SO-PIC-2026-49281",
+                "sales_order_item": "000010",
+                "customer": "Samsung Electronics Vietnam (SEVT)",
+                "profit_center": "PC-MTO",
+                "cost_center": "WC-INJ-01"
+              },
+              "lineage": {
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 9
+              }
+            },
+            {
+              "values": {
+                "ledger": "0L",
+                "company_code": "1000",
+                "fiscal_year": "2026",
+                "accounting_document": "4930000004",
+                "line_item": "000001",
+                "posting_date": "2026-09-15",
+                "fiscal_period": "009",
+                "transaction": "CO01",
+                "gl_account": "154",
+                "debit_credit": "S",
+                "amount_lc": 8593087,
+                "local_currency": "VND",
+                "material": "PL-SEVT-CAM08",
+                "plant": "1100",
+                "sales_order": "SO-PIC-2026-49281",
+                "sales_order_item": "000010",
+                "customer": "Samsung Electronics Vietnam (SEVT)",
+                "profit_center": "PC-MTO",
+                "cost_center": "WC-INJ-01"
+              },
+              "lineage": {
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 10
+              }
+            },
+            {
+              "values": {
+                "ledger": "0L",
+                "company_code": "1000",
+                "fiscal_year": "2026",
+                "accounting_document": "4930000004",
+                "line_item": "000002",
+                "posting_date": "2026-09-15",
+                "fiscal_period": "009",
+                "transaction": "CO01",
+                "gl_account": "621",
+                "debit_credit": "H",
+                "amount_lc": -8593087,
+                "local_currency": "VND",
+                "material": "PL-SEVT-CAM08",
+                "plant": "1100",
+                "sales_order": "SO-PIC-2026-49281",
+                "sales_order_item": "000010",
+                "customer": "Samsung Electronics Vietnam (SEVT)",
+                "profit_center": "PC-MTO",
+                "cost_center": "WC-INJ-01"
+              },
+              "lineage": {
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 11
+              }
+            },
+            {
+              "values": {
+                "ledger": "0L",
+                "company_code": "1000",
+                "fiscal_year": "2026",
+                "accounting_document": "4930000005",
+                "line_item": "000001",
+                "posting_date": "2026-09-15",
+                "fiscal_period": "009",
+                "transaction": "CO01",
+                "gl_account": "154",
+                "debit_credit": "S",
+                "amount_lc": 14863738,
+                "local_currency": "VND",
+                "material": "PL-SEVT-CAM08",
+                "plant": "1100",
+                "sales_order": "SO-PIC-2026-49281",
+                "sales_order_item": "000010",
+                "customer": "Samsung Electronics Vietnam (SEVT)",
+                "profit_center": "PC-MTO",
+                "cost_center": "WC-INJ-01"
+              },
+              "lineage": {
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 12
+              }
+            },
+            {
+              "values": {
+                "ledger": "0L",
+                "company_code": "1000",
+                "fiscal_year": "2026",
+                "accounting_document": "4930000005",
+                "line_item": "000002",
+                "posting_date": "2026-09-15",
+                "fiscal_period": "009",
+                "transaction": "CO01",
+                "gl_account": "622",
+                "debit_credit": "H",
+                "amount_lc": -14863738,
+                "local_currency": "VND",
+                "material": "PL-SEVT-CAM08",
+                "plant": "1100",
+                "sales_order": "SO-PIC-2026-49281",
+                "sales_order_item": "000010",
+                "customer": "Samsung Electronics Vietnam (SEVT)",
+                "profit_center": "PC-MTO",
+                "cost_center": "WC-INJ-01"
+              },
+              "lineage": {
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 13
+              }
+            },
+            {
+              "values": {
+                "ledger": "0L",
+                "company_code": "1000",
+                "fiscal_year": "2026",
+                "accounting_document": "4930000006",
+                "line_item": "000001",
+                "posting_date": "2026-09-15",
+                "fiscal_period": "009",
+                "transaction": "CO01",
+                "gl_account": "154",
+                "debit_credit": "S",
+                "amount_lc": 27030566,
+                "local_currency": "VND",
+                "material": "PL-SEVT-CAM08",
+                "plant": "1100",
+                "sales_order": "SO-PIC-2026-49281",
+                "sales_order_item": "000010",
+                "customer": "Samsung Electronics Vietnam (SEVT)",
+                "profit_center": "PC-MTO",
+                "cost_center": "WC-INJ-01"
+              },
+              "lineage": {
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 14
+              }
+            },
+            {
+              "values": {
+                "ledger": "0L",
+                "company_code": "1000",
+                "fiscal_year": "2026",
+                "accounting_document": "4930000006",
+                "line_item": "000002",
+                "posting_date": "2026-09-15",
+                "fiscal_period": "009",
+                "transaction": "CO01",
+                "gl_account": "627",
+                "debit_credit": "H",
+                "amount_lc": -27030566,
+                "local_currency": "VND",
+                "material": "PL-SEVT-CAM08",
+                "plant": "1100",
+                "sales_order": "SO-PIC-2026-49281",
+                "sales_order_item": "000010",
+                "customer": "Samsung Electronics Vietnam (SEVT)",
+                "profit_center": "PC-MTO",
+                "cost_center": "WC-INJ-01"
+              },
+              "lineage": {
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 15
+              }
+            },
+            {
+              "values": {
+                "ledger": "0L",
+                "company_code": "1000",
+                "fiscal_year": "2026",
+                "accounting_document": "4960000001",
+                "line_item": "000001",
+                "posting_date": "2026-09-15",
+                "fiscal_period": "009",
+                "transaction": "VF01",
+                "gl_account": "131",
+                "debit_credit": "S",
+                "amount_lc": 210000000,
+                "local_currency": "VND",
+                "material": "PL-SEVT-CAM08",
+                "plant": "1100",
+                "sales_order": "SO-PIC-2026-49281",
+                "sales_order_item": "000010",
+                "customer": "Samsung Electronics Vietnam (SEVT)",
+                "profit_center": "PC-MTO",
+                "cost_center": "WC-INJ-01"
+              },
+              "lineage": {
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 16
+              }
+            },
+            {
+              "values": {
+                "ledger": "0L",
+                "company_code": "1000",
+                "fiscal_year": "2026",
+                "accounting_document": "4960000001",
+                "line_item": "000002",
+                "posting_date": "2026-09-15",
+                "fiscal_period": "009",
+                "transaction": "VF01",
+                "gl_account": "511",
+                "debit_credit": "H",
+                "amount_lc": -210000000,
+                "local_currency": "VND",
+                "material": "PL-SEVT-CAM08",
+                "plant": "1100",
+                "sales_order": "SO-PIC-2026-49281",
+                "sales_order_item": "000010",
+                "customer": "Samsung Electronics Vietnam (SEVT)",
+                "profit_center": "PC-MTO",
+                "cost_center": "WC-INJ-01"
+              },
+              "lineage": {
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 17
+              }
+            },
+            {
+              "values": {
+                "ledger": "0L",
+                "company_code": "1000",
+                "fiscal_year": "2026",
+                "accounting_document": "4960000002",
+                "line_item": "000001",
+                "posting_date": "2026-09-15",
+                "fiscal_period": "009",
+                "transaction": "VF01",
+                "gl_account": "131",
+                "debit_credit": "S",
+                "amount_lc": 21000000,
+                "local_currency": "VND",
+                "material": "PL-SEVT-CAM08",
+                "plant": "1100",
+                "sales_order": "SO-PIC-2026-49281",
+                "sales_order_item": "000010",
+                "customer": "Samsung Electronics Vietnam (SEVT)",
+                "profit_center": "PC-MTO",
+                "cost_center": "WC-INJ-01"
+              },
+              "lineage": {
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 18
+              }
+            },
+            {
+              "values": {
+                "ledger": "0L",
+                "company_code": "1000",
+                "fiscal_year": "2026",
+                "accounting_document": "4960000002",
+                "line_item": "000002",
+                "posting_date": "2026-09-15",
+                "fiscal_period": "009",
+                "transaction": "VF01",
+                "gl_account": "3331",
+                "debit_credit": "H",
+                "amount_lc": -21000000,
+                "local_currency": "VND",
+                "material": "PL-SEVT-CAM08",
+                "plant": "1100",
+                "sales_order": "SO-PIC-2026-49281",
+                "sales_order_item": "000010",
+                "customer": "Samsung Electronics Vietnam (SEVT)",
+                "profit_center": "PC-MTO",
+                "cost_center": "WC-INJ-01"
+              },
+              "lineage": {
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 19
+              }
+            },
+            {
+              "values": {
+                "ledger": "0L",
+                "company_code": "1000",
+                "fiscal_year": "2026",
+                "accounting_document": "4970000001",
+                "line_item": "000001",
+                "posting_date": "2026-09-15",
+                "fiscal_period": "009",
+                "transaction": "VA88 / KKA2",
+                "gl_account": "632",
+                "debit_credit": "S",
+                "amount_lc": 50487391,
+                "local_currency": "VND",
+                "material": "PL-SEVT-CAM08",
+                "plant": "1100",
+                "sales_order": "SO-PIC-2026-49281",
+                "sales_order_item": "000010",
+                "customer": "Samsung Electronics Vietnam (SEVT)",
+                "profit_center": "PC-MTO",
+                "cost_center": "WC-INJ-01"
+              },
+              "lineage": {
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 20
+              }
+            },
+            {
+              "values": {
+                "ledger": "0L",
+                "company_code": "1000",
+                "fiscal_year": "2026",
+                "accounting_document": "4970000001",
+                "line_item": "000002",
+                "posting_date": "2026-09-15",
+                "fiscal_period": "009",
+                "transaction": "VA88 / KKA2",
+                "gl_account": "154",
+                "debit_credit": "H",
+                "amount_lc": -50487391,
+                "local_currency": "VND",
+                "material": "PL-SEVT-CAM08",
+                "plant": "1100",
+                "sales_order": "SO-PIC-2026-49281",
+                "sales_order_item": "000010",
+                "customer": "Samsung Electronics Vietnam (SEVT)",
+                "profit_center": "PC-MTO",
+                "cost_center": "WC-INJ-01"
+              },
+              "lineage": {
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 21
+              }
+            },
+            {
+              "values": {
+                "ledger": "0L",
+                "company_code": "1000",
+                "fiscal_year": "2026",
+                "accounting_document": "4970000002",
+                "line_item": "000001",
+                "posting_date": "2026-09-15",
+                "fiscal_period": "009",
+                "transaction": "VA88",
+                "gl_account": "511",
+                "debit_credit": "S",
+                "amount_lc": 210000000,
+                "local_currency": "VND",
+                "material": "PL-SEVT-CAM08",
+                "plant": "1100",
+                "sales_order": "SO-PIC-2026-49281",
+                "sales_order_item": "000010",
+                "customer": "Samsung Electronics Vietnam (SEVT)",
+                "profit_center": "PC-MTO",
+                "cost_center": "WC-INJ-01"
+              },
+              "lineage": {
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 22
+              }
+            },
+            {
+              "values": {
+                "ledger": "0L",
+                "company_code": "1000",
+                "fiscal_year": "2026",
+                "accounting_document": "4970000002",
+                "line_item": "000002",
+                "posting_date": "2026-09-15",
+                "fiscal_period": "009",
+                "transaction": "VA88",
+                "gl_account": "911",
+                "debit_credit": "H",
+                "amount_lc": -210000000,
+                "local_currency": "VND",
+                "material": "PL-SEVT-CAM08",
+                "plant": "1100",
+                "sales_order": "SO-PIC-2026-49281",
+                "sales_order_item": "000010",
+                "customer": "Samsung Electronics Vietnam (SEVT)",
+                "profit_center": "PC-MTO",
+                "cost_center": "WC-INJ-01"
+              },
+              "lineage": {
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 23
+              }
+            },
+            {
+              "values": {
+                "ledger": "0L",
+                "company_code": "1000",
+                "fiscal_year": "2026",
+                "accounting_document": "4970000003",
+                "line_item": "000001",
+                "posting_date": "2026-09-15",
+                "fiscal_period": "009",
+                "transaction": "VA88",
+                "gl_account": "911",
+                "debit_credit": "S",
+                "amount_lc": 50487391,
+                "local_currency": "VND",
+                "material": "PL-SEVT-CAM08",
+                "plant": "1100",
+                "sales_order": "SO-PIC-2026-49281",
+                "sales_order_item": "000010",
+                "customer": "Samsung Electronics Vietnam (SEVT)",
+                "profit_center": "PC-MTO",
+                "cost_center": "WC-INJ-01"
+              },
+              "lineage": {
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 24
+              }
+            },
+            {
+              "values": {
+                "ledger": "0L",
+                "company_code": "1000",
+                "fiscal_year": "2026",
+                "accounting_document": "4970000003",
+                "line_item": "000002",
+                "posting_date": "2026-09-15",
+                "fiscal_period": "009",
+                "transaction": "VA88",
+                "gl_account": "632",
+                "debit_credit": "H",
+                "amount_lc": -50487391,
+                "local_currency": "VND",
+                "material": "PL-SEVT-CAM08",
+                "plant": "1100",
+                "sales_order": "SO-PIC-2026-49281",
+                "sales_order_item": "000010",
+                "customer": "Samsung Electronics Vietnam (SEVT)",
+                "profit_center": "PC-MTO",
+                "cost_center": "WC-INJ-01"
+              },
+              "lineage": {
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 25
+              }
+            }
+          ]
+        }
+      },
+      {
+        "rawText": "MB51 — SIMULATED layout | SIMULATED | BUKRS 1000 | WERKS 1100 | TT99 | Signs: SHKZG/DRCRK or report contract\n\nMJAHR\tMBLNR\tZEILE\tBUDAT\tBWART\tMATNR\tWERKS\tMENGE\tMEINS\tDMBTR\tWAERS\tSHKZG\tAUFNR\tKDAUF\tZSIM_FI_BELNR\n2026\t5030000001\t0001\t2026-09-15\t261\tROH-H-T-NH-A-P\t1100\t119.35\tKG\t8593087\tVND\tH\t1000001\tSO-PIC-2026-49281\t4930000001\n2026\t5030000002\t0001\t2026-09-15\t101\tPL-SEVT-CAM08\t1100\t5000\tPC\t0\tVND\tS\t1000001\tSO-PIC-2026-49281\t\n2026\t5050000001\t0001\t2026-09-15\t601\tPL-SEVT-CAM08\t1100\t5000\tPC\t0\tVND\tH\t1000001\tSO-PIC-2026-49281\t\n",
+        "rawManifest": {
+          "reportId": "MB51",
+          "schemaVersion": "sim-report-v1",
+          "generatorVersion": "s2-pack-1.0.0",
+          "selection": {
+            "postingDate": "2026-09-15",
+            "scope": "provided-scenario-snapshot",
+            "material": "PL-SEVT-CAM08",
+            "stockType": "Non-valuated",
+            "deliveredQuantity": 5000
+          },
+          "fileName": "MB51_SIMULATED.txt",
+          "sha256": "784aec1eebfdfd94ee031aa193ed81245a7eb42da0e4686adbf8be2a88ddc02e",
+          "bytes": 523,
+          "rowCount": 3,
+          "sourceLineCount": 22,
+          "totals": {
+            "DMBTR": 8593087
+          },
+          "config": {
+            "companyCode": "1000",
+            "plant": "1100",
+            "ledger": "0L",
+            "standard": "TT99",
+            "label": "SIMULATED"
+          },
+          "sourceHash": "6fb11bcf8960ab94b999519106c1d11d09e9d780d0d978f8f40c6a77980c63ab",
+          "runId": "SIM-6fb11bcf8960ab94",
+          "adapterVersion": null,
+          "phase": "GENERATED_RAW",
+          "controls": "technical-pass",
+          "legalApproval": "pending"
+        },
+        "clean": {
+          "reportId": "MB51",
+          "schemaVersion": "sava-clean-v1",
+          "adapterVersion": "1.0.0",
+          "sourceHash": "6fb11bcf8960ab94b999519106c1d11d09e9d780d0d978f8f40c6a77980c63ab",
+          "runId": "SIM-6fb11bcf8960ab94",
+          "rawHash": "784aec1eebfdfd94ee031aa193ed81245a7eb42da0e4686adbf8be2a88ddc02e",
+          "rows": [
+            {
+              "values": {
+                "fiscal_year": "2026",
+                "material_document": "5030000001",
+                "material_document_item": "0001",
+                "posting_date": "2026-09-15",
+                "movement_type": "261",
+                "material": "ROH-H-T-NH-A-P",
+                "plant": "1100",
+                "quantity": 119.35,
+                "base_uom": "KG",
+                "amount_lc": 8593087,
+                "local_currency": "VND",
+                "debit_credit": "H",
+                "production_order": "1000001",
+                "sales_order": "SO-PIC-2026-49281",
+                "fi_document": "4930000001",
+                "signed_quantity": -119.35,
+                "signed_amount_lc": -8593087
+              },
+              "lineage": {
+                "rawHash": "784aec1eebfdfd94ee031aa193ed81245a7eb42da0e4686adbf8be2a88ddc02e",
+                "rawLine": 4
+              }
+            },
+            {
+              "values": {
+                "fiscal_year": "2026",
+                "material_document": "5030000002",
+                "material_document_item": "0001",
+                "posting_date": "2026-09-15",
+                "movement_type": "101",
+                "material": "PL-SEVT-CAM08",
+                "plant": "1100",
+                "quantity": 5000,
+                "base_uom": "PC",
+                "amount_lc": 0,
+                "local_currency": "VND",
+                "debit_credit": "S",
+                "production_order": "1000001",
+                "sales_order": "SO-PIC-2026-49281",
+                "fi_document": null,
+                "signed_quantity": 5000,
+                "signed_amount_lc": 0
+              },
+              "lineage": {
+                "rawHash": "784aec1eebfdfd94ee031aa193ed81245a7eb42da0e4686adbf8be2a88ddc02e",
+                "rawLine": 5
+              }
+            },
+            {
+              "values": {
+                "fiscal_year": "2026",
+                "material_document": "5050000001",
+                "material_document_item": "0001",
+                "posting_date": "2026-09-15",
+                "movement_type": "601",
+                "material": "PL-SEVT-CAM08",
+                "plant": "1100",
+                "quantity": 5000,
+                "base_uom": "PC",
+                "amount_lc": 0,
+                "local_currency": "VND",
+                "debit_credit": "H",
+                "production_order": "1000001",
+                "sales_order": "SO-PIC-2026-49281",
+                "fi_document": null,
+                "signed_quantity": -5000,
+                "signed_amount_lc": 0
+              },
+              "lineage": {
+                "rawHash": "784aec1eebfdfd94ee031aa193ed81245a7eb42da0e4686adbf8be2a88ddc02e",
+                "rawLine": 6
+              }
+            }
+          ]
+        }
+      },
+      {
+        "rawText": "COOIS_HEADER — SIMULATED layout | SIMULATED | BUKRS 1000 | WERKS 1100 | TT99 | Signs: SHKZG/DRCRK or report contract\n\nAUFNR\tMATNR\tWERKS\tGAMNG\tWEMNG\tGMEIN\tKDAUF\tKDPOS\n1000001\tPL-SEVT-CAM08\t1100\t5000\t5000\tPC\tSO-PIC-2026-49281\t000010\n",
+        "rawManifest": {
+          "reportId": "COOIS_HEADER",
+          "schemaVersion": "sim-report-v1",
+          "generatorVersion": "s2-pack-1.0.0",
+          "selection": {
+            "postingDate": "2026-09-15",
+            "scope": "provided-scenario-snapshot",
+            "material": "PL-SEVT-CAM08",
+            "stockType": "Non-valuated",
+            "deliveredQuantity": 5000
+          },
+          "fileName": "COOIS_HEADER_SIMULATED.txt",
+          "sha256": "ecbb728541729f731bab37ae24ebcd8fe2a8133ad210ad43c52d5d45b96bb878",
+          "bytes": 233,
+          "rowCount": 1,
+          "sourceLineCount": 22,
+          "totals": {},
+          "config": {
+            "companyCode": "1000",
+            "plant": "1100",
+            "ledger": "0L",
+            "standard": "TT99",
+            "label": "SIMULATED"
+          },
+          "sourceHash": "6fb11bcf8960ab94b999519106c1d11d09e9d780d0d978f8f40c6a77980c63ab",
+          "runId": "SIM-6fb11bcf8960ab94",
+          "adapterVersion": null,
+          "phase": "GENERATED_RAW",
+          "controls": "technical-pass",
+          "legalApproval": "pending"
+        },
+        "clean": {
+          "reportId": "COOIS_HEADER",
+          "schemaVersion": "sava-clean-v1",
+          "adapterVersion": "1.0.0",
+          "sourceHash": "6fb11bcf8960ab94b999519106c1d11d09e9d780d0d978f8f40c6a77980c63ab",
+          "runId": "SIM-6fb11bcf8960ab94",
+          "rawHash": "ecbb728541729f731bab37ae24ebcd8fe2a8133ad210ad43c52d5d45b96bb878",
+          "rows": [
+            {
+              "values": {
+                "production_order": "1000001",
+                "material": "PL-SEVT-CAM08",
+                "plant": "1100",
+                "planned_quantity": 5000,
+                "delivered_quantity": 5000,
+                "base_uom": "PC",
+                "sales_order": "SO-PIC-2026-49281",
+                "sales_order_item": "000010"
+              },
+              "lineage": {
+                "rawHash": "ecbb728541729f731bab37ae24ebcd8fe2a8133ad210ad43c52d5d45b96bb878",
+                "rawLine": 4
+              }
+            }
+          ]
+        }
+      },
+      {
+        "rawText": "COOIS_COMPONENTS — SIMULATED layout | SIMULATED | BUKRS 1000 | WERKS 1100 | TT99 | Signs: SHKZG/DRCRK or report contract\n\nAUFNR\tRSPOS\tMATNR\tBDMNG\tENMNG\tMEINS\tZSIM_PLAN_VALUE\tZSIM_ACTUAL_VALUE\n1000001\t0001\tROH-H-T-NH-A-P\t115.31\t119.35\tKG\t8302500\t8593087\n",
+        "rawManifest": {
+          "reportId": "COOIS_COMPONENTS",
+          "schemaVersion": "sim-report-v1",
+          "generatorVersion": "s2-pack-1.0.0",
+          "selection": {
+            "postingDate": "2026-09-15",
+            "scope": "provided-scenario-snapshot",
+            "material": "PL-SEVT-CAM08",
+            "stockType": "Non-valuated",
+            "deliveredQuantity": 5000
+          },
+          "fileName": "COOIS_COMPONENTS_SIMULATED.txt",
+          "sha256": "c1ba99efa5ce61895009b7761435f18ea27a0ce68cce0c34420ce10caa93633f",
+          "bytes": 255,
+          "rowCount": 1,
+          "sourceLineCount": 22,
+          "totals": {
+            "ZSIM_ACTUAL_VALUE": 8593087,
+            "ZSIM_PLAN_VALUE": 8302500
+          },
+          "config": {
+            "companyCode": "1000",
+            "plant": "1100",
+            "ledger": "0L",
+            "standard": "TT99",
+            "label": "SIMULATED"
+          },
+          "sourceHash": "6fb11bcf8960ab94b999519106c1d11d09e9d780d0d978f8f40c6a77980c63ab",
+          "runId": "SIM-6fb11bcf8960ab94",
+          "adapterVersion": null,
+          "phase": "GENERATED_RAW",
+          "controls": "technical-pass",
+          "legalApproval": "pending"
+        },
+        "clean": {
+          "reportId": "COOIS_COMPONENTS",
+          "schemaVersion": "sava-clean-v1",
+          "adapterVersion": "1.0.0",
+          "sourceHash": "6fb11bcf8960ab94b999519106c1d11d09e9d780d0d978f8f40c6a77980c63ab",
+          "runId": "SIM-6fb11bcf8960ab94",
+          "rawHash": "c1ba99efa5ce61895009b7761435f18ea27a0ce68cce0c34420ce10caa93633f",
+          "rows": [
+            {
+              "values": {
+                "production_order": "1000001",
+                "reservation_item": "0001",
+                "component_material": "ROH-H-T-NH-A-P",
+                "required_quantity": 115.31,
+                "withdrawn_quantity": 119.35,
+                "base_uom": "KG",
+                "planned_value": 8302500,
+                "actual_value": 8593087
+              },
+              "lineage": {
+                "rawHash": "c1ba99efa5ce61895009b7761435f18ea27a0ce68cce0c34420ce10caa93633f",
+                "rawLine": 4
+              }
+            }
+          ]
+        }
+      },
+      {
+        "rawText": "COOIS_OPERATIONS — SIMULATED layout | SIMULATED | BUKRS 1000 | WERKS 1100 | TT99 | Signs: SHKZG/DRCRK or report contract\n\nAUFNR\tVORNR\tARBPL\tZSIM_SETUP_H\tZSIM_PLAN_MACHINE_H\tZSIM_PLAN_LABOR_H\tZSIM_ACT_MACHINE_H\tZSIM_ACT_LABOR_H\n1000001\t0010\tWC-INJ-01\t1.5\t220.94\t220.94\t228.67\t228.67\n",
+        "rawManifest": {
+          "reportId": "COOIS_OPERATIONS",
+          "schemaVersion": "sim-report-v1",
+          "generatorVersion": "s2-pack-1.0.0",
+          "selection": {
+            "postingDate": "2026-09-15",
+            "scope": "provided-scenario-snapshot",
+            "material": "PL-SEVT-CAM08",
+            "stockType": "Non-valuated",
+            "deliveredQuantity": 5000
+          },
+          "fileName": "COOIS_OPERATIONS_SIMULATED.txt",
+          "sha256": "9bedcb730d2424b6f06a22abe873f538599670404b81d54d3fec20c1900fef99",
+          "bytes": 284,
+          "rowCount": 1,
+          "sourceLineCount": 22,
+          "totals": {},
+          "config": {
+            "companyCode": "1000",
+            "plant": "1100",
+            "ledger": "0L",
+            "standard": "TT99",
+            "label": "SIMULATED"
+          },
+          "sourceHash": "6fb11bcf8960ab94b999519106c1d11d09e9d780d0d978f8f40c6a77980c63ab",
+          "runId": "SIM-6fb11bcf8960ab94",
+          "adapterVersion": null,
+          "phase": "GENERATED_RAW",
+          "controls": "technical-pass",
+          "legalApproval": "pending"
+        },
+        "clean": {
+          "reportId": "COOIS_OPERATIONS",
+          "schemaVersion": "sava-clean-v1",
+          "adapterVersion": "1.0.0",
+          "sourceHash": "6fb11bcf8960ab94b999519106c1d11d09e9d780d0d978f8f40c6a77980c63ab",
+          "runId": "SIM-6fb11bcf8960ab94",
+          "rawHash": "9bedcb730d2424b6f06a22abe873f538599670404b81d54d3fec20c1900fef99",
+          "rows": [
+            {
+              "values": {
+                "production_order": "1000001",
+                "operation": "0010",
+                "work_center": "WC-INJ-01",
+                "setup_hours": 1.5,
+                "planned_machine_hours": 220.94,
+                "planned_labor_hours": 220.94,
+                "actual_machine_hours": 228.67,
+                "actual_labor_hours": 228.67
+              },
+              "lineage": {
+                "rawHash": "9bedcb730d2424b6f06a22abe873f538599670404b81d54d3fec20c1900fef99",
+                "rawLine": 4
+              }
+            }
+          ]
+        }
+      },
+      {
+        "rawText": "COOIS_CONFIRMATIONS — SIMULATED layout | SIMULATED | BUKRS 1000 | WERKS 1100 | TT99 | Signs: SHKZG/DRCRK or report contract\n\nAUFNR\tVORNR\tRUECK\tGMNGA\tZSIM_LABOR_H\tZSIM_MACHINE_H\tZSIM_LABOR_VALUE\tZSIM_OVERHEAD_VALUE\n1000001\t0010\t0000000001\t5000\t228.67\t228.67\t14863738\t27030566\n",
+        "rawManifest": {
+          "reportId": "COOIS_CONFIRMATIONS",
+          "schemaVersion": "sim-report-v1",
+          "generatorVersion": "s2-pack-1.0.0",
+          "selection": {
+            "postingDate": "2026-09-15",
+            "scope": "provided-scenario-snapshot",
+            "material": "PL-SEVT-CAM08",
+            "stockType": "Non-valuated",
+            "deliveredQuantity": 5000
+          },
+          "fileName": "COOIS_CONFIRMATIONS_SIMULATED.txt",
+          "sha256": "a5a8c35e0d8bdeb5be281fd024df20af025497641ba713b4d5e9730354c3ca62",
+          "bytes": 277,
+          "rowCount": 1,
+          "sourceLineCount": 22,
+          "totals": {
+            "ZSIM_LABOR_VALUE": 14863738,
+            "ZSIM_OVERHEAD_VALUE": 27030566
+          },
+          "config": {
+            "companyCode": "1000",
+            "plant": "1100",
+            "ledger": "0L",
+            "standard": "TT99",
+            "label": "SIMULATED"
+          },
+          "sourceHash": "6fb11bcf8960ab94b999519106c1d11d09e9d780d0d978f8f40c6a77980c63ab",
+          "runId": "SIM-6fb11bcf8960ab94",
+          "adapterVersion": null,
+          "phase": "GENERATED_RAW",
+          "controls": "technical-pass",
+          "legalApproval": "pending"
+        },
+        "clean": {
+          "reportId": "COOIS_CONFIRMATIONS",
+          "schemaVersion": "sava-clean-v1",
+          "adapterVersion": "1.0.0",
+          "sourceHash": "6fb11bcf8960ab94b999519106c1d11d09e9d780d0d978f8f40c6a77980c63ab",
+          "runId": "SIM-6fb11bcf8960ab94",
+          "rawHash": "a5a8c35e0d8bdeb5be281fd024df20af025497641ba713b4d5e9730354c3ca62",
+          "rows": [
+            {
+              "values": {
+                "production_order": "1000001",
+                "operation": "0010",
+                "confirmation": "0000000001",
+                "yield_quantity": 5000,
+                "labor_hours": 228.67,
+                "machine_hours": 228.67,
+                "labor_value": 14863738,
+                "overhead_value": 27030566
+              },
+              "lineage": {
+                "rawHash": "a5a8c35e0d8bdeb5be281fd024df20af025497641ba713b4d5e9730354c3ca62",
+                "rawLine": 4
+              }
+            }
+          ]
+        }
+      },
+      {
+        "rawText": "COOIS_GOODS_MOVEMENTS — SIMULATED layout | SIMULATED | BUKRS 1000 | WERKS 1100 | TT99 | Signs: SHKZG/DRCRK or report contract\n\nMJAHR\tMBLNR\tZEILE\tBUDAT\tBWART\tMATNR\tWERKS\tMENGE\tMEINS\tDMBTR\tWAERS\tSHKZG\tAUFNR\tKDAUF\tZSIM_FI_BELNR\n2026\t5030000001\t0001\t2026-09-15\t261\tROH-H-T-NH-A-P\t1100\t119.35\tKG\t8593087\tVND\tH\t1000001\tSO-PIC-2026-49281\t4930000001\n2026\t5030000002\t0001\t2026-09-15\t101\tPL-SEVT-CAM08\t1100\t5000\tPC\t0\tVND\tS\t1000001\tSO-PIC-2026-49281\t\n2026\t5050000001\t0001\t2026-09-15\t601\tPL-SEVT-CAM08\t1100\t5000\tPC\t0\tVND\tH\t1000001\tSO-PIC-2026-49281\t\n",
+        "rawManifest": {
+          "reportId": "COOIS_GOODS_MOVEMENTS",
+          "schemaVersion": "sim-report-v1",
+          "generatorVersion": "s2-pack-1.0.0",
+          "selection": {
+            "postingDate": "2026-09-15",
+            "scope": "provided-scenario-snapshot",
+            "material": "PL-SEVT-CAM08",
+            "stockType": "Non-valuated",
+            "deliveredQuantity": 5000
+          },
+          "fileName": "COOIS_GOODS_MOVEMENTS_SIMULATED.txt",
+          "sha256": "712f28082b1ac22f229adb42bafb66a88a27bb4d7d0e29f694de9278143d52f3",
+          "bytes": 540,
+          "rowCount": 3,
+          "sourceLineCount": 22,
+          "totals": {
+            "DMBTR": 8593087
+          },
+          "config": {
+            "companyCode": "1000",
+            "plant": "1100",
+            "ledger": "0L",
+            "standard": "TT99",
+            "label": "SIMULATED"
+          },
+          "sourceHash": "6fb11bcf8960ab94b999519106c1d11d09e9d780d0d978f8f40c6a77980c63ab",
+          "runId": "SIM-6fb11bcf8960ab94",
+          "adapterVersion": null,
+          "phase": "GENERATED_RAW",
+          "controls": "technical-pass",
+          "legalApproval": "pending"
+        },
+        "clean": {
+          "reportId": "COOIS_GOODS_MOVEMENTS",
+          "schemaVersion": "sava-clean-v1",
+          "adapterVersion": "1.0.0",
+          "sourceHash": "6fb11bcf8960ab94b999519106c1d11d09e9d780d0d978f8f40c6a77980c63ab",
+          "runId": "SIM-6fb11bcf8960ab94",
+          "rawHash": "712f28082b1ac22f229adb42bafb66a88a27bb4d7d0e29f694de9278143d52f3",
+          "rows": [
+            {
+              "values": {
+                "fiscal_year": "2026",
+                "material_document": "5030000001",
+                "material_document_item": "0001",
+                "posting_date": "2026-09-15",
+                "movement_type": "261",
+                "material": "ROH-H-T-NH-A-P",
+                "plant": "1100",
+                "quantity": 119.35,
+                "base_uom": "KG",
+                "amount_lc": 8593087,
+                "local_currency": "VND",
+                "debit_credit": "H",
+                "production_order": "1000001",
+                "sales_order": "SO-PIC-2026-49281",
+                "fi_document": "4930000001",
+                "signed_quantity": -119.35,
+                "signed_amount_lc": -8593087
+              },
+              "lineage": {
+                "rawHash": "712f28082b1ac22f229adb42bafb66a88a27bb4d7d0e29f694de9278143d52f3",
+                "rawLine": 4
+              }
+            },
+            {
+              "values": {
+                "fiscal_year": "2026",
+                "material_document": "5030000002",
+                "material_document_item": "0001",
+                "posting_date": "2026-09-15",
+                "movement_type": "101",
+                "material": "PL-SEVT-CAM08",
+                "plant": "1100",
+                "quantity": 5000,
+                "base_uom": "PC",
+                "amount_lc": 0,
+                "local_currency": "VND",
+                "debit_credit": "S",
+                "production_order": "1000001",
+                "sales_order": "SO-PIC-2026-49281",
+                "fi_document": null,
+                "signed_quantity": 5000,
+                "signed_amount_lc": 0
+              },
+              "lineage": {
+                "rawHash": "712f28082b1ac22f229adb42bafb66a88a27bb4d7d0e29f694de9278143d52f3",
+                "rawLine": 5
+              }
+            },
+            {
+              "values": {
+                "fiscal_year": "2026",
+                "material_document": "5050000001",
+                "material_document_item": "0001",
+                "posting_date": "2026-09-15",
+                "movement_type": "601",
+                "material": "PL-SEVT-CAM08",
+                "plant": "1100",
+                "quantity": 5000,
+                "base_uom": "PC",
+                "amount_lc": 0,
+                "local_currency": "VND",
+                "debit_credit": "H",
+                "production_order": "1000001",
+                "sales_order": "SO-PIC-2026-49281",
+                "fi_document": null,
+                "signed_quantity": -5000,
+                "signed_amount_lc": 0
+              },
+              "lineage": {
+                "rawHash": "712f28082b1ac22f229adb42bafb66a88a27bb4d7d0e29f694de9278143d52f3",
+                "rawLine": 6
+              }
+            }
+          ]
+        }
+      },
+      {
+        "rawText": "KOB1 — SIMULATED layout | SIMULATED | BUKRS 1000 | WERKS 1100 | TT99 | Signs: SHKZG/DRCRK or report contract\n\nAUFNR\tBELNR\tBUZEI\tBUDAT\tKSTAR\tWTG001\tTWAER\tZSIM_SOURCE_LINE\n1000001\t4930000004\t000001\t2026-09-15\t154\t8593087\tVND\tS3-0004-001\n1000001\t4930000005\t000001\t2026-09-15\t154\t14863738\tVND\tS3-0005-001\n1000001\t4930000006\t000001\t2026-09-15\t154\t27030566\tVND\tS3-0006-001\n",
+        "rawManifest": {
+          "reportId": "KOB1",
+          "schemaVersion": "sim-report-v1",
+          "generatorVersion": "s2-pack-1.0.0",
+          "selection": {
+            "postingDate": "2026-09-15",
+            "scope": "provided-scenario-snapshot",
+            "material": "PL-SEVT-CAM08",
+            "stockType": "Non-valuated",
+            "deliveredQuantity": 5000
+          },
+          "fileName": "KOB1_SIMULATED.txt",
+          "sha256": "576da42fb87f3559e30df23762d7111ea5cdbb3ab9d24c8a4fab03ed3febde80",
+          "bytes": 369,
+          "rowCount": 3,
+          "sourceLineCount": 22,
+          "totals": {
+            "WTG001": 50487391
+          },
+          "config": {
+            "companyCode": "1000",
+            "plant": "1100",
+            "ledger": "0L",
+            "standard": "TT99",
+            "label": "SIMULATED"
+          },
+          "sourceHash": "6fb11bcf8960ab94b999519106c1d11d09e9d780d0d978f8f40c6a77980c63ab",
+          "runId": "SIM-6fb11bcf8960ab94",
+          "adapterVersion": null,
+          "phase": "GENERATED_RAW",
+          "controls": "technical-pass",
+          "legalApproval": "pending"
+        },
+        "clean": {
+          "reportId": "KOB1",
+          "schemaVersion": "sava-clean-v1",
+          "adapterVersion": "1.0.0",
+          "sourceHash": "6fb11bcf8960ab94b999519106c1d11d09e9d780d0d978f8f40c6a77980c63ab",
+          "runId": "SIM-6fb11bcf8960ab94",
+          "rawHash": "576da42fb87f3559e30df23762d7111ea5cdbb3ab9d24c8a4fab03ed3febde80",
+          "rows": [
+            {
+              "values": {
+                "production_order": "1000001",
+                "accounting_document": "4930000004",
+                "line_item": "000001",
+                "posting_date": "2026-09-15",
+                "cost_element": "154",
+                "amount_lc": 8593087,
+                "local_currency": "VND",
+                "source_line": "S3-0004-001"
+              },
+              "lineage": {
+                "rawHash": "576da42fb87f3559e30df23762d7111ea5cdbb3ab9d24c8a4fab03ed3febde80",
+                "rawLine": 4
+              }
+            },
+            {
+              "values": {
+                "production_order": "1000001",
+                "accounting_document": "4930000005",
+                "line_item": "000001",
+                "posting_date": "2026-09-15",
+                "cost_element": "154",
+                "amount_lc": 14863738,
+                "local_currency": "VND",
+                "source_line": "S3-0005-001"
+              },
+              "lineage": {
+                "rawHash": "576da42fb87f3559e30df23762d7111ea5cdbb3ab9d24c8a4fab03ed3febde80",
+                "rawLine": 5
+              }
+            },
+            {
+              "values": {
+                "production_order": "1000001",
+                "accounting_document": "4930000006",
+                "line_item": "000001",
+                "posting_date": "2026-09-15",
+                "cost_element": "154",
+                "amount_lc": 27030566,
+                "local_currency": "VND",
+                "source_line": "S3-0006-001"
+              },
+              "lineage": {
+                "rawHash": "576da42fb87f3559e30df23762d7111ea5cdbb3ab9d24c8a4fab03ed3febde80",
+                "rawLine": 6
+              }
+            }
+          ]
+        }
+      },
+      {
+        "rawText": "KKS1 — SIMULATED layout | SIMULATED | BUKRS 1000 | WERKS 1100 | TT99 | Signs: SHKZG/DRCRK or report contract\n\nAUFNR\tZSIM_PLAN\tZSIM_ACTUAL\tZSIM_VARIANCE\tZSIM_SETTLED\tZSIM_WIP\tWAERS\n1000001\t48780088\t50487391\t1707303\t50487391\t0\tVND\n",
+        "rawManifest": {
+          "reportId": "KKS1",
+          "schemaVersion": "sim-report-v1",
+          "generatorVersion": "s2-pack-1.0.0",
+          "selection": {
+            "postingDate": "2026-09-15",
+            "scope": "provided-scenario-snapshot",
+            "material": "PL-SEVT-CAM08",
+            "stockType": "Non-valuated",
+            "deliveredQuantity": 5000
+          },
+          "fileName": "KKS1_SIMULATED.txt",
+          "sha256": "bed9d164805026ce21d8f02752310a83dea9156e8c29fe1f4a669e0b8f6c5515",
+          "bytes": 231,
+          "rowCount": 1,
+          "sourceLineCount": 22,
+          "totals": {
+            "ZSIM_PLAN": 48780088,
+            "ZSIM_ACTUAL": 50487391,
+            "ZSIM_VARIANCE": 1707303,
+            "ZSIM_SETTLED": 50487391,
+            "ZSIM_WIP": 0
+          },
+          "config": {
+            "companyCode": "1000",
+            "plant": "1100",
+            "ledger": "0L",
+            "standard": "TT99",
+            "label": "SIMULATED"
+          },
+          "sourceHash": "6fb11bcf8960ab94b999519106c1d11d09e9d780d0d978f8f40c6a77980c63ab",
+          "runId": "SIM-6fb11bcf8960ab94",
+          "adapterVersion": null,
+          "phase": "GENERATED_RAW",
+          "controls": "technical-pass",
+          "legalApproval": "pending"
+        },
+        "clean": {
+          "reportId": "KKS1",
+          "schemaVersion": "sava-clean-v1",
+          "adapterVersion": "1.0.0",
+          "sourceHash": "6fb11bcf8960ab94b999519106c1d11d09e9d780d0d978f8f40c6a77980c63ab",
+          "runId": "SIM-6fb11bcf8960ab94",
+          "rawHash": "bed9d164805026ce21d8f02752310a83dea9156e8c29fe1f4a669e0b8f6c5515",
+          "rows": [
+            {
+              "values": {
+                "production_order": "1000001",
+                "planned_cost": 48780088,
+                "actual_cost": 50487391,
+                "variance": 1707303,
+                "settled_cost": 50487391,
+                "wip_cost": 0,
+                "local_currency": "VND"
+              },
+              "lineage": {
+                "rawHash": "bed9d164805026ce21d8f02752310a83dea9156e8c29fe1f4a669e0b8f6c5515",
+                "rawLine": 4
+              }
+            }
+          ]
+        }
+      },
+      {
+        "rawText": "CK13N — SIMULATED layout | SIMULATED | BUKRS 1000 | WERKS 1100 | TT99 | Signs: SHKZG/DRCRK or report contract\n\nZSIM_RECORD\tKALNR\tMATNR\tWERKS\tKSTAR\tZSIM_LOT_QTY\tZSIM_VALUE\tZSIM_UNIT_COST\tWAERS\nHEADER\tSIM000000001\tPL-SEVT-CAM08\t1100\t\t5000\t48780088\t9756.0176\tVND\nITEM\tSIM000000001\tPL-SEVT-CAM08\t1100\t621\t5000\t8302500\t1660.5\tVND\nITEM\tSIM000000001\tPL-SEVT-CAM08\t1100\t622\t5000\t14361100\t2872.22\tVND\nITEM\tSIM000000001\tPL-SEVT-CAM08\t1100\t627\t5000\t26116488\t5223.2976\tVND\n",
+        "rawManifest": {
+          "reportId": "CK13N",
+          "schemaVersion": "sim-report-v1",
+          "generatorVersion": "s2-pack-1.0.0",
+          "selection": {
+            "postingDate": "2026-09-15",
+            "scope": "provided-scenario-snapshot",
+            "material": "PL-SEVT-CAM08",
+            "stockType": "Non-valuated",
+            "deliveredQuantity": 5000
+          },
+          "fileName": "CK13N_SIMULATED.txt",
+          "sha256": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+          "bytes": 463,
+          "rowCount": 4,
+          "sourceLineCount": 22,
+          "totals": {
+            "headerValue": 48780088,
+            "itemValue": 48780088
+          },
+          "config": {
+            "companyCode": "1000",
+            "plant": "1100",
+            "ledger": "0L",
+            "standard": "TT99",
+            "label": "SIMULATED"
+          },
+          "sourceHash": "6fb11bcf8960ab94b999519106c1d11d09e9d780d0d978f8f40c6a77980c63ab",
+          "runId": "SIM-6fb11bcf8960ab94",
+          "adapterVersion": null,
+          "phase": "GENERATED_RAW",
+          "controls": "technical-pass",
+          "legalApproval": "pending"
+        },
+        "clean": {
+          "reportId": "CK13N",
+          "schemaVersion": "sava-clean-v1",
+          "adapterVersion": "1.0.0",
+          "sourceHash": "6fb11bcf8960ab94b999519106c1d11d09e9d780d0d978f8f40c6a77980c63ab",
+          "runId": "SIM-6fb11bcf8960ab94",
+          "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+          "rows": [
+            {
+              "values": {
+                "record_type": "HEADER",
+                "cost_estimate": "SIM000000001",
+                "material": "PL-SEVT-CAM08",
+                "plant": "1100",
+                "cost_element": null,
+                "lot_quantity": 5000,
+                "total_value": 48780088,
+                "unit_cost": 9756.0176,
+                "local_currency": "VND"
+              },
+              "lineage": {
+                "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+                "rawLine": 4
+              }
+            },
+            {
+              "values": {
+                "record_type": "ITEM",
+                "cost_estimate": "SIM000000001",
+                "material": "PL-SEVT-CAM08",
+                "plant": "1100",
+                "cost_element": "621",
+                "lot_quantity": 5000,
+                "total_value": 8302500,
+                "unit_cost": 1660.5,
+                "local_currency": "VND"
+              },
+              "lineage": {
+                "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+                "rawLine": 5
+              }
+            },
+            {
+              "values": {
+                "record_type": "ITEM",
+                "cost_estimate": "SIM000000001",
+                "material": "PL-SEVT-CAM08",
+                "plant": "1100",
+                "cost_element": "622",
+                "lot_quantity": 5000,
+                "total_value": 14361100,
+                "unit_cost": 2872.22,
+                "local_currency": "VND"
+              },
+              "lineage": {
+                "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+                "rawLine": 6
+              }
+            },
+            {
+              "values": {
+                "record_type": "ITEM",
+                "cost_estimate": "SIM000000001",
+                "material": "PL-SEVT-CAM08",
+                "plant": "1100",
+                "cost_element": "627",
+                "lot_quantity": 5000,
+                "total_value": 26116488,
+                "unit_cost": 5223.2976,
+                "local_currency": "VND"
+              },
+              "lineage": {
+                "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+                "rawLine": 7
+              }
+            }
+          ]
+        }
+      },
+      {
+        "rawText": "SUP01 — SIMULATED layout | SIMULATED | BUKRS 1000 | WERKS 1100 | TT99 | Signs: SHKZG/DRCRK or report contract\n\nAUFNR\tBELNR\tBUZEI\tTCODE\tRACCT\tZSIM_SETTLED\tWAERS\tZSIM_SOURCE_LINE\n1000001\t4970000001\t000002\tVA88 / KKA2\t154\t50487391\tVND\tS7-0001-002\n",
+        "rawManifest": {
+          "reportId": "SUP01",
+          "schemaVersion": "sim-report-v1",
+          "generatorVersion": "s2-pack-1.0.0",
+          "selection": {
+            "postingDate": "2026-09-15",
+            "scope": "provided-scenario-snapshot",
+            "material": "PL-SEVT-CAM08",
+            "stockType": "Non-valuated",
+            "deliveredQuantity": 5000
+          },
+          "fileName": "SUP01_SIMULATED.txt",
+          "sha256": "b807d17cbd8d5dadf446cdb4c3e4d6d437e12848af42e0cb4a106e67cca8a85f",
+          "bytes": 246,
+          "rowCount": 1,
+          "sourceLineCount": 22,
+          "totals": {
+            "ZSIM_SETTLED": 50487391
+          },
+          "config": {
+            "companyCode": "1000",
+            "plant": "1100",
+            "ledger": "0L",
+            "standard": "TT99",
+            "label": "SIMULATED"
+          },
+          "sourceHash": "6fb11bcf8960ab94b999519106c1d11d09e9d780d0d978f8f40c6a77980c63ab",
+          "runId": "SIM-6fb11bcf8960ab94",
+          "adapterVersion": null,
+          "phase": "GENERATED_RAW",
+          "controls": "technical-pass",
+          "legalApproval": "pending"
+        },
+        "clean": {
+          "reportId": "SUP01",
+          "schemaVersion": "sava-clean-v1",
+          "adapterVersion": "1.0.0",
+          "sourceHash": "6fb11bcf8960ab94b999519106c1d11d09e9d780d0d978f8f40c6a77980c63ab",
+          "runId": "SIM-6fb11bcf8960ab94",
+          "rawHash": "b807d17cbd8d5dadf446cdb4c3e4d6d437e12848af42e0cb4a106e67cca8a85f",
+          "rows": [
+            {
+              "values": {
+                "production_order": "1000001",
+                "accounting_document": "4970000001",
+                "line_item": "000002",
+                "transaction": "VA88 / KKA2",
+                "gl_account": "154",
+                "settled_cost": 50487391,
+                "local_currency": "VND",
+                "source_line": "S7-0001-002"
+              },
+              "lineage": {
+                "rawHash": "b807d17cbd8d5dadf446cdb4c3e4d6d437e12848af42e0cb4a106e67cca8a85f",
+                "rawLine": 4
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "controlCase": {
+      "run": {
+        "version": "sava-sim-controls-1.0.0",
+        "runId": "SIM-6fb11bcf8960ab94",
+        "sourceHash": "6fb11bcf8960ab94b999519106c1d11d09e9d780d0d978f8f40c6a77980c63ab",
+        "label": "SIMULATED",
+        "businessAcceptance": "PENDING_HUMAN_SME",
+        "controls": [
+          {
+            "id": "C01",
+            "name": "Material documents: COOIS ↔ MB51",
+            "technicalStatus": "PASS",
+            "businessStatus": "PENDING_SME",
+            "findings": [],
+            "evidence": [
+              {
+                "reportId": "MB51",
+                "rawHash": "784aec1eebfdfd94ee031aa193ed81245a7eb42da0e4686adbf8be2a88ddc02e",
+                "rawLine": 4
+              },
+              {
+                "reportId": "MB51",
+                "rawHash": "784aec1eebfdfd94ee031aa193ed81245a7eb42da0e4686adbf8be2a88ddc02e",
+                "rawLine": 5
+              },
+              {
+                "reportId": "MB51",
+                "rawHash": "784aec1eebfdfd94ee031aa193ed81245a7eb42da0e4686adbf8be2a88ddc02e",
+                "rawLine": 6
+              },
+              {
+                "reportId": "COOIS_GOODS_MOVEMENTS",
+                "rawHash": "712f28082b1ac22f229adb42bafb66a88a27bb4d7d0e29f694de9278143d52f3",
+                "rawLine": 4
+              },
+              {
+                "reportId": "COOIS_GOODS_MOVEMENTS",
+                "rawHash": "712f28082b1ac22f229adb42bafb66a88a27bb4d7d0e29f694de9278143d52f3",
+                "rawLine": 5
+              },
+              {
+                "reportId": "COOIS_GOODS_MOVEMENTS",
+                "rawHash": "712f28082b1ac22f229adb42bafb66a88a27bb4d7d0e29f694de9278143d52f3",
+                "rawLine": 6
+              }
+            ],
+            "metrics": {
+              "documents": 3
+            }
+          },
+          {
+            "id": "C02",
+            "name": "Component aggregate ↔ goods issues",
+            "technicalStatus": "PASS",
+            "businessStatus": "BLOCKED_RESERVATION_MAPPING",
+            "findings": [],
+            "evidence": [
+              {
+                "reportId": "MB51",
+                "rawHash": "784aec1eebfdfd94ee031aa193ed81245a7eb42da0e4686adbf8be2a88ddc02e",
+                "rawLine": 4
+              },
+              {
+                "reportId": "MB51",
+                "rawHash": "784aec1eebfdfd94ee031aa193ed81245a7eb42da0e4686adbf8be2a88ddc02e",
+                "rawLine": 5
+              },
+              {
+                "reportId": "MB51",
+                "rawHash": "784aec1eebfdfd94ee031aa193ed81245a7eb42da0e4686adbf8be2a88ddc02e",
+                "rawLine": 6
+              },
+              {
+                "reportId": "COOIS_COMPONENTS",
+                "rawHash": "c1ba99efa5ce61895009b7761435f18ea27a0ce68cce0c34420ce10caa93633f",
+                "rawLine": 4
+              }
+            ],
+            "metrics": {
+              "componentGroups": 1
+            }
+          },
+          {
+            "id": "C03",
+            "name": "Order delivered ↔ goods receipts",
+            "technicalStatus": "PASS",
+            "businessStatus": "PENDING_SME",
+            "findings": [],
+            "evidence": [
+              {
+                "reportId": "MB51",
+                "rawHash": "784aec1eebfdfd94ee031aa193ed81245a7eb42da0e4686adbf8be2a88ddc02e",
+                "rawLine": 4
+              },
+              {
+                "reportId": "MB51",
+                "rawHash": "784aec1eebfdfd94ee031aa193ed81245a7eb42da0e4686adbf8be2a88ddc02e",
+                "rawLine": 5
+              },
+              {
+                "reportId": "MB51",
+                "rawHash": "784aec1eebfdfd94ee031aa193ed81245a7eb42da0e4686adbf8be2a88ddc02e",
+                "rawLine": 6
+              },
+              {
+                "reportId": "COOIS_HEADER",
+                "rawHash": "ecbb728541729f731bab37ae24ebcd8fe2a8133ad210ad43c52d5d45b96bb878",
+                "rawLine": 4
+              }
+            ],
+            "metrics": {
+              "delivered": 5000
+            }
+          },
+          {
+            "id": "C04",
+            "name": "SIM 154 collector ↔ KKS actual",
+            "technicalStatus": "PASS",
+            "businessStatus": "BLOCKED_CO_COST_BASIS",
+            "findings": [],
+            "evidence": [
+              {
+                "reportId": "KOB1",
+                "rawHash": "576da42fb87f3559e30df23762d7111ea5cdbb3ab9d24c8a4fab03ed3febde80",
+                "rawLine": 4
+              },
+              {
+                "reportId": "KOB1",
+                "rawHash": "576da42fb87f3559e30df23762d7111ea5cdbb3ab9d24c8a4fab03ed3febde80",
+                "rawLine": 5
+              },
+              {
+                "reportId": "KOB1",
+                "rawHash": "576da42fb87f3559e30df23762d7111ea5cdbb3ab9d24c8a4fab03ed3febde80",
+                "rawLine": 6
+              },
+              {
+                "reportId": "KKS1",
+                "rawHash": "bed9d164805026ce21d8f02752310a83dea9156e8c29fe1f4a669e0b8f6c5515",
+                "rawLine": 4
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 4
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 5
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 6
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 7
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 8
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 9
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 10
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 11
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 12
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 13
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 14
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 15
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 16
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 17
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 18
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 19
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 20
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 21
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 22
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 23
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 24
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 25
+              }
+            ],
+            "metrics": {
+              "actual": 50487391
+            }
+          },
+          {
+            "id": "C05",
+            "name": "SIM settlement ↔ GL + WIP",
+            "technicalStatus": "PASS",
+            "businessStatus": "BLOCKED_RECEIVER_ELIGIBLE_VARIANCE",
+            "findings": [],
+            "evidence": [
+              {
+                "reportId": "SUP01",
+                "rawHash": "b807d17cbd8d5dadf446cdb4c3e4d6d437e12848af42e0cb4a106e67cca8a85f",
+                "rawLine": 4
+              },
+              {
+                "reportId": "KKS1",
+                "rawHash": "bed9d164805026ce21d8f02752310a83dea9156e8c29fe1f4a669e0b8f6c5515",
+                "rawLine": 4
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 4
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 5
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 6
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 7
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 8
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 9
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 10
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 11
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 12
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 13
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 14
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 15
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 16
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 17
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 18
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 19
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 20
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 21
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 22
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 23
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 24
+              },
+              {
+                "reportId": "FAGLL03",
+                "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+                "rawLine": 25
+              }
+            ],
+            "metrics": {
+              "settled": 50487391,
+              "wip": 0
+            }
+          },
+          {
+            "id": "C06",
+            "name": "CK13N header ↔ additive items",
+            "technicalStatus": "PASS",
+            "businessStatus": "PENDING_SME",
+            "findings": [],
+            "evidence": [
+              {
+                "reportId": "CK13N",
+                "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+                "rawLine": 4
+              },
+              {
+                "reportId": "CK13N",
+                "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+                "rawLine": 5
+              },
+              {
+                "reportId": "CK13N",
+                "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+                "rawLine": 6
+              },
+              {
+                "reportId": "CK13N",
+                "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+                "rawLine": 7
+              },
+              {
+                "reportId": "COOIS_HEADER",
+                "rawHash": "ecbb728541729f731bab37ae24ebcd8fe2a8133ad210ad43c52d5d45b96bb878",
+                "rawLine": 4
+              }
+            ],
+            "metrics": {
+              "standardCost": 48780088
+            }
+          },
+          {
+            "id": "C07",
+            "name": "Full-order cost-element variance bridge",
+            "technicalStatus": "PASS",
+            "businessStatus": "BLOCKED_SAP_VARIANCE_CATEGORIES",
+            "findings": [],
+            "evidence": [
+              {
+                "reportId": "COOIS_COMPONENTS",
+                "rawHash": "c1ba99efa5ce61895009b7761435f18ea27a0ce68cce0c34420ce10caa93633f",
+                "rawLine": 4
+              },
+              {
+                "reportId": "COOIS_OPERATIONS",
+                "rawHash": "9bedcb730d2424b6f06a22abe873f538599670404b81d54d3fec20c1900fef99",
+                "rawLine": 4
+              },
+              {
+                "reportId": "COOIS_CONFIRMATIONS",
+                "rawHash": "a5a8c35e0d8bdeb5be281fd024df20af025497641ba713b4d5e9730354c3ca62",
+                "rawLine": 4
+              },
+              {
+                "reportId": "KOB1",
+                "rawHash": "576da42fb87f3559e30df23762d7111ea5cdbb3ab9d24c8a4fab03ed3febde80",
+                "rawLine": 4
+              },
+              {
+                "reportId": "KOB1",
+                "rawHash": "576da42fb87f3559e30df23762d7111ea5cdbb3ab9d24c8a4fab03ed3febde80",
+                "rawLine": 5
+              },
+              {
+                "reportId": "KOB1",
+                "rawHash": "576da42fb87f3559e30df23762d7111ea5cdbb3ab9d24c8a4fab03ed3febde80",
+                "rawLine": 6
+              },
+              {
+                "reportId": "KKS1",
+                "rawHash": "bed9d164805026ce21d8f02752310a83dea9156e8c29fe1f4a669e0b8f6c5515",
+                "rawLine": 4
+              },
+              {
+                "reportId": "CK13N",
+                "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+                "rawLine": 4
+              },
+              {
+                "reportId": "CK13N",
+                "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+                "rawLine": 5
+              },
+              {
+                "reportId": "CK13N",
+                "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+                "rawLine": 6
+              },
+              {
+                "reportId": "CK13N",
+                "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+                "rawLine": 7
+              },
+              {
+                "reportId": "COOIS_HEADER",
+                "rawHash": "ecbb728541729f731bab37ae24ebcd8fe2a8133ad210ad43c52d5d45b96bb878",
+                "rawLine": 4
+              }
+            ],
+            "metrics": {
+              "materialDelta": 290587,
+              "laborDelta": 502638,
+              "overheadDelta": 914078,
+              "residual": 0,
+              "fullOrderVariance": 1707303
+            }
+          }
+        ],
+        "technicalStatus": "PASS"
+      },
+      "events": []
+    },
+    "mart": {
+      "version": "sava-mfg-mart-1.0.0",
+      "label": "SIMULATED",
+      "publicationStatus": "DIAGNOSTIC_ONLY",
+      "businessAcceptance": "PENDING_HUMAN_SME",
+      "runId": "SIM-6fb11bcf8960ab94",
+      "sourceHash": "6fb11bcf8960ab94b999519106c1d11d09e9d780d0d978f8f40c6a77980c63ab",
+      "controlCaseHash": "34dd064390b8264d5dced0f04637a04ff0462bb95876dd9cf0f9e69c28390a89",
+      "grain": "ONE_PRODUCTION_ORDER_SNAPSHOT",
+      "metrics": [
+        {
+          "id": "standard_cost",
+          "label": "Chi phí kế hoạch",
+          "value": 48780088,
+          "unit": "VND",
+          "basis": "FULL_ORDER",
+          "formula": "CK13N HEADER total_value",
+          "refs": [
+            {
+              "reportId": "CK13N",
+              "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+              "rawLine": 4
+            },
+            {
+              "reportId": "CK13N",
+              "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+              "rawLine": 5
+            },
+            {
+              "reportId": "CK13N",
+              "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+              "rawLine": 6
+            },
+            {
+              "reportId": "CK13N",
+              "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+              "rawLine": 7
+            }
+          ],
+          "controls": [
+            "C06",
+            "C07"
+          ]
+        },
+        {
+          "id": "actual_cost",
+          "label": "Chi phí sản xuất thực tế",
+          "value": 50487391,
+          "unit": "VND",
+          "basis": "FULL_ORDER",
+          "formula": "KKS1 actual_cost; C04 collector tieout",
+          "refs": [
+            {
+              "reportId": "KKS1",
+              "rawHash": "bed9d164805026ce21d8f02752310a83dea9156e8c29fe1f4a669e0b8f6c5515",
+              "rawLine": 4
+            },
+            {
+              "reportId": "KOB1",
+              "rawHash": "576da42fb87f3559e30df23762d7111ea5cdbb3ab9d24c8a4fab03ed3febde80",
+              "rawLine": 4
+            },
+            {
+              "reportId": "KOB1",
+              "rawHash": "576da42fb87f3559e30df23762d7111ea5cdbb3ab9d24c8a4fab03ed3febde80",
+              "rawLine": 5
+            },
+            {
+              "reportId": "KOB1",
+              "rawHash": "576da42fb87f3559e30df23762d7111ea5cdbb3ab9d24c8a4fab03ed3febde80",
+              "rawLine": 6
+            }
+          ],
+          "controls": [
+            "C04",
+            "C07"
+          ]
+        },
+        {
+          "id": "variance",
+          "label": "Chênh lệch chi phí",
+          "value": 1707303,
+          "unit": "VND",
+          "basis": "FULL_ORDER",
+          "formula": "KKS1 actual_cost - planned_cost",
+          "refs": [
+            {
+              "reportId": "KKS1",
+              "rawHash": "bed9d164805026ce21d8f02752310a83dea9156e8c29fe1f4a669e0b8f6c5515",
+              "rawLine": 4
+            },
+            {
+              "reportId": "CK13N",
+              "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+              "rawLine": 4
+            },
+            {
+              "reportId": "CK13N",
+              "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+              "rawLine": 5
+            },
+            {
+              "reportId": "CK13N",
+              "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+              "rawLine": 6
+            },
+            {
+              "reportId": "CK13N",
+              "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+              "rawLine": 7
+            }
+          ],
+          "controls": [
+            "C07"
+          ]
+        },
+        {
+          "id": "settled_cost",
+          "label": "Chi phí đã settlement",
+          "value": 50487391,
+          "unit": "VND",
+          "basis": "SIGNED_COLLECTOR_SETTLEMENT",
+          "formula": "SUP01 settled_cost ↔ KKS1 settled_cost",
+          "refs": [
+            {
+              "reportId": "KKS1",
+              "rawHash": "bed9d164805026ce21d8f02752310a83dea9156e8c29fe1f4a669e0b8f6c5515",
+              "rawLine": 4
+            },
+            {
+              "reportId": "SUP01",
+              "rawHash": "b807d17cbd8d5dadf446cdb4c3e4d6d437e12848af42e0cb4a106e67cca8a85f",
+              "rawLine": 4
+            }
+          ],
+          "controls": [
+            "C05"
+          ]
+        },
+        {
+          "id": "wip",
+          "label": "Chi phí còn ở TK154",
+          "value": 0,
+          "unit": "VND",
+          "basis": "POSTED_CUTOFF_BALANCE",
+          "formula": "Net FAGLL03 account154 ↔ KKS1 wip_cost",
+          "refs": [
+            {
+              "reportId": "KKS1",
+              "rawHash": "bed9d164805026ce21d8f02752310a83dea9156e8c29fe1f4a669e0b8f6c5515",
+              "rawLine": 4
+            },
+            {
+              "reportId": "FAGLL03",
+              "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+              "rawLine": 10
+            },
+            {
+              "reportId": "FAGLL03",
+              "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+              "rawLine": 12
+            },
+            {
+              "reportId": "FAGLL03",
+              "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+              "rawLine": 14
+            },
+            {
+              "reportId": "FAGLL03",
+              "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+              "rawLine": 21
+            }
+          ],
+          "controls": [
+            "C05"
+          ]
+        },
+        {
+          "id": "revenue",
+          "label": "Doanh thu đã ghi nhận",
+          "value": 210000000,
+          "unit": "VND",
+          "basis": "POSTED_DELIVERED",
+          "formula": "-sum GL511 excluding all closing911 documents",
+          "refs": [
+            {
+              "reportId": "FAGLL03",
+              "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+              "rawLine": 17
+            }
+          ],
+          "controls": [
+            "C05"
+          ]
+        },
+        {
+          "id": "cogs",
+          "label": "Giá vốn đã ghi nhận",
+          "value": 50487391,
+          "unit": "VND",
+          "basis": "POSTED_DELIVERED",
+          "formula": "sum GL632* excluding all closing911 documents",
+          "refs": [
+            {
+              "reportId": "FAGLL03",
+              "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+              "rawLine": 20
+            }
+          ],
+          "controls": [
+            "C05"
+          ]
+        },
+        {
+          "id": "gross_profit",
+          "label": "Lợi nhuận gộp đã ghi nhận",
+          "value": 159512609,
+          "unit": "VND",
+          "basis": "POSTED_DELIVERED",
+          "formula": "revenue - cogs",
+          "refs": [
+            {
+              "reportId": "FAGLL03",
+              "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+              "rawLine": 17
+            },
+            {
+              "reportId": "FAGLL03",
+              "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+              "rawLine": 20
+            }
+          ],
+          "controls": [
+            "C05"
+          ]
+        },
+        {
+          "id": "gross_margin",
+          "label": "Biên lợi nhuận gộp",
+          "value": 75.95838523809523,
+          "unit": "PERCENT",
+          "basis": "POSTED_DELIVERED",
+          "formula": "gross_profit / revenue *100",
+          "refs": [
+            {
+              "reportId": "FAGLL03",
+              "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+              "rawLine": 17
+            },
+            {
+              "reportId": "FAGLL03",
+              "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+              "rawLine": 20
+            }
+          ],
+          "controls": [
+            "C05"
+          ]
+        },
+        {
+          "id": "planned_quantity",
+          "label": "Số lượng kế hoạch",
+          "value": 5000,
+          "unit": "PC",
+          "basis": "ORDER_PLANNED",
+          "formula": "COOIS Header planned_quantity",
+          "refs": [
+            {
+              "reportId": "COOIS_HEADER",
+              "rawHash": "ecbb728541729f731bab37ae24ebcd8fe2a8133ad210ad43c52d5d45b96bb878",
+              "rawLine": 4
+            }
+          ],
+          "controls": [
+            "C03",
+            "C06"
+          ]
+        },
+        {
+          "id": "delivered_quantity",
+          "label": "Số lượng đã giao/GR theo mô hình",
+          "value": 5000,
+          "unit": "PC",
+          "basis": "SIM_GR_EQUALS_DELIVERY",
+          "formula": "COOIS Header delivered_quantity ↔ MB51 101",
+          "refs": [
+            {
+              "reportId": "COOIS_HEADER",
+              "rawHash": "ecbb728541729f731bab37ae24ebcd8fe2a8133ad210ad43c52d5d45b96bb878",
+              "rawLine": 4
+            },
+            {
+              "reportId": "MB51",
+              "rawHash": "784aec1eebfdfd94ee031aa193ed81245a7eb42da0e4686adbf8be2a88ddc02e",
+              "rawLine": 5
+            }
+          ],
+          "controls": [
+            "C03"
+          ]
+        },
+        {
+          "id": "variance_residual",
+          "label": "Chênh lệch chưa phân bổ trong cầu nối số học",
+          "value": 0,
+          "unit": "VND",
+          "basis": "FULL_ORDER",
+          "formula": "KKS variance -sum cost-element deltas",
+          "refs": [
+            {
+              "reportId": "COOIS_COMPONENTS",
+              "rawHash": "c1ba99efa5ce61895009b7761435f18ea27a0ce68cce0c34420ce10caa93633f",
+              "rawLine": 4
+            },
+            {
+              "reportId": "COOIS_OPERATIONS",
+              "rawHash": "9bedcb730d2424b6f06a22abe873f538599670404b81d54d3fec20c1900fef99",
+              "rawLine": 4
+            },
+            {
+              "reportId": "COOIS_CONFIRMATIONS",
+              "rawHash": "a5a8c35e0d8bdeb5be281fd024df20af025497641ba713b4d5e9730354c3ca62",
+              "rawLine": 4
+            },
+            {
+              "reportId": "KOB1",
+              "rawHash": "576da42fb87f3559e30df23762d7111ea5cdbb3ab9d24c8a4fab03ed3febde80",
+              "rawLine": 4
+            },
+            {
+              "reportId": "KOB1",
+              "rawHash": "576da42fb87f3559e30df23762d7111ea5cdbb3ab9d24c8a4fab03ed3febde80",
+              "rawLine": 5
+            },
+            {
+              "reportId": "KOB1",
+              "rawHash": "576da42fb87f3559e30df23762d7111ea5cdbb3ab9d24c8a4fab03ed3febde80",
+              "rawLine": 6
+            },
+            {
+              "reportId": "KKS1",
+              "rawHash": "bed9d164805026ce21d8f02752310a83dea9156e8c29fe1f4a669e0b8f6c5515",
+              "rawLine": 4
+            },
+            {
+              "reportId": "CK13N",
+              "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+              "rawLine": 4
+            },
+            {
+              "reportId": "CK13N",
+              "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+              "rawLine": 5
+            },
+            {
+              "reportId": "CK13N",
+              "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+              "rawLine": 6
+            },
+            {
+              "reportId": "CK13N",
+              "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+              "rawLine": 7
+            },
+            {
+              "reportId": "COOIS_HEADER",
+              "rawHash": "ecbb728541729f731bab37ae24ebcd8fe2a8133ad210ad43c52d5d45b96bb878",
+              "rawLine": 4
+            }
+          ],
+          "controls": [
+            "C07"
+          ]
+        }
+      ],
+      "costElements": [
+        {
+          "account": "621",
+          "label": "Vật liệu",
+          "planned": 8302500,
+          "actual": 8593087,
+          "delta": 290587,
+          "basis": "FULL_ORDER",
+          "refs": [
+            {
+              "reportId": "COOIS_COMPONENTS",
+              "rawHash": "c1ba99efa5ce61895009b7761435f18ea27a0ce68cce0c34420ce10caa93633f",
+              "rawLine": 4
+            },
+            {
+              "reportId": "CK13N",
+              "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+              "rawLine": 5
+            }
+          ]
+        },
+        {
+          "account": "622",
+          "label": "Nhân công",
+          "planned": 14361100,
+          "actual": 14863738,
+          "delta": 502638,
+          "basis": "FULL_ORDER",
+          "refs": [
+            {
+              "reportId": "COOIS_CONFIRMATIONS",
+              "rawHash": "a5a8c35e0d8bdeb5be281fd024df20af025497641ba713b4d5e9730354c3ca62",
+              "rawLine": 4
+            },
+            {
+              "reportId": "CK13N",
+              "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+              "rawLine": 6
+            }
+          ]
+        },
+        {
+          "account": "627",
+          "label": "Sản xuất chung",
+          "planned": 26116488,
+          "actual": 27030566,
+          "delta": 914078,
+          "basis": "FULL_ORDER",
+          "refs": [
+            {
+              "reportId": "COOIS_CONFIRMATIONS",
+              "rawHash": "a5a8c35e0d8bdeb5be281fd024df20af025497641ba713b4d5e9730354c3ca62",
+              "rawLine": 4
+            },
+            {
+              "reportId": "CK13N",
+              "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+              "rawLine": 7
+            }
+          ]
+        }
+      ],
+      "sourceDatasets": [
+        {
+          "reportId": "FAGLL03",
+          "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+          "cleanHash": "aab67b4065a6c8028194243ebecb9db9d2b05266c742ae33ca0ebd25df91fed1",
+          "rows": 22
+        },
+        {
+          "reportId": "MB51",
+          "rawHash": "784aec1eebfdfd94ee031aa193ed81245a7eb42da0e4686adbf8be2a88ddc02e",
+          "cleanHash": "1436954a27d48e4ba1ccd8234d668f0cf447629bb046241cfc2c261bb6478c70",
+          "rows": 3
+        },
+        {
+          "reportId": "COOIS_HEADER",
+          "rawHash": "ecbb728541729f731bab37ae24ebcd8fe2a8133ad210ad43c52d5d45b96bb878",
+          "cleanHash": "388c6f22e2d48a555a83148dd8eb0a754c1111328cb572ff961b38e05ca3cd72",
+          "rows": 1
+        },
+        {
+          "reportId": "COOIS_COMPONENTS",
+          "rawHash": "c1ba99efa5ce61895009b7761435f18ea27a0ce68cce0c34420ce10caa93633f",
+          "cleanHash": "d0d1f22abbb13a03cfa156face53afbdb037f9965a72b1df8262f443d6656b92",
+          "rows": 1
+        },
+        {
+          "reportId": "COOIS_OPERATIONS",
+          "rawHash": "9bedcb730d2424b6f06a22abe873f538599670404b81d54d3fec20c1900fef99",
+          "cleanHash": "3657944cbc81645ef07f4eed858461374f35cee1e472e39d6ee745e2de6518cf",
+          "rows": 1
+        },
+        {
+          "reportId": "COOIS_CONFIRMATIONS",
+          "rawHash": "a5a8c35e0d8bdeb5be281fd024df20af025497641ba713b4d5e9730354c3ca62",
+          "cleanHash": "37da7bc9c0b1442f60f436489b1557bb4040d73eeebe432ee34bdf733aabaa49",
+          "rows": 1
+        },
+        {
+          "reportId": "COOIS_GOODS_MOVEMENTS",
+          "rawHash": "712f28082b1ac22f229adb42bafb66a88a27bb4d7d0e29f694de9278143d52f3",
+          "cleanHash": "694e0c964817b47484c589619b6eaa89d5505c6b4d0a318f2f00b525fc33aa21",
+          "rows": 3
+        },
+        {
+          "reportId": "KOB1",
+          "rawHash": "576da42fb87f3559e30df23762d7111ea5cdbb3ab9d24c8a4fab03ed3febde80",
+          "cleanHash": "53411507f6e20f40b609af75277aca73b07352af9bba6c7783460feb0dcce6fd",
+          "rows": 3
+        },
+        {
+          "reportId": "KKS1",
+          "rawHash": "bed9d164805026ce21d8f02752310a83dea9156e8c29fe1f4a669e0b8f6c5515",
+          "cleanHash": "5dc26fb0941492d449b05c0f3eef1f75ab8ca770f9679f37c3d5b678f83d3585",
+          "rows": 1
+        },
+        {
+          "reportId": "CK13N",
+          "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+          "cleanHash": "3f9f94af0361320e44371baa91c4495b4b5425925ec09b15d1ae6dd89affca91",
+          "rows": 4
+        },
+        {
+          "reportId": "SUP01",
+          "rawHash": "b807d17cbd8d5dadf446cdb4c3e4d6d437e12848af42e0cb4a106e67cca8a85f",
+          "cleanHash": "f787485c69a5d64432038e026683638395b582063123892f1808fe9a9f6562af",
+          "rows": 1
+        }
+      ],
+      "businessGaps": [
+        {
+          "controlId": "C01",
+          "status": "PENDING_SME"
+        },
+        {
+          "controlId": "C02",
+          "status": "BLOCKED_RESERVATION_MAPPING"
+        },
+        {
+          "controlId": "C03",
+          "status": "PENDING_SME"
+        },
+        {
+          "controlId": "C04",
+          "status": "BLOCKED_CO_COST_BASIS"
+        },
+        {
+          "controlId": "C05",
+          "status": "BLOCKED_RECEIVER_ELIGIBLE_VARIANCE"
+        },
+        {
+          "controlId": "C06",
+          "status": "PENDING_SME"
+        },
+        {
+          "controlId": "C07",
+          "status": "BLOCKED_SAP_VARIANCE_CATEGORIES"
+        }
+      ],
+      "limitations": [
+        "Phân tích thử nghiệm; chưa được phê duyệt nghiệp vụ hoặc pháp lý.",
+        "Chi phí/variance FULL_ORDER khác doanh thu/giá vốn POSTED_DELIVERED; không ghép hai cơ sở.",
+        "Delta621/622/627 là cầu nối số học, chưa chứng minh nguyên nhân giá/tiêu hao/năng suất.",
+        "Qty/giờ actual được suy từ cost ratios theo A0.1; không phải quan sát độc lập.",
+        "GR/yield = delivery là giả định mô phỏng. Không tính DSO/DPO/DIO/CCC từ dữ liệu này.",
+        "Dữ liệu chỉ ở RAM; không có authenticated approval, storage hay SAP direct integration."
+      ],
+      "snapshotHash": "340a0ba5caed7e5bea9fd62228636a64b417c6d2762e676b224c804763ec117e"
+    },
+    "facts": [
+      {
+        "metricId": "standard_cost",
+        "value": 48780088,
+        "unit": "VND",
+        "basis": "FULL_ORDER",
+        "snapshotHash": "340a0ba5caed7e5bea9fd62228636a64b417c6d2762e676b224c804763ec117e",
+        "text": "Chi phí kế hoạch: 48.780.088 VND. Cơ sở: FULL_ORDER.",
+        "refs": [
+          {
+            "reportId": "CK13N",
+            "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+            "rawLine": 4
+          },
+          {
+            "reportId": "CK13N",
+            "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+            "rawLine": 5
+          },
+          {
+            "reportId": "CK13N",
+            "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+            "rawLine": 6
+          },
+          {
+            "reportId": "CK13N",
+            "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+            "rawLine": 7
+          }
+        ]
+      },
+      {
+        "metricId": "actual_cost",
+        "value": 50487391,
+        "unit": "VND",
+        "basis": "FULL_ORDER",
+        "snapshotHash": "340a0ba5caed7e5bea9fd62228636a64b417c6d2762e676b224c804763ec117e",
+        "text": "Chi phí sản xuất thực tế: 50.487.391 VND. Cơ sở: FULL_ORDER.",
+        "refs": [
+          {
+            "reportId": "KKS1",
+            "rawHash": "bed9d164805026ce21d8f02752310a83dea9156e8c29fe1f4a669e0b8f6c5515",
+            "rawLine": 4
+          },
+          {
+            "reportId": "KOB1",
+            "rawHash": "576da42fb87f3559e30df23762d7111ea5cdbb3ab9d24c8a4fab03ed3febde80",
+            "rawLine": 4
+          },
+          {
+            "reportId": "KOB1",
+            "rawHash": "576da42fb87f3559e30df23762d7111ea5cdbb3ab9d24c8a4fab03ed3febde80",
+            "rawLine": 5
+          },
+          {
+            "reportId": "KOB1",
+            "rawHash": "576da42fb87f3559e30df23762d7111ea5cdbb3ab9d24c8a4fab03ed3febde80",
+            "rawLine": 6
+          }
+        ]
+      },
+      {
+        "metricId": "variance",
+        "value": 1707303,
+        "unit": "VND",
+        "basis": "FULL_ORDER",
+        "snapshotHash": "340a0ba5caed7e5bea9fd62228636a64b417c6d2762e676b224c804763ec117e",
+        "text": "Chênh lệch chi phí: 1.707.303 VND. Cơ sở: FULL_ORDER.",
+        "refs": [
+          {
+            "reportId": "KKS1",
+            "rawHash": "bed9d164805026ce21d8f02752310a83dea9156e8c29fe1f4a669e0b8f6c5515",
+            "rawLine": 4
+          },
+          {
+            "reportId": "CK13N",
+            "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+            "rawLine": 4
+          },
+          {
+            "reportId": "CK13N",
+            "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+            "rawLine": 5
+          },
+          {
+            "reportId": "CK13N",
+            "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+            "rawLine": 6
+          },
+          {
+            "reportId": "CK13N",
+            "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+            "rawLine": 7
+          }
+        ]
+      },
+      {
+        "metricId": "settled_cost",
+        "value": 50487391,
+        "unit": "VND",
+        "basis": "SIGNED_COLLECTOR_SETTLEMENT",
+        "snapshotHash": "340a0ba5caed7e5bea9fd62228636a64b417c6d2762e676b224c804763ec117e",
+        "text": "Chi phí đã settlement: 50.487.391 VND. Cơ sở: SIGNED_COLLECTOR_SETTLEMENT.",
+        "refs": [
+          {
+            "reportId": "KKS1",
+            "rawHash": "bed9d164805026ce21d8f02752310a83dea9156e8c29fe1f4a669e0b8f6c5515",
+            "rawLine": 4
+          },
+          {
+            "reportId": "SUP01",
+            "rawHash": "b807d17cbd8d5dadf446cdb4c3e4d6d437e12848af42e0cb4a106e67cca8a85f",
+            "rawLine": 4
+          }
+        ]
+      },
+      {
+        "metricId": "wip",
+        "value": 0,
+        "unit": "VND",
+        "basis": "POSTED_CUTOFF_BALANCE",
+        "snapshotHash": "340a0ba5caed7e5bea9fd62228636a64b417c6d2762e676b224c804763ec117e",
+        "text": "Chi phí còn ở TK154: 0 VND. Cơ sở: POSTED_CUTOFF_BALANCE.",
+        "refs": [
+          {
+            "reportId": "KKS1",
+            "rawHash": "bed9d164805026ce21d8f02752310a83dea9156e8c29fe1f4a669e0b8f6c5515",
+            "rawLine": 4
+          },
+          {
+            "reportId": "FAGLL03",
+            "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+            "rawLine": 10
+          },
+          {
+            "reportId": "FAGLL03",
+            "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+            "rawLine": 12
+          },
+          {
+            "reportId": "FAGLL03",
+            "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+            "rawLine": 14
+          },
+          {
+            "reportId": "FAGLL03",
+            "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+            "rawLine": 21
+          }
+        ]
+      },
+      {
+        "metricId": "revenue",
+        "value": 210000000,
+        "unit": "VND",
+        "basis": "POSTED_DELIVERED",
+        "snapshotHash": "340a0ba5caed7e5bea9fd62228636a64b417c6d2762e676b224c804763ec117e",
+        "text": "Doanh thu đã ghi nhận: 210.000.000 VND. Cơ sở: POSTED_DELIVERED.",
+        "refs": [
+          {
+            "reportId": "FAGLL03",
+            "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+            "rawLine": 17
+          }
+        ]
+      },
+      {
+        "metricId": "cogs",
+        "value": 50487391,
+        "unit": "VND",
+        "basis": "POSTED_DELIVERED",
+        "snapshotHash": "340a0ba5caed7e5bea9fd62228636a64b417c6d2762e676b224c804763ec117e",
+        "text": "Giá vốn đã ghi nhận: 50.487.391 VND. Cơ sở: POSTED_DELIVERED.",
+        "refs": [
+          {
+            "reportId": "FAGLL03",
+            "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+            "rawLine": 20
+          }
+        ]
+      },
+      {
+        "metricId": "gross_profit",
+        "value": 159512609,
+        "unit": "VND",
+        "basis": "POSTED_DELIVERED",
+        "snapshotHash": "340a0ba5caed7e5bea9fd62228636a64b417c6d2762e676b224c804763ec117e",
+        "text": "Lợi nhuận gộp đã ghi nhận: 159.512.609 VND. Cơ sở: POSTED_DELIVERED.",
+        "refs": [
+          {
+            "reportId": "FAGLL03",
+            "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+            "rawLine": 17
+          },
+          {
+            "reportId": "FAGLL03",
+            "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+            "rawLine": 20
+          }
+        ]
+      },
+      {
+        "metricId": "gross_margin",
+        "value": 75.95838523809523,
+        "unit": "PERCENT",
+        "basis": "POSTED_DELIVERED",
+        "snapshotHash": "340a0ba5caed7e5bea9fd62228636a64b417c6d2762e676b224c804763ec117e",
+        "text": "Biên lợi nhuận gộp: 75,96 %. Cơ sở: POSTED_DELIVERED.",
+        "refs": [
+          {
+            "reportId": "FAGLL03",
+            "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+            "rawLine": 17
+          },
+          {
+            "reportId": "FAGLL03",
+            "rawHash": "34a39b0d042f9c8e0658ba9adf4fc3a05bef7d7d3beac0ed93b170eb4cf32353",
+            "rawLine": 20
+          }
+        ]
+      },
+      {
+        "metricId": "planned_quantity",
+        "value": 5000,
+        "unit": "PC",
+        "basis": "ORDER_PLANNED",
+        "snapshotHash": "340a0ba5caed7e5bea9fd62228636a64b417c6d2762e676b224c804763ec117e",
+        "text": "Số lượng kế hoạch: 5.000 PC. Cơ sở: ORDER_PLANNED.",
+        "refs": [
+          {
+            "reportId": "COOIS_HEADER",
+            "rawHash": "ecbb728541729f731bab37ae24ebcd8fe2a8133ad210ad43c52d5d45b96bb878",
+            "rawLine": 4
+          }
+        ]
+      },
+      {
+        "metricId": "delivered_quantity",
+        "value": 5000,
+        "unit": "PC",
+        "basis": "SIM_GR_EQUALS_DELIVERY",
+        "snapshotHash": "340a0ba5caed7e5bea9fd62228636a64b417c6d2762e676b224c804763ec117e",
+        "text": "Số lượng đã giao/GR theo mô hình: 5.000 PC. Cơ sở: SIM_GR_EQUALS_DELIVERY.",
+        "refs": [
+          {
+            "reportId": "COOIS_HEADER",
+            "rawHash": "ecbb728541729f731bab37ae24ebcd8fe2a8133ad210ad43c52d5d45b96bb878",
+            "rawLine": 4
+          },
+          {
+            "reportId": "MB51",
+            "rawHash": "784aec1eebfdfd94ee031aa193ed81245a7eb42da0e4686adbf8be2a88ddc02e",
+            "rawLine": 5
+          }
+        ]
+      },
+      {
+        "metricId": "variance_residual",
+        "value": 0,
+        "unit": "VND",
+        "basis": "FULL_ORDER",
+        "snapshotHash": "340a0ba5caed7e5bea9fd62228636a64b417c6d2762e676b224c804763ec117e",
+        "text": "Chênh lệch chưa phân bổ trong cầu nối số học: 0 VND. Cơ sở: FULL_ORDER.",
+        "refs": [
+          {
+            "reportId": "COOIS_COMPONENTS",
+            "rawHash": "c1ba99efa5ce61895009b7761435f18ea27a0ce68cce0c34420ce10caa93633f",
+            "rawLine": 4
+          },
+          {
+            "reportId": "COOIS_OPERATIONS",
+            "rawHash": "9bedcb730d2424b6f06a22abe873f538599670404b81d54d3fec20c1900fef99",
+            "rawLine": 4
+          },
+          {
+            "reportId": "COOIS_CONFIRMATIONS",
+            "rawHash": "a5a8c35e0d8bdeb5be281fd024df20af025497641ba713b4d5e9730354c3ca62",
+            "rawLine": 4
+          },
+          {
+            "reportId": "KOB1",
+            "rawHash": "576da42fb87f3559e30df23762d7111ea5cdbb3ab9d24c8a4fab03ed3febde80",
+            "rawLine": 4
+          },
+          {
+            "reportId": "KOB1",
+            "rawHash": "576da42fb87f3559e30df23762d7111ea5cdbb3ab9d24c8a4fab03ed3febde80",
+            "rawLine": 5
+          },
+          {
+            "reportId": "KOB1",
+            "rawHash": "576da42fb87f3559e30df23762d7111ea5cdbb3ab9d24c8a4fab03ed3febde80",
+            "rawLine": 6
+          },
+          {
+            "reportId": "KKS1",
+            "rawHash": "bed9d164805026ce21d8f02752310a83dea9156e8c29fe1f4a669e0b8f6c5515",
+            "rawLine": 4
+          },
+          {
+            "reportId": "CK13N",
+            "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+            "rawLine": 4
+          },
+          {
+            "reportId": "CK13N",
+            "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+            "rawLine": 5
+          },
+          {
+            "reportId": "CK13N",
+            "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+            "rawLine": 6
+          },
+          {
+            "reportId": "CK13N",
+            "rawHash": "647ed246fccfb0febef021e02aa03a63fd4f88435b817d324e6a0be6fa2bbf58",
+            "rawLine": 7
+          },
+          {
+            "reportId": "COOIS_HEADER",
+            "rawHash": "ecbb728541729f731bab37ae24ebcd8fe2a8133ad210ad43c52d5d45b96bb878",
+            "rawLine": 4
+          }
+        ]
+      }
+    ],
+    "c08": {
+      "controlId": "C08",
+      "numericTraceability": "PASS",
+      "businessStatus": "PENDING_APPROVED_MART",
+      "issues": []
+    }
+  }
+}

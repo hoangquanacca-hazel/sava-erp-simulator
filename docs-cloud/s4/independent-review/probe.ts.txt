@@ -1,0 +1,53 @@
+import assert from 'node:assert/strict';
+import {writeFileSync} from 'node:fs';
+import {PRESET_SCENARIOS} from 'file:///D:/sava-erp-simulator/src/types';
+import {computeMTO,generateStepEntries} from 'file:///D:/sava-erp-simulator/src/utils/calculator';
+import {exportReportSnapshot} from 'file:///D:/sava-erp-simulator/src/reports/snapshot';
+import {adaptRaw,type AdapterResult} from 'file:///D:/sava-erp-simulator/src/adapters/framework';
+import {reconcile} from 'file:///D:/sava-erp-simulator/src/controls/reconcile';
+import {startCase,appendEvent,exportControlCase} from 'file:///D:/sava-erp-simulator/src/controls/workflow';
+import {sha256Hex} from 'file:///D:/sava-erp-simulator/src/reports/core';
+
+const outcomes:any[]=[];
+async function check(name:string,fn:()=>unknown|Promise<unknown>){try{await fn();outcomes.push({name,status:'PASS'});}catch(e){outcomes.push({name,status:'FAIL',error:String(e)});}}
+async function fixture(stock='Valuated',pct=0,ratio=1){
+ const p={...PRESET_SCENARIOS[0].params,stockType:stock,actualVariancePercent:pct,deliveredQuantity:Math.round(PRESET_SCENARIOS[0].params.orderQuantity*ratio)} as any;
+ const c=computeMTO(p),t:any[]=[];
+ for(let s=1;s<=7;s++)t.push(...generateStepEntries(s,p,c,0,0,null).acdoca);
+ const exports=await exportReportSnapshot(p,c,t);return Promise.all(exports.map(x=>adaptRaw(x.raw.bytes,x.manifest)));
+}
+const good=await fixture('Non-valuated');
+writeFileSync(new URL('./baseline-details.json',import.meta.url),JSON.stringify(reconcile(good),null,2));
+writeFileSync(new URL('./settlement-details.json',import.meta.url),JSON.stringify(good.filter(x=>x.clean?.reportId==='SUP01'||x.clean?.reportId==='FAGLL03').map(x=>x.clean),null,2));
+const clone=()=>good.map(r=>({...r,clean:structuredClone(r.clean),quality:structuredClone(r.quality)})) as AdapterResult[];
+const row=(a:AdapterResult[],id:string)=>a.find(r=>r.clean?.reportId===id)!.clean!.rows[0] as any;
+const cstatus=(a:AdapterResult[],id:string)=>reconcile(a).controls.find(c=>c.id===id)!.technicalStatus;
+await check('baseline7technicalPass/businessNotAccepted',()=>{const r=reconcile(good);assert.equal(r.technicalStatus,'PASS');assert.equal(r.controls.length,7);assert.equal(r.businessAcceptance,'PENDING_HUMAN_SME');for(const id of ['C02','C04','C05','C07'])assert.match(r.controls.find(c=>c.id===id)!.businessStatus,/BLOCKED/);});
+await check('partialNonValuatedFavorable',async()=>assert.equal(reconcile(await fixture('Non-valuated',-3.5,.5)).technicalStatus,'PASS'));
+await check('missingReportBlocked',()=>assert.equal(reconcile(good.slice(1)).technicalStatus,'BLOCKED'));
+await check('duplicateReportBlocked',()=>assert.equal(reconcile([...good,good[0]]).technicalStatus,'BLOCKED'));
+await check('mixedSnapshotBlocked',()=>{const a=clone();(a[0].clean as any).sourceHash='b'.repeat(64);assert.equal(reconcile(a).technicalStatus,'BLOCKED');});
+await check('lineageMismatchBlocked',()=>{const a=clone();row(a,'MB51').lineage.rawHash='0'.repeat(64);assert.equal(reconcile(a).technicalStatus,'BLOCKED');});
+await check('duplicateNaturalKeyBlocked',()=>{const a=clone(),d=a.find(x=>x.clean?.reportId==='MB51')!.clean as any;d.rows.push(structuredClone(d.rows[0]));assert.equal(reconcile(a).technicalStatus,'BLOCKED');});
+await check('nonfiniteMoneyBlocked',()=>{const a=clone();row(a,'KOB1').values.amount_lc=NaN;assert.equal(reconcile(a).technicalStatus,'BLOCKED');});
+await check('currencyScopeBlocked',()=>{const a=clone();row(a,'SUP01').values.local_currency='USD';assert.equal(reconcile(a).technicalStatus,'BLOCKED');});
+await check('orphanMaterialDocumentDetected',()=>{const a=clone();row(a,'COOIS_GOODS_MOVEMENTS').values.material_document='9999999999';assert.notEqual(cstatus(a,'C01'),'PASS');});
+await check('unitMismatchDetected',()=>{const a=clone();row(a,'COOIS_GOODS_MOVEMENTS').values.base_uom='EA';assert.notEqual(cstatus(a,'C01'),'PASS');});
+await check('signedQuantityMismatchDetected',()=>{const a=clone();row(a,'COOIS_GOODS_MOVEMENTS').values.signed_quantity+=1;assert.notEqual(cstatus(a,'C01'),'PASS');});
+await check('KobCostMismatchDetected',()=>{const a=clone();row(a,'KOB1').values.amount_lc+=1;assert.notEqual(cstatus(a,'C04'),'PASS');});
+await check('settlementGLKeyMissingDetected',()=>{const a=clone();row(a,'SUP01').values.line_item='999999';assert.notEqual(cstatus(a,'C05'),'PASS');});
+await check('CKHeaderMismatchDetected',()=>{const a=clone();row(a,'CK13N').values.total_value+=1;assert.notEqual(cstatus(a,'C06'),'PASS');});
+await check('varianceResidualDetected',()=>{const a=clone();row(a,'KKS1').values.variance+=1;assert.notEqual(cstatus(a,'C07'),'PASS');});
+await check('sameMaterialReservationAmbiguous',()=>{const a=clone(),d=a.find(x=>x.clean?.reportId==='COOIS_COMPONENTS')!.clean as any;const duplicate=structuredClone(d.rows[0]);duplicate.values.reservation_item='9999';d.rows.push(duplicate);assert.notEqual(cstatus(a,'C02'),'PASS');});
+await check('requestReviewWithoutExplanationRejected',async()=>assert.rejects(()=>appendEvent(startCase(reconcile(good)),'C01','REQUEST_REVIEW','QA','note',['raw:1'])));
+await check('reviewRequestDoesNotApproveFailingControl',async()=>{const a=clone();row(a,'KOB1').values.amount_lc+=1;let c=startCase(reconcile(a));c=await appendEvent(c,'C04','EXPLAIN','QA','Mismatch requires review',['KOB1:4']);c=await appendEvent(c,'C04','REQUEST_REVIEW','QA','Review please',['KOB1:4']);assert.notEqual(c.run.controls.find(x=>x.id==='C04')!.technicalStatus,'PASS');const f=await exportControlCase(c);assert.equal(JSON.parse(f.text).approval,'NOT_APPROVED');assert.equal(await sha256Hex(new TextEncoder().encode(f.text)),f.manifest.sha256);});
+await check('appendEventAsyncSnapshotIsolation',async()=>{const c:any=structuredClone(startCase(reconcile(good)));const p=appendEvent(c,'C01','EXPLAIN','QA','Snapshot check',['MB51:4']);c.run.sourceHash='f'.repeat(64);c.events.push({sequence:999,controlId:'C01',action:'EXPLAIN',actor:'INJECTED',note:'bad',hash:'bad'});const result=await p;assert.equal(result.events.length,1);assert.notEqual(result.run.sourceHash,'f'.repeat(64));});
+await check('tamperedPriorHashRejectedOnAppend',async()=>{let c=startCase(reconcile(good));c=await appendEvent(c,'C01','EXPLAIN','QA','Original',['MB51:4']);const changed:any=structuredClone(c);changed.events[0].note='TAMPERED';await assert.rejects(()=>appendEvent(changed,'C01','REQUEST_REVIEW','QA','Please review',['MB51:4']));});
+await check('tamperedPriorHashRejectedOnExport',async()=>{let c=startCase(reconcile(good));c=await appendEvent(c,'C01','EXPLAIN','QA','Original',['MB51:4']);const changed:any=structuredClone(c);changed.events[0].note='TAMPERED';await assert.rejects(()=>exportControlCase(changed));});
+writeFileSync(new URL('./probe-results.json',import.meta.url),JSON.stringify({technicalReviewOnly:true,outcomes},null,2));
+console.log(JSON.stringify(outcomes,null,2));
+if(outcomes.some(x=>x.status==='FAIL'))process.exitCode=1;
+
+
+
+

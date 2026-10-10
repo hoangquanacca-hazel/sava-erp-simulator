@@ -1,0 +1,5 @@
+
+> react-example@0.0.0 test:health
+> tsx scripts/health-security.ts
+
+PASS health: allowlisted fields only; empty/present key; no key diagnostics

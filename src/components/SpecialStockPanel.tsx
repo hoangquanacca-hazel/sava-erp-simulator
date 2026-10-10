@@ -16,13 +16,13 @@ import {
 interface SpecialStockPanelProps {
   stockState: SpecialStockEState;
   params: MTOParameters;
-  currentStep: number;
+  lastExecutedStep: number;
 }
 
 export const SpecialStockPanel: React.FC<SpecialStockPanelProps> = ({
   stockState,
   params,
-  currentStep,
+  lastExecutedStep,
 }) => {
   const isValuated = params.stockType === 'Valuated';
 
@@ -98,9 +98,9 @@ export const SpecialStockPanel: React.FC<SpecialStockPanelProps> = ({
           </div>
 
           <div className="text-[10px] text-slate-500 truncate">
-            {currentStep < 2
+            {lastExecutedStep < 2
               ? 'Chưa tạo PR mua hàng'
-              : currentStep === 2
+              : lastExecutedStep === 2
               ? 'Đã dự trù theo MRP (MD02)'
               : 'Đã xuất kho đưa vào ép phun (261E)'}
           </div>
@@ -118,7 +118,7 @@ export const SpecialStockPanel: React.FC<SpecialStockPanelProps> = ({
 
           <div className="flex items-baseline justify-between pt-1">
             <span className="text-sm sm:text-base font-bold text-white font-mono">
-              {stockState.wipValueVND > 0 ? 'Đang gia công/Lỗi' : '0 ₫'}
+              {stockState.wipValueVND !== 0 ? 'Số dư chi phí TK 154' : '0 ₫'}
             </span>
             <span className="font-mono text-amber-400 text-xs font-semibold">
               {formatVND(stockState.wipValueVND)}
@@ -126,8 +126,8 @@ export const SpecialStockPanel: React.FC<SpecialStockPanelProps> = ({
           </div>
 
           <div className="text-[10px] text-slate-500 truncate">
-            {stockState.wipValueVND > 0
-              ? 'Chi phí treo tại xưởng ép'
+            {stockState.wipValueVND !== 0
+              ? 'Theo số dư chứng từ đã ghi nhận'
               : 'Không có dở dang tồn đọng'}
           </div>
         </div>
@@ -154,7 +154,7 @@ export const SpecialStockPanel: React.FC<SpecialStockPanelProps> = ({
           <div className="text-[10px] text-slate-500 truncate">
             {!isValuated && stockState.finishedGoodsQuantity > 0
               ? 'Non-valuated: Tồn kho vật lý (Giá trị sổ sách = 0 đ)'
-              : currentStep >= 5
+              : lastExecutedStep >= 5
               ? 'Đã xuất giao khách (PGI 601E)'
               : 'Sẵn sàng trong kho'}
           </div>

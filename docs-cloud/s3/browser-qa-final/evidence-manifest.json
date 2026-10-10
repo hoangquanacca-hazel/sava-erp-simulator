@@ -1,0 +1,25 @@
+{
+  "codeCommit": "cbfa51af487b82562a88ee15e01fecb749e18cf3",
+  "files": [
+    {
+      "file": "QA_REPORT.md",
+      "bytes": 2406,
+      "sha256": "c148e3a751bbc0dcb02face25f632ccdce0c41822ccbcdb09e175a2248cdfb1d"
+    },
+    {
+      "file": "qa-results.json",
+      "bytes": 62677,
+      "sha256": "ec7b2d9707f36dda2342354a7e7ad61cad1ecfb9345842830658c9adf7d357cd"
+    },
+    {
+      "file": "datalab-clean.jpg",
+      "bytes": 932010,
+      "sha256": "d0067fefca77645a2e3cdc88a17b69410ab42b558fbf1c7325723cb776080a07"
+    },
+    {
+      "file": "webinar-restored-off.jpg",
+      "bytes": 98029,
+      "sha256": "22693161c3c1b780adfe18fb7fa7b2b0602315836355de580ad3e97938510143"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "decisionDate": "2026-10-08",
+  "approvedBy": "Mr Quan",
+  "nearTermObjective": "Complete and independently accept P0 Manufacturing for human-approved pilot",
+  "activePriority": [
+    "P0"
+  ],
+  "laterPriorities": [
+    "P1",
+    "P2"
+  ],
+  "currentTechnicalStage": "S4_SIM_IMPLEMENTED",
+  "p0BusinessAcceptance": "PENDING",
+  "remainingOrder": [
+    "S4 business evidence and fixture approval",
+    "actual download verification and golden/TT99 review",
+    "S5 controlled Manufacturing MART and C08 commentary",
+    "S6 independent M01-M10 acceptance",
+    "human-approved pilot"
+  ],
+  "noGateWaiver": true,
+  "deployMergePushAuthorized": false,
+  "decisionDocument": "P0-FOCUS-DECISION.md"
+}

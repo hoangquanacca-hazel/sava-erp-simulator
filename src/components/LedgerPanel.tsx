@@ -7,6 +7,7 @@ import {
   TrialBalanceResult,
   AcdocaLine,
 } from '../types';
+import { journalDescription } from '../presentation/finance';
 import { formatVND, computeTrialBalance } from '../utils/calculator';
 import { selectTrialBalance } from '../utils/acdoca';
 import { exportFullERPPackageExcel } from '../utils/excelService';
@@ -125,7 +126,7 @@ export const LedgerPanel: React.FC<LedgerPanelProps> = ({
       // General voucher / tcode / description matching
       const isSearchMatchingGeneral =
         e.voucherNo.toLowerCase().includes(q) ||
-        e.description.toLowerCase().includes(q) ||
+        journalDescription(e,params).toLowerCase().includes(q) ||
         e.tCode.toLowerCase().includes(q) ||
         e.costObject.toLowerCase().includes(q) ||
         (e.note && e.note.toLowerCase().includes(q));
@@ -148,7 +149,7 @@ export const LedgerPanel: React.FC<LedgerPanelProps> = ({
 
       return matchesSearch && matchesStepDropdown && matchesAccountDropdown;
     });
-  }, [entries, searchTerm, selectedAccount, selectedStep]);
+  }, [entries, searchTerm, selectedAccount, selectedStep, params]);
 
   // Filtered sub-totals
   const filteredDebit = filteredEntries.reduce((acc, curr) => acc + curr.amount, 0);
@@ -618,8 +619,8 @@ export const LedgerPanel: React.FC<LedgerPanelProps> = ({
                           B{e.stepIndex}: {e.tCode}
                         </span>
                       </td>
-                      <td className="py-2 px-3 font-sans text-slate-200 max-w-[280px] truncate" title={e.description}>
-                        {e.description}
+                      <td className="py-2 px-3 font-sans text-slate-200 max-w-[280px] truncate" title={journalDescription(e,params)}>
+                        {journalDescription(e,params)}
                       </td>
                       <td className="py-2 px-3 text-center">
                         <span className="font-bold text-amber-400 px-1.5 py-0.5 rounded bg-amber-500/10 border border-amber-500/20">

@@ -1,0 +1,104 @@
+{
+  "gates": [
+    {
+      "gate_id": "P0-MFG-M01",
+      "title": "Scope và nguồn",
+      "pass_requirement": "Same approved namespace/company/plant/period/cutoff, source_kind và variant; đầy đủ D01–D10/D16/SUP01 hoặc documented applicable subset",
+      "negative_evidence": "Cố trộn client/period/profile phải BLOCK; no invented sample approval",
+      "reviewer_role": "Finance SME",
+      "status": "NOT_EXECUTED",
+      "evidence_ids": [],
+      "approver": null
+    },
+    {
+      "gate_id": "P0-MFG-M02",
+      "title": "RAW bất biến",
+      "pass_requirement": "Upload/download SHA-256 giống; tamper denied hoặc detected; bytes/headers/layout nguyên bản; new run không overwrite",
+      "negative_evidence": "Sửa byte/hash mismatch chặn toàn run; hash một mình không đủ proof write-once",
+      "reviewer_role": "QA",
+      "status": "NOT_EXECUTED",
+      "evidence_ids": [],
+      "approver": null
+    },
+    {
+      "gate_id": "P0-MFG-M03",
+      "title": "Adapter và DQ",
+      "pass_requirement": "Required fields typed; zero silent row loss; counts conservation; malformed/leading-zero/locale/duplicate corpus có expected outcomes",
+      "negative_evidence": "Missing numeric không biến 0; truncated export, ambiguous header phải block",
+      "reviewer_role": "QA",
+      "status": "NOT_EXECUTED",
+      "evidence_ids": [],
+      "approver": null
+    },
+    {
+      "gate_id": "P0-MFG-M04",
+      "title": "COOIS ↔ MB51 consumption",
+      "pass_requirement": "C01 material-doc identity + C02 net 261/262, reservation mapping/cutoff/UoM đúng; ambiguity rõ",
+      "negative_evidence": "Same component lặp, reversal khác kỳ, missing conversion không false-match",
+      "reviewer_role": "Finance SME",
+      "status": "NOT_EXECUTED",
+      "evidence_ids": [],
+      "approver": null
+    },
+    {
+      "gate_id": "P0-MFG-M05",
+      "title": "Header ↔ GR",
+      "pass_requirement": "C03 delivered snapshot ↔ cumulative 101/102 with opening and output scope",
+      "negative_evidence": "Partial output/by-product/cross-period không bị cộng sai; unexplained diff chặn",
+      "reviewer_role": "Finance SME",
+      "status": "NOT_EXECUTED",
+      "evidence_ids": [],
+      "approver": null
+    },
+    {
+      "gate_id": "P0-MFG-M06",
+      "title": "KOB1 ↔ KKS1",
+      "pass_requirement": "C04 classified cost bridge cùng currency/target version; all differences explained by source evidence",
+      "negative_evidence": "Không dùng sum KOB1=variance; thiếu WIP/overhead basis phải BLOCKED",
+      "reviewer_role": "Finance SME",
+      "status": "NOT_EXECUTED",
+      "evidence_ids": [],
+      "approver": null
+    },
+    {
+      "gate_id": "P0-MFG-M07",
+      "title": "KKS1/settlement ↔ GL",
+      "pass_requirement": "C05 includes SUP01 settlement receiver/reference bridge and GL view mapping; balanced financial basis",
+      "negative_evidence": "Thiếu link hoặc lặp settlement không PASS; production vs sales-order policy tách",
+      "reviewer_role": "Auditor",
+      "status": "NOT_EXECUTED",
+      "evidence_ids": [],
+      "approver": null
+    },
+    {
+      "gate_id": "P0-MFG-M08",
+      "title": "CK13N standard-cost drill",
+      "pass_requirement": "C06 header/itemization same estimate/lot/version/currency/cost view; additive leaves only",
+      "negative_evidence": "Zero lot size/mixed versions/parent subtotals đều bắt được",
+      "reviewer_role": "Finance SME",
+      "status": "NOT_EXECUTED",
+      "evidence_ids": [],
+      "approver": null
+    },
+    {
+      "gate_id": "P0-MFG-M09",
+      "title": "Variance và commentary",
+      "pass_requirement": "C07 explicit residual; C08 every numeric assertion traceable to approved mart; fact vs hypothesis; AI failure safe",
+      "negative_evidence": "Residual không bằng chứng nguyên nhân; commentary chặn failed inputs",
+      "reviewer_role": "Auditor",
+      "status": "NOT_EXECUTED",
+      "evidence_ids": [],
+      "approver": null
+    },
+    {
+      "gate_id": "P0-MFG-M10",
+      "title": "Independent release",
+      "pass_requirement": "No self-approval; reproducible evidence; regression/security/performance/restore + release human signoff",
+      "negative_evidence": "Repeated upload/replay/concurrent run no double count; rollback rehearsal",
+      "reviewer_role": "Human release owner",
+      "status": "NOT_EXECUTED",
+      "evidence_ids": [],
+      "approver": null
+    }
+  ]
+}

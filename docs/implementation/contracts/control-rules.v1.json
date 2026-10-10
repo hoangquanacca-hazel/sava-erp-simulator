@@ -1,0 +1,240 @@
+{
+  "version": "1.0.0-draft",
+  "controls": [
+    {
+      "control_id": "C01",
+      "version": "1.0.0-draft",
+      "input_reports": [
+        "D01",
+        "D06"
+      ],
+      "logic": "Material-document item identity and normalized quantity equality",
+      "comparison_grain": "year/document/item + namespace",
+      "acceptance_gate": "P0-MFG-M04",
+      "required_namespace": [
+        "source_system",
+        "client"
+      ],
+      "required_scope": [
+        "cutoff",
+        "period",
+        "currency_type",
+        "currency",
+        "valuation_view"
+      ],
+      "tolerance_policy_id": null,
+      "missing_input_status": "BLOCKED",
+      "ambiguous_join_status": "BLOCKED",
+      "unmatched_handling": "retain all sides with source coordinates and exception reason; never drop unmatched",
+      "status": "NOT_IMPLEMENTED",
+      "independent_review_required": true
+    },
+    {
+      "control_id": "C02",
+      "version": "1.0.0-draft",
+      "input_reports": [
+        "D01",
+        "D03"
+      ],
+      "logic": "Cumulative net issues ↔ component withdrawn; output-adjusted usage variance",
+      "comparison_grain": "order/reservation/item/UoM/cutoff",
+      "acceptance_gate": "P0-MFG-M04",
+      "required_namespace": [
+        "source_system",
+        "client"
+      ],
+      "required_scope": [
+        "cutoff",
+        "period",
+        "currency_type",
+        "currency",
+        "valuation_view"
+      ],
+      "tolerance_policy_id": null,
+      "missing_input_status": "BLOCKED",
+      "ambiguous_join_status": "BLOCKED",
+      "unmatched_handling": "retain all sides with source coordinates and exception reason; never drop unmatched",
+      "status": "NOT_IMPLEMENTED",
+      "independent_review_required": true
+    },
+    {
+      "control_id": "C03",
+      "version": "1.0.0-draft",
+      "input_reports": [
+        "D01",
+        "D02"
+      ],
+      "logic": "Cumulative net GR ↔ header delivered with opening/output bridge",
+      "comparison_grain": "order/output material/UoM/cutoff",
+      "acceptance_gate": "P0-MFG-M05",
+      "required_namespace": [
+        "source_system",
+        "client"
+      ],
+      "required_scope": [
+        "cutoff",
+        "period",
+        "currency_type",
+        "currency",
+        "valuation_view"
+      ],
+      "tolerance_policy_id": null,
+      "missing_input_status": "BLOCKED",
+      "ambiguous_join_status": "BLOCKED",
+      "unmatched_handling": "retain all sides with source coordinates and exception reason; never drop unmatched",
+      "status": "NOT_IMPLEMENTED",
+      "independent_review_required": true
+    },
+    {
+      "control_id": "C04",
+      "version": "1.0.0-draft",
+      "input_reports": [
+        "D07",
+        "D08"
+      ],
+      "logic": "Classified costs + approved adjustments ↔ variance control-cost basis",
+      "comparison_grain": "order/CO area/period/currency/target version",
+      "acceptance_gate": "P0-MFG-M06",
+      "required_namespace": [
+        "source_system",
+        "client"
+      ],
+      "required_scope": [
+        "cutoff",
+        "period",
+        "currency_type",
+        "currency",
+        "valuation_view"
+      ],
+      "tolerance_policy_id": null,
+      "missing_input_status": "BLOCKED",
+      "ambiguous_join_status": "BLOCKED",
+      "unmatched_handling": "retain all sides with source coordinates and exception reason; never drop unmatched",
+      "status": "NOT_IMPLEMENTED",
+      "independent_review_required": true
+    },
+    {
+      "control_id": "C05",
+      "version": "1.0.0-draft",
+      "input_reports": [
+        "D08",
+        "SUP01",
+        "D16"
+      ],
+      "logic": "Settlement-relevant variance → allocated settlement → GL",
+      "comparison_grain": "sender/receiver/period/ledger/document line",
+      "acceptance_gate": "P0-MFG-M07",
+      "required_namespace": [
+        "source_system",
+        "client"
+      ],
+      "required_scope": [
+        "cutoff",
+        "period",
+        "currency_type",
+        "currency",
+        "valuation_view"
+      ],
+      "tolerance_policy_id": null,
+      "missing_input_status": "BLOCKED",
+      "ambiguous_join_status": "BLOCKED",
+      "unmatched_handling": "retain all sides with source coordinates and exception reason; never drop unmatched",
+      "status": "NOT_IMPLEMENTED",
+      "independent_review_required": true
+    },
+    {
+      "control_id": "C06",
+      "version": "1.0.0-draft",
+      "input_reports": [
+        "D09",
+        "D10"
+      ],
+      "logic": "Additive itemization leaf total ↔ cost estimate header",
+      "comparison_grain": "full estimate identity/lot/view/currency",
+      "acceptance_gate": "P0-MFG-M08",
+      "required_namespace": [
+        "source_system",
+        "client"
+      ],
+      "required_scope": [
+        "cutoff",
+        "period",
+        "currency_type",
+        "currency",
+        "valuation_view"
+      ],
+      "tolerance_policy_id": null,
+      "missing_input_status": "BLOCKED",
+      "ambiguous_join_status": "BLOCKED",
+      "unmatched_handling": "retain all sides with source coordinates and exception reason; never drop unmatched",
+      "status": "NOT_IMPLEMENTED",
+      "independent_review_required": true
+    },
+    {
+      "control_id": "C07",
+      "version": "1.0.0-draft",
+      "input_reports": [
+        "D01",
+        "D03",
+        "D04",
+        "D05",
+        "D07",
+        "D08",
+        "D09",
+        "D10"
+      ],
+      "logic": "Aligned actual−target = classified drivers + explicit residual",
+      "comparison_grain": "order/period/currency/cost-basis profile",
+      "acceptance_gate": "P0-MFG-M09",
+      "required_namespace": [
+        "source_system",
+        "client"
+      ],
+      "required_scope": [
+        "cutoff",
+        "period",
+        "currency_type",
+        "currency",
+        "valuation_view"
+      ],
+      "tolerance_policy_id": null,
+      "missing_input_status": "BLOCKED",
+      "ambiguous_join_status": "BLOCKED",
+      "unmatched_handling": "retain all sides with source coordinates and exception reason; never drop unmatched",
+      "status": "NOT_IMPLEMENTED",
+      "independent_review_required": true
+    },
+    {
+      "control_id": "C08",
+      "version": "1.0.0-draft",
+      "input_reports": [
+        "D16"
+      ],
+      "logic": "Numeric commentary claims trace to approved mart and controls",
+      "comparison_grain": "snapshot/KPI/lineage identifiers",
+      "acceptance_gate": "P0-MFG-M09",
+      "required_namespace": [
+        "source_system",
+        "client"
+      ],
+      "required_scope": [
+        "cutoff",
+        "period",
+        "currency_type",
+        "currency",
+        "valuation_view"
+      ],
+      "tolerance_policy_id": null,
+      "missing_input_status": "BLOCKED",
+      "ambiguous_join_status": "BLOCKED",
+      "unmatched_handling": "retain all sides with source coordinates and exception reason; never drop unmatched",
+      "status": "NOT_IMPLEMENTED",
+      "independent_review_required": true,
+      "additional_dependencies": [
+        "approved mart snapshot",
+        "C01–C07 results",
+        "commentary claim/evidence mapping"
+      ]
+    }
+  ]
+}

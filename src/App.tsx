@@ -31,6 +31,8 @@ import { Header } from './components/Header';
 import { CommandBar } from './components/CommandBar';
 import { SetupScreen } from './components/SetupScreen';
 import { StepCard } from './components/StepCard';
+import { postedCostCard } from './presentation/finance';
+import { SapReportsPanel } from './components/SapReportsPanel';
 import { LedgerPanel } from './components/LedgerPanel';
 import { SalesOrderCard } from './components/SalesOrderCard';
 import { SpecialStockPanel } from './components/SpecialStockPanel';
@@ -122,7 +124,7 @@ export default function App() {
     }
   });
   const [leadModalOpen, setLeadModalOpen] = useState<boolean>(false);
-  const [leadModalTriggerReason, setLeadModalTriggerReason] = useState<'step3' | 'excel' | 'aitutor' | 'general'>('step3');
+  const [leadModalTriggerReason, setLeadModalTriggerReason] = useState<'step3' | 'excel' | 'ai_tutor' | 'general'>('step3');
   const [pendingActionAfterLead, setPendingActionAfterLead] = useState<(() => void) | null>(null);
 
   // Simulated Session Limits & Licencing State
@@ -198,26 +200,29 @@ export default function App() {
   const stockEState = useMemo(() => {
     const executedSteps = [1, 2, 3, 4, 5, 6, 7].filter((id) => stepStates[id]?.isExecuted);
     const highestStep = executedSteps.length > 0 ? Math.max(...executedSteps) : 0;
-    return computeStockEState(
+    const stock=computeStockEState(
       highestStep,
       params,
       computed,
       stepStates[4].qmDecision,
       stepStates[4].qmReworkHandled
     );
-  }, [stepStates, params, computed]);
+    const balance=(account:string)=>ACDOCA_TABLE.filter(l=>l.glAccount===account).reduce((sum,l)=>sum+l.drAmount-l.crAmount,0);
+    return {...stock,wipValueVND:balance('154'),finishedGoodsValueVND:balance('155')};
+  }, [stepStates, params, computed, ACDOCA_TABLE]);
 
   const salesOrderCostCard = useMemo(() => {
     const executedSteps = [1, 2, 3, 4, 5, 6, 7].filter((id) => stepStates[id]?.isExecuted);
     const highestStep = executedSteps.length > 0 ? Math.max(...executedSteps) : 0;
-    return computeSalesOrderCostCard(
+    const base=computeSalesOrderCostCard(
       highestStep,
       params,
       computed,
       stepStates[4].qmReworkCost || 0,
       stepStates[4].qmScrapCost || 0
     );
-  }, [stepStates, params, computed]);
+    return postedCostCard(base,params,computed,ACDOCA_TABLE);
+  }, [stepStates, params, computed, ACDOCA_TABLE]);
 
   // Reset function
   const handleReset = () => {
@@ -290,7 +295,7 @@ export default function App() {
 
   const handleToggleAITutor = () => {
     if (!aiTutorOpen && !isRegistered && !adminSettings.bypassSessionLimits) {
-      setLeadModalTriggerReason('aitutor');
+      setLeadModalTriggerReason('ai_tutor');
       setPendingActionAfterLead(() => () => setAiTutorOpen(true));
       setLeadModalOpen(true);
       return;
@@ -544,7 +549,7 @@ export default function App() {
     setAiInitialQuestion(question);
 
     if (!isRegistered && !adminSettings.bypassSessionLimits) {
-      setLeadModalTriggerReason('aitutor');
+      setLeadModalTriggerReason('ai_tutor');
       setPendingActionAfterLead(() => () => setAiTutorOpen(true));
       setLeadModalOpen(true);
       return;
@@ -848,6 +853,7 @@ export default function App() {
               onExecute={() => handleExecuteStep(activeStepDef.id)}
               onQMDecision={handleQMDecision}
               onHandleQMResolution={handleQMResolution}
+              acdocaTable={ACDOCA_TABLE}
               onChangeVariancePercent={handleChangeVariancePercent}
               onExplainStep={handleExplainStep}
               canExecute={
@@ -876,10 +882,13 @@ export default function App() {
                 <SpecialStockPanel
                   stockState={stockEState}
                   params={params}
-                  currentStep={currentStepId}
+                  lastExecutedStep={Math.max(0,...[1,2,3,4,5,6,7].filter(id=>stepStates[id]?.isExecuted))}
                 />
               </div>
 
+              <SapReportsPanel params={params} computed={computed} table={ACDOCA_TABLE}
+                ready={[1,2,3,4,5,6,7].every(id=>stepStates[id]?.isExecuted) && extraAcdoca.length===0 &&
+                  [1,2,3,4,5,6,7].every(id=>!stepStates[id]?.qmReworkCost && !stepStates[id]?.qmScrapCost)} />
               {/* General Ledger Panel (Full width) */}
               <LedgerPanel
                 entries={allJournalEntries}
@@ -901,6 +910,7 @@ export default function App() {
 
               {/* Order Profitability Dashboard (Recharts: Doanh thu 511, Giá vốn 632, Lợi nhuận gộp) */}
               <OrderProfitDashboard
+                acdocaTable={ACDOCA_TABLE}
                 params={params}
                 computed={computed}
                 cardState={salesOrderCostCard}
