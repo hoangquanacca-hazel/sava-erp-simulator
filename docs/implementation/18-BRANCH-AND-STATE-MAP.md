@@ -1,5 +1,8 @@
 # 18 — Bản đồ nhánh và trạng thái (10/10/2026)
 
+> **CẬP NHẬT 10/10/2026 (sau PR #23):** `main` = `30494b8` đã chứa nhánh Codex + toàn bộ Q1/Q4/Q5, CI, ESLint, oracle giá thành. Các mô tả "main = aa2b093", "chưa đưa sang" bên dưới là lịch sử, KHÔNG còn đúng. Nhánh cần giữ: `main`, `feat/sim-p0-mfg` (tham chiếu), `cloud/s1-report-completion`. Xem DEC-021…027 trong `docs-cloud/DECISIONS.md`.
+
+
 Mục đích: cho biết **cái gì nằm ở nhánh nào**, hai dòng việc song song khác nhau ra sao, và **thứ tự đưa phần hữu ích của nhánh cloud sang nhánh gốc** mà không làm lệch số liệu. Đọc cùng `17-DECISION-LOG-CONSOLIDATED.md`.
 
 Cơ sở: `git` ngày 10/10/2026 (số liệu đếm file/commit/thư mục); nội dung cloud S1–S4 đọc qua commit message, tiêu đề AUD và danh sách file. Chưa chạy lại test của hai nhánh khi lập bản đồ này.
