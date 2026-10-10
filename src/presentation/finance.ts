@@ -1,4 +1,3 @@
-import { VARIANT_COLORS, VARIANT_PACKAGINGS } from '../types';
 import type { AcdocaLine, BOMComponentNode, MTOComputed, MTOParameters, RawMaterialBOMItem, SalesOrderCostCardState, JournalEntry } from '../types';
 import { roundShare, wipStatusOf } from '../features/wip';
 
@@ -69,17 +68,23 @@ export function dashboardView(p:MTOParameters,c:MTOComputed,t:AcdocaLine[]) {
 }
 
 
-/** Master editor fallback describes the SAME inputs currently used by computeMTO. */
+/**
+ * Master editor fallback describes the SAME inputs currently used by computeMTO.
+ * Dựng theo itemCode (không theo vị trí dòng) từ bomItemBreakdowns: định mức/1000 suy từ grossQty, đơn giá suy từ
+ * totalCost của chính dòng đó nên Σ lưới = materialCost. Breakdown không có tỷ lệ hao hụt → hằng số theo itemCode
+ * (nhựa/phụ gia 2,5%; masterbatch và bao bì 1%), đúng như computeMTO đang dùng.
+ */
 export function displayedBomInputs(p:MTOParameters,c:MTOComputed):RawMaterialBOMItem[]{
   if(p.bomItems?.length)return p.bomItems;
-  const color=p.strategy==='Strategy 25'?VARIANT_COLORS.find(v=>v.id===p.variantColorId):undefined;
-  const packaging=p.strategy==='Strategy 25'?VARIANT_PACKAGINGS.find(v=>v.id===p.variantPackagingId):undefined;
-  return (c.bomItemBreakdowns??[]).map((b,index)=>({
-    id:`computed-bom-${index}`,itemCode:b.itemCode,name:b.name,materialType:b.itemCode.startsWith('VERP')?'VERP':'ROH',
-    qtyPer1000:index===0?p.materialNormKgPer1000:b.itemCode==='ROH-MB-COLOR'?Number((p.materialNormKgPer1000*0.02).toFixed(2)):1000,
-    scrapRatePercent:index===0?2.5:1,
-    unitPrice:index===0?c.effectiveResinPricePerKg:b.itemCode==='ROH-MB-COLOR'?(color?.resinCostAddonPerKg??0)*50:packaging?.unitCostAddon??0,uom:b.uom
-  }));
+  const lots=p.orderQuantity/1000;
+  return (c.bomItemBreakdowns??[]).map((b,index)=>{
+    const scrapRatePercent=b.itemCode==='ROH-MB-COLOR'||b.itemCode.startsWith('VERP')?1:2.5;
+    const gross=lots>0&&b.grossQty>0?b.grossQty:0;
+    const qtyPer1000=gross>0?Number((gross/lots/(1+scrapRatePercent/100)).toFixed(4)):0;
+    const basis=lots*qtyPer1000*(1+scrapRatePercent/100);
+    return {id:`computed-bom-${index}`,itemCode:b.itemCode,name:b.name,materialType:b.itemCode.startsWith('VERP')?'VERP':'ROH',
+      qtyPer1000,scrapRatePercent,unitPrice:basis>0?b.totalCost/basis:0,uom:b.uom};
+  });
 }
 export function postedCostCard(base:SalesOrderCostCardState,p:MTOParameters,c:MTOComputed,t:AcdocaLine[]):SalesOrderCostCardState{
   const view=dashboardView(p,c,t);

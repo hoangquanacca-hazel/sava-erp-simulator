@@ -64,6 +64,9 @@ jobs:
       - name: S6 evidence
         if: ${{ !cancelled() }}
         run: npm run test:s6
+      - name: Oracle giá thành độc lập (Q1+Q4+Q5; a0_oracle đọc từ oracle_costing)
+        if: ${{ !cancelled() }}
+        run: npm run test:costing
       - name: Build
         if: ${{ !cancelled() }}
         run: npm run build
