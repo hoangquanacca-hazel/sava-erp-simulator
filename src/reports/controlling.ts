@@ -94,11 +94,13 @@ export function buildKks1(ev: ScenarioEvents, computed: MTOComputed, table: Acdo
  */
 export function buildCk13n(computed: MTOComputed, matnr: string, lotSize: number): ReportOutput {
   const items: [string, string, string, string, number][] = [
-    ['101', 'Vật liệu trực tiếp', '621', '632110', computed.directMaterialCost621],
+    // Vật liệu trực tiếp tách theo từng dòng BOM (Σ = directMaterialCost621) — S4/Q5: thấy ROH-ADD-ESD
+    ...computed.bomItemBreakdowns.map((b): [string, string, string, string, number] =>
+      ['101', `Vật liệu trực tiếp — ${b.itemCode}`, '621', '632110', b.totalCost]),
     ['102', 'Nhân công trực tiếp', '622', '632120', computed.directLaborCost622],
     ['103', 'Máy & khấu hao', '627', '632130', computed.machineOverhead627],
     ['104', 'Sản xuất chung', '627', '632140', computed.factoryOverhead627],
-    ['104', 'Add-on biến thể (SXC)', '627', '632140', computed.variantAddonTotal ?? 0],
+    ['104', 'Công đoạn phủ texture theo cái (add-on biến thể, SXC)', '627', '632140', computed.variantAddonTotal ?? 0],
   ];
   return {
     reportId: 'CK13N',

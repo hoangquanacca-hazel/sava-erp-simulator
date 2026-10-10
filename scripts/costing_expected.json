@@ -44,8 +44,9 @@
   "sxc": 3710263,
   "addon": 12000000,
   "bom": {
-   "ROH-RESIN": 11201528,
+   "ROH-RESIN": 11061800,
    "ROH-MB-COLOR": 735280,
+   "ROH-ADD-ESD": 139728,
    "VERP-PACKAGING": 14544000
   }
  },
@@ -190,7 +191,8 @@
   "sxc": 2487921,
   "addon": 12000000,
   "bom": {
-   "ROH-RESIN": 11201528
+   "ROH-RESIN": 11061800,
+   "ROH-ADD-ESD": 139728
   }
  },
  {
@@ -210,7 +212,8 @@
   "sxc": 3037361,
   "addon": 12000000,
   "bom": {
-   "ROH-RESIN": 11201528,
+   "ROH-RESIN": 11061800,
+   "ROH-ADD-ESD": 139728,
    "VERP-PACKAGING": 6868000
   }
  },
@@ -231,7 +234,8 @@
   "sxc": 3651441,
   "addon": 12000000,
   "bom": {
-   "ROH-RESIN": 11201528,
+   "ROH-RESIN": 11061800,
+   "ROH-ADD-ESD": 139728,
    "VERP-PACKAGING": 14544000
   }
  },
@@ -382,8 +386,9 @@
   "sxc": 2519594,
   "addon": 12000000,
   "bom": {
-   "ROH-RESIN": 11201528,
-   "ROH-MB-COLOR": 395920
+   "ROH-RESIN": 11061800,
+   "ROH-MB-COLOR": 395920,
+   "ROH-ADD-ESD": 139728
   }
  },
  {
@@ -403,8 +408,9 @@
   "sxc": 3069034,
   "addon": 12000000,
   "bom": {
-   "ROH-RESIN": 11201528,
+   "ROH-RESIN": 11061800,
    "ROH-MB-COLOR": 395920,
+   "ROH-ADD-ESD": 139728,
    "VERP-PACKAGING": 6868000
   }
  },
@@ -425,8 +431,9 @@
   "sxc": 3683114,
   "addon": 12000000,
   "bom": {
-   "ROH-RESIN": 11201528,
+   "ROH-RESIN": 11061800,
    "ROH-MB-COLOR": 395920,
+   "ROH-ADD-ESD": 139728,
    "VERP-PACKAGING": 14544000
   }
  },
@@ -577,8 +584,9 @@
   "sxc": 2533169,
   "addon": 12000000,
   "bom": {
-   "ROH-RESIN": 11201528,
-   "ROH-MB-COLOR": 565600
+   "ROH-RESIN": 11061800,
+   "ROH-MB-COLOR": 565600,
+   "ROH-ADD-ESD": 139728
   }
  },
  {
@@ -598,8 +606,9 @@
   "sxc": 3082609,
   "addon": 12000000,
   "bom": {
-   "ROH-RESIN": 11201528,
+   "ROH-RESIN": 11061800,
    "ROH-MB-COLOR": 565600,
+   "ROH-ADD-ESD": 139728,
    "VERP-PACKAGING": 6868000
   }
  },
@@ -620,8 +629,9 @@
   "sxc": 3696689,
   "addon": 12000000,
   "bom": {
-   "ROH-RESIN": 11201528,
+   "ROH-RESIN": 11061800,
    "ROH-MB-COLOR": 565600,
+   "ROH-ADD-ESD": 139728,
    "VERP-PACKAGING": 14544000
   }
  },
@@ -772,8 +782,9 @@
   "sxc": 2546743,
   "addon": 12000000,
   "bom": {
-   "ROH-RESIN": 11201528,
-   "ROH-MB-COLOR": 735280
+   "ROH-RESIN": 11061800,
+   "ROH-MB-COLOR": 735280,
+   "ROH-ADD-ESD": 139728
   }
  },
  {
@@ -793,8 +804,9 @@
   "sxc": 3096183,
   "addon": 12000000,
   "bom": {
-   "ROH-RESIN": 11201528,
+   "ROH-RESIN": 11061800,
    "ROH-MB-COLOR": 735280,
+   "ROH-ADD-ESD": 139728,
    "VERP-PACKAGING": 6868000
   }
  },
@@ -815,8 +827,9 @@
   "sxc": 3710263,
   "addon": 12000000,
   "bom": {
-   "ROH-RESIN": 11201528,
+   "ROH-RESIN": 11061800,
    "ROH-MB-COLOR": 735280,
+   "ROH-ADD-ESD": 139728,
    "VERP-PACKAGING": 14544000
   }
  },

@@ -21,7 +21,7 @@ for (const e of cases) {
   if (!preset) { fails.push(`${e.id}: không thấy preset ${e.src}`); continue; }
   const c = computeMTO({ ...preset.params, ...e.override });
   const bomTs: Record<string, number> = {};
-  for (const b of c.bomItemBreakdowns) bomTs[b.itemCode.startsWith('ROH-MB') || b.itemCode.startsWith('VERP') ? b.itemCode : 'ROH-RESIN'] = b.totalCost;
+  for (const b of c.bomItemBreakdowns) bomTs[b.itemCode.startsWith('ROH-MB') || b.itemCode.startsWith('ROH-ADD') || b.itemCode.startsWith('VERP') ? b.itemCode : 'ROH-RESIN'] = b.totalCost;
   const got: Record<string, number> = {
     M: c.directMaterialCost621, L: c.directLaborCost622, machine: c.machineOverhead627, sxc: c.factoryOverhead627,
     addon: c.variantAddonTotal, O: c.effectiveMachineCost + c.variantAddonTotal, P: c.plannedCost, Rev: c.totalRevenue,

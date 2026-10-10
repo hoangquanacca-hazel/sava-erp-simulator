@@ -182,6 +182,13 @@ async function main() {
     const reps = buildAll(s);
     if (reps.length !== 11) throw new Error(`phải có 11 báo cáo, có ${reps.length}`);
     for (const i of reconcile(reps, s.table, e, s.params)) fails.push(`${label}: ${i}`);
+    // Q5 = (a) (S4): dòng BOM ROH-ADD-ESD phải xuất hiện ở MB51/COOIS_CMP/CK13N đúng khi và chỉ khi preset có phụ phí texture/kg
+    // (đáp án theo oracle: denso-sensor có, samsung/canon không — không suy từ chính computeMTO).
+    const wantEsd = e.src === 'denso-sensor';
+    for (const id of ['MB51', 'COOIS_CMP', 'CK13N']) {
+      const hasEsd = reps.find((r) => r.reportId === id)!.rows.some((row) => row.some((cell) => cell.includes('ROH-ADD-ESD')));
+      if (hasEsd !== wantEsd) fails.push(`${label}: ${id} ${wantEsd ? 'thiếu' : 'thừa'} dòng ROH-ADD-ESD`);
+    }
 
     const again = buildAll(scenario(e)); // lần sinh thứ 2: timestamp ACDOCA khác → hash phải giữ nguyên
     for (let ri = 0; ri < reps.length; ri++) {
