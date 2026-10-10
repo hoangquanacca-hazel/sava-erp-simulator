@@ -1,7 +1,7 @@
-# CI — kiểm chứng độc lập (không do agent tự báo): typecheck, toàn bộ test, build.
-# Mọi test sai là exit != 0 → job đỏ. Không có continue-on-error. Mỗi bước chạy `if: !cancelled()` để một bước đỏ
-# không che kết quả các bước sau; job vẫn đỏ nếu bất kỳ bước nào đỏ.
-# Nhánh này chưa có ESLint và chưa có test:costing → không có hai bước đó (không thêm ở PR-1).
+# CI — kiểm chứng độc lập (không do agent tự báo): typecheck, ESLint, toàn bộ test (gồm oracle giá thành), build.
+# Mọi test sai là exit != 0 → job đỏ. KHÔNG test nào có continue-on-error; chỉ bước "ESLint — toàn repo" (ghi nợ tồn)
+# được continue-on-error. Mỗi bước chạy `if: !cancelled()` để một bước đỏ không che kết quả các bước sau;
+# job vẫn đỏ nếu bất kỳ bước chặn nào đỏ.
 name: CI
 
 on:
