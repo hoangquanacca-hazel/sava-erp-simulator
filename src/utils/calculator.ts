@@ -1501,94 +1501,111 @@ export function computeTrialBalance(entries: JournalEntry[]): {
 }
 
 /**
+ * Giờ hiển thị cho nhân công / máy ở chế độ "theo giờ" (Q6 = (b), 10/10/2026, AUD-038): đúng giờ vận hành thực tính
+ * (`computed.operatingHours`, đã gồm setup, 1 thợ/máy) — KHÔNG phải `laborHours`/`machineHours` nhập tay.
+ * Chỉ trình bày: 622 = làm tròn(hours × rate) vẫn do `computeMTO` tính. Chế độ "tổng": hours = null (không có cơ sở giờ).
+ */
+export function resolveDisplayHours(params: MTOParameters, computed: MTOComputed) {
+  const r = resolveRouting(params);
+  return {
+    laborHours: params.laborCostMode === 'hourly' ? computed.operatingHours : null,
+    laborRate: r.laborHourlyRate,
+    machineHours: params.machineCostMode === 'hourly' ? computed.operatingHours : null,
+    machineRate: r.machineHourlyRate,
+    setupHours: r.machineSetupTimeHours || 0,
+  };
+}
+
+export interface CostBreakdownItem { name: string; code: string; spec: string; cost: number }
+export interface CostBreakdownGroup { totalCost: number; items: CostBreakdownItem[] }
+
+/**
+ * Bóc tách giá thành kế hoạch theo 3 nhóm — nguồn DUY NHẤT cho BOMVisualizer và test (AUD-040).
+ * Mọi số lấy từ `computeMTO`: Σ(raw + labor + overhead) = plannedCost.
+ * Bao bì và phụ gia màu/ESD là dòng BOM (621/152); SXC 8% và công đoạn phủ texture /cái là 627.
+ */
+export function buildCostBreakdown(params: MTOParameters, computed: MTOComputed): Record<'raw_material' | 'labor' | 'overhead', CostBreakdownGroup> {
+  const h = resolveDisplayHours(params, computed);
+  const rawItems = computed.bomItemBreakdowns.map((b) => ({
+    name: b.name,
+    code: b.itemCode,
+    spec: `${formatNumber(b.grossQty, 2)} ${b.uom} @ ${formatVND(b.grossQty > 0 ? Math.round(b.totalCost / b.grossQty) : 0)}/${b.uom}`,
+    cost: b.totalCost,
+  }));
+  const laborSpec =
+    h.laborHours !== null
+      ? `${formatNumber(h.laborHours, 2)} giờ @ ${formatVND(h.laborRate)}/h — 1 thợ/máy, gồm ${h.setupHours} h setup`
+      : `${formatVND(Math.round(computed.directLaborCost622 / Math.max(1, params.orderQuantity)))}/cái`;
+  const machineSpec =
+    h.machineHours !== null
+      ? `${formatNumber(h.machineHours, 2)} giờ @ ${formatVND(h.machineRate)}/h`
+      : `${formatVND(Math.round(computed.machineOverhead627 / Math.max(1, params.orderQuantity)))}/cái`;
+  return {
+    raw_material: { totalCost: computed.directMaterialCost621, items: rawItems },
+    labor: {
+      totalCost: computed.directLaborCost622,
+      items: [{ name: 'Thợ ép phun vận hành & gọt bavia (Routing Op 0010)', code: 'ACT-LAB-OP01', spec: laborSpec, cost: computed.directLaborCost622 }],
+    },
+    overhead: {
+      totalCost: computed.totalOverhead627 + computed.variantAddonTotal,
+      items: [
+        { name: 'Khấu hao máy ép Haitian 350T & Điện năng', code: 'ACT-MACH-350T', spec: machineSpec, cost: computed.machineOverhead627 },
+        { name: 'Sản xuất chung (SXC) theo tỷ lệ (621 + 622)', code: 'ACT-SXC', spec: '8% × (621 + 622)', cost: computed.factoryOverhead627 },
+        { name: 'Công đoạn phủ texture theo cái (add-on biến thể)', code: 'SRF-TEXTURE', spec: 'Ăn mòn khuôn hoặc phủ hóa chất chống tĩnh điện', cost: computed.variantAddonTotal },
+      ],
+    },
+  };
+}
+
+/**
  * Xây dựng cấu trúc Cây Định Mức BOM (Bill of Materials) và Bóc tách Chi phí Kế hoạch
  * mô phỏng T-code SAP CS03 (Display BOM) và CK51N (Sales Order Costing Estimate).
+ * AUD-040: các nút lá lấy trực tiếp từ `computeMTO` (bomItemBreakdowns, 622, 627, add-on) nên Σ lá = plannedCost.
  */
 export function buildBOMTree(params: MTOParameters, computed: MTOComputed): BOMComponentNode {
-  const selectedColor = VARIANT_COLORS.find((c) => c.id === params.variantColorId) || VARIANT_COLORS[0];
   const selectedTexture = VARIANT_TEXTURES.find((t) => t.id === params.variantTextureId) || VARIANT_TEXTURES[0];
   const selectedPackaging = VARIANT_PACKAGINGS.find((p) => p.id === params.variantPackagingId) || VARIANT_PACKAGINGS[0];
 
   const totalPlannedCost = Math.max(1, computed.plannedCost || 1);
   const qty = Math.max(1, params.orderQuantity);
+  const share = (v: number) => Number(((v / totalPlannedCost) * 100).toFixed(1));
+  const hrs = resolveDisplayHours(params, computed);
 
-  // 1. Raw Resin Base
-  const baseResinCost = Math.round(computed.totalResinKg * params.resinPricePerKg);
-  const baseResinQtyPerUnit = params.materialNormKgPer1000 / 1000;
-
-  // 2. Color Masterbatch Addon
-  const colorResinAddon = selectedColor.resinCostAddonPerKg || 0;
-  const colorTotalCost = Math.round(computed.totalResinKg * colorResinAddon);
-  const colorQtyPerUnit = Number((baseResinQtyPerUnit * 0.02).toFixed(4)); // 2% định mức phụ gia màu
-
-  // 3. Labor routing cost
-  const laborTotalCost = computed.effectiveLaborCost;
-  const laborHoursPerUnit = params.laborCostMode === 'hourly' ? params.laborHours / qty : 0;
-  const laborUnitCost = Math.round(laborTotalCost / qty);
-
-  // 4. Machine routing cost
-  const machineTotalCost = computed.effectiveMachineCost;
-  const machineHoursPerUnit = params.machineCostMode === 'hourly' ? params.machineHours / qty : 0;
-  const machineUnitCost = Math.round(machineTotalCost / qty);
-
-  // 5. Surface treatment / Texture
-  const textureResinAddon = selectedTexture.resinCostAddonPerKg || 0;
-  const textureUnitAddon = selectedTexture.unitCostAddon || 0;
-  const textureTotalCost = Math.round((textureUnitAddon * qty) + (computed.totalResinKg * textureResinAddon));
-  const textureUnitCost = Math.round(textureTotalCost / qty);
-
-  // 6. Packaging
-  const packagingUnitCost = selectedPackaging.unitCostAddon || 0;
-  const packagingTotalCost = Math.round(packagingUnitCost * qty);
-
-  // Sub-Assembly: Thân vỏ nhựa ép thô (Body Injection Sub-Assembly)
-  const subAssemblyTotalCost = baseResinCost + colorTotalCost + laborTotalCost + machineTotalCost;
-  const subAssemblyUnitCost = Math.round(subAssemblyTotalCost / qty);
-
-  const resinNode: BOMComponentNode = {
-    id: 'bom-resin-base',
-    itemNumber: '0010',
+  // 1. Vật tư theo dòng BOM của computeMTO (621/152): nhựa, masterbatch, phụ gia ESD, bao bì VERP
+  const bomLine = (b: MTOComputed['bomItemBreakdowns'][number], idx: number): BOMComponentNode => ({
+    id: `bom-line-${b.itemCode}`,
+    itemNumber: String(10 * (idx + 1)).padStart(4, '0'),
     level: 2,
-    materialNumber: `ROH-${(params.resinType || 'ABS').replace(/[^a-zA-Z0-9]/g, '-').toUpperCase().slice(0, 14)}`,
-    description: `Hạt nhựa kỹ thuật ${params.resinType || 'ABS'} nguyên sinh`,
-    materialType: 'ROH',
+    materialNumber: b.itemCode,
+    description: b.name,
+    materialType: b.itemCode.startsWith('VERP') ? 'VERP' : 'ROH',
     itemCategory: 'L',
-    unitOfMeasure: 'KG',
-    quantityPerUnit: Number(baseResinQtyPerUnit.toFixed(4)),
-    totalQuantity: Number(computed.totalResinKg.toFixed(2)),
-    unitCost: params.resinPricePerKg,
-    totalCost: baseResinCost,
-    costSharePercent: Number(((baseResinCost / totalPlannedCost) * 100).toFixed(1)),
-    scrapPercent: 2.5,
+    unitOfMeasure: b.uom,
+    quantityPerUnit: Number((b.grossQty / qty).toFixed(4)),
+    totalQuantity: b.grossQty,
+    unitCost: b.grossQty > 0 ? Math.round(b.totalCost / b.grossQty) : 0,
+    totalCost: b.totalCost,
+    costSharePercent: share(b.totalCost),
     tt200Account: 'TK 621 (CP NVL trực tiếp)',
-    tt200AccountName: 'Tài khoản 621 - Chi phí nguyên vật liệu trực tiếp (Có TK 152 Kho hạt nhựa)',
-    sapModule: 'MM / PP',
-    sapTCode: 'MM03 / MIGO 261E',
-    technicalNotes: 'Hạt nhựa polymer kỹ thuật nạp vào phễu sấy chân không (Dehumidifying Hopper Dryer) 80°C trước khi ép.',
-  };
-
-  const colorNode: BOMComponentNode = {
-    id: 'bom-color-mb',
-    itemNumber: '0020',
-    level: 2,
-    materialNumber: `ROH-MB-${(params.variantColorId || 'STD').toUpperCase()}`,
-    description: `Hạt màu Masterbatch (${selectedColor.name})`,
-    materialType: 'ROH',
-    itemCategory: 'L',
-    unitOfMeasure: 'KG',
-    quantityPerUnit: colorQtyPerUnit,
-    totalQuantity: Number((computed.totalResinKg * 0.02).toFixed(2)),
-    unitCost: colorResinAddon > 0 ? colorResinAddon * 50 : 0,
-    totalCost: colorTotalCost,
-    costSharePercent: Number(((colorTotalCost / totalPlannedCost) * 100).toFixed(1)),
-    scrapPercent: 1.0,
-    tt200Account: 'TK 621 (CP NVL trực tiếp)',
-    tt200AccountName: 'Tài khoản 621 - Phụ gia tạo màu phân tán theo cấu hình đơn hàng (Có TK 152)',
+    tt200AccountName: 'Tài khoản 621 - Chi phí nguyên vật liệu trực tiếp (Có TK 152)',
     sapModule: 'MM / PP',
     sapTCode: 'CS03 / MIGO 261E',
-    technicalNotes: selectedColor.description || 'Hạt màu phụ gia kháng tia UV, phân tán đồng đều trong buồng nung trục vít nhiệt độ 240°C.',
-  };
+    technicalNotes:
+      b.itemCode === 'ROH-MB-COLOR'
+        ? 'Hạt màu phụ gia kháng tia UV, phân tán đồng đều trong buồng nung trục vít nhiệt độ 240°C.'
+        : b.itemCode === 'ROH-ADD-ESD'
+          ? 'Phụ gia khử tĩnh điện trộn theo kg vào hạt nhựa (Q5 = a); phần phủ theo cái nằm ở công đoạn texture (627).'
+          : b.itemCode.startsWith('VERP')
+            ? selectedPackaging.description || 'Khay vỉ định hình carton hoặc túi hút chân không phòng sạch tiêu chuẩn.'
+            : 'Hạt nhựa polymer kỹ thuật nạp vào phễu sấy chân không (Dehumidifying Hopper Dryer) 80°C trước khi ép.',
+  });
+  const allLines = computed.bomItemBreakdowns.map(bomLine);
+  const packagingLines = allLines.filter((n) => n.materialType === 'VERP');
+  const materialNodes = allLines.filter((n) => n.materialType !== 'VERP');
+  const materialsCost = materialNodes.reduce((sum, n) => sum + n.totalCost, 0);
 
+  // 2. Nhân công 622 — giờ hiển thị = giờ vận hành thực tính (Q6 = b)
+  const laborTotalCost = computed.directLaborCost622;
   const laborNode: BOMComponentNode = {
     id: 'bom-labor-op',
     itemNumber: '0030',
@@ -1598,18 +1615,20 @@ export function buildBOMTree(params: MTOParameters, computed: MTOComputed): BOMC
     materialType: 'ACT',
     itemCategory: 'E',
     unitOfMeasure: 'GIỜ',
-    quantityPerUnit: Number(laborHoursPerUnit.toFixed(4)),
-    totalQuantity: params.laborHours,
-    unitCost: params.laborRatePerHour,
+    quantityPerUnit: hrs.laborHours !== null ? Number((hrs.laborHours / qty).toFixed(4)) : 0,
+    totalQuantity: hrs.laborHours ?? 0,
+    unitCost: hrs.laborHours !== null ? hrs.laborRate : 0,
     totalCost: laborTotalCost,
-    costSharePercent: Number(((laborTotalCost / totalPlannedCost) * 100).toFixed(1)),
+    costSharePercent: share(laborTotalCost),
     tt200Account: 'TK 622 (CP Nhân công trực tiếp)',
     tt200AccountName: 'Tài khoản 622 - Tiền lương và phụ cấp thợ đứng máy ép (Có TK 334)',
     sapModule: 'PP / CO-PC',
     sapTCode: 'CA03 / CO11N',
-    technicalNotes: 'Work Center: WC-INJ-01. Thợ bậc 4 vận hành chu kỳ máy ép, lấy sản phẩm robot gắp và kiểm tra bavia cuống rót.',
+    technicalNotes: `Work Center: WC-INJ-01. 1 thợ/máy, giờ công = giờ vận hành máy (gồm ${hrs.setupHours} h setup). Thợ bậc 4 vận hành chu kỳ máy ép, lấy sản phẩm robot gắp và kiểm tra bavia cuống rót.`,
   };
 
+  // 3. Máy 627 (khấu hao + điện) và SXC 627 tách riêng
+  const machineTotalCost = computed.machineOverhead627;
   const machineNode: BOMComponentNode = {
     id: 'bom-machine-op',
     itemNumber: '0040',
@@ -1619,17 +1638,42 @@ export function buildBOMTree(params: MTOParameters, computed: MTOComputed): BOMC
     materialType: 'ACT',
     itemCategory: 'E',
     unitOfMeasure: 'GIỜ',
-    quantityPerUnit: Number(machineHoursPerUnit.toFixed(4)),
-    totalQuantity: params.machineHours,
-    unitCost: params.machineRatePerHour,
+    quantityPerUnit: hrs.machineHours !== null ? Number((hrs.machineHours / qty).toFixed(4)) : 0,
+    totalQuantity: hrs.machineHours ?? 0,
+    unitCost: hrs.machineHours !== null ? hrs.machineRate : 0,
     totalCost: machineTotalCost,
-    costSharePercent: Number(((machineTotalCost / totalPlannedCost) * 100).toFixed(1)),
+    costSharePercent: share(machineTotalCost),
     tt200Account: 'TK 627 (CP Sản xuất chung)',
     tt200AccountName: 'Tài khoản 627 - Khấu hao máy ép phun, khuôn đúc và điện năng 3 pha (Có TK 214)',
     sapModule: 'PP / CO-PC',
     sapTCode: 'CA03 / CO11N',
     technicalNotes: 'Lực kẹp 3.500 kN, khuôn ép 4 cavity, chu kỳ ép chu trình tự động giải nhiệt tuần hoàn Chiller.',
   };
+
+  const sxcCost = computed.factoryOverhead627;
+  const sxcNode: BOMComponentNode = {
+    id: 'bom-sxc',
+    itemNumber: '0050',
+    level: 2,
+    materialNumber: 'ACT-SXC',
+    description: 'Sản xuất chung (SXC) theo tỷ lệ (621 + 622)',
+    materialType: 'ACT',
+    itemCategory: 'E',
+    unitOfMeasure: 'VND',
+    quantityPerUnit: 0,
+    totalQuantity: 0,
+    unitCost: 0,
+    totalCost: sxcCost,
+    costSharePercent: share(sxcCost),
+    tt200Account: 'TK 627 (CP Sản xuất chung)',
+    tt200AccountName: 'Tài khoản 627 - SXC phân bổ theo tỷ lệ trên (621 + 622)',
+    sapModule: 'CO-PC',
+    sapTCode: 'CK11N / CO43',
+    technicalNotes: 'Tỷ lệ SXC lấy từ routing (mặc định 8%).',
+  };
+
+  const subAssemblyTotalCost = materialsCost + laborTotalCost + machineTotalCost + sxcCost;
+  const subAssemblyUnitCost = Math.round(subAssemblyTotalCost / qty);
 
   const subAssemblyNode: BOMComponentNode = {
     id: 'bom-subassembly',
@@ -1644,56 +1688,61 @@ export function buildBOMTree(params: MTOParameters, computed: MTOComputed): BOMC
     totalQuantity: qty,
     unitCost: subAssemblyUnitCost,
     totalCost: subAssemblyTotalCost,
-    costSharePercent: Number(((subAssemblyTotalCost / totalPlannedCost) * 100).toFixed(1)),
+    costSharePercent: share(subAssemblyTotalCost),
     tt200Account: 'TK 154 (Chi phí SX dở dang)',
     tt200AccountName: 'Tài khoản 154 - Tập hợp chi phí Lệnh sản xuất ép phun (PP04)',
     sapModule: 'PP / MM',
     sapTCode: 'CS03 / CO01',
     technicalNotes: 'Bán thành phẩm sau máy ép phun, đã cắt bavia cuống phun runner trước khi xử lý bề mặt hoàn thiện.',
-    children: [resinNode, colorNode, laborNode, machineNode],
+    children: [...materialNodes, laborNode, machineNode, sxcNode],
   };
 
+  // 4. Công đoạn phủ texture theo cái (add-on biến thể, 627) — phần phụ gia /kg đã là dòng BOM ROH-ADD-ESD
+  const textureTotalCost = computed.variantAddonTotal;
   const surfaceNode: BOMComponentNode = {
     id: 'bom-surface',
     itemNumber: '0200',
     level: 1,
     materialNumber: `SRF-${(params.variantTextureId || 'STD').toUpperCase()}`,
-    description: `Xử lý bề mặt & phụ gia đặc tính (${selectedTexture.name})`,
-    materialType: 'ROH',
-    itemCategory: 'L',
-    unitOfMeasure: 'SET',
+    description: `Công đoạn xử lý bề mặt theo cái (${selectedTexture.name})`,
+    materialType: 'ACT',
+    itemCategory: 'E',
+    unitOfMeasure: 'CÁI',
     quantityPerUnit: 1,
     totalQuantity: qty,
-    unitCost: textureUnitCost,
+    unitCost: Math.round(textureTotalCost / qty),
     totalCost: textureTotalCost,
-    costSharePercent: Number(((textureTotalCost / totalPlannedCost) * 100).toFixed(1)),
-    tt200Account: 'TK 627 / TK 621',
-    tt200AccountName: 'Tài khoản 627 (SXC) hoặc 621 tùy theo bản chất gia công phủ hóa chất',
-    sapModule: 'PP / MM',
+    costSharePercent: share(textureTotalCost),
+    tt200Account: 'TK 627 (CP Sản xuất chung)',
+    tt200AccountName: 'Tài khoản 627 - Công đoạn phủ/ăn mòn bề mặt tính theo cái (add-on biến thể, gom SXC 632140)',
+    sapModule: 'PP / CO-PC',
     sapTCode: 'CS03 / CK51N',
     technicalNotes: selectedTexture.description || 'Ăn mòn nhám bề mặt hoặc phủ lớp bảo vệ khử tĩnh điện vi mạch ESD theo yêu cầu khách hàng.',
   };
 
-  const packagingNode: BOMComponentNode = {
-    id: 'bom-packaging',
-    itemNumber: '0300',
-    level: 1,
-    materialNumber: `VERP-${(params.variantPackagingId || 'STD').toUpperCase()}`,
-    description: `Vật tư bao bì đóng gói (${selectedPackaging.name})`,
-    materialType: 'VERP',
-    itemCategory: 'L',
-    unitOfMeasure: 'SET',
-    quantityPerUnit: 1,
-    totalQuantity: qty,
-    unitCost: packagingUnitCost,
-    totalCost: packagingTotalCost,
-    costSharePercent: Number(((packagingTotalCost / totalPlannedCost) * 100).toFixed(1)),
-    tt200Account: 'TK 627 (Bao bì đóng gói)',
-    tt200AccountName: 'Tài khoản 627 - Vật tư bao bì phục vụ đóng gói xuất xưởng OEM',
-    sapModule: 'MM',
-    sapTCode: 'MM03 / MIGO 261E',
-    technicalNotes: selectedPackaging.description || 'Khay vỉ định hình carton hoặc túi hút chân không phòng sạch tiêu chuẩn.',
-  };
+  // 5. Bao bì: dòng VERP của BOM (621/152), không phải SXC (Q1 = a)
+  const packagingTotalCost = packagingLines.reduce((sum, n) => sum + n.totalCost, 0);
+  const packagingNode: BOMComponentNode = packagingLines[0]
+    ? { ...packagingLines[0], id: 'bom-packaging', itemNumber: '0300', level: 1, description: `Vật tư bao bì đóng gói (${selectedPackaging.name})` }
+    : {
+        id: 'bom-packaging',
+        itemNumber: '0300',
+        level: 1,
+        materialNumber: `VERP-${(params.variantPackagingId || 'STD').toUpperCase()}`,
+        description: `Vật tư bao bì đóng gói (${selectedPackaging.name})`,
+        materialType: 'VERP',
+        itemCategory: 'L',
+        unitOfMeasure: 'CÁI',
+        quantityPerUnit: 0,
+        totalQuantity: 0,
+        unitCost: 0,
+        totalCost: packagingTotalCost,
+        costSharePercent: share(packagingTotalCost),
+        tt200Account: 'TK 621 (CP NVL trực tiếp)',
+        tt200AccountName: 'Tài khoản 621 - Vật tư bao bì (Có TK 152); không có dòng bao bì trong BOM của cấu hình này',
+        sapModule: 'MM',
+        sapTCode: 'MM03 / MIGO 261E',
+      };
 
   const rootNode: BOMComponentNode = {
     id: 'bom-root',

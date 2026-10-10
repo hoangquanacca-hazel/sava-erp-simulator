@@ -3,11 +3,8 @@ import {
   MTOParameters,
   MTOComputed,
   BOMComponentNode,
-  VARIANT_COLORS,
-  VARIANT_TEXTURES,
-  VARIANT_PACKAGINGS,
 } from '../types';
-import { buildBOMTree, formatVND, formatNumber } from '../utils/calculator';
+import { buildBOMTree, buildCostBreakdown, formatVND, formatNumber } from '../utils/calculator';
 import {
   FolderTree,
   Package,
@@ -98,29 +95,14 @@ export const BOMVisualizer: React.FC<BOMVisualizerProps> = ({
     const totalPlanned = Math.max(1, computed.plannedCost);
     const qty = Math.max(1, params.orderQuantity);
 
-    const selectedColor =
-      VARIANT_COLORS.find((c) => c.id === params.variantColorId) || VARIANT_COLORS[0];
-    const selectedTexture =
-      VARIANT_TEXTURES.find((t) => t.id === params.variantTextureId) || VARIANT_TEXTURES[0];
-    const selectedPackaging =
-      VARIANT_PACKAGINGS.find((p) => p.id === params.variantPackagingId) || VARIANT_PACKAGINGS[0];
-
-    // Raw Material: Base Resin + Color Masterbatch
-    const baseResinCost = Math.round(computed.totalResinKg * params.resinPricePerKg);
-    const colorAddonCost = Math.round(computed.totalResinKg * (selectedColor.resinCostAddonPerKg || 0));
-    const totalRawMaterial = baseResinCost + colorAddonCost;
-
-    // Labor: Direct labor routing
-    const totalLabor = computed.effectiveLaborCost;
-
-    // Overhead: Machine depreciation/power + Surface treatment + Packaging
-    const machineCost = computed.effectiveMachineCost;
-    const surfaceCost = Math.round(
-      (selectedTexture.unitCostAddon || 0) * qty +
-        computed.totalResinKg * (selectedTexture.resinCostAddonPerKg || 0)
-    );
-    const packagingCost = Math.round((selectedPackaging.unitCostAddon || 0) * qty);
-    const totalOverhead = machineCost + surfaceCost + packagingCost;
+    // AUD-040: số liệu lấy từ buildCostBreakdown (cùng nguồn với cây BOM và test), không tự tính lại ở đây.
+    const bd = buildCostBreakdown(params, computed);
+    const toItems = (g: typeof bd.raw_material) =>
+      g.items.map((it) => ({
+        ...it,
+        unitCost: Math.round(it.cost / qty),
+        share: Number(((it.cost / totalPlanned) * 100).toFixed(1)),
+      }));
 
     return {
       raw_material: {
@@ -128,102 +110,45 @@ export const BOMVisualizer: React.FC<BOMVisualizerProps> = ({
         name: 'Chi Phí Nguyên Vật Liệu (Raw Material)',
         sapCostElement: 'Cost Element 400000 (Direct Materials)',
         tt200Account: 'TK 621 - Chi Phí NVL Trực Tiếp (Có TK 152)',
-        totalCost: totalRawMaterial,
-        unitCost: Math.round(totalRawMaterial / qty),
-        sharePercent: Number(((totalRawMaterial / totalPlanned) * 100).toFixed(1)),
+        totalCost: bd.raw_material.totalCost,
+        unitCost: Math.round(bd.raw_material.totalCost / qty),
+        sharePercent: Number(((bd.raw_material.totalCost / totalPlanned) * 100).toFixed(1)),
         colorClass: 'text-amber-400',
         borderClass: 'border-amber-500/30',
         bgClass: 'bg-amber-950/30',
         icon: Boxes,
-        description: 'Hạt nhựa polymer kỹ thuật nguyên sinh nạp buồng sấy và hạt màu Masterbatch chịu nhiệt gia công.',
-        items: [
-          {
-            name: `Hạt nhựa kỹ thuật ${params.resinType || 'ABS'}`,
-            code: `ROH-RESIN`,
-            spec: `${formatNumber(computed.totalResinKg, 2)} kg @ ${formatVND(params.resinPricePerKg)}/kg`,
-            cost: baseResinCost,
-            unitCost: Math.round(baseResinCost / qty),
-            share: Number(((baseResinCost / totalPlanned) * 100).toFixed(1)),
-          },
-          {
-            name: `Hạt màu Masterbatch (${selectedColor.name})`,
-            code: `ROH-MB-COLOR`,
-            spec: `Phụ gia màu 2% & Masterbatch UV`,
-            cost: colorAddonCost,
-            unitCost: Math.round(colorAddonCost / qty),
-            share: Number(((colorAddonCost / totalPlanned) * 100).toFixed(1)),
-          },
-        ],
+        description: 'Hạt nhựa polymer kỹ thuật, hạt màu Masterbatch, phụ gia ESD và bao bì đóng gói OEM — mọi dòng BOM ghi Nợ 621 / Có 152.',
+        items: toItems(bd.raw_material),
       },
       labor: {
         category: 'labor',
         name: 'Chi Phí Nhân Công Trực Tiếp (Labor)',
         sapCostElement: 'Cost Element 420000 (Direct Labor Activity)',
         tt200Account: 'TK 622 - Chi Phí Nhân Công Trực Tiếp (Có TK 334)',
-        totalCost: totalLabor,
-        unitCost: Math.round(totalLabor / qty),
-        sharePercent: Number(((totalLabor / totalPlanned) * 100).toFixed(1)),
+        totalCost: bd.labor.totalCost,
+        unitCost: Math.round(bd.labor.totalCost / qty),
+        sharePercent: Number(((bd.labor.totalCost / totalPlanned) * 100).toFixed(1)),
         colorClass: 'text-cyan-400',
         borderClass: 'border-cyan-500/30',
         bgClass: 'bg-cyan-950/30',
         icon: UserCheck,
         description: 'Tiền lương, phụ cấp đứng máy và bảo hộ lao động thợ ép phun (Routing Op 0010, Work Center WC-INJ-01).',
-        items: [
-          {
-            name: 'Thợ ép phun vận hành & gọt bavia (Routing Op 0010)',
-            code: 'ACT-LAB-OP01',
-            spec:
-              params.laborCostMode === 'hourly'
-                ? `${params.laborHours} giờ @ ${formatVND(params.laborRatePerHour)}/h`
-                : `${formatVND(params.laborCostPerUnit)}/cái`,
-            cost: totalLabor,
-            unitCost: Math.round(totalLabor / qty),
-            share: Number(((totalLabor / totalPlanned) * 100).toFixed(1)),
-          },
-        ],
+        items: toItems(bd.labor),
       },
       overhead: {
         category: 'overhead',
         name: 'Chi Phí Sản Xuất Chung (Overhead)',
         sapCostElement: 'Cost Element 430000 / 440000 (MOH & Utilities)',
         tt200Account: 'TK 627 - Chi Phí Sản Xuất Chung (Có TK 214, 152)',
-        totalCost: totalOverhead,
-        unitCost: Math.round(totalOverhead / qty),
-        sharePercent: Number(((totalOverhead / totalPlanned) * 100).toFixed(1)),
+        totalCost: bd.overhead.totalCost,
+        unitCost: Math.round(bd.overhead.totalCost / qty),
+        sharePercent: Number(((bd.overhead.totalCost / totalPlanned) * 100).toFixed(1)),
         colorClass: 'text-violet-400',
         borderClass: 'border-violet-500/30',
         bgClass: 'bg-violet-950/30',
         icon: Factory,
-        description: 'Khấu hao máy ép 350T, điện năng 3 pha nung trục vít, xử lý bề mặt ESD và vật liệu bao bì đóng gói OEM.',
-        items: [
-          {
-            name: 'Khấu hao máy ép Haitian 350T & Điện năng',
-            code: 'ACT-MACH-350T',
-            spec:
-              params.machineCostMode === 'hourly'
-                ? `${params.machineHours} giờ @ ${formatVND(params.machineRatePerHour)}/h`
-                : `${formatVND(params.machineCostPerUnit)}/cái`,
-            cost: machineCost,
-            unitCost: Math.round(machineCost / qty),
-            share: Number(((machineCost / totalPlanned) * 100).toFixed(1)),
-          },
-          {
-            name: `Xử lý bề mặt (${selectedTexture.name})`,
-            code: 'SRF-TEXTURE',
-            spec: 'Ăn mòn khuôn hoặc phủ hóa chất chống tĩnh điện',
-            cost: surfaceCost,
-            unitCost: Math.round(surfaceCost / qty),
-            share: Number(((surfaceCost / totalPlanned) * 100).toFixed(1)),
-          },
-          {
-            name: `Bao bì đóng gói (${selectedPackaging.name})`,
-            code: 'VERP-PACKAGING',
-            spec: 'Khay vỉ định hình, túi cleanroom bảo vệ ngoại quan',
-            cost: packagingCost,
-            unitCost: Math.round(packagingCost / qty),
-            share: Number(((packagingCost / totalPlanned) * 100).toFixed(1)),
-          },
-        ],
+        description: 'Khấu hao máy ép 350T, điện năng 3 pha nung trục vít, SXC theo tỷ lệ (621 + 622) và công đoạn phủ texture theo cái.',
+        items: toItems(bd.overhead),
       },
     };
   }, [params, computed]);

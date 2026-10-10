@@ -42,3 +42,8 @@
 - Quy tắc 11: `oracle_costing.py --off=q4,q5 --stdout` / `a0_oracle.py --off=q4,q5 --stdout` tái tạo đúng từng byte đáp án của `feat`; `--off=q5` tái tạo từng byte đáp án sau Q4.
 - Không đổi `acdoca.ts`, `materialLedger.ts`; không xóa file; `git add` từng file.
 
+## Session 4 — nhánh `cloud/s4-present` (xếp trên `cloud/s4-q4q5`) — CHỈ TRÌNH BÀY, không đổi số
+- T3 (Q6 = b): `resolveDisplayHours()` + `buildBOMTree`/`BOMVisualizer` hiển thị giờ vận hành thực tính (AUD-043). Không đổi `computeMTO`.
+- T4 (AUD-040 → AUD-044): `buildCostBreakdown()` dùng chung cho cây BOM, `BOMVisualizer` và test; `scripts/s4-breakdown.ts` (`npm run test:s4`, thêm vào CI).
+- `costing_expected.json`, `a0_expected.json`: không đổi một byte so với `cloud/s4-q4q5`.
+
