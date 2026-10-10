@@ -31,6 +31,14 @@ jobs:
       - name: Typecheck (lint = tsc --noEmit)
         if: ${{ !cancelled() }}
         run: npm run lint
+      - name: ESLint — thư mục strict (CHẶN)
+        if: ${{ !cancelled() }}
+        run: npm run lint:eslint:strict
+      # CHỈ ESLint toàn repo mới được continue-on-error (nợ tồn đọng, xem docs-cloud/PR4_ESLINT_MEASURE.md). KHÔNG bao giờ cho test.
+      - name: ESLint — toàn repo (CHỈ GHI NỢ TỒN, không chặn)
+        if: ${{ !cancelled() }}
+        continue-on-error: true
+        run: npm run lint:eslint
       - name: Parity M1–M8
         if: ${{ !cancelled() }}
         run: npm run test:parity
