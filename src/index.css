@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+/* Savafinlab brand v2: Inter cho giao diện, JetBrains Mono cho số liệu/mã */
+@theme {
+  --font-sans: "Inter", "Segoe UI", -apple-system, Roboto, Arial, sans-serif;
+  --font-mono: "JetBrains Mono", "IBM Plex Mono", Consolas, monospace;
+}

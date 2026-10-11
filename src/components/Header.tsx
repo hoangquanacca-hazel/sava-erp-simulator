@@ -188,7 +188,7 @@ export const Header: React.FC<HeaderProps> = ({
               className={`w-9 h-9 rounded-lg flex items-center justify-center shadow-md ${
                 isClassic
                   ? 'bg-[#1e395b] text-white border border-[#0f243d]'
-                  : 'bg-gradient-to-br from-cyan-600 to-blue-800 text-cyan-200 border border-cyan-400/30'
+                  : 'bg-[#1D3F82] text-white border border-[#2A4170]'
               }`}
             >
               <Layers className="w-5 h-5" />
