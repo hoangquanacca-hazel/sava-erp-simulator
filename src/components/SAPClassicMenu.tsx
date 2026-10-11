@@ -838,14 +838,14 @@ export const SAPClassicMenu: React.FC<SAPClassicMenuProps> = ({
               SAP
             </div>
             <span className="font-bold text-xs tracking-wide">
-              SAP Easy Access — SAVA MTO Manufacturing Tree
+              Menu nghiệp vụ — SAVA MTO Manufacturing Tree
             </span>
           </div>
           <div className="flex items-center gap-1">
             <button
               onClick={onClose}
               className="w-5 h-5 bg-[#ece9d8] hover:bg-[#d4d0c8] text-black font-bold text-xs flex items-center justify-center rounded border border-[#ffffff] border-r-[#808080] border-b-[#808080] active:border-[#808080] cursor-pointer"
-              title="Đóng menu SAP Easy Access"
+              title="Đóng menu nghiệp vụ"
             >
               ✕
             </button>
