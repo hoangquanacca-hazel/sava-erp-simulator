@@ -1033,11 +1033,11 @@ export default function App() {
             <button
               onClick={() => setIsClassicMenuOpen(true)}
               className="fixed left-0 top-1/2 -translate-y-1/2 z-40 bg-[#ece9d8] hover:bg-[#dcd8c8] text-[#0a246a] border-y-2 border-r-2 border-[#808080] py-3 px-2 rounded-r-md shadow-2xl flex flex-col items-center gap-1.5 font-bold text-xs cursor-pointer select-none transition-all group"
-              title="Mở cây thư mục SAP Easy Access"
+              title="Mở cây menu nghiệp vụ"
             >
               <FolderTree className="w-4 h-4 text-[#d49b00] group-hover:scale-110 transition-transform" />
               <span className="[writing-mode:vertical-rl] tracking-wider text-[11px] font-sans">
-                SAP Easy Access
+                Menu nghiệp vụ
               </span>
             </button>
           )}

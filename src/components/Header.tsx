@@ -159,7 +159,7 @@ export const Header: React.FC<HeaderProps> = ({
                 type="button"
                 onClick={onToggleClassicMenu}
                 className="cursor-pointer hover:bg-[#316ac5] hover:text-white px-1.5 py-0.5 rounded font-bold text-[#0a246a] flex items-center gap-1 border border-transparent hover:border-[#7f9db9]"
-                title="Bật/Tắt cây thư mục SAP Easy Access"
+                title="Bật/Tắt cây menu nghiệp vụ"
               >
                 📁 <u>M</u>enu (Easy Access)
               </button>
@@ -176,7 +176,7 @@ export const Header: React.FC<HeaderProps> = ({
               <span className="cursor-pointer hover:bg-[#316ac5] hover:text-white px-1.5 py-0.5 rounded"><u>H</u>elp</span>
             </div>
             <div className="text-[11px] font-mono text-[#444444] hidden md:block">
-              SAP GUI for Windows (SAVA R/3 Enterprise PRD-01)
+              Classic GUI (SAVA ERP PRD-01)
             </div>
           </div>
         )}
@@ -314,7 +314,7 @@ export const Header: React.FC<HeaderProps> = ({
                 </button>
                 <button
                   onClick={() => onToggleUIMode('classic')}
-                  title="Chuyển sang giao diện SAP Classic GUI (Windows R/3 Styling)"
+                  title="Chuyển sang giao diện Classic GUI"
                   className={`px-2 py-1 rounded flex items-center gap-1 transition-all ${
                     isClassic
                       ? 'bg-[#1e395b] text-white font-bold shadow'
@@ -337,10 +337,10 @@ export const Header: React.FC<HeaderProps> = ({
                     ? 'bg-[#316ac5] text-white border-[#204a87] shadow-inner'
                     : 'bg-[#ece9d8] hover:bg-[#e0dcc8] text-[#0a246a] border-[#7f9db9]'
                 }`}
-                title="Mở ngăn kéo menu cây SAP Easy Access (Menu 7 bước MTO)"
+                title="Mở ngăn kéo menu cây nghiệp vụ (Menu 7 bước MTO)"
               >
                 <FolderTree className="w-3.5 h-3.5 text-[#d49b00]" />
-                <span>📂 SAP Easy Access</span>
+                <span>📂 Menu nghiệp vụ</span>
               </button>
             )}
 
