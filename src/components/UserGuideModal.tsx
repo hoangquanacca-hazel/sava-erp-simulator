@@ -77,7 +77,7 @@ export const UserGuideModal: React.FC<UserGuideModalProps> = ({ isOpen, onClose,
               <BookOpen className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="font-bold text-sm sm:text-base tracking-tight">Hướng dẫn sử dụng — Sava SAP MTO Cockpit</h3>
+              <h3 className="font-bold text-sm sm:text-base tracking-tight">Hướng dẫn sử dụng — Sava ERP Cockpit</h3>
               <p className="text-[11px] opacity-80">Cách vận hành mô phỏng chu trình sản xuất theo đơn hàng (MTO) & hạch toán TT99</p>
             </div>
           </div>
@@ -113,7 +113,7 @@ export const UserGuideModal: React.FC<UserGuideModalProps> = ({ isOpen, onClose,
                 <AlertTriangle className="w-4 h-4 mt-0.5 text-amber-500 shrink-0" />
                 <p><b>MÔ PHỎNG ĐÀO TẠO — không phải hệ thống SAP thật.</b> Mọi số liệu do bạn nhập và được tính bằng công thức thật (giá thành, giá vốn, cân đối Nợ = Có), không có kết quả "PASS" giả.</p>
               </div>
-              <p className={sub}>Mục tiêu: giúp kế toán viên, sinh viên và tư vấn ERP hiểu trọn <b>chu trình Make-to-Order (sản xuất theo đơn hàng bán)</b> tích hợp SD · MM · PP · QM · FICO, với các bút toán theo <b>Thông tư 99/2025/TT-BTC</b> và <b>Thông tư 99/2025/TT-BTC</b>. Bối cảnh: công ty ép nhựa chính xác giao hàng cho khách OEM.</p>
+              <p className={sub}>Mục tiêu: giúp kế toán viên, sinh viên và tư vấn ERP hiểu trọn <b>chu trình Make-to-Order (sản xuất theo đơn hàng bán)</b> tích hợp SD · MM · PP · QM · FICO, với các bút toán theo <b>Thông tư 99/2025/TT-BTC</b> (chế độ kế toán doanh nghiệp thay thế Thông tư 200/2014/TT-BTC). Bối cảnh: công ty ép nhựa chính xác giao hàng cho khách OEM.</p>
             </section>
 
             {/* 2. Quick start */}
@@ -226,7 +226,10 @@ export const UserGuideModal: React.FC<UserGuideModalProps> = ({ isOpen, onClose,
 
             {/* Footer CTA */}
             <div className={`mt-4 pt-4 border-t ${panelBorder} flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3`}>
-              <p className={`text-xs ${sub}`}>Savafinlab — Tư vấn Tài chính, Thuế & Kế toán · savafinlab.com.vn</p>
+              <div className="flex flex-col gap-1">
+                <p className={`text-xs ${sub}`}>Savafinlab — Tư vấn Tài chính, Thuế & Kế toán · savafinlab.com.vn</p>
+                <p className={`text-[11px] ${sub}`}>SAP là nhãn hiệu của SAP SE; Savafinlab không liên kết với SAP SE. Tên T-Code chỉ dùng để mô tả nghiệp vụ đào tạo.</p>
+              </div>
               <a
                 href="https://savafinlab.com.vn"
                 target="_blank"
