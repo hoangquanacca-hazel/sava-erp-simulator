@@ -2,7 +2,7 @@
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor,as_completed
 import json,hashlib,urllib.request,urllib.error,sys,datetime
-from sap_html_integrity import equivalent_after_pretty_urls
+from sap_html_integrity import equivalent_after_pretty_urls,without_preview_toolbar
 ROOT=Path(__file__).resolve().parents[1];DOC=ROOT/'docs/reporting-library/priority-24';PUB=ROOT/'public/sap-reporting'
 SITE='ed44f609-8ec1-4403-908e-5ca0fffe520f'
 read=lambda p:json.loads(p.read_text(encoding='utf-8-sig'))
@@ -29,15 +29,22 @@ def get(f):
   address=url+'/sap-reporting/'+f['path'];r=urllib.request.urlopen(address,timeout=15);b=r.read();actual=hashlib.sha256(b).hexdigest();assert r.status==200
   mode='EXACT_BYTES'
   if actual!=f['sha256']:
-   assert f['path'].endswith('.html')and equivalent_after_pretty_urls((PUB/f['path']).read_bytes(),b,address),(f['path'],'Unexpected payload change',actual)
-   mode='HTML_INTERNAL_PRETTY_URL_AND_NEWLINE_ONLY'
+   compared=without_preview_toolbar(b,SITE,deploy['id'])if name=='preview-verification'else b
+   assert f['path'].endswith('.html')and equivalent_after_pretty_urls((PUB/f['path']).read_bytes(),compared,address),(f['path'],'Unexpected payload change',actual)
+   mode='HTML_EQUIVALENT_AFTER_INTERNAL_PRETTY_URLS_ATTRIBUTE_SERIALIZATION_AND_PREVIEW_TOOLBAR'
   return dict(path=f['path'],status='PASS',integrity_mode=mode,http=200,bytes=len(b),source_sha256=f['sha256'],http_sha256=actual)
  except Exception as e:return dict(path=f['path'],status='FAIL',error=str(e))
-downloads=[]
+partial=DOC/(name+'-partial.json');cached={}
+if '--resume'in sys.argv and partial.exists():
+ previous=read(partial);assert previous.get('url')==url,'Cache origin must be explicitly verified'
+ cached={r['path']:r for r in previous['downloads']if r['status']=='PASS'and r.get('integrity_mode')=='EXACT_BYTES'}
+downloads=[cached[f['path']]for f in targets if f['path']in cached and cached[f['path']].get('http_sha256')==f['sha256']]
+cached_paths={r['path']for r in downloads}
+print('Reused exact-byte checks:',len(downloads),flush=True)
 with ThreadPoolExecutor(max_workers=8)as ex:
- for future in as_completed([ex.submit(get,f)for f in targets]):
+ for future in as_completed([ex.submit(get,f)for f in targets if f['path']not in cached_paths]):
   r=future.result();downloads.append(r)
-  (DOC/(name+'-partial.json')).write_text(json.dumps({'status':'IN_PROGRESS','completed':len(downloads),'expected':len(targets),'downloads':downloads},indent=2),encoding='utf8')
+  partial.write_text(json.dumps({'status':'IN_PROGRESS','url':url,'completed':len(downloads),'expected':len(targets),'downloads':downloads},indent=2),encoding='utf8')
   if r['status']=='FAIL':print('HTTP check failed:',r['path'],r['error'],flush=True)
   if len(downloads)%10==0:print('HTTP checks:',len(downloads),'/',len(targets),flush=True)
 baseline=read(Path('D:/sava-erp-simulator/docs/reporting-library/deployment-2026-10-13/live-baseline.json'))
