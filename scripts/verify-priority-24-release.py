@@ -1,7 +1,8 @@
 """Read-only publication check. Credentials never appear in receipts or output."""
 from pathlib import Path
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ThreadPoolExecutor,as_completed
 import json,hashlib,urllib.request,urllib.error,sys,datetime
+from sap_html_integrity import equivalent_after_pretty_urls
 ROOT=Path(__file__).resolve().parents[1];DOC=ROOT/'docs/reporting-library/priority-24';PUB=ROOT/'public/sap-reporting'
 SITE='ed44f609-8ec1-4403-908e-5ca0fffe520f'
 read=lambda p:json.loads(p.read_text(encoding='utf-8-sig'))
@@ -25,9 +26,20 @@ for p in ['source-layout-downloads/CO11-02.xlsx','source-layouts.html','expansio
  targets.append(next(f for f in manifest['files']if f['path']==p))
 def get(f):
  try:
-  r=urllib.request.urlopen(url+'/sap-reporting/'+f['path'],timeout=30);b=r.read();assert r.status==200 and hashlib.sha256(b).hexdigest()==f['sha256'];return dict(path=f['path'],status='PASS',http=200,bytes=len(b),sha256=f['sha256'])
+  address=url+'/sap-reporting/'+f['path'];r=urllib.request.urlopen(address,timeout=15);b=r.read();actual=hashlib.sha256(b).hexdigest();assert r.status==200
+  mode='EXACT_BYTES'
+  if actual!=f['sha256']:
+   assert f['path'].endswith('.html')and equivalent_after_pretty_urls((PUB/f['path']).read_bytes(),b,address),(f['path'],'Unexpected payload change',actual)
+   mode='HTML_INTERNAL_PRETTY_URL_AND_NEWLINE_ONLY'
+  return dict(path=f['path'],status='PASS',integrity_mode=mode,http=200,bytes=len(b),source_sha256=f['sha256'],http_sha256=actual)
  except Exception as e:return dict(path=f['path'],status='FAIL',error=str(e))
-with ThreadPoolExecutor(max_workers=5)as ex:downloads=list(ex.map(get,targets))
+downloads=[]
+with ThreadPoolExecutor(max_workers=8)as ex:
+ for future in as_completed([ex.submit(get,f)for f in targets]):
+  r=future.result();downloads.append(r)
+  (DOC/(name+'-partial.json')).write_text(json.dumps({'status':'IN_PROGRESS','completed':len(downloads),'expected':len(targets),'downloads':downloads},indent=2),encoding='utf8')
+  if r['status']=='FAIL':print('HTTP check failed:',r['path'],r['error'],flush=True)
+  if len(downloads)%10==0:print('HTTP checks:',len(downloads),'/',len(targets),flush=True)
 baseline=read(Path('D:/sava-erp-simulator/docs/reporting-library/deployment-2026-10-13/live-baseline.json'))
 assets=[]
 for p in sorted((ROOT/'dist/assets').iterdir()):
