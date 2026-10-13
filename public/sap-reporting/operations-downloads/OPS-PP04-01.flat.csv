@@ -1,0 +1,3 @@
+﻿"Material","[material description]","Grp.Count","Sequence","Op...","Work ce...","Plnt","Con...","Description","Lo...","PRT","Cla...","Base Quantity","Un...","Setup","Unit","Activit...","Machine","Unit","Activit..."
+"FG-CONN-01","Connector demo","1","0","0010","WC-DEMO","1000","DEMO_PP03","Connector assembly","","","","100","PC","10","MIN","DEMO_ACT1","35","MIN","DEMO_ACT2"
+"FG-CONN-01","Connector demo","1","0","0020","WC-DEMO","1000","DEMO_PP03","Connector inspection","","","","100","PC","5","MIN","DEMO_ACT1","0.50","H","DEMO_ACT2"

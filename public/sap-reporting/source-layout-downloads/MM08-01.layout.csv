@@ -1,0 +1,6 @@
+﻿"ME23N — PO History (màn hình 'PO History for Purchase Order … Item …'; gần với ME80FN view lịch sử) — SAVA DEMO (mẫu dựng lại)","","","","","","","","","","","","","","",""
+"Sh. T","MvT","Material Docu…","Item","Posting Date","Qua…","Delivery cost quant…","Order Unit","Amt.in Loc.Cu…","L.cur","Qty","DelC…","Ord…","Amount","Crcy","Reference"
+"WE","101","","00010","28.09.2026","","","PC","","EUR","20,00","","","10.000,00","EUR","DEMO"
+"RE-L","","","00020","29.09.2026","","","PC","","EUR","10,00","","","10.000,00","EUR","DEMO"
+"Tr./Ev. Goods receipt","","","","","","","","","","","","","10.000,00","",""
+"Tr./Ev. Invoice receipt","","","","","","","","","","","","","10.000,00","",""

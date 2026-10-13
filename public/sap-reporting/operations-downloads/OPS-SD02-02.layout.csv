@@ -1,0 +1,8 @@
+﻿"VF05 — layout trước đổi vị trí cột — SAVA DEMO","","","","","",""
+"Chỉ phần cột nhìn thấy trong ảnh; dữ liệu tự dựng","","","","","",""
+"Payer: 0030000001","","","","","",""
+"Billing date: 2026/10/01 to 2026/10/12","","","","","",""
+"Billing Doc.","BillT","Payer","Name","Billing date","Item","Material"
+"0086000001","DEMO_F2","0030000001","DEMO PAYER","2026/10/12","10","FG-CONN-01"
+"0086000001","DEMO_F2","0030000001","DEMO PAYER","2026/10/12","20","FG-CONN-02"
+"0086000002","DEMO_G2","0030000001","DEMO PAYER","2026/10/12","10","FG-CONN-01"

@@ -1,0 +1,8 @@
+﻿"VF05 — sau đổi Billing date / Name — SAVA DEMO","","","","","",""
+"Chỉ phần cột nhìn thấy trong ảnh; dữ liệu tự dựng","","","","","",""
+"Payer: 0030000001","","","","","",""
+"Billing date: 2026/10/01 to 2026/10/12","","","","","",""
+"Billing Doc.","BillT","Payer","Billing date","Name","Item","Material"
+"0086000001","DEMO_F2","0030000001","2026/10/12","DEMO PAYER","10","FG-CONN-01"
+"0086000001","DEMO_F2","0030000001","2026/10/12","DEMO PAYER","20","FG-CONN-02"
+"0086000002","DEMO_G2","0030000001","2026/10/12","DEMO PAYER","10","FG-CONN-01"

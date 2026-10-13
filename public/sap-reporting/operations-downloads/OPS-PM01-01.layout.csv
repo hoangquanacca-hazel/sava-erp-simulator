@@ -1,0 +1,5 @@
+﻿"IW38 — schema danh sách lệnh đề xuất — SAVA DEMO","","","","","","","","","","","","","","","","","","","","","","","","","","",""
+"SAVA_PROPOSED_SCHEMA_NOT_SOURCE_LAYOUT · Hệ mục tiêu chưa xác nhận","","","","","","","","","","","","","","","","","","","","","","","","","","",""
+"Order","Order Type","Description","Equipment","Functional Location","Maintenance Plant","Planning Plant","Planner Group","Main Work Center","Priority","Basic Start Date","Basic Finish Date","Actual Start Date","Actual Finish Date","System Status","User Status","Notification","Cost Center","Profit Center","Company Code","Estimated Costs","Planned Costs","Actual Costs","Currency","Maintenance Activity Type","Revision","Settlement Receiver","Deletion Flag"
+"000100009001","DEMO_PM01","DEMO corrective maintenance","000000100001","","1000","","","","","","15.10.2026","","","REL","","","","","","","1,000.00","600.00","USD","","","",""
+"000100009002","DEMO_PM02","DEMO preventive maintenance","000000100002","","1000","","","","","","","","","CRTD","","","","","","","200.00","0.00","EUR","","","",""

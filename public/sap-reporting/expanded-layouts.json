@@ -1,0 +1,1005 @@
+{
+  "as_of": "2026-10-08",
+  "native_exports": 0,
+  "synthetic_rows": true,
+  "profiles": [
+    {
+      "id": "FBL3N",
+      "title": "G/L Account Line Item Display",
+      "classification": "SAP_LIKE_EXPANDED_STUDY_LAYOUT",
+      "target_release": "UNKNOWN",
+      "source_url": "https://www.bsptcl.in/ERP/FAC/Bank_Reconciliation_Process.pdf",
+      "source_pages": [
+        6
+      ],
+      "order": "SAVA_STUDY_ORDER_NOT_VERIFIED_SAP_EXPORT_ORDER",
+      "coverage_percentage": null,
+      "full_field_catalog_verified": false,
+      "fields": [
+        {
+          "position": 1,
+          "label": "St",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 2,
+          "label": "Assignment",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 3,
+          "label": "DocumentNo",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 4,
+          "label": "BusA",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 5,
+          "label": "Type",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 6,
+          "label": "Doc. Date",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL",
+          "type_hint": "date",
+          "cleaning_rule": "Giữ chuỗi gốc; xác nhận DD.MM.YYYY / MM.DD.YYYY trước khi đổi ISO. Ngày rỗng không phải ngày 0."
+        },
+        {
+          "position": 7,
+          "label": "PK",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 8,
+          "label": "Amount in Local Crcy",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL",
+          "type_hint": "decimal",
+          "cleaning_rule": "Xác nhận dấu thập phân/ngăn nghìn, dấu âm cuối; giữ tiền tệ/đơn vị. Không đổi rỗng thành 0."
+        },
+        {
+          "position": 9,
+          "label": "LCurr",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL",
+          "type_hint": "currency",
+          "cleaning_rule": "Giữ mã gốc; gắn với đúng cột số tiền. Không cộng khác tiền tệ."
+        },
+        {
+          "position": 10,
+          "label": "Tx",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 11,
+          "label": "Clrng doc.",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 12,
+          "label": "Text",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 13,
+          "label": "Company Code",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 14,
+          "label": "G/L Account",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 15,
+          "label": "Fiscal Year",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 16,
+          "label": "Line Item",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 17,
+          "label": "Posting Date",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "date",
+          "cleaning_rule": "Giữ chuỗi gốc; xác nhận DD.MM.YYYY / MM.DD.YYYY trước khi đổi ISO. Ngày rỗng không phải ngày 0."
+        },
+        {
+          "position": 18,
+          "label": "Period",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 19,
+          "label": "Document Currency",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "currency",
+          "cleaning_rule": "Giữ mã gốc; gắn với đúng cột số tiền. Không cộng khác tiền tệ."
+        },
+        {
+          "position": 20,
+          "label": "Amount in Doc. Crcy",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "decimal",
+          "cleaning_rule": "Xác nhận dấu thập phân/ngăn nghìn, dấu âm cuối; giữ tiền tệ/đơn vị. Không đổi rỗng thành 0."
+        },
+        {
+          "position": 21,
+          "label": "Clearing Date",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "date",
+          "cleaning_rule": "Giữ chuỗi gốc; xác nhận DD.MM.YYYY / MM.DD.YYYY trước khi đổi ISO. Ngày rỗng không phải ngày 0."
+        },
+        {
+          "position": 22,
+          "label": "Reference",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 23,
+          "label": "Document Header Text",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 24,
+          "label": "Debit/Credit",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 25,
+          "label": "Cost Center",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 26,
+          "label": "Profit Center",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 27,
+          "label": "Order",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 28,
+          "label": "WBS Element",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 29,
+          "label": "Segment",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 30,
+          "label": "Functional Area",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 31,
+          "label": "Business Transaction",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 32,
+          "label": "Trading Partner",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 33,
+          "label": "Purchasing Document",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 34,
+          "label": "Purchasing Item",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 35,
+          "label": "Material",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 36,
+          "label": "Quantity",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "decimal",
+          "cleaning_rule": "Xác nhận dấu thập phân/ngăn nghìn, dấu âm cuối; giữ tiền tệ/đơn vị. Không đổi rỗng thành 0."
+        },
+        {
+          "position": 37,
+          "label": "Base Unit",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 38,
+          "label": "User Name",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 39,
+          "label": "Entry Date",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "date",
+          "cleaning_rule": "Giữ chuỗi gốc; xác nhận DD.MM.YYYY / MM.DD.YYYY trước khi đổi ISO. Ngày rỗng không phải ngày 0."
+        },
+        {
+          "position": 40,
+          "label": "Reversal Document",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        }
+      ]
+    },
+    {
+      "id": "FBL1N",
+      "title": "Vendor Line Item Display",
+      "classification": "SAP_LIKE_EXPANDED_STUDY_LAYOUT",
+      "target_release": "UNKNOWN",
+      "source_url": "https://finance.uams.edu/wp-content/uploads/sites/12/2015/05/doc-ap-proc-credmemo.pdf",
+      "source_pages": [
+        2
+      ],
+      "order": "SAVA_STUDY_ORDER_NOT_VERIFIED_SAP_EXPORT_ORDER",
+      "coverage_percentage": null,
+      "full_field_catalog_verified": false,
+      "fields": [
+        {
+          "position": 1,
+          "label": "St",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 2,
+          "label": "DocumentNo",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 3,
+          "label": "Reference",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 4,
+          "label": "Doc. Date",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL",
+          "type_hint": "date",
+          "cleaning_rule": "Giữ chuỗi gốc; xác nhận DD.MM.YYYY / MM.DD.YYYY trước khi đổi ISO. Ngày rỗng không phải ngày 0."
+        },
+        {
+          "position": 5,
+          "label": "DD",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 6,
+          "label": "Pstng Date",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL",
+          "type_hint": "date",
+          "cleaning_rule": "Giữ chuỗi gốc; xác nhận DD.MM.YYYY / MM.DD.YYYY trước khi đổi ISO. Ngày rỗng không phải ngày 0."
+        },
+        {
+          "position": 7,
+          "label": "Net due dt",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL",
+          "type_hint": "date",
+          "cleaning_rule": "Giữ chuỗi gốc; xác nhận DD.MM.YYYY / MM.DD.YYYY trước khi đổi ISO. Ngày rỗng không phải ngày 0."
+        },
+        {
+          "position": 8,
+          "label": "PayT",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 9,
+          "label": "Amount in DC",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL",
+          "type_hint": "decimal",
+          "cleaning_rule": "Xác nhận dấu thập phân/ngăn nghìn, dấu âm cuối; giữ tiền tệ/đơn vị. Không đổi rỗng thành 0."
+        },
+        {
+          "position": 10,
+          "label": "Company Code",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 11,
+          "label": "Vendor",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 12,
+          "label": "Vendor Name",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 13,
+          "label": "Fiscal Year",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 14,
+          "label": "Line Item",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 15,
+          "label": "Document Type",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 16,
+          "label": "Document Currency",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "currency",
+          "cleaning_rule": "Giữ mã gốc; gắn với đúng cột số tiền. Không cộng khác tiền tệ."
+        },
+        {
+          "position": 17,
+          "label": "Local Currency",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "currency",
+          "cleaning_rule": "Giữ mã gốc; gắn với đúng cột số tiền. Không cộng khác tiền tệ."
+        },
+        {
+          "position": 18,
+          "label": "Amount in Local Currency",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "decimal",
+          "cleaning_rule": "Xác nhận dấu thập phân/ngăn nghìn, dấu âm cuối; giữ tiền tệ/đơn vị. Không đổi rỗng thành 0."
+        },
+        {
+          "position": 19,
+          "label": "Assignment",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 20,
+          "label": "Text",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 21,
+          "label": "Baseline Date",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "date",
+          "cleaning_rule": "Giữ chuỗi gốc; xác nhận DD.MM.YYYY / MM.DD.YYYY trước khi đổi ISO. Ngày rỗng không phải ngày 0."
+        },
+        {
+          "position": 22,
+          "label": "Payment Block",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 23,
+          "label": "Payment Method",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 24,
+          "label": "Clearing Document",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 25,
+          "label": "Clearing Date",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "date",
+          "cleaning_rule": "Giữ chuỗi gốc; xác nhận DD.MM.YYYY / MM.DD.YYYY trước khi đổi ISO. Ngày rỗng không phải ngày 0."
+        },
+        {
+          "position": 26,
+          "label": "Special G/L Indicator",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 27,
+          "label": "Debit/Credit",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 28,
+          "label": "Posting Key",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 29,
+          "label": "G/L Account",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 30,
+          "label": "Tax Code",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 31,
+          "label": "Cash Discount Days 1",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 32,
+          "label": "Cash Discount Percentage 1",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "decimal",
+          "cleaning_rule": "Xác nhận dấu thập phân/ngăn nghìn, dấu âm cuối; giữ tiền tệ/đơn vị. Không đổi rỗng thành 0."
+        },
+        {
+          "position": 33,
+          "label": "Cash Discount Amount",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "decimal",
+          "cleaning_rule": "Xác nhận dấu thập phân/ngăn nghìn, dấu âm cuối; giữ tiền tệ/đơn vị. Không đổi rỗng thành 0."
+        },
+        {
+          "position": 34,
+          "label": "Invoice Reference",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 35,
+          "label": "Reference Fiscal Year",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 36,
+          "label": "Purchasing Document",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 37,
+          "label": "Purchasing Item",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 38,
+          "label": "Business Area",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 39,
+          "label": "Profit Center",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 40,
+          "label": "Document Header Text",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 41,
+          "label": "User Name",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        }
+      ]
+    },
+    {
+      "id": "KSB1",
+      "title": "Cost Centers: Actual Line Items",
+      "classification": "SAP_LIKE_EXPANDED_STUDY_LAYOUT",
+      "target_release": "UNKNOWN",
+      "source_url": "https://schoolsnet.derbyshire.gov.uk/site-elements/documents/administration/sap-for-schools/sap-reporting/report-on-postings-line-items-ksb1.pdf",
+      "source_pages": [
+        3,
+        4
+      ],
+      "order": "SAVA_STUDY_ORDER_NOT_VERIFIED_SAP_EXPORT_ORDER",
+      "coverage_percentage": null,
+      "full_field_catalog_verified": false,
+      "fields": [
+        {
+          "position": 1,
+          "label": "Cost Element",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 2,
+          "label": "AuxAcctAs1",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 3,
+          "label": "Cost element name",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 4,
+          "label": "Cost Centre",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 5,
+          "label": "Object name",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 6,
+          "label": "ValCOArCur",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL",
+          "type_hint": "decimal",
+          "cleaning_rule": "Xác nhận dấu thập phân/ngăn nghìn, dấu âm cuối; giữ tiền tệ/đơn vị. Không đổi rỗng thành 0."
+        },
+        {
+          "position": 7,
+          "label": "D",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 8,
+          "label": "Per",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 9,
+          "label": "Name of Offsetting Account",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 10,
+          "label": "Posting Date",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL",
+          "type_hint": "date",
+          "cleaning_rule": "Giữ chuỗi gốc; xác nhận DD.MM.YYYY / MM.DD.YYYY trước khi đổi ISO. Ngày rỗng không phải ngày 0."
+        },
+        {
+          "position": 11,
+          "label": "Name",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 12,
+          "label": "Year",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL_PAGE4",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 13,
+          "label": "DocumentNo",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL_PAGE4",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 14,
+          "label": "Doc. Date",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL_PAGE4",
+          "type_hint": "date",
+          "cleaning_rule": "Giữ chuỗi gốc; xác nhận DD.MM.YYYY / MM.DD.YYYY trước khi đổi ISO. Ngày rỗng không phải ngày 0."
+        },
+        {
+          "position": 15,
+          "label": "DocTyp",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL_PAGE4",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 16,
+          "label": "User",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL_PAGE4",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 17,
+          "label": "RefDocNo",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL_PAGE4",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 18,
+          "label": "RT",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL_PAGE4",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 19,
+          "label": "Doc Header Text",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL_PAGE4",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 20,
+          "label": "Purchasing Doc.",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL_PAGE4",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 21,
+          "label": "Offsetting Acct",
+          "technical_name": null,
+          "evidence": "SOURCE_LABEL_PAGE4",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 22,
+          "label": "Controlling Area",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 23,
+          "label": "Company Code",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 24,
+          "label": "CO Document Item",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 25,
+          "label": "CO Area Currency",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "currency",
+          "cleaning_rule": "Giữ mã gốc; gắn với đúng cột số tiền. Không cộng khác tiền tệ."
+        },
+        {
+          "position": 26,
+          "label": "Value in Object Currency",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "decimal",
+          "cleaning_rule": "Xác nhận dấu thập phân/ngăn nghìn, dấu âm cuối; giữ tiền tệ/đơn vị. Không đổi rỗng thành 0."
+        },
+        {
+          "position": 27,
+          "label": "Object Currency",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "currency",
+          "cleaning_rule": "Giữ mã gốc; gắn với đúng cột số tiền. Không cộng khác tiền tệ."
+        },
+        {
+          "position": 28,
+          "label": "Value in Transaction Currency",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "decimal",
+          "cleaning_rule": "Xác nhận dấu thập phân/ngăn nghìn, dấu âm cuối; giữ tiền tệ/đơn vị. Không đổi rỗng thành 0."
+        },
+        {
+          "position": 29,
+          "label": "Transaction Currency",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "currency",
+          "cleaning_rule": "Giữ mã gốc; gắn với đúng cột số tiền. Không cộng khác tiền tệ."
+        },
+        {
+          "position": 30,
+          "label": "Quantity",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "decimal",
+          "cleaning_rule": "Xác nhận dấu thập phân/ngăn nghìn, dấu âm cuối; giữ tiền tệ/đơn vị. Không đổi rỗng thành 0."
+        },
+        {
+          "position": 31,
+          "label": "Unit",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 32,
+          "label": "Activity Type",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 33,
+          "label": "Partner Cost Center",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 34,
+          "label": "Order",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 35,
+          "label": "Material",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 36,
+          "label": "Plant",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 37,
+          "label": "Profit Center",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        },
+        {
+          "position": 38,
+          "label": "Business Transaction",
+          "technical_name": null,
+          "evidence": "PROPOSED_STUDY_FIELD_AVAILABILITY_UNVERIFIED",
+          "type_hint": "text",
+          "cleaning_rule": "Giữ dạng chuỗi và số 0 đầu; giữ nhãn + vị trí cột. Không tự coi là khóa duy nhất."
+        }
+      ]
+    }
+  ]
+}

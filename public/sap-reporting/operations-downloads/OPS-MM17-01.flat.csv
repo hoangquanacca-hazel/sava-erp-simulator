@@ -1,0 +1,4 @@
+﻿"Warehouse Number","Material","Plnt","SLoc","S","Batch","S","Special Stock Number","Material Description","Typ","StorageBin","Available stock","BUn","GR Date"
+"WH1","RM-CONN-01","1000","0001","","000001","","","Connector raw component","001","BIN-A","100.000","PC","12.10.2026"
+"WH1","RM-CONN-01","1000","0001","","000001","","","Connector raw component","911","BIN-B","1.000-","PC","12.10.2026"
+"WH1","RM-CONN-01","1000","0001","","000002","","","Connector raw component","001","BIN-A","5.000","KG","12.10.2026"

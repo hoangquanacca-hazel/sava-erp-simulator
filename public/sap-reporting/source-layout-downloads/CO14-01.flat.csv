@@ -1,0 +1,4 @@
+﻿"[nhóm] Controlling Area","[nhóm] Version","[nhóm] Fiscal Year","[nhóm] Period","[nhóm] Selection Variant","[nhóm] Actual price calc.","[nhóm] Cost Comp Struct. (Main Cost Comp Split)","[nhóm] Currency","[nhóm] Exchange Rate Type","OTy","Acty Type","Cost ...","Name","AUn","Activity Quantity","Total Price","Price (Fixed)","PUnit","Fx+Vb P OC","Fxd P OC","Price unit ObCur","Alloc. CElem","ATyp cat."
+"1000","0","2026","09","/SAVA_DEMO","Chưa xác minh","DEMO","EUR","M","DEMO","DEMO","","Sản xuất DEMO","PC","20,00","50,00","30,00","1,00","50,00","30,00","1,00","DEMO","DEMO"
+"1000","0","2026","09","/SAVA_DEMO","Chưa xác minh","DEMO","EUR","M","DEMO","DEMO","","Điều chỉnh, DEMO","PC","10,00","40,00","20,00","1,00","40,00","20,00","1,00","DEMO","DEMO"
+"1000","0","2026","09","/SAVA_DEMO","Chưa xác minh","DEMO","EUR","M","DEMO","DEMO","","Giá trị 0 DEMO","PC","0,00","0,00","0,00","1,00","0,00","0,00","1,00","DEMO","DEMO"

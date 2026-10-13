@@ -1,0 +1,7 @@
+﻿"KKAO / KKAX (Calculate Work in Process: Object List) — SAVA DEMO (mẫu dựng lại)","","","","","","","",""
+"Order Type / Plant: DEMO / 1000","","","","","","","",""
+"Exception","Cost Object","Typ","Crcy","Σ","WIP (Cumul.)","Σ","WIP (Period)","Material"
+"DEMO","0000100001","S","EUR","","500,00","","100,00","DEMO-MAT-001"
+"DEMO","0000100002","S","EUR","","300,00","","50,00","DEMO-MAT-002"
+"DEMO","0000100003","S","EUR","","0,00","","0,00","DEMO-MAT-003"
+"* Total","","","","","800,00","","150,00",""

@@ -1,0 +1,5 @@
+﻿"QM11 — cột đã chọn trong Change Layout — SAVA DEMO","","","","","","","","","","",""
+"Cột đã chọn trong Change Layout; preview tự dựng, chưa thấy bảng xuất tương ứng","","","","","","","","","","",""
+"Notification","Required Start","Required Start Time","Required End","Required End Time","Work center","Priority","Priority text","Equipment","Material","Material Description","Code group text"
+"000100000001","12.10.2026","08:00:00","13.10.2026","17:00:00","WC-ASSY","DEMO_A","DEMO high","000000100001","FG-CONN-01","Connector demo","DEMO code group"
+"000100000002","12.10.2026","09:00:00","","","WC-ASSY","DEMO_B","DEMO medium","","FG-CONN-02","Connector demo",""

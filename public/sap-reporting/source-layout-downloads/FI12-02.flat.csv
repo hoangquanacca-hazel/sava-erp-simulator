@@ -1,0 +1,4 @@
+﻿"[bộ lọc] Company Code","[bộ lọc] Fiscal Year","[bộ lọc] Posting Date","[bộ lọc] Ledger","[bộ lọc] G/L Account","[bộ lọc] Journal Entry Type","[nhóm] Ledger Fiscal Period","Journal Entry Ty...","G/L Account - D...","G/L Account - C...","Customer - Debit","Customer - Credit","Supplier - Debit","Supplier - Credit","Dr Amt in CC Cr...","Cr Amt in CC Crcy"
+"1000","2026","28.09.2026","0L","0000610000","DEMO","09","","","","0,00","0,00","0,00","0,00","","0.00 EUR"
+"1000","2026","28.09.2026","0L","0000610000","DEMO","09","","","","0,00","0,00","0,00","0,00","","-1000.00 EUR"
+"1000","2026","28.09.2026","0L","0000610000","DEMO","09","","","","0,00","0,00","0,00","0,00","","0.00 EUR"

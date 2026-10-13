@@ -1,0 +1,4 @@
+﻿"[bộ lọc] Company Code","[bộ lọc] Ledger","[bộ lọc] Statement Version","[bộ lọc] Statement Type","[bộ lọc] End Period","[bộ lọc] Comparison End Period","[bộ lọc] Currency","Description","G/L Account","Period Balance","Comparison Bal...","Absolute Differe...","Relative Differe..."
+"1000","0L","DEMO","DEMO","09","09","EUR","    Cash DEMO","0000610000","1.000,00","","",""
+"1000","0L","DEMO","DEMO","09","09","EUR","    Inventory DEMO","0000610001","500,00","","",""
+"1000","0L","DEMO","DEMO","09","09","EUR","    Receivables DEMO","0000610002","0,00","","",""

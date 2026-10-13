@@ -1,0 +1,4 @@
+﻿"[nhóm] Layout","[nhóm] Cost Center","[nhóm] Report currency","Cost Center","Cost El... (bị cắt)","Fund","Per","Cost element name","RefDocNo","Posting Date","Doc. Date","Doc... (bị cắt)","D/C","Σ","Val.in rep.cur.","User Name","Name","Offst.acct","Doc. Text","Aux. acct a... (bị cắt)"
+"/SAVA_DEMO","0000100001","EUR","0000100001","","DEMO","09","SAVA DEMO","001900001","28.09.2026","28.09.2026","","D","","1.000,50","SAVA DEMO","SAVA DEMO","0000610000","Chi phí sản xuất DEMO",""
+"/SAVA_DEMO","0000100001","EUR","0000100001","","DEMO","09","SAVA DEMO","001900002","29.09.2026","29.09.2026","","C","","200,50-","SAVA DEMO","SAVA DEMO","0000610000","Điều chỉnh, DEMO",""
+"/SAVA_DEMO","0000100001","EUR","0000100001","","DEMO","09","SAVA DEMO","001900003","","","","D","","0,00","SAVA DEMO","SAVA DEMO","0000610000","",""

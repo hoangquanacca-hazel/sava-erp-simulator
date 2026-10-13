@@ -1,0 +1,4 @@
+﻿"[nhóm] Customer","[nhóm] Company Code","[nhóm] Name","[nhóm] City","St","Assignment","DocumentNo","Typ","Doc. Date","S","DD","Amt in loc.cur.","LCurr","Clrng doc.","Text"
+"0000990001","1000","SAVA DEMO","DEMO CITY","●","DEMO","001900001","DR","28.09.2026","","Overdue","1.000,50","EUR","","Chi phí sản xuất DEMO"
+"0000990001","1000","SAVA DEMO","DEMO CITY","●","DEMO","001900002","DR","29.09.2026","","Due","200,50-","EUR","0018000001","Điều chỉnh, DEMO"
+"0000990001","1000","SAVA DEMO","DEMO CITY","●","DEMO","001900003","DR","","","Not due","0,00","EUR","",""

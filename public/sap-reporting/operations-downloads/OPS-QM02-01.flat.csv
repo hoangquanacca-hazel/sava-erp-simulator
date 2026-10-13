@@ -1,0 +1,3 @@
+﻿"Notification","Notification Type","Description","Notification Date","Required Start","Required End","Completion Date","Priority","System Status","User Status","Material","Plant","Batch","Supplier","Customer","Inspection Lot","Sales Document","Delivery","Purchase Order","Order","Code Group","Coding","Reported By","Coordinator","Partner","Reference Field Monitor","Monitor","Snapshot Time"
+"000200000001","Q1","DEMO customer complaint","12.10.2026","","15.10.2026","","1","OSNO","","FG-CONN-01","1000","","","0000100001","","","","","","","","","","","DEMO_PRIORITY","DEMO_RED",""
+"000200000002","Q2","DEMO supplier issue","","","","12.10.2026","","NOCO","","","","","0000200001","","","","","","","","","","","","DEMO_DATE","DEMO_GREEN",""

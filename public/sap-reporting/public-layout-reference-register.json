@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "as_of": "2026-10-08",
+    "company_file_required_to_use_reference": false,
+    "classification": "PUBLIC_IMPLEMENTATION_LAYOUT_REFERENCE",
+    "original_sap_export_files": 0,
+    "target_system_certified": false,
+    "local_source_pdf_files": 0,
+    "download_attempt_status": "LOCAL_NETWORK_DNS_FAILURE",
+    "rights": "Source documents are linked, not copied into public; reuse rights for full PDFs/screenshots not established"
+  },
+  "profiles": [
+    {
+      "id": "FBL3N",
+      "report_id": "FI01",
+      "owner": "BSPTCL — Project SUGAM",
+      "title": "Sweep Entry & Bank Reconciliation",
+      "url": "https://www.bsptcl.in/ERP/FAC/Bank_Reconciliation_Process.pdf",
+      "page": 6,
+      "document_date": "13.12.2021",
+      "release": "Không xác định product/release từ tài liệu",
+      "evidence": "WEB_SOURCE_VISUAL_TABLE_TRANSCRIPTION; PDF text confirms report/page",
+      "columns": [
+        "St",
+        "Assignment",
+        "DocumentNo",
+        "BusA",
+        "Type",
+        "Doc. Date",
+        "PK",
+        "Amount in Local Crcy",
+        "LCurr",
+        "Tx",
+        "Clrng doc.",
+        "Text"
+      ],
+      "column_order": "OBSERVED_VISIBLE_TABLE_ORDER",
+      "full_export_schema": false,
+      "unknown": "Không biết hidden fields, native file delimiter/encoding, Excel mode, technical field catalog hoặc cột ngoài khung ảnh."
+    },
+    {
+      "id": "FBL1N",
+      "report_id": "FI06",
+      "owner": "University of Arkansas for Medical Sciences",
+      "title": "Processing Credits in SAP",
+      "url": "https://finance.uams.edu/wp-content/uploads/sites/12/2015/05/doc-ap-proc-credmemo.pdf",
+      "page": 2,
+      "document_date": "4/2007 printed in document",
+      "release": "Legacy reference; không phải chứng nhận S/4HANA2022",
+      "evidence": "WEB_SOURCE_VISUAL_DESCRIPTION; narrow final column unreadable",
+      "columns": [
+        "St",
+        "DocumentNo",
+        "Reference",
+        "Doc. Date",
+        "DD",
+        "Pstng Date",
+        "Net due dt",
+        "PayT",
+        "Amount in DC"
+      ],
+      "column_order": "OBSERVED_VISIBLE_PREFIX_ONLY",
+      "full_export_schema": false,
+      "unknown": "Cột cuối hẹp chưa đọc được; DD/PayT và currency field cần xác nhận; không suy diễn tên kỹ thuật."
+    },
+    {
+      "id": "KSB1",
+      "report_id": "CO01",
+      "owner": "Derbyshire County Council — Budget Manager Support",
+      "title": "Report: Postings Line Items — KSB1",
+      "url": "https://schoolsnet.derbyshire.gov.uk/site-elements/documents/administration/sap-for-schools/sap-reporting/report-on-postings-line-items-ksb1.pdf",
+      "page": 7,
+      "additional_pages": [
+        3,
+        4,
+        40
+      ],
+      "document_date": "February2024",
+      "release": "Tài liệu dùng Fiori entry/KSB1; release SAP chưa xác định",
+      "evidence": "FULL_PDF_TEXT; column labels explained on page3; screenshot page7; layout on page40",
+      "columns": [
+        "Cost Element",
+        "AuxAcctAs1",
+        "Cost element name",
+        "Cost Centre",
+        "Object name",
+        "ValCOArCur",
+        "D",
+        "Per",
+        "Name of Offsetting Account",
+        "Posting Date",
+        "Name"
+      ],
+      "column_order": "EXPLANATION_LIST_ORDER_NOT_CERTIFIED_TABLE_ORDER",
+      "full_export_schema": false,
+      "unknown": "Danh sách này chưa gồm mọi cột ở trang4. Không coi thứ tự phần giải thích là full ALV export order; không phát hành CSV có thứ tự chưa kiểm chứng."
+    }
+  ]
+}

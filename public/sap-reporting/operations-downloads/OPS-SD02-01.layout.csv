@@ -1,0 +1,6 @@
+﻿"VF05 — schema billing item đề xuất — SAVA DEMO","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
+"SAVA_PROPOSED_SCHEMA_NOT_SOURCE_LAYOUT · Hệ mục tiêu chưa xác nhận","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
+"Billing Document","Billing Item","Billing Type","Billing Date","Created On","Created By","Sold-to Party","Payer","Material","Plant","Sales Organization","Distribution Channel","Division","Billing Quantity","Sales Unit","Net Value","Tax Amount","Gross Value","Currency","Pricing Date","Exchange Rate","Company Code","Accounting Document","Fiscal Year","Posting Date","Accounting Status","Cancellation Document","Cancelled Billing Document","Sales Document","Sales Item","Delivery","Delivery Item"
+"0090000001","000010","F2","12.10.2026","","","","","","","","","","100.000","PC","1,000.00","100.00","1,100.00","USD","","","1000","0019000001","2026","","DEMO_POSTED","","","","","",""
+"0090000002","000010","G2","","","","","","","","","","","","","100.00-","","","USD","","","","","","","DEMO_NOT_TRANSFERRED","","","","","",""
+"0090000003","000010","S1","","","","","","","","","","","","","1,000.00-","","","USD","","","","","","","","","0090000001","","","",""

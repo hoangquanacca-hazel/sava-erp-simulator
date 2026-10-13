@@ -1,0 +1,4 @@
+﻿"[nhóm] Layout","[nhóm] Cost Center","[nhóm] COarea currency","RefDocNo","Cost element name","Cost Element","Σ","Val.in rep.cur.","User Name","Cost Element Group","Cost Center","Funds Center","Assignment","Name"
+"/SAVA_DEMO","0000100001","EUR","001900001","SAVA DEMO","0000610000","","1.000,50","SAVA DEMO","0000610000","0000100001","DEMO","DEMO","SAVA DEMO"
+"/SAVA_DEMO","0000100001","EUR","001900002","SAVA DEMO","0000610000","","200,50-","SAVA DEMO","0000610000","0000100001","DEMO","DEMO","SAVA DEMO"
+"/SAVA_DEMO","0000100001","EUR","001900003","SAVA DEMO","0000610000","","0,00","SAVA DEMO","0000610000","0000100001","DEMO","DEMO","SAVA DEMO"

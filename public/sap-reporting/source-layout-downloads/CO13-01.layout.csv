@@ -1,0 +1,7 @@
+﻿"KO88 (settlement từng order — cùng định dạng output 'Actual Settlement' với CO88) — SAVA DEMO (mẫu dựng lại)","","","","","","",""
+"[nhóm] nút Basic list / Sender / Receiver / Accounting documents / Settlement rule","","","","","","",""
+"Senders","Short text: Sender","Receiver","Σ","Val./CC/Lg","Inform.","",""
+"0000100001","Sản xuất DEMO","DEMO AUC","","1.000,00","DEMO","",""
+"0000100002","Điều chỉnh, DEMO","DEMO AUC","","500,00","DEMO","",""
+"0000100003","Giá trị 0 DEMO","DEMO AUC","","0,00","DEMO","",""
+"* Total","","","","1.500,00","","",""

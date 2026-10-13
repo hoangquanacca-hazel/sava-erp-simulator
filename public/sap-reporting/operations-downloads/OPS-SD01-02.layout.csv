@@ -1,0 +1,7 @@
+﻿"VA05 — danh sách item theo ảnh Community — SAVA DEMO","","","","","","","","","",""
+"Chỉ phần cột nhìn thấy trong ảnh; dữ liệu tự dựng","","","","","","","","","",""
+"Doc. date: 00/00/0000 To 10/12/2026","","","","","","","","","",""
+"PO number","Doc. Date","SaTy","Document","Item","Sold-to pt","Material","Order qty","SU","Net Value","Curr."
+"DEMO-PO-01","10/12/2026","DEMO_OR","0060000001","10","0030000001","FG-CONN-01","100","EA","1,000.00","USD"
+"DEMO-PO-01","10/12/2026","DEMO_OR","0060000001","20","0030000001","FG-CONN-02","1","EA","0.00","USD"
+"","10/11/2026","DEMO_OR","0060000002","10","0030000002","FG-CONN-01","2","EA","20.00","EUR"

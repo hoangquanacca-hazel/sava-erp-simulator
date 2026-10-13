@@ -1,0 +1,171 @@
+{
+  "date": "2026-10-12",
+  "native_export": false,
+  "files": [
+    {
+      "name": "GAP-CO05-01.flat.csv",
+      "bytes": 523,
+      "sha256": "a6ff4b2037f4321e179ad2056d8b471fa4165091b29088814e4e94920524ae3c"
+    },
+    {
+      "name": "GAP-CO05-01.layout.csv",
+      "bytes": 784,
+      "sha256": "14d43b4be3efb476321d718038627c290c27ddeefa2b59801c29f4c127ccc0ff"
+    },
+    {
+      "name": "GAP-CO05-01.xlsx",
+      "bytes": 8474,
+      "sha256": "7e11dbcf5c92471abecbecc8e6be41176515643924b9f88f6739cf7f297b5029"
+    },
+    {
+      "name": "GAP-FI07-01.flat.csv",
+      "bytes": 950,
+      "sha256": "9f9349b598425734d8524ac371fb7a2ca8661deae2dedd2f83fa796869780cba"
+    },
+    {
+      "name": "GAP-FI07-01.layout.csv",
+      "bytes": 739,
+      "sha256": "ad46519a207994f266006dfe5f3b703097c4b93a3e2060578072f0da25fd400c"
+    },
+    {
+      "name": "GAP-FI07-01.xlsx",
+      "bytes": 8112,
+      "sha256": "13f1e4d3bf9f838ac67fba7b7ce97a219c2757ffc621acfb76314e1fe8988581"
+    },
+    {
+      "name": "GAP-FI07-02.flat.csv",
+      "bytes": 1116,
+      "sha256": "500690f7ecfc534b672223a547155016b504421443d4244a106a4184392ef6df"
+    },
+    {
+      "name": "GAP-FI07-02.layout.csv",
+      "bytes": 850,
+      "sha256": "cefd122ec84d2e35bdab8938e3f3eeaf22aff446f77900db0754c67ec2093885"
+    },
+    {
+      "name": "GAP-FI07-02.xlsx",
+      "bytes": 8619,
+      "sha256": "c11a24ff557f124689840100e58cd92ccc9f300e9638e236999b0b07ae522e82"
+    },
+    {
+      "name": "GAP-FI09-01.flat.csv",
+      "bytes": 1216,
+      "sha256": "1d49a7a84bacaaa21577735e1a023f215feda0b6b15fe86a0b5bb0cbea1c14d0"
+    },
+    {
+      "name": "GAP-FI09-01.layout.csv",
+      "bytes": 924,
+      "sha256": "51a2798b8d8ef26ed183e055209724d159a83e541144cf3f18325f8b0e591e9c"
+    },
+    {
+      "name": "GAP-FI09-01.xlsx",
+      "bytes": 9182,
+      "sha256": "f20a34e3e217909ca690116c1b208818cf044c2cd3c202de2560a4eed1b9d2ac"
+    },
+    {
+      "name": "GAP-FI09-02.flat.csv",
+      "bytes": 1149,
+      "sha256": "9a75100197e74c5ff0afe20ae63f1b80df946d088d51fd14c7a032bd39030a32"
+    },
+    {
+      "name": "GAP-FI09-02.layout.csv",
+      "bytes": 877,
+      "sha256": "f39f791494d7250f2569a8a84e6d2deee9f08046d2404a9b3123aabb19558b74"
+    },
+    {
+      "name": "GAP-FI09-02.xlsx",
+      "bytes": 8382,
+      "sha256": "02a0c2e44ecf6f702f29df92a673607ea0c0e22968fc3bb3a43a8d041fb16eb8"
+    },
+    {
+      "name": "GAP-FI10-01.flat.csv",
+      "bytes": 2646,
+      "sha256": "c652b64d0b5f6163782df68e6c3fcf9bdc4d5854e4de77ace75b3c0d748fdd88"
+    },
+    {
+      "name": "GAP-FI10-01.layout.csv",
+      "bytes": 2681,
+      "sha256": "b7f0b71ca0222a4f18258d4a2625c2929b9fdee3caf08da06936dff938e871e9"
+    },
+    {
+      "name": "GAP-FI10-01.xlsx",
+      "bytes": 10520,
+      "sha256": "cd4aa63604d2511eb479c8d77a9871692c3b8ee33392756868dea3da4433e52c"
+    },
+    {
+      "name": "GAP-FI10-02.flat.csv",
+      "bytes": 3207,
+      "sha256": "a571065a7c5ddf0156516ca6f2c7d00fa5beb85ea16a12a0b668a0f9fc35dc94"
+    },
+    {
+      "name": "GAP-FI10-02.layout.csv",
+      "bytes": 3310,
+      "sha256": "2cfe951558bb02fb6bc4cd0c88bb9c136f540748b8f01856962503897120aa86"
+    },
+    {
+      "name": "GAP-FI10-02.xlsx",
+      "bytes": 11680,
+      "sha256": "53eafac78015d058f67cda84a2682a406c5669d4aa65c6946a4c75011f245754"
+    },
+    {
+      "name": "GAP-FI11-01.flat.csv",
+      "bytes": 1727,
+      "sha256": "758ffb49c13c141dbabb1efdb6e01ec0c4328275320589e7754af2ebae2b2e89"
+    },
+    {
+      "name": "GAP-FI11-01.layout.csv",
+      "bytes": 1788,
+      "sha256": "8b3ea507dc69d98071d58c5f87b5904651558cea53ab7c03a7d68eaa0f874272"
+    },
+    {
+      "name": "GAP-FI11-01.xlsx",
+      "bytes": 9570,
+      "sha256": "66bfd84bd176fe2fdf717d03f0377f354c80696b49f609658867f7c85a74a417"
+    },
+    {
+      "name": "GAP-MM04-01.flat.csv",
+      "bytes": 867,
+      "sha256": "f270b082413245d61bab362c68ad00a4cc01cc1abd037db9cdb04378d724b2f7"
+    },
+    {
+      "name": "GAP-MM04-01.layout.csv",
+      "bytes": 1279,
+      "sha256": "c2645537d92d34a41b6713bcc857d3a1d155c9a5f35a6ae548c9b1bf593a7c7e"
+    },
+    {
+      "name": "GAP-MM04-01.xlsx",
+      "bytes": 9053,
+      "sha256": "de8bddb747871beed279083eb3a130a9bb9acae0893e06d9ea758f2764a2f0c4"
+    },
+    {
+      "name": "GAP-MM05-01.flat.csv",
+      "bytes": 377,
+      "sha256": "593762b0c602e084468f4e4a52a8b514f48f34233857a4abb04ed1b2f6ed7ea1"
+    },
+    {
+      "name": "GAP-MM05-01.layout.csv",
+      "bytes": 791,
+      "sha256": "29ebbe46e65895ec95a862d39f0549b1ee998358758af83b01a1154eb3425d69"
+    },
+    {
+      "name": "GAP-MM05-01.xlsx",
+      "bytes": 8021,
+      "sha256": "17807a5ec701173a0bb0f831dd03f2d09b9ea3547da54414a855799101a795ad"
+    },
+    {
+      "name": "GAP-MM11-01.flat.csv",
+      "bytes": 763,
+      "sha256": "9b10017c2be27c8d5c5e5a43a45a11c0b603ad502828bd4e2a48bcc08b4bf3b4"
+    },
+    {
+      "name": "GAP-MM11-01.layout.csv",
+      "bytes": 1007,
+      "sha256": "7a70a74efa86b981395044d0636d8afc1b869802081c3ab8c97cd81072e4036b"
+    },
+    {
+      "name": "GAP-MM11-01.xlsx",
+      "bytes": 9866,
+      "sha256": "193d1fbae9fbfdb7cca4e1a03197497aeeeffe21ab788c95d48fc7d0ba4c141d"
+    }
+  ]
+}

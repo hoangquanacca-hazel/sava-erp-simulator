@@ -1,0 +1,3 @@
+﻿"Order","Activity","Suboperation","Description","Equipment","Functional Location","Planning Plant","Work Center","Control Key","Standard Text Key","Actual finish (date)","Actual work","Work Unit","Planned Work","Remaining Work","Confirmation","Confirmation Counter","Reversed Confirmation","Total actual costs","Currency","System Status","User Status"
+"000100009001","0010","","DEMO inspect","","","","","","","","2.000","H","","","0000009001","000001","","600.00","USD","",""
+"000100009001","0020","","DEMO repair","","","","","","","","3.000","H","","","0000009002","000001","","600.00","USD","",""

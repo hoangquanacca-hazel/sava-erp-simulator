@@ -1,0 +1,4 @@
+﻿"[bộ lọc] Ledger","[bộ lọc] Company Code","[bộ lọc] G/L Account","[bộ lọc] Status","[bộ lọc] Posting Date","[bộ lọc] Functional Area","[bộ lọc] Ledger Fiscal Year","[bộ lọc] Fiscal Period","[nhóm] Company Code","[nhóm] G/L Account","Status","Assignment Reference","Journal Entry","Journal Entry T... (bị cắt)","Posting Date","Posting Key","Amount in CC Crcy","Tax Code","Clearing Entr... (bị cắt)"
+"0L","1000","0000610000","●","28.09.2026","DEMO","2026","09","1000","0000610000","●","DEMO","001900001","","28.09.2026","40","1000.50 EUR","V1",""
+"0L","1000","0000610000","●","28.09.2026","DEMO","2026","09","1000","0000610000","●","DEMO","001900002","","29.09.2026","50","-200.50 EUR","V1",""
+"0L","1000","0000610000","●","28.09.2026","DEMO","2026","09","1000","0000610000","●","DEMO","001900003","","","40","0.00 EUR","V1",""

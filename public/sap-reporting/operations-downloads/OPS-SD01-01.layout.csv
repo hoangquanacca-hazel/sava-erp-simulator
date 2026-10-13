@@ -1,0 +1,6 @@
+﻿"VA05 — schema schedule-line đề xuất — SAVA DEMO","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
+"SAVA_PROPOSED_SCHEMA_NOT_SOURCE_LAYOUT · Hệ mục tiêu chưa xác nhận","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
+"Sales Document","Item","Schedule Line","Sales Document Type","Document Date","Sold-to Party","Sold-to Name","Ship-to Party","Material","Material Description","Plant","Sales Organization","Distribution Channel","Division","Sales Office","Sales Group","Customer PO","Order Quantity","Sales Unit","Requested Delivery Date","Confirmed Quantity","Confirmed Delivery Date","Delivered Quantity","Net Value","Currency","Delivery Status","Overall Status","Delivery Block","Billing Block","Reason for Rejection","Higher-level Item","Snapshot Time"
+"0000500001","000010","0001","OR","","0000100001","","","FG-CONN-01","","1000","1000","","","","","","100.000","PC","15.10.2026","60.000","15.10.2026","","1,000.00","USD","","","","","","",""
+"0000500001","000010","0002","","","","","","","","","","","","","","","100.000","","","40.000","18.10.2026","","1,000.00","USD","","","","","","",""
+"0000500001","000020","0001","","","","","","FG-CONN-02","","","","","","","","","10.000","PC","","0.000","","","500.00","USD","","","","","","",""

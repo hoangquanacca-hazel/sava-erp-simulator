@@ -1,0 +1,7 @@
+﻿"Recurring Entry Documents — danh sách F.15 — SAVA DEMO","","","","","","","","","","","",""
+"Ledger 0L","","","","","","","","","","","",""
+"CoCd","DocumentNo","Type","Pstng Date","First Run","Next Run","Last Run","Inter","Dte Run","Number","DID","Alx","Reference"
+"Itm","PK","SG","S1","AccTy","Account","Tx","LC Tax Amount","Debit/Credit Amount","LCurr","","",""
+"1000","0000080001","SA","12.10.2026","31.10.2026","31.10.2026","31.10.2027","1","31","0","","","DEMO-RECUR"
+"001","40","","","S","0000400300","","0,000","100,000,000","INR","","",""
+"002","50","","","S","0000200100","","","100,000,000-","INR","","",""

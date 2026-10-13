@@ -1,0 +1,4 @@
+﻿"Company Code","Depreciation area","Report date","Created on","Class","Asset","SN…","Inventory number","Fund","Grant","Descr…","Capitalized on","Asset description","Σ","Acquis.val.","Σ","Accum.dep.","Σ","Book val.","Crcy"
+"1000","01 Book deprec.","30.09.2026","11.10.2026","310","000040000001","","DEMO-1","","","","01.01.2024","Máy ép đầu nối DEMO","","12,000.00","","2,900.00-","","9,100.00","USD"
+"1000","01 Book deprec.","30.09.2026","11.10.2026","310","000040000002","","DEMO-2","","","","01.01.2024","Máy kiểm tra DEMO","","6,000.00","","1,500.00-","","4,500.00","USD"
+"1000","01 Book deprec.","30.09.2026","11.10.2026","310","000040000003","","DEMO-3","","","","01.01.2024","Thiết bị đã khấu hao hết DEMO","","3,000.00","","3,000.00-","","0.00","USD"

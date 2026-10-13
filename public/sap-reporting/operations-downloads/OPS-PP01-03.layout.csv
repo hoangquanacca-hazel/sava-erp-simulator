@@ -1,0 +1,7 @@
+﻿"COOIS — Confirmations trước/sau cancellation — SAVA DEMO","","","","","","","","","","","","",""
+"SOURCE_SCREEN_FRAGMENT_RECONSTRUCTION_SYNTHETIC_DATA · Chỉ phần nguồn đã đọc, không full catalog","","","","","","","","","","","","",""
+"List: Confirmations","","","","","","","","","","","","",""
+"Layout: 000000000001","","","","","","","","","","","","",""
+"Order","Confirm.","Yield","Unit","Scrap","Conf. Unit","Confirmation text","Procssg. %","Work Ctr","Entered","FinalConf","Milestone","Activity","Subop..."
+"000100000001","0000000587","100.000","PC","2.000","PC","","","WC-ASSY","DEMO_USER","","X","0010",""
+"000100000001","","100.000-","PC","2.000-","PC","DEMO reversal — chưa có reversal key nguồn","","WC-ASSY","DEMO_USER","","X","0010",""
