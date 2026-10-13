@@ -1,7 +1,8 @@
 """Read-only publication check. Credentials never appear in receipts or output."""
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor,as_completed
-import json,hashlib,urllib.request,urllib.error,sys,datetime
+import json,hashlib,urllib.request,urllib.error,sys,datetime,threading
+import requests
 from sap_html_integrity import equivalent_after_pretty_urls,without_preview_toolbar
 ROOT=Path(__file__).resolve().parents[1];DOC=ROOT/'docs/reporting-library/priority-24';PUB=ROOT/'public/sap-reporting'
 SITE='ed44f609-8ec1-4403-908e-5ca0fffe520f'
@@ -10,6 +11,10 @@ cfg=read(Path.home()/'AppData/Roaming/netlify/Config/config.json');user=cfg['use
 assert token,'Existing Netlify auth missing'
 def api(s):
  req=urllib.request.Request('https://api.netlify.com/api/v1/'+s,headers={'Authorization':'Bearer '+token});return json.load(urllib.request.urlopen(req,timeout=30))
+sessions=threading.local()
+def public_get(address):
+ if not hasattr(sessions,'client'):sessions.client=requests.Session()
+ with sessions.client.get(address,headers={'User-Agent':'SAVA-reporting-release-check/1.0'},timeout=(15,30))as r:return r.status_code,r.content
 site=api('sites/'+SITE);deploy=site['published_deploy']
 if '--state'in sys.argv:
  recent=api('sites/'+SITE+'/deploys?per_page=6')
@@ -26,12 +31,12 @@ for p in ['source-layout-downloads/CO11-02.xlsx','source-layouts.html','expansio
  targets.append(next(f for f in manifest['files']if f['path']==p))
 def get(f):
  try:
-  address=url+'/sap-reporting/'+f['path'];r=urllib.request.urlopen(address,timeout=15);b=r.read();actual=hashlib.sha256(b).hexdigest();assert r.status==200
+  address=url+'/sap-reporting/'+f['path'];status,b=public_get(address);actual=hashlib.sha256(b).hexdigest();assert status==200
   mode='EXACT_BYTES'
   if actual!=f['sha256']:
    compared=without_preview_toolbar(b,SITE,deploy['id'])if name=='preview-verification'else b
    assert f['path'].endswith('.html')and equivalent_after_pretty_urls((PUB/f['path']).read_bytes(),compared,address),(f['path'],'Unexpected payload change',actual)
-   mode='HTML_EQUIVALENT_AFTER_INTERNAL_PRETTY_URLS_ATTRIBUTE_SERIALIZATION_AND_PREVIEW_TOOLBAR'
+   mode='HTML_EQUIVALENT_AFTER_INTERNAL_PRETTY_URLS_ATTRIBUTE_SERIALIZATION'+('_AND_PREVIEW_TOOLBAR'if name=='preview-verification'else'')
   return dict(path=f['path'],status='PASS',integrity_mode=mode,http=200,bytes=len(b),source_sha256=f['sha256'],http_sha256=actual)
  except Exception as e:return dict(path=f['path'],status='FAIL',error=str(e))
 partial=DOC/(name+'-partial.json');cached={}
@@ -48,15 +53,20 @@ with ThreadPoolExecutor(max_workers=8)as ex:
   if r['status']=='FAIL':print('HTTP check failed:',r['path'],r['error'],flush=True)
   if len(downloads)%10==0:print('HTTP checks:',len(downloads),'/',len(targets),flush=True)
 baseline=read(Path('D:/sava-erp-simulator/docs/reporting-library/deployment-2026-10-13/live-baseline.json'))
-assets=[]
-for p in sorted((ROOT/'dist/assets').iterdir()):
- if p.is_file():
+assets=[];asset_errors=[]
+def check_asset(p):
+ try:
   key='/assets/'+p.name;oldasset=next(f for f in baseline['files']if f['path'].lower()==key.lower());expected=oldasset['sha'];assert hashlib.sha1(p.read_bytes()).hexdigest()==expected,(key,'App build changed')
-  b=urllib.request.urlopen(url+key,timeout=30).read();assert hashlib.sha1(b).hexdigest()==expected;assets.append(key)
-health=json.load(urllib.request.urlopen(url+'/api/health',timeout=30))
-try:r=urllib.request.urlopen(url+'/api/chat',timeout=30);chat=r.status
-except urllib.error.HTTPError as e:chat=e.code
+  status,b=public_get(url+key);assert status==200 and hashlib.sha1(b).hexdigest()==expected,(key,'App asset changed');return {'path':key,'status':'PASS','sha1':expected}
+ except Exception as e:return {'path':'/assets/'+p.name,'status':'FAIL','error':str(e)}
+with ThreadPoolExecutor(max_workers=8)as ex:
+ for r in ex.map(check_asset,[p for p in sorted((ROOT/'dist/assets').iterdir())if p.is_file()]):
+  if r['status']=='PASS':assets.append(r)
+  else:asset_errors.append(r)
+print('App assets checked:',len(assets),'passed,',len(asset_errors),'failed',flush=True)
+hs,hb=public_get(url+'/api/health');health=json.loads(hb);assert hs==200 and health['status']=='ok'and health['hasApiKey']is True
+chat,cb=public_get(url+'/api/chat')
 assert chat==405
-fail=[r for r in downloads if r['status']!='PASS']
-out=dict(status='FAIL'if fail else'PASS',checked_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),url=url,deploy_id=deploy['id'],commit_ref=deploy.get('commit_ref'),profiles=160,variants=227,changed_and_representative_http_files=len(downloads),unchanged_application_assets=len(assets),downloads=downloads,health=health,chat_get_status=chat,errors=fail,native_export_sme_acceptance='NOT_VERIFIED')
+fail=[r for r in downloads if r['status']!='PASS']+asset_errors
+out=dict(status='FAIL'if fail else'PASS',checked_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),url=url,deploy_id=deploy['id'],commit_ref=deploy.get('commit_ref'),profiles=160,variants=227,changed_and_representative_http_files=len(downloads),unchanged_application_assets=len(assets),application_assets=assets,downloads=downloads,health=health,chat_get_status=chat,errors=fail,native_export_sme_acceptance='NOT_VERIFIED')
 (DOC/(name+'.json')).write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf8');print(out['status'],len(downloads),'HTTP/hash checks,',len(assets),'app assets unchanged.');sys.exit(bool(fail))
