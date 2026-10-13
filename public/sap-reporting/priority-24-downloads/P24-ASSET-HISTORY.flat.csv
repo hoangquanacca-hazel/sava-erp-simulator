@@ -1,0 +1,5 @@
+﻿"Company Code","Asset Number","Subnumber","Asset Description","Asset Class","Depreciation Area","Fiscal Year","Ledger","Currency","History Sheet Version","Opening APC","Acquisitions","Retirements","Transfers","Closing APC","Opening Accumulated Depreciation","Depreciation","Depreciation on Retirements","Closing Accumulated Depreciation","Net Book Value"
+"1000","000000010001","0000","SAVA DEMO machine","MACH","01","2026","0L","USD","SAVA_DEMO","9000.00","2000.00","1000.00","0.00","10000.00","-1500.00","-600.00","100.00","-2000.00","8000.00"
+"1000","000000010001-MISSING_TEST","0000","SAVA DEMO machine","MACH","01","2026","0L","USD","SAVA_DEMO","","2000.00","1000.00","0.00","10000.00","-1500.00","-600.00","100.00","-2000.00","8000.00"
+"1000","000000010001-LOCALE_TEST","0000","SAVA DEMO machine","MACH","01","2026","0L","USD","SAVA_DEMO","1.234,50","2000.00","1000.00","0.00","10000.00","-1500.00","-600.00","100.00","-2000.00","8000.00"
+"1000","000000010001","0000","SAVA DEMO machine","MACH","01","2026","0L","USD","SAVA_DEMO","9000.00","2000.00","1000.00","0.00","10000.00","-1500.00","-600.00","100.00","-2000.00","8000.00"

@@ -1,0 +1,11 @@
+{
+  "status": "LOCAL_CANDIDATE",
+  "profiles": 160,
+  "variants": 227,
+  "library_files": 726,
+  "new_profiles": 10,
+  "new_views": 23,
+  "reused_views": 1,
+  "native_exports": 0,
+  "business_acceptance": "NOT_RUN"
+}

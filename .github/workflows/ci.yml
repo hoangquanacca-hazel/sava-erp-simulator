@@ -84,6 +84,9 @@ jobs:
       - name: 150 hồ sơ và CSV/XLSX giữ đúng trường dữ liệu
         if: ${{ !cancelled() }}
         run: python3 scripts/test-sap-expansion-150.py
+      - name: 24 nhu cầu ưu tiên và bảo toàn thư viện trước đó
+        if: ${{ !cancelled() }}
+        run: python3 scripts/test-sap-priority-24.py
       # Cần dist/ từ bước Build; chạy server ESM thật trên cổng cục bộ, không cần trình duyệt, không gọi AI.
       - name: Production smoke (test:start)
         if: ${{ !cancelled() }}

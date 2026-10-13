@@ -1,0 +1,354 @@
+{
+  "saved_xlsx_rendered_sheets": 69,
+  "expected_sheets": 69,
+  "renderer_process_exit": 1,
+  "renderer_teardown_not_successful": true,
+  "workbook_cell_validation": "PASS_IN_SEPARATE_VALIDATION",
+  "images": [
+    {
+      "file": "P24-CC-PLAN-Layout.png",
+      "width": 3048,
+      "height": 425
+    },
+    {
+      "file": "P24-CC-PLAN-Flat-input.png",
+      "width": 3048,
+      "height": 249
+    },
+    {
+      "file": "P24-CC-PLAN-Fields.png",
+      "width": 2424,
+      "height": 3261
+    },
+    {
+      "file": "P24-PCA-LINES-Layout.png",
+      "width": 3800,
+      "height": 425
+    },
+    {
+      "file": "P24-PCA-LINES-Flat-input.png",
+      "width": 3800,
+      "height": 249
+    },
+    {
+      "file": "P24-PCA-LINES-Fields.png",
+      "width": 2424,
+      "height": 3053
+    },
+    {
+      "file": "P24-PCA-PLAN-Layout.png",
+      "width": 2856,
+      "height": 425
+    },
+    {
+      "file": "P24-PCA-PLAN-Flat-input.png",
+      "width": 2856,
+      "height": 249
+    },
+    {
+      "file": "P24-PCA-PLAN-Fields.png",
+      "width": 2424,
+      "height": 3175
+    },
+    {
+      "file": "P24-PCA-ACTUAL-Layout.png",
+      "width": 2568,
+      "height": 425
+    },
+    {
+      "file": "P24-PCA-ACTUAL-Flat-input.png",
+      "width": 2568,
+      "height": 249
+    },
+    {
+      "file": "P24-PCA-ACTUAL-Fields.png",
+      "width": 2424,
+      "height": 2911
+    },
+    {
+      "file": "P24-KE30-Layout.png",
+      "width": 3416,
+      "height": 425
+    },
+    {
+      "file": "P24-KE30-Flat-input.png",
+      "width": 3416,
+      "height": 249
+    },
+    {
+      "file": "P24-KE30-Fields.png",
+      "width": 2424,
+      "height": 2925
+    },
+    {
+      "file": "P24-MARGIN-PRODUCT-Layout.png",
+      "width": 2584,
+      "height": 465
+    },
+    {
+      "file": "P24-MARGIN-PRODUCT-Flat-input.png",
+      "width": 2584,
+      "height": 289
+    },
+    {
+      "file": "P24-MARGIN-PRODUCT-Fields.png",
+      "width": 2424,
+      "height": 3028
+    },
+    {
+      "file": "P24-MARGIN-CUSTOMER-Layout.png",
+      "width": 2968,
+      "height": 465
+    },
+    {
+      "file": "P24-MARGIN-CUSTOMER-Flat-input.png",
+      "width": 2968,
+      "height": 289
+    },
+    {
+      "file": "P24-MARGIN-CUSTOMER-Fields.png",
+      "width": 2424,
+      "height": 3201
+    },
+    {
+      "file": "P24-AP-CLASSIC-Layout.png",
+      "width": 3288,
+      "height": 465
+    },
+    {
+      "file": "P24-AP-CLASSIC-Flat-input.png",
+      "width": 3272,
+      "height": 249
+    },
+    {
+      "file": "P24-AP-CLASSIC-Fields.png",
+      "width": 2424,
+      "height": 3632
+    },
+    {
+      "file": "P24-AP-FIORI-Layout.png",
+      "width": 1576,
+      "height": 625
+    },
+    {
+      "file": "P24-AP-FIORI-Flat-input.png",
+      "width": 1504,
+      "height": 249
+    },
+    {
+      "file": "P24-AP-FIORI-Fields.png",
+      "width": 2424,
+      "height": 3241
+    },
+    {
+      "file": "P24-AR-CLASSIC-Layout.png",
+      "width": 3112,
+      "height": 465
+    },
+    {
+      "file": "P24-AR-CLASSIC-Flat-input.png",
+      "width": 3096,
+      "height": 249
+    },
+    {
+      "file": "P24-AR-CLASSIC-Fields.png",
+      "width": 2424,
+      "height": 2831
+    },
+    {
+      "file": "P24-AR-CARD-Layout.png",
+      "width": 2432,
+      "height": 585
+    },
+    {
+      "file": "P24-AR-CARD-Flat-input.png",
+      "width": 2360,
+      "height": 249
+    },
+    {
+      "file": "P24-AR-CARD-Fields.png",
+      "width": 2424,
+      "height": 3164
+    },
+    {
+      "file": "P24-DSO-Layout.png",
+      "width": 3216,
+      "height": 505
+    },
+    {
+      "file": "P24-DSO-Flat-input.png",
+      "width": 3176,
+      "height": 249
+    },
+    {
+      "file": "P24-DSO-Fields.png",
+      "width": 2424,
+      "height": 3387
+    },
+    {
+      "file": "P24-AFAB-Layout.png",
+      "width": 3976,
+      "height": 425
+    },
+    {
+      "file": "P24-AFAB-Flat-input.png",
+      "width": 3976,
+      "height": 249
+    },
+    {
+      "file": "P24-AFAB-Fields.png",
+      "width": 2424,
+      "height": 3423
+    },
+    {
+      "file": "P24-ASSET-BALANCES-Layout.png",
+      "width": 2928,
+      "height": 425
+    },
+    {
+      "file": "P24-ASSET-BALANCES-Flat-input.png",
+      "width": 2928,
+      "height": 249
+    },
+    {
+      "file": "P24-ASSET-BALANCES-Fields.png",
+      "width": 2424,
+      "height": 2835
+    },
+    {
+      "file": "P24-ASSET-HISTORY-Layout.png",
+      "width": 3912,
+      "height": 425
+    },
+    {
+      "file": "P24-ASSET-HISTORY-Flat-input.png",
+      "width": 3912,
+      "height": 249
+    },
+    {
+      "file": "P24-ASSET-HISTORY-Fields.png",
+      "width": 2424,
+      "height": 3249
+    },
+    {
+      "file": "P24-ME2L-Layout.png",
+      "width": 4760,
+      "height": 425
+    },
+    {
+      "file": "P24-ME2L-Flat-input.png",
+      "width": 4760,
+      "height": 249
+    },
+    {
+      "file": "P24-ME2L-Fields.png",
+      "width": 2424,
+      "height": 3487
+    },
+    {
+      "file": "P24-ME2M-Layout.png",
+      "width": 5016,
+      "height": 425
+    },
+    {
+      "file": "P24-ME2M-Flat-input.png",
+      "width": 5016,
+      "height": 249
+    },
+    {
+      "file": "P24-ME2M-Fields.png",
+      "width": 2424,
+      "height": 3596
+    },
+    {
+      "file": "P24-SPEND-Layout.png",
+      "width": 2552,
+      "height": 465
+    },
+    {
+      "file": "P24-SPEND-Flat-input.png",
+      "width": 2528,
+      "height": 249
+    },
+    {
+      "file": "P24-SPEND-Fields.png",
+      "width": 2424,
+      "height": 3833
+    },
+    {
+      "file": "P24-INVOICE-Layout.png",
+      "width": 4456,
+      "height": 425
+    },
+    {
+      "file": "P24-INVOICE-Flat-input.png",
+      "width": 4456,
+      "height": 249
+    },
+    {
+      "file": "P24-INVOICE-Fields.png",
+      "width": 2424,
+      "height": 3944
+    },
+    {
+      "file": "P24-IW39-Layout.png",
+      "width": 4328,
+      "height": 425
+    },
+    {
+      "file": "P24-IW39-Flat-input.png",
+      "width": 4328,
+      "height": 249
+    },
+    {
+      "file": "P24-IW39-Fields.png",
+      "width": 2424,
+      "height": 3528
+    },
+    {
+      "file": "P24-MCI8-Layout.png",
+      "width": 2912,
+      "height": 425
+    },
+    {
+      "file": "P24-MCI8-Flat-input.png",
+      "width": 2912,
+      "height": 249
+    },
+    {
+      "file": "P24-MCI8-Fields.png",
+      "width": 2424,
+      "height": 2903
+    },
+    {
+      "file": "P24-SALES-VOLUME-Layout.png",
+      "width": 3480,
+      "height": 465
+    },
+    {
+      "file": "P24-SALES-VOLUME-Flat-input.png",
+      "width": 3456,
+      "height": 249
+    },
+    {
+      "file": "P24-SALES-VOLUME-Fields.png",
+      "width": 2424,
+      "height": 3129
+    },
+    {
+      "file": "P24-INCOMING-Layout.png",
+      "width": 2880,
+      "height": 465
+    },
+    {
+      "file": "P24-INCOMING-Flat-input.png",
+      "width": 2856,
+      "height": 249
+    },
+    {
+      "file": "P24-INCOMING-Fields.png",
+      "width": 2424,
+      "height": 2987
+    }
+  ]
+}

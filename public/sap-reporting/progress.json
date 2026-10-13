@@ -2,23 +2,23 @@
   "date": "2026-10-13",
   "counting_rule": "Unique authored profile IDs, not variants or technical extracts; sample coverage includes proxy/proposed/derived and is not native acceptance",
   "target_profiles": 150,
-  "authored_profiles": 150,
+  "authored_profiles": 160,
   "percent_quantity": 100.0,
   "remaining_budget": 0,
-  "profiles_with_dedicated_csv_xlsx_samples": 150,
+  "profiles_with_dedicated_csv_xlsx_samples": 160,
   "profiles_without_dedicated_samples": [],
-  "variant_count_including_technical_extracts": 204,
-  "xlsx": 204,
-  "csv": 408,
+  "variant_count_including_technical_extracts": 227,
+  "xlsx": 227,
+  "csv": 454,
   "by_module": {
-    "FI": 30,
-    "CO": 30,
-    "MM": 30,
-    "FI-AA": 7,
+    "FI": 32,
+    "CO": 32,
+    "MM": 32,
+    "FI-AA": 8,
     "PP": 20,
-    "SD": 15,
+    "SD": 17,
     "QM": 10,
-    "PM": 8
+    "PM": 9
   },
   "packages": [
     {
@@ -69,6 +69,13 @@
       "variants": 79,
       "xlsx": 79,
       "csv": 158
+    },
+    {
+      "name": "priority-24",
+      "profiles": 10,
+      "variants": 23,
+      "xlsx": 23,
+      "csv": 46
     }
   ],
   "native_exports": 0,
@@ -87,7 +94,7 @@
     "PP05": "CO03 forms reconstructed; conversion to flat is SAVA, native export not verified"
   },
   "public_library_url": "https://simulator.savafinlab.com.vn/sap-reporting/",
-  "release_version": "2026-10-13-150-authored-profiles",
+  "release_version": "2026-10-13-160-profiles-priority-24",
   "quality_counts": {
     "new_proposed_layouts": 79,
     "new_native_layouts_verified": 0,
@@ -95,5 +102,33 @@
     "company_release_verified": false,
     "sap_sme_acceptance": "NOT_RUN",
     "quantity_target_reached_is_not_quality_acceptance": true
+  },
+  "phase_status": [
+    [
+      "Giai đoạn 1",
+      "45–60 báo cáo FI/CO/MM chuyên sâu",
+      "Có hồ sơ và mẫu; độ sâu, hệ mục tiêu và nghiệm thu còn mở."
+    ],
+    [
+      "Giai đoạn 2",
+      "Mục tiêu 150 hồ sơ sản xuất",
+      "Đạt mục tiêu số lượng; còn khoảng trống nghiệp vụ và bố cục nguồn."
+    ],
+    [
+      "Giai đoạn 3",
+      "200–250 hồ sơ, Fiori, Power BI và kết nối",
+      "Đang mở rộng; chưa hoàn tất hoặc nghiệm thu kết nối."
+    ]
+  ],
+  "all_three_phases_complete": false,
+  "priority_24": {
+    "business_needs": 24,
+    "new_variants": 23,
+    "reused_source_variant": "CO11-02",
+    "new_profiles": 10,
+    "native_exports": 0,
+    "observed_export_field_labels": 0,
+    "target_release": "UNKNOWN",
+    "business_acceptance": "NOT_RUN"
   }
 }
