@@ -1,5 +1,9 @@
 # Duy trì thư viện template SAP trong các lần phát hành app
 
+Cập nhật13/10/2026: candidate mới có150 hồ sơ nghiên cứu /204 biến thể,204 XLSX và408 CSV mẫu (+1 CSV header tham chiếu). Gói expansion-150 thêm79 schema/layout SAVA đề xuất,1.437 vị trí trường; không có native export mới. Phần baseline71/125 phía dưới là mốc lịch sử được giữ để đối chiếu. Xem expansion-150/README.md và receipt phát hành trước khi khẳng định candidate đã live. Giao diện catalog tra cứu đủ150 IDs; các module viewer cũ giữ số của riêng từng nhóm.
+
+CI bổ sung kiểm từng ô CSV/XLSX và11 equations độc lập bằng Python standard library. Không đổi dependency/function/engine/route. Khi thay dữ liệu mới, tái tạo mẫu, chạy test rồi cập nhật manifest có chủ đích; việc đủ150 hồ sơ không thay target release/layout/SME acceptance.
+
 Thư viện tĩnh nằm ở `public/sap-reporting/`. Vite tự sao chép thư mục public vào dist trong build thông thường; không cần overlay thủ công sau deploy. Trang chính có block điều hướng độc lập, không thay đổi React engine hoặc API. Netlify tiếp tục sử dụng cấu hình static + functions hiện có.
 
 `src/index.css` loại thư mục template và tài liệu reporting khỏi quá trình Tailwind dò tên class để các nhãn SAP/dữ liệu CSV/nội dung tài liệu không làm phát sinh CSS của simulator. Các viewer có CSS riêng. Đây là giới hạn phạm vi scan theo [tài liệu Tailwind](https://tailwindcss.com/docs/detecting-classes-in-source-files#ignoring-specific-paths), không thay thiết kế hoặc rule tính toán của app.

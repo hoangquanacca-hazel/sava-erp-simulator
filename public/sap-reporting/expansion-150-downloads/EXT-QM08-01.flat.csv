@@ -1,0 +1,5 @@
+﻿"Material","Supplier","Plant","Valid From","Valid To","Release Quantity","Consumed Quantity","Unit","Inspection Type","Certificate Required","Quality Agreement","Block Reason","Release Date","Released By","Status","Reference","Deletion Flag"
+"0000100001","0000100001","1000","15.09.2026","15.09.2026","100.00","100.00","EA","0000100001","X","0000100001","SAVA giả định để thực hành","15.09.2026","X","OPEN","0000100001","X"
+"0000100002","0000100002","1000","16.09.2026","16.09.2026","","125.00","EA","0000100002","","0000100002","Thiếu dữ liệu cần review","16.09.2026","","EXCEPTION","0000100002",""
+"0000100003","0000100003","1000","17.09.2026","17.09.2026","1.234,50","1.234,50","EA","0000100003","X","0000100003","Chuỗi số dùng locale châu Âu","17.09.2026","X","REVIEW","0000100003","X"
+"0000100001","0000100001","1000","15.09.2026","15.09.2026","175.00","175.00","EA","0000100004","X","0000100004","Khóa trùng cố ý để kiểm tra","15.09.2026","X","DUPLICATE_TEST","0000100004","X"

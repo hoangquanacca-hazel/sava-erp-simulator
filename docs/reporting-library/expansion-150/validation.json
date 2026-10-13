@@ -1,0 +1,502 @@
+{
+  "status": "PASS",
+  "profiles": 150,
+  "new_profiles": 79,
+  "variants": 204,
+  "new_fields": 1437,
+  "new_xlsx": 79,
+  "new_csv": 158,
+  "prior_files_preserved": 411,
+  "all_saved_cell_checks": [
+    {
+      "id": "FI18",
+      "fields": 21,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "FI19",
+      "fields": 18,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "FI20",
+      "fields": 20,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "FI21",
+      "fields": 18,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "FI22",
+      "fields": 18,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "FI23",
+      "fields": 18,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "FI24",
+      "fields": 19,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "FI25",
+      "fields": 17,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "FI26",
+      "fields": 25,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "FI27",
+      "fields": 18,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "FI28",
+      "fields": 19,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "FI29",
+      "fields": 18,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "FI30",
+      "fields": 17,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "CO17",
+      "fields": 19,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "CO18",
+      "fields": 19,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "CO19",
+      "fields": 18,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "CO20",
+      "fields": 17,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "CO21",
+      "fields": 17,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "CO22",
+      "fields": 17,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "CO23",
+      "fields": 19,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "CO24",
+      "fields": 19,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "CO25",
+      "fields": 20,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "CO26",
+      "fields": 20,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "CO27",
+      "fields": 17,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "CO28",
+      "fields": 19,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "CO29",
+      "fields": 20,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "CO30",
+      "fields": 17,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "MM18",
+      "fields": 20,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "MM19",
+      "fields": 17,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "MM20",
+      "fields": 17,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "MM21",
+      "fields": 17,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "MM22",
+      "fields": 17,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "MM23",
+      "fields": 17,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "MM24",
+      "fields": 17,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "MM25",
+      "fields": 17,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "MM26",
+      "fields": 17,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "MM27",
+      "fields": 18,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "MM28",
+      "fields": 18,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "MM29",
+      "fields": 18,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "MM30",
+      "fields": 18,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "PP06",
+      "fields": 17,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "PP07",
+      "fields": 17,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "PP08",
+      "fields": 18,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "PP09",
+      "fields": 17,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "PP10",
+      "fields": 17,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "PP11",
+      "fields": 18,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "PP12",
+      "fields": 18,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "PP13",
+      "fields": 18,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "PP14",
+      "fields": 18,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "PP15",
+      "fields": 17,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "PP16",
+      "fields": 18,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "PP17",
+      "fields": 18,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "PP18",
+      "fields": 17,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "PP19",
+      "fields": 18,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "PP20",
+      "fields": 17,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "SD04",
+      "fields": 19,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "SD05",
+      "fields": 21,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "SD06",
+      "fields": 18,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "SD07",
+      "fields": 18,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "SD08",
+      "fields": 18,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "SD09",
+      "fields": 17,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "SD10",
+      "fields": 17,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "SD11",
+      "fields": 22,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "SD12",
+      "fields": 20,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "SD13",
+      "fields": 17,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "SD14",
+      "fields": 17,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "SD15",
+      "fields": 19,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "QM04",
+      "fields": 19,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "QM05",
+      "fields": 19,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "QM06",
+      "fields": 17,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "QM07",
+      "fields": 18,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "QM08",
+      "fields": 17,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "QM09",
+      "fields": 18,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "QM10",
+      "fields": 19,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "PM04",
+      "fields": 19,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "PM05",
+      "fields": 18,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "PM06",
+      "fields": 17,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "PM07",
+      "fields": 17,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    },
+    {
+      "id": "PM08",
+      "fields": 21,
+      "all_cells": "PASS",
+      "duplicate_and_missing_fixtures": "PASS"
+    }
+  ],
+  "original_sap_exports": 0,
+  "company_release_sap_sme_acceptance": "NOT_VERIFIED",
+  "spreadsheet_desktop_open": "NOT_RUN",
+  "independent_arithmetic_fixtures": [
+    "FI18",
+    "FI20",
+    "CO19",
+    "CO22",
+    "CO23",
+    "CO25",
+    "MM24",
+    "MM26",
+    "MM27",
+    "PP10",
+    "QM05"
+  ]
+}
