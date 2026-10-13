@@ -33,7 +33,7 @@ const progress=JSON.parse(readFileSync(path.join(library,'progress.json'),'utf8'
 const dictionary=JSON.parse(readFileSync(path.join(library,'report-master-dictionary.json'),'utf8'));
 assert.equal(new Set(dictionary.all_reports.map(x=>x.id)).size,manifest.authored_profiles);
 assert.equal(progress.authored_profiles,manifest.authored_profiles);
-const groups=['source-layouts','fi-aa','co-pa','supplemental','finance-gaps','operations'];
+const groups=['source-layouts','fi-aa','co-pa','supplemental','finance-gaps','operations','expansion-150'];
 let variants=0;
 for(const name of groups){
   const model=JSON.parse(readFileSync(path.join(library,name+'.json'),'utf8'));

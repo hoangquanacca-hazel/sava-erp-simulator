@@ -1,24 +1,24 @@
 {
-  "date": "2026-10-12",
+  "date": "2026-10-13",
   "counting_rule": "Unique authored profile IDs, not variants or technical extracts; sample coverage includes proxy/proposed/derived and is not native acceptance",
   "target_profiles": 150,
-  "authored_profiles": 71,
-  "percent_quantity": 47.3,
-  "remaining_budget": 79,
-  "profiles_with_dedicated_csv_xlsx_samples": 71,
+  "authored_profiles": 150,
+  "percent_quantity": 100.0,
+  "remaining_budget": 0,
+  "profiles_with_dedicated_csv_xlsx_samples": 150,
   "profiles_without_dedicated_samples": [],
-  "variant_count_including_technical_extracts": 125,
-  "xlsx": 125,
-  "csv": 250,
+  "variant_count_including_technical_extracts": 204,
+  "xlsx": 204,
+  "csv": 408,
   "by_module": {
-    "FI": 17,
-    "CO": 16,
-    "MM": 17,
+    "FI": 30,
+    "CO": 30,
+    "MM": 30,
     "FI-AA": 7,
-    "PP": 5,
-    "SD": 3,
-    "QM": 3,
-    "PM": 3
+    "PP": 20,
+    "SD": 15,
+    "QM": 10,
+    "PM": 8
   },
   "packages": [
     {
@@ -62,13 +62,20 @@
       "variants": 11,
       "xlsx": 11,
       "csv": 22
+    },
+    {
+      "name": "expansion-150",
+      "profiles": 79,
+      "variants": 79,
+      "xlsx": 79,
+      "csv": 158
     }
   ],
   "native_exports": 0,
   "target_release": "UNKNOWN",
   "full_company_catalog_verified": false,
   "sap_sme_acceptance": "NOT_RUN",
-  "public_deployment": "AUTHORIZED_RELEASE_2026-10-13",
+  "public_deployment": "AUTHORIZED_GIT_RELEASE_2026-10-13",
   "sample_coverage_quality_limits": {
     "FI07": "Legacy supplier GUI/Fiori images read; F0701A successor output layout not verified",
     "FI09": "Legacy customer GUI/Fiori images read; F0703A successor output layout not verified",
@@ -80,5 +87,13 @@
     "PP05": "CO03 forms reconstructed; conversion to flat is SAVA, native export not verified"
   },
   "public_library_url": "https://simulator.savafinlab.com.vn/sap-reporting/",
-  "release_version": "2026-10-13-phase1-through-pp-master"
+  "release_version": "2026-10-13-150-authored-profiles",
+  "quality_counts": {
+    "new_proposed_layouts": 79,
+    "new_native_layouts_verified": 0,
+    "native_exports": 0,
+    "company_release_verified": false,
+    "sap_sme_acceptance": "NOT_RUN",
+    "quantity_target_reached_is_not_quality_acceptance": true
+  }
 }

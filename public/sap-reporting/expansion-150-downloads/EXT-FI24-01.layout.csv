@@ -1,0 +1,7 @@
+﻿"FS00 / F0731A — Danh mục tài khoản và thuộc tính kiểm soát","","","","","","","","","","","","","","","","","",""
+"SAVA proposed layout · target release UNKNOWN · key date30.09.2026","","","","","","","","","","","","","","","","","",""
+"Chart of Accounts","Company Code","Account","Account Name","Account Group","Account Type","Account Currency","Open Item Managed","Line Item Display","Tax Category","Reconciliation Account","Cost Element Category","Sort Key","Field Status Group","Posting Block","Deletion Flag","Alternative Account","Group Account","Valid From"
+"0000100001","1000","0000100001","SAVA giả định để thực hành","0000100001","0000100001","USD","X","000001","0000100001","0000100001","0000100001","0000100001","OPEN","0000100001","X","0000100001","0000100001","15.09.2026"
+"0000100002","1000","0000100002","Thiếu dữ liệu cần review","0000100002","0000100002","USD","","000002","0000100002","0000100002","0000100002","0000100002","EXCEPTION","0000100002","","0000100002","0000100002","16.09.2026"
+"0000100003","1000","0000100003","Chuỗi số dùng locale châu Âu","0000100003","0000100003","USD","X","000003","0000100003","0000100003","0000100003","0000100003","REVIEW","0000100003","X","0000100003","0000100003","17.09.2026"
+"0000100001","1000","0000100001","Khóa trùng cố ý để kiểm tra","0000100004","0000100004","USD","X","000004","0000100004","0000100004","0000100004","0000100004","DUPLICATE_TEST","0000100004","X","0000100004","0000100004","15.09.2026"

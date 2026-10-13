@@ -1,0 +1,7 @@
+﻿"CR05 (candidate) — Danh mục work center và liên kết cost center","","","","","","","","","","","","","","","",""
+"SAVA proposed layout · target release UNKNOWN · key date30.09.2026","","","","","","","","","","","","","","","",""
+"Plant","Work Center","Work Center Description","Work Center Category","Person Responsible","Cost Center","Activity Type","Capacity Category","Capacity Unit","Factory Calendar","Standard Value Key","Usage","Valid From","Valid To","Deletion Flag","Status","Planner Group"
+"1000","0000100001","SAVA giả định để thực hành","0000100001","0000100001","0000100001","0000100001","0000100001","H","0000100001","0000100001","0000100001","15.09.2026","15.09.2026","X","OPEN","0000100001"
+"1000","0000100002","Thiếu dữ liệu cần review","0000100002","0000100002","0000100002","0000100002","0000100002","H","0000100002","0000100002","0000100002","16.09.2026","16.09.2026","","EXCEPTION","0000100002"
+"1000","0000100003","Chuỗi số dùng locale châu Âu","0000100003","0000100003","0000100003","0000100003","0000100003","H","0000100003","0000100003","0000100003","17.09.2026","17.09.2026","X","REVIEW","0000100003"
+"1000","0000100001","Khóa trùng cố ý để kiểm tra","0000100004","0000100004","0000100004","0000100004","0000100004","H","0000100004","0000100004","0000100004","15.09.2026","15.09.2026","X","DUPLICATE_TEST","0000100004"

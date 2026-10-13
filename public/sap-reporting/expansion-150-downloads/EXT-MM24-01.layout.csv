@@ -1,0 +1,7 @@
+﻿"MB5K (candidate) — Kiểm tra nhất quán stock và chứng từ","","","","","","","","","","","","","","","",""
+"SAVA proposed layout · target release UNKNOWN · key date30.09.2026","","","","","","","","","","","","","","","",""
+"Material","Plant","Storage Location","Batch","Valuation Type","Special Stock","Rule ID","Stored Quantity","Calculated Quantity","Difference","Unit","Stored Value","Calculated Value","Currency","Last Movement Date","Status","Message"
+"0000100001","1000","0000100001","0000100001","0000100001","O","0000100001","100.00","100.00","0.00","EA","100.00","100.00","USD","15.09.2026","OPEN","SAVA giả định để thực hành"
+"0000100002","1000","0000100002","0000100002","0000100002","O","0000100002","","125.00","125.00","EA","125.00","125.00","USD","16.09.2026","EXCEPTION","Thiếu dữ liệu cần review"
+"0000100003","1000","0000100003","0000100003","0000100003","O","0000100003","1.234,50","1.234,50","1.234,50","EA","1.234,50","1.234,50","USD","17.09.2026","REVIEW","Chuỗi số dùng locale châu Âu"
+"0000100001","1000","0000100004","0000100004","0000100001","O","0000100001","175.00","175.00","175.00","EA","175.00","175.00","USD","15.09.2026","DUPLICATE_TEST","Khóa trùng cố ý để kiểm tra"

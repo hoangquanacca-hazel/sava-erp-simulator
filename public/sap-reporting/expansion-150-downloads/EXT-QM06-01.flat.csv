@@ -1,0 +1,5 @@
+﻿"Plant","Characteristic","Version","Characteristic Description","Characteristic Type","Result Unit","Lower Limit","Upper Limit","Target Value","Decimal Places","Sampling Procedure","Inspection Method","Control Indicator","Valid From","Valid To","Status","Change Number"
+"1000","0000100001","000","SAVA giả định để thực hành","0000100001","EA","90.00","110.00","1000.00","2.00","0000100001","0000100001","X","15.09.2026","15.09.2026","OPEN","0000100001"
+"1000","0000100002","000","Thiếu dữ liệu cần review","0000100002","EA","","125.00","125.00","125.00","0000100002","0000100002","","16.09.2026","16.09.2026","EXCEPTION","0000100002"
+"1000","0000100003","000","Chuỗi số dùng locale châu Âu","0000100003","EA","1.234,50","1.234,50","1.234,50","1.234,50","0000100003","0000100003","X","17.09.2026","17.09.2026","REVIEW","0000100003"
+"1000","0000100001","000","Khóa trùng cố ý để kiểm tra","0000100004","EA","175.00","175.00","175.00","175.00","0000100004","0000100004","X","15.09.2026","15.09.2026","DUPLICATE_TEST","0000100004"

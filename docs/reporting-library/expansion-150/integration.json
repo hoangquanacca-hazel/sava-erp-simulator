@@ -1,0 +1,21 @@
+{
+  "status": "LOCAL_CANDIDATE",
+  "profiles": 150,
+  "variants": 204,
+  "library_files": 654,
+  "by_module": {
+    "FI": 30,
+    "CO": 30,
+    "MM": 30,
+    "FI-AA": 7,
+    "PP": 20,
+    "SD": 15,
+    "QM": 10,
+    "PM": 8
+  },
+  "old_profile_objects_preserved": 71,
+  "new_proposed_profiles": 79,
+  "native_exports": 0,
+  "quantity_percent": 100,
+  "business_acceptance": "NOT_RUN"
+}

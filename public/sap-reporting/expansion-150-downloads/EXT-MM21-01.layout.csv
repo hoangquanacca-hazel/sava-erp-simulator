@@ -1,0 +1,7 @@
+﻿"ME9F (candidate) — Trạng thái output và thông báo đơn mua","","","","","","","","","","","","","","","",""
+"SAVA proposed layout · target release UNKNOWN · key date30.09.2026","","","","","","","","","","","","","","","",""
+"Purchase Order","Message ID","Output Type","Supplier","Purchasing Organization","Plant","Created At","Medium","Recipient","Language","Processing Time","Output Status","Retry Count","Changed By","Transmission ID","Status","Message"
+"0000100001","SAVA giả định để thực hành","0000100001","0000100001","0000100001","1000","15.09.2026","0000100001","0000100001","0000100001","100.00","OPEN","100.00","0000100001","0000100001","OPEN","SAVA giả định để thực hành"
+"0000100002","Thiếu dữ liệu cần review","0000100002","0000100002","0000100002","1000","16.09.2026","0000100002","0000100002","0000100002","","EXCEPTION","125.00","0000100002","0000100002","EXCEPTION","Thiếu dữ liệu cần review"
+"0000100003","Chuỗi số dùng locale châu Âu","0000100003","0000100003","0000100003","1000","17.09.2026","0000100003","0000100003","0000100003","1.234,50","REVIEW","1.234,50","0000100003","0000100003","REVIEW","Chuỗi số dùng locale châu Âu"
+"0000100001","SAVA giả định để thực hành","0000100001","0000100004","0000100004","1000","15.09.2026","0000100004","0000100004","0000100004","175.00","DUPLICATE_TEST","175.00","0000100004","0000100004","DUPLICATE_TEST","Khóa trùng cố ý để kiểm tra"

@@ -1,0 +1,2045 @@
+[
+  {
+    "title": "Automatic Clearing",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/651d8af3ea974ad1a4d74449122c620e/8db4855746fa0322e10000000a44147b.html",
+    "source_version": "2025 FPS01 (Feb 2026)",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn146search0",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Quick Steps for Running Reconciliation Reports",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/4ebf1502064b406c964b0911adfb3f01/94e76218d26c44d8afed7c701acb698f.html?locale=de-DEversion%3D1909.latest",
+    "source_version": "2025 FPS01 (Feb 2026)",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn146search1",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Manage Recurring Journal Entries",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE_UPA/e55549ee96814207af9232a7688dd64a/114f17567f98692de10000000a4450e5.html?version=2022.3_UPA",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn146search2",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Reconciling Group Receivables/Payables (Cross-System)",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/3cb1182b4a184bdd93f8d62e3f1f0741/4ddbef3f48d764dfe10000000a42189e.html",
+    "source_version": "2025 FPS01 (Feb 2026)",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn146search3",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Cash Flows Reconciliation",
+    "url": "https://help.sap.com/docs/s4hana-cloud-best-practices/advanced-cash-operations-j78-gb/cash-flows-reconciliation",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn146search4",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "SAP Intercompany Reconciliation",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/651d8af3ea974ad1a4d74449122c620e/6b5a7c525ae17154e10000000a44176d.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn146search5",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Local Financial Close",
+    "url": "https://help.sap.com/docs/sap_s4hana_cloud/0fa84c9d9c634132b7c4abb9ffdd8f06/f0b4efed206d4c7c84bfa35f1e5ec91b.html?local=en-us",
+    "source_version": "2608 Latest",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn146search6",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Recurring Journal Entry Vouchers",
+    "url": "https://help.sap.com/docs/SAP_BUSINESS_BYDESIGN/7c182c462ec043cba338a30b952068c7/2cf93180722d1014b5418f4c590bceef.html",
+    "source_version": "August 2026",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn146search7",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Reconcile Distributed Cash Flow Data",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD/186460fdc35a4b64a713da9bb00deb1e/0d579d2bc9444da3a9e2d64750f40466.html",
+    "source_version": "2608 Latest",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn146search8",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Reconciling Operational Data with Revenue Accounting",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/f63dd39a28bb4b90adbf9e608aff58ea/341e2eeb7cee44fd875e8a75fa082956.html",
+    "source_version": "2025 FPS01 (Feb 2026)",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn146search9",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Dunning",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/26c2d5e366bc44c1a98f2a9212a0c49d/e9c5a6cb7bfe40418debd4d96c6f09ba.html?version=LATEST",
+    "source_version": "2025 FPS01 (Feb 2026)",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn146search10",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "END-USER GUIDES (Finance)",
+    "url": "https://help.sap.com/doc/8184a7e0b639444b891777f1c9195ec1/1.0/en-US/End_User_Guide_FI_SAP_ERP_Loc_Extension_Belarus_EPAM_1.0_EN.pdf",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn146search12",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Dunning",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/37ce8cf1424447d899de4f72cc94ff55/04a67be445e840da878e741dcc66106e.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn146search11",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "PUBLIC Document Version: SAP S/4HANA 2022 (October",
+    "url": "https://help.sap.com/doc/848b97bd423a4903a66426e25928098e/2022.000/en-US/loioe9509cd7a8bc44df84d9b1448e550178.pdf",
+    "source_version": "SAP S/4HANA 2022 (October (https://help.sap.com/doc/848b97bd423a4903a66426e25928098e/2022.000/en-US/loioe9509cd7a8bc44df84d9b1448e550178.pdf)",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn146search13",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "6.6 Electronic Dunning Notice (Optional)",
+    "url": "https://help.sap.com/doc/2f8f040b351a4354b58f5a3278058d6a/618.45/en-US/loioa3173b1216f04b1290e616bf3891a5ad.pdf",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn146search14",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Central Finance",
+    "url": "https://help.sap.com/doc/a9616f4a29354fc297c58499b754e3f8/2020.001/en-US/loio4857c0540cf5ef05e10000000a4450e5.pdf",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn146search15",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "What's New | PUBLIC",
+    "url": "https://help.sap.com/doc/b870b6ebcd2e4b5890f16f4b06827064/2021.004/en-US",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn146search16",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Operating Guide",
+    "url": "https://help.sap.com/doc/e05c86bce42c47d580c05ebe36d03dee/10.1.9/en-US/fc_101_sk_ifrs_oper_en.pdf",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn146search17",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Manage Purchasing Info Records",
+    "url": "https://help.sap.com/docs/PRODUCT_ID/af9ef57f504840d2b81be8667206d485/49e387576b49ab76e10000000a441470.html?locale=en-US",
+    "source_version": "2025 FPS01 (Feb 2026)",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn151search0",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "SAP ERP Transaction Codes for SAP Inventory Manager Components",
+    "url": "https://help.sap.com/docs/SAP_Inventory_Manager/3f02d437a7d94ec88ecb2f1f5b1d687d/efe30c7e0b6f4cc69c8ed2d19c16ea91.html",
+    "source_version": "4.4",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn151search1",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Manage Source Lists",
+    "url": "https://help.sap.com/docs/sap_s4hana_cloud/0e602d466b99490187fcbb30d1dc897c/49fb9b57aba49f2de10000000a44147b.html?locale=en-us",
+    "source_version": "2608 Latest",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn151search2",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Archiving Info Records",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/af9ef57f504840d2b81be8667206d485/727fb65334e6b54ce10000000a174cb4.html",
+    "source_version": "2025 FPS01 (Feb 2026)",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn151search3",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "UGI RFM High Level Scope",
+    "url": "https://help.sap.com/doc/d9740c2e13564a3482597e5c27e76a78/MDG%20RFM_2025%20S_4%20HANA/en-US/UGI_RFM_2025_HighLevelScopelist_S4H.pdf",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn151search12",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "POWER Lists for Purchaser",
+    "url": "https://help.sap.com/docs/SAP_ERP/6ce39fbda7a14bfea7058d90dceb6fb6/d75db6531de6b64ce10000000a174cb4.html",
+    "source_version": "6.0 EHP8 Latest",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn151search4",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Purchase Order Info Records",
+    "url": "https://help.sap.com/docs/SUPPORT_CONTENT/abap/3353523945.html?locale=en-US",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn151search5",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Archiving Info Records",
+    "url": "https://help.sap.com/docs/SAP_ERP/967e1c2a6a8c4183b7e07d28e7574445/727fb65334e6b54ce10000000a174cb4.html?locale=en-US&state=PRODUCTION&version=6.18.latest",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn151search6",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Goods Movement (MM-IM)",
+    "url": "https://help.sap.com/docs/SAP_ERP/6cfdc7caaef746cd9c7543e32e7e87c0/3b07b753128eb44ce10000000a174cb4.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn151search7",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Selecting Vendors Who Are to Receive RFQs",
+    "url": "https://help.sap.com/docs/SAP_ERP/967e1c2a6a8c4183b7e07d28e7574445/7c7eb65334e6b54ce10000000a174cb4.html?locale=en-US&state=PRODUCTION&version=6.17.latest",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn151search8",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Manage Sources of Supply",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD/af9ef57f504840d2b81be8667206d485/57c7e45776bddf12e10000000a4450e5.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn151search9",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Reporting in Physical Inventory (MM-IM)",
+    "url": "https://help.sap.com/docs/SAP_ERP_SPV/666b7ae6edfe4c05a90ac0150637f964/4a07b753128eb44ce10000000a174cb4.html?version=6.06.34",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn151search10",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Maintain Deletion Proposals of Purchasing Info Record",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD/0e602d466b99490187fcbb30d1dc897c/d5c8e16f1f7543d0bca588203a971a87.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn151search11",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "PUBLIC Document Version: 1.0 – 2025-10-08 SAP S/4H",
+    "url": "https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68",
+    "source_version": "1.0 – 2025-10-08",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn165search12",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "UGI RFM High Level Scope",
+    "url": "https://help.sap.com/doc/a7fb6198031146e3aea69fe22619322a/MDG%20RFM_2021%20S_4%20HANA/en-US/UGI_RFM_2021_HighLevelScopelist_S4H.pdf",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn151search14",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Configuration Guide:",
+    "url": "https://help.sap.com/http.svc/rc/a22d8eb6129443f6802e5801901ddc9a/2.0/en-US/Content_Consolidation_-_Configuration_GuideE.PDF",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn151search15",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "SAP Inventory Manager Configuration Guide",
+    "url": "https://help.sap.com/doc/dfc475a45f9945ada685357999a7ee30/4.3.2/en-US/SAPIM432_Configuration.pdf",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn151search16",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "SAP Inventory Manager Configuration Guide",
+    "url": "https://help.sap.com/doc/dfc475a45f9945ada685357999a7ee30/4.4/en-US/SAPIM44_Configuration.pdf",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn151search17",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Display Sales Orders - VA03",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/7b24a64d9d0941bda1afa753263d9e39/0565b65334e6b54ce10000000a174cb4.html",
+    "source_version": "2025 FPS01 (Feb 2026)",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn152search0",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Display Sales Orders - VA03",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD/a376cd9ea00d476b96f18dea1247e6a5/0565b65334e6b54ce10000000a174cb4.html?q=sales+mass",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn152search1",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Pricing Reports",
+    "url": "https://help.sap.com/docs/SAP_ERP/04ed152d92884a6da49c778a13aecb21/958dc95360267214e10000000a174cb4.html",
+    "source_version": "6.0 EHP8 Latest",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn152search2",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Sales Order - SAP Documentation",
+    "url": "https://help.sap.com/saphelp_ssb/helpdata/en/b4/a64552bda1d171e10000000a44176d/content.htm?no_cache=true",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn152search3",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Solution Order: Specifics for Sales Orders",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD/a376cd9ea00d476b96f18dea1247e6a5/99dcc10da21f4baebdd2f457d28ef28c.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn152search4",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Create Third-Party Sales Order",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD_BEST_PRACTICES/1299f1ab68d4b4261b7d8172991418be/a207209d651b4f0cbba6aa3e10a33d29.html?locale=en-US&state=PRODUCTION&version=2608",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn152search5",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Feature Comparison for Creating, Changing, and Displaying Sales Orders",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD/a376cd9ea00d476b96f18dea1247e6a5/756fbea3c5974da489b8bd41e39cfdac.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn152search6",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "SD - Sales order (only open SO)",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/29193bf0ebdd4583930b2176cb993268/da48c42d19e6484a90795feb509d2fc4.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn152search7",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Feature Comparison for Creating, Changing, and Displaying Sales Orders Without Charge",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD/a376cd9ea00d476b96f18dea1247e6a5/c26d51bbd4db4fda85d099a774f940aa.html?q=Customer+Hierarchy+in+SALES",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn152search8",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Manage Sales Orders - Version 2",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/7b24a64d9d0941bda1afa753263d9e39/ae4138d6a804446faa0a249f3a7e18d8.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn152search9",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Display Consignment Issue Orders (Optional)",
+    "url": "https://help.sap.com/docs/s4hana-cloud-best-practices/sales-scheduling-agreement-with-consignment-4lz-lu/display-consignment-issue-orders-optional?locale=en-US&state=PRODUCTION&version=2608",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn152search10",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Commercial View",
+    "url": "https://help.sap.com/docs/SAP_COMMERCIAL_PROJECT_MANAGEMENT/0ff4c5b7f2ac487a908279902ba5d61c/84ef5b51e2495638e10000000a445394.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn152search11",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "User Guide | PUBLIC",
+    "url": "https://help.sap.com/doc/d94cadb233e84c819f865d46f04a4492/SHIP/en-US/sap_cgto_s4hana_user_guide_en.pdf",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn152search12",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "SAP S/4HANA Commercial Project Management",
+    "url": "https://help.sap.com/doc/214c988150984e46aa3000481193ebac/1610%20002/de-DE/loio132b1ea8da1d4281a2da23f3cf506809.pdf",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn152search13",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Application Help for SAP Cross-Channel Order Management for Retail",
+    "url": "https://help.sap.com/doc/de067eb647ec4da99d479079f053ce1f/2.6/en-US/SAP_Cross_Channel_Order_Management_app_help_EN.pdf",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn152search14",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "What's New | PUBLIC",
+    "url": "https://help.sap.com/doc/b870b6ebcd2e4b5890f16f4b06827064/2022.001",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn152search15",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "What's New in SAP S/4HANA 2022 FPS01",
+    "url": "https://help.sap.com/doc/b870b6ebcd2e4b5890f16f4b06827064/2022.001/en-US/WN_OP2022_FPS01_EN.pdf",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn152search16",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Display a List of Quality Notification Tasks (optional)",
+    "url": "https://help.sap.com/docs/s4hana-cloud-best-practices/quality-management-for-complaints-from-customers-2fa-br/display-list-of-quality-notification-tasks-optional",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn153search0",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "QM - Quality level",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD/d5699934e7004d048c4801b552f3b013/46f3790f754b43bf8c9d682361f2595c.html",
+    "source_version": "2602 Latest",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn153search1",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Display a List of Quality Notification Tasks (Optional)",
+    "url": "https://help.sap.com/docs/s4hana-cloud-best-practices/quality-management-of-internal-problems-2qp-gb/display-list-of-quality-notification-tasks-optional?locale=en-US&state=PRODUCTION&version=2608",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn153search2",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Display a List of Quality Notification Tasks (optional)",
+    "url": "https://help.sap.com/docs/s4hana-cloud-best-practices/quality-management-for-complaints-against-suppliers-2f9-ch/display-list-of-quality-notification-tasks-optional?locale=en-US&state=PRODUCTION&version=2608",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn153search3",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Overview Table",
+    "url": "https://help.sap.com/docs/s4hana-cloud-best-practices/quality-management-for-complaints-from-customers-2fa-de/overview-table",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn153search4",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Selecting and Evaluating Quality Notifications",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD/d1e58be39d884a0dbf75a7526a9acbf4/5747ba53422bb54ce10000000a174cb4.html?q=serial+number",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn153search5",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "",
+    "url": "https://help.sap.com/doc/652d04390b1542de8983d2ce63ce9462/6.17.14/en-US/SAP_ERP_-_Chapter_05_-_QM_Quality_ManagementE.PDF",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn164search17",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Collective Entry of Measurement Documents for Order Confirmation",
+    "url": "https://help.sap.com/docs/SAP_ERP_SPV/e8497383bec444069418aba9a1f578de/efdaa1b88bac457eb1972e76e94172ae.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn154search0",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "What's New | PUBLIC",
+    "url": "https://help.sap.com/doc/b870b6ebcd2e4b5890f16f4b06827064/2025.000/en-US/WN_OP2025_EN.pdf",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn154search12",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Collective Entry of Measurement Documents for Order Confirmation",
+    "url": "https://help.sap.com/docs/SAP_ERP_SPV/b4174aff4a234ed5be928a10c60997fb/c827fd082a91487a9d511c94b07726c5.html?version=6.17.28",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn154search1",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "IMPLEMENTATION GUIDE | PUBLIC",
+    "url": "https://help.sap.com/doc/69dd0f1ef0034261ab6e617e0b2beb21/1909.001/en-US/MigrationObjects_OP_EN.pdf",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn154search13",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "What's New PUBLIC Document Version: 1.0 – 2018-05-",
+    "url": "https://help.sap.com/doc/b870b6ebcd2e4b5890f16f4b06827064/1709%20002/en-US",
+    "source_version": "1.0 – 2018-05- (https://help.sap.com/doc/b870b6ebcd2e4b5890f16f4b06827064/1709%20002/en-US)",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn154search14",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "PM - Equipment task list",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/d3a3eb7caa1842858bf0372e17ad3909/ce832b4e5573481397a96d68a99ced8f.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn154search2",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Display Equipment Task List – Transaction",
+    "url": "https://help.sap.com/docs/SAP_ERP/89724bcd4ce94b8c886f27bee89f9953/daa0b9537cceb44ce10000000a174cb4.html?locale=en-US&state=PRODUCTION&version=6.06.latest",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn154search3",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "What's New in SAP S/4HANA 1909 SPS05",
+    "url": "https://help.sap.com/doc/b870b6ebcd2e4b5890f16f4b06827064/1909.005/en-US/WN_OP1909_SPS05_EN.pdf",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn154search15",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Implementation Guide | PUBLIC",
+    "url": "https://help.sap.com/doc/69dd0f1ef0034261ab6e617e0b2beb21/1909.latest/en-US/MigrationObjects_OP_EN.pdf",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn154search16",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "xMAM Backend",
+    "url": "https://help.sap.com/docs/SUPPORT_CONTENT/home/3361892247.html?locale=en-US&source=redirect&state=PRODUCTION&version=1.0",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn154search4",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Maintenance Task List Data",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/ee6ff9b281d8448f96b4fe6c89f2bdc8/ccd7e1051b554b0280d1da3e1e7c5500.html?locale=en-US",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn154search5",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Enterprise Asset Management Part 17",
+    "url": "https://help.sap.com/docs/SAP_ERP/930f133a36a843318dc3347afe00a9d6/cf2c451676cf4379a60f8ab11afa95e7.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn154search6",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Maintenance Activity Type in Maintenance Task List",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/f5d3e1005efd4e86acf9a65abf428082/7a685c0fc3f743e793f3de02e2468e4f.html?version=2025.001",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn154search7",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Technischer Platz und Equipment: Nutzungsenddatum",
+    "url": "https://help.sap.com/docs/PRODUCT_ID/39615c43587c4405aba2de8ebf33cd66/e312da37316a4b4583c438a0691c1f2b.html?locale=de-DE&state=PRODUCTION&version=6.18.latest",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn154search8",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Task List",
+    "url": "https://help.sap.com/docs/SAP_ERP/8c7d68c3fa98477780473f8525c7588d/7551117aaf7440ff82aa81f9c561e77f.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn154search9",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Allocation of Maintenance Packages to Task List Operations Data",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/ee6ff9b281d8448f96b4fe6c89f2bdc8/99b53f73074b490fa47918d1e1acbfd3.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn154search10",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Location Analysis Cube",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/ee6ff9b281d8448f96b4fe6c89f2bdc8/9cebb3d3cfd449dab1c434cf247f5ba3.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn154search11",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "PUBLIC Document Version: 2408_SP 0021 – 2024-08 SA",
+    "url": "https://help.sap.com/doc/178153cff36e4d27bb8e54d23cad94e6/2408/en-US/CIGbuyer.pdf",
+    "source_version": "2408_SP 0021 – 2024-08",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn155search12",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "PUBLIC Document Version: 2402_SP 0020 – 2025-06 SA",
+    "url": "https://help.sap.com/doc/178153cff36e4d27bb8e54d23cad94e6/Internal/en-US/CIGbuyer.pdf",
+    "source_version": "2402_SP 0020 – 2025-06",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn155search13",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Workflow to Support Sending Payments Through the cXML Format Using SAP Standard Payment Interface",
+    "url": "https://help.sap.com/docs/sisgw/sap-ariba-cloud-integration-gateway-overview-guide/workflow-to-support-sending-payments-through-cxml-format-using-sap-standard-payment-interface?locale=en-US&state=PRODUCTION&version=LATEST",
+    "source_version": "2605",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn155search0",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "FI, Electronic Payment Integration for China",
+    "url": "https://help.sap.com/docs/SAP_ERP_SPV/cc6ef3a3f7414dff94a7e24e677d5637/e7a44a6bfb8e4c09aaa845cf508f1b73.html?locale=en-US",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn155search1",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Integration with the Payment Run in SAP S/⁠4HANA",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/9bb249dda6dc4d1aa34587f3db41f2f3/b54fcc55ca7d1e02e10000000a441470.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn155search2",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Customizing for Payment Release List and Payment Program",
+    "url": "https://help.sap.com/docs/SAP_ERP/e8cc8a32a7fa4ea3ae1e25363dee5c49/817949523e85d130e10000000a44538d.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn155search3",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Automatic Creation of Service Requests",
+    "url": "https://help.sap.com/docs/SAP_CUSTOMER_RELATIONSHIP_MANAGEMENT/2b324e8598644cc087f85b868e2d1592/321465cac52d4e8f80921053c4f45bf7.html?locale=en-US&state=PRODUCTION&version=7.0.3.25",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn155search4",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Update termination in Payment programs (F110 and F111)",
+    "url": "https://help.sap.com/docs/SUPPORT_CONTENT/fiaccounting/3361878528.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn155search5",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Integration with the Payment Run in SAP S/⁠4HANA",
+    "url": "https://help.sap.com/docs/r/b6f43004b5bd4c9c919203f9d4a90f29/latest/en-US/b54fcc55ca7d1e02e10000000a441470.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn155search6",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Application Help",
+    "url": "https://help.sap.com/doc/c32b8f5cd05f41bfa171ce423e1fe598/1.0/en-US/SAP_Corporate_Connectivity_for_Banking_Application_Help.pdf",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn155search14",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Enhancements for Automatic Payment Transactions for Customers and Suppliers",
+    "url": "https://help.sap.com/docs/SAP_ERP/39615c43587c4405aba2de8ebf33cd66/7d272f56d661df21e10000000a4450e5.html?q=Manufacturing+for+Planning+and+Scheduling",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn155search7",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Activation of Payment Release List per Company Code",
+    "url": "https://help.sap.com/docs/SAP_ERP/39615c43587c4405aba2de8ebf33cd66/05282f564f41de21e10000000a4450e5.html?q=TJ12",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn155search8",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Reorganization in F110",
+    "url": "https://help.sap.com/docs/SUPPORT_CONTENT/fiaccounting/3361878327.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn155search9",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "F-44 missing open items",
+    "url": "https://help.sap.com/docs/SUPPORT_CONTENT/fiaccounting/3361880552.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn155search10",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Greenlight TECHNOLOGIESAVM Mitigation Control Func",
+    "url": "https://help.sap.com/doc/0b9aafaf98dc411b82206fa2c8e026fb/AVM%20RA%203.2/en-US/AVM_Mitigation_Control_Functional_Specification_Guide_v3.1SP13.pdf",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn161search15",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Payment Program",
+    "url": "https://help.sap.com/docs/SUPPORT_CONTENT/fiaccounting/3361881743.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn155search11",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Archiwizacja w CO-PA",
+    "url": "https://help.sap.com/docs/SUPPORT_CONTENT/ficontrolling/3361878509.html?locale=pl-PL",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn156search0",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Archiving of CO-PA Transaction Data",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/a87b965528884868b4404902123c6004/ce0bd353c6244308e10000000a174cb4.html",
+    "source_version": "2025 FPS01 (Feb 2026)",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn156search1",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Archivierung CO-PA Bewegungsdaten",
+    "url": "https://help.sap.com/docs/SAP_ERP/0c14fb2ee0f445d292f81a2a77e91bf4/ce0bd353c6244308e10000000a174cb4.html?locale=de-DE",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn156search2",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Inventory Turnover Analysis",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/91b21005dded4984bcccf4a69ae1300c/3649cd5616d2152ce10000000a4450e5.html",
+    "source_version": "2025 FPS01 (Feb 2026)",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn157search0",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Inventory KPI Analysis",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD/32da8359c8ee4e8b8e8c5e15cacba5aa/e130f15007c94eae9d65f8af9d541d00.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn157search1",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Material Staging (with EWM)",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/34de0103497c4b80a7c7fbf6952ff971/8800b753128eb44ce10000000a174cb4.html",
+    "source_version": "2025 FPS01 (Feb 2026)",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn158search0",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Material Staging (with EWM)",
+    "url": "https://help.sap.com/docs/SAP_ERP/bfece09273bd474d82fdd97bae070c25/8800b753128eb44ce10000000a174cb4.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn158search1",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Staging of Release Order Parts (Two-Step Stock Transfer)",
+    "url": "https://help.sap.com/docs/SAP_ERP/d3a123be3f924c7f897930e5d9bdeed5/9041745ad9a64152aac6af6f0ae015d8.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn158search2",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Material Staging",
+    "url": "https://help.sap.com/docs/s4hana-cloud-best-practices/automotive-supply-to-customer-inventory-management-55f-rs/material-staging",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn158search3",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Material Staging",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD_BEST_PRACTICES/ec16526e607978e67cbff79d4bd26633/4b204b27ab9b4c089694db5d27727ac1.html?locale=en-US&state=PRODUCTION&version=2608",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn158search4",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Release Notes",
+    "url": "https://help.sap.com/doc/7ff139b51158470f98d1a99ff6b436f0/6.04.19/en-US/Chapter_21__Procurement_and_Logistics_ExecutionE.PDF",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn158search12",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Material Staging",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD_BEST_PRACTICES/dfb3ffaf8f7aff4e82d388bc49278b5a/4b204b27ab9b4c089694db5d27727ac1.html?locale=en-US&state=PRODUCTION&version=2608",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn158search5",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Material Staging",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD_BEST_PRACTICES/2fb5ce4ba22fbb687d87d6b319f24458/8267eede4bb84da8b778d702b57e9646.html?locale=en-US&state=PRODUCTION&version=2608",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn158search6",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Documentary Batches in Production",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/4eb099dbc8a6435c9b36a854a7e05522/36ffb753128eb44ce10000000a174cb4.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn158search7",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Delivery-Based Material Staging with Warehouse Management",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD/2bba750d1e124e1ea2a039bb1cd9b6c5/8800b753128eb44ce10000000a174cb4.html?q=production+supply+area+determination",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn158search8",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Processes Involving Production and Process Orders",
+    "url": "https://help.sap.com/docs/SAP_ERP/d3a123be3f924c7f897930e5d9bdeed5/cc4a25a7af134439b900753868478cc1.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn158search9",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Triggering Replenishment for Release Order Parts via EWM",
+    "url": "https://help.sap.com/docs/SAP_ERP/4d35e322f79d4744abeda0b9caaab5a4/b568b6531de6b64ce10000000a174cb4.html?version=6.18.latest",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn158search10",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Staging Release Order Parts for Production",
+    "url": "https://help.sap.com/docs/s4hana-cloud-best-practices/warehouse-production-integration-with-synchronous-goods-receipt-5ho-ro/staging-release-order-parts-for-production",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn158search11",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Inspection Lots",
+    "url": "https://help.sap.com/docs/service-asset-manager/sap-service-and-asset-manager-configuration-guide/inspection-lots",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn159search0",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Repeated Quality Inspection",
+    "url": "https://help.sap.com/docs/SAP_MANUFACTURING_EXECUTION/e1adc70af32241619335c8768a892edb/641ff95271e3277ee10000000a44176d.html",
+    "source_version": "15.5",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn159search1",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Números de série",
+    "url": "https://help.sap.com/docs/SUPPORT_CONTENT/sewm/5321408440.html?locale=pt-BR",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn159search2",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Qualitätsprüfung beim Fahrzeugservice",
+    "url": "https://help.sap.com/docs/SAP_DEALER_BUSINESS_MANAGEMENT/54c1b516c0fa4eb7a893ff13dcf76e7d/38f75a52eb03725fe10000000a441470.html?locale=de-DE",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn159search3",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Quality Inspection of Vehicle Service",
+    "url": "https://help.sap.com/docs/SAP_DEALER_BUSINESS_MANAGEMENT/54c1b516c0fa4eb7a893ff13dcf76e7d/38f75a52eb03725fe10000000a441470.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn159search4",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Implementing the BAdI for Quality Inspection Review",
+    "url": "https://help.sap.com/docs/sisgw/sap-ariba-cloud-integration-gateway-configuration-guide/how-to-implement-badi-for-quality-inspection-review?q=User+and+user+group+related+information",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn159search5",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Record Inspection Results",
+    "url": "https://help.sap.com/docs/s4hana-cloud-best-practices/subcontracting-consumer-products-5w4-be/record-inspection-results?locale=en-US&state=PRODUCTION&version=2608",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn159search6",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Record Inspection Results (Hierarchical Worklist)",
+    "url": "https://help.sap.com/docs/s4hana-cloud-best-practices/from-planning-to-fulfillment-consumer-products-6aa-fi/record-inspection-results-hierarchical-worklist-42485bbbfe7a4357a78a42d351657c32?locale=en-US&state=PRODUCTION&version=2608",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn159search7",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Übersichtstabelle",
+    "url": "https://help.sap.com/docs/s4hana-cloud-best-practices/quality-management-in-discrete-and-process-manufacturing-1e1-ch/overview-table?locale=de-DE",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn159search8",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "PUBLIC SAP Asset Manager Document Version: 2105 –",
+    "url": "https://help.sap.com/doc/b91453e4616243108894ba4583e7afee/2105/en-US/SAMConfiguration_2105.pdf",
+    "source_version": "2105 – (https://help.sap.com/doc/b91453e4616243108894ba4583e7afee/2105/en-US/SAMConfiguration_2105.pdf)",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn159search13",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Record Inspection Results (Hierarchical Worklist)",
+    "url": "https://help.sap.com/docs/s4hana-cloud-best-practices/from-planning-to-fulfillment-consumer-products-6aa-co/record-inspection-results-hierarchical-worklist?locale=en-US&state=PRODUCTION&version=2608",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn159search9",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Record Inspection Results",
+    "url": "https://help.sap.com/docs/s4hana-cloud-best-practices/produce-and-sell-standard-products-inventory-management-54u-sg/record-inspection-results-ac31d2a5e6b6404994a5dcf0465e20ce",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn159search10",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "SAP Service and Asset Manager Configuration Guide",
+    "url": "https://help.sap.com/doc/b91453e4616243108894ba4583e7afee/2205/en-US/SSAMConfiguration_2205.pdf",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn159search14",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Overview Table",
+    "url": "https://help.sap.com/docs/s4hana-cloud-best-practices/from-planning-to-fulfillment-consumer-products-6aa-be/overview-table?locale=en-US&state=PRODUCTION&version=2608",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn159search11",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "PUBLIC (ÖFFENTLICH)",
+    "url": "https://help.sap.com/doc/ce01d82756b947a1a043a5d5a3204226/2308.501/de-DE",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn159search15",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "PUBLIC Document Version: 1.0 – 2023-09-14What's Ne",
+    "url": "https://help.sap.com/doc/ce01d82756b947a1a043a5d5a3204226/2308.501/en-US",
+    "source_version": "1.0 – 2023-09-14What's Ne (https://help.sap.com/doc/ce01d82756b947a1a043a5d5a3204226/2308.501/en-US)",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn159search16",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "What's New in SAP S/4HANA Cloud 2308.1",
+    "url": "https://help.sap.com/doc/ce01d82756b947a1a043a5d5a3204226/2308.501/en-US/WN_CE2308.1_EN.pdf",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn159search17",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Cost Analysis explanation (KKBC_ORD)",
+    "url": "https://help.sap.com/docs/SUPPORT_CONTENT/ficontrolling/3361878124.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn160search0",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "SAP Help Portal | SAP Online Help",
+    "url": "https://help.sap.com/docs/SUPPORT_CONTENT/basis/3354610908.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn160search1",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Costing run",
+    "url": "https://help.sap.com/docs/SUPPORT_CONTENT/ficontrolling/3361880913.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn160search2",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Traiter cycles de calcul du coût de revient",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD/7f47a6d9441c46ac86c96fd27f6015f0/5798d553088f4308e10000000a174cb4.html?locale=fr-FR",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn160search3",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Editar ejecuciones de cálculo del coste",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD/7f47a6d9441c46ac86c96fd27f6015f0/5798d553088f4308e10000000a174cb4.html?locale=es-ES",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn160search4",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Marking and Releasing Standard Cost Estimates",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE_UPA/cd100ef6721d4f9f96df2960a0601f64/eec630a8b3b141ad9d77c146547e9f95.html?version=2022.3_UPA",
+    "source_version": "2022 FPS03 (Nov 2023)",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn160search5",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "成本分析解释 (KKBC_ORD)",
+    "url": "https://help.sap.com/docs/SUPPORT_CONTENT/ficontrolling/3361878124.html?locale=zh-CN&state=PRODUCTION&version=1.0",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn160search6",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "原価積上実行の編集",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD/7f47a6d9441c46ac86c96fd27f6015f0/5798d553088f4308e10000000a174cb4.html?locale=ja-JP",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn160search7",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Processar execuções de cálculo de custos",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD/7f47a6d9441c46ac86c96fd27f6015f0/5798d553088f4308e10000000a174cb4.html?locale=pt-BR",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn160search8",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "|  --- | --- White Paper | PUBLIC Document Version",
+    "url": "https://help.sap.com/doc/4698ca4ad85a4a24994b2016f366cc77/1709%20000",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn160search12",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Miscellaneous",
+    "url": "https://help.sap.com/docs/SUPPORT_CONTENT/ficontrolling/3361880328.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn160search9",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Calculatieruns bewerken",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD/7f47a6d9441c46ac86c96fd27f6015f0/5798d553088f4308e10000000a174cb4.html?locale=nl-NL",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn160search10",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "| --- | --- White Paper | PUBLIC Document Version:",
+    "url": "https://help.sap.com/doc/62984ff7225343b6b2838903988cb3d5/1809.002/en-US/SIMPL_OP1809_FPS02.pdf",
+    "source_version": "(https://help.sap.com/doc/62984ff7225343b6b2838903988cb3d5/1809.002/en-US/SIMPL_OP1809_FPS02.pdf)",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn160search13",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Costing and Selecting Preferred Production Versions",
+    "url": "https://help.sap.com/docs/SAP_ERP_SPV/698b19fa88b846359bc611f11184c810/7968793f8eb940529882b4d19837bd19.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn160search11",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "What's New in SAP S/4HANA 1809",
+    "url": "https://help.sap.com/doc/b870b6ebcd2e4b5890f16f4b06827064/1809.000/en-US/WN_OP1809_EN.pdf",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn160search14",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Release Notes",
+    "url": "https://help.sap.com/doc/f6d2e666565046878be11e28a56c6c49",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn160search15",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Neuerungen in SAP S/4HANA 1809",
+    "url": "https://help.sap.com/doc/b870b6ebcd2e4b5890f16f4b06827064/1809.000/de-DE/WN_OP1809_DE.pdf",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn160search16",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "List of Inquiries (Optimized Version)",
+    "url": "https://help.sap.com/docs/SAP_ERP/3d9b4e6529de433bac82328613bca800/735766d0835a4c8da27557350e76ded4.html",
+    "source_version": "6.0 EHP8 Latest",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn161search0",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Create Billing Documents - VF04",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD/a376cd9ea00d476b96f18dea1247e6a5/419c8257692eab76e10000000a441470.html?advAll=Returns+and+CBAR+Process+",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn161search1",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "List Inquiries - VA15",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD/a376cd9ea00d476b96f18dea1247e6a5/267558ccf9244fc18fe4753bff883b53.html?locale=ja-JPversion%3D2208.503",
+    "source_version": "2602 Latest",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn161search2",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "List Sales Documents",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD/a376cd9ea00d476b96f18dea1247e6a5/0e1db853dcfcb44ce10000000a174cb4.html",
+    "source_version": "2608 Latest",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn161search3",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Liste der Anfragen (optimierte Version)",
+    "url": "https://help.sap.com/docs/SAP_ERP/930f133a36a843318dc3347afe00a9d6/735766d0835a4c8da27557350e76ded4.html?locale=de-DE&state=PRODUCTION&version=6.17.latest",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn161search4",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Create Billing Documents - VF04",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD/a376cd9ea00d476b96f18dea1247e6a5/419c8257692eab76e10000000a441470.html?q=Custom+Data+Transfer+for+Billing+Documents",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn161search5",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Fakturen anlegen - VF04",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/7b24a64d9d0941bda1afa753263d9e39/419c8257692eab76e10000000a441470.html?locale=de-DE",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn161search6",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "請求伝票登録 - VF04",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD/a376cd9ea00d476b96f18dea1247e6a5/419c8257692eab76e10000000a441470.html?locale=ja-JP&version=2602.500",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn161search7",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "",
+    "url": "https://help.sap.com/doc/de70ac03aea544da86f13d1877b25abf/6.16.12/en-US/Release_Notes_SAP_EHP6%2C_version_for_SAP_HANA%2C_SP02E.PDF",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn163search14",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Reporting im Verkauf",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/9905622a5c1f49ba84e9076fc83a9c2c/32756754e90d8c4ce10000000a4450e5.html?locale=de-DE",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn161search8",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "COPYRIGHT INFORMATION",
+    "url": "https://help.sap.com/doc/ad48be84cb114df599e72dd2f1900387/1.0/en-US/AVM_Mitigation_Control_Functional_Specification_Guide_v10E.PDF",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn161search13",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Vertrieb, Optimierung von Listen",
+    "url": "https://help.sap.com/docs/SAP_ERP/930f133a36a843318dc3347afe00a9d6/36e57c29becb4b9cbebddaed7e087a5a.html?locale=de-DE",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn161search9",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "PUBLIC Document Version: 1.0 – 2026-04-16 What's N",
+    "url": "https://help.sap.com/doc/ce01d82756b947a1a043a5d5a3204226/2602.08/en-US/WN_CE2602.2_EN.pdf",
+    "source_version": "1.0 – 2026-04-16",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn161search14",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Reporting in Sales",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/25a41481f62e469ba0e61015a0d39d20/32756754e90d8c4ce10000000a4450e5.html?locale=en-US",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn161search10",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "VF04 および VF06 に新規選択基準項目を追加する",
+    "url": "https://help.sap.com/docs/SUPPORT_CONTENT/sd/3362915132.html?locale=ja-JP",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn161search11",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "",
+    "url": "https://help.sap.com/doc/c2f0b46e22c24305a4c0a025a9b73c81/6.16.12/en-US/Release_Notes_SAP_EHP6%2C_version_for_SAP_HANA%2C_SP00E.PDF",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn161search16",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "White Paper  | CUSTOMER",
+    "url": "https://help.sap.com/http.svc/rc/PRODUCTION/pdfa4322f56824ae221e10000000a4450e5/1610%20000/en-US/SIMPL_OP1610.pdf",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn161search17",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Manage G/L Account Master Data",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/651d8af3ea974ad1a4d74449122c620e/34428754dccbe85ee10000000a44176d.html",
+    "source_version": "2025 FPS01 (Feb 2026)",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn162search0",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Manage G/L Account Master Data",
+    "url": "https://help.sap.com/docs/s4hana-cloud-best-practices/accounting-and-financial-close-j58-pe/manage-g-l-account-master-data",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn162search1",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Displaying Recurring Entry Documents",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/3cb1182b4a184bdd93f8d62e3f1f0741/2d4cd953189a424de10000000a174cb4.html",
+    "source_version": "2025 FPS01 (Feb 2026)",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn162search2",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "G/L Account Master Data",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD/6b39bd1d0e5e4099a5b65d835c29c696/381146531c9eac48e10000000a423f68.html",
+    "source_version": "2608 Latest",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn162search3",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Manage G/L Account Master Data",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD/0fa84c9d9c634132b7c4abb9ffdd8f06/34428754dccbe85ee10000000a44176d.html?q=alternative+account",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn162search4",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Working with G/L Account Master Data",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD/0fa84c9d9c634132b7c4abb9ffdd8f06/47e0cecec5b14f8c9fe7949971712d75.html?locale=en-",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn162search5",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Working with G/L Account Master Data",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD_PE/0fa84c9d9c634132b7c4abb9ffdd8f06/47e0cecec5b14f8c9fe7949971712d75.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn162search6",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Define G/L Accounts for Payment Processes",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/651d8af3ea974ad1a4d74449122c620e/5c1eb2ea64bb425abd373c98c96db0c1.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn162search7",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Manage G/L Account Master Data",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD/0fa84c9d9c634132b7c4abb9ffdd8f06/34428754dccbe85ee10000000a44176d.html?q=extension+ledger",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn162search8",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "General Information about the Chart of Accounts (YCOA) Template for SAP S/4HANA Cloud Public Edition",
+    "url": "https://help.sap.com/docs/s4hana-best-practices/bc5ee9baf05e4fe6820985e2dbfbae63/content?locale=en-US",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn162search9",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "General Ledger Accounting",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD/93bd0b1e72ca4cbcbfb942d4497529f7/4e440b8d8a1e402abd944cdaef09ec80.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn162search10",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "G/L Account Master Data (Two-System Landscape): FAQ",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD/0fa84c9d9c634132b7c4abb9ffdd8f06/87e8b621685f4f8591078b9dc8840b78.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn162search11",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "What's New PUBLIC Document Version: 1.0 – 2016-10-",
+    "url": "https://help.sap.com/doc/b870b6ebcd2e4b5890f16f4b06827064/1610%20000/en-US/WN_OP1610_EN.pdf",
+    "source_version": "1.0 – 2016-10- (https://help.sap.com/doc/b870b6ebcd2e4b5890f16f4b06827064/1610%20000/en-US/WN_OP1610_EN.pdf)",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn162search12",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Master Data Script | PUBLIC",
+    "url": "https://help.sap.com/doc/c434e51b4be3c3020e72f968decb699e/2408/en-US/BNG_S4CLD2408_Master_Data_EN_XX.pdf",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn162search13",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "PUBLIC Document Version: 1.1 – 2026-01-28 SAP S/4H",
+    "url": "https://help.sap.com/doc/9f8b1e91e4a442499364d2b49c8d4bdb/latest/en-US",
+    "source_version": "1.1 – 2026-01-28",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn162search14",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "PUBLIC Document Version: 12.3 – 2026-04-27 SAP S/4",
+    "url": "https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/1709/en-US/FSD_OP1709_latest.pdf",
+    "source_version": "12.3 – 2026-04-27",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn162search15",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "PUBLIC 2018-03-14 Administration Guide for the Imp",
+    "url": "https://help.sap.com/doc/b4447b6727684f13917622cf63e1eb98/1511%20000/en-US/AdminGuideS4HANAImpl_HELP_EN.pdf",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn162search16",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "List Sales Contracts",
+    "url": "https://help.sap.com/docs/s4hana-cloud-best-practices/sales-contract-management-i9i-ch/list-sales-contracts?locale=en-US&state=PRODUCTION&version=2608",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn163search0",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Billing Documents Blocked for Accounting",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/7b24a64d9d0941bda1afa753263d9e39/ab70b6535fe6b74ce10000000a174cb4.html",
+    "source_version": "2025 FPS01 (Feb 2026)",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn163search1",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Billing Documents Blocked for Accounting",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD/a376cd9ea00d476b96f18dea1247e6a5/ab70b6535fe6b74ce10000000a174cb4.html",
+    "source_version": "2608 Latest",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn163search2",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Billing Documents Blocked for Accounting",
+    "url": "https://help.sap.com/docs/SAP_ERP_SPV/3d9b4e6529de433bac82328613bca800/ab70b6535fe6b74ce10000000a174cb4.html",
+    "source_version": "6.0 EHP8 SP25",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn163search3",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "PUBLIC Document Version: 1.0 – 2026-01-14SAP S/4HA",
+    "url": "https://help.sap.com/doc/7c9e0bbbd1664c2581b2038a1c7ae4b3/latest",
+    "source_version": "1.0 – 2026-01-14SAP S/4HA (https://help.sap.com/doc/7c9e0bbbd1664c2581b2038a1c7ae4b3/latest)",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn163search12",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "App Extensibility: Manage Sales Scheduling Agreements",
+    "url": "https://help.sap.com/docs/PRODUCT_ID/a376cd9ea00d476b96f18dea1247e6a5/5a6888f05ba743458991ef373024c438.html?locale=en-US",
+    "source_version": "2608 Latest",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn163search4",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "App Extensibility: Manage Sales Scheduling Agreements",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD/a376cd9ea00d476b96f18dea1247e6a5/5a6888f05ba743458991ef373024c438.html?locale=en-US&state=PRODUCTION&version=2508.500",
+    "source_version": "2508 Latest",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn163search5",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "PUBLIC Document Version: 1.0 – 2024-07-24 SAP S/4H",
+    "url": "https://help.sap.com/doc/7c9e0bbbd1664c2581b2038a1c7ae4b3/2408.500/en-US/FSD_CE2408.pdf",
+    "source_version": "1.0 – 2024-07-24",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn165search17",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Sales Contract Fulfillment Rates - Currently Valid",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD/a376cd9ea00d476b96f18dea1247e6a5/2f1c5d56c1adc64de10000000a441470.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn163search6",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Overview Table",
+    "url": "https://help.sap.com/docs/s4hana-cloud-best-practices/sales-contract-management-i9i-hu/overview-table",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn163search7",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Returns Logistics and Returns Stock",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD/a376cd9ea00d476b96f18dea1247e6a5/ec5057f7b5d04f9f95231713116b9a98.html?q=billing+block",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn163search8",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Sales and Distribution Functions in Credit Management",
+    "url": "https://help.sap.com/docs/SAP_ERP/b451edee79a640b7aa5306170573c56d/f9adc9535c267114e10000000a174cb4.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn163search9",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Object-Based Navigation (OBN)",
+    "url": "https://help.sap.com/docs/SAP_ERP/5cea947f5ec44813bdb75bc2d5115450/0ec4c73f3273481ebc0a4bf3b685761d.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn163search10",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Transfer in Dialog",
+    "url": "https://help.sap.com/docs/SAP_ERP/1bb7f0e4e4734a4b9c2fcdb6525c1f3e/4692d0533f8e4308e10000000a174cb4.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn163search11",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "PUBLIC Document Version: 5.0 – 2025-12-11 SAP S/4H",
+    "url": "https://help.sap.com/doc/7c9e0bbbd1664c2581b2038a1c7ae4b3/2508.500/en-US/FSD_CE2508.pdf",
+    "source_version": "5.0 – 2025-12-11",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn163search15",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Listing Master Inspection Characteristics",
+    "url": "https://help.sap.com/docs/SAP_ERP/90f562dc43f84f5f8ab7e082e47f9a6c/1a23bd534f22b44ce10000000a174cb4.html",
+    "source_version": "6.0 EHP8 Latest",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn164search0",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Displaying the Use of Master Inspection Characteristics",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/2bc3ee8d1c83404e8cf62418640004f2/5080b6531de6b64ce10000000a174cb4.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn164search1",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Creating or Changing a Master Inspection Characteristic",
+    "url": "https://help.sap.com/docs/SAP_ERP/90f562dc43f84f5f8ab7e082e47f9a6c/bcbbbb53707db44ce10000000a174cb4.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn164search2",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Where-Used Lists and Central Replacement",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_ONPREMISE/2bc3ee8d1c83404e8cf62418640004f2/82cfba538c95b54ce10000000a174cb4.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn164search3",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Inspection Characteristic (QM-PT-BD-ICH)",
+    "url": "https://help.sap.com/docs/SAP_ERP/250374f0514e4e0f9057066374265eba/eb7cbb53707db44ce10000000a174cb4.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn164search4",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Classic Apps for Inspection Planning",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/2bc3ee8d1c83404e8cf62418640004f2/f96e02507e6b46c9a2b83cec20d5cc29.html",
+    "source_version": "2025 FPS01 (Feb 2026)",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn164search5",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Display Inspection Plan for Inspection Characteristics",
+    "url": "https://help.sap.com/docs/s4hana-cloud-best-practices/from-planning-to-fulfillment-consumer-products-6aa-ch/display-inspection-plan-for-inspection-characteristics-2c6c8f0959924e7b8f35ceb750f9720a",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn164search6",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Quality Certificates",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD/d1e58be39d884a0dbf75a7526a9acbf4/dc733e09815e41d3b0591bfd7640f1b9.html?locale=en-US",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn164search7",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Displaying the Use of Inspection Methods",
+    "url": "https://help.sap.com/docs/SAP_ERP/250374f0514e4e0f9057066374265eba/5680b6531de6b64ce10000000a174cb4.html?locale=en-US&state=PRODUCTION&version=6.06.latest",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn164search8",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Display Inspection Plan for Inspection Characteristics (Optional)",
+    "url": "https://help.sap.com/docs/s4hana-cloud-best-practices/from-planning-to-fulfillment-consumer-products-6aa-mx/display-inspection-plan-for-inspection-characteristics-optional-c0e47c8bf08946d69bd9986aa57d427a?locale=en-US&state=PRODUCTION&version=2608",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn164search9",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Inspection with Material Specification and Task List",
+    "url": "https://help.sap.com/docs/SAP_ERP_SPV/250374f0514e4e0f9057066374265eba/c45cbd534f22b44ce10000000a174cb4.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn164search10",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Display Usage Decision - Transaction",
+    "url": "https://help.sap.com/docs/SAP_ERP/2ff9f2a003194e3b93e8201a0b44618f/85c2b65334e6b54ce10000000a174cb4.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn164search11",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "UGI_EAM_AIW_HighLevelScopeList_S4H",
+    "url": "https://help.sap.com/doc/13e86beb5f6f40d1bae14e197784bae1/AIW%202023%20on%202023%20S_4HANA/en-US/UGI_EAM_AIW_2023_HighLevelScopelist_S4H.pdf",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn164search12",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Administration Guide | PUBLIC",
+    "url": "https://help.sap.com/doc/6f4e849a041c4bc59c4b9d6882053532/3.0%20FP01/en-US/PLMSI_Administration_Guide.pdf",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn164search13",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Administration Guide | PUBLIC",
+    "url": "https://help.sap.com/doc/6f4e849a041c4bc59c4b9d6882053532/3.0/en-US/Administration_Guide_TC.pdf",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn164search14",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Administration Guide | PUBLIC",
+    "url": "https://help.sap.com/doc/6f4e849a041c4bc59c4b9d6882053532/3.0%20FP02/en-US/Administration_Guide.pdf",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn164search15",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Administration Guide for PLM System Integration for SAP ERP",
+    "url": "https://help.sap.com/doc/9d092bd3df6c4aabb817a6c520c2bab1/2.0%20FP04/en-US/1ff6666bf071458f95534a508b9c0dfd.pdf",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn164search16",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Monitor Supplier Confirmations",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD/0e602d466b99490187fcbb30d1dc897c/f8b9e757dc3bf032e10000000a441470.html",
+    "source_version": "2608 Latest",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn165search0",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Monitor Supplier Confirmations",
+    "url": "https://help.sap.com/docs/PRODUCT_ID/af9ef57f504840d2b81be8667206d485/f9da7eae75264e5384a11b4ac626a263.html",
+    "source_version": "2025 FPS01 (Feb 2026)",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn165search1",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Supplier Evaluation",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/af9ef57f504840d2b81be8667206d485/e1b2de5575cf727fe10000000a44538d.html?locale=en-US&q=Supplier+confirmations+EDI",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn165search2",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Pending Supplier Confirmation",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD/0e602d466b99490187fcbb30d1dc897c/8563f0db73d143e19baa46f1c146023d.html?q=Working+with+%2A+in+My+Inbox",
+    "source_version": "2608 Latest",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn165search3",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Manage Supplier Confirmations",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/af9ef57f504840d2b81be8667206d485/9900dd93aec14047b483dc1a52561bf5.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn165search4",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Manage Quota Arrangements",
+    "url": "https://help.sap.com/docs/sap_s4hana_cloud/0e602d466b99490187fcbb30d1dc897c/a565c3dddcf943c69dc8d43ac2016e4c.html?q=flexible+workflow+for+purchase+order",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn165search5",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Use Cases",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD/a630d57fc5004c6383e7a81efee7a8bb/fdbf5eabf0e84621a15c6965b3e01649.html",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn165search6",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Monitor the Supplier Delivery Deficit (Optional)",
+    "url": "https://help.sap.com/docs/s4hana-cloud-best-practices/direct-procurement-with-inbound-delivery-2tx-ph/monitor-supplier-delivery-deficit-optional?locale=en-US&state=PRODUCTION&version=2608",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn165search7",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Maintain Quota Arrangement",
+    "url": "https://help.sap.com/docs/s4hana-cloud-best-practices/scheduling-agreements-in-procurement-bmr-nz/maintain-quota-arrangement",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn165search8",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "React to Critical Supply Situations (Optional)",
+    "url": "https://help.sap.com/docs/s4hana-cloud-best-practices/direct-procurement-with-inbound-delivery-2tx-sk/react-to-critical-supply-situations-optional?locale=en-US&state=PRODUCTION&version=2608",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn165search9",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "Situation Templates in Sourcing and Procurement",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD/0e602d466b99490187fcbb30d1dc897c/b8e9ca2b85df4ecf9bd180cfcea78805.html?locale=en-US&q=supplier+invoice+BADI",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn165search10",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "New Use Cases for Situation Handling",
+    "url": "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/050d492c306c41e2af3bfbfd9fff4459.html?locale=en-US&q=AMRP&state=PRODUCTION&version=2021.000",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn165search11",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "What's New in SAP S/4HANA 1709",
+    "url": "https://help.sap.com/doc/b870b6ebcd2e4b5890f16f4b06827064/1709%20000/en-US/WN_OP1709_EN.pdf",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn165search13",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "PUBLIC Document Version: 8.3 – 2026-04-27 SAP S/4H",
+    "url": "https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2022/en-US/FSD_OP2022_latest.pdf",
+    "source_version": "8.3 – 2026-04-27",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn165search14",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "PUBLIC Document Version: 12.3 – 2026-04-27 SAP S/4",
+    "url": "https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2020/en-US/FSD_OP2020_latest.pdf",
+    "source_version": "12.3 – 2026-04-27",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn165search15",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  },
+  {
+    "title": "2.7 Assign Plan Balance Category to Quota Arrangements",
+    "url": "https://help.sap.com/doc/a77071f515cb45689532de1aa0efb8e2/460.00/en-US/Whats_New_in_SAP_Dairy_Management_by_msg_for_SAP_S4HANA.pdf",
+    "source_version": "NOT_CAPTURED",
+    "checked_date": "2026-10-13",
+    "evidence": "WEB_INDEXED_EXTRACT",
+    "reference": "turn165search16",
+    "rights": "LINK_ONLY_NO_REDISTRIBUTION_LICENSE_ASSERTED"
+  }
+]
