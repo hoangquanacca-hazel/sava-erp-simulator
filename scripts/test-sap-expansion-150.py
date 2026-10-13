@@ -51,6 +51,8 @@ for r in model['reports']:
  assert len(set(r['columns']))==len(r['columns'])and all(k in r['columns']for k in r['keys'])
  assert [f['position']for f in r['fields']]==list(range(1,len(r['fields'])+1))
  assert all(f['evidence']=='SAVA_PROPOSED'and f['technical_name']is None and not f['source_label_verified']for f in r['fields'])
+ for f in r['fields']:
+  if f['label']in['Sender Credit','Receiver Debit','Price Unit','Conversion Numerator','Conversion Denominator','Dunning Fee','Opening Balance','Closing Balance']:assert f['type']=='raw_decimal','Amount/unit divisor misclassified as identifier'
  assert urlparse(r['source_url']).hostname=='help.sap.com'
  assert not v['native_export']and not v['full_sap_catalog_verified']and v['observed_source_field_count']==0
  assert all(r.get(k)for k in['purpose','selection','reading','reconciliation','control','ifrs','lineage','source_evidence'])

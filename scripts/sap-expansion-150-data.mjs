@@ -115,7 +115,8 @@ const meanings={
 const viTokens={Date:'ngày',Amount:'giá trị tiền',Quantity:'số lượng',Price:'đơn giá',Currency:'tiền tệ',Unit:'đơn vị',Status:'trạng thái',Code:'mã phân loại',Number:'số định danh',Description:'diễn giải',Indicator:'cờ chỉ báo',Group:'nhóm',Category:'loại',Type:'loại nghiệp vụ',Time:'thời gian',Capacity:'công suất',Document:'chứng từ',Item:'dòng',Confirmation:'xác nhận',Reference:'tham chiếu',Percent:'tỷ lệ',Limit:'giới hạn',Version:'phiên bản',Counter:'bộ đếm',Name:'tên',Reason:'lý do',Variance:'chênh lệch',Difference:'chênh lệch',Budget:'ngân sách',Rate:'tỷ lệ',Flag:'cờ',Level:'cấp',Value:'giá trị',Method:'phương pháp',Sequence:'thứ tự',Record:'bản ghi'};
 function field(label,index){
  const position=index+1;
- const type=/Date$|^Changed At$|^Created At$|^Valid From$|^Valid To$|^Planned Start$|^Planned Finish$/.test(label)?'raw_date':/Amount|Quantity|Price$|Value$|Budget$|Capacity$|Variance$|Difference$|Duration$|Hours|Time$|Counter Reading|Counter Difference|^Result$|Limit$|Target Value|Utilization|Turnover|Percent$|Rate$|Days|Size$|Quota$|Tracing Factor|Allocation Base|Probability|Shelf Life|Quality Score|Decimal Places|Retry Count/.test(label)?'raw_decimal':'text';
+ const numericOverrides=new Set(['Sender Credit','Receiver Debit','Price Unit','Conversion Numerator','Conversion Denominator','Quota Rating','Dunning Fee','Number of Capacities','Opening Balance','Closing Balance']);
+ const type=/Date$|^Changed At$|^Created At$|^Valid From$|^Valid To$|^Planned Start$|^Planned Finish$/.test(label)?'raw_date':numericOverrides.has(label)||/Amount|Quantity|Price$|Value$|Budget$|Capacity$|Variance$|Difference$|Duration$|Hours|Time$|Counter Reading|Counter Difference|^Result$|Limit$|Target Value|Utilization|Turnover|Percent$|Rate$|Days|Size$|Quota$|Tracing Factor|Allocation Base|Probability|Shelf Life|Quality Score|Decimal Places|Retry Count/.test(label)?'raw_decimal':'text';
  const suffix=Object.entries(viTokens).find(([token])=>label.endsWith(token));
  return {key:label,label,position,type,meaning:meanings[label]||(`${suffix?suffix[1]:'Thuộc tính nghiệp vụ'}: ${label}. Đọc tại grain của hồ sơ; nhãn và semantics cần đối chiếu hệ công ty.`),evidence:'SAVA_PROPOSED',technical_name:null,source_label_verified:false,cleaning_rule:type==='raw_date'?'Giữ chuỗi RAW dd.MM.yyyy; parse rõ format/locale/timezone. Blank là thiếu ngày, không lấy ngày máy.':type==='raw_decimal'?'Giữ chuỗi RAW và locale. Chuẩn hóa dấu, separator, currency/UoM/price unit trước tính. Blank không là0; không cộng tỷ lệ/đơn giá/snapshot.':'Giữ ID dạng Text và số0 đầu. Trim trên bản CLEAN riêng, giữ raw value và source-row lineage. Không join bằng tên diễn giải.'};
 }
@@ -177,6 +178,8 @@ function setBaseline(r,row){
  if(r.id==='MM27')values.Difference='-2.00';
  if(r.id==='CO27')values.Difference='10.00';
  if(r.id==='FI29'){values['Local Amount']='1000.00';values['Partner Amount']='-1000.00';}
- if(r.id==='CO20')values.Utilization='66.66666667';
+ if(r.id==='CO20'){values.Utilization='66.66666667';values.Variance='-20.00';}
+ values['Conversion Numerator']='1.00';values['Conversion Denominator']='1.00';values['Days Overdue']='15.00';
+ if(r.id==='FI30'){values['Opening Balance']='1000.00';values['Closing Balance']='1100.00';}
  for(const [label,value]of Object.entries(values)){const ix=r.columns.indexOf(label);if(ix>=0)row[ix]=value;}
 }

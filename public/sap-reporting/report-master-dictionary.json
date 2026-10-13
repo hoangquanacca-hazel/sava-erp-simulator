@@ -24862,12 +24862,12 @@
           "key": "Dunning Fee",
           "label": "Dunning Fee",
           "position": 16,
-          "type": "text",
+          "type": "raw_decimal",
           "meaning": "Thuộc tính nghiệp vụ: Dunning Fee. Đọc tại grain của hồ sơ; nhãn và semantics cần đối chiếu hệ công ty.",
           "evidence": "SAVA_PROPOSED",
           "technical_name": null,
           "source_label_verified": false,
-          "cleaning_rule": "Giữ ID dạng Text và số0 đầu. Trim trên bản CLEAN riêng, giữ raw value và source-row lineage. Không join bằng tên diễn giải."
+          "cleaning_rule": "Giữ chuỗi RAW và locale. Chuẩn hóa dấu, separator, currency/UoM/price unit trước tính. Blank không là0; không cộng tỷ lệ/đơn giá/snapshot."
         },
         {
           "key": "Status",
@@ -27460,23 +27460,23 @@
           "key": "Opening Balance",
           "label": "Opening Balance",
           "position": 15,
-          "type": "text",
+          "type": "raw_decimal",
           "meaning": "Số dư đầu kỳ; không cộng snapshot",
           "evidence": "SAVA_PROPOSED",
           "technical_name": null,
           "source_label_verified": false,
-          "cleaning_rule": "Giữ ID dạng Text và số0 đầu. Trim trên bản CLEAN riêng, giữ raw value và source-row lineage. Không join bằng tên diễn giải."
+          "cleaning_rule": "Giữ chuỗi RAW và locale. Chuẩn hóa dấu, separator, currency/UoM/price unit trước tính. Blank không là0; không cộng tỷ lệ/đơn giá/snapshot."
         },
         {
           "key": "Closing Balance",
           "label": "Closing Balance",
           "position": 16,
-          "type": "text",
+          "type": "raw_decimal",
           "meaning": "Số dư cuối kỳ; không cộng snapshot",
           "evidence": "SAVA_PROPOSED",
           "technical_name": null,
           "source_label_verified": false,
-          "cleaning_rule": "Giữ ID dạng Text và số0 đầu. Trim trên bản CLEAN riêng, giữ raw value và source-row lineage. Không join bằng tên diễn giải."
+          "cleaning_rule": "Giữ chuỗi RAW và locale. Chuẩn hóa dấu, separator, currency/UoM/price unit trước tính. Blank không là0; không cộng tỷ lệ/đơn giá/snapshot."
         },
         {
           "key": "Status",
@@ -28279,12 +28279,12 @@
           "key": "Price Unit",
           "label": "Price Unit",
           "position": 12,
-          "type": "text",
+          "type": "raw_decimal",
           "meaning": "Số đơn vị làm mẫu số của đơn giá",
           "evidence": "SAVA_PROPOSED",
           "technical_name": null,
           "source_label_verified": false,
-          "cleaning_rule": "Giữ ID dạng Text và số0 đầu. Trim trên bản CLEAN riêng, giữ raw value và source-row lineage. Không join bằng tên diễn giải."
+          "cleaning_rule": "Giữ chuỗi RAW và locale. Chuẩn hóa dấu, separator, currency/UoM/price unit trước tính. Blank không là0; không cộng tỷ lệ/đơn giá/snapshot."
         },
         {
           "key": "Currency",
@@ -29388,23 +29388,23 @@
           "key": "Sender Credit",
           "label": "Sender Credit",
           "position": 14,
-          "type": "text",
+          "type": "raw_decimal",
           "meaning": "Thuộc tính nghiệp vụ: Sender Credit. Đọc tại grain của hồ sơ; nhãn và semantics cần đối chiếu hệ công ty.",
           "evidence": "SAVA_PROPOSED",
           "technical_name": null,
           "source_label_verified": false,
-          "cleaning_rule": "Giữ ID dạng Text và số0 đầu. Trim trên bản CLEAN riêng, giữ raw value và source-row lineage. Không join bằng tên diễn giải."
+          "cleaning_rule": "Giữ chuỗi RAW và locale. Chuẩn hóa dấu, separator, currency/UoM/price unit trước tính. Blank không là0; không cộng tỷ lệ/đơn giá/snapshot."
         },
         {
           "key": "Receiver Debit",
           "label": "Receiver Debit",
           "position": 15,
-          "type": "text",
+          "type": "raw_decimal",
           "meaning": "Thuộc tính nghiệp vụ: Receiver Debit. Đọc tại grain của hồ sơ; nhãn và semantics cần đối chiếu hệ công ty.",
           "evidence": "SAVA_PROPOSED",
           "technical_name": null,
           "source_label_verified": false,
-          "cleaning_rule": "Giữ ID dạng Text và số0 đầu. Trim trên bản CLEAN riêng, giữ raw value và source-row lineage. Không join bằng tên diễn giải."
+          "cleaning_rule": "Giữ chuỗi RAW và locale. Chuẩn hóa dấu, separator, currency/UoM/price unit trước tính. Blank không là0; không cộng tỷ lệ/đơn giá/snapshot."
         },
         {
           "key": "Test Run",
@@ -29682,23 +29682,23 @@
           "key": "Sender Credit",
           "label": "Sender Credit",
           "position": 14,
-          "type": "text",
+          "type": "raw_decimal",
           "meaning": "Thuộc tính nghiệp vụ: Sender Credit. Đọc tại grain của hồ sơ; nhãn và semantics cần đối chiếu hệ công ty.",
           "evidence": "SAVA_PROPOSED",
           "technical_name": null,
           "source_label_verified": false,
-          "cleaning_rule": "Giữ ID dạng Text và số0 đầu. Trim trên bản CLEAN riêng, giữ raw value và source-row lineage. Không join bằng tên diễn giải."
+          "cleaning_rule": "Giữ chuỗi RAW và locale. Chuẩn hóa dấu, separator, currency/UoM/price unit trước tính. Blank không là0; không cộng tỷ lệ/đơn giá/snapshot."
         },
         {
           "key": "Receiver Debit",
           "label": "Receiver Debit",
           "position": 15,
-          "type": "text",
+          "type": "raw_decimal",
           "meaning": "Thuộc tính nghiệp vụ: Receiver Debit. Đọc tại grain của hồ sơ; nhãn và semantics cần đối chiếu hệ công ty.",
           "evidence": "SAVA_PROPOSED",
           "technical_name": null,
           "source_label_verified": false,
-          "cleaning_rule": "Giữ ID dạng Text và số0 đầu. Trim trên bản CLEAN riêng, giữ raw value và source-row lineage. Không join bằng tên diễn giải."
+          "cleaning_rule": "Giữ chuỗi RAW và locale. Chuẩn hóa dấu, separator, currency/UoM/price unit trước tính. Blank không là0; không cộng tỷ lệ/đơn giá/snapshot."
         },
         {
           "key": "Test Run",
@@ -29976,12 +29976,12 @@
           "key": "Price Unit",
           "label": "Price Unit",
           "position": 14,
-          "type": "text",
+          "type": "raw_decimal",
           "meaning": "Số đơn vị làm mẫu số của đơn giá",
           "evidence": "SAVA_PROPOSED",
           "technical_name": null,
           "source_label_verified": false,
-          "cleaning_rule": "Giữ ID dạng Text và số0 đầu. Trim trên bản CLEAN riêng, giữ raw value và source-row lineage. Không join bằng tên diễn giải."
+          "cleaning_rule": "Giữ chuỗi RAW và locale. Chuẩn hóa dấu, separator, currency/UoM/price unit trước tính. Blank không là0; không cộng tỷ lệ/đơn giá/snapshot."
         },
         {
           "key": "Allocated Amount",
@@ -30568,12 +30568,12 @@
           "key": "Price Unit",
           "label": "Price Unit",
           "position": 13,
-          "type": "text",
+          "type": "raw_decimal",
           "meaning": "Số đơn vị làm mẫu số của đơn giá",
           "evidence": "SAVA_PROPOSED",
           "technical_name": null,
           "source_label_verified": false,
-          "cleaning_rule": "Giữ ID dạng Text và số0 đầu. Trim trên bản CLEAN riêng, giữ raw value và source-row lineage. Không join bằng tên diễn giải."
+          "cleaning_rule": "Giữ chuỗi RAW và locale. Chuẩn hóa dấu, separator, currency/UoM/price unit trước tính. Blank không là0; không cộng tỷ lệ/đơn giá/snapshot."
         },
         {
           "key": "Difference",
@@ -31694,12 +31694,12 @@
           "key": "Price Unit",
           "label": "Price Unit",
           "position": 12,
-          "type": "text",
+          "type": "raw_decimal",
           "meaning": "Số đơn vị làm mẫu số của đơn giá",
           "evidence": "SAVA_PROPOSED",
           "technical_name": null,
           "source_label_verified": false,
-          "cleaning_rule": "Giữ ID dạng Text và số0 đầu. Trim trên bản CLEAN riêng, giữ raw value và source-row lineage. Không join bằng tên diễn giải."
+          "cleaning_rule": "Giữ chuỗi RAW và locale. Chuẩn hóa dấu, separator, currency/UoM/price unit trước tính. Blank không là0; không cộng tỷ lệ/đơn giá/snapshot."
         },
         {
           "key": "Order Unit",
@@ -31727,23 +31727,23 @@
           "key": "Conversion Numerator",
           "label": "Conversion Numerator",
           "position": 15,
-          "type": "text",
+          "type": "raw_decimal",
           "meaning": "Thuộc tính nghiệp vụ: Conversion Numerator. Đọc tại grain của hồ sơ; nhãn và semantics cần đối chiếu hệ công ty.",
           "evidence": "SAVA_PROPOSED",
           "technical_name": null,
           "source_label_verified": false,
-          "cleaning_rule": "Giữ ID dạng Text và số0 đầu. Trim trên bản CLEAN riêng, giữ raw value và source-row lineage. Không join bằng tên diễn giải."
+          "cleaning_rule": "Giữ chuỗi RAW và locale. Chuẩn hóa dấu, separator, currency/UoM/price unit trước tính. Blank không là0; không cộng tỷ lệ/đơn giá/snapshot."
         },
         {
           "key": "Conversion Denominator",
           "label": "Conversion Denominator",
           "position": 16,
-          "type": "text",
+          "type": "raw_decimal",
           "meaning": "Thuộc tính nghiệp vụ: Conversion Denominator. Đọc tại grain của hồ sơ; nhãn và semantics cần đối chiếu hệ công ty.",
           "evidence": "SAVA_PROPOSED",
           "technical_name": null,
           "source_label_verified": false,
-          "cleaning_rule": "Giữ ID dạng Text và số0 đầu. Trim trên bản CLEAN riêng, giữ raw value và source-row lineage. Không join bằng tên diễn giải."
+          "cleaning_rule": "Giữ chuỗi RAW và locale. Chuẩn hóa dấu, separator, currency/UoM/price unit trước tính. Blank không là0; không cộng tỷ lệ/đơn giá/snapshot."
         },
         {
           "key": "Planned Delivery Time",
@@ -32250,12 +32250,12 @@
           "key": "Quota Rating",
           "label": "Quota Rating",
           "position": 11,
-          "type": "text",
+          "type": "raw_decimal",
           "meaning": "Thuộc tính nghiệp vụ: Quota Rating. Đọc tại grain của hồ sơ; nhãn và semantics cần đối chiếu hệ công ty.",
           "evidence": "SAVA_PROPOSED",
           "technical_name": null,
           "source_label_verified": false,
-          "cleaning_rule": "Giữ ID dạng Text và số0 đầu. Trim trên bản CLEAN riêng, giữ raw value và source-row lineage. Không join bằng tên diễn giải."
+          "cleaning_rule": "Giữ chuỗi RAW và locale. Chuẩn hóa dấu, separator, currency/UoM/price unit trước tính. Blank không là0; không cộng tỷ lệ/đơn giá/snapshot."
         },
         {
           "key": "Unit",
@@ -34976,12 +34976,12 @@
           "key": "Price Unit",
           "label": "Price Unit",
           "position": 13,
-          "type": "text",
+          "type": "raw_decimal",
           "meaning": "Số đơn vị làm mẫu số của đơn giá",
           "evidence": "SAVA_PROPOSED",
           "technical_name": null,
           "source_label_verified": false,
-          "cleaning_rule": "Giữ ID dạng Text và số0 đầu. Trim trên bản CLEAN riêng, giữ raw value và source-row lineage. Không join bằng tên diễn giải."
+          "cleaning_rule": "Giữ chuỗi RAW và locale. Chuẩn hóa dấu, separator, currency/UoM/price unit trước tính. Blank không là0; không cộng tỷ lệ/đơn giá/snapshot."
         },
         {
           "key": "Currency",
@@ -36347,12 +36347,12 @@
           "key": "Number of Capacities",
           "label": "Number of Capacities",
           "position": 14,
-          "type": "text",
+          "type": "raw_decimal",
           "meaning": "Thuộc tính nghiệp vụ: Number of Capacities. Đọc tại grain của hồ sơ; nhãn và semantics cần đối chiếu hệ công ty.",
           "evidence": "SAVA_PROPOSED",
           "technical_name": null,
           "source_label_verified": false,
-          "cleaning_rule": "Giữ ID dạng Text và số0 đầu. Trim trên bản CLEAN riêng, giữ raw value và source-row lineage. Không join bằng tên diễn giải."
+          "cleaning_rule": "Giữ chuỗi RAW và locale. Chuẩn hóa dấu, separator, currency/UoM/price unit trước tính. Blank không là0; không cộng tỷ lệ/đơn giá/snapshot."
         },
         {
           "key": "Backlog",
@@ -39653,12 +39653,12 @@
           "key": "Price Unit",
           "label": "Price Unit",
           "position": 13,
-          "type": "text",
+          "type": "raw_decimal",
           "meaning": "Số đơn vị làm mẫu số của đơn giá",
           "evidence": "SAVA_PROPOSED",
           "technical_name": null,
           "source_label_verified": false,
-          "cleaning_rule": "Giữ ID dạng Text và số0 đầu. Trim trên bản CLEAN riêng, giữ raw value và source-row lineage. Không join bằng tên diễn giải."
+          "cleaning_rule": "Giữ chuỗi RAW và locale. Chuẩn hóa dấu, separator, currency/UoM/price unit trước tính. Blank không là0; không cộng tỷ lệ/đơn giá/snapshot."
         },
         {
           "key": "Net Value",
@@ -41343,12 +41343,12 @@
           "key": "Price Unit",
           "label": "Price Unit",
           "position": 14,
-          "type": "text",
+          "type": "raw_decimal",
           "meaning": "Số đơn vị làm mẫu số của đơn giá",
           "evidence": "SAVA_PROPOSED",
           "technical_name": null,
           "source_label_verified": false,
-          "cleaning_rule": "Giữ ID dạng Text và số0 đầu. Trim trên bản CLEAN riêng, giữ raw value và source-row lineage. Không join bằng tên diễn giải."
+          "cleaning_rule": "Giữ chuỗi RAW và locale. Chuẩn hóa dấu, separator, currency/UoM/price unit trước tính. Blank không là0; không cộng tỷ lệ/đơn giá/snapshot."
         },
         {
           "key": "Net Value",
@@ -42479,12 +42479,12 @@
           "key": "Price Unit",
           "label": "Price Unit",
           "position": 12,
-          "type": "text",
+          "type": "raw_decimal",
           "meaning": "Số đơn vị làm mẫu số của đơn giá",
           "evidence": "SAVA_PROPOSED",
           "technical_name": null,
           "source_label_verified": false,
-          "cleaning_rule": "Giữ ID dạng Text và số0 đầu. Trim trên bản CLEAN riêng, giữ raw value và source-row lineage. Không join bằng tên diễn giải."
+          "cleaning_rule": "Giữ chuỗi RAW và locale. Chuẩn hóa dấu, separator, currency/UoM/price unit trước tính. Blank không là0; không cộng tỷ lệ/đơn giá/snapshot."
         },
         {
           "key": "Unit",
@@ -47105,12 +47105,12 @@
           "key": "Dunning Fee",
           "label": "Dunning Fee",
           "position": 16,
-          "type": "text",
+          "type": "raw_decimal",
           "meaning": "Thuộc tính nghiệp vụ: Dunning Fee. Đọc tại grain của hồ sơ; nhãn và semantics cần đối chiếu hệ công ty.",
           "evidence": "SAVA_PROPOSED",
           "technical_name": null,
           "source_label_verified": false,
-          "cleaning_rule": "Giữ ID dạng Text và số0 đầu. Trim trên bản CLEAN riêng, giữ raw value và source-row lineage. Không join bằng tên diễn giải."
+          "cleaning_rule": "Giữ chuỗi RAW và locale. Chuẩn hóa dấu, separator, currency/UoM/price unit trước tính. Blank không là0; không cộng tỷ lệ/đơn giá/snapshot."
         },
         {
           "key": "Status",
@@ -49703,23 +49703,23 @@
           "key": "Opening Balance",
           "label": "Opening Balance",
           "position": 15,
-          "type": "text",
+          "type": "raw_decimal",
           "meaning": "Số dư đầu kỳ; không cộng snapshot",
           "evidence": "SAVA_PROPOSED",
           "technical_name": null,
           "source_label_verified": false,
-          "cleaning_rule": "Giữ ID dạng Text và số0 đầu. Trim trên bản CLEAN riêng, giữ raw value và source-row lineage. Không join bằng tên diễn giải."
+          "cleaning_rule": "Giữ chuỗi RAW và locale. Chuẩn hóa dấu, separator, currency/UoM/price unit trước tính. Blank không là0; không cộng tỷ lệ/đơn giá/snapshot."
         },
         {
           "key": "Closing Balance",
           "label": "Closing Balance",
           "position": 16,
-          "type": "text",
+          "type": "raw_decimal",
           "meaning": "Số dư cuối kỳ; không cộng snapshot",
           "evidence": "SAVA_PROPOSED",
           "technical_name": null,
           "source_label_verified": false,
-          "cleaning_rule": "Giữ ID dạng Text và số0 đầu. Trim trên bản CLEAN riêng, giữ raw value và source-row lineage. Không join bằng tên diễn giải."
+          "cleaning_rule": "Giữ chuỗi RAW và locale. Chuẩn hóa dấu, separator, currency/UoM/price unit trước tính. Blank không là0; không cộng tỷ lệ/đơn giá/snapshot."
         },
         {
           "key": "Status",
@@ -50522,12 +50522,12 @@
           "key": "Price Unit",
           "label": "Price Unit",
           "position": 12,
-          "type": "text",
+          "type": "raw_decimal",
           "meaning": "Số đơn vị làm mẫu số của đơn giá",
           "evidence": "SAVA_PROPOSED",
           "technical_name": null,
           "source_label_verified": false,
-          "cleaning_rule": "Giữ ID dạng Text và số0 đầu. Trim trên bản CLEAN riêng, giữ raw value và source-row lineage. Không join bằng tên diễn giải."
+          "cleaning_rule": "Giữ chuỗi RAW và locale. Chuẩn hóa dấu, separator, currency/UoM/price unit trước tính. Blank không là0; không cộng tỷ lệ/đơn giá/snapshot."
         },
         {
           "key": "Currency",
@@ -51631,23 +51631,23 @@
           "key": "Sender Credit",
           "label": "Sender Credit",
           "position": 14,
-          "type": "text",
+          "type": "raw_decimal",
           "meaning": "Thuộc tính nghiệp vụ: Sender Credit. Đọc tại grain của hồ sơ; nhãn và semantics cần đối chiếu hệ công ty.",
           "evidence": "SAVA_PROPOSED",
           "technical_name": null,
           "source_label_verified": false,
-          "cleaning_rule": "Giữ ID dạng Text và số0 đầu. Trim trên bản CLEAN riêng, giữ raw value và source-row lineage. Không join bằng tên diễn giải."
+          "cleaning_rule": "Giữ chuỗi RAW và locale. Chuẩn hóa dấu, separator, currency/UoM/price unit trước tính. Blank không là0; không cộng tỷ lệ/đơn giá/snapshot."
         },
         {
           "key": "Receiver Debit",
           "label": "Receiver Debit",
           "position": 15,
-          "type": "text",
+          "type": "raw_decimal",
           "meaning": "Thuộc tính nghiệp vụ: Receiver Debit. Đọc tại grain của hồ sơ; nhãn và semantics cần đối chiếu hệ công ty.",
           "evidence": "SAVA_PROPOSED",
           "technical_name": null,
           "source_label_verified": false,
-          "cleaning_rule": "Giữ ID dạng Text và số0 đầu. Trim trên bản CLEAN riêng, giữ raw value và source-row lineage. Không join bằng tên diễn giải."
+          "cleaning_rule": "Giữ chuỗi RAW và locale. Chuẩn hóa dấu, separator, currency/UoM/price unit trước tính. Blank không là0; không cộng tỷ lệ/đơn giá/snapshot."
         },
         {
           "key": "Test Run",
@@ -51925,23 +51925,23 @@
           "key": "Sender Credit",
           "label": "Sender Credit",
           "position": 14,
-          "type": "text",
+          "type": "raw_decimal",
           "meaning": "Thuộc tính nghiệp vụ: Sender Credit. Đọc tại grain của hồ sơ; nhãn và semantics cần đối chiếu hệ công ty.",
           "evidence": "SAVA_PROPOSED",
           "technical_name": null,
           "source_label_verified": false,
-          "cleaning_rule": "Giữ ID dạng Text và số0 đầu. Trim trên bản CLEAN riêng, giữ raw value và source-row lineage. Không join bằng tên diễn giải."
+          "cleaning_rule": "Giữ chuỗi RAW và locale. Chuẩn hóa dấu, separator, currency/UoM/price unit trước tính. Blank không là0; không cộng tỷ lệ/đơn giá/snapshot."
         },
         {
           "key": "Receiver Debit",
           "label": "Receiver Debit",
           "position": 15,
-          "type": "text",
+          "type": "raw_decimal",
           "meaning": "Thuộc tính nghiệp vụ: Receiver Debit. Đọc tại grain của hồ sơ; nhãn và semantics cần đối chiếu hệ công ty.",
           "evidence": "SAVA_PROPOSED",
           "technical_name": null,
           "source_label_verified": false,
-          "cleaning_rule": "Giữ ID dạng Text và số0 đầu. Trim trên bản CLEAN riêng, giữ raw value và source-row lineage. Không join bằng tên diễn giải."
+          "cleaning_rule": "Giữ chuỗi RAW và locale. Chuẩn hóa dấu, separator, currency/UoM/price unit trước tính. Blank không là0; không cộng tỷ lệ/đơn giá/snapshot."
         },
         {
           "key": "Test Run",
@@ -52219,12 +52219,12 @@
           "key": "Price Unit",
           "label": "Price Unit",
           "position": 14,
-          "type": "text",
+          "type": "raw_decimal",
           "meaning": "Số đơn vị làm mẫu số của đơn giá",
           "evidence": "SAVA_PROPOSED",
           "technical_name": null,
           "source_label_verified": false,
-          "cleaning_rule": "Giữ ID dạng Text và số0 đầu. Trim trên bản CLEAN riêng, giữ raw value và source-row lineage. Không join bằng tên diễn giải."
+          "cleaning_rule": "Giữ chuỗi RAW và locale. Chuẩn hóa dấu, separator, currency/UoM/price unit trước tính. Blank không là0; không cộng tỷ lệ/đơn giá/snapshot."
         },
         {
           "key": "Allocated Amount",
@@ -52811,12 +52811,12 @@
           "key": "Price Unit",
           "label": "Price Unit",
           "position": 13,
-          "type": "text",
+          "type": "raw_decimal",
           "meaning": "Số đơn vị làm mẫu số của đơn giá",
           "evidence": "SAVA_PROPOSED",
           "technical_name": null,
           "source_label_verified": false,
-          "cleaning_rule": "Giữ ID dạng Text và số0 đầu. Trim trên bản CLEAN riêng, giữ raw value và source-row lineage. Không join bằng tên diễn giải."
+          "cleaning_rule": "Giữ chuỗi RAW và locale. Chuẩn hóa dấu, separator, currency/UoM/price unit trước tính. Blank không là0; không cộng tỷ lệ/đơn giá/snapshot."
         },
         {
           "key": "Difference",
@@ -53937,12 +53937,12 @@
           "key": "Price Unit",
           "label": "Price Unit",
           "position": 12,
-          "type": "text",
+          "type": "raw_decimal",
           "meaning": "Số đơn vị làm mẫu số của đơn giá",
           "evidence": "SAVA_PROPOSED",
           "technical_name": null,
           "source_label_verified": false,
-          "cleaning_rule": "Giữ ID dạng Text và số0 đầu. Trim trên bản CLEAN riêng, giữ raw value và source-row lineage. Không join bằng tên diễn giải."
+          "cleaning_rule": "Giữ chuỗi RAW và locale. Chuẩn hóa dấu, separator, currency/UoM/price unit trước tính. Blank không là0; không cộng tỷ lệ/đơn giá/snapshot."
         },
         {
           "key": "Order Unit",
@@ -53970,23 +53970,23 @@
           "key": "Conversion Numerator",
           "label": "Conversion Numerator",
           "position": 15,
-          "type": "text",
+          "type": "raw_decimal",
           "meaning": "Thuộc tính nghiệp vụ: Conversion Numerator. Đọc tại grain của hồ sơ; nhãn và semantics cần đối chiếu hệ công ty.",
           "evidence": "SAVA_PROPOSED",
           "technical_name": null,
           "source_label_verified": false,
-          "cleaning_rule": "Giữ ID dạng Text và số0 đầu. Trim trên bản CLEAN riêng, giữ raw value và source-row lineage. Không join bằng tên diễn giải."
+          "cleaning_rule": "Giữ chuỗi RAW và locale. Chuẩn hóa dấu, separator, currency/UoM/price unit trước tính. Blank không là0; không cộng tỷ lệ/đơn giá/snapshot."
         },
         {
           "key": "Conversion Denominator",
           "label": "Conversion Denominator",
           "position": 16,
-          "type": "text",
+          "type": "raw_decimal",
           "meaning": "Thuộc tính nghiệp vụ: Conversion Denominator. Đọc tại grain của hồ sơ; nhãn và semantics cần đối chiếu hệ công ty.",
           "evidence": "SAVA_PROPOSED",
           "technical_name": null,
           "source_label_verified": false,
-          "cleaning_rule": "Giữ ID dạng Text và số0 đầu. Trim trên bản CLEAN riêng, giữ raw value và source-row lineage. Không join bằng tên diễn giải."
+          "cleaning_rule": "Giữ chuỗi RAW và locale. Chuẩn hóa dấu, separator, currency/UoM/price unit trước tính. Blank không là0; không cộng tỷ lệ/đơn giá/snapshot."
         },
         {
           "key": "Planned Delivery Time",
@@ -54493,12 +54493,12 @@
           "key": "Quota Rating",
           "label": "Quota Rating",
           "position": 11,
-          "type": "text",
+          "type": "raw_decimal",
           "meaning": "Thuộc tính nghiệp vụ: Quota Rating. Đọc tại grain của hồ sơ; nhãn và semantics cần đối chiếu hệ công ty.",
           "evidence": "SAVA_PROPOSED",
           "technical_name": null,
           "source_label_verified": false,
-          "cleaning_rule": "Giữ ID dạng Text và số0 đầu. Trim trên bản CLEAN riêng, giữ raw value và source-row lineage. Không join bằng tên diễn giải."
+          "cleaning_rule": "Giữ chuỗi RAW và locale. Chuẩn hóa dấu, separator, currency/UoM/price unit trước tính. Blank không là0; không cộng tỷ lệ/đơn giá/snapshot."
         },
         {
           "key": "Unit",
@@ -57219,12 +57219,12 @@
           "key": "Price Unit",
           "label": "Price Unit",
           "position": 13,
-          "type": "text",
+          "type": "raw_decimal",
           "meaning": "Số đơn vị làm mẫu số của đơn giá",
           "evidence": "SAVA_PROPOSED",
           "technical_name": null,
           "source_label_verified": false,
-          "cleaning_rule": "Giữ ID dạng Text và số0 đầu. Trim trên bản CLEAN riêng, giữ raw value và source-row lineage. Không join bằng tên diễn giải."
+          "cleaning_rule": "Giữ chuỗi RAW và locale. Chuẩn hóa dấu, separator, currency/UoM/price unit trước tính. Blank không là0; không cộng tỷ lệ/đơn giá/snapshot."
         },
         {
           "key": "Currency",
@@ -58590,12 +58590,12 @@
           "key": "Number of Capacities",
           "label": "Number of Capacities",
           "position": 14,
-          "type": "text",
+          "type": "raw_decimal",
           "meaning": "Thuộc tính nghiệp vụ: Number of Capacities. Đọc tại grain của hồ sơ; nhãn và semantics cần đối chiếu hệ công ty.",
           "evidence": "SAVA_PROPOSED",
           "technical_name": null,
           "source_label_verified": false,
-          "cleaning_rule": "Giữ ID dạng Text và số0 đầu. Trim trên bản CLEAN riêng, giữ raw value và source-row lineage. Không join bằng tên diễn giải."
+          "cleaning_rule": "Giữ chuỗi RAW và locale. Chuẩn hóa dấu, separator, currency/UoM/price unit trước tính. Blank không là0; không cộng tỷ lệ/đơn giá/snapshot."
         },
         {
           "key": "Backlog",
@@ -61896,12 +61896,12 @@
           "key": "Price Unit",
           "label": "Price Unit",
           "position": 13,
-          "type": "text",
+          "type": "raw_decimal",
           "meaning": "Số đơn vị làm mẫu số của đơn giá",
           "evidence": "SAVA_PROPOSED",
           "technical_name": null,
           "source_label_verified": false,
-          "cleaning_rule": "Giữ ID dạng Text và số0 đầu. Trim trên bản CLEAN riêng, giữ raw value và source-row lineage. Không join bằng tên diễn giải."
+          "cleaning_rule": "Giữ chuỗi RAW và locale. Chuẩn hóa dấu, separator, currency/UoM/price unit trước tính. Blank không là0; không cộng tỷ lệ/đơn giá/snapshot."
         },
         {
           "key": "Net Value",
@@ -63586,12 +63586,12 @@
           "key": "Price Unit",
           "label": "Price Unit",
           "position": 14,
-          "type": "text",
+          "type": "raw_decimal",
           "meaning": "Số đơn vị làm mẫu số của đơn giá",
           "evidence": "SAVA_PROPOSED",
           "technical_name": null,
           "source_label_verified": false,
-          "cleaning_rule": "Giữ ID dạng Text và số0 đầu. Trim trên bản CLEAN riêng, giữ raw value và source-row lineage. Không join bằng tên diễn giải."
+          "cleaning_rule": "Giữ chuỗi RAW và locale. Chuẩn hóa dấu, separator, currency/UoM/price unit trước tính. Blank không là0; không cộng tỷ lệ/đơn giá/snapshot."
         },
         {
           "key": "Net Value",
@@ -64722,12 +64722,12 @@
           "key": "Price Unit",
           "label": "Price Unit",
           "position": 12,
-          "type": "text",
+          "type": "raw_decimal",
           "meaning": "Số đơn vị làm mẫu số của đơn giá",
           "evidence": "SAVA_PROPOSED",
           "technical_name": null,
           "source_label_verified": false,
-          "cleaning_rule": "Giữ ID dạng Text và số0 đầu. Trim trên bản CLEAN riêng, giữ raw value và source-row lineage. Không join bằng tên diễn giải."
+          "cleaning_rule": "Giữ chuỗi RAW và locale. Chuẩn hóa dấu, separator, currency/UoM/price unit trước tính. Blank không là0; không cộng tỷ lệ/đơn giá/snapshot."
         },
         {
           "key": "Unit",
