@@ -10,8 +10,6 @@ import {
   Package,
   Layers,
   Cpu,
-  UserCheck,
-  Sparkles,
   ChevronDown,
   ChevronRight,
   Info,
@@ -19,12 +17,8 @@ import {
   Minimize2,
   Table,
   CheckCircle2,
-  ShieldCheck,
-  FileCode,
   Tag,
   Boxes,
-  ArrowDownRight,
-  ExternalLink,
 } from 'lucide-react';
 
 interface BOMTreeViewProps {
@@ -309,7 +303,7 @@ export const BOMTreeView: React.FC<BOMTreeViewProps> = ({
               </span>
             </div>
             <p className="text-xs text-slate-400">
-              Nhấp vào từng linh kiện trong cây phân cấp để xem chi phí định mức dự kiến, tỷ trọng và tài khoản hạch toán Thông tư 200.
+              Nhấp vào từng linh kiện trong cây phân cấp để xem chi phí định mức dự kiến, tỷ trọng và tài khoản hạch toán Thông tư 99.
             </p>
           </div>
         </div>
@@ -577,7 +571,7 @@ export const BOMTreeView: React.FC<BOMTreeViewProps> = ({
               )}
 
               <div className="flex justify-between py-1.5">
-                <span className="text-slate-400">Tài khoản kế toán (TT200/2014):</span>
+                <span className="text-slate-400">Tài khoản kế toán (TT99/2025):</span>
                 <span className="font-mono font-bold text-indigo-300">
                   {selectedNode.tt200Account}
                 </span>

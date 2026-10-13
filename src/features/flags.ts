@@ -8,7 +8,8 @@ export type FeatureFlagKey =
   | 'm5SodRbac'
   | 'm6MaterialLedger'
   | 'm7GrIr'
-  | 'm8Intercompany';
+  | 'm8Intercompany'
+  | 'm9Reports';
 
 export const FEATURE_FLAG_DEFAULTS: Record<FeatureFlagKey, boolean> = {
   m1Variance: true,
@@ -19,6 +20,7 @@ export const FEATURE_FLAG_DEFAULTS: Record<FeatureFlagKey, boolean> = {
   m6MaterialLedger: true,
   m7GrIr: true,
   m8Intercompany: true,
+  m9Reports: true,
 };
 
 const STORAGE_KEY = 'sava_feature_flags';

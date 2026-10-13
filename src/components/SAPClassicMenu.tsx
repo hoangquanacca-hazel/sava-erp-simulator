@@ -5,16 +5,8 @@ import {
   FileText,
   Search,
   X,
-  ChevronRight,
-  ChevronDown,
   CheckCircle2,
-  Play,
   RotateCcw,
-  Layers,
-  Sparkles,
-  Maximize2,
-  Minimize2,
-  ExternalLink,
 } from 'lucide-react';
 import { UIMode } from '../types';
 
@@ -580,11 +572,6 @@ export const SAPClassicMenu: React.FC<SAPClassicMenuProps> = ({
   stepStates = {},
   uiMode,
 }) => {
-  // CRITICAL REQUIREMENT: Strictly ensure it only appears when UI Mode is set to 'classic'
-  if (uiMode !== 'classic') {
-    return null;
-  }
-
   const [expandedNodes, setExpandedNodes] = useState<Record<string, boolean>>(() => {
     const init: Record<string, boolean> = {
       favorites: true,
@@ -711,6 +698,12 @@ export const SAPClassicMenu: React.FC<SAPClassicMenuProps> = ({
 
     return filterNodes(SAP_EASY_ACCESS_TREE);
   }, [searchTerm]);
+
+  // CRITICAL REQUIREMENT: Strictly ensure it only appears when UI Mode is set to 'classic'
+  // (đặt SAU mọi hook — react-hooks/rules-of-hooks, AUD-018 bản S2)
+  if (uiMode !== 'classic') {
+    return null;
+  }
 
   if (!isOpen) {
     return null;

@@ -12,7 +12,13 @@
     "test:parity": "tsx scripts/parity.ts",
     "test:s1": "tsx scripts/s1-config.ts",
     "test:s2": "tsx scripts/s2-fagll03.ts",
-    "test:a0": "tsx scripts/a0-expected.ts && tsx scripts/a0-ids.ts && tsx scripts/a0-ckmlcp.ts && tsx scripts/a01-identity-events.ts"
+    "test:a0": "tsx scripts/a0-expected.ts && tsx scripts/a0-ids.ts && tsx scripts/a0-ckmlcp.ts && tsx scripts/a01-identity-events.ts",
+    "test:s3": "tsx scripts/s3-reports.ts",
+    "test:s4": "tsx scripts/s4-breakdown.ts",
+    "test:health": "tsx scripts/s1-health.ts",
+    "test:costing": "tsx scripts/export-costing-inputs.ts --check && python3 scripts/oracle_costing.py --check && python3 scripts/a0_oracle.py --check && tsx scripts/costing.ts",
+    "lint:eslint": "eslint .",
+    "lint:eslint:strict": "eslint src/reports src/events src/pages/ReportsPage.tsx scripts/s3-reports.ts scripts/s1-health.ts eslint.config.js"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",
@@ -37,6 +43,11 @@
     "tsx": "^4.21.0",
     "typescript": "~5.8.2",
     "vite": "^6.2.3",
-    "@types/express": "^4.17.21"
+    "@types/express": "^4.17.21",
+    "@eslint/js": "^9.17.0",
+    "eslint": "^9.17.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "globals": "^15.14.0",
+    "typescript-eslint": "^8.18.2"
   }
 }

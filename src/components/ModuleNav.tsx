@@ -19,6 +19,7 @@ export const MODULE_NAV: ModuleNavItem[] = [
   { route: 'ml', label: 'Material Ledger', flag: 'm6MaterialLedger' },
   { route: 'grir', label: 'GR/IR MR11', flag: 'm7GrIr' },
   { route: 'ic', label: 'Intercompany TP', flag: 'm8Intercompany' },
+  { route: 'reports', label: 'Báo cáo SAP', flag: 'm9Reports' },
 ];
 
 export const ModuleNav: React.FC<{

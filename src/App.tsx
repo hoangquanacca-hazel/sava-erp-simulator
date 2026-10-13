@@ -1,7 +1,6 @@
 import React, { useState, useMemo, useRef, useEffect, lazy, Suspense } from 'react';
 import {
   MTOParameters,
-  MTOComputed,
   StepRuntimeState,
   JournalEntry,
   PresetScenario,
@@ -20,7 +19,6 @@ import {
   computeTrialBalance,
   exportEntriesToCSV,
   exportEntriesToJSON,
-  formatVND,
 } from './utils/calculator';
 import {
   assertParity,
@@ -52,11 +50,7 @@ import { AuditEvent, SimRole, canRoleRunStep, newSessionId } from './features/so
 import { postCkmlcp } from './features/materialLedger';
 import {
   CheckCircle,
-  Play,
   RotateCcw,
-  Sparkles,
-  ArrowRight,
-  ArrowLeft,
   FastForward,
   AlertTriangle,
   Layers,
@@ -72,6 +66,7 @@ const SodAuditPage = lazy(() => import('./pages/SodAuditPage'));
 const MaterialLedgerPage = lazy(() => import('./pages/MaterialLedgerPage'));
 const GrirPage = lazy(() => import('./pages/GrirPage'));
 const IntercompanyPage = lazy(() => import('./pages/IntercompanyPage'));
+const ReportsPage = lazy(() => import('./pages/ReportsPage'));
 
 const INITIAL_PARAMS: MTOParameters = PRESET_SCENARIOS[0].params;
 
@@ -476,9 +471,9 @@ export default function App() {
         return;
       }
     }
-    let currentReworkCost = stepStates[4].qmReworkCost || 0;
-    let currentScrapCost = stepStates[4].qmScrapCost || 0;
-    let currentMethod = stepStates[4].qmResolutionMethod || null;
+    const currentReworkCost = stepStates[4].qmReworkCost || 0;
+    const currentScrapCost = stepStates[4].qmScrapCost || 0;
+    const currentMethod = stepStates[4].qmResolutionMethod || null;
     const newStates = { ...stepStates };
 
     for (let s = 1; s <= 7; s++) {
@@ -540,7 +535,7 @@ export default function App() {
 
   // AI step explainer trigger
   const handleExplainStep = (stepDef: (typeof STEP_DEFINITIONS)[0]) => {
-    const question = `Hãy giải thích chi tiết Bước ${stepDef.id}: ${stepDef.title} (T-code ${stepDef.tCode}, Module ${stepDef.sapModule}) trong quy trình MTO của PIC Vietnam. Hãy phân tích các tài khoản kế toán theo Thông tư 200/2014/TT-BTC và cơ chế kho ${params.stockType} Stock.`;
+    const question = `Hãy giải thích chi tiết Bước ${stepDef.id}: ${stepDef.title} (T-code ${stepDef.tCode}, Module ${stepDef.sapModule}) trong quy trình MTO của PIC Vietnam. Hãy phân tích các tài khoản kế toán theo Thông tư 99/2025/TT-BTC và cơ chế kho ${params.stockType} Stock.`;
     setAiInitialQuestion(question);
 
     if (!isRegistered && !adminSettings.bypassSessionLimits) {
@@ -698,6 +693,10 @@ export default function App() {
               }}
               uiMode={uiMode}
             />
+          </Suspense>
+        ) : route === 'reports' && flags.m9Reports ? (
+          <Suspense fallback={<div className="p-8 text-sm text-slate-400">Đang tải Báo cáo…</div>}>
+            <ReportsPage params={params} computed={computed} acdoca={ACDOCA_TABLE} uiMode={uiMode} />
           </Suspense>
         ) : currentScreen === 'setup' ? (
           <SetupScreen

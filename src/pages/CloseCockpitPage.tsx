@@ -160,7 +160,7 @@ export const CloseCockpitPage: React.FC<{
           className="px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-xs font-semibold text-slate-100 flex items-center gap-1.5 cursor-pointer"
         >
           <Printer className="w-3.5 h-3.5 text-cyan-400" />
-          Close Pack PDF (báo cáo TT200)
+          Close Pack PDF (báo cáo TT99)
         </button>
       </div>
 

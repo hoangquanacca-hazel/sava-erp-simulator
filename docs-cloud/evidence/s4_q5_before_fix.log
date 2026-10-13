@@ -1,0 +1,15 @@
+samsung-cover PASS | canon-frame PASS | denso-sensor FAIL
+FAIL test:costing 13/40 ca lệch oracle:
+  denso-sensor: BOM ROH-RESIN TS=11201528 oracle=11061800; BOM ROH-ADD-ESD TS=undefined oracle=139728
+  denso/c-std/t-esd/p-std: BOM ROH-RESIN TS=11201528 oracle=11061800; BOM ROH-ADD-ESD TS=undefined oracle=139728
+  denso/c-std/t-esd/p-vacuum: BOM ROH-RESIN TS=11201528 oracle=11061800; BOM ROH-ADD-ESD TS=undefined oracle=139728
+  denso/c-std/t-esd/p-ip68: BOM ROH-RESIN TS=11201528 oracle=11061800; BOM ROH-ADD-ESD TS=undefined oracle=139728
+  denso/c-blk/t-esd/p-std: BOM ROH-RESIN TS=11201528 oracle=11061800; BOM ROH-ADD-ESD TS=undefined oracle=139728
+  denso/c-blk/t-esd/p-vacuum: BOM ROH-RESIN TS=11201528 oracle=11061800; BOM ROH-ADD-ESD TS=undefined oracle=139728
+  denso/c-blk/t-esd/p-ip68: BOM ROH-RESIN TS=11201528 oracle=11061800; BOM ROH-ADD-ESD TS=undefined oracle=139728
+  denso/c-wht/t-esd/p-std: BOM ROH-RESIN TS=11201528 oracle=11061800; BOM ROH-ADD-ESD TS=undefined oracle=139728
+  denso/c-wht/t-esd/p-vacuum: BOM ROH-RESIN TS=11201528 oracle=11061800; BOM ROH-ADD-ESD TS=undefined oracle=139728
+  denso/c-wht/t-esd/p-ip68: BOM ROH-RESIN TS=11201528 oracle=11061800; BOM ROH-ADD-ESD TS=undefined oracle=139728
+  denso/c-ylw/t-esd/p-std: BOM ROH-RESIN TS=11201528 oracle=11061800; BOM ROH-ADD-ESD TS=undefined oracle=139728
+  denso/c-ylw/t-esd/p-vacuum: BOM ROH-RESIN TS=11201528 oracle=11061800; BOM ROH-ADD-ESD TS=undefined oracle=139728
+  denso/c-ylw/t-esd/p-ip68: BOM ROH-RESIN TS=11201528 oracle=11061800; BOM ROH-ADD-ESD TS=undefined oracle=139728

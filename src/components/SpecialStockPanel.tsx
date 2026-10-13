@@ -5,10 +5,7 @@ import {
   Boxes,
   Package,
   Layers,
-  CheckCircle2,
-  AlertTriangle,
   Truck,
-  ArrowRight,
   ShieldCheck,
   ShieldAlert,
 } from 'lucide-react';

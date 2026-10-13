@@ -4,10 +4,6 @@ import {
   X,
   Download,
   Users,
-  Building,
-  Mail,
-  Phone,
-  Calendar,
   CheckCircle,
   ToggleLeft,
   ToggleRight,
@@ -15,7 +11,6 @@ import {
   PlusCircle,
   ExternalLink,
   Sparkles,
-  RefreshCw,
   Search,
   Sliders,
 } from 'lucide-react';

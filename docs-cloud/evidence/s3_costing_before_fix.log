@@ -1,0 +1,10 @@
+# test:costing TRƯỚC khi sửa calculator.ts — cc527f2 (feat @cc527f2), 2026-10-09T15:32:14Z
+# lệnh: npx tsx scripts/costing.ts ; exit=1
+samsung-cover PASS | canon-frame PASS | denso-sensor FAIL
+FAIL test:costing 25/40 ca lệch oracle:
+  denso-sensor: addon TS=26400000 oracle=12000000 Δ=14400000; O TS=66747062 oracle=52347062 Δ=14400000; P TS=113882210 oracle=99482210 Δ=14400000
+  denso/c-std/t-std/p-vacuum: addon TS=6800000 oracle=0 Δ=6800000; O TS=46402432 oracle=39602432 Δ=6800000; P TS=84229712 oracle=77429712 Δ=6800000
+  denso/c-std/t-std/p-ip68: addon TS=14400000 oracle=0 Δ=14400000; O TS=54616512 oracle=40216512 Δ=14400000; P TS=100119792 oracle=85719792 Δ=14400000
+  denso/c-std/t-matte/p-vacuum: addon TS=12400000 oracle=5600000 Δ=6800000; O TS=52002432 oracle=45202432 Δ=6800000; P TS=89829712 oracle=83029712 Δ=6800000
+  denso/c-std/t-matte/p-ip68: addon TS=20000000 oracle=5600000 Δ=14400000; O TS=60216512 oracle=45816512 Δ=14400000; P TS=105719792 oracle=91319792 Δ=14400000
+  denso/c-std/t-esd/p-vacuum: addon TS=18800000 oracle=12000000 Δ=6800000; O TS=58413611 oracle=51613611 Δ=6800000; P TS=96380619 oracle=89580619 Δ=6800000

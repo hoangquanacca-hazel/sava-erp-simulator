@@ -13,40 +13,26 @@ import {
   DEFAULT_ROUTING,
   UIMode,
 } from '../types';
-import { formatVND, formatNumber } from '../utils/calculator';
+import { formatVND } from '../utils/calculator';
 import { BOMVisualizer } from './BOMVisualizer';
-import {
-  exportFullERPPackageExcel,
-  generateSampleExcelTemplate,
-  parseParametersFromExcel,
-} from '../utils/excelService';
+import { generateSampleExcelTemplate, parseParametersFromExcel } from '../utils/excelService';
 import {
   Calculator,
   ArrowRight,
-  TrendingUp,
   Package,
   Layers,
-  Info,
   DollarSign,
   Cpu,
   UserCheck,
   CheckCircle2,
   AlertCircle,
-  Clock,
   Sliders,
-  Palette,
   Sparkles,
   Percent,
-  FolderTree,
   Upload,
   Download,
-  FileSpreadsheet,
   Plus,
   Trash2,
-  Check,
-  Building2,
-  Wrench,
-  Flame,
 } from 'lucide-react';
 
 interface SetupScreenProps {
@@ -439,7 +425,7 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({
                       : 'bg-slate-950 border-slate-700 text-slate-100 focus:border-cyan-500'
                   }`}
                 >
-                  <option value={0.1}>10% (Chuẩn linh kiện nhựa TT99/TT200)</option>
+                  <option value={0.1}>10% (Chuẩn linh kiện nhựa TT99)</option>
                   <option value={0.08}>8% (Ưu đãi chính phủ)</option>
                   <option value={0}>0% (Khu chế xuất / Xuất khẩu EPE)</option>
                 </select>

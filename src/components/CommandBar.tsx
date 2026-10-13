@@ -1,20 +1,13 @@
 import React, { useState, useRef, useEffect } from 'react';
 import {
   Check,
-  Search,
   Terminal,
   X,
   AlertCircle,
   CheckCircle2,
-  HelpCircle,
   ChevronDown,
-  ArrowRight,
-  Sparkles,
-  Layers,
-  FileSpreadsheet,
   BookOpen,
 } from 'lucide-react';
-import { SAP_TCODES_LIST, TCodeInfo } from '../types';
 
 export interface CommandBarProps {
   onNavigateToStep: (stepId: number, tCode: string) => void;
@@ -368,7 +361,7 @@ export const CommandBar: React.FC<CommandBarProps> = ({
                 className="text-[11px] text-amber-400 hover:text-amber-300 font-medium flex items-center gap-1.5 py-1 transition-colors cursor-pointer w-full justify-center bg-amber-500/10 hover:bg-amber-500/20 rounded-lg border border-amber-500/30"
               >
                 <BookOpen className="w-3.5 h-3.5" />
-                <span>Mở Sổ Tay Tra Cứu Toàn Bộ T-Code & Bút Toán TT200</span>
+                <span>Mở Sổ Tay Tra Cứu Toàn Bộ T-Code & Bút Toán TT99</span>
               </button>
             </div>
           )}

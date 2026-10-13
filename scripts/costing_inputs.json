@@ -1,0 +1,155 @@
+{
+ "presets": [
+  {
+   "id": "samsung-cover",
+   "params": {
+    "customer": "Samsung Electronics Vietnam (SEVT)",
+    "componentCode": "PL-SEVT-CAM08",
+    "componentName": "Vỏ bảo vệ cụm camera Polycarbonate chịu lực",
+    "orderQuantity": 5000,
+    "sellingPrice": 42000,
+    "materialNormKgPer1000": 22.5,
+    "resinPricePerKg": 72000,
+    "resinType": "Hạt nhựa PC/ABS kỹ thuật cao Sabic Cycoloy",
+    "laborCostMode": "hourly",
+    "laborRatePerHour": 65000,
+    "laborHours": 250,
+    "laborTotal": 16250000,
+    "machineCostMode": "hourly",
+    "machineRatePerHour": 110000,
+    "machineHours": 220,
+    "machineTotal": 24200000,
+    "vatRate": 0.1,
+    "strategy": "Strategy 20",
+    "stockType": "Valuated",
+    "actualVariancePercent": 0,
+    "mdgMaterialApproved": true,
+    "mdgBomApproved": true,
+    "mdgRoutingApproved": true,
+    "mdgRatesApproved": true
+   }
+  },
+  {
+   "id": "canon-frame",
+   "params": {
+    "customer": "Canon Vietnam Co., Ltd (Thăng Long)",
+    "componentCode": "PL-CANON-FRM02",
+    "componentName": "Khung máy in Laser chính xác cao sợi thủy tinh 30%",
+    "orderQuantity": 2000,
+    "sellingPrice": 115000,
+    "materialNormKgPer1000": 95,
+    "resinPricePerKg": 85000,
+    "resinType": "Hạt nhựa PA66 + 30% Glass Fiber chống cháy V0",
+    "laborCostMode": "total",
+    "laborRatePerHour": 70000,
+    "laborHours": 180,
+    "laborTotal": 12600000,
+    "machineCostMode": "total",
+    "machineRatePerHour": 135000,
+    "machineHours": 160,
+    "machineTotal": 21600000,
+    "vatRate": 0.1,
+    "strategy": "Strategy 20",
+    "stockType": "Non-valuated",
+    "actualVariancePercent": 0,
+    "mdgMaterialApproved": true,
+    "mdgBomApproved": true,
+    "mdgRoutingApproved": true,
+    "mdgRatesApproved": true
+   }
+  },
+  {
+   "id": "denso-sensor",
+   "params": {
+    "customer": "Denso Manufacturing Vietnam",
+    "componentCode": "PL-DENSO-SN99",
+    "componentName": "Nắp cảm biến rada lùi chống nước IP68 xe hơi",
+    "orderQuantity": 8000,
+    "sellingPrice": 28500,
+    "materialNormKgPer1000": 14.2,
+    "resinPricePerKg": 95000,
+    "resinType": "Hạt nhựa PBT gia cường chịu nhiệt 160°C",
+    "laborCostMode": "hourly",
+    "laborRatePerHour": 68000,
+    "laborHours": 320,
+    "laborTotal": 21760000,
+    "machineCostMode": "hourly",
+    "machineRatePerHour": 125000,
+    "machineHours": 290,
+    "machineTotal": 36250000,
+    "vatRate": 0.1,
+    "strategy": "Strategy 25",
+    "stockType": "Valuated",
+    "variantColorId": "c-ylw",
+    "variantColorName": "Vàng tín hiệu Denso (Fluorescent Yellow Masterbatch)",
+    "variantTextureId": "t-esd",
+    "variantTextureName": "Phủ phụ gia khử tĩnh điện (ESD Protection)",
+    "variantPackagingId": "p-ip68",
+    "variantPackagingName": "Lắp thêm gioăng đệm cao su Silicone IP68",
+    "actualVariancePercent": 3.5,
+    "mdgMaterialApproved": true,
+    "mdgBomApproved": true,
+    "mdgRoutingApproved": true,
+    "mdgRatesApproved": true
+   }
+  }
+ ],
+ "variants": {
+  "colors": [
+   {
+    "id": "c-std",
+    "resinCostAddonPerKg": 0,
+    "unitCostAddon": 0
+   },
+   {
+    "id": "c-blk",
+    "resinCostAddonPerKg": 3500,
+    "unitCostAddon": 0
+   },
+   {
+    "id": "c-wht",
+    "resinCostAddonPerKg": 5000,
+    "unitCostAddon": 0
+   },
+   {
+    "id": "c-ylw",
+    "resinCostAddonPerKg": 6500,
+    "unitCostAddon": 0
+   }
+  ],
+  "textures": [
+   {
+    "id": "t-std",
+    "resinCostAddonPerKg": 0,
+    "unitCostAddon": 0
+   },
+   {
+    "id": "t-matte",
+    "resinCostAddonPerKg": 0,
+    "unitCostAddon": 700
+   },
+   {
+    "id": "t-esd",
+    "resinCostAddonPerKg": 1200,
+    "unitCostAddon": 1500
+   }
+  ],
+  "packagings": [
+   {
+    "id": "p-std",
+    "resinCostAddonPerKg": 0,
+    "unitCostAddon": 0
+   },
+   {
+    "id": "p-vacuum",
+    "resinCostAddonPerKg": 0,
+    "unitCostAddon": 850
+   },
+   {
+    "id": "p-ip68",
+    "resinCostAddonPerKg": 0,
+    "unitCostAddon": 1800
+   }
+  ]
+ }
+}

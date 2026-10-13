@@ -12,10 +12,7 @@ export default async (): Promise<Response> => {
   return Response.json({
     status: 'ok',
     app: 'Savafinlab MTO ERP Simulator',
+    // Chỉ trả cờ có/không — không lộ bất kỳ ký tự, độ dài hay định dạng nào của khóa (T1/AUD-013).
     hasApiKey: Boolean(key),
-    // Safe diagnostics only — never the key itself.
-    keyLen: key.length,
-    keyPrefix: key.slice(0, 4),
-    looksValid: /^AIza[0-9A-Za-z_-]{20,}$/.test(key),
   });
 };

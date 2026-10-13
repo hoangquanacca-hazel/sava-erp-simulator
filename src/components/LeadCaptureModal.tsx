@@ -9,9 +9,7 @@ import {
   CheckCircle,
   ExternalLink,
   Lock,
-  BookOpen,
   ArrowRight,
-  Send,
 } from 'lucide-react';
 import { RegisteredUser, UIMode } from '../types';
 
