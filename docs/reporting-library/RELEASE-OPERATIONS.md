@@ -10,6 +10,8 @@ Baseline thư viện: 71 hồ sơ /125 biến thể, 125 XLSX, 250 CSV mẫu, m�
 
 Sau `npm run build`, chạy `node scripts/verify-reporting-release.mjs`. CI chạy phép kiểm này sau bước Build, bên cạnh toàn bộ regression hiện có. Nó kiểm tra inventory, từng SHA256 trong source và dist, toàn bộ download của 125 biến thể, liên kết tài nguyên, metadata tổng hợp và nút truy cập trong HTML build. Missing files hoặc đổi bytes không được bỏ qua.
 
+Netlify cũng chạy guard ngay trong build command, trước khi publish. Thiếu viewer/XLSX/CSV, mất nút truy cập hoặc sai digest làm build thất bại; deployment đang hoạt động không bị thay thế bởi bản thiếu thư viện. Chỉ thay build command; functions, redirect/API routes và publish directory giữ nguyên.
+
 `.gitattributes` giữ nguyên byte các export SAP thực hành trên Windows/Linux; CSV không bị Git tự đổi line endings. Manifest ở `scripts/reporting-library-release-manifest.json` phải cập nhật có chủ đích sau khi tác giả đã xác minh bộ mẫu mới; không sửa digest chỉ để làm CI xanh. Kiểm tra trường/nguồn/grain và quyền sử dụng trước khi tăng số mẫu.
 
 ## Phạm vi và nguồn riêng tư

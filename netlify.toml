@@ -1,6 +1,6 @@
 # Netlify config for Savafinlab MTO ERP Simulator (Vite SPA + Functions)
 [build]
-  command = "npx vite build"
+  command = "npx vite build && node scripts/verify-reporting-release.mjs"
   publish = "dist"
   functions = "netlify/functions"
 
