@@ -1,0 +1,5 @@
+﻿"Company Code","Customer","Customer Name","Reconciliation Account","Key Date","Not Due Amount","Overdue 1-30","Overdue 31-60","Overdue 61-90","Overdue Over 90","Open Balance","Currency","Special G/L","Payment Terms","Debit Credit Policy","Report Currency","Exchange Rate Type"
+"1000","0000200001","SAVA DEMO customer","0000211000","30.09.2026","500.00","300.00","100.00","100.00","0.00","1000.00","USD","","Z030","Signed credits retained","USD","M"
+"1000","0000200001-MISSING_TEST","SAVA DEMO customer","0000211000","30.09.2026","","300.00","100.00","100.00","0.00","1000.00","USD","","Z030","Signed credits retained","USD","M"
+"1000","0000200001-LOCALE_TEST","SAVA DEMO customer","0000211000","30.09.2026","1.234,50","300.00","100.00","100.00","0.00","1000.00","USD","","Z030","Signed credits retained","USD","M"
+"1000","0000200001","SAVA DEMO customer","0000211000","30.09.2026","500.00","300.00","100.00","100.00","0.00","1000.00","USD","","Z030","Signed credits retained","USD","M"

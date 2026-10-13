@@ -1,0 +1,5 @@
+﻿"Company Code","Calendar Year","Calendar Month","Customer","Account Group","Accounting Clerk","Country Key","Customer Classification","Display Currency","Exchange Rate Type","G/L Account","Reconciliation Account","Region","Special G/L","Days Sales Outstanding","Threshold","Definition Version"
+"1000","2026","09","0000200001","Z001","01","VN","A","USD","M","0000400000","0000211000","SOUTH","","30.0","45.0","Reported KPI; exact native calculation not verified"
+"1000","2026-MISSING_TEST","09","0000200001","Z001","01","VN","A","USD","M","0000400000","0000211000","SOUTH","","","45.0","Reported KPI; exact native calculation not verified"
+"1000","2026-LOCALE_TEST","09","0000200001","Z001","01","VN","A","USD","M","0000400000","0000211000","SOUTH","","1.234,50","45.0","Reported KPI; exact native calculation not verified"
+"1000","2026","09","0000200001","Z001","01","VN","A","USD","M","0000400000","0000211000","SOUTH","","30.0","45.0","Reported KPI; exact native calculation not verified"

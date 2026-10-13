@@ -1,0 +1,5 @@
+﻿"Company Code","Calendar Year","Calendar Month","Sales Organization","Product","Product Group","Sold-to Party","Display Currency","Net Value","Sales Volume","Sales Volume Qty","Cancellations","Profit Margin","Credit Memos","Credit Memos Qty","Credit Memo Profit Margin","Net Sales Volume","Net Profit Margin","Net Sales Cost"
+"1000","2026","09","1000","DEMO-FG-001","CONNECTORS","0000200001","USD","1200.00","1200.00","10.000","0.00","360.00","200.00","2.000","60.00","1000.00","300.00","700.00"
+"1000","2026-MISSING_TEST","09","1000","DEMO-FG-001","CONNECTORS","0000200001","USD","","1200.00","10.000","0.00","360.00","200.00","2.000","60.00","1000.00","300.00","700.00"
+"1000","2026-LOCALE_TEST","09","1000","DEMO-FG-001","CONNECTORS","0000200001","USD","1.234,50","1200.00","10.000","0.00","360.00","200.00","2.000","60.00","1000.00","300.00","700.00"
+"1000","2026","09","1000","DEMO-FG-001","CONNECTORS","0000200001","USD","1200.00","1200.00","10.000","0.00","360.00","200.00","2.000","60.00","1000.00","300.00","700.00"

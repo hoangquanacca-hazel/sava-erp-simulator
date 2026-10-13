@@ -1,0 +1,580 @@
+[
+  {
+    "row": 14,
+    "module": "FI",
+    "tcode_supplied": "S_ALR_87012078",
+    "fiori_app_supplied": "",
+    "title_supplied": "Due Date Analysis for Open Items (AP)",
+    "priority_supplied": "Cao",
+    "review": {
+      "status": "IDENTITY_CONTEXT_CONFIRMED",
+      "identity_or_context_observed": "S_ALR_87012078: Due Date Analysis for Open Items, AP",
+      "related_current_profiles": [
+        "FI06",
+        "FI07"
+      ],
+      "action": "Chưa có mẫu aging AP đúng mã; FI06/FI07 chỉ là dữ liệu chi tiết/số dư liên quan.",
+      "official_sources": [
+        "https://userapps.support.sap.com/sap/support/knowledge/en/1827228"
+      ],
+      "replacement_candidate": null,
+      "source_method": "WEB_INDEXED_EXTRACT_UNLESS_NOTED",
+      "target_release_availability": "NOT_VERIFIED",
+      "full_output_field_catalog": "NOT_VERIFIED"
+    }
+  },
+  {
+    "row": 15,
+    "module": "FI",
+    "tcode_supplied": "",
+    "fiori_app_supplied": "F1872",
+    "title_supplied": "Aging Analysis (AP)",
+    "priority_supplied": "Cao",
+    "review": {
+      "status": "SUPPLIED_IDENTITY_NOT_CONFIRMED",
+      "identity_or_context_observed": "Chưa xác nhận F1872; SAP xác nhận F1733 là Aging Analysis - Payable Amount.",
+      "related_current_profiles": [
+        "FI06",
+        "FI07"
+      ],
+      "action": "Giữ nhu cầu aging AP; xác minh/chỉnh mã trước biên soạn; tránh đếm trùng dòng14.",
+      "official_sources": [
+        "https://userapps.support.sap.com/sap/support/knowledge/en/3118280"
+      ],
+      "replacement_candidate": "F1733 cho aging AP; không khẳng định replacement của F1872",
+      "source_method": "WEB_INDEXED_EXTRACT_UNLESS_NOTED",
+      "target_release_availability": "NOT_VERIFIED",
+      "full_output_field_catalog": "NOT_VERIFIED"
+    }
+  },
+  {
+    "row": 21,
+    "module": "FI",
+    "tcode_supplied": "S_ALR_87012168",
+    "fiori_app_supplied": "",
+    "title_supplied": "Due Date Analysis for Open Items (AR)",
+    "priority_supplied": "Cao",
+    "review": {
+      "status": "IDENTITY_CONTEXT_CONFIRMED",
+      "identity_or_context_observed": "S_ALR_87012168: Due Date Analysis for Open Items, AR",
+      "related_current_profiles": [
+        "FI08",
+        "FI10"
+      ],
+      "action": "FI10 là SAVA derived aging; bổ sung layout classic từ nguồn, không đổi nhãn mẫu derived thành SAP output.",
+      "official_sources": [
+        "https://userapps.support.sap.com/sap/support/knowledge/en/1613759"
+      ],
+      "replacement_candidate": null,
+      "source_method": "WEB_INDEXED_EXTRACT_UNLESS_NOTED",
+      "target_release_availability": "NOT_VERIFIED",
+      "full_output_field_catalog": "NOT_VERIFIED"
+    }
+  },
+  {
+    "row": 22,
+    "module": "FI",
+    "tcode_supplied": "",
+    "fiori_app_supplied": "F1733",
+    "title_supplied": "Aging Analysis (AR)",
+    "priority_supplied": "Cao",
+    "review": {
+      "status": "SUPPLIED_APP_NAME_CONTRADICTED",
+      "identity_or_context_observed": "F1733 là aging AP, bảng ghi AR.",
+      "related_current_profiles": [
+        "FI08",
+        "FI10"
+      ],
+      "action": "Giữ nhu cầu AR, tìm đúng ứng dụng theo release; không dùng F1733 như AR.",
+      "official_sources": [
+        "https://userapps.support.sap.com/sap/support/knowledge/en/3118280"
+      ],
+      "replacement_candidate": null,
+      "source_method": "WEB_INDEXED_EXTRACT_UNLESS_NOTED",
+      "target_release_availability": "NOT_VERIFIED",
+      "full_output_field_catalog": "NOT_VERIFIED"
+    }
+  },
+  {
+    "row": 23,
+    "module": "FI",
+    "tcode_supplied": "",
+    "fiori_app_supplied": "F1748",
+    "title_supplied": "Days Sales Outstanding",
+    "priority_supplied": "Cao",
+    "review": {
+      "status": "SUPPLIED_APP_NAME_CONTRADICTED",
+      "identity_or_context_observed": "F1748: Total Receivables; DSO là F1741.",
+      "related_current_profiles": [
+        "FI08",
+        "FI10"
+      ],
+      "action": "Bổ sung DSO theo đúng định nghĩa/phạm vi và app đã đối chiếu, không lấy raw invoice age thay DSO.",
+      "official_sources": [
+        "https://userapps.support.sap.com/sap/support/knowledge/en/3307590",
+        "https://help.sap.com/docs/SAP_S4HANA_CLOUD/918bca53037f408f91a2295d04ac16bc/a9453358fde89244e10000000a4450e5.html"
+      ],
+      "replacement_candidate": "F1741 cho DSO; target availability chưa xác minh",
+      "source_method": "WEB_INDEXED_EXTRACT_UNLESS_NOTED",
+      "target_release_availability": "NOT_VERIFIED",
+      "full_output_field_catalog": "NOT_VERIFIED"
+    }
+  },
+  {
+    "row": 32,
+    "module": "CO",
+    "tcode_supplied": "",
+    "fiori_app_supplied": "F3328",
+    "title_supplied": "Trial Balance for Cost Centers / Cost Center Plan-Actual",
+    "priority_supplied": "Cao",
+    "review": {
+      "status": "SUPPLIED_APP_NAME_CONTRADICTED",
+      "identity_or_context_observed": "F3328: My Inbox - Approve Timesheets (SAP-authored blog); W0081 được SAP nêu cho Cost Centers - Plan/Actual.",
+      "related_current_profiles": [
+        "CO03"
+      ],
+      "action": "Giữ nhu cầu cost-center plan/actual; sửa mã và thêm biến thể khi có nguồn đúng layout.",
+      "official_sources": [
+        "https://community.sap.com/t5/technology-blog-posts-by-sap/sap-fiori-for-sap-s-4hana-fiori-my-inbox-part-1-activation/ba-p/13326175",
+        "https://userapps.support.sap.com/sap/support/knowledge/en/3597411"
+      ],
+      "replacement_candidate": "W0081 cho Cost Centers - Plan/Actual; không khẳng định successor F3328",
+      "source_method": "WEB_INDEXED_EXTRACT_UNLESS_NOTED",
+      "target_release_availability": "NOT_VERIFIED",
+      "full_output_field_catalog": "NOT_VERIFIED"
+    }
+  },
+  {
+    "row": 34,
+    "module": "CO",
+    "tcode_supplied": "KE5Z",
+    "fiori_app_supplied": "",
+    "title_supplied": "Profit Center Actual line items",
+    "priority_supplied": "Cao",
+    "review": {
+      "status": "IDENTITY_CONTEXT_CONFIRMED",
+      "identity_or_context_observed": "KE5Z: Profit Center line-item context, SAP ERP.",
+      "related_current_profiles": [
+        "CO30",
+        "CO01",
+        "CO04"
+      ],
+      "action": "CO30 là proposed aggregated plan/actual, không phải KE5Z line items; cần nguồn và grain riêng.",
+      "official_sources": [
+        "https://userapps.support.sap.com/sap/support/knowledge/en/1903518"
+      ],
+      "replacement_candidate": null,
+      "source_method": "WEB_INDEXED_EXTRACT_UNLESS_NOTED",
+      "target_release_availability": "NOT_VERIFIED",
+      "full_output_field_catalog": "NOT_VERIFIED"
+    }
+  },
+  {
+    "row": 35,
+    "module": "CO",
+    "tcode_supplied": "S_ALR_87013326",
+    "fiori_app_supplied": "",
+    "title_supplied": "Profit Center: Plan/Actual/Variance",
+    "priority_supplied": "Cao",
+    "review": {
+      "status": "IDENTITY_REPORT_FAMILY_CONTEXT_ONLY",
+      "identity_or_context_observed": "SAP KBA nhắc S_ALR_87013326 trong ngữ cảnh PCA; chưa đủ xác nhận toàn tên/form người dùng cung cấp.",
+      "related_current_profiles": [
+        "CO30"
+      ],
+      "action": "Xác minh form và classic/new PCA trước thêm variant; không nhận tên supplied là đã kiểm chứng.",
+      "official_sources": [
+        "https://userapps.support.sap.com/sap/support/knowledge/en/1903518"
+      ],
+      "replacement_candidate": null,
+      "source_method": "WEB_INDEXED_EXTRACT_UNLESS_NOTED",
+      "target_release_availability": "NOT_VERIFIED",
+      "full_output_field_catalog": "NOT_VERIFIED"
+    }
+  },
+  {
+    "row": 37,
+    "module": "CO",
+    "tcode_supplied": "",
+    "fiori_app_supplied": "F0957",
+    "title_supplied": "Profit Center – Actuals / Market Segment – Actuals",
+    "priority_supplied": "Cao",
+    "review": {
+      "status": "SUPPLIED_IDENTITY_NOT_CONFIRMED",
+      "identity_or_context_observed": "Chưa xác nhận F0957. SAP nêu Profit Center - Actual F0959 cho cấu hình Web Dynpro cụ thể.",
+      "related_current_profiles": [
+        "CO30",
+        "CO15",
+        "CO16"
+      ],
+      "action": "Tách nhu cầu profit center và market segment; xác minh đúng app/view/release.",
+      "official_sources": [
+        "https://userapps.support.sap.com/sap/support/knowledge/en/3597411"
+      ],
+      "replacement_candidate": "F0959 cho một Profit Center - Actual variant; không áp dụng mặc định mọi edition",
+      "source_method": "WEB_INDEXED_EXTRACT_UNLESS_NOTED",
+      "target_release_availability": "NOT_VERIFIED",
+      "full_output_field_catalog": "NOT_VERIFIED"
+    }
+  },
+  {
+    "row": 43,
+    "module": "CO",
+    "tcode_supplied": "",
+    "fiori_app_supplied": "F1780",
+    "title_supplied": "Production Cost Analysis",
+    "priority_supplied": "Cao",
+    "review": {
+      "status": "EXISTING_SOURCE_REFERENCE_SAMPLE",
+      "identity_or_context_observed": "F1780: Production Cost Analysis; đã có CO11-02 và CO11-03 drilldown.",
+      "related_current_profiles": [
+        "CO11"
+      ],
+      "action": "Ưu tiên bổ sung alias/card và hồ sơ nhận diện F1780, kiểm cột bị cắt; không dựng thêm bản trùng rồi tăng số lượng.",
+      "official_sources": [
+        "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/9905622a5c1f49ba84e9076fc83a9c2c/21d0d1f8e18e41ebbc93d2a8a4c51d97.html"
+      ],
+      "replacement_candidate": null,
+      "source_method": "WEB_INDEXED_EXTRACT_UNLESS_NOTED",
+      "target_release_availability": "NOT_VERIFIED",
+      "full_output_field_catalog": "NOT_VERIFIED"
+    }
+  },
+  {
+    "row": 49,
+    "module": "CO",
+    "tcode_supplied": "KE30",
+    "fiori_app_supplied": "",
+    "title_supplied": "Execute Profitability Report",
+    "priority_supplied": "Cao",
+    "review": {
+      "status": "IDENTITY_CONTEXT_CONFIRMED",
+      "identity_or_context_observed": "KE30: profitability report context, KBA public preview.",
+      "related_current_profiles": [
+        "CO15",
+        "CO16"
+      ],
+      "action": "CO16 ghi rõ derived, không KE30. Cần form/report definition/chọn characteristic và value fields riêng; chưa có native KE30 output.",
+      "official_sources": [
+        "https://userapps.support.sap.com/sap/support/knowledge/en/2156399",
+        "https://userapps.support.sap.com/sap/support/knowledge/en/3732516"
+      ],
+      "replacement_candidate": null,
+      "source_method": "WEB_INDEXED_EXTRACT_UNLESS_NOTED",
+      "target_release_availability": "NOT_VERIFIED",
+      "full_output_field_catalog": "NOT_VERIFIED"
+    }
+  },
+  {
+    "row": 50,
+    "module": "CO",
+    "tcode_supplied": "",
+    "fiori_app_supplied": "F2380",
+    "title_supplied": "Product Profitability / Margin Analysis",
+    "priority_supplied": "Cao",
+    "review": {
+      "status": "SUPPLIED_APP_NAME_CONTRADICTED",
+      "identity_or_context_observed": "F2380: Contact Profiles trong SAP S/4HANA Private 2025 FPS01, không xác nhận là product profitability.",
+      "related_current_profiles": [
+        "CO16"
+      ],
+      "action": "Giữ nhu cầu product profitability; tìm đúng analytics/query theo target release, không tái sử dụng sai ID.",
+      "official_sources": [
+        "https://help.sap.com/docs/PRODUCT_ID/f5d3e1005efd4e86acf9a65abf428082/2341dda636e14730a5baf50503f89ab8.html"
+      ],
+      "replacement_candidate": null,
+      "source_method": "WEB_INDEXED_EXTRACT_UNLESS_NOTED",
+      "target_release_availability": "NOT_VERIFIED",
+      "full_output_field_catalog": "NOT_VERIFIED"
+    }
+  },
+  {
+    "row": 51,
+    "module": "CO",
+    "tcode_supplied": "",
+    "fiori_app_supplied": "F2522",
+    "title_supplied": "Customer Profitability / Margin Analysis",
+    "priority_supplied": "Cao",
+    "review": {
+      "status": "SUPPLIED_APP_NAME_CONTRADICTED",
+      "identity_or_context_observed": "F2522: Processing Days of Open Disputes, không customer profitability.",
+      "related_current_profiles": [
+        "CO16"
+      ],
+      "action": "Giữ nhu cầu customer margin và reconciliation; xác minh mã/query riêng.",
+      "official_sources": [
+        "https://help.sap.com/docs/SAP_S4HANA_CLOUD/918bca53037f408f91a2295d04ac16bc/a5d97ceb8db4404eae16dca25c48915a.html?locale=en-US"
+      ],
+      "replacement_candidate": null,
+      "source_method": "WEB_INDEXED_EXTRACT_UNLESS_NOTED",
+      "target_release_availability": "NOT_VERIFIED",
+      "full_output_field_catalog": "NOT_VERIFIED"
+    }
+  },
+  {
+    "row": 59,
+    "module": "MM",
+    "tcode_supplied": "ME2L",
+    "fiori_app_supplied": "",
+    "title_supplied": "Purchasing documents per supplier",
+    "priority_supplied": "Cao",
+    "review": {
+      "status": "IDENTITY_CONTEXT_CONFIRMED",
+      "identity_or_context_observed": "ME2L: Purchasing Documents per Vendor.",
+      "related_current_profiles": [
+        "MM07"
+      ],
+      "action": "Thêm variant theo supplier khi có nguồn, giữ selection/grouping; ME2N không tự chứng minh layout ME2L.",
+      "official_sources": [
+        "https://help.sap.com/docs/PRODUCT_ID/349992fb60854a62a264d716ad5c8f54/a1e5e052427c9d36e10000000a44538d.html"
+      ],
+      "replacement_candidate": null,
+      "source_method": "WEB_INDEXED_EXTRACT_UNLESS_NOTED",
+      "target_release_availability": "NOT_VERIFIED",
+      "full_output_field_catalog": "NOT_VERIFIED"
+    }
+  },
+  {
+    "row": 60,
+    "module": "MM",
+    "tcode_supplied": "ME2M",
+    "fiori_app_supplied": "",
+    "title_supplied": "Purchasing documents per material",
+    "priority_supplied": "Cao",
+    "review": {
+      "status": "IDENTITY_CONTEXT_CONFIRMED",
+      "identity_or_context_observed": "ME2M: Purchasing Documents for Material.",
+      "related_current_profiles": [
+        "MM07"
+      ],
+      "action": "Thêm variant theo material khi có nguồn; không tăng profile chỉ vì thay filter nếu cùng mục đích/grain.",
+      "official_sources": [
+        "https://help.sap.com/docs/PRODUCT_ID/349992fb60854a62a264d716ad5c8f54/a1e5e052427c9d36e10000000a44538d.html"
+      ],
+      "replacement_candidate": null,
+      "source_method": "WEB_INDEXED_EXTRACT_UNLESS_NOTED",
+      "target_release_availability": "NOT_VERIFIED",
+      "full_output_field_catalog": "NOT_VERIFIED"
+    }
+  },
+  {
+    "row": 64,
+    "module": "MM",
+    "tcode_supplied": "",
+    "fiori_app_supplied": "F1661",
+    "title_supplied": "Spend Analysis / Purchasing Spend",
+    "priority_supplied": "Cao",
+    "review": {
+      "status": "SUPPLIED_APP_NAME_CONTRADICTED",
+      "identity_or_context_observed": "F1661: Supplier Evaluation by Quantity; deprecated/removed từ launchpad với S/4HANA2022, successor F1661A.",
+      "related_current_profiles": [
+        "MM07"
+      ],
+      "action": "Nhu cầu Spend Analysis vẫn thiếu; xác minh app đúng. F1661A là quantity evaluation, không giải quyết chi tiêu mua.",
+      "official_sources": [
+        "https://userapps.support.sap.com/sap/support/knowledge/en/3475364",
+        "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/21699bbeaed14f12ae302b38a6a97777.html?version=2022.000"
+      ],
+      "replacement_candidate": null,
+      "source_method": "WEB_INDEXED_EXTRACT_UNLESS_NOTED",
+      "target_release_availability": "NOT_VERIFIED",
+      "full_output_field_catalog": "NOT_VERIFIED"
+    }
+  },
+  {
+    "row": 68,
+    "module": "MM",
+    "tcode_supplied": "",
+    "fiori_app_supplied": "F0859",
+    "title_supplied": "Manage Supplier Invoices",
+    "priority_supplied": "Cao",
+    "review": {
+      "status": "IDENTITY_CONTEXT_CONFIRMED",
+      "identity_or_context_observed": "F0859: Manage Supplier Invoices, ứng dụng giao dịch/detail; list có thể là F1060A tùy release.",
+      "related_current_profiles": [
+        "MM11",
+        "FI06"
+      ],
+      "action": "Chốt cần invoice detail form hay list export; giữ tách transactional app và analytical report.",
+      "official_sources": [
+        "https://help.sap.com/docs/SAP_S4HANA_CLOUD/0e602d466b99490187fcbb30d1dc897c/2bedd663002149e1b8c03b8667845719.html?locale=en-US&workflow-scenario=ws00800251"
+      ],
+      "replacement_candidate": null,
+      "source_method": "WEB_INDEXED_EXTRACT_UNLESS_NOTED",
+      "target_release_availability": "NOT_VERIFIED",
+      "full_output_field_catalog": "NOT_VERIFIED"
+    }
+  },
+  {
+    "row": 85,
+    "module": "SD",
+    "tcode_supplied": "",
+    "fiori_app_supplied": "F2228",
+    "title_supplied": "Sales Volume / Sales Analysis",
+    "priority_supplied": "Cao",
+    "review": {
+      "status": "SUPPLIED_APP_NAME_CONTRADICTED",
+      "identity_or_context_observed": "F2228: Schedule Delivery Creation; Sales Volume - Flexible Analysis là F1250.",
+      "related_current_profiles": [
+        "SD02"
+      ],
+      "action": "Bổ sung analytics sales volume với billings/cancellations/credit memo scope đúng; không đồng nhất billing với IFRS recognition.",
+      "official_sources": [
+        "https://userapps.support.sap.com/sap/support/knowledge/en/3476442",
+        "https://help.sap.com/docs/SAP_S4HANA_CLOUD/a376cd9ea00d476b96f18dea1247e6a5/b1853554e448cb7de10000000a44176d.html?locale=pt-"
+      ],
+      "replacement_candidate": "F1250 cho Sales Volume - Flexible Analysis; không successor F2228",
+      "source_method": "WEB_INDEXED_EXTRACT_UNLESS_NOTED",
+      "target_release_availability": "NOT_VERIFIED",
+      "full_output_field_catalog": "NOT_VERIFIED"
+    }
+  },
+  {
+    "row": 86,
+    "module": "SD",
+    "tcode_supplied": "",
+    "fiori_app_supplied": "F1249",
+    "title_supplied": "Incoming Sales Orders",
+    "priority_supplied": "Cao",
+    "review": {
+      "status": "IDENTITY_CONTEXT_CONFIRMED",
+      "identity_or_context_observed": "F1249: Incoming Sales Orders - Flexible Analysis.",
+      "related_current_profiles": [
+        "SD01"
+      ],
+      "action": "VA05 input liên quan nhưng chưa có F1249 analytical layout; thêm view theo đúng date/measure/currency.",
+      "official_sources": [
+        "https://userapps.support.sap.com/sap/support/knowledge/en/3718355",
+        "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/7b24a64d9d0941bda1afa753263d9e39/131c099e40544afcbc83529aa8913b38.html"
+      ],
+      "replacement_candidate": null,
+      "source_method": "WEB_INDEXED_EXTRACT_UNLESS_NOTED",
+      "target_release_availability": "NOT_VERIFIED",
+      "full_output_field_catalog": "NOT_VERIFIED"
+    }
+  },
+  {
+    "row": 97,
+    "module": "PM",
+    "tcode_supplied": "IW39",
+    "fiori_app_supplied": "",
+    "title_supplied": "Display PM orders (list)",
+    "priority_supplied": "Cao",
+    "review": {
+      "status": "IDENTITY_CONTEXT_CONFIRMED",
+      "identity_or_context_observed": "IW39 có trong PM List Editing được SAP liệt kê; hiện PM01 là IW38.",
+      "related_current_profiles": [
+        "PM01"
+      ],
+      "action": "Cần layout IW39 display riêng hoặc bằng chứng tương đương; không đổi ảnh IW38 thành IW39.",
+      "official_sources": [
+        "https://userapps.support.sap.com/sap/support/knowledge/en/1945736"
+      ],
+      "replacement_candidate": null,
+      "source_method": "WEB_INDEXED_EXTRACT_UNLESS_NOTED",
+      "target_release_availability": "NOT_VERIFIED",
+      "full_output_field_catalog": "NOT_VERIFIED"
+    }
+  },
+  {
+    "row": 99,
+    "module": "PM",
+    "tcode_supplied": "MCI8",
+    "fiori_app_supplied": "",
+    "title_supplied": "Cost analysis (PMIS)",
+    "priority_supplied": "Cao",
+    "review": {
+      "status": "IDENTITY_CONTEXT_CONFIRMED",
+      "identity_or_context_observed": "MCI8: Cost Analysis (PMIS).",
+      "related_current_profiles": [
+        "PM01",
+        "CO04"
+      ],
+      "action": "Thêm PMIS cost analysis, ghi aggregation/currency/statistical update và bridge với order/FI; không coi PM01 thay MCI8.",
+      "official_sources": [
+        "https://userapps.support.sap.com/sap/support/knowledge/en/2983906",
+        "https://userapps.support.sap.com/sap/support/knowledge/en/1945736"
+      ],
+      "replacement_candidate": null,
+      "source_method": "WEB_INDEXED_EXTRACT_UNLESS_NOTED",
+      "target_release_availability": "NOT_VERIFIED",
+      "full_output_field_catalog": "NOT_VERIFIED"
+    }
+  },
+  {
+    "row": 111,
+    "module": "FI-AA",
+    "tcode_supplied": "AFAB",
+    "fiori_app_supplied": "F1297",
+    "title_supplied": "Depreciation run log / Schedule Depreciation Run",
+    "priority_supplied": "Cao",
+    "review": {
+      "status": "TCODE_CONTEXT_CONFIRMED_APP_PAIR_PENDING",
+      "identity_or_context_observed": "AFAB: Post Depreciation. Chưa xác minh F1297 paired title; SAP xác nhận Schedule Asset Accounting Jobs là F1914.",
+      "related_current_profiles": [
+        "AA04"
+      ],
+      "action": "AA04 có giá trị khấu hao, không run log AFAB. Thêm execution log/reconciliation, tách run scheduling khỏi report values.",
+      "official_sources": [
+        "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/67e323b7117e4c91869c258933f47182/f56afb5789641070e10000000a44147b.html",
+        "https://userapps.support.sap.com/sap/support/knowledge/en/3464969"
+      ],
+      "replacement_candidate": null,
+      "source_method": "WEB_INDEXED_EXTRACT_UNLESS_NOTED",
+      "target_release_availability": "NOT_VERIFIED",
+      "full_output_field_catalog": "NOT_VERIFIED"
+    }
+  },
+  {
+    "row": 112,
+    "module": "FI-AA",
+    "tcode_supplied": "",
+    "fiori_app_supplied": "F1615",
+    "title_supplied": "Asset Balances (Fiori)",
+    "priority_supplied": "Cao",
+    "review": {
+      "status": "SUPPLIED_APP_NAME_CONTRADICTED",
+      "identity_or_context_observed": "F1615: Asset History Sheet; Asset Balances là F1617.",
+      "related_current_profiles": [
+        "AA02",
+        "AA03"
+      ],
+      "action": "AA02/AA03 là ECC reconstruction. Giữ nhu cầu balances, thêm variant F1617 khi có nguồn đúng release.",
+      "official_sources": [
+        "https://userapps.support.sap.com/sap/support/knowledge/en/3194844",
+        "https://userapps.support.sap.com/sap/support/knowledge/en/3632034"
+      ],
+      "replacement_candidate": "F1617 cho balances",
+      "source_method": "WEB_INDEXED_EXTRACT_UNLESS_NOTED",
+      "target_release_availability": "NOT_VERIFIED",
+      "full_output_field_catalog": "NOT_VERIFIED"
+    }
+  },
+  {
+    "row": 113,
+    "module": "FI-AA",
+    "tcode_supplied": "",
+    "fiori_app_supplied": "F1614",
+    "title_supplied": "Asset History Sheet (Fiori)",
+    "priority_supplied": "Cao",
+    "review": {
+      "status": "SUPPLIED_APP_NAME_CONTRADICTED",
+      "identity_or_context_observed": "F1614: Asset Transactions; Asset History Sheet là F1615.",
+      "related_current_profiles": [
+        "AA03",
+        "AA05",
+        "AA06",
+        "AA07"
+      ],
+      "action": "Giữ nhu cầu history sheet, thêm variant F1615 khi có nguồn. Không gọi transactions thành history sheet.",
+      "official_sources": [
+        "https://userapps.support.sap.com/sap/support/knowledge/en/3598498",
+        "https://userapps.support.sap.com/sap/support/knowledge/en/3194844"
+      ],
+      "replacement_candidate": "F1615 cho history sheet",
+      "source_method": "WEB_INDEXED_EXTRACT_UNLESS_NOTED",
+      "target_release_availability": "NOT_VERIFIED",
+      "full_output_field_catalog": "NOT_VERIFIED"
+    }
+  }
+]

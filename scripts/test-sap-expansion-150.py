@@ -7,10 +7,10 @@ ROOT=Path(__file__).resolve().parents[1];PUB=ROOT/'public/sap-reporting';DOC=ROO
 read=lambda p:json.loads(p.read_text(encoding='utf-8-sig'))
 model=read(PUB/'expansion-150.json');master=read(PUB/'report-master-dictionary.json');progress=read(PUB/'progress.json');baseline=read(DOC/'baseline.json')
 assert len(model['reports'])==79 and len(model['variants'])==79
-assert len(master['all_reports'])==len({r['id']for r in master['all_reports']})==150
+assert len(master['all_reports'])==len({r['id']for r in master['all_reports']})>=150
 assert master['all_reports'][:71]==baseline['old_reports']
-assert Counter(r['module']for r in master['all_reports'])=={'FI':30,'CO':30,'MM':30,'FI-AA':7,'PP':20,'SD':15,'QM':10,'PM':8}
-assert progress['authored_profiles']==150 and progress['native_exports']==0
+assert Counter(r['module']for r in master['all_reports'][:150])=={'FI':30,'CO':30,'MM':30,'FI-AA':7,'PP':20,'SD':15,'QM':10,'PM':8}
+assert progress['authored_profiles']==len(master['all_reports']) and progress['native_exports']==0
 assert model['synthetic_data']and not model['native_export']
 allowed_changes={'index.html','progress.json','report-master-dictionary.json'}
 preserved=[]
@@ -82,7 +82,7 @@ for r in model['reports']:
 with zipfile.ZipFile(PUB/'expansion-150-downloads/SAVA-79-ADDITIONAL-PROFILES.zip')as z:
  assert z.testzip()is None and len(z.namelist())==239
  for e in json.loads(z.read('manifest.json')):assert hashlib.sha256(z.read(e['file'])).hexdigest()==e['sha256']
-catalog=(PUB/'index.html').read_text(encoding='utf8');ids=re.findall(r'<details[^>]*class="report"[^>]*id="([^"]+)"',catalog);assert len(ids)==len(set(ids))==150 and set(ids)=={r['id']for r in master['all_reports']}
+catalog=(PUB/'index.html').read_text(encoding='utf8');ids=re.findall(r'<details[^>]*class="report"[^>]*id="([^"]+)"',catalog);assert len(ids)==len(set(ids))==len(master['all_reports']) and set(ids)=={r['id']for r in master['all_reports']}
 result={'status':'PASS','profiles':150,'new_profiles':79,'variants':204,'new_fields':fields_total,'new_xlsx':79,'new_csv':158,'prior_files_preserved':len(preserved),'all_saved_cell_checks':results,'original_sap_exports':0,'company_release_sap_sme_acceptance':'NOT_VERIFIED','spreadsheet_desktop_open':'NOT_RUN'}
 def base(id):
  r=next(r for r in model['reports']if r['id']==id);v=next(v for v in model['variants']if v['report_id']==id);return dict(zip(r['columns'],v['detail_rows'][0]))

@@ -1,0 +1,5 @@
+﻿"Company Code","Accounting Clerk","Due Date","Display Currency","Net Due Interval 1","Net Due Interval 2","Net Due Interval 3","Card","Interval","Receivable Amount","Overdue Amount","Future Receivables","Selection Scope"
+"1000","01","15.09.2026","USD","30","60","90","AR Aging Analysis","1-30 days","1000.00","400.00","600.00","SAVA DEMO only"
+"1000","01-MISSING_TEST","15.09.2026","USD","30","60","90","AR Aging Analysis","1-30 days","","400.00","600.00","SAVA DEMO only"
+"1000","01-LOCALE_TEST","15.09.2026","USD","30","60","90","AR Aging Analysis","1-30 days","1.234,50","400.00","600.00","SAVA DEMO only"
+"1000","01","15.09.2026","USD","30","60","90","AR Aging Analysis","1-30 days","1000.00","400.00","600.00","SAVA DEMO only"

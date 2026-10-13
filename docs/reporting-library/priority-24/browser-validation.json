@@ -1,0 +1,275 @@
+{
+  "status": "LOCAL_UI_PASS",
+  "views": [
+    {
+      "columns": 17,
+      "downloads": [
+        "./priority-24-downloads/P24-AP-CLASSIC.xlsx",
+        "./priority-24-downloads/P24-AP-CLASSIC.layout.csv",
+        "./priority-24-downloads/P24-AP-CLASSIC.flat.csv"
+      ],
+      "heading": "S_ALR_87012078 — AP due-date analysis classic",
+      "id": "P24-AP-CLASSIC",
+      "rows": 4
+    },
+    {
+      "columns": 3,
+      "downloads": [
+        "./priority-24-downloads/P24-AP-FIORI.xlsx",
+        "./priority-24-downloads/P24-AP-FIORI.layout.csv",
+        "./priority-24-downloads/P24-AP-FIORI.flat.csv"
+      ],
+      "heading": "F1733 — Aging Analysis - Payable Amount (By Supplier chart data)",
+      "id": "P24-AP-FIORI",
+      "rows": 4
+    },
+    {
+      "columns": 16,
+      "downloads": [
+        "./priority-24-downloads/P24-AR-CLASSIC.xlsx",
+        "./priority-24-downloads/P24-AR-CLASSIC.layout.csv",
+        "./priority-24-downloads/P24-AR-CLASSIC.flat.csv"
+      ],
+      "heading": "S_ALR_87012168 — AR due-date analysis classic",
+      "id": "P24-AR-CLASSIC",
+      "rows": 4
+    },
+    {
+      "columns": 9,
+      "downloads": [
+        "./priority-24-downloads/P24-AR-CARD.xlsx",
+        "./priority-24-downloads/P24-AR-CARD.layout.csv",
+        "./priority-24-downloads/P24-AR-CARD.flat.csv"
+      ],
+      "heading": "F3242 (AR Aging Analysis card) — AR aging card and overview filters",
+      "id": "P24-AR-CARD",
+      "rows": 4
+    },
+    {
+      "columns": 15,
+      "downloads": [
+        "./priority-24-downloads/P24-DSO.xlsx",
+        "./priority-24-downloads/P24-DSO.layout.csv",
+        "./priority-24-downloads/P24-DSO.flat.csv"
+      ],
+      "heading": "F1741 — Days Sales Outstanding",
+      "id": "P24-DSO",
+      "rows": 4
+    },
+    {
+      "columns": 17,
+      "downloads": [
+        "./priority-24-downloads/P24-CC-PLAN.xlsx",
+        "./priority-24-downloads/P24-CC-PLAN.layout.csv",
+        "./priority-24-downloads/P24-CC-PLAN.flat.csv"
+      ],
+      "heading": "W0081 — Cost Centers - Plan/Actual",
+      "id": "P24-CC-PLAN",
+      "rows": 4
+    },
+    {
+      "columns": 21,
+      "downloads": [
+        "./priority-24-downloads/P24-PCA-LINES.xlsx",
+        "./priority-24-downloads/P24-PCA-LINES.layout.csv",
+        "./priority-24-downloads/P24-PCA-LINES.flat.csv"
+      ],
+      "heading": "KE5Z — Profit center actual line items classic",
+      "id": "P24-PCA-LINES",
+      "rows": 4
+    },
+    {
+      "columns": 16,
+      "downloads": [
+        "./priority-24-downloads/P24-PCA-PLAN.xlsx",
+        "./priority-24-downloads/P24-PCA-PLAN.layout.csv",
+        "./priority-24-downloads/P24-PCA-PLAN.flat.csv"
+      ],
+      "heading": "S_ALR_87013326 (form pending) / W0079 — Profit centers plan/actual analytical view",
+      "id": "P24-PCA-PLAN",
+      "rows": 4
+    },
+    {
+      "columns": 14,
+      "downloads": [
+        "./priority-24-downloads/P24-PCA-ACTUAL.xlsx",
+        "./priority-24-downloads/P24-PCA-ACTUAL.layout.csv",
+        "./priority-24-downloads/P24-PCA-ACTUAL.flat.csv"
+      ],
+      "heading": "F0959 — Profit Centers - Actuals",
+      "id": "P24-PCA-ACTUAL",
+      "rows": 4
+    },
+    {
+      "columns": 9,
+      "downloads": [
+        "./source-layout-downloads/CO11-02.xlsx",
+        "./source-layout-downloads/CO11-02.layout.csv",
+        "./source-layout-downloads/CO11-02.flat.csv"
+      ],
+      "heading": "F1780 — SAP Fiori Apps Variance Analysis in Manufacturing (Figure 1)",
+      "id": "CO11-02",
+      "rows": 3
+    },
+    {
+      "columns": 19,
+      "downloads": [
+        "./priority-24-downloads/P24-KE30.xlsx",
+        "./priority-24-downloads/P24-KE30.layout.csv",
+        "./priority-24-downloads/P24-KE30.flat.csv"
+      ],
+      "heading": "KE30 (company form unknown) — Profitability report defined by form",
+      "id": "P24-KE30",
+      "rows": 4
+    },
+    {
+      "columns": 14,
+      "downloads": [
+        "./priority-24-downloads/P24-MARGIN-PRODUCT.xlsx",
+        "./priority-24-downloads/P24-MARGIN-PRODUCT.layout.csv",
+        "./priority-24-downloads/P24-MARGIN-PRODUCT.flat.csv"
+      ],
+      "heading": "F0960 (product drilldown) — Market segment amounts by product and account",
+      "id": "P24-MARGIN-PRODUCT",
+      "rows": 5
+    },
+    {
+      "columns": 16,
+      "downloads": [
+        "./priority-24-downloads/P24-MARGIN-CUSTOMER.xlsx",
+        "./priority-24-downloads/P24-MARGIN-CUSTOMER.layout.csv",
+        "./priority-24-downloads/P24-MARGIN-CUSTOMER.flat.csv"
+      ],
+      "heading": "F0960 (customer drilldown) — Market segment amounts by customer and account",
+      "id": "P24-MARGIN-CUSTOMER",
+      "rows": 5
+    },
+    {
+      "columns": 26,
+      "downloads": [
+        "./priority-24-downloads/P24-ME2L.xlsx",
+        "./priority-24-downloads/P24-ME2L.layout.csv",
+        "./priority-24-downloads/P24-ME2L.flat.csv"
+      ],
+      "heading": "ME2L — Purchasing documents per supplier",
+      "id": "P24-ME2L",
+      "rows": 4
+    },
+    {
+      "columns": 27,
+      "downloads": [
+        "./priority-24-downloads/P24-ME2M.xlsx",
+        "./priority-24-downloads/P24-ME2M.layout.csv",
+        "./priority-24-downloads/P24-ME2M.flat.csv"
+      ],
+      "heading": "ME2M — Purchasing documents per material",
+      "id": "P24-ME2M",
+      "rows": 4
+    },
+    {
+      "columns": 12,
+      "downloads": [
+        "./priority-24-downloads/P24-SPEND.xlsx",
+        "./priority-24-downloads/P24-SPEND.layout.csv",
+        "./priority-24-downloads/P24-SPEND.flat.csv"
+      ],
+      "heading": "F0905 — Purchasing Spend",
+      "id": "P24-SPEND",
+      "rows": 4
+    },
+    {
+      "columns": 25,
+      "downloads": [
+        "./priority-24-downloads/P24-INVOICE.xlsx",
+        "./priority-24-downloads/P24-INVOICE.layout.csv",
+        "./priority-24-downloads/P24-INVOICE.flat.csv"
+      ],
+      "heading": "F0859 (invoice detail) / F1060A (list context) — Supplier invoice header and item detail",
+      "id": "P24-INVOICE",
+      "rows": 4
+    },
+    {
+      "columns": 18,
+      "downloads": [
+        "./priority-24-downloads/P24-SALES-VOLUME.xlsx",
+        "./priority-24-downloads/P24-SALES-VOLUME.layout.csv",
+        "./priority-24-downloads/P24-SALES-VOLUME.flat.csv"
+      ],
+      "heading": "F1250 — Sales Volume - Flexible Analysis",
+      "id": "P24-SALES-VOLUME",
+      "rows": 4
+    },
+    {
+      "columns": 14,
+      "downloads": [
+        "./priority-24-downloads/P24-INCOMING.xlsx",
+        "./priority-24-downloads/P24-INCOMING.layout.csv",
+        "./priority-24-downloads/P24-INCOMING.flat.csv"
+      ],
+      "heading": "F1249 — Incoming Sales Orders - Flexible Analysis",
+      "id": "P24-INCOMING",
+      "rows": 4
+    },
+    {
+      "columns": 24,
+      "downloads": [
+        "./priority-24-downloads/P24-IW39.xlsx",
+        "./priority-24-downloads/P24-IW39.layout.csv",
+        "./priority-24-downloads/P24-IW39.flat.csv"
+      ],
+      "heading": "IW39 — Display maintenance orders list",
+      "id": "P24-IW39",
+      "rows": 4
+    },
+    {
+      "columns": 16,
+      "downloads": [
+        "./priority-24-downloads/P24-MCI8.xlsx",
+        "./priority-24-downloads/P24-MCI8.layout.csv",
+        "./priority-24-downloads/P24-MCI8.flat.csv"
+      ],
+      "heading": "MCI8 — PMIS cost analysis",
+      "id": "P24-MCI8",
+      "rows": 4
+    },
+    {
+      "columns": 22,
+      "downloads": [
+        "./priority-24-downloads/P24-AFAB.xlsx",
+        "./priority-24-downloads/P24-AFAB.layout.csv",
+        "./priority-24-downloads/P24-AFAB.flat.csv"
+      ],
+      "heading": "AFAB (log) / F1914 (scheduling context) — Depreciation posting run log",
+      "id": "P24-AFAB",
+      "rows": 4
+    },
+    {
+      "columns": 16,
+      "downloads": [
+        "./priority-24-downloads/P24-ASSET-BALANCES.xlsx",
+        "./priority-24-downloads/P24-ASSET-BALANCES.layout.csv",
+        "./priority-24-downloads/P24-ASSET-BALANCES.flat.csv"
+      ],
+      "heading": "F1617 — Asset Balances Fiori",
+      "id": "P24-ASSET-BALANCES",
+      "rows": 4
+    },
+    {
+      "columns": 20,
+      "downloads": [
+        "./priority-24-downloads/P24-ASSET-HISTORY.xlsx",
+        "./priority-24-downloads/P24-ASSET-HISTORY.layout.csv",
+        "./priority-24-downloads/P24-ASSET-HISTORY.flat.csv"
+      ],
+      "heading": "F1615 — Asset History Sheet Fiori",
+      "id": "P24-ASSET-HISTORY",
+      "rows": 4
+    }
+  ],
+  "ap_flat8_layout3_filters5": "PASS",
+  "F1780_reuse_9columns": "PASS",
+  "FI_AA_filter_3needs": "PASS",
+  "empty_search": "PASS",
+  "wide_ME2M_27columns": "PASS",
+  "business_acceptance": "NOT_RUN"
+}

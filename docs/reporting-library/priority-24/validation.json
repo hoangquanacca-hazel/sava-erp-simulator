@@ -1,0 +1,199 @@
+{
+  "status": "PASS",
+  "profiles": 160,
+  "variants": 227,
+  "needs": 24,
+  "new_profiles": 10,
+  "new_variants": 23,
+  "new_fields": 413,
+  "new_xlsx": 23,
+  "new_csv": 46,
+  "prior_files_preserved": 651,
+  "old_profile_objects_preserved": 150,
+  "all_saved_cell_checks": [
+    {
+      "id": "P24-AP-CLASSIC",
+      "fields": 18,
+      "all_cells": "PASS",
+      "raw_strings": "PASS",
+      "negative_cases": "PASS"
+    },
+    {
+      "id": "P24-AP-FIORI",
+      "fields": 8,
+      "all_cells": "PASS",
+      "raw_strings": "PASS",
+      "negative_cases": "PASS"
+    },
+    {
+      "id": "P24-AR-CLASSIC",
+      "fields": 17,
+      "all_cells": "PASS",
+      "raw_strings": "PASS",
+      "negative_cases": "PASS"
+    },
+    {
+      "id": "P24-AR-CARD",
+      "fields": 13,
+      "all_cells": "PASS",
+      "raw_strings": "PASS",
+      "negative_cases": "PASS"
+    },
+    {
+      "id": "P24-DSO",
+      "fields": 17,
+      "all_cells": "PASS",
+      "raw_strings": "PASS",
+      "negative_cases": "PASS"
+    },
+    {
+      "id": "P24-CC-PLAN",
+      "fields": 17,
+      "all_cells": "PASS",
+      "raw_strings": "PASS",
+      "negative_cases": "PASS"
+    },
+    {
+      "id": "P24-PCA-LINES",
+      "fields": 21,
+      "all_cells": "PASS",
+      "raw_strings": "PASS",
+      "negative_cases": "PASS"
+    },
+    {
+      "id": "P24-PCA-PLAN",
+      "fields": 16,
+      "all_cells": "PASS",
+      "raw_strings": "PASS",
+      "negative_cases": "PASS"
+    },
+    {
+      "id": "P24-PCA-ACTUAL",
+      "fields": 14,
+      "all_cells": "PASS",
+      "raw_strings": "PASS",
+      "negative_cases": "PASS"
+    },
+    {
+      "id": "P24-KE30",
+      "fields": 19,
+      "all_cells": "PASS",
+      "raw_strings": "PASS",
+      "negative_cases": "PASS"
+    },
+    {
+      "id": "P24-MARGIN-PRODUCT",
+      "fields": 14,
+      "all_cells": "PASS",
+      "raw_strings": "PASS",
+      "negative_cases": "PASS"
+    },
+    {
+      "id": "P24-MARGIN-CUSTOMER",
+      "fields": 16,
+      "all_cells": "PASS",
+      "raw_strings": "PASS",
+      "negative_cases": "PASS"
+    },
+    {
+      "id": "P24-ME2L",
+      "fields": 26,
+      "all_cells": "PASS",
+      "raw_strings": "PASS",
+      "negative_cases": "PASS"
+    },
+    {
+      "id": "P24-ME2M",
+      "fields": 27,
+      "all_cells": "PASS",
+      "raw_strings": "PASS",
+      "negative_cases": "PASS"
+    },
+    {
+      "id": "P24-SPEND",
+      "fields": 13,
+      "all_cells": "PASS",
+      "raw_strings": "PASS",
+      "negative_cases": "PASS"
+    },
+    {
+      "id": "P24-INVOICE",
+      "fields": 25,
+      "all_cells": "PASS",
+      "raw_strings": "PASS",
+      "negative_cases": "PASS"
+    },
+    {
+      "id": "P24-SALES-VOLUME",
+      "fields": 19,
+      "all_cells": "PASS",
+      "raw_strings": "PASS",
+      "negative_cases": "PASS"
+    },
+    {
+      "id": "P24-INCOMING",
+      "fields": 15,
+      "all_cells": "PASS",
+      "raw_strings": "PASS",
+      "negative_cases": "PASS"
+    },
+    {
+      "id": "P24-IW39",
+      "fields": 24,
+      "all_cells": "PASS",
+      "raw_strings": "PASS",
+      "negative_cases": "PASS"
+    },
+    {
+      "id": "P24-MCI8",
+      "fields": 16,
+      "all_cells": "PASS",
+      "raw_strings": "PASS",
+      "negative_cases": "PASS"
+    },
+    {
+      "id": "P24-AFAB",
+      "fields": 22,
+      "all_cells": "PASS",
+      "raw_strings": "PASS",
+      "negative_cases": "PASS"
+    },
+    {
+      "id": "P24-ASSET-BALANCES",
+      "fields": 16,
+      "all_cells": "PASS",
+      "raw_strings": "PASS",
+      "negative_cases": "PASS"
+    },
+    {
+      "id": "P24-ASSET-HISTORY",
+      "fields": 20,
+      "all_cells": "PASS",
+      "raw_strings": "PASS",
+      "negative_cases": "PASS"
+    }
+  ],
+  "independent_arithmetic_fixtures": [
+    "AP-CLASSIC",
+    "AR-CLASSIC",
+    "AP-FIORI",
+    "AR-CARD",
+    "CC-PLAN",
+    "PCA-PLAN",
+    "PCA-ACTUAL",
+    "KE30",
+    "MARGIN-PRODUCT",
+    "MARGIN-CUSTOMER",
+    "ME2L",
+    "ME2M",
+    "SPEND",
+    "INVOICE",
+    "SALES-VOLUME",
+    "MCI8",
+    "AFAB",
+    "ASSET-BALANCES",
+    "ASSET-HISTORY"
+  ],
+  "native_exports": 0,
+  "sap_sme_acceptance": "NOT_RUN"
+}

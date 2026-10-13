@@ -1,9 +1,9 @@
 {
-  "version": 2,
+  "version": 3,
   "baseline_main": "b2c55b3327d4b4faa0731d1bdf5e4ff31c5a5688",
   "native_export": false,
-  "authored_profiles": 150,
-  "variants": 204,
+  "authored_profiles": 160,
+  "variants": 227,
   "files": [
     {
       "path": "co-pa-downloads/CO15-01.flat.csv",
@@ -1622,8 +1622,8 @@
     },
     {
       "path": "index.html",
-      "sha256": "0576b62eae278d69abc266f58e106d7157c68911dd0322c6c1fe6b592abfc647",
-      "bytes": 764068
+      "sha256": "9c0fbeb8b7287383143c87d19d5b2d488da72fbbe8917e98718d077832b2c669",
+      "bytes": 774317
     },
     {
       "path": "native-field-reference.json",
@@ -2096,9 +2096,369 @@
       "bytes": 992655
     },
     {
+      "path": "priority-24-downloads/P24-AFAB.flat.csv",
+      "sha256": "fee0264bdca0e1c42ea44096b6c5bbca49c72ce8a9aea8dd23f2768b36e4e1cf",
+      "bytes": 1239
+    },
+    {
+      "path": "priority-24-downloads/P24-AFAB.layout.csv",
+      "sha256": "184e24331c9c4a494219e2a239426f2cb8df18a504e1bd97437fe24b133f25ee",
+      "bytes": 1794
+    },
+    {
+      "path": "priority-24-downloads/P24-AFAB.xlsx",
+      "sha256": "a077b97fd91ad820246520ba1c7b3a22b4c3ae6e3bbb0d62c90afd0a6258a401",
+      "bytes": 10295
+    },
+    {
+      "path": "priority-24-downloads/P24-AP-CLASSIC.flat.csv",
+      "sha256": "8f8af2be499a3d1eea661209ac3d4f58deb5da53933355cb1d6912322f87188f",
+      "bytes": 1080
+    },
+    {
+      "path": "priority-24-downloads/P24-AP-CLASSIC.layout.csv",
+      "sha256": "cd8b0944395da21c93773e26f287b4bbed1fabf9b1f96ce2f65d725b21159585",
+      "bytes": 1561
+    },
+    {
+      "path": "priority-24-downloads/P24-AP-CLASSIC.xlsx",
+      "sha256": "5304753ab9548a7aae736cd25546fc3900f60cd5a2fd2201d445a3886c606ba2",
+      "bytes": 9927
+    },
+    {
+      "path": "priority-24-downloads/P24-AP-FIORI.flat.csv",
+      "sha256": "07631ddfb3b73e068edc959a3b2840e908a799a0e1a583d79e7e46c47a7efa48",
+      "bytes": 434
+    },
+    {
+      "path": "priority-24-downloads/P24-AP-FIORI.layout.csv",
+      "sha256": "afe490aefe7b3342536e67e020645878e6f6834a69cfbc1dee2e9cb017d6df23",
+      "bytes": 836
+    },
+    {
+      "path": "priority-24-downloads/P24-AP-FIORI.xlsx",
+      "sha256": "3fc7ffc3276ff1aa10368b4d07850a2dba852f35a30786415644d5579efc764f",
+      "bytes": 8625
+    },
+    {
+      "path": "priority-24-downloads/P24-AR-CARD.flat.csv",
+      "sha256": "38dad7aad2d0899a4150c04d216a2bcddfbeca2f5751340df4113690d4a9cccd",
+      "bytes": 740
+    },
+    {
+      "path": "priority-24-downloads/P24-AR-CARD.layout.csv",
+      "sha256": "c369878f46ed13cf52ae461340dda6d80d0e50558dd05d5160abe530fd8e7295",
+      "bytes": 1264
+    },
+    {
+      "path": "priority-24-downloads/P24-AR-CARD.xlsx",
+      "sha256": "a2a2cdb9854c022bf36f13985a095ddf2eda32b9afa0e20682b3c55ca58d3d7c",
+      "bytes": 9302
+    },
+    {
+      "path": "priority-24-downloads/P24-AR-CLASSIC.flat.csv",
+      "sha256": "2dadea06b6ecef5ff2b73a6d5b7c278c8622107ff9fd07a4b14550b364192144",
+      "bytes": 994
+    },
+    {
+      "path": "priority-24-downloads/P24-AR-CLASSIC.layout.csv",
+      "sha256": "58f62a169ad9728590ace1e89b3ec6864b1444cef8fc152fcc1ffcc0250f57b8",
+      "bytes": 1460
+    },
+    {
+      "path": "priority-24-downloads/P24-AR-CLASSIC.xlsx",
+      "sha256": "ad0ea8481a60167fb5460e0569e39a64f183513cc16440cd44347b538380c147",
+      "bytes": 9719
+    },
+    {
+      "path": "priority-24-downloads/P24-ASSET-BALANCES.flat.csv",
+      "sha256": "1ffa71acec7f899efdb46fa5d9071c78ff1a4bb4b1660825d79a24fc034aa494",
+      "bytes": 913
+    },
+    {
+      "path": "priority-24-downloads/P24-ASSET-BALANCES.layout.csv",
+      "sha256": "aef440bb96f3d4ecdb882e4da86815d9a0ca0813ba6bc1052ebdf4a91ae4e6c3",
+      "bytes": 1301
+    },
+    {
+      "path": "priority-24-downloads/P24-ASSET-BALANCES.xlsx",
+      "sha256": "50f132cb41af92ca6e6df3ceabe0a31c1b43575a150fbaea4e7b9a66cd959cf0",
+      "bytes": 9444
+    },
+    {
+      "path": "priority-24-downloads/P24-ASSET-HISTORY.flat.csv",
+      "sha256": "a427a5d8eadca86ba6675f60142deec36ba69c4d4b04017e41d2e7d8f60ec4e8",
+      "bytes": 1142
+    },
+    {
+      "path": "priority-24-downloads/P24-ASSET-HISTORY.layout.csv",
+      "sha256": "0c900876dbefae3301b66d7c798520bbbfdfe6ff810f17ceb22d532d4c617551",
+      "bytes": 1583
+    },
+    {
+      "path": "priority-24-downloads/P24-ASSET-HISTORY.xlsx",
+      "sha256": "ddff124b1d9be9e98ee3aeeaf1e69c11977130a53306ab816608888a5fe6976c",
+      "bytes": 9907
+    },
+    {
+      "path": "priority-24-downloads/P24-CC-PLAN.flat.csv",
+      "sha256": "29517a027a675b437210c3ca69ee8e5c781734b5b76070ef7d856a11ebe68d21",
+      "bytes": 920
+    },
+    {
+      "path": "priority-24-downloads/P24-CC-PLAN.layout.csv",
+      "sha256": "3423130cdd86ef1568ee12df0c63a3da85099fe846457c6cddc7c9cd55323a4e",
+      "bytes": 1326
+    },
+    {
+      "path": "priority-24-downloads/P24-CC-PLAN.xlsx",
+      "sha256": "6faac4ea02e381830fda62803ae97f24c223f58380e427eaf53998343a99d2b7",
+      "bytes": 9723
+    },
+    {
+      "path": "priority-24-downloads/P24-DSO.flat.csv",
+      "sha256": "df182ce5a25f61549ab728f59c7b59dfce09a3d4ceec0b49633582ae050a8e13",
+      "bytes": 999
+    },
+    {
+      "path": "priority-24-downloads/P24-DSO.layout.csv",
+      "sha256": "77e7e6601caae149a6a1e430e5a265584eccaaf56423746e30aa3ed166f82e05",
+      "bytes": 1541
+    },
+    {
+      "path": "priority-24-downloads/P24-DSO.xlsx",
+      "sha256": "35a8cecfcbdbdaa7337cb070f204fa120af7fa34b2c9cd7987a9b922869c594e",
+      "bytes": 9840
+    },
+    {
+      "path": "priority-24-downloads/P24-INCOMING.flat.csv",
+      "sha256": "a718d452d5431bfff020f66f300904595e3466a4bac12668000e1373036a6054",
+      "bytes": 872
+    },
+    {
+      "path": "priority-24-downloads/P24-INCOMING.layout.csv",
+      "sha256": "a717965a0a428583e45707dca73ce61ef65e52684c707d87383a99e8e92384b9",
+      "bytes": 1367
+    },
+    {
+      "path": "priority-24-downloads/P24-INCOMING.xlsx",
+      "sha256": "866ecc38d8b63a2a3a6885d0bdf4e3f1f9fc6e16e43daf346acacf1e883b9da2",
+      "bytes": 9509
+    },
+    {
+      "path": "priority-24-downloads/P24-INVOICE.flat.csv",
+      "sha256": "dcaaf571b9c909aeb3d2d64567a6d95099f9e948de8aa744207fc653c2aa4549",
+      "bytes": 1465
+    },
+    {
+      "path": "priority-24-downloads/P24-INVOICE.layout.csv",
+      "sha256": "94b1e2543fc9b8e87c34f7e72707c5983baa34606086524f978750f51a4d20cc",
+      "bytes": 2069
+    },
+    {
+      "path": "priority-24-downloads/P24-INVOICE.xlsx",
+      "sha256": "97cc4a7c1adf9c59a4bce3e2c0097a349a2bdffcae8663a18328145d8e5bad79",
+      "bytes": 10573
+    },
+    {
+      "path": "priority-24-downloads/P24-IW39.flat.csv",
+      "sha256": "bbb5071dd9ac30a5f029066bbd10e826ff541abe2782c6e01e55041e05384c6d",
+      "bytes": 1412
+    },
+    {
+      "path": "priority-24-downloads/P24-IW39.layout.csv",
+      "sha256": "c688a9d83b1116bb4e59f5fadce556d2c4eb7faa600bb6337c5453a8ecedf001",
+      "bytes": 1906
+    },
+    {
+      "path": "priority-24-downloads/P24-IW39.xlsx",
+      "sha256": "09c5c59e90caa78162709bbaf66af1323f7e38291020caf602a44426d7da4053",
+      "bytes": 10201
+    },
+    {
+      "path": "priority-24-downloads/P24-KE30.flat.csv",
+      "sha256": "338d0edee0df425f42a6bc5e9261e399e08314da0e5f5e14dd18cb2d72ffff91",
+      "bytes": 1023
+    },
+    {
+      "path": "priority-24-downloads/P24-KE30.layout.csv",
+      "sha256": "1532ee209d38e7f20011835192f3ecded3f6459ec440aff2c309eb28b9a06ce1",
+      "bytes": 1485
+    },
+    {
+      "path": "priority-24-downloads/P24-KE30.xlsx",
+      "sha256": "d5d37ca720a4bf4be9e648fc713ac07805aed03194964c5c4c6094e3a0b11061",
+      "bytes": 9663
+    },
+    {
+      "path": "priority-24-downloads/P24-MARGIN-CUSTOMER.flat.csv",
+      "sha256": "6b1266cb71c2e06219f47050eb3d117d45936df51bf0722b70df5b55bcdf5690",
+      "bytes": 945
+    },
+    {
+      "path": "priority-24-downloads/P24-MARGIN-CUSTOMER.layout.csv",
+      "sha256": "560fb20b99398bf6bef78dd57975ae5fa7fc7526b81195cab49632ab1e6df075",
+      "bytes": 1380
+    },
+    {
+      "path": "priority-24-downloads/P24-MARGIN-CUSTOMER.xlsx",
+      "sha256": "3772ee0ac2092a7d2f5d652ad9931ad93a11b9f398e2a216fe829f9d108da861",
+      "bytes": 9785
+    },
+    {
+      "path": "priority-24-downloads/P24-MARGIN-PRODUCT.flat.csv",
+      "sha256": "8b366833139b1b4ba34c3b5a1502861e155f51a156c1b0dce4c820a2c915872a",
+      "bytes": 879
+    },
+    {
+      "path": "priority-24-downloads/P24-MARGIN-PRODUCT.layout.csv",
+      "sha256": "9cf33b2d0e06f3657cdd369abadfc7dfcc9c76d8b7da1d465daf8fa8dda332d1",
+      "bytes": 1288
+    },
+    {
+      "path": "priority-24-downloads/P24-MARGIN-PRODUCT.xlsx",
+      "sha256": "a1f87f5db059153330edcb105a4f3a46f834cfe249c1c95f9d57741b764c9f5b",
+      "bytes": 9506
+    },
+    {
+      "path": "priority-24-downloads/P24-MCI8.flat.csv",
+      "sha256": "cbba3971646e4fef1c73e58e6cac2585f28bcb387c84ce82b7dc5c7e140ed8d6",
+      "bytes": 897
+    },
+    {
+      "path": "priority-24-downloads/P24-MCI8.layout.csv",
+      "sha256": "4f29dc86c3df2a309a5a4dacf9a4b81a42b8bbce498e4d15e796e37fbf299e8e",
+      "bytes": 1282
+    },
+    {
+      "path": "priority-24-downloads/P24-MCI8.xlsx",
+      "sha256": "1d3ee1d412f573970a5e1f7e40387d1f61135bcc66f87d2755af616609df0a78",
+      "bytes": 9337
+    },
+    {
+      "path": "priority-24-downloads/P24-ME2L.flat.csv",
+      "sha256": "fc8eea7b1611f06a13589f7f99921dd9ccaf7863fd7eb2e95085f50329d201e9",
+      "bytes": 1405
+    },
+    {
+      "path": "priority-24-downloads/P24-ME2L.layout.csv",
+      "sha256": "471f1ca378626a21101f08746204e7ff43347c4ea4fee34edea034df27d88932",
+      "bytes": 1967
+    },
+    {
+      "path": "priority-24-downloads/P24-ME2L.xlsx",
+      "sha256": "1526d4fa0df9fbfcd805b2f8bd577b3850cb427827fd4ab656b3e8cf07a4fd9a",
+      "bytes": 10542
+    },
+    {
+      "path": "priority-24-downloads/P24-ME2M.flat.csv",
+      "sha256": "051a6665e0f6ce0a4178fd7b2fd1f48da178d244245dfe3362e8457c350e72a1",
+      "bytes": 1490
+    },
+    {
+      "path": "priority-24-downloads/P24-ME2M.layout.csv",
+      "sha256": "3e2abf36a2d78784043e872da6e5cfe2b6f2d3857e115ed268030f6f73985a4e",
+      "bytes": 2064
+    },
+    {
+      "path": "priority-24-downloads/P24-ME2M.xlsx",
+      "sha256": "4189c5080294a49f877dec33ebb04df978067dc2718e8e41431634ff2bed50ae",
+      "bytes": 10715
+    },
+    {
+      "path": "priority-24-downloads/P24-PCA-ACTUAL.flat.csv",
+      "sha256": "27e335269db8de91bde800d17af30576f3725e7f3220ede6ebfeadcf64268a10",
+      "bytes": 674
+    },
+    {
+      "path": "priority-24-downloads/P24-PCA-ACTUAL.layout.csv",
+      "sha256": "928b18bfc1590ebce0206841ed9b6e1201bcd3b7b12ccab7a5737024810d5c44",
+      "bytes": 1042
+    },
+    {
+      "path": "priority-24-downloads/P24-PCA-ACTUAL.xlsx",
+      "sha256": "b195d0ec40e70a0b26324de88ecde9e476b4eb648bb96efc956d42f2df8d180e",
+      "bytes": 9260
+    },
+    {
+      "path": "priority-24-downloads/P24-PCA-LINES.flat.csv",
+      "sha256": "a58415fbab5e8248d5dd117cc3a395677ee07a414efd373e21c693854dd731d0",
+      "bytes": 1145
+    },
+    {
+      "path": "priority-24-downloads/P24-PCA-LINES.layout.csv",
+      "sha256": "767b54a8ecdc6827f5a9b7a9aeff8156a5d5aab5d446c03007c5a6cad07a41e2",
+      "bytes": 1611
+    },
+    {
+      "path": "priority-24-downloads/P24-PCA-LINES.xlsx",
+      "sha256": "a3467d3984115f975fe1035230e4494aa5c2720019f74612e6a197382dca6ef4",
+      "bytes": 9812
+    },
+    {
+      "path": "priority-24-downloads/P24-PCA-PLAN.flat.csv",
+      "sha256": "a9c61a2b7555430bc6fac545ed5081602c1d17c45dc342baadf80bf6a5b3f37e",
+      "bytes": 768
+    },
+    {
+      "path": "priority-24-downloads/P24-PCA-PLAN.layout.csv",
+      "sha256": "74540cf7247f03e2efb37b241191c645ee5f85d898b463f163bd01d076a1820c",
+      "bytes": 1210
+    },
+    {
+      "path": "priority-24-downloads/P24-PCA-PLAN.xlsx",
+      "sha256": "03b69432200eecf9512e46d496396f17d309f98815a664496a5d164ae38bdf61",
+      "bytes": 9671
+    },
+    {
+      "path": "priority-24-downloads/P24-SALES-VOLUME.flat.csv",
+      "sha256": "e2d12ba9efff6ff391884db63835b3dbebb6ad5e76603fd951df3eb0a8dba1a9",
+      "bytes": 1033
+    },
+    {
+      "path": "priority-24-downloads/P24-SALES-VOLUME.layout.csv",
+      "sha256": "b691f912b32b8357bd45eaaf6f179d3d13f4fd427b1f4a09e1ac520e9ef4f59d",
+      "bytes": 1579
+    },
+    {
+      "path": "priority-24-downloads/P24-SALES-VOLUME.xlsx",
+      "sha256": "c9f7b63f83e36c90382c26d3066faaa08d08274a032d5913604d0e55ee808883",
+      "bytes": 9815
+    },
+    {
+      "path": "priority-24-downloads/P24-SPEND.flat.csv",
+      "sha256": "84c3a9f9536647aec82d8355a99b9c3ee1b4737140d539c43e464c3966a75ef0",
+      "bytes": 773
+    },
+    {
+      "path": "priority-24-downloads/P24-SPEND.layout.csv",
+      "sha256": "7f5e50e0756760b4e251c460d84db4d014ea5a143637d9654c59b8787b39cc0f",
+      "bytes": 1213
+    },
+    {
+      "path": "priority-24-downloads/P24-SPEND.xlsx",
+      "sha256": "a06f9358c079d52d49ed90d53aad3e6607b2e0c876ab1c53337f065ba426f00a",
+      "bytes": 9202
+    },
+    {
+      "path": "priority-24-downloads/SAVA-24-PRIORITY-NEEDS.zip",
+      "sha256": "5bf688febdfdff7fd9deaf4399fe05358d6e4926c0cc7e82f810e1496cacc183",
+      "bytes": 235708
+    },
+    {
+      "path": "priority-24.html",
+      "sha256": "1fe43e0fdb342c282e7936ec4b278206f2f924dcd3cd0e14b97229fc19ff6800",
+      "bytes": 869092
+    },
+    {
+      "path": "priority-24.json",
+      "sha256": "c7ef5fab0d25fa8983314e37100710abcce5914097cd46d49db528a674b4e5bf",
+      "bytes": 1102000
+    },
+    {
       "path": "progress.json",
-      "sha256": "23da1d719ba2e7e249f0f79852a94e5f578294257cda99ebd918c613515646f0",
-      "bytes": 2898
+      "sha256": "498d6de81099fd0849f85bb1583fc86da5f2732011cf7a97c379a50f80927a65",
+      "bytes": 3927
     },
     {
       "path": "public-layout-reference-register.json",
@@ -2112,8 +2472,8 @@
     },
     {
       "path": "report-master-dictionary.json",
-      "sha256": "da9d56b38e474ca986ef6b8a1083e5df1b95d1d79a3a8efaed5e3a26cb2d8f03",
-      "bytes": 3377147
+      "sha256": "2ebe1a9a2b5313cf7e5f491bf0ea9f7ffdd76325a1dd7d98bed3d5175c963d22",
+      "bytes": 3739296
     },
     {
       "path": "sap-export-format-profiles.json",
@@ -3276,5 +3636,5 @@
       "bytes": 616
     }
   ],
-  "previous_main": "43e4fb6a09e9c89e287905381f137f85d07e4a6b"
+  "previous_main": "ebde51a3926a1aeb649ed6d80bfcf7bb6e32b068"
 }

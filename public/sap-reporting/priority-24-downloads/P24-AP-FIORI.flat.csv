@@ -1,0 +1,5 @@
+﻿"Open on Key Date","Width of Aging Grid","Number of Aging Grid","Display Currency","Exchange Rate Type","Supplier","Not Overdue Amount","Overdue Amount"
+"30.09.2026","30","4","USD","M","0000100001","600.00","400.00"
+"30.09.2026","30","4","USD","M","0000100001-MISSING_TEST","","400.00"
+"30.09.2026","30","4","USD","M","0000100001-LOCALE_TEST","1.234,50","400.00"
+"30.09.2026","30","4","USD","M","0000100001","600.00","400.00"

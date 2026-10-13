@@ -1,0 +1,5 @@
+﻿"Calendar Year","Calendar Month","Sales Organization","Product","Product Group","Sold-to Party","Sales Document Type","Display Currency","Net Value","Incoming Orders","Incoming Orders Quantity","Incoming Items","Cumulative Confirmed Quantity","Order Income Date","Selection Scope"
+"2026","09","1000","DEMO-FG-001","CONNECTORS","0000200001","OR","USD","1200.00","1200.00","10.000","1","8.000","15.09.2026","SAVA DEMO only"
+"2026-MISSING_TEST","09","1000","DEMO-FG-001","CONNECTORS","0000200001","OR","USD","","1200.00","10.000","1","8.000","15.09.2026","SAVA DEMO only"
+"2026-LOCALE_TEST","09","1000","DEMO-FG-001","CONNECTORS","0000200001","OR","USD","1.234,50","1200.00","10.000","1","8.000","15.09.2026","SAVA DEMO only"
+"2026","09","1000","DEMO-FG-001","CONNECTORS","0000200001","OR","USD","1200.00","1200.00","10.000","1","8.000","15.09.2026","SAVA DEMO only"

@@ -1,0 +1,5 @@
+﻿"Supplier","Supplier Country","Purchasing Organization","Purchasing Group","Material Group","Service Performer","Purchasing Category","Document","Evaluation Period in Days","Display Currency","Comparison Net Amount","Net Amount","Purchasing Spend Ratio"
+"0000100001","VN","1000","P01","COMPONENTS","0000100001","COMPONENTS","1900000001","365","USD","2500.00","10000.00","25.0"
+"0000100001-MISSING_TEST","VN","1000","P01","COMPONENTS","0000100001","COMPONENTS","1900000001","365","USD","","10000.00","25.0"
+"0000100001-LOCALE_TEST","VN","1000","P01","COMPONENTS","0000100001","COMPONENTS","1900000001","365","USD","1.234,50","10000.00","25.0"
+"0000100001","VN","1000","P01","COMPONENTS","0000100001","COMPONENTS","1900000001","365","USD","2500.00","10000.00","25.0"
