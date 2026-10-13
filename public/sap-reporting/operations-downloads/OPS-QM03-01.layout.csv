@@ -1,0 +1,5 @@
+﻿"QA32 — Inspection lots / ESL SMS — SAVA DEMO","","","","","","","","","","","",""
+"SOURCE_SCREEN_FRAGMENT_RECONSTRUCTION_SYNTHETIC_DATA · Chỉ phần nguồn đã đọc, không full catalog","","","","","","","","","","","",""
+"Monit...","A","Inspection Lot","Material","Batch","Plant","Lot Qty","BUn","LT...","ST...","Start date","End Date","System Status"
+"DEMO_RED","","040000000001","FG-CONN-01","000001","1000","1,000.000","PC","","0","12.10.2026","13.10.2026","REL CALC SPRQ"
+"DEMO_RED","","040000000002","FG-CONN-01","000001","2000","500.000","PC","","0","12.10.2026","13.10.2026","REL CALC SPRQ"

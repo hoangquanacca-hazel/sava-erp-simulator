@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@source not "../public/sap-reporting";
+@source not "../docs/reporting-library";
 
 /* Savafinlab brand v2: Inter cho giao diện, JetBrains Mono cho số liệu/mã */
 @theme {

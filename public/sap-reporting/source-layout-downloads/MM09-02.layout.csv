@@ -1,0 +1,6 @@
+﻿"ME5A (List Display of Purchase Requisitions — ALV mặc định) — SAVA DEMO (mẫu dựng lại)","","","","","","","","","","","","","","","","","","","","","","",""
+"Purchase Requisition","","DEMO","","","","","","","","","","","","","","","","","","","","",""
+"Item","S","D","I","A","Material","Short Text","Quantity","Un","C","Deliv. Date","Matl Group","Plant","SLoc","PGr","Requisnr.","TrackingNo","Vendor","Fixed vend","SPlt","POrg","Agmt.","Item","Info reco…"
+"00010","","","","K","DEMO-MAT-001","Sản xuất DEMO","20,00","PC","DEMO","28.09.2026","DEMO","1000","0001","DEMO","DEMO","DEMO","0000990001","DEMO","DEMO","DEMO","DEMO","00010",""
+"00020","","","","K","DEMO-MAT-002","Điều chỉnh, DEMO","10,00","PC","DEMO","29.09.2026","DEMO","1000","0002","DEMO","DEMO","DEMO","0000990001","DEMO","DEMO","DEMO","DEMO","00010",""
+"00030","","","","K","DEMO-MAT-003","Giá trị 0 DEMO","0,00","PC","DEMO","","DEMO","1000","0003","DEMO","DEMO","DEMO","0000990001","DEMO","DEMO","DEMO","DEMO","00010",""

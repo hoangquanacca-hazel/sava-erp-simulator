@@ -1,0 +1,6 @@
+﻿"[bộ lọc] Costing run","[bộ lọc] Period","[bộ lọc] Application","Flow step","Authorizn","Locked","Parameters","Execute","Log","Mat Stat","Successful","Errors","Still open","Act Stat","Successful","Errors","Still open"
+"DEMO","09","DEMO","Selection","✓","","✓","✓","✓","✓","20,00","0,00","0,00","✓","5,00","0,00","0,00"
+"DEMO","09","DEMO","Preparation","✓","","✓","✓","✓","✓","20,00","0,00","0,00","✓","5,00","0,00","0,00"
+"DEMO","09","DEMO","Settlement","✓","","✓","✓","✓","✓","20,00","1,00","0,00","✓","5,00","1,00","0,00"
+"DEMO","09","DEMO","Post Closing","✓","","✓","✓","✓","✓","20,00","0,00","0,00","✓","5,00","0,00","0,00"
+"DEMO","09","DEMO","Mark Prices","✓","","✓","✓","✓","✓","20,00","0,00","0,00","✓","5,00","0,00","0,00"

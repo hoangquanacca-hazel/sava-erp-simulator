@@ -1,0 +1,4 @@
+﻿"Inv. Doc. No.","Year","T","Doc. Date","Posting Date","User name","Transaction Code","Entered on","Entered at","T","Reference","CoCd","Invoicing Pty","Crcy","Exchange rate","Gross inv. amnt","Unplanned del."
+"005100000001","2026","DEMO_RE","11.10.2026","12.10.2026","DEMO_USER","MIRO","12.10.2026","10:15:00","DEMO_RD","DEMO-INV-01","1000","0000100001","USD","1.00000","1,100.00","0.00"
+"005100000001","2025","DEMO_RE","31.12.2025","31.12.2025","DEMO_USER","MIRO","01.01.2026","09:00:00","DEMO_RD","DEMO-INV-02","1000","0000100001","EUR","1.08000","120.00","0.00"
+"005100000002","2026","DEMO_RE","12.10.2026","12.10.2026","DEMO_USER","MIR7","12.10.2026","11:00:00","DEMO_STATUS_UNVERIFIED","DEMO-INV-03","1000","0000100001","USD","1.00000","200.00","0.00"

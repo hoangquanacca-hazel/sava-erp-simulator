@@ -1,0 +1,4 @@
+﻿"[nhóm] Material","[nhóm] Plant","[bộ lọc] Costs Based On (1 Costing Lot Size)","CC...","Name of Cost Comp.","Overall","Fixed","Variable","Crcy"
+"DEMO-MAT-001","1000","1 Costing Lot Size (chế độ hiển thị)","","Raw Material","300,00","0,00","300,00","EUR"
+"DEMO-MAT-001","1000","1 Costing Lot Size (chế độ hiển thị)","","Machine","500,00","500,00","0,00","EUR"
+"DEMO-MAT-001","1000","1 Costing Lot Size (chế độ hiển thị)","","Overhead","200,00","200,00","0,00","EUR"

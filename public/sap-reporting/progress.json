@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-12",
+  "counting_rule": "Unique authored profile IDs, not variants or technical extracts; sample coverage includes proxy/proposed/derived and is not native acceptance",
+  "target_profiles": 150,
+  "authored_profiles": 71,
+  "percent_quantity": 47.3,
+  "remaining_budget": 79,
+  "profiles_with_dedicated_csv_xlsx_samples": 71,
+  "profiles_without_dedicated_samples": [],
+  "variant_count_including_technical_extracts": 125,
+  "xlsx": 125,
+  "csv": 250,
+  "by_module": {
+    "FI": 17,
+    "CO": 16,
+    "MM": 17,
+    "FI-AA": 7,
+    "PP": 5,
+    "SD": 3,
+    "QM": 3,
+    "PM": 3
+  },
+  "packages": [
+    {
+      "name": "source-layouts",
+      "profiles": 38,
+      "variants": 63,
+      "xlsx": 63,
+      "csv": 126
+    },
+    {
+      "name": "fi-aa",
+      "profiles": 7,
+      "variants": 8,
+      "xlsx": 8,
+      "csv": 16
+    },
+    {
+      "name": "co-pa",
+      "profiles": 2,
+      "variants": 4,
+      "xlsx": 4,
+      "csv": 8
+    },
+    {
+      "name": "supplemental",
+      "profiles": 6,
+      "variants": 10,
+      "xlsx": 10,
+      "csv": 20
+    },
+    {
+      "name": "operations",
+      "profiles": 15,
+      "variants": 29,
+      "xlsx": 29,
+      "csv": 58
+    },
+    {
+      "name": "finance-gaps",
+      "profiles": 8,
+      "variants": 11,
+      "xlsx": 11,
+      "csv": 22
+    }
+  ],
+  "native_exports": 0,
+  "target_release": "UNKNOWN",
+  "full_company_catalog_verified": false,
+  "sap_sme_acceptance": "NOT_RUN",
+  "public_deployment": "AUTHORIZED_RELEASE_2026-10-13",
+  "sample_coverage_quality_limits": {
+    "FI07": "Legacy supplier GUI/Fiori images read; F0701A successor output layout not verified",
+    "FI09": "Legacy customer GUI/Fiori images read; F0703A successor output layout not verified",
+    "CO05": "Family proxy only from KOB1 actual; direct KOBP/KOBPN plan output not read",
+    "FI10": "SAVA derived schema; not verified SAP output layout",
+    "FI11": "SAVA illustrative ECL; rates not approved, individual assessment incomplete",
+    "PP03": "CS12 screenshot partial; component qty/full occurrence key not visible",
+    "PP04": "Routing screenshot read; no target technical fields or validity/group ID",
+    "PP05": "CO03 forms reconstructed; conversion to flat is SAVA, native export not verified"
+  },
+  "public_library_url": "https://simulator.savafinlab.com.vn/sap-reporting/",
+  "release_version": "2026-10-13-phase1-through-pp-master"
+}

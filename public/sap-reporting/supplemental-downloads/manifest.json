@@ -1,0 +1,156 @@
+{
+  "date": "2026-10-12",
+  "classification": "RECONSTRUCTED_SYNTHETIC_NOT_SAP_EXPORT",
+  "files": [
+    {
+      "name": "SUP-CO13-01.flat.csv",
+      "sha256": "55eb1f0b07a6d8f6da665d949bb61c7973034bce804f595e120b71ba6c7ffa72",
+      "bytes": 415
+    },
+    {
+      "name": "SUP-CO13-01.layout.csv",
+      "sha256": "6b4c4eab2b981f4c8b288acd34b4af45408319ee6ca5b1bdb9ffae405ea22ece",
+      "bytes": 633
+    },
+    {
+      "name": "SUP-CO13-01.xlsx",
+      "sha256": "879eb535be8a35fc5822a16e231157bc443b88e4c21118236ae7c14aee2cb230",
+      "bytes": 7482
+    },
+    {
+      "name": "SUP-CO15-01.flat.csv",
+      "sha256": "48d4dfc54a6fa35d212201377fdb6f0ed0989b21994e9b8f9639dce63a205b5f",
+      "bytes": 1225
+    },
+    {
+      "name": "SUP-CO15-01.layout.csv",
+      "sha256": "7729ae098d01ecadbbe2ae93612dc47c7fb9b3233ada4b05b4fa2201a4db3079",
+      "bytes": 1714
+    },
+    {
+      "name": "SUP-CO15-01.xlsx",
+      "sha256": "f5ee63d4ee9933842b02564256d5d4f88a75b689e0c548a9b553316b725bd223",
+      "bytes": 9413
+    },
+    {
+      "name": "SUP-CO15-02.flat.csv",
+      "sha256": "9ec51d7cab6c325d6f0fe6b94cd96f794388504de0ae6b286b1b49bb982e909a",
+      "bytes": 1139
+    },
+    {
+      "name": "SUP-CO15-02.layout.csv",
+      "sha256": "0cae69272e4a61204f3cd79b20aa4eeaba8503a3e814a117c0d9f9f72419635d",
+      "bytes": 874
+    },
+    {
+      "name": "SUP-CO15-02.xlsx",
+      "sha256": "bda4b8c248cb5524b5523c67db93dcb47fb64d6e8b08158bbf9a54d7c263439a",
+      "bytes": 8393
+    },
+    {
+      "name": "SUP-CO15-03.flat.csv",
+      "sha256": "f682e8e147f5030f77042d5cda6ecec15065b24343ca03331d3b4b8aef39317a",
+      "bytes": 1396
+    },
+    {
+      "name": "SUP-CO15-03.layout.csv",
+      "sha256": "29a50eec98dc33f95b19d3c6f3c3d447279de704e21548edccce3dcb445cb9fb",
+      "bytes": 735
+    },
+    {
+      "name": "SUP-CO15-03.xlsx",
+      "sha256": "e44ab0fd879f8fce313a51189163b2e22ca8417bd937d51b9bcc765640c4f46a",
+      "bytes": 8437
+    },
+    {
+      "name": "SUP-CO15-04.flat.csv",
+      "sha256": "c8763f7052c1bc722bc96bc304cd867421c4c401a1757e778681c4b66afdbdaf",
+      "bytes": 2153
+    },
+    {
+      "name": "SUP-CO15-04.layout.csv",
+      "sha256": "f1f18866f32a283b7fba7150a607940371f08ba4fd5206aaa358a965c8ec758d",
+      "bytes": 1069
+    },
+    {
+      "name": "SUP-CO15-04.xlsx",
+      "sha256": "7ecf95df77e9d59244e2fd74c34f1d41e78c392da9544fec9fd94b2d63250c81",
+      "bytes": 9390
+    },
+    {
+      "name": "SUP-CO15-05.flat.csv",
+      "sha256": "ba2fa6eed6ec966d9b654452be08b92823c20598a2465b95a09f291df22d8d33",
+      "bytes": 673
+    },
+    {
+      "name": "SUP-CO15-05.layout.csv",
+      "sha256": "a7d667a818d856b7784f671933a3b71b4c34fa05f6ddee67815d591d573afea0",
+      "bytes": 1055
+    },
+    {
+      "name": "SUP-CO15-05.xlsx",
+      "sha256": "ed54c92d569f41d7c00b68df760940c7714e1d991cc812fa9036d73cc283e8a0",
+      "bytes": 9051
+    },
+    {
+      "name": "SUP-EX01-01.flat.csv",
+      "sha256": "c3800f6baaa2c1733edb4bee4b9284d9038129e771cdb1ae33cba67efa34246d",
+      "bytes": 633
+    },
+    {
+      "name": "SUP-EX01-01.layout.csv",
+      "sha256": "2208bfc05232d4ace29269bc17d1db943f06f8121a1612ebdea94ffe4f46fb5b",
+      "bytes": 910
+    },
+    {
+      "name": "SUP-EX01-01.xlsx",
+      "sha256": "9928671e21bbb29aa0e9f20cf370f71cf54f98a2baec9a46b5959eec3e723109",
+      "bytes": 8315
+    },
+    {
+      "name": "SUP-EX02-01.flat.csv",
+      "sha256": "8c9d83bd6ecfd36ee1549cd7d1f3f36a37cb813d43ba5d37f4702bd5f9a6c92e",
+      "bytes": 466
+    },
+    {
+      "name": "SUP-EX02-01.layout.csv",
+      "sha256": "69a94192134fda41355013a99f33ec40a295dc2ea75e831f720d529ad5e52df6",
+      "bytes": 554
+    },
+    {
+      "name": "SUP-EX02-01.xlsx",
+      "sha256": "82da700a3abe207ca411feb91d0225b8c3cdbc459780e42508709e7f450176c8",
+      "bytes": 7405
+    },
+    {
+      "name": "SUP-EX03-01.flat.csv",
+      "sha256": "345429cd59e0d7a5854f4fd0727521d2d9b384af63bb68ef7b338ae517f0b30b",
+      "bytes": 597
+    },
+    {
+      "name": "SUP-EX03-01.layout.csv",
+      "sha256": "253d248224e1d1c8612bf699bd298a9175a57c8fc52f5355a6e29585338042c1",
+      "bytes": 922
+    },
+    {
+      "name": "SUP-EX03-01.xlsx",
+      "sha256": "254f7a4706e4a2f3960781e509434d6551517a2c4cc85e42c6c5c3ec183895ad",
+      "bytes": 8721
+    },
+    {
+      "name": "SUP-FI17-01.flat.csv",
+      "sha256": "e1c65059f8297fb433de4b982b025b789120c078e7a7f2c29ef8a1d82cfd7ebe",
+      "bytes": 584
+    },
+    {
+      "name": "SUP-FI17-01.layout.csv",
+      "sha256": "4e95d38b4f0eb2c696b9b7cfcd7f0c83a01a8cb5e6c7eca77120f139a9dd7873",
+      "bytes": 633
+    },
+    {
+      "name": "SUP-FI17-01.xlsx",
+      "sha256": "ae5a26e5b314594032a5995979f46ec2f494c7b20862d1ad9f699f4f90f7e86d",
+      "bytes": 8095
+    }
+  ]
+}

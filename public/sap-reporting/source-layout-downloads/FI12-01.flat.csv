@@ -1,0 +1,4 @@
+﻿"[bộ lọc] Company Code","[bộ lọc] Fiscal Year","[bộ lọc] Posting Date","[bộ lọc] Ledger","[bộ lọc] G/L Account","[bộ lọc] Journal Entry Type","[nhóm] Posting Date","Journal Entry","Journal Entry D...","Reference Docu...","JE Created By","G/L Account","Journal Entry Ty...","Posting Key","Dr Amt in CC Crcy","Cr Amt in CC Crcy"
+"1000","2026","28.09.2026","0L","0000610000","DEMO","28.09.2026","001900001","","","DEMO","0000610000","","40","1000.00 EUR","0.00 EUR"
+"1000","2026","28.09.2026","0L","0000610000","DEMO","28.09.2026","001900002","","","DEMO","0000610001","","50","0.00 EUR","-1000.00 EUR"
+"1000","2026","28.09.2026","0L","0000610000","DEMO","28.09.2026","001900003","","","DEMO","0000610002","","40","0.00 EUR","0.00 EUR"

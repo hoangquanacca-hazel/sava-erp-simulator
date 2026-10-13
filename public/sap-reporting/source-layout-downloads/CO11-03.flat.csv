@@ -1,0 +1,4 @@
+﻿"[bộ lọc] Target/Actual by G/L Account","[nhóm] Group Name (Credits, Direct Material, Machine time, Personnel time, Set-Up time)","G/L Account","Origin","Total Target Cost","Total Actl Cost","Tgt/Act CostVar","Target Quantity","Actual Quantity"
+"0000610000","1.000,00","0000610000","DEMO","800,00","1.000,00","200,00","20,00","20,00"
+"0000610000","1.000,00","0000610001","DEMO","600,00","500,00","100,00-","10,00","10,00"
+"0000610000","1.000,00","0000610002","DEMO","0,00","0,00","0,00","0,00","0,00"

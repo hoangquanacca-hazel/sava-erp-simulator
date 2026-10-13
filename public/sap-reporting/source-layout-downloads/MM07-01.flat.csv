@@ -1,0 +1,4 @@
+﻿"[nhóm] Vendor/supplying plant","[nhóm] Purchasing Document","Item","Doc. date","Short text","Quantity","Unit","Σ","Net price","To be del.","Still to be deliv.","To be inv.","Still to be inv.","Crcy","POH"
+"0000990001","4500990001","00010","28.09.2026","Chi tiết sản xuất DEMO","20,00","PC","","50,00","10,00","500,00","10,00","500,00","EUR",""
+"0000990001","4500990001","00020","29.09.2026","Điều chỉnh, DEMO","10,00","PC","","100,00","2,00","200,00","2,00","200,00","EUR",""
+"0000990001","4500990001","00030","","Dòng giá trị 0 DEMO","0,00","PC","","0,00","0,00","0,00","0,00","0,00","EUR",""

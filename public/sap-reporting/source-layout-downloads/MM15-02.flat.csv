@@ -1,0 +1,4 @@
+﻿"[nhóm] Plant","[nhóm] Analysis date","[nhóm] Analysis: Dead stock","[nhóm] Number of selected materials","[nhóm] Dead stock value","[trong ô] USD","Material","Short text","Dead stock value","%","cum.%"
+"1000","28.09.2026","DEMO","3,00","1.500,00","USD","DEMO-MAT-001","Sản xuất DEMO","1.000,00","66,67","66,67"
+"1000","28.09.2026","DEMO","3,00","1.500,00","USD","DEMO-MAT-002","Điều chỉnh, DEMO","500,00","33,33","100,00"
+"1000","28.09.2026","DEMO","3,00","1.500,00","USD","DEMO-MAT-003","Giá trị 0 DEMO","0,00","0,00","100,00"

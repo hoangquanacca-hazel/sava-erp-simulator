@@ -1,0 +1,4 @@
+﻿"[bộ lọc] Plant","[bộ lọc] Order Type","[bộ lọc] Material","[bộ lọc] Order","[bộ lọc] Plan Category","[bộ lọc] Order Status","[bộ lọc] Period From","[bộ lọc] Period To","Excepti...","Order","Material","Tgt DR/A...","Target Cost ...","Actl Cost Debit","Total Actl Cost","Order Stat...","O..."
+"1000","DEMO","DEMO-MAT-001","0000100001","DEMO","DEMO","09","09","","0000100001","DEMO-MAT-001","","","1.000,00","1.000,00","",""
+"1000","DEMO","DEMO-MAT-001","0000100001","DEMO","DEMO","09","09","","0000100002","DEMO-MAT-002","","","500,00","500,00","",""
+"1000","DEMO","DEMO-MAT-001","0000100001","DEMO","DEMO","09","09","","0000100003","DEMO-MAT-003","","","0,00","0,00","",""

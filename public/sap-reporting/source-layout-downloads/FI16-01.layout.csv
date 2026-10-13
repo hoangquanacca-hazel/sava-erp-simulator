@@ -1,0 +1,7 @@
+﻿"F3302 Reconcile GR/IR Accounts (tiêu đề hiển thị: 'Intelligent Goods and Invoice Receipt Account Reconciliation') — SAVA DEMO (mẫu dựng lại)","","","","","","",""
+"[biểu đồ] Purchasing Document Items theo Company Code","","","","","","",""
+"[nút] Process Item / Perform Write-Off","","","","","","",""
+"Purchasing Document","Purch...","Latest Posting Date","Supplier","Number of Goods Receipts","Number of Invoice Re...","",""
+"001900001","","28.09.2026","0000990001","3,00","","",""
+"001900002","","29.09.2026","0000990001","2,00","","",""
+"001900003","","","0000990001","0,00","","",""

@@ -1,0 +1,2 @@
+# Preserve SAP practice export bytes across Windows/Linux checkouts.
+public/sap-reporting/** -text whitespace=cr-at-eol

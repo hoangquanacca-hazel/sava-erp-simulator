@@ -1,0 +1,5 @@
+﻿"MI20 (List of Inventory Differences) — SAVA DEMO (mẫu dựng lại)","","","","","","","","","","","",""
+"PhysInvDoc","Item","Material","Batch","Plnt","SLoc","Book quantity","Qty Counted","Difference qty","BUn","Difference amt.","Crcy","S…"
+"001900001","00010","DEMO-MAT-001","DEMO","1000","0001","20,00","18,00","2,00-","PC","100,00-","EUR",""
+"001900002","00020","DEMO-MAT-002","DEMO","1000","0002","10,00","12,00","2,00","PC","100,00","EUR",""
+"001900003","00030","DEMO-MAT-003","DEMO","1000","0003","0,00","0,00","0,00","PC","0,00","EUR",""

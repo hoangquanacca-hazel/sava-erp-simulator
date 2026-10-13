@@ -1,0 +1,4 @@
+﻿"[nhóm] Order","[nhóm] Order Type","[nhóm] Plant","[nhóm] Material","[nhóm] Planned Quantity","[nhóm] Actual Quantity","[nhóm] Target Cost Version","[nhóm] Cumulative Data","[nhóm] Legal Valuation","[nhóm] Company Code Currency/Object Currency","Cost Element","Cost Element (Text)","Origin","Σ","Total Target Costs","Total Actual Costs","Target/actual var.","T/I var(%)","Currency"
+"0000100001","DEMO","1000","DEMO-MAT-001","20,00","20,00","0","DEMO","DEMO","EUR","0000610000","Sản xuất DEMO","DEMO","","800,00","1.000,00","200,00","25,00","EUR"
+"0000100001","DEMO","1000","DEMO-MAT-001","20,00","20,00","0","DEMO","DEMO","EUR","0000610001","Điều chỉnh, DEMO","DEMO","","600,00","500,00","100,00-","16,67-","EUR"
+"0000100001","DEMO","1000","DEMO-MAT-001","20,00","20,00","0","DEMO","DEMO","EUR","0000610002","Giá trị 0 DEMO","DEMO","","0,00","0,00","0,00","","EUR"

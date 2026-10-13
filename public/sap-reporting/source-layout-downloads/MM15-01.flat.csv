@@ -1,0 +1,4 @@
+﻿"[nhóm] Sales organization","[nhóm] Analysis date","[nhóm] Analysis: Slow-moving item","[nhóm] Number of selected materials","[nhóm] Stock value","[trong ô] USD","Material","Short text","Days since consumpti…","Stock value (dòng 2)","Date (dòng 2)"
+"1000","28.09.2026","DEMO","3,00","1.500,00","USD","DEMO-MAT-001","Sản xuất DEMO","","1.000,00","28.09.2026"
+"1000","28.09.2026","DEMO","3,00","1.500,00","USD","DEMO-MAT-002","Điều chỉnh, DEMO","","500,00","29.09.2026"
+"1000","28.09.2026","DEMO","3,00","1.500,00","USD","DEMO-MAT-003","Giá trị 0 DEMO","","0,00",""

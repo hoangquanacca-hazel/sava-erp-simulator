@@ -1,0 +1,4 @@
+﻿"Material","Material description","Plnt","Name 1","Purch.Doc.","Item","SPlt","S","Quantity","BUn","Amt.in Loc.Cur.","Crcy","Order Quantity","OUn","Net Order Value","Crcy"
+"DEMO-MAT-001","Sản xuất DEMO","1000","Sản xuất DEMO","DEMO","00010","DEMO","","20,00","PC","0,00","EUR","20,00","PC","0,00","EUR"
+"DEMO-MAT-001","Sản xuất DEMO","1000","Sản xuất DEMO","DEMO","00020","DEMO","","10,00","PC","0,00","EUR","10,00","PC","0,00","EUR"
+"DEMO-MAT-001","Sản xuất DEMO","1000","Sản xuất DEMO","DEMO","00030","DEMO","","0,00","PC","0,00","EUR","0,00","PC","0,00","EUR"

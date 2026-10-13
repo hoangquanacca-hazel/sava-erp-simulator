@@ -1,0 +1,5 @@
+﻿"ZMRBR (bản sao SCEIS của MRBR — màn hình 'Release Blocked Invoices') — SAVA DEMO (mẫu dựng lại)","","","","","","","","","","","","","",""
+"Stat…","Doc. No.","Year","Crcy","TranslDate","Exchange rate","L.cur","T…","Qty","Prc","Posting Date","CoCd","Invoicing Pty","Name","U…"
+"","001900001","2026","EUR","28.09.2026","1,00","EUR","","X","X","28.09.2026","1000","0000990001","Sản xuất DEMO",""
+"","001900002","2026","EUR","29.09.2026","1,00","EUR","","","","29.09.2026","1000","0000990001","Điều chỉnh, DEMO",""
+"","001900003","2026","EUR","","1,00","EUR","","","","","1000","0000990001","Giá trị 0 DEMO",""

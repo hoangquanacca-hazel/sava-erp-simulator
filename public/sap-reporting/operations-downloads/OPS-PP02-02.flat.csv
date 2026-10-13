@@ -1,0 +1,4 @@
+﻿"Material","Description","MRP Area","Plant","MRP type","Material type","Unit","[biểu tượng dòng]","A...","Date","MRP ...","MRP element data","Rescheduli...","E...","Receipt/Reqmt","Available Qty","Pr...","St..."
+"FG-CONN-01","Connector assembly demo","1000","1000","PD","FERT","PC","DEMO_ICON","","12.10.2026","Stock","","","","","100.000","",""
+"FG-CONN-01","Connector assembly demo","1000","1000","PD","FERT","PC","DEMO_ICON","","13.10.2026","OrdRes","000100000001","","","150.000-","50.000-","",""
+"FG-CONN-01","Connector assembly demo","1000","1000","PD","FERT","PC","DEMO_ICON","","14.10.2026","PldOrd","0000123456","13.10.2026","10","200.000","150.000","DEMO","DEMO"

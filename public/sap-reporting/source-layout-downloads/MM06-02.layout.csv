@@ -1,0 +1,8 @@
+﻿"MB5S (List of GR/IR Balances) — SAVA DEMO (mẫu dựng lại)","","","","","","","","","",""
+"POrg","","1000","","","","","","","",""
+"PGr","","001","","","","","","","",""
+"Vendor","","0000990001","","","","","","","",""
+"Purch.Doc.","Item","Fr. Suppl.","CTyp","Quantity Received","Invoice Quantity","OUn","GR value","Invoice amount LC","Crcy","Stock Segment"
+"4500990001","00010","DEMO","PB00","20,00","10,00","PC","1.000,00","500,00","EUR","DEMO"
+"4500990001","00020","DEMO","PB00","10,00","10,00","PC","500,00","500,00","EUR","DEMO"
+"4500990001","00030","DEMO","PB00","0,00","0,00","PC","0,00","0,00","EUR","DEMO"

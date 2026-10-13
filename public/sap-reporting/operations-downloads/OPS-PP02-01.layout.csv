@@ -1,0 +1,6 @@
+﻿"MD04 — schema thực hành từ mô tả (chưa ảnh) — SAVA DEMO","","","","","","","","","","","","","","","","",""
+"DOCUMENTED_SCHEMA_DEMO_NOT_SOURCE_OUTPUT_LAYOUT · Hệ mục tiêu chưa xác nhận","","","","","","","","","","","","","","","","",""
+"Material","Plant","MRP Area","MRP Controller","Snapshot Time","Date","MRP element","MRP element data","Exception","Rescheduling date","Receipt/Reqmt","Available Qty","Suppl./Receiving plant","Unit","Segment","Storage Location","Firming Indicator","Deletion Flag"
+"FG-CONN-01","1000","1000","","12.10.2026 09:00:00","12.10.2026","Stock","","","","","100.000","","PC","","","",""
+"FG-CONN-01","1000","1000","","12.10.2026 09:00:00","13.10.2026","CustOrd","0000500001/000010","","","150.000-","50.000-","","PC","","","",""
+"FG-CONN-01","1000","1000","","12.10.2026 09:00:00","14.10.2026","PldOrd","0000123456","","","200.000","150.000","","PC","","","",""
