@@ -16,6 +16,8 @@ if '--state'in sys.argv:
  print(json.dumps(out,indent=2));sys.exit(0)
 url=next((s.split('=',1)[1]for s in sys.argv if s.startswith('--url=')),'https://simulator.savafinlab.com.vn')
 name='preview-verification'if '--url='in' '.join(sys.argv)else'live-verification'
+if name=='preview-verification':
+ deploy=next(d for d in api('sites/'+SITE+'/deploys?per_page=12')if d.get('deploy_ssl_url','').rstrip('/')==url.rstrip('/')and d['state']=='ready')
 manifest=read(ROOT/'scripts/reporting-library-release-manifest.json');base=read(DOC/'baseline.json');old={f['path']:f for f in base['files']}
 # Check changed/new payloads and representative unchanged pages/downloads. Old651 preservation is proven locally; old654 were verified on prior main.
 targets=[f for f in manifest['files']if f['path']not in old or f['sha256']!=old[f['path']]['sha256']]
