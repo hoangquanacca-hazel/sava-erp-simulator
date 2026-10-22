@@ -93,6 +93,18 @@ const runStepBody = app.slice(app.indexOf('const runStep = '), app.indexOf('cons
 assert.ok(runStepBody.length > 500, 'không tìm thấy thân runStep trong App.tsx');
 assert.ok(!/window\.alert|setSodModal/.test(runStepBody), 'runStep vẫn gọi alert/modal trực tiếp');
 assert.match(app, /const executeStepInternal = \(stepId: number\): StepResult => presentStepResult\(runStep\(stepId\)\);/);
+// Hiển thị Classic: chỉ khóa kỳ/MDG mới alert, SoD → modal, QM chờ xử lý → im lặng (như main).
+const present = app.slice(app.indexOf('const presentStepResult = '), app.indexOf('const runStep = '));
+assert.match(present, /if \(result\.kind === 'sod_denied'\) setSodModal\(result\.reason\);/);
+assert.match(present, /else if \(result\.kind === 'period_locked' \|\| result\.kind === 'mdg_blocked'\) window\.alert\(result\.reason\);/);
+assert.equal((present.match(/window\.alert|setSodModal/g) || []).length, 2, 'presentStepResult có thêm lời gọi hiển thị lạ');
+// Thứ tự cũ: audit ghi SAU cổng và TRƯỚC nhánh QM bước 4.
+const iGate = runStepBody.indexOf('if (!gate.ok) return gate;'), iAudit = runStepBody.indexOf('setAudit('), iQm = runStepBody.indexOf('if (stepId === 4)');
+assert.ok(iGate > 0 && iAudit > iGate && iQm > iAudit, 'thứ tự cổng → audit → QM bị đổi');
+// ACDOCA_TABLE: bước → assertParity (chỉ dòng bước) → extra qua repository → trả repo.lines().
+const acd = app.slice(app.indexOf('const ACDOCA_TABLE = useMemo('), app.indexOf('}, [stepStates, params, extraAcdoca]);'));
+const order = ['buildAcdocaTable(stepStates, [], repo)', 'assertParity(stepEntries, table', 'repo.append(extraAcdoca);', 'return [...repo.lines()];'].map((k) => acd.indexOf(k));
+assert.ok(order.every((x, i) => x > 0 && (i === 0 || x > order[i - 1])), `ACDOCA_TABLE sai thứ tự/thiếu bước: ${order}`);
 
 // ---------------------------------------------------------------- PR-2: flag + audit
 assert.equal(FEATURE_FLAG_DEFAULTS.m6Copilot, false, 'm6Copilot phải mặc định TẮT');

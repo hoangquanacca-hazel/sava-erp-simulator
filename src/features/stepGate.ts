@@ -6,7 +6,7 @@
  * lớp hiển thị Classic vẫn hiện y như cũ (alert / modal SoD) — xem presentStepResult trong App.
  *
  * Thứ tự ưu tiên giữ nguyên như code cũ: khóa kỳ OB52 → MDG (chỉ bước 1) → SoD.
- * Chuỗi thông báo giữ NGUYÊN VĂN bản cũ (test:copilot-pr1 so từng ký tự).
+ * Chuỗi thông báo giữ NGUYÊN VĂN bản cũ (test:copilot-pr12 so từng ký tự).
  */
 import { MTOParameters } from '../types';
 import { mdgGateOpen } from './mdg';
