@@ -2,12 +2,29 @@ export type SimRole = 'Sales' | 'Kho' | 'Kế hoạch SX' | 'Kế toán trưởn
 
 export const SIM_ROLES: SimRole[] = ['Sales', 'Kho', 'Kế hoạch SX', 'Kế toán trưởng'];
 
+/** Kênh phát sinh thao tác: giao diện cổ điển hay Sava Copilot (plan PR-2). */
+export type AuditChannel = 'classic' | 'copilot';
+
+/** Ý định Copilot đã trích (tool + trường) — chỉ ghi khi channel = 'copilot'. */
+export interface CopilotParsedIntent {
+  tool: string;
+  input: Record<string, unknown>;
+}
+
 export interface AuditEvent {
   id: string;
   action: string;
   role: SimRole;
   time: string;
   sessionId: string;
+  /** PR-2 — bản ghi cũ không có trường này được hiểu là 'classic'. */
+  channel?: AuditChannel;
+  /** PR-2 — câu lệnh người dùng gõ cho Copilot (nguyên văn). */
+  prompt?: string;
+  /** PR-2 — ý định Copilot trích được, trước khi xác nhận. */
+  parsedIntent?: CopilotParsedIntent;
+  /** PR-2 — vai trò đã bấm xác nhận thẻ Copilot (bắt buộc cho thao tác ghi sổ qua Copilot). */
+  confirmedBy?: SimRole;
 }
 
 /** Kế toán trưởng may run all steps in this MÔ PHỎNG. Other roles are restricted. */
