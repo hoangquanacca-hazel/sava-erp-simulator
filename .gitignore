@@ -3,3 +3,6 @@ dist
 .netlify
 *.local
 .env
+
+# Python bytecode cache (test oracle scripts)
+__pycache__/
