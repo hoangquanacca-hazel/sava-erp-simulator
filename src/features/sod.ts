@@ -27,6 +27,9 @@ export interface AuditEvent {
   confirmedBy?: SimRole;
 }
 
+/** PR-3 — phần audit do kênh gọi quyết định (Classic: chỉ channel; Copilot: đủ 4 trường). */
+export type StepAuditMeta = Pick<AuditEvent, 'channel' | 'prompt' | 'parsedIntent' | 'confirmedBy'>;
+
 /** Kế toán trưởng may run all steps in this MÔ PHỎNG. Other roles are restricted. */
 const STEP_ROLES: Record<number, SimRole[]> = {
   1: ['Sales', 'Kế toán trưởng'],

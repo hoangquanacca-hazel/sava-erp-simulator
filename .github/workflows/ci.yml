@@ -75,6 +75,9 @@ jobs:
       - name: Copilot PR-1/PR-2 (cổng bước + JournalRepository, engine thật)
         if: ${{ !cancelled() }}
         run: npm run test:copilot-pr12
+
+      - name: Copilot PR-3 (registry + thẻ xác nhận)
+        run: npm run test:copilot-pr3
       - name: Oracle giá thành độc lập (Q1+Q4+Q5; a0_oracle đọc từ oracle_costing)
         if: ${{ !cancelled() }}
         run: npm run test:costing
