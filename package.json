@@ -26,6 +26,7 @@
     "test:s5": "tsx scripts/s5-mart.ts",
     "test:s6": "tsx scripts/s6-evidence.ts",
     "test:copilot-pr12": "tsx scripts/copilot-pr12.ts",
+    "test:copilot-pr3": "tsx scripts/copilot-pr3.ts",
     "verify:p0-evidence": "tsx scripts/verify-p0-evidence.ts",
     "evidence:p0": "tsx scripts/p0-review-evidence.ts"
   },

@@ -50,8 +50,9 @@ import { loadFeatureFlags } from './features/flags';
 import { AppHashRoute, parseHash } from './features/hashRoute';
 import { CloseChecklistState, EMPTY_CLOSE } from './features/periodClose';
 import { mdgGateOpen } from './features/mdg';
-import { AuditEvent, SimRole, canRoleRunStep, newSessionId } from './features/sod';
-import { evaluateStepGate, MSG_QM_REWORK_PENDING, StepResult } from './features/stepGate';
+import { AuditEvent, SimRole, StepAuditMeta, canRoleRunStep, newSessionId } from './features/sod';
+import { StepResult } from './features/stepGate';
+import { planStepRun } from './features/stepRun';
 import { buildAcdocaTable, InMemoryJournalRepository } from './ledger/journalRepository';
 import { postCkmlcp } from './features/materialLedger';
 import {
@@ -328,66 +329,36 @@ export default function App() {
   };
 
   // Execution of a step — trả kết quả có cấu trúc, không tự hiển thị (Copilot PR-1).
-  const runStep = (stepId: number): StepResult => {
-    const gate = evaluateStepGate({
+  // PR-3: lõi tách sang planStepRun (thuần); ở đây chỉ áp kết quả vào state. meta mặc định = Classic.
+  const runStep = (stepId: number, meta: StepAuditMeta = { channel: 'classic' }): StepResult => {
+    const plan = planStepRun({
       stepId,
       fiPeriodLocked: closeState.fiPeriodLocked,
       flags: { m4MdgGate: flags.m4MdgGate, m5SodRbac: flags.m5SodRbac },
       params,
+      computed,
       role: simRole,
+      stepStates,
+      currentStepId,
     });
-    if (!gate.ok) return gate;
-    setAudit((prev) => [
-      ...prev,
-      {
-        id: `a-${prev.length + 1}`,
-        action: `Execute step ${stepId}`,
-        role: simRole,
-        time: new Date().toISOString(),
-        sessionId,
-        channel: 'classic',
-      },
-    ]);
-    // Special validation for Step 4 (QM):
-    if (stepId === 4) {
-      if (!stepStates[4].qmDecision) {
-        // If not chosen yet, set default to pass
-        setStepStates((prev) => ({
-          ...prev,
-          4: {
-            ...prev[4],
-            qmDecision: 'pass',
-            isExecuted: true,
-            qmReworkHandled: true,
-            entries: [], acdocaLines: [],
-          },
-        }));
-        if (currentStepId === 4) setCurrentStepId(5);
-        return { ok: true, stepId };
-      }
-
-      if (stepStates[4].qmDecision === 'fail' && !stepStates[4].qmReworkHandled) {
-        // BLOCKED!
-        return { ok: false, stepId, kind: 'qm_rework_pending', reason: MSG_QM_REWORK_PENDING };
-      }
+    if (plan.audit) {
+      setAudit((prev) => [
+        ...prev,
+        {
+          id: `a-${prev.length + 1}`,
+          action: `Execute step ${stepId}`,
+          role: simRole,
+          time: new Date().toISOString(),
+          sessionId,
+          ...meta,
+        },
+      ]);
     }
-
-    const reworkCost = stepStates[4].qmReworkCost || 0;
-    const scrapCost = stepStates[4].qmScrapCost || 0;
-    const method = stepStates[4].qmResolutionMethod || null;
-    const generated = generateStepEntries(stepId, params, computed, reworkCost, scrapCost, method);
-
-    setStepStates((prev) => ({
-      ...prev,
-      [stepId]: {
-        ...prev[stepId],
-        isExecuted: true,
-        entries: generated.entries,
-        acdocaLines: generated.acdoca,
-      },
-    }));
-
-    if (stepId === 7) {
+    if (plan.stepPatch) {
+      const patch = plan.stepPatch;
+      setStepStates((prev) => ({ ...prev, [stepId]: { ...prev[stepId], ...patch } }));
+    }
+    if (plan.completedRun) {
       setCompletedRunsCount((prev) => {
         const next = prev + 1;
         try {
@@ -398,11 +369,8 @@ export default function App() {
         return next;
       });
     }
-
-    if (stepId < 7) {
-      setCurrentStepId(stepId + 1);
-    }
-    return { ok: true, stepId };
+    if (plan.nextStepId !== null) setCurrentStepId(plan.nextStepId);
+    return plan.result;
   };
 
   const executeStepInternal = (stepId: number): StepResult => presentStepResult(runStep(stepId));

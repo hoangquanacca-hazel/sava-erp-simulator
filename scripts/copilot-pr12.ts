@@ -99,8 +99,14 @@ assert.match(present, /if \(result\.kind === 'sod_denied'\) setSodModal\(result\
 assert.match(present, /else if \(result\.kind === 'period_locked' \|\| result\.kind === 'mdg_blocked'\) window\.alert\(result\.reason\);/);
 assert.equal((present.match(/window\.alert|setSodModal/g) || []).length, 2, 'presentStepResult có thêm lời gọi hiển thị lạ');
 // Thứ tự cũ: audit ghi SAU cổng và TRƯỚC nhánh QM bước 4.
-const iGate = runStepBody.indexOf('if (!gate.ok) return gate;'), iAudit = runStepBody.indexOf('setAudit('), iQm = runStepBody.indexOf('if (stepId === 4)');
-assert.ok(iGate > 0 && iAudit > iGate && iQm > iAudit, 'thứ tự cổng → audit → QM bị đổi');
+// PR-3: lõi chạy bước đã tách sang planStepRun (src/features/stepRun.ts). Thứ tự cổng → audit → QM kiểm ở đó;
+// App.runStep phải gọi planStepRun và không tự ghi audit trước khi có kế hoạch.
+assert.match(runStepBody, /planStepRun\(\{/, 'App.runStep không còn gọi planStepRun');
+const stepRunSrc = readFileSync(new URL('../src/features/stepRun.ts', import.meta.url), 'utf8');
+const iGate = stepRunSrc.indexOf('if (!gate.ok) return {'), iAudit = stepRunSrc.indexOf('audit: true'), iQm = stepRunSrc.indexOf('if (stepId === 4)');
+assert.ok(iGate > 0 && iQm > iGate && iAudit > iGate, 'thứ tự cổng → audit → QM bị đổi');
+assert.match(stepRunSrc, /if \(!gate\.ok\) return \{ result: gate, audit: false,/, 'cổng bị chặn vẫn cho phép ghi audit');
+assert.ok(runStepBody.indexOf('if (plan.audit)') > runStepBody.indexOf('planStepRun({'), 'App ghi audit trước khi có kế hoạch cổng');
 // ACDOCA_TABLE: bước → assertParity (chỉ dòng bước) → extra qua repository → trả repo.lines().
 const acd = app.slice(app.indexOf('const ACDOCA_TABLE = useMemo('), app.indexOf('}, [stepStates, params, extraAcdoca]);'));
 const order = ['buildAcdocaTable(stepStates, [], repo)', 'assertParity(stepEntries, table', 'repo.append(extraAcdoca);', 'return [...repo.lines()];'].map((k) => acd.indexOf(k));
