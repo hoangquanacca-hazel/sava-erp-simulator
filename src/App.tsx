@@ -51,6 +51,8 @@ import { AppHashRoute, parseHash } from './features/hashRoute';
 import { CloseChecklistState, EMPTY_CLOSE } from './features/periodClose';
 import { mdgGateOpen } from './features/mdg';
 import { AuditEvent, SimRole, canRoleRunStep, newSessionId } from './features/sod';
+import { evaluateStepGate, MSG_QM_REWORK_PENDING, StepResult } from './features/stepGate';
+import { buildAcdocaTable, InMemoryJournalRepository } from './ledger/journalRepository';
 import { postCkmlcp } from './features/materialLedger';
 import {
   CheckCircle,
@@ -179,12 +181,9 @@ export default function App() {
   }, [stepStates, extraAcdoca]);
 
   const ACDOCA_TABLE = useMemo(() => {
-    const table: AcdocaLine[] = [];
-    for (let i = 1; i <= 7; i++) {
-      if (stepStates[i]?.isExecuted) {
-        table.push(...(stepStates[i].acdocaLines || []));
-      }
-    }
+    // Copilot PR-2: dòng sổ đi qua JournalRepository (adapter in-memory); thứ tự/giá trị y như vòng lặp cũ.
+    const repo = new InMemoryJournalRepository();
+    const table = buildAcdocaTable(stepStates, [], repo);
     const stepEntries: JournalEntry[] = [];
     for (let i = 1; i <= 7; i++) {
       if (stepStates[i]?.isExecuted) stepEntries.push(...stepStates[i].entries);
@@ -192,8 +191,8 @@ export default function App() {
     if (stepEntries.length > 0 && table.length > 0) {
       assertParity(stepEntries, table, `${params.stockType} full ledger`);
     }
-    table.push(...extraAcdoca);
-    return table;
+    repo.append(extraAcdoca);
+    return [...repo.lines()];
   }, [stepStates, params, extraAcdoca]);
 
   // Inventory & Sales Order states updated in real-time
@@ -319,26 +318,25 @@ export default function App() {
     });
   };
 
-  // Execution of a step
-  const executeStepInternal = (stepId: number) => {
-    if (closeState.fiPeriodLocked) {
-      window.alert('OB52 đã khóa kỳ FI — không ghi sổ thêm (MÔ PHỎNG).');
-      return;
+  // Classic mode: hiển thị kết quả chặn y như trước PR-1 (alert / modal SoD; QM chờ xử lý thì im lặng).
+  const presentStepResult = (result: StepResult): StepResult => {
+    if (!result.ok) {
+      if (result.kind === 'sod_denied') setSodModal(result.reason);
+      else if (result.kind === 'period_locked' || result.kind === 'mdg_blocked') window.alert(result.reason);
     }
-    if (flags.m4MdgGate && stepId === 1) {
-      const gate = mdgGateOpen(params);
-      if (!gate.ok) {
-        window.alert(`BLOCK Step 1 — master data chưa duyệt: ${gate.missing.join(', ')}`);
-        return;
-      }
-    }
-    if (flags.m5SodRbac) {
-      const sod = canRoleRunStep(simRole, stepId);
-      if (!sod.ok) {
-        setSodModal(sod.reason);
-        return;
-      }
-    }
+    return result;
+  };
+
+  // Execution of a step — trả kết quả có cấu trúc, không tự hiển thị (Copilot PR-1).
+  const runStep = (stepId: number): StepResult => {
+    const gate = evaluateStepGate({
+      stepId,
+      fiPeriodLocked: closeState.fiPeriodLocked,
+      flags: { m4MdgGate: flags.m4MdgGate, m5SodRbac: flags.m5SodRbac },
+      params,
+      role: simRole,
+    });
+    if (!gate.ok) return gate;
     setAudit((prev) => [
       ...prev,
       {
@@ -347,6 +345,7 @@ export default function App() {
         role: simRole,
         time: new Date().toISOString(),
         sessionId,
+        channel: 'classic',
       },
     ]);
     // Special validation for Step 4 (QM):
@@ -364,12 +363,12 @@ export default function App() {
           },
         }));
         if (currentStepId === 4) setCurrentStepId(5);
-        return;
+        return { ok: true, stepId };
       }
 
       if (stepStates[4].qmDecision === 'fail' && !stepStates[4].qmReworkHandled) {
         // BLOCKED!
-        return;
+        return { ok: false, stepId, kind: 'qm_rework_pending', reason: MSG_QM_REWORK_PENDING };
       }
     }
 
@@ -403,7 +402,10 @@ export default function App() {
     if (stepId < 7) {
       setCurrentStepId(stepId + 1);
     }
+    return { ok: true, stepId };
   };
+
+  const executeStepInternal = (stepId: number): StepResult => presentStepResult(runStep(stepId));
 
   const handleExecuteStep = (stepId: number) => {
     track('step_executed', { step: stepId });

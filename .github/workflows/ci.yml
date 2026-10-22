@@ -72,6 +72,9 @@ jobs:
       - name: S6 evidence
         if: ${{ !cancelled() }}
         run: npm run test:s6
+      - name: Copilot PR-1/PR-2 (cổng bước + JournalRepository, engine thật)
+        if: ${{ !cancelled() }}
+        run: npm run test:copilot-pr12
       - name: Oracle giá thành độc lập (Q1+Q4+Q5; a0_oracle đọc từ oracle_costing)
         if: ${{ !cancelled() }}
         run: npm run test:costing

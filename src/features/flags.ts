@@ -1,4 +1,4 @@
-/** Feature flags for Speed MVP modules. Default ON. Persist in localStorage. */
+/** Feature flags for Speed MVP modules. Default ON (trừ m6Copilot — mặc định TẮT, rollback = tắt flag). Persist in localStorage. */
 
 export type FeatureFlagKey =
   | 'm1Variance'
@@ -8,7 +8,8 @@ export type FeatureFlagKey =
   | 'm5SodRbac'
   | 'm6MaterialLedger'
   | 'm7GrIr'
-  | 'm8Intercompany';
+  | 'm8Intercompany'
+  | 'm6Copilot';
 
 export const FEATURE_FLAG_DEFAULTS: Record<FeatureFlagKey, boolean> = {
   m1Variance: true,
@@ -19,6 +20,8 @@ export const FEATURE_FLAG_DEFAULTS: Record<FeatureFlagKey, boolean> = {
   m6MaterialLedger: true,
   m7GrIr: true,
   m8Intercompany: true,
+  /** Sava Copilot (plan D2): mặc định TẮT. Không có route/UI nào đọc flag này ở PR-2. */
+  m6Copilot: false,
 };
 
 const STORAGE_KEY = 'sava_feature_flags';
