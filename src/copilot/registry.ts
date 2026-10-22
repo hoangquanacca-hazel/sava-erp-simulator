@@ -113,10 +113,11 @@ export interface PendingAction {
 export function validateInput(schema: ToolInputSchema, input: unknown): string | null {
   if (typeof input !== 'object' || input === null || Array.isArray(input)) return 'input phải là object';
   const obj = input as Record<string, unknown>;
-  for (const k of Object.keys(obj)) if (!(k in schema.properties)) return `trường lạ: ${k}`;
-  for (const k of schema.required) if (!(k in obj)) return `thiếu trường bắt buộc: ${k}`;
+  const has = (o: object, k: string) => Object.prototype.hasOwnProperty.call(o, k);
+  for (const k of Object.keys(obj)) if (!has(schema.properties, k)) return `trường lạ: ${k}`;
+  for (const k of schema.required) if (!has(obj, k)) return `thiếu trường bắt buộc: ${k}`;
   for (const [k, prop] of Object.entries(schema.properties)) {
-    if (!(k in obj)) continue;
+    if (!has(obj, k)) continue;
     const v = obj[k];
     if (prop.type === 'integer') {
       if (typeof v !== 'number' || !Number.isInteger(v)) return `${k} phải là số nguyên`;
@@ -175,6 +176,7 @@ const runMtoStep: CopilotTool = {
     const stepId = input.stepId as number;
     const sod = canRoleRunStep(ctx.role, stepId);
     if (!sod.ok) return { ok: false, reason: sod.reason };
+    if (ctx.stepStates[stepId]?.isExecuted) return { ok: false, reason: `Bước ${stepId} đã chạy — không chạy lại qua Copilot (Classic cũng ẩn nút này).` };
     const missing = [1, 2, 3, 4, 5, 6, 7].filter((id) => id < stepId && !ctx.stepStates[id]?.isExecuted);
     if (missing.length) return { ok: false, reason: `Phải chạy bước ${missing.join(', ')} trước bước ${stepId}.` };
     const reg = ctx.registrationBlock(stepId);
@@ -312,7 +314,6 @@ export interface CopilotSession {
 
 export function createCopilotSession(): CopilotSession {
   const pending = new Map<string, PendingAction>();
-  let seq = 0;
 
   const gate = (ctx: CopilotContext, toolName: string, input: unknown) => {
     if (!ctx.flags.m6Copilot) return { err: { code: 'copilot_off' as const, reason: 'Sava Copilot đang tắt.' } };
@@ -336,7 +337,7 @@ export function createCopilotSession(): CopilotSession {
       const { tool, input } = g;
       if (tool.requiresConfirmation) {
         const p: PendingAction = {
-          id: `cp-${++seq}`,
+          id: `cp-${crypto.randomUUID()}`,
           tool: tool.name,
           input: { ...input },
           prompt,

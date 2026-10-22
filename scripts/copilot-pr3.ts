@@ -195,6 +195,64 @@ let cases = 0;
   cases += 2;
 }
 
+// ---- B10: trạng thái đổi giữa đề xuất và xác nhận → xác nhận phải kiểm lại cổng (không ghi)
+{
+  const h = makeHarness('Kế toán trưởng');
+  const s = createCopilotSession();
+  h.sync();
+  const q = s.propose(h.ctx, { tool: 'run_mto_step', input: { stepId: 1 } }) as { pending: { id: string } };
+  h.ctx.closeState = { ...EMPTY_CLOSE, fiPeriodLocked: true }; // OB52 chạy ở kênh khác sau khi thẻ được lập
+  const c = s.confirm(h.ctx, q.pending.id, 'Kế toán trưởng');
+  assert.equal(c.status, 'rejected', 'B10 vi phạm: xác nhận ghi sổ dù kỳ đã khóa sau khi lập thẻ');
+  assert.equal((c as { code: string }).code, 'precheck_failed');
+  assert.equal(h.calls().length, 0, 'B10 vi phạm: ghi sổ khi trạng thái đã đổi');
+  cases++;
+}
+
+// ---- B11: không chạy lại bước đã chạy (kể cả khi thẻ đã lập trước đó)
+{
+  const h = makeHarness('Kế toán trưởng');
+  const s = createCopilotSession();
+  h.sync();
+  const q1 = s.propose(h.ctx, { tool: 'run_mto_step', input: { stepId: 1 } }) as { pending: { id: string } };
+  const q1b = s.propose(h.ctx, { tool: 'run_mto_step', input: { stepId: 1 } }) as { pending: { id: string } };
+  assert.equal(s.confirm(h.ctx, q1.pending.id, 'Kế toán trưởng').status, 'done');
+  h.sync();
+  const again = s.confirm(h.ctx, q1b.pending.id, 'Kế toán trưởng');
+  assert.equal(again.status, 'rejected', 'B11 vi phạm: chạy lại bước 1 đã chạy');
+  assert.equal(h.calls().length, 1, 'B11 vi phạm: ghi sổ trùng');
+  const blocked = s.propose(h.ctx, { tool: 'run_mto_step', input: { stepId: 1 } });
+  assert.equal(blocked.status, 'rejected');
+  cases += 2;
+}
+
+// ---- B12: tên prototype không được lọt schema (additionalProperties:false thật sự)
+{
+  const h = makeHarness('Kế toán trưởng');
+  const s = createCopilotSession();
+  h.sync();
+  for (const key of ['constructor', 'toString', 'hasOwnProperty', '__proto__', 'valueOf']) {
+    const input = JSON.parse(`{"stepId":1,"${key}":"x"}`);
+    const out = s.propose(h.ctx, { tool: 'run_mto_step', input });
+    assert.equal((out as { code: string }).code, 'invalid_input', `B12 vi phạm: khóa ${key} lọt schema`);
+    cases++;
+  }
+  const nav = s.propose(h.ctx, { tool: 'navigate', input: JSON.parse('{"route":"variance","valueOf":1}') });
+  assert.equal((nav as { code: string }).code, 'invalid_input', 'B12 vi phạm: navigate nhận khóa lạ');
+  cases++;
+  assert.equal(h.calls().length, 0);
+}
+
+// ---- B13: QM bước 4 — chuyển bước đúng (currentStepId 4 → 5; khác 4 thì giữ nguyên)
+{
+  const base = { stepId: 4, fiPeriodLocked: false, flags: { m4MdgGate: false, m5SodRbac: false }, params: params0, computed, role: 'Kế toán trưởng' as SimRole, stepStates: freshStates() };
+  const onQm = planStepRun({ ...base, currentStepId: 4 });
+  assert.equal(onQm.nextStepId, 5, 'B13: đang ở bước 4 phải chuyển sang 5');
+  const offQm = planStepRun({ ...base, currentStepId: 1 });
+  assert.equal(offQm.nextStepId, null, 'B13 vi phạm: chạy bước 4 từ bước 1 không được nhảy sang 5');
+  cases += 2;
+}
+
 // ---- B6: schema
 {
   const h = makeHarness('Kế toán trưởng');

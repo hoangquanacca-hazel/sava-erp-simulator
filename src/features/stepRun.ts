@@ -6,7 +6,7 @@
  * App.runStep chỉ còn áp kết quả (setAudit / setStepStates / setCurrentStepId / đếm lượt) theo plan này.
  *
  * Thứ tự giữ nguyên: cổng (khóa kỳ → MDG → SoD) → ghi audit → nhánh QM bước 4 → sinh bút toán.
- * test:copilot-pr3 so planStepRun với bản chép nguyên văn runStep cũ trên toàn bộ ca.
+ * Đối chiếu Classic: test:copilot-pr3 (B-series) và parity-classic (50.176 tổ hợp, ngoài repo) so với bản runStep cũ.
  */
 import { MTOComputed, MTOParameters, StepRuntimeState } from '../types';
 import { generateStepEntries } from '../utils/calculator';
