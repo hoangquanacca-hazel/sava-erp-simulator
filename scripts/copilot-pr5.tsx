@@ -34,12 +34,12 @@ const ctx: CopilotContext = {
 // 1) Đóng → không render gì
 assert.equal(renderToStaticMarkup(<CopilotPanel isOpen={false} onClose={() => {}} ctx={ctx} />), '', 'panel đóng vẫn render');
 
-// 2) Mở → có đủ nút công cụ, có ghi chú PR-4, KHÔNG có ô chat tự do (chỉ ô hỏi kiến thức)
+// 2) Mở → có đủ nút công cụ và ô ngôn ngữ tự nhiên (PR-4)
 const html = renderToStaticMarkup(<CopilotPanel isOpen onClose={() => {}} ctx={ctx} />);
-for (const must of ['Sava Copilot', 'Trợ lý ngôn ngữ chưa bật (PR-4)', 'Đề xuất chạy', 'Kiểm tra đóng kỳ', 'Giải thích chênh lệch', 'Hỏi kiến thức (AI Tutor)', 'Kế toán trưởng']) {
+for (const must of ['Sava Copilot', 'Hỏi bằng ngôn ngữ tự nhiên', 'Đề xuất chạy', 'Kiểm tra đóng kỳ', 'Giải thích chênh lệch', 'Hỏi kiến thức (AI Tutor)', 'Kế toán trưởng']) {
   assert.ok(html.includes(must), `thiếu nội dung: ${must}`);
 }
-assert.equal((html.match(/<textarea/g) || []).length, 1, 'phải đúng 1 ô nhập (câu hỏi kiến thức), không có chat tự do');
+assert.equal((html.match(/<textarea/g) || []).length, 2, 'phải đúng 2 ô nhập: ngôn ngữ tự nhiên + hỏi kiến thức');
 assert.equal((html.match(/<input/g) || []).length, 0, 'không được có input tự do');
 
 // 3) Gating trong App.tsx: panel và nút mở chỉ khi flag m6Copilot bật; cổng lead đúng điều kiện Classic
@@ -51,4 +51,4 @@ assert.match(app, /if \(stepId >= 3 && !isRegistered && !adminSettings\.bypassSe
 assert.match(app, /setLeadModalTriggerReason\('ai_tutor'\)/, 'AI Tutor không đi qua cổng lead như Classic');
 assert.equal(FEATURE_FLAG_DEFAULTS.m6Copilot, false, 'm6Copilot phải mặc định TẮT');
 
-console.log('copilot-pr5 PASS — panel render thật; không có chat tự do; gate flag và cổng lead khớp Classic; m6Copilot mặc định tắt');
+console.log('copilot-pr5 PASS — panel render thật; có ô ngôn ngữ tự nhiên; gate flag và cổng lead khớp Classic; m6Copilot mặc định tắt');
