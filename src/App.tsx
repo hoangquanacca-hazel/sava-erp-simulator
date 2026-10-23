@@ -47,7 +47,9 @@ import { OrderProfitDashboard } from './components/OrderProfitDashboard';
 import { MarginAnalysisPanel } from './components/MarginAnalysisPanel';
 import { ModuleNav } from './components/ModuleNav';
 import { loadFeatureFlags } from './features/flags';
-import { AppHashRoute, parseHash } from './features/hashRoute';
+import { AppHashRoute, navigateHash, parseHash } from './features/hashRoute';
+import { CopilotPanel } from './components/CopilotPanel';
+import type { CopilotContext } from './copilot/registry';
 import { CloseChecklistState, EMPTY_CLOSE } from './features/periodClose';
 import { mdgGateOpen } from './features/mdg';
 import { AuditEvent, SimRole, StepAuditMeta, canRoleRunStep, newSessionId } from './features/sod';
@@ -89,6 +91,7 @@ export default function App() {
   const [highlightedStepId, setHighlightedStepId] = useState<number | null>(null);
   const [highlightedTCode, setHighlightedTCode] = useState<string | null>(null);
   const [aiTutorOpen, setAiTutorOpen] = useState<boolean>(false);
+  const [copilotOpen, setCopilotOpen] = useState<boolean>(false);
   const [aiInitialQuestion, setAiInitialQuestion] = useState<string | undefined>(undefined);
   const [pdfReportOpen, setPdfReportOpen] = useState<boolean>(false);
   const [route, setRoute] = useState<AppHashRoute>(() =>
@@ -930,6 +933,48 @@ export default function App() {
           </a>
         </p>
       </footer>
+
+      {/* Sava Copilot (PR-5) — chỉ khi flag m6Copilot bật; mặc định tắt */}
+      {flags.m6Copilot && !copilotOpen && (
+        <button
+          type="button"
+          onClick={() => setCopilotOpen(true)}
+          className="fixed bottom-4 right-4 z-40 rounded-full bg-slate-900 px-4 py-2 text-sm text-white shadow-lg hover:bg-slate-700"
+        >
+          Sava Copilot
+        </button>
+      )}
+      {flags.m6Copilot && (
+        <CopilotPanel
+          isOpen={copilotOpen}
+          onClose={() => setCopilotOpen(false)}
+          ctx={{
+            role: simRole,
+            flags,
+            params,
+            computed,
+            closeState,
+            stepStates,
+            currentStepId,
+            registrationBlock: (stepId: number) =>
+              stepId >= 3 && !isRegistered && !adminSettings.bypassSessionLimits
+                ? 'Bước từ 3 trở lên cần đăng ký (cổng lead). Hãy đăng ký ở chế độ Classic trước.'
+                : null,
+            runStep: (stepId, meta) => runStep(stepId, meta),
+            navigate: (r: AppHashRoute) => navigateHash(r),
+            openTutor: (q: string) => {
+              setAiInitialQuestion(q);
+              if (!isRegistered && !adminSettings.bypassSessionLimits) {
+                setLeadModalTriggerReason('ai_tutor');
+                setPendingActionAfterLead(() => () => setAiTutorOpen(true));
+                setLeadModalOpen(true);
+                return;
+              }
+              setAiTutorOpen(true);
+            },
+          } satisfies CopilotContext}
+        />
+      )}
 
       {/* AI Tutor Slide-over Drawer */}
       <AITutorDrawer
