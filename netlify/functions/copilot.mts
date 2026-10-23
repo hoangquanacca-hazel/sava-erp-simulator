@@ -75,7 +75,7 @@ export default async (req: Request): Promise<Response> => {
   }
   if (!allowed.session) return json(429, { error: 'session_cap_reached' });
 
-  const model = readEnv('COPILOT_MODEL') ?? 'claude-haiku-5-5';
+  const model = readEnv('COPILOT_MODEL') ?? 'claude-sonnet-5-5';
   const tools = COPILOT_TOOLS.map((t) => ({ name: t.name, description: t.description, input_schema: t.input_schema }));
   const userText = `Vai trò: ${role}. Bước hiện tại: ${currentStepId}. Đã chạy: ${done.join(', ') || 'chưa có'}.\nYêu cầu: ${message}`;
 
