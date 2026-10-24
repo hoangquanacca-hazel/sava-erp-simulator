@@ -1,0 +1,637 @@
+{
+  "as_of": "2026-10-24",
+  "status": "INTERNAL_REMEDIATION_QUEUE_EXTERNAL_EVIDENCE_BLOCKED",
+  "principle": "Close repository-level contract gaps first; do not mark native/release/SME gates complete from synthetic data.",
+  "queues": [
+    {
+      "gate": "IDENTITY",
+      "count": 1,
+      "report_ids": [
+        "FI17"
+      ],
+      "items": [
+        {
+          "report_id": "FI17",
+          "identity_evidence": {
+            "has_id_module_title": false,
+            "has_entrypoint": true,
+            "has_source_evidence": false
+          }
+        }
+      ],
+      "action": "Verify T-code/Fiori/source identity and preserve explicit UNKNOWN where no entrypoint is proven."
+    },
+    {
+      "gate": "SEMANTICS_AND_RECONCILIATION",
+      "count": 23,
+      "report_ids": [
+        "AA01",
+        "AA02",
+        "AA03",
+        "AA04",
+        "AA05",
+        "AA06",
+        "AA07",
+        "FI17",
+        "PP01",
+        "PP02",
+        "SD01",
+        "SD02",
+        "QM01",
+        "QM02",
+        "PM01",
+        "PM02",
+        "QM03",
+        "PM03",
+        "SD03",
+        "MM17",
+        "PP03",
+        "PP04",
+        "PP05"
+      ],
+      "items": [
+        {
+          "report_id": "AA01",
+          "missing_semantic_fields": [
+            "selection",
+            "reading",
+            "reconciliation",
+            "control",
+            "lineage",
+            "grain",
+            "keys",
+            "columns"
+          ]
+        },
+        {
+          "report_id": "AA02",
+          "missing_semantic_fields": [
+            "selection",
+            "reading",
+            "reconciliation",
+            "control",
+            "lineage",
+            "grain",
+            "keys",
+            "columns"
+          ]
+        },
+        {
+          "report_id": "AA03",
+          "missing_semantic_fields": [
+            "selection",
+            "reading",
+            "reconciliation",
+            "control",
+            "lineage",
+            "grain",
+            "keys",
+            "columns"
+          ]
+        },
+        {
+          "report_id": "AA04",
+          "missing_semantic_fields": [
+            "selection",
+            "reading",
+            "reconciliation",
+            "control",
+            "lineage",
+            "grain",
+            "keys",
+            "columns"
+          ]
+        },
+        {
+          "report_id": "AA05",
+          "missing_semantic_fields": [
+            "selection",
+            "reading",
+            "reconciliation",
+            "control",
+            "lineage",
+            "grain",
+            "keys",
+            "columns"
+          ]
+        },
+        {
+          "report_id": "AA06",
+          "missing_semantic_fields": [
+            "selection",
+            "reading",
+            "reconciliation",
+            "control",
+            "lineage",
+            "grain",
+            "keys",
+            "columns"
+          ]
+        },
+        {
+          "report_id": "AA07",
+          "missing_semantic_fields": [
+            "selection",
+            "reading",
+            "reconciliation",
+            "control",
+            "lineage",
+            "grain",
+            "keys",
+            "columns"
+          ]
+        },
+        {
+          "report_id": "FI17",
+          "missing_semantic_fields": [
+            "selection",
+            "reading",
+            "reconciliation",
+            "control",
+            "lineage",
+            "keys",
+            "columns"
+          ]
+        },
+        {
+          "report_id": "PP01",
+          "missing_semantic_fields": [
+            "selection",
+            "reading",
+            "reconciliation",
+            "control",
+            "keys",
+            "columns"
+          ]
+        },
+        {
+          "report_id": "PP02",
+          "missing_semantic_fields": [
+            "selection",
+            "reading",
+            "reconciliation",
+            "control",
+            "keys",
+            "columns"
+          ]
+        },
+        {
+          "report_id": "SD01",
+          "missing_semantic_fields": [
+            "selection",
+            "reading",
+            "reconciliation",
+            "control",
+            "keys",
+            "columns"
+          ]
+        },
+        {
+          "report_id": "SD02",
+          "missing_semantic_fields": [
+            "selection",
+            "reading",
+            "reconciliation",
+            "control",
+            "keys",
+            "columns"
+          ]
+        },
+        {
+          "report_id": "QM01",
+          "missing_semantic_fields": [
+            "selection",
+            "reading",
+            "reconciliation",
+            "control",
+            "keys",
+            "columns"
+          ]
+        },
+        {
+          "report_id": "QM02",
+          "missing_semantic_fields": [
+            "selection",
+            "reading",
+            "reconciliation",
+            "control",
+            "keys",
+            "columns"
+          ]
+        },
+        {
+          "report_id": "PM01",
+          "missing_semantic_fields": [
+            "selection",
+            "reading",
+            "reconciliation",
+            "control",
+            "keys",
+            "columns"
+          ]
+        },
+        {
+          "report_id": "PM02",
+          "missing_semantic_fields": [
+            "selection",
+            "reading",
+            "reconciliation",
+            "control",
+            "keys",
+            "columns"
+          ]
+        },
+        {
+          "report_id": "QM03",
+          "missing_semantic_fields": [
+            "selection",
+            "reading",
+            "reconciliation",
+            "control",
+            "keys",
+            "columns"
+          ]
+        },
+        {
+          "report_id": "PM03",
+          "missing_semantic_fields": [
+            "selection",
+            "reading",
+            "reconciliation",
+            "control",
+            "keys",
+            "columns"
+          ]
+        },
+        {
+          "report_id": "SD03",
+          "missing_semantic_fields": [
+            "selection",
+            "reading",
+            "reconciliation",
+            "control",
+            "keys",
+            "columns"
+          ]
+        },
+        {
+          "report_id": "MM17",
+          "missing_semantic_fields": [
+            "selection",
+            "reading",
+            "reconciliation",
+            "control",
+            "keys",
+            "columns"
+          ]
+        },
+        {
+          "report_id": "PP03",
+          "missing_semantic_fields": [
+            "selection",
+            "reading",
+            "reconciliation",
+            "control",
+            "keys",
+            "columns"
+          ]
+        },
+        {
+          "report_id": "PP04",
+          "missing_semantic_fields": [
+            "selection",
+            "reading",
+            "reconciliation",
+            "control",
+            "keys",
+            "columns"
+          ]
+        },
+        {
+          "report_id": "PP05",
+          "missing_semantic_fields": [
+            "selection",
+            "reading",
+            "reconciliation",
+            "control",
+            "keys",
+            "columns"
+          ]
+        }
+      ],
+      "action": "Complete grain, keys, columns, reconciliation and control; add a negative/cutoff fixture where a valid source rule exists."
+    },
+    {
+      "gate": "LAYOUT",
+      "count": 26,
+      "report_ids": [
+        "FI07",
+        "FI09",
+        "CO05",
+        "CO16",
+        "MM04",
+        "MM05",
+        "MM11",
+        "FI17",
+        "PP02",
+        "QM03",
+        "PM03",
+        "SD03",
+        "MM17",
+        "PP03",
+        "PP04",
+        "PP05",
+        "FI31",
+        "FI32",
+        "CO31",
+        "CO32",
+        "MM31",
+        "MM32",
+        "SD16",
+        "SD17",
+        "PM09",
+        "AA08"
+      ],
+      "items": [
+        {
+          "report_id": "FI07",
+          "layout_gate": "PROPOSED_ONLY"
+        },
+        {
+          "report_id": "FI09",
+          "layout_gate": "PROPOSED_ONLY"
+        },
+        {
+          "report_id": "CO05",
+          "layout_gate": "PROPOSED_ONLY"
+        },
+        {
+          "report_id": "CO16",
+          "layout_gate": "PROPOSED_ONLY"
+        },
+        {
+          "report_id": "MM04",
+          "layout_gate": "PROPOSED_ONLY"
+        },
+        {
+          "report_id": "MM05",
+          "layout_gate": "PROPOSED_ONLY"
+        },
+        {
+          "report_id": "MM11",
+          "layout_gate": "PROPOSED_ONLY"
+        },
+        {
+          "report_id": "FI17",
+          "layout_gate": "PROPOSED_ONLY"
+        },
+        {
+          "report_id": "PP02",
+          "layout_gate": "PROPOSED_ONLY"
+        },
+        {
+          "report_id": "QM03",
+          "layout_gate": "PROPOSED_ONLY"
+        },
+        {
+          "report_id": "PM03",
+          "layout_gate": "PROPOSED_ONLY"
+        },
+        {
+          "report_id": "SD03",
+          "layout_gate": "PROPOSED_ONLY"
+        },
+        {
+          "report_id": "MM17",
+          "layout_gate": "PROPOSED_ONLY"
+        },
+        {
+          "report_id": "PP03",
+          "layout_gate": "PROPOSED_ONLY"
+        },
+        {
+          "report_id": "PP04",
+          "layout_gate": "PROPOSED_ONLY"
+        },
+        {
+          "report_id": "PP05",
+          "layout_gate": "PROPOSED_ONLY"
+        },
+        {
+          "report_id": "FI31",
+          "layout_gate": "PROPOSED_ONLY"
+        },
+        {
+          "report_id": "FI32",
+          "layout_gate": "PROPOSED_ONLY"
+        },
+        {
+          "report_id": "CO31",
+          "layout_gate": "PROPOSED_ONLY"
+        },
+        {
+          "report_id": "CO32",
+          "layout_gate": "PROPOSED_ONLY"
+        },
+        {
+          "report_id": "MM31",
+          "layout_gate": "PROPOSED_ONLY"
+        },
+        {
+          "report_id": "MM32",
+          "layout_gate": "PROPOSED_ONLY"
+        },
+        {
+          "report_id": "SD16",
+          "layout_gate": "PROPOSED_ONLY"
+        },
+        {
+          "report_id": "SD17",
+          "layout_gate": "PROPOSED_ONLY"
+        },
+        {
+          "report_id": "PM09",
+          "layout_gate": "PROPOSED_ONLY"
+        },
+        {
+          "report_id": "AA08",
+          "layout_gate": "PROPOSED_ONLY"
+        }
+      ],
+      "action": "Keep proposed labels explicit until an authorized native layout or a bounded source reconstruction is read back."
+    },
+    {
+      "gate": "EXTERNAL_ACCEPTANCE",
+      "count": 160,
+      "report_ids": [
+        "FI01",
+        "FI02",
+        "FI03",
+        "FI04",
+        "FI05",
+        "FI06",
+        "FI07",
+        "FI08",
+        "FI09",
+        "FI10",
+        "FI11",
+        "FI12",
+        "FI13",
+        "FI14",
+        "FI15",
+        "FI16",
+        "CO01",
+        "CO02",
+        "CO03",
+        "CO04",
+        "CO05",
+        "CO06",
+        "CO07",
+        "CO08",
+        "CO09",
+        "CO10",
+        "CO11",
+        "CO12",
+        "CO13",
+        "CO14",
+        "CO15",
+        "CO16",
+        "MM01",
+        "MM02",
+        "MM03",
+        "MM04",
+        "MM05",
+        "MM06",
+        "MM07",
+        "MM08",
+        "MM09",
+        "MM10",
+        "MM11",
+        "MM12",
+        "MM13",
+        "MM14",
+        "MM15",
+        "MM16",
+        "AA01",
+        "AA02",
+        "AA03",
+        "AA04",
+        "AA05",
+        "AA06",
+        "AA07",
+        "FI17",
+        "PP01",
+        "PP02",
+        "SD01",
+        "SD02",
+        "QM01",
+        "QM02",
+        "PM01",
+        "PM02",
+        "QM03",
+        "PM03",
+        "SD03",
+        "MM17",
+        "PP03",
+        "PP04",
+        "PP05",
+        "FI18",
+        "FI19",
+        "FI20",
+        "FI21",
+        "FI22",
+        "FI23",
+        "FI24",
+        "FI25",
+        "FI26",
+        "FI27",
+        "FI28",
+        "FI29",
+        "FI30",
+        "CO17",
+        "CO18",
+        "CO19",
+        "CO20",
+        "CO21",
+        "CO22",
+        "CO23",
+        "CO24",
+        "CO25",
+        "CO26",
+        "CO27",
+        "CO28",
+        "CO29",
+        "CO30",
+        "MM18",
+        "MM19",
+        "MM20",
+        "MM21",
+        "MM22",
+        "MM23",
+        "MM24",
+        "MM25",
+        "MM26",
+        "MM27",
+        "MM28",
+        "MM29",
+        "MM30",
+        "PP06",
+        "PP07",
+        "PP08",
+        "PP09",
+        "PP10",
+        "PP11",
+        "PP12",
+        "PP13",
+        "PP14",
+        "PP15",
+        "PP16",
+        "PP17",
+        "PP18",
+        "PP19",
+        "PP20",
+        "SD04",
+        "SD05",
+        "SD06",
+        "SD07",
+        "SD08",
+        "SD09",
+        "SD10",
+        "SD11",
+        "SD12",
+        "SD13",
+        "SD14",
+        "SD15",
+        "QM04",
+        "QM05",
+        "QM06",
+        "QM07",
+        "QM08",
+        "QM09",
+        "QM10",
+        "PM04",
+        "PM05",
+        "PM06",
+        "PM07",
+        "PM08",
+        "FI31",
+        "FI32",
+        "CO31",
+        "CO32",
+        "MM31",
+        "MM32",
+        "SD16",
+        "SD17",
+        "PM09",
+        "AA08"
+      ],
+      "action": "Obtain native export, target release/client, technical catalog, Excel readback and SME/IFRS review."
+    }
+  ],
+  "ordering": [
+    "IDENTITY",
+    "SEMANTICS_AND_RECONCILIATION",
+    "LAYOUT",
+    "EXTERNAL_ACCEPTANCE"
+  ]
+}

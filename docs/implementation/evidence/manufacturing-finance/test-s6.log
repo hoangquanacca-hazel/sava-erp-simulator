@@ -1,0 +1,5 @@
+
+> react-example@0.0.0 test:s6
+> tsx scripts/s6-evidence.ts
+
+PASS S6:54 complete package/replay/deterministic roundtrips; unchanged GP/WIP oracle; signed RAW/CLEAN/CONTROL/MART/C08 mutation gates; missing/duplicate/malformed/oversize/publication/hash/stale/async checks; never human approved.

@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-22",
+  "command": "npm run test:manufacturing-finance -- --write-evidence",
+  "checks": 20,
+  "evidenceFile": "MFG-FIN-20261021_SIMULATED.json",
+  "sha256": "93491e311887e6c1c74490881421e2c4ef5a8fd35b308550225400ba18294379",
+  "replay": "PASS",
+  "sapNative": "NOT_RUN",
+  "independentSme": "PENDING",
+  "business": "NOT_APPROVED"
+}

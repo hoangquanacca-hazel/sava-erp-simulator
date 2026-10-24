@@ -1,0 +1,3 @@
+company,year,doc,line,date,gl,amount,currency,doc_amount,doc_currency
+1000,2026,190100001,001,2026-09-30,150000,1000,USD,1000,USD
+1000,2026,190100002,002,2026-09-30,150000,-250,USD,-250,USD

@@ -1,0 +1,674 @@
+{
+  "as_of": "2026-10-24",
+  "status": "PHASE3_DESIGN_STARTED_SOURCE_BLOCKED",
+  "objective": "Prepare cross-report lineage, reconciliation and analytics adapters without claiming production integration.",
+  "quantity_boundary": {
+    "current_authored_profiles": 160,
+    "entry_threshold": 200,
+    "upper_planning_limit": 250,
+    "new_profiles_needed_for_entry": 40,
+    "do_not_count": [
+      "variants",
+      "technical extracts",
+      "filter variants",
+      "synthetic rows",
+      "duplicate purposes"
+    ]
+  },
+  "pilot": [
+    {
+      "report_id": "FI01",
+      "purpose": "GL entry and ledger bridge",
+      "integration_join": "FI document line -> ledger balance",
+      "present_in_library": true,
+      "module": "FI",
+      "grain": "Một dòng cho tổ hợp: company + year + doc + line. Thêm source_system/client; snapshot lưu dataset_id riêng.",
+      "keys": [
+        "company",
+        "year",
+        "doc",
+        "line"
+      ],
+      "columns": [
+        "company",
+        "year",
+        "doc",
+        "line",
+        "date",
+        "gl",
+        "amount",
+        "currency",
+        "doc_amount",
+        "doc_currency"
+      ],
+      "contract_status": "AUTHORED_RESEARCH_PENDING_TARGET_AND_SME",
+      "phase3_status": "PILOT_CANDIDATE_PENDING_NATIVE_INPUT",
+      "required_evidence": [
+        "system/product/release/client/language",
+        "selection variant and cutoff",
+        "original export plus SHA-256",
+        "ordered header and technical field catalog",
+        "grain/key/currency/UoM and control totals",
+        "reconciliation owner and SME sign-off"
+      ]
+    },
+    {
+      "report_id": "FI02",
+      "purpose": "GL ledger view",
+      "integration_join": "ledger line -> trial balance",
+      "present_in_library": true,
+      "module": "FI",
+      "grain": "Một dòng cho tổ hợp: ledger + company + year + doc + line. Thêm source_system/client; snapshot lưu dataset_id riêng.",
+      "keys": [
+        "ledger",
+        "company",
+        "year",
+        "doc",
+        "line"
+      ],
+      "columns": [
+        "ledger",
+        "company",
+        "year",
+        "doc",
+        "line",
+        "date",
+        "gl",
+        "profit_center",
+        "amount",
+        "currency",
+        "currency_type"
+      ],
+      "contract_status": "AUTHORED_RESEARCH_PENDING_TARGET_AND_SME",
+      "phase3_status": "PILOT_CANDIDATE_PENDING_NATIVE_INPUT",
+      "required_evidence": [
+        "system/product/release/client/language",
+        "selection variant and cutoff",
+        "original export plus SHA-256",
+        "ordered header and technical field catalog",
+        "grain/key/currency/UoM and control totals",
+        "reconciliation owner and SME sign-off"
+      ]
+    },
+    {
+      "report_id": "FI06",
+      "purpose": "Supplier line items",
+      "integration_join": "AP line -> aging/payment",
+      "present_in_library": true,
+      "module": "FI",
+      "grain": "Một dòng cho tổ hợp: company + year + doc + line. Thêm source_system/client; snapshot lưu dataset_id riêng.",
+      "keys": [
+        "company",
+        "year",
+        "doc",
+        "line"
+      ],
+      "columns": [
+        "company",
+        "year",
+        "doc",
+        "line",
+        "partner",
+        "date",
+        "due_date",
+        "clearing_date",
+        "amount",
+        "currency"
+      ],
+      "contract_status": "AUTHORED_RESEARCH_PENDING_TARGET_AND_SME",
+      "phase3_status": "PILOT_CANDIDATE_PENDING_NATIVE_INPUT",
+      "required_evidence": [
+        "system/product/release/client/language",
+        "selection variant and cutoff",
+        "original export plus SHA-256",
+        "ordered header and technical field catalog",
+        "grain/key/currency/UoM and control totals",
+        "reconciliation owner and SME sign-off"
+      ]
+    },
+    {
+      "report_id": "FI15",
+      "purpose": "GR/IR reconciliation monitor",
+      "integration_join": "GR/IR cases -> MM history and FI",
+      "present_in_library": true,
+      "module": "FI",
+      "grain": "Một dòng cho tổ hợp: company + key_date + dimension + currency. Thêm source_system/client; snapshot lưu dataset_id riêng.",
+      "keys": [
+        "company",
+        "key_date",
+        "dimension",
+        "currency"
+      ],
+      "columns": [
+        "company",
+        "key_date",
+        "dimension",
+        "count",
+        "gr_value",
+        "ir_value",
+        "amount_abs",
+        "currency"
+      ],
+      "contract_status": "AUTHORED_RESEARCH_PENDING_TARGET_AND_SME",
+      "phase3_status": "PILOT_CANDIDATE_PENDING_NATIVE_INPUT",
+      "required_evidence": [
+        "system/product/release/client/language",
+        "selection variant and cutoff",
+        "original export plus SHA-256",
+        "ordered header and technical field catalog",
+        "grain/key/currency/UoM and control totals",
+        "reconciliation owner and SME sign-off"
+      ]
+    },
+    {
+      "report_id": "CO01",
+      "purpose": "Actual cost center detail",
+      "integration_join": "CO actual -> plan/variance",
+      "present_in_library": true,
+      "module": "CO",
+      "grain": "Một dòng cho tổ hợp: co_area + year + doc + line. Thêm source_system/client; snapshot lưu dataset_id riêng.",
+      "keys": [
+        "co_area",
+        "year",
+        "doc",
+        "line"
+      ],
+      "columns": [
+        "co_area",
+        "year",
+        "period",
+        "doc",
+        "line",
+        "cost_center",
+        "cost_element",
+        "amount",
+        "currency",
+        "activity",
+        "qty",
+        "uom"
+      ],
+      "contract_status": "AUTHORED_RESEARCH_PENDING_TARGET_AND_SME",
+      "phase3_status": "PILOT_CANDIDATE_PENDING_NATIVE_INPUT",
+      "required_evidence": [
+        "system/product/release/client/language",
+        "selection variant and cutoff",
+        "original export plus SHA-256",
+        "ordered header and technical field catalog",
+        "grain/key/currency/UoM and control totals",
+        "reconciliation owner and SME sign-off"
+      ]
+    },
+    {
+      "report_id": "CO15",
+      "purpose": "CO-PA actual line items",
+      "integration_join": "CO-PA line -> margin bridge",
+      "present_in_library": true,
+      "module": "CO",
+      "grain": "Một dòng cho tổ hợp: co_area + year + doc + line. Thêm source_system/client; snapshot lưu dataset_id riêng.",
+      "keys": [
+        "co_area",
+        "year",
+        "doc",
+        "line"
+      ],
+      "columns": [
+        "co_area",
+        "year",
+        "period",
+        "doc",
+        "line",
+        "customer",
+        "product",
+        "profit_center",
+        "cost_element",
+        "amount",
+        "currency"
+      ],
+      "contract_status": "AUTHORED_RESEARCH_PENDING_TARGET_AND_SME",
+      "phase3_status": "PILOT_CANDIDATE_PENDING_NATIVE_INPUT",
+      "required_evidence": [
+        "system/product/release/client/language",
+        "selection variant and cutoff",
+        "original export plus SHA-256",
+        "ordered header and technical field catalog",
+        "grain/key/currency/UoM and control totals",
+        "reconciliation owner and SME sign-off"
+      ]
+    },
+    {
+      "report_id": "MM01",
+      "purpose": "Material document items",
+      "integration_join": "movement -> stock/order",
+      "present_in_library": true,
+      "module": "MM",
+      "grain": "Một dòng cho tổ hợp: year + material_doc + item. Thêm source_system/client; snapshot lưu dataset_id riêng.",
+      "keys": [
+        "year",
+        "material_doc",
+        "item"
+      ],
+      "columns": [
+        "year",
+        "material_doc",
+        "item",
+        "date",
+        "material",
+        "plant",
+        "movement",
+        "special_stock",
+        "qty",
+        "uom",
+        "amount",
+        "currency",
+        "po",
+        "order",
+        "accounting_ref"
+      ],
+      "contract_status": "AUTHORED_RESEARCH_PENDING_TARGET_AND_SME",
+      "phase3_status": "PILOT_CANDIDATE_PENDING_NATIVE_INPUT",
+      "required_evidence": [
+        "system/product/release/client/language",
+        "selection variant and cutoff",
+        "original export plus SHA-256",
+        "ordered header and technical field catalog",
+        "grain/key/currency/UoM and control totals",
+        "reconciliation owner and SME sign-off"
+      ]
+    },
+    {
+      "report_id": "MM08",
+      "purpose": "Purchase order history",
+      "integration_join": "PO item -> GR/IR",
+      "present_in_library": true,
+      "module": "MM",
+      "grain": "Một dòng cho tổ hợp: po + item + event + year + doc + line. Thêm source_system/client; snapshot lưu dataset_id riêng.",
+      "keys": [
+        "po",
+        "item",
+        "event",
+        "year",
+        "doc",
+        "line"
+      ],
+      "columns": [
+        "po",
+        "item",
+        "event",
+        "year",
+        "doc",
+        "line",
+        "date",
+        "qty",
+        "uom",
+        "amount",
+        "currency",
+        "accounting_ref"
+      ],
+      "contract_status": "AUTHORED_RESEARCH_PENDING_TARGET_AND_SME",
+      "phase3_status": "PILOT_CANDIDATE_PENDING_NATIVE_INPUT",
+      "required_evidence": [
+        "system/product/release/client/language",
+        "selection variant and cutoff",
+        "original export plus SHA-256",
+        "ordered header and technical field catalog",
+        "grain/key/currency/UoM and control totals",
+        "reconciliation owner and SME sign-off"
+      ]
+    },
+    {
+      "report_id": "PP01",
+      "purpose": "Production order views",
+      "integration_join": "order -> operations/components",
+      "present_in_library": true,
+      "module": "PP",
+      "grain": "Order/item; operation/component là grain riêng",
+      "keys": null,
+      "columns": null,
+      "contract_status": "RESEARCH_DEMO_PENDING_COMPANY_LAYOUT",
+      "phase3_status": "PILOT_CANDIDATE_PENDING_NATIVE_INPUT",
+      "required_evidence": [
+        "system/product/release/client/language",
+        "selection variant and cutoff",
+        "original export plus SHA-256",
+        "ordered header and technical field catalog",
+        "grain/key/currency/UoM and control totals",
+        "reconciliation owner and SME sign-off"
+      ]
+    },
+    {
+      "report_id": "SD01",
+      "purpose": "Sales order/delivery chain",
+      "integration_join": "order -> delivery/billing",
+      "present_in_library": true,
+      "module": "SD",
+      "grain": "Sales document/item/schedule line theo listtype",
+      "keys": null,
+      "columns": null,
+      "contract_status": "RESEARCH_DEMO_PENDING_COMPANY_LAYOUT",
+      "phase3_status": "PILOT_CANDIDATE_PENDING_NATIVE_INPUT",
+      "required_evidence": [
+        "system/product/release/client/language",
+        "selection variant and cutoff",
+        "original export plus SHA-256",
+        "ordered header and technical field catalog",
+        "grain/key/currency/UoM and control totals",
+        "reconciliation owner and SME sign-off"
+      ]
+    },
+    {
+      "report_id": "QM01",
+      "purpose": "Inspection lot/worklist",
+      "integration_join": "inspection -> usage decision",
+      "present_in_library": true,
+      "module": "QM",
+      "grain": "Inspection lot/plant; characteristics/inspectionpoints khácgrain",
+      "keys": null,
+      "columns": null,
+      "contract_status": "RESEARCH_DEMO_PENDING_COMPANY_LAYOUT",
+      "phase3_status": "PILOT_CANDIDATE_PENDING_NATIVE_INPUT",
+      "required_evidence": [
+        "system/product/release/client/language",
+        "selection variant and cutoff",
+        "original export plus SHA-256",
+        "ordered header and technical field catalog",
+        "grain/key/currency/UoM and control totals",
+        "reconciliation owner and SME sign-off"
+      ]
+    },
+    {
+      "report_id": "PM01",
+      "purpose": "Maintenance order list",
+      "integration_join": "order -> downtime/spend",
+      "present_in_library": true,
+      "module": "PM",
+      "grain": "Maintenance order header",
+      "keys": null,
+      "columns": null,
+      "contract_status": "RESEARCH_DEMO_PENDING_COMPANY_LAYOUT",
+      "phase3_status": "PILOT_CANDIDATE_PENDING_NATIVE_INPUT",
+      "required_evidence": [
+        "system/product/release/client/language",
+        "selection variant and cutoff",
+        "original export plus SHA-256",
+        "ordered header and technical field catalog",
+        "grain/key/currency/UoM and control totals",
+        "reconciliation owner and SME sign-off"
+      ]
+    }
+  ],
+  "join_matrix": [
+    {
+      "left": "FI01",
+      "right": "FI02",
+      "relation": "DOCUMENT_LINE_BRIDGE",
+      "known_common_columns": [
+        "amount",
+        "company",
+        "currency",
+        "date",
+        "doc",
+        "gl",
+        "line",
+        "year"
+      ],
+      "declared_bridge_fields": [
+        "company",
+        "year",
+        "doc",
+        "line"
+      ],
+      "direct_join_allowed": false,
+      "status": "CANDIDATE_RECONCILIATION_BRIDGE",
+      "risk": "FI01 entry versus FI02 ledger; ledger and currency scope must be identical.",
+      "required_before_use": [
+        "native export for both sides",
+        "same cutoff and scope",
+        "approved key/cardinality test",
+        "owner sign-off"
+      ]
+    },
+    {
+      "left": "FI01",
+      "right": "FI06",
+      "relation": "FI_PARTNER_LINE_BRIDGE",
+      "known_common_columns": [
+        "amount",
+        "company",
+        "currency",
+        "date",
+        "doc",
+        "line",
+        "year"
+      ],
+      "declared_bridge_fields": [
+        "company",
+        "year",
+        "doc",
+        "line"
+      ],
+      "direct_join_allowed": false,
+      "status": "CANDIDATE_RECONCILIATION_BRIDGE",
+      "risk": "Same document line shape does not prove AP partner semantics or account scope.",
+      "required_before_use": [
+        "native export for both sides",
+        "same cutoff and scope",
+        "approved key/cardinality test",
+        "owner sign-off"
+      ]
+    },
+    {
+      "left": "CO01",
+      "right": "CO15",
+      "relation": "CO_TO_COPA_BRIDGE",
+      "known_common_columns": [
+        "amount",
+        "co_area",
+        "cost_element",
+        "currency",
+        "doc",
+        "line",
+        "period",
+        "year"
+      ],
+      "declared_bridge_fields": [
+        "co_area",
+        "year",
+        "doc",
+        "line"
+      ],
+      "direct_join_allowed": false,
+      "status": "CANDIDATE_RECONCILIATION_BRIDGE",
+      "risk": "CO actual line and CO-PA line may use different document namespaces and profitability grains.",
+      "required_before_use": [
+        "native export for both sides",
+        "same cutoff and scope",
+        "approved key/cardinality test",
+        "owner sign-off"
+      ]
+    },
+    {
+      "left": "MM01",
+      "right": "MM08",
+      "relation": "PO_HISTORY_MOVEMENT_BRIDGE",
+      "known_common_columns": [
+        "accounting_ref",
+        "amount",
+        "currency",
+        "date",
+        "item",
+        "po",
+        "qty",
+        "uom",
+        "year"
+      ],
+      "declared_bridge_fields": [
+        "year",
+        "po",
+        "item",
+        "currency"
+      ],
+      "direct_join_allowed": false,
+      "status": "CANDIDATE_RECONCILIATION_BRIDGE",
+      "risk": "PO history events and material movements are not one-to-one; preserve event and reversal keys.",
+      "required_before_use": [
+        "native export for both sides",
+        "same cutoff and scope",
+        "approved key/cardinality test",
+        "owner sign-off"
+      ]
+    },
+    {
+      "left": "FI15",
+      "right": "MM08",
+      "relation": "GRIR_TO_PO_HISTORY_CONTROL",
+      "known_common_columns": [
+        "currency"
+      ],
+      "declared_bridge_fields": [
+        "currency"
+      ],
+      "direct_join_allowed": false,
+      "status": "CANDIDATE_RECONCILIATION_BRIDGE",
+      "risk": "GR/IR monitor is an aggregate control view; do not join it to PO rows without an approved bridge.",
+      "required_before_use": [
+        "native export for both sides",
+        "same cutoff and scope",
+        "approved key/cardinality test",
+        "owner sign-off"
+      ]
+    },
+    {
+      "left": "PP01",
+      "right": "MM01",
+      "relation": "ORDER_COMPONENT_MOVEMENT_BRIDGE",
+      "known_common_columns": [],
+      "declared_bridge_fields": [
+        "order",
+        "material"
+      ],
+      "direct_join_allowed": false,
+      "status": "CANDIDATE_RECONCILIATION_BRIDGE",
+      "risk": "Production order, component and movement grains differ; aggregate only through approved order/item keys.",
+      "required_before_use": [
+        "native export for both sides",
+        "same cutoff and scope",
+        "approved key/cardinality test",
+        "owner sign-off"
+      ]
+    },
+    {
+      "left": "SD01",
+      "right": "MM01",
+      "relation": "SALES_TO_MOVEMENT_BRIDGE",
+      "known_common_columns": [],
+      "declared_bridge_fields": [
+        "material",
+        "plant"
+      ],
+      "direct_join_allowed": false,
+      "status": "CANDIDATE_RECONCILIATION_BRIDGE",
+      "risk": "Material/plant is a contextual bridge, not a sales-item identity.",
+      "required_before_use": [
+        "native export for both sides",
+        "same cutoff and scope",
+        "approved key/cardinality test",
+        "owner sign-off"
+      ]
+    },
+    {
+      "left": "QM01",
+      "right": "MM01",
+      "relation": "INSPECTION_TO_MOVEMENT_BRIDGE",
+      "known_common_columns": [],
+      "declared_bridge_fields": [
+        "material",
+        "plant"
+      ],
+      "direct_join_allowed": false,
+      "status": "CANDIDATE_RECONCILIATION_BRIDGE",
+      "risk": "Inspection lot and movement events need lot/batch and cutoff evidence before any bridge.",
+      "required_before_use": [
+        "native export for both sides",
+        "same cutoff and scope",
+        "approved key/cardinality test",
+        "owner sign-off"
+      ]
+    },
+    {
+      "left": "PM01",
+      "right": "MM01",
+      "relation": "MAINTENANCE_TO_MOVEMENT_BRIDGE",
+      "known_common_columns": [],
+      "declared_bridge_fields": [
+        "order",
+        "material"
+      ],
+      "direct_join_allowed": false,
+      "status": "CANDIDATE_RECONCILIATION_BRIDGE",
+      "risk": "Maintenance consumption and material movements require order/component evidence.",
+      "required_before_use": [
+        "native export for both sides",
+        "same cutoff and scope",
+        "approved key/cardinality test",
+        "owner sign-off"
+      ]
+    }
+  ],
+  "integration_layers": [
+    {
+      "name": "RAW",
+      "contract": "Original bytes, source coordinates, immutable SHA-256"
+    },
+    {
+      "name": "CLEAN",
+      "contract": "Profile-specific parsing; preserve original and exceptions"
+    },
+    {
+      "name": "CONTROL",
+      "contract": "Row/key/amount/quantity/currency tie-outs and exception log"
+    },
+    {
+      "name": "MART",
+      "contract": "Grain-safe facts and dimensions; no mixed-cutoff joins"
+    },
+    {
+      "name": "ANALYTICS",
+      "contract": "Power BI/Fiori/API adapters consume approved MART views only"
+    }
+  ],
+  "entry_gates": [
+    "Target SAP edition/release and client are known",
+    "At least one authorized native export per pilot profile",
+    "Field order and technical catalog read back from the export",
+    "Reconciliation pack has valid/invalid/cutoff/reversal cases",
+    "Business owner and SAP SME approve semantics",
+    "Runtime integration is separately approved and regression-tested"
+  ],
+  "not_yet_claimed": [
+    "Power BI production dataset",
+    "Fiori production app mapping",
+    "Simulator runtime report integration",
+    "200 accepted reports"
+  ],
+  "pilot_ids": [
+    "FI01",
+    "FI02",
+    "FI06",
+    "FI15",
+    "CO01",
+    "CO15",
+    "MM01",
+    "MM08",
+    "PP01",
+    "SD01",
+    "QM01",
+    "PM01"
+  ],
+  "source_hashes": {
+    "progress.json": "498d6de81099fd0849f85bb1583fc86da5f2732011cf7a97c379a50f80927a65",
+    "report-master-dictionary.json": "2ebe1a9a2b5313cf7e5f491bf0ea9f7ffdd76325a1dd7d98bed3d5175c963d22",
+    "raw-input-register.json": "b228855a0c9eae71836c3b470c48a034bcc22c8aa64e008bcb6398ef50f92e19",
+    "sap-export-format-profiles.json": "bea5bcd841461695ef6f959334fae99f56c7e6a09dc10c1be2e56162c5d24f83",
+    "priority-24.json": "c7ef5fab0d25fa8983314e37100710abcce5914097cd46d49db528a674b4e5bf"
+  }
+}

@@ -1,0 +1,490 @@
+{
+  "schema_version": "power-bi-staging.v1",
+  "dataset_name": "SAVA_SAP_REPORTING_SIMULATED_NATIVE_PILOT",
+  "provenance_class": "SIMULATED_NATIVE",
+  "import_mode": "CSV_FILES_WITH_SCHEMA_MANIFEST",
+  "eligible_for_demo": true,
+  "eligible_for_production": false,
+  "deployment_status": "NOT_DEPLOYED",
+  "tables": [
+    {
+      "name": "FI01_fact",
+      "source": "power-bi/tables/FI01.csv",
+      "columns": [
+        {
+          "name": "company",
+          "type": "text"
+        },
+        {
+          "name": "year",
+          "type": "wholeNumber"
+        },
+        {
+          "name": "doc",
+          "type": "text"
+        },
+        {
+          "name": "line",
+          "type": "wholeNumber"
+        },
+        {
+          "name": "date",
+          "type": "wholeNumber"
+        },
+        {
+          "name": "gl",
+          "type": "text"
+        },
+        {
+          "name": "amount",
+          "type": "decimalNumber"
+        },
+        {
+          "name": "currency",
+          "type": "text"
+        },
+        {
+          "name": "doc_amount",
+          "type": "decimalNumber"
+        },
+        {
+          "name": "doc_currency",
+          "type": "text"
+        }
+      ],
+      "grain": "Một dòng cho tổ hợp: company + year + doc + line. Thêm source_system/client; snapshot lưu dataset_id riêng.",
+      "keys": [
+        "company",
+        "year",
+        "doc",
+        "line"
+      ]
+    },
+    {
+      "name": "FI02_fact",
+      "source": "power-bi/tables/FI02.csv",
+      "columns": [
+        {
+          "name": "ledger",
+          "type": "text"
+        },
+        {
+          "name": "company",
+          "type": "text"
+        },
+        {
+          "name": "year",
+          "type": "wholeNumber"
+        },
+        {
+          "name": "doc",
+          "type": "text"
+        },
+        {
+          "name": "line",
+          "type": "wholeNumber"
+        },
+        {
+          "name": "date",
+          "type": "wholeNumber"
+        },
+        {
+          "name": "gl",
+          "type": "text"
+        },
+        {
+          "name": "profit_center",
+          "type": "text"
+        },
+        {
+          "name": "amount",
+          "type": "decimalNumber"
+        },
+        {
+          "name": "currency",
+          "type": "text"
+        },
+        {
+          "name": "currency_type",
+          "type": "text"
+        }
+      ],
+      "grain": "Một dòng cho tổ hợp: ledger + company + year + doc + line. Thêm source_system/client; snapshot lưu dataset_id riêng.",
+      "keys": [
+        "ledger",
+        "company",
+        "year",
+        "doc",
+        "line"
+      ]
+    },
+    {
+      "name": "FI06_fact",
+      "source": "power-bi/tables/FI06.csv",
+      "columns": [
+        {
+          "name": "company",
+          "type": "text"
+        },
+        {
+          "name": "year",
+          "type": "wholeNumber"
+        },
+        {
+          "name": "doc",
+          "type": "text"
+        },
+        {
+          "name": "line",
+          "type": "wholeNumber"
+        },
+        {
+          "name": "partner",
+          "type": "text"
+        },
+        {
+          "name": "date",
+          "type": "wholeNumber"
+        },
+        {
+          "name": "due_date",
+          "type": "wholeNumber"
+        },
+        {
+          "name": "clearing_date",
+          "type": "wholeNumber"
+        },
+        {
+          "name": "amount",
+          "type": "decimalNumber"
+        },
+        {
+          "name": "currency",
+          "type": "text"
+        }
+      ],
+      "grain": "Một dòng cho tổ hợp: company + year + doc + line. Thêm source_system/client; snapshot lưu dataset_id riêng.",
+      "keys": [
+        "company",
+        "year",
+        "doc",
+        "line"
+      ]
+    },
+    {
+      "name": "FI15_fact",
+      "source": "power-bi/tables/FI15.csv",
+      "columns": [
+        {
+          "name": "company",
+          "type": "text"
+        },
+        {
+          "name": "key_date",
+          "type": "wholeNumber"
+        },
+        {
+          "name": "dimension",
+          "type": "text"
+        },
+        {
+          "name": "count",
+          "type": "wholeNumber"
+        },
+        {
+          "name": "gr_value",
+          "type": "decimalNumber"
+        },
+        {
+          "name": "ir_value",
+          "type": "decimalNumber"
+        },
+        {
+          "name": "amount_abs",
+          "type": "decimalNumber"
+        },
+        {
+          "name": "currency",
+          "type": "text"
+        }
+      ],
+      "grain": "Một dòng cho tổ hợp: company + key_date + dimension + currency. Thêm source_system/client; snapshot lưu dataset_id riêng.",
+      "keys": [
+        "company",
+        "key_date",
+        "dimension",
+        "currency"
+      ]
+    },
+    {
+      "name": "CO01_fact",
+      "source": "power-bi/tables/CO01.csv",
+      "columns": [
+        {
+          "name": "co_area",
+          "type": "text"
+        },
+        {
+          "name": "year",
+          "type": "wholeNumber"
+        },
+        {
+          "name": "period",
+          "type": "wholeNumber"
+        },
+        {
+          "name": "doc",
+          "type": "text"
+        },
+        {
+          "name": "line",
+          "type": "wholeNumber"
+        },
+        {
+          "name": "cost_center",
+          "type": "text"
+        },
+        {
+          "name": "cost_element",
+          "type": "text"
+        },
+        {
+          "name": "amount",
+          "type": "decimalNumber"
+        },
+        {
+          "name": "currency",
+          "type": "text"
+        },
+        {
+          "name": "activity",
+          "type": "text"
+        },
+        {
+          "name": "qty",
+          "type": "decimalNumber"
+        },
+        {
+          "name": "uom",
+          "type": "text"
+        }
+      ],
+      "grain": "Một dòng cho tổ hợp: co_area + year + doc + line. Thêm source_system/client; snapshot lưu dataset_id riêng.",
+      "keys": [
+        "co_area",
+        "year",
+        "doc",
+        "line"
+      ]
+    },
+    {
+      "name": "CO15_fact",
+      "source": "power-bi/tables/CO15.csv",
+      "columns": [
+        {
+          "name": "co_area",
+          "type": "text"
+        },
+        {
+          "name": "year",
+          "type": "wholeNumber"
+        },
+        {
+          "name": "period",
+          "type": "wholeNumber"
+        },
+        {
+          "name": "doc",
+          "type": "text"
+        },
+        {
+          "name": "line",
+          "type": "wholeNumber"
+        },
+        {
+          "name": "customer",
+          "type": "text"
+        },
+        {
+          "name": "product",
+          "type": "text"
+        },
+        {
+          "name": "profit_center",
+          "type": "text"
+        },
+        {
+          "name": "cost_element",
+          "type": "text"
+        },
+        {
+          "name": "amount",
+          "type": "decimalNumber"
+        },
+        {
+          "name": "currency",
+          "type": "text"
+        }
+      ],
+      "grain": "Một dòng cho tổ hợp: co_area + year + doc + line. Thêm source_system/client; snapshot lưu dataset_id riêng.",
+      "keys": [
+        "co_area",
+        "year",
+        "doc",
+        "line"
+      ]
+    },
+    {
+      "name": "MM01_fact",
+      "source": "power-bi/tables/MM01.csv",
+      "columns": [
+        {
+          "name": "year",
+          "type": "wholeNumber"
+        },
+        {
+          "name": "material_doc",
+          "type": "text"
+        },
+        {
+          "name": "item",
+          "type": "wholeNumber"
+        },
+        {
+          "name": "date",
+          "type": "wholeNumber"
+        },
+        {
+          "name": "material",
+          "type": "text"
+        },
+        {
+          "name": "plant",
+          "type": "text"
+        },
+        {
+          "name": "movement",
+          "type": "text"
+        },
+        {
+          "name": "special_stock",
+          "type": "text"
+        },
+        {
+          "name": "qty",
+          "type": "decimalNumber"
+        },
+        {
+          "name": "uom",
+          "type": "text"
+        },
+        {
+          "name": "amount",
+          "type": "decimalNumber"
+        },
+        {
+          "name": "currency",
+          "type": "text"
+        },
+        {
+          "name": "po",
+          "type": "text"
+        },
+        {
+          "name": "order",
+          "type": "text"
+        },
+        {
+          "name": "accounting_ref",
+          "type": "text"
+        }
+      ],
+      "grain": "Một dòng cho tổ hợp: year + material_doc + item. Thêm source_system/client; snapshot lưu dataset_id riêng.",
+      "keys": [
+        "year",
+        "material_doc",
+        "item"
+      ]
+    },
+    {
+      "name": "MM08_fact",
+      "source": "power-bi/tables/MM08.csv",
+      "columns": [
+        {
+          "name": "po",
+          "type": "text"
+        },
+        {
+          "name": "item",
+          "type": "wholeNumber"
+        },
+        {
+          "name": "event",
+          "type": "text"
+        },
+        {
+          "name": "year",
+          "type": "wholeNumber"
+        },
+        {
+          "name": "doc",
+          "type": "text"
+        },
+        {
+          "name": "line",
+          "type": "wholeNumber"
+        },
+        {
+          "name": "date",
+          "type": "wholeNumber"
+        },
+        {
+          "name": "qty",
+          "type": "decimalNumber"
+        },
+        {
+          "name": "uom",
+          "type": "text"
+        },
+        {
+          "name": "amount",
+          "type": "decimalNumber"
+        },
+        {
+          "name": "currency",
+          "type": "text"
+        },
+        {
+          "name": "accounting_ref",
+          "type": "text"
+        }
+      ],
+      "grain": "Một dòng cho tổ hợp: po + item + event + year + doc + line. Thêm source_system/client; snapshot lưu dataset_id riêng.",
+      "keys": [
+        "po",
+        "item",
+        "event",
+        "year",
+        "doc",
+        "line"
+      ]
+    }
+  ],
+  "relationships": [],
+  "measures": [
+    {
+      "name": "Row Count",
+      "expression": "COUNTROWS(<table>)",
+      "status": "TEMPLATE_PER_TABLE"
+    },
+    {
+      "name": "Control Status",
+      "expression": "SIMULATED_PASS",
+      "status": "FIXED_METADATA"
+    }
+  ],
+  "limitations": [
+    "No Power BI workspace push was performed; import package only.",
+    "Do not use simulated rows as SAP-certified data."
+  ]
+}

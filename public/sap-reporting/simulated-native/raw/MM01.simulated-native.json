@@ -1,0 +1,57 @@
+{
+  "banner": "SIMULATED_NATIVE | GENERATED_SYNTHETIC | NOT_SAP_NATIVE",
+  "report_id": "MM01",
+  "ordered_columns": [
+    "year",
+    "material_doc",
+    "item",
+    "date",
+    "material",
+    "plant",
+    "movement",
+    "special_stock",
+    "qty",
+    "uom",
+    "amount",
+    "currency",
+    "po",
+    "order",
+    "accounting_ref"
+  ],
+  "rows": [
+    {
+      "year": "2026",
+      "material_doc": "MATERIAL_DOC_DEMO_1",
+      "item": "001",
+      "date": "2026-09-30",
+      "material": "FG-DEMO-01",
+      "plant": "PLANT_DEMO_1",
+      "movement": "MOVEMENT_DEMO_1",
+      "special_stock": "SPECIAL_STOCK_DEMO_1",
+      "qty": "10",
+      "uom": "EA",
+      "amount": "1000",
+      "currency": "USD",
+      "po": "PO_DEMO_1",
+      "order": "ORDER_DEMO_1",
+      "accounting_ref": "ACCOUNTING_REF_DEMO_1"
+    },
+    {
+      "year": "2026",
+      "material_doc": "MATERIAL_DOC_DEMO_2",
+      "item": "002",
+      "date": "2026-09-30",
+      "material": "FG-DEMO-01",
+      "plant": "PLANT_DEMO_2",
+      "movement": "MOVEMENT_DEMO_2",
+      "special_stock": "SPECIAL_STOCK_DEMO_2",
+      "qty": "20",
+      "uom": "EA",
+      "amount": "-250",
+      "currency": "USD",
+      "po": "PO_DEMO_2",
+      "order": "ORDER_DEMO_2",
+      "accounting_ref": "ACCOUNTING_REF_DEMO_2"
+    }
+  ]
+}

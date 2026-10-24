@@ -1,0 +1,128 @@
+import React, { useState } from 'react';
+import { bankMatch, budgetCheck, financeControls, FINANCE_SCOPE, type FinanceCommand, type FinanceResult } from '../features/manufacturingFinance';
+import { exportFinanceEvidence } from '../evidence/manufacturingFinance';
+import { financeReportText, manufacturingFinanceReports } from '../reports/manufacturingFinance';
+import { formatVND } from '../utils/calculator';
+import type { UIMode } from '../types';
+
+const DEFAULT_FORM = { amount: '60000000', bankId: '1000/HB01/OPERATING/2026-10-21/003', invoiceId: '1000/2026/9100000004/001' };
+
+function download(text: string, name: string, type: string) {
+  const url = URL.createObjectURL(new Blob([text], { type }));
+  const a = document.createElement('a'); a.href = url; a.download = name; a.click();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+export default function ManufacturingFinancePage({ session, onCommand, onReset, uiMode = 'fiori' }: {
+  session: FinanceResult; onCommand: (command: FinanceCommand) => void; onReset: () => void; uiMode?: UIMode;
+}) {
+  const s = session.state;
+  const [amount, setAmount] = useState(DEFAULT_FORM.amount);
+  const [bankId, setBankId] = useState(DEFAULT_FORM.bankId);
+  const [invoiceId, setInvoiceId] = useState(DEFAULT_FORM.invoiceId);
+  const [artifact, setArtifact] = useState<{ sha256: string; revision: number; source: typeof s } | null>(null);
+  const [error, setError] = useState('');
+  const [busy, setBusy] = useState(false);
+  const isClassic = uiMode === 'classic';
+  const panel = `rounded-lg border p-4 space-y-3 ${isClassic ? 'bg-white border-slate-300' : 'bg-slate-900 border-slate-700'}`;
+  const button = `px-3 py-2 rounded border text-sm font-semibold cursor-pointer disabled:opacity-40 ${isClassic ? 'bg-blue-50 border-blue-500 text-blue-900' : 'bg-cyan-950 border-cyan-600 text-cyan-100'}`;
+  const input = `border rounded px-2 py-2 ${isClassic ? 'bg-white text-slate-900' : 'bg-slate-950 text-slate-100 border-slate-600'}`;
+  const resetLesson = () => {
+    onReset(); setAmount(DEFAULT_FORM.amount); setBankId(DEFAULT_FORM.bankId); setInvoiceId(DEFAULT_FORM.invoiceId);
+    setArtifact(null); setError('');
+  };
+  const act = (type: Exclude<FinanceCommand['type'], 'RESERVE_MAINTENANCE' | 'REPROCESS_BANK'>, label: string, disabled = false) => <button type="button" className={button} disabled={disabled} onClick={() => onCommand({ type })}>{label}</button>;
+  const exportEvidence = async () => {
+    setBusy(true); setError('');
+    try {
+      const revision = s.revision;
+      const result = await exportFinanceEvidence(s);
+      download(result.text, result.fileName, 'application/json');
+      setArtifact({ sha256: result.sha256, revision, source: s });
+    } catch (e) { setError(e instanceof Error ? e.message : 'Không xuất được bằng chứng.'); }
+    finally { setBusy(false); }
+  };
+  const check = budgetCheck(s, amount.trim() ? Number(amount) : NaN);
+  return <div className={`max-w-7xl mx-auto px-4 py-6 space-y-5 ${isClassic ? 'text-slate-900' : 'text-slate-200'}`}>
+    <header className="space-y-2">
+      <h2 className="text-xl font-bold">Manufacturing Finance · 5 quy trình FICO</h2>
+      <p>Đơn hàng vỏ nhựa OEM: cọc 36 triệu → hóa đơn 120 triệu → thu 84 triệu. Nhà máy sửa khuôn theo Internal Order; công ty 1000 thanh toán hộ công ty 2000.</p>
+      <p className={isClassic ? 'text-amber-900' : 'text-amber-300'}>MÔ PHỎNG · VND · ngày chốt 21/10/2026 · sổ luyện tập độc lập với Cockpit MTO. Dữ liệu chỉ giữ trong phiên trang; tải lại trình duyệt sẽ mất.</p>
+      <p className="text-sm">Theo năm chủ đề trong mô tả infographic cập nhật 21/10/2026; ảnh gốc chưa được đối chiếu. SAP edition/release: UNKNOWN. SAP-native: NOT_RUN. Nghiệm thu nghiệp vụ: NOT_APPROVED.</p>
+      <p className="text-sm">Dùng các nút xuất trong bài này để lấy dữ liệu tài chính. Các nút xuất, AI và vai trò trên thanh đầu trang đang dùng dữ liệu Cockpit MTO.</p>
+      <a className="underline" href="#/">Về Cockpit 7 bước</a>{' · '}
+      <button className="underline cursor-pointer" onClick={resetLesson}>Đặt lại riêng bài tài chính</button>
+    </header>
+    <div role={session.status === 'BLOCKED' ? 'alert' : 'status'} aria-live="polite" className={`${panel} ${session.status === 'BLOCKED' ? 'font-bold' : ''}`}>
+      {session.status}: {session.message}
+    </div>
+
+    <section aria-labelledby="mf-deposit" className={panel}>
+      <h3 id="mf-deposit" className="font-bold">1. Special G/L · Cọc khách hàng cho đơn hàng sản xuất</h3>
+      <p className="text-sm">Mục tiêu: giữ tiền cọc riêng với AR thông thường. Đầu vào: OEM-01, SO-MF-01, cọc 30% = 36 triệu. F-37 → F-29 → hóa đơn → F-39 là chuỗi tham khảo cho bài này.</p>
+      <ol className="list-decimal pl-5 text-sm space-y-1"><li>Tạo yêu cầu cọc: noted item, chưa có Nợ/Có.</li><li>Nhận tiền: Nợ BANK / Có CUSTOMER_ADVANCE_ALT, Special G/L A demo.</li><li>Lập hóa đơn 120 triệu; cấn cọc: Nợ tài khoản cọc / Có AR. Kiểm tra AR còn 84 triệu.</li></ol>
+      <div className="flex flex-wrap gap-2">{act('REQUEST_DEPOSIT', 'Tạo yêu cầu cọc', s.deposit.requested)}{act('RECEIVE_DEPOSIT', 'Nhận cọc 36 triệu', !!s.deposit.received)}{act('BILL_ORDER', 'Lập hóa đơn 120 triệu', s.invoices.some(i => i.reference === 'SO-MF-01'))}{act('APPLY_DEPOSIT', 'Cấn cọc vào hóa đơn', !!s.deposit.applied)}</div>
+      <p>Đã nhận: {formatVND(s.deposit.received)} · Đã cấn: {formatVND(s.deposit.applied)} · Cọc còn treo: {formatVND(s.deposit.received - s.deposit.applied)}</p>
+      <p className="text-xs">Phạm vi: customer down payment; giả định không thuế/FX. Tài khoản và indicator là mapping demo cần cấu hình/SME xác minh; không đại diện mọi loại tiền ký quỹ.</p>
+    </section>
+
+    <section aria-labelledby="mf-dunning" className={panel}>
+      <h3 id="mf-dunning" className="font-bold">2. F150 · Nhắc nợ tự động theo chính sách demo</h3>
+      <p className="text-sm">Chạy sau cấn cọc để đề xuất dùng AR còn mở. Demo: grace 3 ngày, mức 1 từ ngày 4, mức 2 từ ngày 30, khoảng cách 7 ngày, phí 0. Khoản bị block, chưa đến hạn và đã clearing vẫn xuất trong worklist với lý do loại.</p>
+      <ol className="list-decimal pl-5 text-sm"><li>Chạy đề xuất; xem FI21 và khoản bị loại.</li><li>Phát hành thông báo mô phỏng để cập nhật mức/ngày nhắc nợ.</li><li>Nếu có giao dịch mới trước phát hành, chạy lại đề xuất.</li></ol>
+      <div className="flex flex-wrap gap-2">{act('PROPOSE_DUNNING', 'Chạy đề xuất F150')}{act('ISSUE_DUNNING', 'Phát hành thông báo mô phỏng', !!s.dunning?.issued)}</div>
+      <p>Đề xuất: {s.dunning ? s.dunning.issued ? 'Đã phát hành trong demo' : s.dunning.sourceRevision !== s.revision ? 'STALE — cần chạy lại' : 'Sẵn sàng review' : 'Chưa chạy'} · Không gửi thư thật; dunning level không phải ECL.</p>
+      <div className="overflow-x-auto"><table className="w-full text-xs text-left"><caption className="text-left py-2 font-bold">AR còn mở và lịch sử nhắc nợ</caption><thead><tr>{['Company / Year / Document / Item', 'Khách hàng', 'Còn mở VND', 'Đến hạn', 'Block', 'Mức / lần cuối'].map(c => <th key={c} className="p-2">{c}</th>)}</tr></thead><tbody>{s.invoices.map(i => <tr key={i.id} className="border-t border-slate-500"><td className="p-2">{i.id}</td><td>{i.customer}</td><td>{formatVND(i.open)}</td><td>{i.due}</td><td>{i.block ? 'X' : '—'}</td><td>{i.level} / {i.lastDunned || '—'}</td></tr>)}</tbody></table></div>
+    </section>
+
+    <section aria-labelledby="mf-bank" className={panel}>
+      <h3 id="mf-bank" className="font-bold">3. Electronic Bank Statement · FEBAN clearing</h3>
+      <p className="text-sm">Đầu vào: sao kê fixture HB01/OPERATING. Tự động chỉ ghép cùng company, VND, reference, một khách hàng và tổng tiền bằng nhau; một dòng 40 triệu có thể clearing hai hóa đơn 15 + 25 triệu. Không đoán bằng số tiền đơn lẻ.</p>
+      <ol className="list-decimal pl-5 text-sm"><li>Cấn cọc ở bước 1, chạy đối chiếu tự động.</li><li>Xem dòng thiếu reference và dòng mơ hồ.</li><li>Chọn dòng 003 và hóa đơn REPAIR-01 12 triệu, kiểm tra chứng từ rồi xác nhận xử lý thủ công.</li></ol>
+      {act('AUTO_BANK', 'Chạy đối chiếu sao kê tự động')}
+      <div className="overflow-x-auto"><table className="w-full text-left text-xs"><caption className="text-left py-2 font-bold">FI22 · mỗi dòng sao kê chỉ tính tiền một lần</caption><thead><tr>{['Item', 'Reference gốc', 'Số tiền VND', 'Trạng thái', 'Chứng từ clearing / hóa đơn'].map(c => <th key={c} className="p-2">{c}</th>)}</tr></thead><tbody>{s.bank.map(b => <tr key={b.id} className="border-t border-slate-500"><td className="p-2">{b.item}</td><td>{b.reference}</td><td>{formatVND(b.amount)}</td><td>{bankMatch(s, b).status}</td><td>{b.clearingDocument || '—'} / {b.clearedInvoices.join('; ') || '—'}</td></tr>)}</tbody></table></div>
+      <div className="flex flex-wrap items-end gap-2">
+        <label className="grid min-w-0 w-full gap-1 text-sm sm:w-auto">Dòng sao kê<select className={`${input} min-w-0 w-full`} value={bankId} onChange={e => setBankId(e.target.value)}>{s.bank.map(b => <option key={b.id} value={b.id}>{b.item} · {b.reference}</option>)}</select></label>
+        <label className="grid min-w-0 w-full gap-1 text-sm sm:w-auto">Hóa đơn xác nhận<select className={`${input} min-w-0 w-full max-w-full`} value={invoiceId} onChange={e => setInvoiceId(e.target.value)}>{s.invoices.map(i => <option key={i.id} value={i.id}>{i.document} · {i.reference} · {formatVND(i.open)}</option>)}</select></label>
+        <button className={button} onClick={() => onCommand({ type: 'REPROCESS_BANK', bankId, invoiceId })}>Xác nhận xử lý thủ công FEBAN</button>
+      </div>
+      <p className="text-xs">Mô phỏng một bước ghi BANK/AR; không import MT940/camt, không tái hiện posting area 1/2 hoặc đầy đủ thuật toán SAP. Sai scope/rule/tiền bị chặn, không tự write-off.</p>
+    </section>
+
+    <section aria-labelledby="mf-budget" className={panel}>
+      <h3 id="mf-budget" className="font-bold">4. Internal Order · Ngân sách sửa khuôn</h3>
+      <p className="text-sm">IO-MOULD-01 thuộc company 2000; khác Production Order. Budget tổng 100 triệu; actual đầu kỳ 20 triệu, commitment cũ 10 triệu. AVC demo đã kích hoạt; cảnh báo từ 90%, chặn trên 100%.</p>
+      <ol className="list-decimal pl-5 text-sm"><li>Thử PO 90 triệu: assigned value 120 triệu, bị chặn và không ghi dữ liệu.</li><li>Giữ PO 60 triệu: assigned value 90 triệu, cảnh báo và cho phép.</li><li>Ghi hóa đơn PO mới: chuyển 60 triệu commitment sang actual; assigned value vẫn 90 triệu.</li></ol>
+      <p>Actual: {formatVND(s.budget.actual)} · Commitment: {formatVND(s.budget.commitment)} · Còn khả dụng: {formatVND(s.budget.original - s.budget.actual - s.budget.commitment)}</p>
+      <div className="flex flex-wrap items-end gap-2"><label className="grid gap-1 text-sm">PO sửa khuôn mới (VND)<input className={input} type="number" min="1" step="1" value={amount} onChange={e => setAmount(e.target.value)} /></label>
+        <button className={button} onClick={() => onCommand({ type: 'RESERVE_MAINTENANCE', amount: amount.trim() ? Number(amount) : NaN })} disabled={s.budget.reserved}>Giữ ngân sách PO</button>
+        <button className={button} onClick={() => onCommand({ type: 'RESERVE_MAINTENANCE', amount: 90_000_000 })} disabled={s.budget.reserved}>Thử vượt ngân sách 90 triệu</button>
+        {act('POST_MAINTENANCE', 'Ghi hóa đơn PO sửa khuôn', s.budget.posted)}</div>
+      <p className="text-sm">{s.budget.reserved ? 'PO mới đã được giữ ngân sách; bước tiếp theo là ghi hóa đơn.' : `Xem trước PO nhập: ${check.status}${Number.isFinite(check.assigned) ? ` · assigned ${formatVND(check.assigned)} VND` : ''}.`} KO22/availability control là tham chiếu; bài dùng một ngân sách tổng và tolerance demo.</p>
+    </section>
+
+    <section aria-labelledby="mf-ic" className={panel}>
+      <h3 id="mf-ic" className="font-bold">5. Intercompany clearing · Thanh toán hộ nhà máy</h3>
+      <p className="text-sm">Đầu vào: AP nhà cung cấp của 2000 = 60 triệu. 1000 trả hộ; hai chứng từ dùng chung IC-PAY-01. Đây là bài cross-company payment/clearing riêng với module Intercompany TP hiện có.</p>
+      <ol className="list-decimal pl-5 text-sm"><li>1000: Nợ DUE_FROM_2000 / Có BANK 60 triệu.</li><li>2000: Nợ AP / Có DUE_TO_1000 60 triệu.</li><li>Kiểm tra mỗi company cân riêng; AP nhà cung cấp hết, công nợ nội bộ còn mở cho đến khi hoàn trả.</li></ol>
+      {act('PAY_INTERCOMPANY', 'Ghi thanh toán hộ và clearing AP', s.intercompany.paid)}
+      <p>AP nhà cung cấp được chọn còn: {formatVND(s.intercompany.supplierOpen)} · Công nợ nội bộ: {formatVND(s.intercompany.paid ? 60_000_000 : 0)}</p>
+      <p className="text-xs">Không thực hiện netting đa tiền tệ hay loại trừ hợp nhất. Company-pair/account mapping phải xác minh trên SAP của doanh nghiệp.</p>
+    </section>
+
+    <section aria-labelledby="mf-evidence" className={panel}>
+      <h3 id="mf-evidence" className="font-bold">Bằng chứng mô phỏng và worklist FI21/FI22</h3>
+      <p className="text-sm">SIMULATED_PASS bên dưới chỉ là kiểm tra số học nội bộ. SAP-native NOT_RUN · SME PENDING · nghiệp vụ NOT_APPROVED. Hash dùng đối chiếu file, không chứng minh người duyệt.</p>
+      <ul className="list-disc pl-5 text-sm">{financeControls(s).map(c => <li key={c.id}>{c.id} · {c.status} · {c.label}</li>)}</ul>
+      <button className={button} disabled={busy} onClick={() => void exportEvidence()}>Tải bằng chứng mô phỏng JSON</button>
+      {artifact && <p className="text-xs break-all">Đã tạo file cho revision {artifact.revision}{artifact.source !== s ? ' · CŨ — xuất lại để lấy trạng thái hiện tại' : ''} · SHA-256 {artifact.sha256}</p>}
+      {error && <p role="alert">{error}</p>}
+      {manufacturingFinanceReports(s).map(r => <details key={r.reportId}><summary className="cursor-pointer underline">{r.title} · {r.rows.length} dòng</summary>
+        <p className="text-xs py-2">Tái dùng cột worklist {r.reportId} hiện có; SAVA_PROPOSED, chưa xác minh layout SAP-native.</p>
+        <button className={button} onClick={() => download(financeReportText(r), `${FINANCE_SCOPE.id}_${r.reportId}_SIMULATED.txt`, 'text/plain;charset=utf-8')}>Tải worklist {r.reportId}</button>
+        <div className="overflow-x-auto py-2"><table className="text-xs text-left"><thead><tr>{r.columns.map(c => <th className="p-2 whitespace-nowrap" key={c.field}>{c.label}</th>)}</tr></thead><tbody>{r.rows.map((row, n) => <tr key={n} className="border-t border-slate-500">{row.map((v, j) => <td key={j} className="p-2 whitespace-nowrap">{v || '—'}</td>)}</tr>)}</tbody></table></div>
+      </details>)}
+      <details><summary className="cursor-pointer underline">Chứng từ và nhật ký luyện tập</summary><div className="overflow-x-auto"><table className="text-xs text-left"><thead><tr>{['Company', 'Chứng từ', 'Tài khoản', 'Nợ VND', 'Có VND', 'Partner / IO / Special G/L'].map(c => <th className="p-2" key={c}>{c}</th>)}</tr></thead><tbody>{s.documents.flatMap(d => d.lines.map((l, j) => <tr key={`${d.company}/${d.id}/${j}`}><td className="p-2">{d.company}</td><td>{d.id}{d.jointId ? ` / ${d.jointId}` : ''}</td><td>{l.account}</td><td>{formatVND(l.debit)}</td><td>{formatVND(l.credit)}</td><td>{[l.partner, l.order, l.specialGL].filter(Boolean).join(' / ')}</td></tr>))}</tbody></table></div><ol className="list-decimal pl-5 text-sm">{s.history.map(e => <li key={e.sequence}>{e.action}: {e.message}</li>)}</ol></details>
+    </section>
+  </div>;
+}

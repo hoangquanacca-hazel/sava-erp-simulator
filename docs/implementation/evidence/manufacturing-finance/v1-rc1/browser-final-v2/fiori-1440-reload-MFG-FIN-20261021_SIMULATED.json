@@ -1,0 +1,832 @@
+{
+  "schema": "sava-manufacturing-finance-evidence-v1",
+  "scope": {
+    "id": "MFG-FIN-20261021",
+    "label": "SIMULATED",
+    "cutoff": "2026-10-21",
+    "currency": "VND",
+    "company": "1000",
+    "factoryCompany": "2000",
+    "plant": "1100",
+    "order": "IO-MOULD-01",
+    "targetSapRelease": "UNKNOWN",
+    "nativeAcceptance": "NOT_RUN",
+    "businessAcceptance": "NOT_APPROVED"
+  },
+  "persistence": "BROWSER_RAM_ONLY",
+  "identity": "SELF_DECLARED_NOT_AUTHENTICATED",
+  "infographic": "FIVE_WORKFLOWS_FROM_USER_DESCRIPTION; ORIGINAL_IMAGE_NOT_AVAILABLE",
+  "controls": [
+    {
+      "id": "MF01",
+      "label": "Mỗi chứng từ cân Nợ/Có trong từng company",
+      "pass": true,
+      "status": "SIMULATED_PASS"
+    },
+    {
+      "id": "MF02",
+      "label": "Special G/L = cọc đã nhận − đã cấn",
+      "pass": true,
+      "status": "SIMULATED_PASS"
+    },
+    {
+      "id": "MF03",
+      "label": "AR trong sổ = tổng khoản còn mở",
+      "pass": true,
+      "status": "SIMULATED_PASS"
+    },
+    {
+      "id": "MF04",
+      "label": "Actual + commitment không vượt ngân sách",
+      "pass": true,
+      "status": "SIMULATED_PASS"
+    },
+    {
+      "id": "MF05",
+      "label": "Phải thu 2000 = phải trả 1000",
+      "pass": true,
+      "status": "SIMULATED_PASS"
+    },
+    {
+      "id": "MF06",
+      "label": "Mỗi dòng sao kê clearing đúng tổng phân bổ",
+      "pass": true,
+      "status": "SIMULATED_PASS"
+    }
+  ],
+  "state": {
+    "revision": 0,
+    "deposit": {
+      "requested": false,
+      "received": 0,
+      "applied": 0
+    },
+    "invoices": [
+      {
+        "id": "1000/2026/9100000002/001",
+        "company": "1000",
+        "year": "2026",
+        "document": "9100000002",
+        "item": "001",
+        "customer": "OEM-01",
+        "reference": "OEM-BATCH",
+        "currency": "VND",
+        "due": "2026-10-01",
+        "original": 15000000,
+        "open": 15000000,
+        "block": false,
+        "level": 0,
+        "lastDunned": ""
+      },
+      {
+        "id": "1000/2026/9100000003/001",
+        "company": "1000",
+        "year": "2026",
+        "document": "9100000003",
+        "item": "001",
+        "customer": "OEM-01",
+        "reference": "OEM-BATCH",
+        "currency": "VND",
+        "due": "2026-10-01",
+        "original": 25000000,
+        "open": 25000000,
+        "block": false,
+        "level": 0,
+        "lastDunned": ""
+      },
+      {
+        "id": "1000/2026/9100000004/001",
+        "company": "1000",
+        "year": "2026",
+        "document": "9100000004",
+        "item": "001",
+        "customer": "OEM-01",
+        "reference": "REPAIR-01",
+        "currency": "VND",
+        "due": "2026-10-01",
+        "original": 12000000,
+        "open": 12000000,
+        "block": false,
+        "level": 0,
+        "lastDunned": ""
+      },
+      {
+        "id": "1000/2026/9100000005/001",
+        "company": "1000",
+        "year": "2026",
+        "document": "9100000005",
+        "item": "001",
+        "customer": "OEM-01",
+        "reference": "DISPUTE",
+        "currency": "VND",
+        "due": "2026-10-01",
+        "original": 20000000,
+        "open": 20000000,
+        "block": true,
+        "level": 0,
+        "lastDunned": ""
+      },
+      {
+        "id": "1000/2026/9100000006/001",
+        "company": "1000",
+        "year": "2026",
+        "document": "9100000006",
+        "item": "001",
+        "customer": "OEM-01",
+        "reference": "NOT-DUE",
+        "currency": "VND",
+        "due": "2026-11-01",
+        "original": 10000000,
+        "open": 10000000,
+        "block": false,
+        "level": 0,
+        "lastDunned": ""
+      },
+      {
+        "id": "1000/2026/9100000007/001",
+        "company": "1000",
+        "year": "2026",
+        "document": "9100000007",
+        "item": "001",
+        "customer": "OEM-02",
+        "reference": "AMBIG",
+        "currency": "VND",
+        "due": "2026-10-01",
+        "original": 5000000,
+        "open": 5000000,
+        "block": false,
+        "level": 0,
+        "lastDunned": ""
+      },
+      {
+        "id": "1000/2026/9100000008/001",
+        "company": "1000",
+        "year": "2026",
+        "document": "9100000008",
+        "item": "001",
+        "customer": "OEM-03",
+        "reference": "AMBIG",
+        "currency": "VND",
+        "due": "2026-10-01",
+        "original": 5000000,
+        "open": 5000000,
+        "block": false,
+        "level": 0,
+        "lastDunned": ""
+      }
+    ],
+    "bank": [
+      {
+        "id": "1000/HB01/OPERATING/2026-10-21/001",
+        "company": "1000",
+        "houseBank": "HB01",
+        "account": "OPERATING",
+        "statement": "2026-10-21",
+        "item": "001",
+        "currency": "VND",
+        "amount": 84000000,
+        "reference": "SO-MF-01",
+        "rule": "INCOMING_AR",
+        "accountingDocument": "",
+        "clearingDocument": "",
+        "clearedInvoices": []
+      },
+      {
+        "id": "1000/HB01/OPERATING/2026-10-21/002",
+        "company": "1000",
+        "houseBank": "HB01",
+        "account": "OPERATING",
+        "statement": "2026-10-21",
+        "item": "002",
+        "currency": "VND",
+        "amount": 40000000,
+        "reference": "OEM-BATCH",
+        "rule": "INCOMING_AR",
+        "accountingDocument": "",
+        "clearingDocument": "",
+        "clearedInvoices": []
+      },
+      {
+        "id": "1000/HB01/OPERATING/2026-10-21/003",
+        "company": "1000",
+        "houseBank": "HB01",
+        "account": "OPERATING",
+        "statement": "2026-10-21",
+        "item": "003",
+        "currency": "VND",
+        "amount": 12000000,
+        "reference": "MISSING-REF",
+        "rule": "INCOMING_AR",
+        "accountingDocument": "",
+        "clearingDocument": "",
+        "clearedInvoices": []
+      },
+      {
+        "id": "1000/HB01/OPERATING/2026-10-21/004",
+        "company": "1000",
+        "houseBank": "HB01",
+        "account": "OPERATING",
+        "statement": "2026-10-21",
+        "item": "004",
+        "currency": "VND",
+        "amount": 5000000,
+        "reference": "AMBIG",
+        "rule": "INCOMING_AR",
+        "accountingDocument": "",
+        "clearingDocument": "",
+        "clearedInvoices": []
+      }
+    ],
+    "documents": [
+      {
+        "id": "OPEN-9100000002",
+        "company": "1000",
+        "date": "2026-10-21",
+        "currency": "VND",
+        "transaction": "OPENING_FIXTURE",
+        "lines": [
+          {
+            "account": "AR",
+            "debit": 15000000,
+            "credit": 0
+          },
+          {
+            "account": "REVENUE",
+            "debit": 0,
+            "credit": 15000000
+          }
+        ]
+      },
+      {
+        "id": "OPEN-9100000003",
+        "company": "1000",
+        "date": "2026-10-21",
+        "currency": "VND",
+        "transaction": "OPENING_FIXTURE",
+        "lines": [
+          {
+            "account": "AR",
+            "debit": 25000000,
+            "credit": 0
+          },
+          {
+            "account": "REVENUE",
+            "debit": 0,
+            "credit": 25000000
+          }
+        ]
+      },
+      {
+        "id": "OPEN-9100000004",
+        "company": "1000",
+        "date": "2026-10-21",
+        "currency": "VND",
+        "transaction": "OPENING_FIXTURE",
+        "lines": [
+          {
+            "account": "AR",
+            "debit": 12000000,
+            "credit": 0
+          },
+          {
+            "account": "REVENUE",
+            "debit": 0,
+            "credit": 12000000
+          }
+        ]
+      },
+      {
+        "id": "OPEN-9100000005",
+        "company": "1000",
+        "date": "2026-10-21",
+        "currency": "VND",
+        "transaction": "OPENING_FIXTURE",
+        "lines": [
+          {
+            "account": "AR",
+            "debit": 20000000,
+            "credit": 0
+          },
+          {
+            "account": "REVENUE",
+            "debit": 0,
+            "credit": 20000000
+          }
+        ]
+      },
+      {
+        "id": "OPEN-9100000006",
+        "company": "1000",
+        "date": "2026-10-21",
+        "currency": "VND",
+        "transaction": "OPENING_FIXTURE",
+        "lines": [
+          {
+            "account": "AR",
+            "debit": 10000000,
+            "credit": 0
+          },
+          {
+            "account": "REVENUE",
+            "debit": 0,
+            "credit": 10000000
+          }
+        ]
+      },
+      {
+        "id": "OPEN-9100000007",
+        "company": "1000",
+        "date": "2026-10-21",
+        "currency": "VND",
+        "transaction": "OPENING_FIXTURE",
+        "lines": [
+          {
+            "account": "AR",
+            "debit": 5000000,
+            "credit": 0
+          },
+          {
+            "account": "REVENUE",
+            "debit": 0,
+            "credit": 5000000
+          }
+        ]
+      },
+      {
+        "id": "OPEN-9100000008",
+        "company": "1000",
+        "date": "2026-10-21",
+        "currency": "VND",
+        "transaction": "OPENING_FIXTURE",
+        "lines": [
+          {
+            "account": "AR",
+            "debit": 5000000,
+            "credit": 0
+          },
+          {
+            "account": "REVENUE",
+            "debit": 0,
+            "credit": 5000000
+          }
+        ]
+      },
+      {
+        "id": "OPEN-IO",
+        "company": "2000",
+        "date": "2026-10-21",
+        "currency": "VND",
+        "transaction": "OPENING_FIXTURE",
+        "lines": [
+          {
+            "account": "MAINTENANCE",
+            "debit": 20000000,
+            "credit": 0,
+            "order": "IO-MOULD-01"
+          },
+          {
+            "account": "AP",
+            "debit": 0,
+            "credit": 20000000
+          }
+        ]
+      },
+      {
+        "id": "OPEN-SUPPLIER",
+        "company": "2000",
+        "date": "2026-10-21",
+        "currency": "VND",
+        "transaction": "OPENING_FIXTURE",
+        "lines": [
+          {
+            "account": "FACTORY_SERVICES",
+            "debit": 60000000,
+            "credit": 0
+          },
+          {
+            "account": "AP",
+            "debit": 0,
+            "credit": 60000000
+          }
+        ]
+      }
+    ],
+    "budget": {
+      "original": 100000000,
+      "actual": 20000000,
+      "commitment": 10000000,
+      "reserved": false,
+      "posted": false,
+      "active": true,
+      "warningPercent": 90
+    },
+    "intercompany": {
+      "supplierOpen": 60000000,
+      "paid": false
+    },
+    "dunning": null,
+    "history": []
+  },
+  "reports": [
+    {
+      "reportId": "FI21",
+      "title": "F150 · Manufacturing Finance · SIMULATED",
+      "columns": [
+        {
+          "field": "Company Code",
+          "label": "Company Code"
+        },
+        {
+          "field": "Run ID",
+          "label": "Run ID"
+        },
+        {
+          "field": "Run Date",
+          "label": "Run Date"
+        },
+        {
+          "field": "Customer",
+          "label": "Customer"
+        },
+        {
+          "field": "Document",
+          "label": "Document"
+        },
+        {
+          "field": "Fiscal Year",
+          "label": "Fiscal Year"
+        },
+        {
+          "field": "Item",
+          "label": "Item"
+        },
+        {
+          "field": "Due Date",
+          "label": "Due Date"
+        },
+        {
+          "field": "Days Overdue",
+          "label": "Days Overdue"
+        },
+        {
+          "field": "Open Amount",
+          "label": "Open Amount"
+        },
+        {
+          "field": "Currency",
+          "label": "Currency"
+        },
+        {
+          "field": "Dunning Area",
+          "label": "Dunning Area"
+        },
+        {
+          "field": "Dunning Level",
+          "label": "Dunning Level"
+        },
+        {
+          "field": "Dunning Block",
+          "label": "Dunning Block"
+        },
+        {
+          "field": "Last Dunning Date",
+          "label": "Last Dunning Date"
+        },
+        {
+          "field": "Dunning Fee",
+          "label": "Dunning Fee"
+        },
+        {
+          "field": "Status",
+          "label": "Status"
+        },
+        {
+          "field": "Message",
+          "label": "Message"
+        }
+      ],
+      "rows": [
+        [
+          "1000",
+          "PREVIEW",
+          "21.10.2026",
+          "OEM-01",
+          "9100000002",
+          "2026",
+          "001",
+          "01.10.2026",
+          "20",
+          "15000000",
+          "VND",
+          "MFG-DEMO",
+          "1",
+          "",
+          "",
+          "0",
+          "PROPOSED",
+          "Đủ điều kiện theo chính sách demo; phí 0 VND."
+        ],
+        [
+          "1000",
+          "PREVIEW",
+          "21.10.2026",
+          "OEM-01",
+          "9100000003",
+          "2026",
+          "001",
+          "01.10.2026",
+          "20",
+          "25000000",
+          "VND",
+          "MFG-DEMO",
+          "1",
+          "",
+          "",
+          "0",
+          "PROPOSED",
+          "Đủ điều kiện theo chính sách demo; phí 0 VND."
+        ],
+        [
+          "1000",
+          "PREVIEW",
+          "21.10.2026",
+          "OEM-01",
+          "9100000004",
+          "2026",
+          "001",
+          "01.10.2026",
+          "20",
+          "12000000",
+          "VND",
+          "MFG-DEMO",
+          "1",
+          "",
+          "",
+          "0",
+          "PROPOSED",
+          "Đủ điều kiện theo chính sách demo; phí 0 VND."
+        ],
+        [
+          "1000",
+          "PREVIEW",
+          "21.10.2026",
+          "OEM-01",
+          "9100000005",
+          "2026",
+          "001",
+          "01.10.2026",
+          "20",
+          "20000000",
+          "VND",
+          "MFG-DEMO",
+          "0",
+          "X",
+          "",
+          "0",
+          "BLOCKED",
+          "Giữ lại dòng bị loại để review."
+        ],
+        [
+          "1000",
+          "PREVIEW",
+          "21.10.2026",
+          "OEM-01",
+          "9100000006",
+          "2026",
+          "001",
+          "01.11.2026",
+          "0",
+          "10000000",
+          "VND",
+          "MFG-DEMO",
+          "0",
+          "",
+          "",
+          "0",
+          "NOT_DUE_OR_GRACE",
+          "Giữ lại dòng bị loại để review."
+        ],
+        [
+          "1000",
+          "PREVIEW",
+          "21.10.2026",
+          "OEM-02",
+          "9100000007",
+          "2026",
+          "001",
+          "01.10.2026",
+          "20",
+          "5000000",
+          "VND",
+          "MFG-DEMO",
+          "1",
+          "",
+          "",
+          "0",
+          "PROPOSED",
+          "Đủ điều kiện theo chính sách demo; phí 0 VND."
+        ],
+        [
+          "1000",
+          "PREVIEW",
+          "21.10.2026",
+          "OEM-03",
+          "9100000008",
+          "2026",
+          "001",
+          "01.10.2026",
+          "20",
+          "5000000",
+          "VND",
+          "MFG-DEMO",
+          "1",
+          "",
+          "",
+          "0",
+          "PROPOSED",
+          "Đủ điều kiện theo chính sách demo; phí 0 VND."
+        ]
+      ],
+      "text": "F150 · Manufacturing Finance · SIMULATED | MFG-FIN-20261021 | cutoff 2026-10-21 | VND | SAVA_PROPOSED | SAP acceptance NOT_RUN\n\nCompany Code\tRun ID\tRun Date\tCustomer\tDocument\tFiscal Year\tItem\tDue Date\tDays Overdue\tOpen Amount\tCurrency\tDunning Area\tDunning Level\tDunning Block\tLast Dunning Date\tDunning Fee\tStatus\tMessage\n1000\tPREVIEW\t21.10.2026\tOEM-01\t9100000002\t2026\t001\t01.10.2026\t20\t15000000\tVND\tMFG-DEMO\t1\t\t\t0\tPROPOSED\tĐủ điều kiện theo chính sách demo; phí 0 VND.\n1000\tPREVIEW\t21.10.2026\tOEM-01\t9100000003\t2026\t001\t01.10.2026\t20\t25000000\tVND\tMFG-DEMO\t1\t\t\t0\tPROPOSED\tĐủ điều kiện theo chính sách demo; phí 0 VND.\n1000\tPREVIEW\t21.10.2026\tOEM-01\t9100000004\t2026\t001\t01.10.2026\t20\t12000000\tVND\tMFG-DEMO\t1\t\t\t0\tPROPOSED\tĐủ điều kiện theo chính sách demo; phí 0 VND.\n1000\tPREVIEW\t21.10.2026\tOEM-01\t9100000005\t2026\t001\t01.10.2026\t20\t20000000\tVND\tMFG-DEMO\t0\tX\t\t0\tBLOCKED\tGiữ lại dòng bị loại để review.\n1000\tPREVIEW\t21.10.2026\tOEM-01\t9100000006\t2026\t001\t01.11.2026\t0\t10000000\tVND\tMFG-DEMO\t0\t\t\t0\tNOT_DUE_OR_GRACE\tGiữ lại dòng bị loại để review.\n1000\tPREVIEW\t21.10.2026\tOEM-02\t9100000007\t2026\t001\t01.10.2026\t20\t5000000\tVND\tMFG-DEMO\t1\t\t\t0\tPROPOSED\tĐủ điều kiện theo chính sách demo; phí 0 VND.\n1000\tPREVIEW\t21.10.2026\tOEM-03\t9100000008\t2026\t001\t01.10.2026\t20\t5000000\tVND\tMFG-DEMO\t1\t\t\t0\tPROPOSED\tĐủ điều kiện theo chính sách demo; phí 0 VND.\n",
+      "sha256": "c597bc50c6451818c14a0fa2e977ab3dcad1fb7d61037ecef18c73d9963aa0fb"
+    },
+    {
+      "reportId": "FI22",
+      "title": "FEB_BSPROC / FEBAN · Manufacturing Finance · SIMULATED",
+      "columns": [
+        {
+          "field": "Company Code",
+          "label": "Company Code"
+        },
+        {
+          "field": "House Bank",
+          "label": "House Bank"
+        },
+        {
+          "field": "Bank Account",
+          "label": "Bank Account"
+        },
+        {
+          "field": "Statement",
+          "label": "Statement"
+        },
+        {
+          "field": "Statement Date",
+          "label": "Statement Date"
+        },
+        {
+          "field": "Item",
+          "label": "Item"
+        },
+        {
+          "field": "Value Date",
+          "label": "Value Date"
+        },
+        {
+          "field": "Posting Date",
+          "label": "Posting Date"
+        },
+        {
+          "field": "External Transaction",
+          "label": "External Transaction"
+        },
+        {
+          "field": "Amount",
+          "label": "Amount"
+        },
+        {
+          "field": "Currency",
+          "label": "Currency"
+        },
+        {
+          "field": "Reference",
+          "label": "Reference"
+        },
+        {
+          "field": "Assignment",
+          "label": "Assignment"
+        },
+        {
+          "field": "Posting Rule",
+          "label": "Posting Rule"
+        },
+        {
+          "field": "Accounting Document",
+          "label": "Accounting Document"
+        },
+        {
+          "field": "Clearing Document",
+          "label": "Clearing Document"
+        },
+        {
+          "field": "Status",
+          "label": "Status"
+        },
+        {
+          "field": "Message",
+          "label": "Message"
+        }
+      ],
+      "rows": [
+        [
+          "1000",
+          "HB01",
+          "OPERATING",
+          "2026-10-21",
+          "21.10.2026",
+          "001",
+          "21.10.2026",
+          "21.10.2026",
+          "CREDIT-DEMO",
+          "84000000",
+          "VND",
+          "SO-MF-01",
+          "",
+          "INCOMING_AR",
+          "",
+          "",
+          "UNMATCHED",
+          "Review required; no amount-only auto-match."
+        ],
+        [
+          "1000",
+          "HB01",
+          "OPERATING",
+          "2026-10-21",
+          "21.10.2026",
+          "002",
+          "21.10.2026",
+          "21.10.2026",
+          "CREDIT-DEMO",
+          "40000000",
+          "VND",
+          "OEM-BATCH",
+          "",
+          "INCOMING_AR",
+          "",
+          "",
+          "MATCHED",
+          "Review required; no amount-only auto-match."
+        ],
+        [
+          "1000",
+          "HB01",
+          "OPERATING",
+          "2026-10-21",
+          "21.10.2026",
+          "003",
+          "21.10.2026",
+          "21.10.2026",
+          "CREDIT-DEMO",
+          "12000000",
+          "VND",
+          "MISSING-REF",
+          "",
+          "INCOMING_AR",
+          "",
+          "",
+          "UNMATCHED",
+          "Review required; no amount-only auto-match."
+        ],
+        [
+          "1000",
+          "HB01",
+          "OPERATING",
+          "2026-10-21",
+          "21.10.2026",
+          "004",
+          "21.10.2026",
+          "21.10.2026",
+          "CREDIT-DEMO",
+          "5000000",
+          "VND",
+          "AMBIG",
+          "",
+          "INCOMING_AR",
+          "",
+          "",
+          "AMBIGUOUS",
+          "Review required; no amount-only auto-match."
+        ]
+      ],
+      "text": "FEB_BSPROC / FEBAN · Manufacturing Finance · SIMULATED | MFG-FIN-20261021 | cutoff 2026-10-21 | VND | SAVA_PROPOSED | SAP acceptance NOT_RUN\n\nCompany Code\tHouse Bank\tBank Account\tStatement\tStatement Date\tItem\tValue Date\tPosting Date\tExternal Transaction\tAmount\tCurrency\tReference\tAssignment\tPosting Rule\tAccounting Document\tClearing Document\tStatus\tMessage\n1000\tHB01\tOPERATING\t2026-10-21\t21.10.2026\t001\t21.10.2026\t21.10.2026\tCREDIT-DEMO\t84000000\tVND\tSO-MF-01\t\tINCOMING_AR\t\t\tUNMATCHED\tReview required; no amount-only auto-match.\n1000\tHB01\tOPERATING\t2026-10-21\t21.10.2026\t002\t21.10.2026\t21.10.2026\tCREDIT-DEMO\t40000000\tVND\tOEM-BATCH\t\tINCOMING_AR\t\t\tMATCHED\tReview required; no amount-only auto-match.\n1000\tHB01\tOPERATING\t2026-10-21\t21.10.2026\t003\t21.10.2026\t21.10.2026\tCREDIT-DEMO\t12000000\tVND\tMISSING-REF\t\tINCOMING_AR\t\t\tUNMATCHED\tReview required; no amount-only auto-match.\n1000\tHB01\tOPERATING\t2026-10-21\t21.10.2026\t004\t21.10.2026\t21.10.2026\tCREDIT-DEMO\t5000000\tVND\tAMBIG\t\tINCOMING_AR\t\t\tAMBIGUOUS\tReview required; no amount-only auto-match.\n",
+      "sha256": "f042bf6218461e59473dc0f0711b19096c03d266ca7a4062ce686cc7b804396d"
+    }
+  ],
+  "acceptance": {
+    "simulatedReplay": "PASS",
+    "sapNative": "NOT_RUN",
+    "targetRelease": "UNKNOWN",
+    "independentSme": "PENDING",
+    "business": "NOT_APPROVED"
+  },
+  "limits": [
+    "Synthetic fixture and local policy only; no SAP connection or native export.",
+    "Customer down payment only; no supplier/security-deposit lifecycle or tax/FX.",
+    "Dunning is a local notice simulation, no real scheduling, delivery, fee or ECL posting.",
+    "Bank clearing is single-stage; SAP posting areas and bank file parsing are not implemented.",
+    "One overall Internal Order budget; no annual/released budgets or SAP tolerance configuration.",
+    "Cross-company supplier clearing leaves reciprocal intercompany balances open; no consolidation elimination.",
+    "Hash and replay do not prove authentication, SME approval or SAP-native acceptance."
+  ]
+}

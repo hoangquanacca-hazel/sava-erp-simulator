@@ -3,6 +3,8 @@ dist
 .netlify
 *.local
 .env
+/reporting-inputs.local/
+/tmp/pdfs/
 
 # Python bytecode cache (test oracle scripts)
 __pycache__/

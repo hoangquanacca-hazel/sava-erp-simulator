@@ -1,0 +1,42 @@
+{
+  "banner": "SIMULATED_NATIVE | GENERATED_SYNTHETIC | NOT_SAP_NATIVE",
+  "report_id": "FI06",
+  "ordered_columns": [
+    "company",
+    "year",
+    "doc",
+    "line",
+    "partner",
+    "date",
+    "due_date",
+    "clearing_date",
+    "amount",
+    "currency"
+  ],
+  "rows": [
+    {
+      "company": "1000",
+      "year": "2026",
+      "doc": "190100001",
+      "line": "001",
+      "partner": "VEND-0001",
+      "date": "2026-09-30",
+      "due_date": "2026-10-15",
+      "clearing_date": "",
+      "amount": "1000",
+      "currency": "USD"
+    },
+    {
+      "company": "1000",
+      "year": "2026",
+      "doc": "190100002",
+      "line": "002",
+      "partner": "VEND-0002",
+      "date": "2026-09-30",
+      "due_date": "2026-10-20",
+      "clearing_date": "2026-09-30",
+      "amount": "-250",
+      "currency": "USD"
+    }
+  ]
+}

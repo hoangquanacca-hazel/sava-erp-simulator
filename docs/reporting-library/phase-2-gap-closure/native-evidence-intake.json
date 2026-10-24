@@ -1,0 +1,511 @@
+{
+  "as_of": "2026-10-21",
+  "status": "INTAKE_CONTRACT_ONLY",
+  "purpose": "Collect authorized native exports and acceptance evidence for the 12 Phase 3 pilot reports.",
+  "pilot_count": 12,
+  "pilot_ids": [
+    "FI01",
+    "FI02",
+    "FI06",
+    "FI15",
+    "CO01",
+    "CO15",
+    "MM01",
+    "MM08",
+    "PP01",
+    "SD01",
+    "QM01",
+    "PM01"
+  ],
+  "batch_context_required": [
+    "system/product/release/client/language",
+    "program or Fiori app id",
+    "selection filters and period/key date",
+    "layout name and column catalog",
+    "amount/currency and quantity/unit pairs",
+    "number/date/decimal conventions",
+    "subtotal/total/duplicate-header rows",
+    "full-export vs row-limit/paging evidence",
+    "control totals and authorisation scope"
+  ],
+  "artifact_contract": [
+    {
+      "artifact": "ORIGINAL_NATIVE_EXPORT",
+      "required": true,
+      "acceptable_examples": [
+        "XLSX",
+        "CSV",
+        "TXT",
+        "PDF layout plus raw export"
+      ],
+      "prohibited_substitute": "synthetic teaching sample or reconstructed public layout"
+    },
+    {
+      "artifact": "CAPTURE_CONTEXT_MANIFEST",
+      "required": true,
+      "required_fields": [
+        "system/product/release/client/language",
+        "program or Fiori app id",
+        "selection filters and period/key date",
+        "layout name and column catalog",
+        "amount/currency and quantity/unit pairs",
+        "number/date/decimal conventions",
+        "subtotal/total/duplicate-header rows",
+        "full-export vs row-limit/paging evidence",
+        "control totals and authorisation scope"
+      ]
+    },
+    {
+      "artifact": "TECHNICAL_FIELD_CATALOG",
+      "required": true,
+      "required_fields": [
+        "original column order",
+        "technical field name",
+        "label",
+        "data type",
+        "unit/currency",
+        "hidden or calculated flag"
+      ]
+    },
+    {
+      "artifact": "CONTROL_TOTAL_AND_SCOPE_CHECK",
+      "required": true,
+      "required_fields": [
+        "row count",
+        "control total",
+        "scope",
+        "cutoff",
+        "paging/row limit",
+        "authorisation scope"
+      ]
+    },
+    {
+      "artifact": "OWNER_AND_SME_REVIEW",
+      "required": true,
+      "required_fields": [
+        "business owner",
+        "SAP key user",
+        "IFRS/business reviewer",
+        "decision",
+        "review date",
+        "exceptions"
+      ]
+    }
+  ],
+  "reports": [
+    {
+      "report_id": "FI01",
+      "module": "FI",
+      "title": "Chi tiết GL — entry view",
+      "tcode": "FBL3N",
+      "priority": 1,
+      "raw_export_status": "NOT_RECEIVED",
+      "format_profile_status": "WAITING_FOR_ORIGINAL",
+      "current_evidence": {
+        "original_file": null,
+        "original_sha256": null,
+        "release": null,
+        "client": null,
+        "layout_name": null,
+        "selection_variant": null,
+        "technical_field_catalog": null
+      },
+      "required_artifacts": [
+        "ORIGINAL_NATIVE_EXPORT",
+        "CAPTURE_CONTEXT_MANIFEST",
+        "TECHNICAL_FIELD_CATALOG",
+        "CONTROL_TOTAL_AND_SCOPE_CHECK",
+        "OWNER_AND_SME_REVIEW"
+      ],
+      "acceptance": {
+        "native_export_received": false,
+        "hash_verified": false,
+        "context_complete": false,
+        "field_catalog_verified": false,
+        "control_totals_reconciled": false,
+        "owner_and_sme_signed": false
+      },
+      "status": "WAITING_FOR_AUTHORIZED_NATIVE_INPUT"
+    },
+    {
+      "report_id": "FI02",
+      "module": "FI",
+      "title": "Chi tiết GL — ledger view",
+      "tcode": "FAGLL03",
+      "priority": 1,
+      "raw_export_status": "NOT_RECEIVED",
+      "format_profile_status": "WAITING_FOR_ORIGINAL",
+      "current_evidence": {
+        "original_file": null,
+        "original_sha256": null,
+        "release": null,
+        "client": null,
+        "layout_name": null,
+        "selection_variant": null,
+        "technical_field_catalog": null
+      },
+      "required_artifacts": [
+        "ORIGINAL_NATIVE_EXPORT",
+        "CAPTURE_CONTEXT_MANIFEST",
+        "TECHNICAL_FIELD_CATALOG",
+        "CONTROL_TOTAL_AND_SCOPE_CHECK",
+        "OWNER_AND_SME_REVIEW"
+      ],
+      "acceptance": {
+        "native_export_received": false,
+        "hash_verified": false,
+        "context_complete": false,
+        "field_catalog_verified": false,
+        "control_totals_reconciled": false,
+        "owner_and_sme_signed": false
+      },
+      "status": "WAITING_FOR_AUTHORIZED_NATIVE_INPUT"
+    },
+    {
+      "report_id": "FI06",
+      "module": "FI",
+      "title": "Chi tiết công nợ nhà cung cấp",
+      "tcode": "FBL1N",
+      "priority": 1,
+      "raw_export_status": "NOT_RECEIVED",
+      "format_profile_status": "WAITING_FOR_ORIGINAL",
+      "current_evidence": {
+        "original_file": null,
+        "original_sha256": null,
+        "release": null,
+        "client": null,
+        "layout_name": null,
+        "selection_variant": null,
+        "technical_field_catalog": null
+      },
+      "required_artifacts": [
+        "ORIGINAL_NATIVE_EXPORT",
+        "CAPTURE_CONTEXT_MANIFEST",
+        "TECHNICAL_FIELD_CATALOG",
+        "CONTROL_TOTAL_AND_SCOPE_CHECK",
+        "OWNER_AND_SME_REVIEW"
+      ],
+      "acceptance": {
+        "native_export_received": false,
+        "hash_verified": false,
+        "context_complete": false,
+        "field_catalog_verified": false,
+        "control_totals_reconciled": false,
+        "owner_and_sme_signed": false
+      },
+      "status": "WAITING_FOR_AUTHORIZED_NATIVE_INPUT"
+    },
+    {
+      "report_id": "FI15",
+      "module": "FI",
+      "title": "Theo dõi KPI đối chiếu GR/IR",
+      "tcode": null,
+      "priority": 2,
+      "raw_export_status": "NOT_RECEIVED",
+      "format_profile_status": "WAITING_FOR_ORIGINAL",
+      "current_evidence": {
+        "original_file": null,
+        "original_sha256": null,
+        "release": null,
+        "client": null,
+        "layout_name": null,
+        "selection_variant": null,
+        "technical_field_catalog": null
+      },
+      "required_artifacts": [
+        "ORIGINAL_NATIVE_EXPORT",
+        "CAPTURE_CONTEXT_MANIFEST",
+        "TECHNICAL_FIELD_CATALOG",
+        "CONTROL_TOTAL_AND_SCOPE_CHECK",
+        "OWNER_AND_SME_REVIEW"
+      ],
+      "acceptance": {
+        "native_export_received": false,
+        "hash_verified": false,
+        "context_complete": false,
+        "field_catalog_verified": false,
+        "control_totals_reconciled": false,
+        "owner_and_sme_signed": false
+      },
+      "status": "WAITING_FOR_AUTHORIZED_NATIVE_INPUT"
+    },
+    {
+      "report_id": "CO01",
+      "module": "CO",
+      "title": "Chi tiết chi phí cost center thực tế",
+      "tcode": "KSB1 / KSB1N",
+      "priority": 1,
+      "raw_export_status": "NOT_RECEIVED",
+      "format_profile_status": "WAITING_FOR_ORIGINAL",
+      "current_evidence": {
+        "original_file": null,
+        "original_sha256": null,
+        "release": null,
+        "client": null,
+        "layout_name": null,
+        "selection_variant": null,
+        "technical_field_catalog": null
+      },
+      "required_artifacts": [
+        "ORIGINAL_NATIVE_EXPORT",
+        "CAPTURE_CONTEXT_MANIFEST",
+        "TECHNICAL_FIELD_CATALOG",
+        "CONTROL_TOTAL_AND_SCOPE_CHECK",
+        "OWNER_AND_SME_REVIEW"
+      ],
+      "acceptance": {
+        "native_export_received": false,
+        "hash_verified": false,
+        "context_complete": false,
+        "field_catalog_verified": false,
+        "control_totals_reconciled": false,
+        "owner_and_sme_signed": false
+      },
+      "status": "WAITING_FOR_AUTHORIZED_NATIVE_INPUT"
+    },
+    {
+      "report_id": "CO15",
+      "module": "CO",
+      "title": "Chi tiết profitability / CO-PA",
+      "tcode": "KE24",
+      "priority": 2,
+      "raw_export_status": "NOT_RECEIVED",
+      "format_profile_status": "WAITING_FOR_ORIGINAL",
+      "current_evidence": {
+        "original_file": null,
+        "original_sha256": null,
+        "release": null,
+        "client": null,
+        "layout_name": null,
+        "selection_variant": null,
+        "technical_field_catalog": null
+      },
+      "required_artifacts": [
+        "ORIGINAL_NATIVE_EXPORT",
+        "CAPTURE_CONTEXT_MANIFEST",
+        "TECHNICAL_FIELD_CATALOG",
+        "CONTROL_TOTAL_AND_SCOPE_CHECK",
+        "OWNER_AND_SME_REVIEW"
+      ],
+      "acceptance": {
+        "native_export_received": false,
+        "hash_verified": false,
+        "context_complete": false,
+        "field_catalog_verified": false,
+        "control_totals_reconciled": false,
+        "owner_and_sme_signed": false
+      },
+      "status": "WAITING_FOR_AUTHORIZED_NATIVE_INPUT"
+    },
+    {
+      "report_id": "MM01",
+      "module": "MM",
+      "title": "Danh sách chứng từ vật tư",
+      "tcode": "MB51",
+      "priority": 1,
+      "raw_export_status": "NOT_RECEIVED",
+      "format_profile_status": "WAITING_FOR_ORIGINAL",
+      "current_evidence": {
+        "original_file": null,
+        "original_sha256": null,
+        "release": null,
+        "client": null,
+        "layout_name": null,
+        "selection_variant": null,
+        "technical_field_catalog": null
+      },
+      "required_artifacts": [
+        "ORIGINAL_NATIVE_EXPORT",
+        "CAPTURE_CONTEXT_MANIFEST",
+        "TECHNICAL_FIELD_CATALOG",
+        "CONTROL_TOTAL_AND_SCOPE_CHECK",
+        "OWNER_AND_SME_REVIEW"
+      ],
+      "acceptance": {
+        "native_export_received": false,
+        "hash_verified": false,
+        "context_complete": false,
+        "field_catalog_verified": false,
+        "control_totals_reconciled": false,
+        "owner_and_sme_signed": false
+      },
+      "status": "WAITING_FOR_AUTHORIZED_NATIVE_INPUT"
+    },
+    {
+      "report_id": "MM08",
+      "module": "MM",
+      "title": "Lịch sử PO — GR, IR, reversal",
+      "tcode": "ME80FN",
+      "priority": 1,
+      "raw_export_status": "NOT_RECEIVED",
+      "format_profile_status": "WAITING_FOR_ORIGINAL",
+      "current_evidence": {
+        "original_file": null,
+        "original_sha256": null,
+        "release": null,
+        "client": null,
+        "layout_name": null,
+        "selection_variant": null,
+        "technical_field_catalog": null
+      },
+      "required_artifacts": [
+        "ORIGINAL_NATIVE_EXPORT",
+        "CAPTURE_CONTEXT_MANIFEST",
+        "TECHNICAL_FIELD_CATALOG",
+        "CONTROL_TOTAL_AND_SCOPE_CHECK",
+        "OWNER_AND_SME_REVIEW"
+      ],
+      "acceptance": {
+        "native_export_received": false,
+        "hash_verified": false,
+        "context_complete": false,
+        "field_catalog_verified": false,
+        "control_totals_reconciled": false,
+        "owner_and_sme_signed": false
+      },
+      "status": "WAITING_FOR_AUTHORIZED_NATIVE_INPUT"
+    },
+    {
+      "report_id": "PP01",
+      "module": null,
+      "title": null,
+      "tcode": null,
+      "priority": null,
+      "raw_export_status": "NOT_REGISTERED",
+      "format_profile_status": "NOT_REGISTERED",
+      "current_evidence": {
+        "original_file": null,
+        "original_sha256": null,
+        "release": null,
+        "client": null,
+        "layout_name": null,
+        "selection_variant": null,
+        "technical_field_catalog": null
+      },
+      "required_artifacts": [
+        "ORIGINAL_NATIVE_EXPORT",
+        "CAPTURE_CONTEXT_MANIFEST",
+        "TECHNICAL_FIELD_CATALOG",
+        "CONTROL_TOTAL_AND_SCOPE_CHECK",
+        "OWNER_AND_SME_REVIEW"
+      ],
+      "acceptance": {
+        "native_export_received": false,
+        "hash_verified": false,
+        "context_complete": false,
+        "field_catalog_verified": false,
+        "control_totals_reconciled": false,
+        "owner_and_sme_signed": false
+      },
+      "status": "WAITING_FOR_AUTHORIZED_NATIVE_INPUT"
+    },
+    {
+      "report_id": "SD01",
+      "module": null,
+      "title": null,
+      "tcode": null,
+      "priority": null,
+      "raw_export_status": "NOT_REGISTERED",
+      "format_profile_status": "NOT_REGISTERED",
+      "current_evidence": {
+        "original_file": null,
+        "original_sha256": null,
+        "release": null,
+        "client": null,
+        "layout_name": null,
+        "selection_variant": null,
+        "technical_field_catalog": null
+      },
+      "required_artifacts": [
+        "ORIGINAL_NATIVE_EXPORT",
+        "CAPTURE_CONTEXT_MANIFEST",
+        "TECHNICAL_FIELD_CATALOG",
+        "CONTROL_TOTAL_AND_SCOPE_CHECK",
+        "OWNER_AND_SME_REVIEW"
+      ],
+      "acceptance": {
+        "native_export_received": false,
+        "hash_verified": false,
+        "context_complete": false,
+        "field_catalog_verified": false,
+        "control_totals_reconciled": false,
+        "owner_and_sme_signed": false
+      },
+      "status": "WAITING_FOR_AUTHORIZED_NATIVE_INPUT"
+    },
+    {
+      "report_id": "QM01",
+      "module": null,
+      "title": null,
+      "tcode": null,
+      "priority": null,
+      "raw_export_status": "NOT_REGISTERED",
+      "format_profile_status": "NOT_REGISTERED",
+      "current_evidence": {
+        "original_file": null,
+        "original_sha256": null,
+        "release": null,
+        "client": null,
+        "layout_name": null,
+        "selection_variant": null,
+        "technical_field_catalog": null
+      },
+      "required_artifacts": [
+        "ORIGINAL_NATIVE_EXPORT",
+        "CAPTURE_CONTEXT_MANIFEST",
+        "TECHNICAL_FIELD_CATALOG",
+        "CONTROL_TOTAL_AND_SCOPE_CHECK",
+        "OWNER_AND_SME_REVIEW"
+      ],
+      "acceptance": {
+        "native_export_received": false,
+        "hash_verified": false,
+        "context_complete": false,
+        "field_catalog_verified": false,
+        "control_totals_reconciled": false,
+        "owner_and_sme_signed": false
+      },
+      "status": "WAITING_FOR_AUTHORIZED_NATIVE_INPUT"
+    },
+    {
+      "report_id": "PM01",
+      "module": null,
+      "title": null,
+      "tcode": null,
+      "priority": null,
+      "raw_export_status": "NOT_REGISTERED",
+      "format_profile_status": "NOT_REGISTERED",
+      "current_evidence": {
+        "original_file": null,
+        "original_sha256": null,
+        "release": null,
+        "client": null,
+        "layout_name": null,
+        "selection_variant": null,
+        "technical_field_catalog": null
+      },
+      "required_artifacts": [
+        "ORIGINAL_NATIVE_EXPORT",
+        "CAPTURE_CONTEXT_MANIFEST",
+        "TECHNICAL_FIELD_CATALOG",
+        "CONTROL_TOTAL_AND_SCOPE_CHECK",
+        "OWNER_AND_SME_REVIEW"
+      ],
+      "acceptance": {
+        "native_export_received": false,
+        "hash_verified": false,
+        "context_complete": false,
+        "field_catalog_verified": false,
+        "control_totals_reconciled": false,
+        "owner_and_sme_signed": false
+      },
+      "status": "WAITING_FOR_AUTHORIZED_NATIVE_INPUT"
+    }
+  ],
+  "completion_rule": "A report remains WAITING_FOR_AUTHORIZED_NATIVE_INPUT until every required artifact is present, hash-verified, and owner/SME accepted.",
+  "prohibited_inference": [
+    "Synthetic XLSX/CSV does not satisfy ORIGINAL_NATIVE_EXPORT.",
+    "A public screenshot or web reference does not prove target release/client layout.",
+    "A balanced teaching sample does not prove population completeness, IFRS classification, or SAP acceptance."
+  ]
+}

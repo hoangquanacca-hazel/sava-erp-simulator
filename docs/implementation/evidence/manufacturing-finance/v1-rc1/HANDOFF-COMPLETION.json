@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-22",
+  "candidate": "manufacturing-finance-v1.0.0-rc.1",
+  "manifestSha256": "a661176aa6d39b13bef8d0b64982518f9fb7d39eb89d43f8230086b439706b10",
+  "technicalStatus": "VERIFIED_RC",
+  "browser": {
+    "method": "ISOLATED_HEADLESS_LOCALHOST",
+    "journeys": "4_OF_4_PASS",
+    "checks": 40,
+    "downloads": 28
+  },
+  "preview": "http://127.0.0.1:3210/#/manufacturing-finance",
+  "obsidian": {
+    "folder": "D:\\Sava_Second Brain\\00_Inbox\\AI\\2026-10-22_Simulator_v1_RC1",
+    "verifiedFiles": 9,
+    "rendered": "SHOWN_IN_READING_VIEW",
+    "screenshot": "obsidian-rc1-render.jpg",
+    "sha256": "9898a1b0c2fe204c5d217418b2e2ea3a49bcc6be474e42f9f88ce8ced4ab20c6"
+  },
+  "learningAcceptance": "PENDING_HUMAN_REVIEW",
+  "independentSme": "PENDING",
+  "sapNative": "NOT_RUN",
+  "targetRelease": "UNKNOWN",
+  "productionDeployment": "NOT_RUN"
+}

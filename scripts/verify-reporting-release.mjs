@@ -16,9 +16,15 @@ const walk=(dir,prefix='')=>readdirSync(dir,{withFileTypes:true}).flatMap(entry=
   assert(!entry.isSymbolicLink(),`Unexpected symlink: ${relative}`);
   return entry.isDirectory()?walk(path.join(dir,entry.name),relative+'/'):[relative];
 }).sort();
-const files=walk(library);
+// The Simulated Native pilot package (public/sap-reporting/simulated-native/) is a separate SIMULATED_NATIVE
+// package with its own manifest + sha256 (verified by `npm run test:simulated-native`). It is kept out of
+// this 160-profile template-library manifest, which stays unchanged; it is only checked to be copied byte-for-byte.
+const SIMULATED_NATIVE='simulated-native/';
+const allPublic=walk(library);
+const files=allPublic.filter(x=>!x.startsWith(SIMULATED_NATIVE));
 assert.deepEqual(files,manifest.files.map(x=>x.path).sort(),'Public library inventory changed: review and update the release manifest');
-assert.deepEqual(walk(built),files,'A normal app build lost or added library files');
+assert.deepEqual(walk(built),allPublic,'A normal app build lost or added library files');
+for(const extra of allPublic.filter(x=>x.startsWith(SIMULATED_NATIVE)))assert.equal(digest(readFileSync(path.join(built,extra))),digest(readFileSync(path.join(library,extra))),`Build altered simulated-native bytes: ${extra}`);
 for(const entry of manifest.files){
   const source=readFileSync(path.join(library,entry.path));
   const output=readFileSync(path.join(built,entry.path));

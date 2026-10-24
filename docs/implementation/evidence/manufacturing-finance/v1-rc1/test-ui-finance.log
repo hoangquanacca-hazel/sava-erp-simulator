@@ -1,0 +1,5 @@
+
+> react-example@0.0.0 test:ui-finance
+> tsx scripts/ui-finance-regression.tsx
+
+PASS UI finance 54/54 oracle cases; posted profit/WIP; signed bridge; canonical BOM; rendered inventory/narratives.

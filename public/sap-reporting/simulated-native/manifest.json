@@ -1,0 +1,344 @@
+{
+  "package_version": "simulated-native-pilot-v1.0.0",
+  "generated_at": "2026-10-23",
+  "status": "SIMULATED_NATIVE_PACKAGE_READY_FOR_INTEGRATION_TEST",
+  "pilot_count": 12,
+  "ready_pilot_count": 8,
+  "pilot_ids": [
+    "FI01",
+    "FI02",
+    "FI06",
+    "FI15",
+    "CO01",
+    "CO15",
+    "MM01",
+    "MM08",
+    "PP01",
+    "SD01",
+    "QM01",
+    "PM01"
+  ],
+  "blocked_pilots": [
+    {
+      "report_id": "PP01",
+      "status": "BLOCKED_CONTRACT_GAP",
+      "missing": [
+        "keys",
+        "columns"
+      ],
+      "reason": "Phase-3 entry contract has no approved grain/key/column catalog; no fields were invented."
+    },
+    {
+      "report_id": "SD01",
+      "status": "BLOCKED_CONTRACT_GAP",
+      "missing": [
+        "keys",
+        "columns"
+      ],
+      "reason": "Phase-3 entry contract has no approved grain/key/column catalog; no fields were invented."
+    },
+    {
+      "report_id": "QM01",
+      "status": "BLOCKED_CONTRACT_GAP",
+      "missing": [
+        "keys",
+        "columns"
+      ],
+      "reason": "Phase-3 entry contract has no approved grain/key/column catalog; no fields were invented."
+    },
+    {
+      "report_id": "PM01",
+      "status": "BLOCKED_CONTRACT_GAP",
+      "missing": [
+        "keys",
+        "columns"
+      ],
+      "reason": "Phase-3 entry contract has no approved grain/key/column catalog; no fields were invented."
+    }
+  ],
+  "provenance_class": "SIMULATED_NATIVE",
+  "original_sap_exports": 0,
+  "native_acceptance": "NOT_RUN",
+  "business_acceptance": "NOT_APPROVED",
+  "target_release": "UNKNOWN",
+  "eligible_for_demo": true,
+  "eligible_for_production": false,
+  "deployment_status": "NOT_DEPLOYED",
+  "layers": [
+    "RAW",
+    "CLEAN",
+    "CONTROL",
+    "MART",
+    "ANALYTICS"
+  ],
+  "files": [
+    {
+      "path": "clean/CO01.clean.json",
+      "bytes": 2958,
+      "sha256": "621258648becdffdaf8c9262c2638c93b5caac469a1ec51a75a13d3ab4b9186d"
+    },
+    {
+      "path": "clean/CO15.clean.json",
+      "bytes": 2891,
+      "sha256": "4fdb3f20a61080a035dbbe45124798c0cfbf8f3eee38c02c41b184aea0ccd7af"
+    },
+    {
+      "path": "clean/FI01.clean.json",
+      "bytes": 2756,
+      "sha256": "c04a384a8703b4be0b4f7bd20c598517578511921dbbe41d4ea59db9ce9463bc"
+    },
+    {
+      "path": "clean/FI02.clean.json",
+      "bytes": 2848,
+      "sha256": "3853cd9837168d18160c75146c102b901438fca6c90ee530c7dac252a14a54c8"
+    },
+    {
+      "path": "clean/FI06.clean.json",
+      "bytes": 2809,
+      "sha256": "3908a49798c659cfb05e1eeb9b4eff21f7f3bf29479875ed2faee476e400e61f"
+    },
+    {
+      "path": "clean/FI15.clean.json",
+      "bytes": 2688,
+      "sha256": "d80cc92878cfe66eb0806ae8f7720d627737d301e2abbf81cb9aa2ce9f0816eb"
+    },
+    {
+      "path": "clean/MM01.clean.json",
+      "bytes": 3353,
+      "sha256": "5ecac652b667d5e23dc263631c37ec83b0b547dbc4dfa92d6d7ed378b1257c7a"
+    },
+    {
+      "path": "clean/MM08.clean.json",
+      "bytes": 2976,
+      "sha256": "186499a35eb518ced4256767bb72a166346aea5d2f1fe1410b32bdf51c779902"
+    },
+    {
+      "path": "control/CO01.control.json",
+      "bytes": 2799,
+      "sha256": "bd3d8ff8f5a19021541169cc495307e30339c92ee0899ab47ef626bf8235b0a3"
+    },
+    {
+      "path": "control/CO15.control.json",
+      "bytes": 2727,
+      "sha256": "50df4bb2d91d1f6134d9d3a48ed9dfc0e5cbf0d25d376f0f82e2632f6d85aaa3"
+    },
+    {
+      "path": "control/FI01.control.json",
+      "bytes": 2708,
+      "sha256": "40a28f3146f81a4983001b69e894062eb712df691c29990f2cd7bd4a501c3dc5"
+    },
+    {
+      "path": "control/FI02.control.json",
+      "bytes": 2704,
+      "sha256": "4ef354e04f543ababcbbc86c15fe61ef883ee1bbaae398051bce820bbfa046de"
+    },
+    {
+      "path": "control/FI06.control.json",
+      "bytes": 2723,
+      "sha256": "08a6dfa0ba31baac76147598b2567fe040f7bbadead8ba906bdcb9ac122acd1a"
+    },
+    {
+      "path": "control/FI15.control.json",
+      "bytes": 2744,
+      "sha256": "13b412b397e48469213654bdb4588b6d1e3e8eb268ae63dd3b2c6232560220c3"
+    },
+    {
+      "path": "control/MM01.control.json",
+      "bytes": 2784,
+      "sha256": "90f492483ed15c9c926365853b295ad770b8f4c04764e769c6c8b0ca73000e29"
+    },
+    {
+      "path": "control/MM08.control.json",
+      "bytes": 2794,
+      "sha256": "45739eecda836bf17f956ef1bb36366f38888b6b5b2b50ec701f0b3791662bc1"
+    },
+    {
+      "path": "index.html",
+      "bytes": 2580,
+      "sha256": "a552cf51c449b7730ed85a46f93da31681b325cc249157ec139afb82a2d52398"
+    },
+    {
+      "path": "mart/CO01.mart.json",
+      "bytes": 2780,
+      "sha256": "0cf603735556578d2ab450d27906ed75a16d99adac2a1628e9d53b44653d2531"
+    },
+    {
+      "path": "mart/CO15.mart.json",
+      "bytes": 2735,
+      "sha256": "1a5ad09b0c64768d54b06834e09c4e8d30fd128f389007e6757cb70e0f4f691d"
+    },
+    {
+      "path": "mart/FI01.mart.json",
+      "bytes": 2625,
+      "sha256": "bf699550ab65f477c82ec8da8ad3d427995c6db0517f98ae2c8be288478f5474"
+    },
+    {
+      "path": "mart/FI02.mart.json",
+      "bytes": 2700,
+      "sha256": "438eb7d0550f51f5ac9a9450f888ffe61040077f26a2f478bc62b64b38bb0a5a"
+    },
+    {
+      "path": "mart/FI06.mart.json",
+      "bytes": 2669,
+      "sha256": "25c39df63b764a25aab93793cd3248d0edf75c2b5b08376aa6cdb17f41a2aad3"
+    },
+    {
+      "path": "mart/FI15.mart.json",
+      "bytes": 2584,
+      "sha256": "0e59b492423222b4a2bbc6fcc1a7cbccd3387e0c0bd34f292cf490377ca75667"
+    },
+    {
+      "path": "mart/MM01.mart.json",
+      "bytes": 3103,
+      "sha256": "41539f56fd7e82d1e985aa4edb90106edd3aebeee56bc0608b6f3192c858a688"
+    },
+    {
+      "path": "mart/MM08.mart.json",
+      "bytes": 2806,
+      "sha256": "3ed049408417b745af584b3288291d00e58c4f679bddc07d72336bc21ddae195"
+    },
+    {
+      "path": "power-bi/dataset.schema.json",
+      "bytes": 10450,
+      "sha256": "ba6d4836beb5e044a622a5b2bca323b8d08e0cfc64eaaa2c6d92bf671006935a"
+    },
+    {
+      "path": "power-bi/README.md",
+      "bytes": 497,
+      "sha256": "b8a06c84fcedfe8c31a391d1ac14293184f4b26fa717a418174e6fd4a6e1920a"
+    },
+    {
+      "path": "power-bi/tables/CO01.csv",
+      "bytes": 217,
+      "sha256": "14a5c4a3ea0fec31e506a64be2925a1b1d6c0fb93a754959ca4c72bdee3b55a8"
+    },
+    {
+      "path": "power-bi/tables/CO15.csv",
+      "bytes": 233,
+      "sha256": "44b5eb1ac84dc53e6bc388d8cc0b8a6f5d2102c164ded8b96a4a12da723da44b"
+    },
+    {
+      "path": "power-bi/tables/FI01.csv",
+      "bytes": 190,
+      "sha256": "8e16b8ae46cb6a67c225fcaea20a47f0735b0e403d95524e864e28adf365b64e"
+    },
+    {
+      "path": "power-bi/tables/FI02.csv",
+      "bytes": 209,
+      "sha256": "d91bb62a763bfe245bb201dc37dab85be54cfa382ce35ee8953e096c78b6b8af"
+    },
+    {
+      "path": "power-bi/tables/FI06.csv",
+      "bytes": 216,
+      "sha256": "c3178d8c2e943865f9e085fc183f6b4d8f2c09ba2dc24ac431ba5b2a4a6250c5"
+    },
+    {
+      "path": "power-bi/tables/FI15.csv",
+      "bytes": 169,
+      "sha256": "0e728caf78b01a2ae18705781e7493f926736b34d04f6e07a2217e1df7e3c03e"
+    },
+    {
+      "path": "power-bi/tables/MM01.csv",
+      "bytes": 436,
+      "sha256": "4de1b152e647247e2be39cb16815d1c93cf30edd0f3b8a0727014662d26f2518"
+    },
+    {
+      "path": "power-bi/tables/MM08.csv",
+      "bytes": 260,
+      "sha256": "e4ae8b3417cab38502d690ebca86f1e9d4e45c5f3db4c564ec46ac4a52cf7fc7"
+    },
+    {
+      "path": "raw/CO01.simulated-native.json",
+      "bytes": 927,
+      "sha256": "db9b59fcff4f5afa410d92a3ba9752ed3d14839b7a81023ae29f7d793fb5878f"
+    },
+    {
+      "path": "raw/CO15.simulated-native.json",
+      "bytes": 916,
+      "sha256": "aff157a335d38c624631b752eaad8c420dfa6b51a3a723832caab8b3c5059810"
+    },
+    {
+      "path": "raw/FI01.simulated-native.json",
+      "bytes": 804,
+      "sha256": "746195446defcabef18af909a826fb85f031c27be3e284aa9fdb6c567513d7e6"
+    },
+    {
+      "path": "raw/FI02.simulated-native.json",
+      "bytes": 876,
+      "sha256": "29fbca7f4210278a252f6a5347e11e38a54b190201d795e80124a3acb8836b8c"
+    },
+    {
+      "path": "raw/FI06.simulated-native.json",
+      "bytes": 838,
+      "sha256": "9a4de1c557d8a0ff4c2a403d4cd021c55a0d7f5808de89fb9b698a37e5218b2e"
+    },
+    {
+      "path": "raw/FI15.simulated-native.json",
+      "bytes": 723,
+      "sha256": "a55f19407827fb10e33552f1549378c45f79ba0de0c442efcd557784e651765c"
+    },
+    {
+      "path": "raw/MM01.simulated-native.json",
+      "bytes": 1293,
+      "sha256": "49e36ecf827681511ad60b98c3b4ed8ed0c1487cf69446f998d73ce5489a67d6"
+    },
+    {
+      "path": "raw/MM08.simulated-native.json",
+      "bytes": 940,
+      "sha256": "162d5989ce1fd055bb7ef0fc2c42133c1d9bc1e18e59ed1e6c5909d1795a6986"
+    },
+    {
+      "path": "simulator/CO01.simulator.json",
+      "bytes": 3736,
+      "sha256": "386509abd6ab3ddcfd995cdb1e2688c6270947810548760a1f60d2a14690dc32"
+    },
+    {
+      "path": "simulator/CO15.simulator.json",
+      "bytes": 3648,
+      "sha256": "6b16dee622d29f2b94cecdef7f7866e59a679194a4d6e209509c85898bf184d0"
+    },
+    {
+      "path": "simulator/FI01.simulator.json",
+      "bytes": 3539,
+      "sha256": "c1b71b7043ed4e270cc2d6149f3400ce696138bf96f73df89bf39276b79b46d8"
+    },
+    {
+      "path": "simulator/FI02.simulator.json",
+      "bytes": 3591,
+      "sha256": "244e789b5bd60e42df2bd3c7d52c040c4efd140918fb9b7010e59bf8e9a66a1b"
+    },
+    {
+      "path": "simulator/FI06.simulator.json",
+      "bytes": 3584,
+      "sha256": "a010954a801db8041ed82ca89a55f19ada61c0ec5585c55579b35775dfc9effa"
+    },
+    {
+      "path": "simulator/FI15.simulator.json",
+      "bytes": 3499,
+      "sha256": "70696b3e38d67e18a73477d7989b448aa0e5a38dac95a3b21ccd3777ee0b090d"
+    },
+    {
+      "path": "simulator/MM01.simulator.json",
+      "bytes": 4049,
+      "sha256": "179efe2c72341d9cdc13b14749fa9ceb002a1ba9ffa282d57835462bcc91a738"
+    },
+    {
+      "path": "simulator/MM08.simulator.json",
+      "bytes": 3759,
+      "sha256": "5a89a8417194a095daf267f3363234a563378e02afc08e594507a77b85d3e7bc"
+    }
+  ],
+  "checks": {
+    "deterministic_seeded_rows": "PASS",
+    "raw_hashes": "PASS",
+    "control_totals": "PASS",
+    "direct_joins": "BLOCKED",
+    "power_bi_workspace_push": "NOT_RUN",
+    "simulator_production_push": "NOT_RUN"
+  },
+  "limitations": [
+    "Synthetic fixture only.",
+    "No SAP connection or native export received.",
+    "Power BI and production deployment require a separate authorized release step."
+  ]
+}

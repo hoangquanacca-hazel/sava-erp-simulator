@@ -1,0 +1,45 @@
+{
+  "banner": "SIMULATED_NATIVE | GENERATED_SYNTHETIC | NOT_SAP_NATIVE",
+  "report_id": "FI02",
+  "ordered_columns": [
+    "ledger",
+    "company",
+    "year",
+    "doc",
+    "line",
+    "date",
+    "gl",
+    "profit_center",
+    "amount",
+    "currency",
+    "currency_type"
+  ],
+  "rows": [
+    {
+      "ledger": "0L",
+      "company": "1000",
+      "year": "2026",
+      "doc": "190100001",
+      "line": "001",
+      "date": "2026-09-30",
+      "gl": "150000",
+      "profit_center": "PC1100",
+      "amount": "1000",
+      "currency": "USD",
+      "currency_type": "10"
+    },
+    {
+      "ledger": "0L",
+      "company": "1000",
+      "year": "2026",
+      "doc": "190100002",
+      "line": "002",
+      "date": "2026-09-30",
+      "gl": "150000",
+      "profit_center": "PC1100",
+      "amount": "-250",
+      "currency": "USD",
+      "currency_type": "10"
+    }
+  ]
+}

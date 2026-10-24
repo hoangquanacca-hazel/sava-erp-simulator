@@ -1,0 +1,296 @@
+{
+  "date": "2026-10-22",
+  "scope": "SIMULATOR_V1_MANUFACTURING_FINANCE",
+  "method": "ISOLATED_HEADLESS_LOCALHOST",
+  "appBrowserPlugin": "BLOCKED_BOOTSTRAP_VERSION_PATH",
+  "headlessExecutable": "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe",
+  "scenarios": [
+    {
+      "id": "fiori-1440",
+      "theme": "fiori",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": "PASS",
+      "checks": [
+        "fresh route, first-visit guide, selected theme and responsive viewport",
+        "keyboard activation and invalid deposit transitions blocked",
+        "deposit 36m, invoice 120m, AR 84m, stale proposal blocked, notice history updated",
+        "bank 1:1 and 1:N, unmatched/ambiguous retained, manual mismatch blocked then cleared",
+        "AVC excess/blank blocked, warning accepted, commitment relieved into actual",
+        "supplier clearing retains 60m reciprocal IC balance and disables duplicate action",
+        "real JSON and FI21/FI22 downloads saved; byte hashes, report content and 18 headers verified",
+        "stale evidence warning and state preservation through route navigation",
+        "lesson reset restores state and form selections; full reload starts a clean RAM-only lesson",
+        "no uncaught browser JavaScript errors"
+      ],
+      "downloads": [
+        {
+          "file": "fiori-1440-evidence-MFG-FIN-20261021_SIMULATED.json",
+          "bytes": 33538,
+          "sha256": "24b60c732b0bbb1e0a0517129cb6fc4b555816f9e1aac50dc72f6a472380c850"
+        },
+        {
+          "file": "fiori-1440-FI21-MFG-FIN-20261021_FI21_SIMULATED.txt",
+          "bytes": 1666,
+          "sha256": "859a9791c79f480dd6ec040d719a92e5d41f46dd095f5eb57396a89e3fd9bd64"
+        },
+        {
+          "file": "fiori-1440-FI22-MFG-FIN-20261021_FI22_SIMULATED.txt",
+          "bytes": 1248,
+          "sha256": "61728394924e6a23277c883c03b639f1724988db2135027cf5803a19902fdc5c"
+        },
+        {
+          "file": "fiori-1440-before-nav-MFG-FIN-20261021_SIMULATED.json",
+          "bytes": 33347,
+          "sha256": "0923fd6d8c12b4915aa71f9414c8a3a94ce25e1013b28c13bdd19e2ae74c2c32"
+        },
+        {
+          "file": "fiori-1440-after-nav-MFG-FIN-20261021_SIMULATED.json",
+          "bytes": 33347,
+          "sha256": "0923fd6d8c12b4915aa71f9414c8a3a94ce25e1013b28c13bdd19e2ae74c2c32"
+        },
+        {
+          "file": "fiori-1440-reset-MFG-FIN-20261021_SIMULATED.json",
+          "bytes": 22262,
+          "sha256": "b4a8a871944624c66c0fd84c90eb87a136c47b992dc55204a7df54f660209619"
+        },
+        {
+          "file": "fiori-1440-reload-MFG-FIN-20261021_SIMULATED.json",
+          "bytes": 22262,
+          "sha256": "b4a8a871944624c66c0fd84c90eb87a136c47b992dc55204a7df54f660209619"
+        }
+      ],
+      "pageErrors": [],
+      "externalRequestsBlocked": [
+        "https://www.savafinlab.com.vn/brand/v1/brand.css",
+        "https://www.savafinlab.com.vn/brand/v1/sava-bar.js",
+        "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap",
+        "https://www.savafinlab.com.vn/brand/v1/logo-icon.svg",
+        "https://www.savafinlab.com.vn/brand/v1/logo-icon.svg",
+        "https://www.savafinlab.com.vn/brand/v1/logo-icon.svg",
+        "https://www.savafinlab.com.vn/brand/v1/brand.css",
+        "https://www.savafinlab.com.vn/brand/v1/sava-bar.js",
+        "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap",
+        "https://www.savafinlab.com.vn/brand/v1/logo-icon.svg"
+      ]
+    },
+    {
+      "id": "classic-1440",
+      "theme": "classic",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": "PASS",
+      "checks": [
+        "fresh route, first-visit guide, selected theme and responsive viewport",
+        "keyboard activation and invalid deposit transitions blocked",
+        "deposit 36m, invoice 120m, AR 84m, stale proposal blocked, notice history updated",
+        "bank 1:1 and 1:N, unmatched/ambiguous retained, manual mismatch blocked then cleared",
+        "AVC excess/blank blocked, warning accepted, commitment relieved into actual",
+        "supplier clearing retains 60m reciprocal IC balance and disables duplicate action",
+        "real JSON and FI21/FI22 downloads saved; byte hashes, report content and 18 headers verified",
+        "stale evidence warning and state preservation through route navigation",
+        "lesson reset restores state and form selections; full reload starts a clean RAM-only lesson",
+        "no uncaught browser JavaScript errors"
+      ],
+      "downloads": [
+        {
+          "file": "classic-1440-evidence-MFG-FIN-20261021_SIMULATED.json",
+          "bytes": 33538,
+          "sha256": "24b60c732b0bbb1e0a0517129cb6fc4b555816f9e1aac50dc72f6a472380c850"
+        },
+        {
+          "file": "classic-1440-FI21-MFG-FIN-20261021_FI21_SIMULATED.txt",
+          "bytes": 1666,
+          "sha256": "859a9791c79f480dd6ec040d719a92e5d41f46dd095f5eb57396a89e3fd9bd64"
+        },
+        {
+          "file": "classic-1440-FI22-MFG-FIN-20261021_FI22_SIMULATED.txt",
+          "bytes": 1248,
+          "sha256": "61728394924e6a23277c883c03b639f1724988db2135027cf5803a19902fdc5c"
+        },
+        {
+          "file": "classic-1440-before-nav-MFG-FIN-20261021_SIMULATED.json",
+          "bytes": 33347,
+          "sha256": "0923fd6d8c12b4915aa71f9414c8a3a94ce25e1013b28c13bdd19e2ae74c2c32"
+        },
+        {
+          "file": "classic-1440-after-nav-MFG-FIN-20261021_SIMULATED.json",
+          "bytes": 33347,
+          "sha256": "0923fd6d8c12b4915aa71f9414c8a3a94ce25e1013b28c13bdd19e2ae74c2c32"
+        },
+        {
+          "file": "classic-1440-reset-MFG-FIN-20261021_SIMULATED.json",
+          "bytes": 22262,
+          "sha256": "b4a8a871944624c66c0fd84c90eb87a136c47b992dc55204a7df54f660209619"
+        },
+        {
+          "file": "classic-1440-reload-MFG-FIN-20261021_SIMULATED.json",
+          "bytes": 22262,
+          "sha256": "b4a8a871944624c66c0fd84c90eb87a136c47b992dc55204a7df54f660209619"
+        }
+      ],
+      "pageErrors": [],
+      "externalRequestsBlocked": [
+        "https://www.savafinlab.com.vn/brand/v1/brand.css",
+        "https://www.savafinlab.com.vn/brand/v1/sava-bar.js",
+        "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap",
+        "https://www.savafinlab.com.vn/brand/v1/logo-icon.svg",
+        "https://www.savafinlab.com.vn/brand/v1/logo-icon.svg",
+        "https://www.savafinlab.com.vn/brand/v1/logo-icon.svg",
+        "https://www.savafinlab.com.vn/brand/v1/brand.css",
+        "https://www.savafinlab.com.vn/brand/v1/sava-bar.js",
+        "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap",
+        "https://www.savafinlab.com.vn/brand/v1/logo-icon.svg"
+      ]
+    },
+    {
+      "id": "fiori-390",
+      "theme": "fiori",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": "FAIL",
+      "checks": [],
+      "downloads": [],
+      "pageErrors": [],
+      "externalRequestsBlocked": [
+        "https://www.savafinlab.com.vn/brand/v1/brand.css",
+        "https://www.savafinlab.com.vn/brand/v1/sava-bar.js",
+        "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap",
+        "https://www.savafinlab.com.vn/brand/v1/logo-icon.svg"
+      ],
+      "overflow": [
+        {
+          "tag": "DIV",
+          "class": "flex items-center flex-wrap gap-2",
+          "x": 16,
+          "width": 424,
+          "text": "Số Session còn trống: 2/5SAP FioriSAP Classic GUITra cứu T-CodeHướng dẫn📋 Chọn tình huống mẫu...Tìn"
+        },
+        {
+          "tag": "DIV",
+          "class": "flex items-center p-0.5 rounded border text-xs font-medium shadow-sm bg-slate-800 border-slate-700",
+          "x": 191.375,
+          "width": 205.5625,
+          "text": "SAP FioriSAP Classic GUI"
+        },
+        {
+          "tag": "BUTTON",
+          "class": "px-2 py-1 rounded flex items-center gap-1 transition-all text-slate-400 hover:text-slate-200",
+          "x": 277.453125,
+          "width": 116.484375,
+          "text": "SAP Classic GUI"
+        },
+        {
+          "tag": "DIV",
+          "class": "relative",
+          "x": 16,
+          "width": 424,
+          "text": "📋 Chọn tình huống mẫu...Tình huống 1: Vỏ camera Samsung (MTO Thuần - Kho Định Giá)Tình huống 2: Khu"
+        },
+        {
+          "tag": "SELECT",
+          "class": "text-xs rounded px-2.5 py-1.5 border focus:outline-none cursor-pointer font-medium bg-slate-800 text-slate-200 border-slate-700 hover:bg-slate-750 focus:ring-1 focus:ring-cyan-500",
+          "x": 16,
+          "width": 424,
+          "text": "📋 Chọn tình huống mẫu...Tình huống 1: Vỏ camera Samsung (MTO Thuần - Kho Định Giá)Tình huống 2: Khu"
+        },
+        {
+          "tag": "BUTTON",
+          "class": "text-xs px-2.5 py-1.5 rounded border font-semibold flex items-center gap-1.5 transition-all shadow-sm bg-slate-800/40 border-slate-800 text-slate-600 cursor-not-allowed",
+          "x": 293.046875,
+          "width": 110,
+          "text": "Báo cáo PDF"
+        },
+        {
+          "tag": "SPAN",
+          "class": "",
+          "x": 324.046875,
+          "width": 68,
+          "text": "Báo cáo PDF"
+        }
+      ],
+      "error": "AssertionError [ERR_ASSERTION]: initial: page overflow {\"viewport\":390,\"pageWidth\":440,\"mainWidth\":390}\n    at layout (file:///D:/sava-erp-simulator/scripts/manufacturing-finance-browser.mjs:68:12)\n    at async journey (file:///D:/sava-erp-simulator/scripts/manufacturing-finance-browser.mjs:76:5)\n    at async file:///D:/sava-erp-simulator/scripts/manufacturing-finance-browser.mjs:170:47"
+    },
+    {
+      "id": "classic-390",
+      "theme": "classic",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": "FAIL",
+      "checks": [],
+      "downloads": [],
+      "pageErrors": [],
+      "externalRequestsBlocked": [
+        "https://www.savafinlab.com.vn/brand/v1/brand.css",
+        "https://www.savafinlab.com.vn/brand/v1/sava-bar.js",
+        "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap",
+        "https://www.savafinlab.com.vn/brand/v1/logo-icon.svg"
+      ],
+      "overflow": [
+        {
+          "tag": "DIV",
+          "class": "flex items-center flex-wrap gap-2",
+          "x": 12,
+          "width": 424,
+          "text": "Số Session còn trống: 2/5SAP FioriSAP Classic GUI📂 SAP Easy AccessTra cứu T-CodeHướng dẫn📋 Chọn tì"
+        },
+        {
+          "tag": "DIV",
+          "class": "flex items-center p-0.5 rounded border text-xs font-medium shadow-sm bg-[#ffffff] border-[#7f9db9]",
+          "x": 187.375,
+          "width": 206.078125,
+          "text": "SAP FioriSAP Classic GUI"
+        },
+        {
+          "tag": "BUTTON",
+          "class": "px-2.5 py-1.5 rounded border text-xs font-semibold flex items-center gap-1.5 transition-all cursor-pointer shadow-sm bg-[#ece9d8] hover:bg-[#e0dcc8] text-[#333333] border-[#7f9db9]",
+          "x": 302.546875,
+          "width": 103.6875,
+          "text": "Hướng dẫn"
+        },
+        {
+          "tag": "SPAN",
+          "class": "",
+          "x": 333.546875,
+          "width": 61.6875,
+          "text": "Hướng dẫn"
+        },
+        {
+          "tag": "DIV",
+          "class": "relative",
+          "x": 12,
+          "width": 424,
+          "text": "📋 Chọn tình huống mẫu...Tình huống 1: Vỏ camera Samsung (MTO Thuần - Kho Định Giá)Tình huống 2: Khu"
+        },
+        {
+          "tag": "SELECT",
+          "class": "text-xs rounded px-2.5 py-1.5 border focus:outline-none cursor-pointer font-medium bg-white text-[#000000] border-[#7f9db9]",
+          "x": 12,
+          "width": 424,
+          "text": "📋 Chọn tình huống mẫu...Tình huống 1: Vỏ camera Samsung (MTO Thuần - Kho Định Giá)Tình huống 2: Khu"
+        },
+        {
+          "tag": "BUTTON",
+          "class": "text-xs px-2.5 py-1.5 rounded border font-semibold flex items-center gap-1.5 transition-all shadow-sm bg-[#e5e5e5] text-[#999999] border-[#cccccc] cursor-not-allowed",
+          "x": 289.046875,
+          "width": 110,
+          "text": "Báo cáo PDF"
+        }
+      ],
+      "error": "AssertionError [ERR_ASSERTION]: initial: page overflow {\"viewport\":390,\"pageWidth\":440,\"mainWidth\":390}\n    at layout (file:///D:/sava-erp-simulator/scripts/manufacturing-finance-browser.mjs:68:12)\n    at async journey (file:///D:/sava-erp-simulator/scripts/manufacturing-finance-browser.mjs:76:5)\n    at async file:///D:/sava-erp-simulator/scripts/manufacturing-finance-browser.mjs:170:47"
+    }
+  ],
+  "sapNative": "NOT_RUN",
+  "independentSme": "PENDING",
+  "learningAcceptance": "NOT_APPROVED",
+  "browserVersion": "155.0.4283.62",
+  "status": "FAIL"
+}

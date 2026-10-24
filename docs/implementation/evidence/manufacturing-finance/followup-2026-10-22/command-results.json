@@ -1,0 +1,67 @@
+[
+  {
+    "name": "lint:eslint:strict",
+    "exitCode": 0,
+    "log": "lint-eslint-strict.log"
+  },
+  {
+    "name": "lint",
+    "exitCode": 0,
+    "log": "lint.log"
+  },
+  {
+    "name": "test:manufacturing-finance",
+    "exitCode": 0,
+    "log": "test-manufacturing-finance.log"
+  },
+  {
+    "name": "test:parity",
+    "exitCode": 0,
+    "log": "test-parity.log"
+  },
+  {
+    "name": "test:a0",
+    "exitCode": 0,
+    "log": "test-a0.log"
+  },
+  {
+    "name": "test:reports",
+    "exitCode": 0,
+    "log": "test-reports.log"
+  },
+  {
+    "name": "test:ui-finance",
+    "exitCode": 0,
+    "log": "test-ui-finance.log"
+  },
+  {
+    "name": "test:s3",
+    "exitCode": 0,
+    "log": "test-s3.log"
+  },
+  {
+    "name": "test:s4",
+    "exitCode": 0,
+    "log": "test-s4.log"
+  },
+  {
+    "name": "test:s5",
+    "exitCode": 0,
+    "log": "test-s5.log"
+  },
+  {
+    "name": "test:s6",
+    "exitCode": 0,
+    "log": "test-s6.log"
+  },
+  {
+    "name": "build",
+    "exitCode": 0,
+    "log": "build.log"
+  },
+  {
+    "name": "eslint-feature",
+    "exitCode": 0,
+    "log": "eslint-feature.log"
+  }
+]

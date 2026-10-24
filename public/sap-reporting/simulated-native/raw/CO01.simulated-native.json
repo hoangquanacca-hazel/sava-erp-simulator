@@ -1,0 +1,48 @@
+{
+  "banner": "SIMULATED_NATIVE | GENERATED_SYNTHETIC | NOT_SAP_NATIVE",
+  "report_id": "CO01",
+  "ordered_columns": [
+    "co_area",
+    "year",
+    "period",
+    "doc",
+    "line",
+    "cost_center",
+    "cost_element",
+    "amount",
+    "currency",
+    "activity",
+    "qty",
+    "uom"
+  ],
+  "rows": [
+    {
+      "co_area": "A100",
+      "year": "2026",
+      "period": "009",
+      "doc": "190100001",
+      "line": "001",
+      "cost_center": "CC1100",
+      "cost_element": "400000",
+      "amount": "1000",
+      "currency": "USD",
+      "activity": "MACHINE",
+      "qty": "10",
+      "uom": "EA"
+    },
+    {
+      "co_area": "A100",
+      "year": "2026",
+      "period": "009",
+      "doc": "190100002",
+      "line": "002",
+      "cost_center": "CC1100",
+      "cost_element": "400000",
+      "amount": "-250",
+      "currency": "USD",
+      "activity": "MACHINE",
+      "qty": "20",
+      "uom": "EA"
+    }
+  ]
+}

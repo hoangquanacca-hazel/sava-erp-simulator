@@ -1,0 +1,3 @@
+npm run test:start
+Tool exec session 22437; exit code 0.
+PASS production: ESM startup; health allowlist; index and built JS HTTP200; no AI request

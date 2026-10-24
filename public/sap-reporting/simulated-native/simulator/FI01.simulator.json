@@ -1,0 +1,125 @@
+{
+  "envelope_version": "simulated-native-envelope.v1",
+  "artifact_id": "SIMNATIVE-FI01-20261023",
+  "generated_at": "2026-10-23",
+  "provenance_class": "SIMULATED_NATIVE",
+  "source_kind": "GENERATED_SYNTHETIC",
+  "original_sap_export": false,
+  "native_acceptance": "NOT_RUN",
+  "business_acceptance": "NOT_APPROVED",
+  "target_release": "UNKNOWN",
+  "system": "SAVA_SIMULATOR",
+  "client": "000-DEMO-ONLY",
+  "scenario_id": "phase3-pilot-fi01",
+  "seed": "SAVA-FI01-20261023",
+  "ruleset_version": "simulated-native-rules.v1",
+  "source_profile_id": "FI01",
+  "contract_version": "phase3-entry-contract-2026-10-21",
+  "tcode_or_app": "FBL3N",
+  "title": "Chi tiết GL — entry view",
+  "module": "FI",
+  "grain": "Một dòng cho tổ hợp: company + year + doc + line. Thêm source_system/client; snapshot lưu dataset_id riêng.",
+  "keys": [
+    "company",
+    "year",
+    "doc",
+    "line"
+  ],
+  "columns": [
+    "company",
+    "year",
+    "doc",
+    "line",
+    "date",
+    "gl",
+    "amount",
+    "currency",
+    "doc_amount",
+    "doc_currency"
+  ],
+  "raw_sha256": "746195446defcabef18af909a826fb85f031c27be3e284aa9fdb6c567513d7e6",
+  "row_count": 2,
+  "control_totals": {
+    "year": 4052,
+    "line": 3,
+    "amount": 750,
+    "doc_amount": 750
+  },
+  "selection_context": {
+    "system_product": "SAVA simulator fixture",
+    "release": "UNKNOWN",
+    "language": "vi-VN",
+    "selection_variant": "SIMULATED_DEFAULT",
+    "cutoff": "2026-09-30",
+    "scope": "two deterministic teaching rows; not full population"
+  },
+  "limitations": [
+    "This artifact simulates an export-shaped payload; it is not an original SAP export.",
+    "Technical field names and layout order remain proposed until target-release evidence exists.",
+    "Native, reconciliation, owner, SME and IFRS/business acceptance remain open.",
+    "Production deployment is fail-closed and not authorized by this artifact."
+  ],
+  "layer": "ANALYTICS",
+  "adapter": "SIMULATOR",
+  "route": "/reporting/fi01",
+  "report_dto": {
+    "reportId": "FI01",
+    "schemaVersion": "simulated-native.v1",
+    "status": "SIMULATED_READY",
+    "rows": [
+      {
+        "company": "1000",
+        "year": "2026",
+        "doc": "190100001",
+        "line": "001",
+        "date": "2026-09-30",
+        "gl": "150000",
+        "amount": "1000",
+        "currency": "USD",
+        "doc_amount": "1000",
+        "doc_currency": "USD"
+      },
+      {
+        "company": "1000",
+        "year": "2026",
+        "doc": "190100002",
+        "line": "002",
+        "date": "2026-09-30",
+        "gl": "150000",
+        "amount": "-250",
+        "currency": "USD",
+        "doc_amount": "-250",
+        "doc_currency": "USD"
+      }
+    ],
+    "control": {
+      "control_version": "control.v1",
+      "status": "SIMULATED_PASS",
+      "raw_sha256": "746195446defcabef18af909a826fb85f031c27be3e284aa9fdb6c567513d7e6",
+      "row_count": 2,
+      "key_count": 2,
+      "duplicate_key_count": 0,
+      "numeric_totals": {
+        "year": 4052,
+        "line": 3,
+        "amount": 750,
+        "doc_amount": 750
+      },
+      "currencies": [
+        "USD"
+      ],
+      "units": [],
+      "cutoff": "2026-09-30",
+      "paging": {
+        "full_export": true,
+        "row_limit": null,
+        "page_count": 1
+      },
+      "reconciliation": {
+        "status": "NOT_RUN_AGAINST_SAP",
+        "bridge_status": "BLOCKED_PENDING_NATIVE_INPUT"
+      },
+      "note": "Technical control over deterministic synthetic rows only; not SAP or business acceptance."
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "banner": "SIMULATED_NATIVE | GENERATED_SYNTHETIC | NOT_SAP_NATIVE",
+  "report_id": "FI15",
+  "ordered_columns": [
+    "company",
+    "key_date",
+    "dimension",
+    "count",
+    "gr_value",
+    "ir_value",
+    "amount_abs",
+    "currency"
+  ],
+  "rows": [
+    {
+      "company": "1000",
+      "key_date": "2026-09-30",
+      "dimension": "DIM-FI15-01",
+      "count": "1",
+      "gr_value": "1000",
+      "ir_value": "1000",
+      "amount_abs": "1000",
+      "currency": "USD"
+    },
+    {
+      "company": "1000",
+      "key_date": "2026-09-30",
+      "dimension": "DIM-FI15-02",
+      "count": "2",
+      "gr_value": "2000",
+      "ir_value": "2000",
+      "amount_abs": "2000",
+      "currency": "USD"
+    }
+  ]
+}

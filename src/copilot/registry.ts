@@ -146,6 +146,9 @@ export const ROUTE_FLAG: Record<AppHashRoute, FeatureFlagKey | null> = {
   ml: 'm6MaterialLedger',
   grir: 'm7GrIr',
   ic: 'm8Intercompany',
+  // A (Codex) screens: simulation-only, no feature flag. Navigation only; Copilot stays behind m6Copilot (default OFF).
+  'manufacturing-finance': null,
+  'simulated-native': null,
 };
 const ROUTES = Object.keys(ROUTE_FLAG) as AppHashRoute[];
 

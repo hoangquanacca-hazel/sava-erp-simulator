@@ -1,0 +1,240 @@
+{
+  "date": "2026-10-22",
+  "scope": "SIMULATOR_V1_MANUFACTURING_FINANCE",
+  "method": "ISOLATED_HEADLESS_LOCALHOST",
+  "appBrowserPlugin": "BLOCKED_BOOTSTRAP_VERSION_PATH",
+  "headlessExecutable": "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe",
+  "scenarios": [
+    {
+      "id": "fiori-1440",
+      "theme": "fiori",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": "FAIL",
+      "checks": [
+        "fresh route, first-visit guide, selected theme and responsive viewport",
+        "keyboard activation and invalid deposit transitions blocked",
+        "deposit 36m, invoice 120m, AR 84m, stale proposal blocked, notice history updated",
+        "bank 1:1 and 1:N, unmatched/ambiguous retained, manual mismatch blocked then cleared",
+        "AVC excess/blank blocked, warning accepted, commitment relieved into actual",
+        "supplier clearing retains 60m reciprocal IC balance and disables duplicate action"
+      ],
+      "downloads": [
+        {
+          "file": "fiori-1440-evidence-MFG-FIN-20261021_SIMULATED.json",
+          "bytes": 33538,
+          "sha256": "24b60c732b0bbb1e0a0517129cb6fc4b555816f9e1aac50dc72f6a472380c850"
+        }
+      ],
+      "pageErrors": [],
+      "externalRequestsBlocked": [
+        "https://www.savafinlab.com.vn/brand/v1/brand.css",
+        "https://www.savafinlab.com.vn/brand/v1/sava-bar.js",
+        "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap",
+        "https://www.savafinlab.com.vn/brand/v1/logo-icon.svg"
+      ],
+      "error": "locator.click: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('section[aria-labelledby=\"mf-evidence\"]').locator('details').filter({ has: getByRole('button', { name: 'Tải worklist FI21', exact: true }) }).locator('summary')\u001b[22m\n\n    at journey (D:\\sava-erp-simulator\\scripts\\manufacturing-finance-browser.mjs:124:40)\n    at async file:///D:/sava-erp-simulator/scripts/manufacturing-finance-browser.mjs:171:47"
+    },
+    {
+      "id": "classic-1440",
+      "theme": "classic",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": "FAIL",
+      "checks": [
+        "fresh route, first-visit guide, selected theme and responsive viewport",
+        "keyboard activation and invalid deposit transitions blocked",
+        "deposit 36m, invoice 120m, AR 84m, stale proposal blocked, notice history updated",
+        "bank 1:1 and 1:N, unmatched/ambiguous retained, manual mismatch blocked then cleared",
+        "AVC excess/blank blocked, warning accepted, commitment relieved into actual",
+        "supplier clearing retains 60m reciprocal IC balance and disables duplicate action"
+      ],
+      "downloads": [
+        {
+          "file": "classic-1440-evidence-MFG-FIN-20261021_SIMULATED.json",
+          "bytes": 33538,
+          "sha256": "24b60c732b0bbb1e0a0517129cb6fc4b555816f9e1aac50dc72f6a472380c850"
+        }
+      ],
+      "pageErrors": [],
+      "externalRequestsBlocked": [
+        "https://www.savafinlab.com.vn/brand/v1/brand.css",
+        "https://www.savafinlab.com.vn/brand/v1/sava-bar.js",
+        "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap",
+        "https://www.savafinlab.com.vn/brand/v1/logo-icon.svg"
+      ],
+      "error": "locator.click: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('section[aria-labelledby=\"mf-evidence\"]').locator('details').filter({ has: getByRole('button', { name: 'Tải worklist FI21', exact: true }) }).locator('summary')\u001b[22m\n\n    at journey (D:\\sava-erp-simulator\\scripts\\manufacturing-finance-browser.mjs:124:40)\n    at async file:///D:/sava-erp-simulator/scripts/manufacturing-finance-browser.mjs:171:47"
+    },
+    {
+      "id": "fiori-390",
+      "theme": "fiori",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": "FAIL",
+      "checks": [],
+      "downloads": [],
+      "pageErrors": [],
+      "externalRequestsBlocked": [
+        "https://www.savafinlab.com.vn/brand/v1/brand.css",
+        "https://www.savafinlab.com.vn/brand/v1/sava-bar.js",
+        "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap",
+        "https://www.savafinlab.com.vn/brand/v1/logo-icon.svg"
+      ],
+      "overflow": [
+        {
+          "tag": "TABLE",
+          "class": "w-full text-xs text-left",
+          "text": "AR còn mở và lịch sử nhắc nợCompany / Year / Document / ItemKhách hàngCòn mở VNDĐến hạnBlockMức / lầ"
+        },
+        {
+          "tag": "CAPTION",
+          "class": "text-left py-2 font-bold",
+          "text": "AR còn mở và lịch sử nhắc nợ"
+        },
+        {
+          "tag": "THEAD",
+          "class": "",
+          "text": "Company / Year / Document / ItemKhách hàngCòn mở VNDĐến hạnBlockMức / lần cuối"
+        },
+        {
+          "tag": "TR",
+          "class": "",
+          "text": "Company / Year / Document / ItemKhách hàngCòn mở VNDĐến hạnBlockMức / lần cuối"
+        },
+        {
+          "tag": "TH",
+          "class": "p-2",
+          "text": "Mức / lần cuối"
+        },
+        {
+          "tag": "TBODY",
+          "class": "",
+          "text": "1000/2026/9100000002/001OEM-0115.000.000 ₫2026-10-01—0 / —1000/2026/9100000003/001OEM-0125.000.000 ₫"
+        },
+        {
+          "tag": "TR",
+          "class": "border-t border-slate-500",
+          "text": "1000/2026/9100000002/001OEM-0115.000.000 ₫2026-10-01—0 / —"
+        },
+        {
+          "tag": "TD",
+          "class": "",
+          "text": "0 / —"
+        },
+        {
+          "tag": "TR",
+          "class": "border-t border-slate-500",
+          "text": "1000/2026/9100000003/001OEM-0125.000.000 ₫2026-10-01—0 / —"
+        },
+        {
+          "tag": "TD",
+          "class": "",
+          "text": "0 / —"
+        },
+        {
+          "tag": "TR",
+          "class": "border-t border-slate-500",
+          "text": "1000/2026/9100000004/001OEM-0112.000.000 ₫2026-10-01—0 / —"
+        },
+        {
+          "tag": "TD",
+          "class": "",
+          "text": "0 / —"
+        }
+      ],
+      "error": "AssertionError [ERR_ASSERTION]: initial: page overflow {\"viewport\":390,\"pageWidth\":440,\"mainWidth\":390}\n    at layout (file:///D:/sava-erp-simulator/scripts/manufacturing-finance-browser.mjs:68:12)\n    at async journey (file:///D:/sava-erp-simulator/scripts/manufacturing-finance-browser.mjs:76:5)\n    at async file:///D:/sava-erp-simulator/scripts/manufacturing-finance-browser.mjs:171:47"
+    },
+    {
+      "id": "classic-390",
+      "theme": "classic",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": "FAIL",
+      "checks": [],
+      "downloads": [],
+      "pageErrors": [],
+      "externalRequestsBlocked": [
+        "https://www.savafinlab.com.vn/brand/v1/brand.css",
+        "https://www.savafinlab.com.vn/brand/v1/sava-bar.js",
+        "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap",
+        "https://www.savafinlab.com.vn/brand/v1/logo-icon.svg"
+      ],
+      "overflow": [
+        {
+          "tag": "TABLE",
+          "class": "w-full text-xs text-left",
+          "text": "AR còn mở và lịch sử nhắc nợCompany / Year / Document / ItemKhách hàngCòn mở VNDĐến hạnBlockMức / lầ"
+        },
+        {
+          "tag": "CAPTION",
+          "class": "text-left py-2 font-bold",
+          "text": "AR còn mở và lịch sử nhắc nợ"
+        },
+        {
+          "tag": "THEAD",
+          "class": "",
+          "text": "Company / Year / Document / ItemKhách hàngCòn mở VNDĐến hạnBlockMức / lần cuối"
+        },
+        {
+          "tag": "TR",
+          "class": "",
+          "text": "Company / Year / Document / ItemKhách hàngCòn mở VNDĐến hạnBlockMức / lần cuối"
+        },
+        {
+          "tag": "TH",
+          "class": "p-2",
+          "text": "Mức / lần cuối"
+        },
+        {
+          "tag": "TBODY",
+          "class": "",
+          "text": "1000/2026/9100000002/001OEM-0115.000.000 ₫2026-10-01—0 / —1000/2026/9100000003/001OEM-0125.000.000 ₫"
+        },
+        {
+          "tag": "TR",
+          "class": "border-t border-slate-500",
+          "text": "1000/2026/9100000002/001OEM-0115.000.000 ₫2026-10-01—0 / —"
+        },
+        {
+          "tag": "TD",
+          "class": "",
+          "text": "0 / —"
+        },
+        {
+          "tag": "TR",
+          "class": "border-t border-slate-500",
+          "text": "1000/2026/9100000003/001OEM-0125.000.000 ₫2026-10-01—0 / —"
+        },
+        {
+          "tag": "TD",
+          "class": "",
+          "text": "0 / —"
+        },
+        {
+          "tag": "TR",
+          "class": "border-t border-slate-500",
+          "text": "1000/2026/9100000004/001OEM-0112.000.000 ₫2026-10-01—0 / —"
+        },
+        {
+          "tag": "TD",
+          "class": "",
+          "text": "0 / —"
+        }
+      ],
+      "error": "AssertionError [ERR_ASSERTION]: initial: page overflow {\"viewport\":390,\"pageWidth\":440,\"mainWidth\":390}\n    at layout (file:///D:/sava-erp-simulator/scripts/manufacturing-finance-browser.mjs:68:12)\n    at async journey (file:///D:/sava-erp-simulator/scripts/manufacturing-finance-browser.mjs:76:5)\n    at async file:///D:/sava-erp-simulator/scripts/manufacturing-finance-browser.mjs:171:47"
+    }
+  ],
+  "sapNative": "NOT_RUN",
+  "independentSme": "PENDING",
+  "learningAcceptance": "NOT_APPROVED",
+  "browserVersion": "155.0.4283.62",
+  "status": "FAIL"
+}
