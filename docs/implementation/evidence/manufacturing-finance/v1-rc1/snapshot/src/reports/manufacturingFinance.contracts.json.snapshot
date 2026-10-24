@@ -1,0 +1,72 @@
+{
+  "status": "SAVA_PROPOSED_SIMULATION_ONLY",
+  "derivedFrom": "public/sap-reporting/expansion-150.json",
+  "reports": [
+    {
+      "id": "FI21",
+      "tcode": "F150",
+      "keys": [
+        "Company Code",
+        "Run ID",
+        "Customer",
+        "Document",
+        "Item"
+      ],
+      "columns": [
+        "Company Code",
+        "Run ID",
+        "Run Date",
+        "Customer",
+        "Document",
+        "Fiscal Year",
+        "Item",
+        "Due Date",
+        "Days Overdue",
+        "Open Amount",
+        "Currency",
+        "Dunning Area",
+        "Dunning Level",
+        "Dunning Block",
+        "Last Dunning Date",
+        "Dunning Fee",
+        "Status",
+        "Message"
+      ],
+      "source_url": "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/26c2d5e366bc44c1a98f2a9212a0c49d/e9c5a6cb7bfe40418debd4d96c6f09ba.html?version=LATEST",
+      "native_export": false
+    },
+    {
+      "id": "FI22",
+      "tcode": "FEB_BSPROC / FEBAN",
+      "keys": [
+        "Company Code",
+        "House Bank",
+        "Bank Account",
+        "Statement",
+        "Item"
+      ],
+      "columns": [
+        "Company Code",
+        "House Bank",
+        "Bank Account",
+        "Statement",
+        "Statement Date",
+        "Item",
+        "Value Date",
+        "Posting Date",
+        "External Transaction",
+        "Amount",
+        "Currency",
+        "Reference",
+        "Assignment",
+        "Posting Rule",
+        "Accounting Document",
+        "Clearing Document",
+        "Status",
+        "Message"
+      ],
+      "source_url": "https://help.sap.com/docs/PRODUCT_ID/918bca53037f408f91a2295d04ac16bc/bc1fe656fe590950e10000000a44147b.html",
+      "native_export": false
+    }
+  ]
+}

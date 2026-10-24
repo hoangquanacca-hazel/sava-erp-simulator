@@ -1,0 +1,843 @@
+{
+  "candidate": "manufacturing-finance-v1.0.0-rc.2",
+  "date": "2026-10-22",
+  "supersedes": "manufacturing-finance-v1.0.0-rc.1",
+  "status": "AGENT_TECHNICAL_WORK_COMPLETE_HUMAN_REVIEW_PENDING",
+  "scope": "Five-workflow learning simulator, original-file replay verifier and local handoff",
+  "baseHead": "30494b87bf50f8a45bb81defa445e6d19a604e68",
+  "checkout": "DIRTY_WITH_PREEXISTING_CONCURRENT_WORK; HASH_FREEZE_NOT_CLEAN_GIT_RELEASE",
+  "technical": {
+    "commands": 11,
+    "workflowAndVerifierChecks": 49,
+    "browser": "4_OF_4_PASS",
+    "browserChecks": 44,
+    "downloads": 28,
+    "javascriptErrors": 0,
+    "crossThemeViewportEvidence": "BYTE_IDENTICAL",
+    "browserVersion": "155.0.4283.62",
+    "accountingAndPracticeContracts": "UNCHANGED_FROM_RC1",
+    "protectedAccountingPaths": "UNCHANGED_FROM_HEAD",
+    "rc1OriginalFileVerification": "PASS"
+  },
+  "acceptance": {
+    "learningUse": "PENDING_HUMAN_REVIEW",
+    "independentSme": "PENDING",
+    "sapNative": "NOT_RUN",
+    "targetRelease": "UNKNOWN",
+    "business": "NOT_APPROVED"
+  },
+  "limits": [
+    "Original byte format required; reformatted or edited JSON rejected.",
+    "Replay consistency and hashes do not prove authenticity or approval; no saved-file posting/import.",
+    "RAM-only ledger; headless Edge with mobile viewport is not physical iPhone/Safari evidence.",
+    "Existing main bundle warning, legacy reporting-library navigation counts and concurrent work remain outside scope.",
+    "No deployment, SAP integration, independent SME approval or learning-outcome study."
+  ],
+  "rc1Snapshot": {
+    "folder": "docs/implementation/evidence/manufacturing-finance/v1-rc1/snapshot",
+    "naming": "original relative path + .snapshot",
+    "files": 30,
+    "releaseManifestSha256": "a661176aa6d39b13bef8d0b64982518f9fb7d39eb89d43f8230086b439706b10"
+  },
+  "sourceFiles": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "bytes": 3834,
+      "sha256": "67bad75446d056b6f73781a8dde1f3ee882f3aefe03f5609839d5b30598c3aef"
+    },
+    {
+      "path": "docs/implementation/22-SIMULATOR-V1-HANDOFF.md",
+      "bytes": 6644,
+      "sha256": "47f279c6764b2d7934edf645309c9464921267ff745eeaf4b1a382cd1c840083"
+    },
+    {
+      "path": "index.html",
+      "bytes": 3858,
+      "sha256": "492f3c3186e6ba1ef64b57e885853106931ef35a88d134ff65e69617f519be82"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 225313,
+      "sha256": "62f4f20ac56ae02aa2780199a8b880ee73eaf33d4878c07549aefc2493a0f139"
+    },
+    {
+      "path": "package.json",
+      "bytes": 2827,
+      "sha256": "9ef15cec2051309cace71697b28b45cd654d71a662afe4682c05621c9474d8f2"
+    },
+    {
+      "path": "scripts/archive-manufacturing-finance-rc2.py",
+      "bytes": 9932,
+      "sha256": "a8adfe9d65ac9b3e2ed47ef388f30c591ae52e0d648437021e4895a0c5226eaa"
+    },
+    {
+      "path": "scripts/finalize-manufacturing-finance.mjs",
+      "bytes": 8986,
+      "sha256": "c5c1f2d71e88d62f80eac09559e304edb954321b90c9c2d1205d862e692018bc"
+    },
+    {
+      "path": "scripts/manufacturing-finance-browser.mjs",
+      "bytes": 16198,
+      "sha256": "7d346f42c7d6d4f33910ce3f70ede74f81d2f6ff560e7ad79616d35617567fa9"
+    },
+    {
+      "path": "scripts/manufacturing-finance.tsx",
+      "bytes": 16460,
+      "sha256": "a7c1185636a58ce6e89452e795a0cb30ccf3e07e107e5aec5e5f1f765a1a0972"
+    },
+    {
+      "path": "scripts/verify-manufacturing-finance.ts",
+      "bytes": 704,
+      "sha256": "701710cdfde210df1e824d4e38102da1a8eaadd7a8587841a5eeea3a7c8b48dd"
+    },
+    {
+      "path": "server.ts",
+      "bytes": 19423,
+      "sha256": "0b4fee9d3448d90f016e8119d646613da7240a6bdaa2036ecec92fae921adcc5"
+    },
+    {
+      "path": "src/App.tsx",
+      "bytes": 44347,
+      "sha256": "541fcd614b57155989aca4bb9e2634df184dcdde9801fd4ce8165985eb53097e"
+    },
+    {
+      "path": "src/adapters/contracts.v1.json",
+      "bytes": 19145,
+      "sha256": "d28f60906ea09d4826ae8ffc59fbaabae71bbc49f7a69ad493b768b7c87aea1a"
+    },
+    {
+      "path": "src/adapters/exports.ts",
+      "bytes": 841,
+      "sha256": "5d359871d682968c5a950fdb21c02477c6c518448766ef48eb62b258cc883146"
+    },
+    {
+      "path": "src/adapters/framework.ts",
+      "bytes": 14870,
+      "sha256": "710f922fe310e3dc606e850cc8e32d07aafd7e25cd85e0e5ea014042c0b0ecd0"
+    },
+    {
+      "path": "src/components/AITutorDrawer.tsx",
+      "bytes": 12287,
+      "sha256": "26169241cd76d08f67977d7015abc10c7e7ebdc6a8905999076b44345751e5eb"
+    },
+    {
+      "path": "src/components/AdminDashboardModal.tsx",
+      "bytes": 23637,
+      "sha256": "f845d24788ecd8037b104c7d4e51163629035d732ccffd4b0ff9477041c318c5"
+    },
+    {
+      "path": "src/components/BOMTreeView.tsx",
+      "bytes": 27892,
+      "sha256": "87595e7e16282cfaf87ef1c9f04b22bc21df9ec4297d670e28a46ffafef2a204"
+    },
+    {
+      "path": "src/components/BOMVisualizer.tsx",
+      "bytes": 32237,
+      "sha256": "11f9b1cfac517dbba201ba70d8cb9b2beebd1361b0a395ba21969405c52b4673"
+    },
+    {
+      "path": "src/components/CommandBar.tsx",
+      "bytes": 20946,
+      "sha256": "c720d2d23dcdd51a17a7952ab74b2ea57590b8a13ff05aa4622eeca447cc6486"
+    },
+    {
+      "path": "src/components/ControlsPanel.tsx",
+      "bytes": 5708,
+      "sha256": "de458fe0976dc6593808c03e04617e72ff5af572f7b4d1ba27a8ba3f08342818"
+    },
+    {
+      "path": "src/components/EvidencePackPanel.tsx",
+      "bytes": 3247,
+      "sha256": "0a8d79ee81427020d9bb39efefce112cb79551bce08472f3c252946fe38f34b9"
+    },
+    {
+      "path": "src/components/Header.tsx",
+      "bytes": 22004,
+      "sha256": "dbd67b7a9322cbc3aeb400bb9b0af401d8c63a3a91182bb740ddbdc9643df47a"
+    },
+    {
+      "path": "src/components/LeadCaptureModal.tsx",
+      "bytes": 20756,
+      "sha256": "ab030bba15f1f6de461e59ba72e1523c554669c40c96ef128d0c5e7d60e0bcd5"
+    },
+    {
+      "path": "src/components/LedgerPanel.tsx",
+      "bytes": 34927,
+      "sha256": "097eae820eec08e521b9569e3a6f1e886ef2e8bda088376b31038ca19112ff7e"
+    },
+    {
+      "path": "src/components/ManufacturingMartPanel.tsx",
+      "bytes": 4985,
+      "sha256": "863de9fb8f1bedfb239c73a29818e226e63f3797ffdf9c493b8995d7f61ea7a5"
+    },
+    {
+      "path": "src/components/MarginAnalysisPanel.tsx",
+      "bytes": 5977,
+      "sha256": "e77c413a41a88f249b168dfc304c03f11782055369376b468601bb2cd80f2d18"
+    },
+    {
+      "path": "src/components/ModuleNav.tsx",
+      "bytes": 2472,
+      "sha256": "dd7b9b321aea2ee181e73b96af513a4d652a9deab916b45ea458be0a1aa072e8"
+    },
+    {
+      "path": "src/components/OrderProfitDashboard.tsx",
+      "bytes": 24578,
+      "sha256": "748be8da82b3e6d77d8851a5ec567e8ee6658eac9214d06813cdd7a734ad53ac"
+    },
+    {
+      "path": "src/components/PDFReportModal.tsx",
+      "bytes": 36793,
+      "sha256": "f5860235056dba76f38e21423385eb638400587410e32ffc9d3d2ffd3862761e"
+    },
+    {
+      "path": "src/components/SAPClassicMenu.tsx",
+      "bytes": 35596,
+      "sha256": "c44ac69562f03863550be98ef605bcd22e8750eb35055d966de4ace536ccdb91"
+    },
+    {
+      "path": "src/components/SalesOrderCard.tsx",
+      "bytes": 8042,
+      "sha256": "b3f5314c8617513035a694ed503016e88d03fa03d6f414a4f1353247d2e397f1"
+    },
+    {
+      "path": "src/components/SapReportsPanel.tsx",
+      "bytes": 6473,
+      "sha256": "dfe4b82b0bdc5651b84e359715c021a8bc9e4bd87b1a32750c320ea25e173574"
+    },
+    {
+      "path": "src/components/SessionLimitBanner.tsx",
+      "bytes": 5119,
+      "sha256": "dc8abfaa88027abe7694de05fa6594d73cade9a00b609eeba237e91956f68ae8"
+    },
+    {
+      "path": "src/components/SetupScreen.tsx",
+      "bytes": 54729,
+      "sha256": "f12fd89eefdf151ff938c8e671b3b2dba4786e11b5f47adca17f503389392b35"
+    },
+    {
+      "path": "src/components/SpecialStockPanel.tsx",
+      "bytes": 6927,
+      "sha256": "8a42dc3a70e9eb380fe4e2d242064783736e3dea82a7fc482b2dc2d498adc537"
+    },
+    {
+      "path": "src/components/StepCard.tsx",
+      "bytes": 43435,
+      "sha256": "49632998feadd18f8ef3ea67e19e6669adebee1154f11606426895f00d360ab6"
+    },
+    {
+      "path": "src/components/TCodeLookupModal.tsx",
+      "bytes": 34146,
+      "sha256": "02a10512bf13b8b7fd882df1b44c87589508146b7894921789623dfd56dfa48e"
+    },
+    {
+      "path": "src/components/UserGuideModal.tsx",
+      "bytes": 16833,
+      "sha256": "086768d0c541325b9035d554d8c2c9a9c076d93f14adb403bfc30f70028494d4"
+    },
+    {
+      "path": "src/config/simConfig.ts",
+      "bytes": 4118,
+      "sha256": "6d424d772968d124cc87fdfa50ad22de07bb981352997e177b58ece3e78d2711"
+    },
+    {
+      "path": "src/controls/policy.v1.json",
+      "bytes": 926,
+      "sha256": "4f0b936940aebf91ff9d9be46c8302e2516d00d4b4a779b2f8af953d982b478b"
+    },
+    {
+      "path": "src/controls/reconcile.ts",
+      "bytes": 14765,
+      "sha256": "14e4723197f74d6cea9bcfc6a03d294245f240ab122dbcc7f361540fadee06c6"
+    },
+    {
+      "path": "src/controls/workflow.ts",
+      "bytes": 4874,
+      "sha256": "a6964a86fb7f22e60bbf22edcaf7d2a97fef7e37d1065a134abcbf732dd79cf4"
+    },
+    {
+      "path": "src/events/scenarioEvents.ts",
+      "bytes": 10729,
+      "sha256": "a4aed9ef51c4a096b749be2db8ed0e3e50303c8a4b7d45ba52f2985ad36e62e9"
+    },
+    {
+      "path": "src/evidence/manufacturingFinance.ts",
+      "bytes": 6104,
+      "sha256": "2102eedf40d88279e3e5ee7af586bd9a4d3ad4f60ef7a901637d748c54e75bb2"
+    },
+    {
+      "path": "src/evidence/pack.ts",
+      "bytes": 5548,
+      "sha256": "9331ccc5df3360b1629e861c05dd6c4a93de0e9f194cac55a4a978e8422c218a"
+    },
+    {
+      "path": "src/features/flags.ts",
+      "bytes": 1155,
+      "sha256": "a49fdf9d3e63ca11d4f169cddf07c2b5b10e84d156ae37c9a619d2ac2a6813f1"
+    },
+    {
+      "path": "src/features/grir.ts",
+      "bytes": 4446,
+      "sha256": "6855476f616b37b91b4105a92bba6ea0c95d9a3dcb856ca1806774bda52768bb"
+    },
+    {
+      "path": "src/features/hashRoute.ts",
+      "bytes": 1146,
+      "sha256": "4c4a284c29fb84b3f2326972232939488fcc8b8001a02ff5aae70cc0a33fe097"
+    },
+    {
+      "path": "src/features/intercompany.ts",
+      "bytes": 2733,
+      "sha256": "32b99cb7e36bd3ec63715046faea178bedaa924ad454bc5f784de24d6214d049"
+    },
+    {
+      "path": "src/features/manufacturingFinance.ts",
+      "bytes": 16824,
+      "sha256": "d25b5aee993266e245c560a2e5c82ca2c8b06f788c4fb82bb026d1247757b826"
+    },
+    {
+      "path": "src/features/materialLedger.ts",
+      "bytes": 2683,
+      "sha256": "f51754c444f6e495c59a1a7f6b9cf9d93deb2049e21bf08d6e01898715cba7fc"
+    },
+    {
+      "path": "src/features/mdg.ts",
+      "bytes": 1016,
+      "sha256": "4130c639e4dcebe128b4de4c98875d6eca7bc63b0e1e25e66dce7a618d57b7a9"
+    },
+    {
+      "path": "src/features/periodClose.ts",
+      "bytes": 2251,
+      "sha256": "8bc405597063b4487aacf1c70f51bca056217eb4bf0b6aa9d74220e8e2d47cfa"
+    },
+    {
+      "path": "src/features/sod.ts",
+      "bytes": 1216,
+      "sha256": "cae474991918b285b617b6360c4987ea2291f04a7a9640630bb2a155cc73b937"
+    },
+    {
+      "path": "src/features/variance.ts",
+      "bytes": 3594,
+      "sha256": "206d2010c9130da114aac0c98cabd532850bd5a2ca500e0112873fdc93aab880"
+    },
+    {
+      "path": "src/features/wip.ts",
+      "bytes": 962,
+      "sha256": "c230dff159db76bf241c3e443c060af3f0f9e5231da588df9646e3dc33dea0c1"
+    },
+    {
+      "path": "src/index.css",
+      "bytes": 24,
+      "sha256": "8a760a784f79570e06fdcb0c6a2677ea66c304230b7925ea313d63b46d8ba407"
+    },
+    {
+      "path": "src/main.tsx",
+      "bytes": 311,
+      "sha256": "e3087501b5af029fd2d07f00a01b3b8d0e1515fa512bd3c4bc19ae43eab09170"
+    },
+    {
+      "path": "src/mart/commentary.ts",
+      "bytes": 2918,
+      "sha256": "0139e972afb26754578dd2ebd0d479cf8c8350394f76f01ee974bda82ac47fee"
+    },
+    {
+      "path": "src/mart/manufacturing.ts",
+      "bytes": 8502,
+      "sha256": "0b542cb9c7352484f6838964b3d3b3fcd271ecf8d501fda3ae53c1d49b1f3d63"
+    },
+    {
+      "path": "src/pages/CloseCockpitPage.tsx",
+      "bytes": 9595,
+      "sha256": "07e54e0f8272173e02cba29b2d3ce9a3ba0db4e2e4a5969f016489326034fc32"
+    },
+    {
+      "path": "src/pages/GrirPage.tsx",
+      "bytes": 3730,
+      "sha256": "ddcd7037f7dd35acf02f3bab2e8d02fe17f058fd4aeccd72e547f12a1718d9a2"
+    },
+    {
+      "path": "src/pages/IntercompanyPage.tsx",
+      "bytes": 2552,
+      "sha256": "034eee806533ae15dd17d83325e8001156b19112a4a92e0b875f5a8a2c9d225d"
+    },
+    {
+      "path": "src/pages/ManufacturingFinancePage.tsx",
+      "bytes": 19448,
+      "sha256": "f25a21c166acddd78d52ae914ae00d9d617406b3ff647e83d719e2e13cd7191c"
+    },
+    {
+      "path": "src/pages/MaterialLedgerPage.tsx",
+      "bytes": 2903,
+      "sha256": "7c5c49aa1a8d36a77fe2f3d2457b0b16389e8941943f7a5de7c84e39f8461564"
+    },
+    {
+      "path": "src/pages/MdgGatePage.tsx",
+      "bytes": 1961,
+      "sha256": "74eb56a933dd0883deda53ddafbe9d8b605379df435726279f0b4a12464ea366"
+    },
+    {
+      "path": "src/pages/SodAuditPage.tsx",
+      "bytes": 3193,
+      "sha256": "9de5aa7363ff6aab79dd7028457645f16c9b5aceb4e7b42eb284873a610b1445"
+    },
+    {
+      "path": "src/pages/VarianceWaterfallPage.tsx",
+      "bytes": 5246,
+      "sha256": "2ac081fcc01a9c1ce9fffe2919359cef72d8a69860bd475b52d5c01d05cf9db4"
+    },
+    {
+      "path": "src/pages/WipSettlementPage.tsx",
+      "bytes": 4212,
+      "sha256": "543ef707babbde65c2a5b24331e2a11d531c75c6ab3970e379ec9d2cbbd1a709"
+    },
+    {
+      "path": "src/presentation/finance.ts",
+      "bytes": 7348,
+      "sha256": "b094488a4e0f685b86ce3cda0c55854a20b503d4de6c3116063365d0cf8a18b6"
+    },
+    {
+      "path": "src/reports/core.ts",
+      "bytes": 5255,
+      "sha256": "0d597538a9bcdc07fd16c217d50d9677c9b9751ebedd14bfe1f15b4c7fafa1d9"
+    },
+    {
+      "path": "src/reports/fagll03.ts",
+      "bytes": 2580,
+      "sha256": "a0a2dcc9974b467602be1ac877ab0997d6cb1aeb32c042b03365a8796597ce61"
+    },
+    {
+      "path": "src/reports/manufacturing.ts",
+      "bytes": 11553,
+      "sha256": "78d09d4ec10cc449c2ae5be7ce502133601abcd18ddce876f9b3da892671e974"
+    },
+    {
+      "path": "src/reports/manufacturingFinance.contracts.json",
+      "bytes": 1710,
+      "sha256": "6666f273f295402dc7c28c33957539f135452a4e839efab4454615da7247862c"
+    },
+    {
+      "path": "src/reports/manufacturingFinance.ts",
+      "bytes": 2802,
+      "sha256": "92a643b3df55077bd14a19295b915fef0941f476b3b9dbdaed009389c843fdc8"
+    },
+    {
+      "path": "src/reports/snapshot.ts",
+      "bytes": 2203,
+      "sha256": "6fed53b01ca40a7c860bdae7950d47162c12579c0522bf9c885b6e1b7c52e6f7"
+    },
+    {
+      "path": "src/types.ts",
+      "bytes": 24966,
+      "sha256": "97e090c07acb359d5ada0e112c70ed2e645ee403123eec76558d7ff54ad91ee1"
+    },
+    {
+      "path": "src/utils/acdoca.ts",
+      "bytes": 19097,
+      "sha256": "f03b1b9f4626690e969c1acc6233a9bc386ad378ee81f228ea7cc8edd59f94b8"
+    },
+    {
+      "path": "src/utils/analytics.ts",
+      "bytes": 1065,
+      "sha256": "661928d8c7f6a32b5cfddad76d0248d52f8c6242762274b0d4c2d276f13be866"
+    },
+    {
+      "path": "src/utils/calculator.ts",
+      "bytes": 71838,
+      "sha256": "68cc5127a5230174731b8539315a9dec8fb345a6fc60e6496c183e39f585cc47"
+    },
+    {
+      "path": "src/utils/excelService.ts",
+      "bytes": 19003,
+      "sha256": "f3d5822726b88c3d9b478962e589dcb82e3269554ebffc5ae347c58318c61b26"
+    },
+    {
+      "path": "tsconfig.json",
+      "bytes": 539,
+      "sha256": "1df2927a30f668fbbd8822eca158ed15271fe5bb695a6376a06b42fde0706a99"
+    },
+    {
+      "path": "vite.config.ts",
+      "bytes": 730,
+      "sha256": "b990c4afdfb5195bdc994739210dbfeb0b5eece38bd0caf2a76d44b2ee97c6bb"
+    }
+  ],
+  "buildFiles": [
+    {
+      "path": "dist/assets/CloseCockpitPage-DoeQdQAK.js",
+      "bytes": 5824,
+      "sha256": "cab7ad79fdce0564820da8bbfa7f821a5bfa6e1dd4195fe11d7cb4a2da1053dc"
+    },
+    {
+      "path": "dist/assets/GrirPage-EZyFiPXL.js",
+      "bytes": 4370,
+      "sha256": "839539e2e492d3e8ee252fafa190d24a31d0036951968d9ff11eeb188df2cb1c"
+    },
+    {
+      "path": "dist/assets/IntercompanyPage-CxWOfx7M.js",
+      "bytes": 3023,
+      "sha256": "845677938b55a4713b37e66593d9addb8f321da68b9ab2dc3bff14e7c00d060f"
+    },
+    {
+      "path": "dist/assets/ManufacturingFinancePage-DnJwYpJa.js",
+      "bytes": 24805,
+      "sha256": "70d3663415e6eba540a7b7ab91aa74fe23d6136c29e0fb25cc6b2ef0cae22594"
+    },
+    {
+      "path": "dist/assets/MaterialLedgerPage-v86kBhCD.js",
+      "bytes": 2036,
+      "sha256": "7366e09c6d14c1783cb04f87e1fefb8c6a05c392d4508eb47cb748ac473fc216"
+    },
+    {
+      "path": "dist/assets/MdgGatePage-CWxLV_Z7.js",
+      "bytes": 1321,
+      "sha256": "50e1e2d1bdf7bc22bea5274081575d2c802880a4573e786d4c4a5dfeddb4ebcf"
+    },
+    {
+      "path": "dist/assets/SodAuditPage-CBzacMt4.js",
+      "bytes": 2776,
+      "sha256": "5a12908fa7a0c628700b919642279386478730e30b5ee4e3778896ccc2f108d9"
+    },
+    {
+      "path": "dist/assets/VarianceWaterfallPage-ChEy6wMf.js",
+      "bytes": 3957,
+      "sha256": "5f82352e1f142acd0a6e0d52ee756f91d414d69bce9a3af99668435aea964f44"
+    },
+    {
+      "path": "dist/assets/WipSettlementPage-DAzxaDt1.js",
+      "bytes": 3169,
+      "sha256": "755ad8b6d2a2092178d8d3b3fafe8ef561114db49a8720f05b5299bf7c19a72d"
+    },
+    {
+      "path": "dist/assets/index-BSktTQ1a.js",
+      "bytes": 1551266,
+      "sha256": "e62d3a9a51ba8de4437d4b4e70da7bdf06b368af90247f0ef7c52da57c6f4957"
+    },
+    {
+      "path": "dist/assets/index-G8K_VJgx.css",
+      "bytes": 107056,
+      "sha256": "2b5b36d9732ddd9b09cfe10010b9939e509940fa9ef8715e55fbe7fe1dfd9923"
+    },
+    {
+      "path": "dist/assets/variance-BGanfZzJ.js",
+      "bytes": 1510,
+      "sha256": "c2fbe584a6c04ac3ee87ca50ee1f5db69aa96f6801abcc25586ca4291da8ba46"
+    },
+    {
+      "path": "dist/index.html",
+      "bytes": 3956,
+      "sha256": "ff6ee49c57fe35baebd8c388c298922b9126cb8f82b67a55a4ab277d5f5555fc"
+    },
+    {
+      "path": "dist/server.mjs",
+      "bytes": 23913,
+      "sha256": "9705199bd8de7703b8e2b716309b90459b9f89d332b45705cf007c3e67ad2194"
+    },
+    {
+      "path": "dist/server.mjs.map",
+      "bytes": 29221,
+      "sha256": "c03142081e1e6158a18f4f11d4c46e9c0d8ec1ded9bf9df429c8a73e2f907e10"
+    }
+  ],
+  "evidenceFiles": [
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/classic-1440-FI21-MFG-FIN-20261021_FI21_SIMULATED.txt",
+      "bytes": 1666,
+      "sha256": "859a9791c79f480dd6ec040d719a92e5d41f46dd095f5eb57396a89e3fd9bd64"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/classic-1440-FI22-MFG-FIN-20261021_FI22_SIMULATED.txt",
+      "bytes": 1248,
+      "sha256": "61728394924e6a23277c883c03b639f1724988db2135027cf5803a19902fdc5c"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/classic-1440-after-nav-MFG-FIN-20261021_SIMULATED.json",
+      "bytes": 33347,
+      "sha256": "0923fd6d8c12b4915aa71f9414c8a3a94ce25e1013b28c13bdd19e2ae74c2c32"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/classic-1440-bank.png",
+      "bytes": 50390,
+      "sha256": "06f33b1b93bbe2a6bc547a0213eeebd5f10d44a4db1819e6a18fedd6c892400c"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/classic-1440-before-nav-MFG-FIN-20261021_SIMULATED.json",
+      "bytes": 33347,
+      "sha256": "0923fd6d8c12b4915aa71f9414c8a3a94ce25e1013b28c13bdd19e2ae74c2c32"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/classic-1440-budget.png",
+      "bytes": 34734,
+      "sha256": "b2249fb937daa5fbeb9174ee707921d082b6e18397ae02d732313e368d5f687c"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/classic-1440-evidence-MFG-FIN-20261021_SIMULATED.json",
+      "bytes": 33538,
+      "sha256": "24b60c732b0bbb1e0a0517129cb6fc4b555816f9e1aac50dc72f6a472380c850"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/classic-1440-file-check.png",
+      "bytes": 27198,
+      "sha256": "d879dbe8636c43b986f755a15d04bab4d216d02f24938d96367d12d5c5406d19"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/classic-1440-initial.png",
+      "bytes": 147409,
+      "sha256": "e984e15b452553eaa17b8ea5283573ad11e90dad24789bbf33e20dc4cae19a2d"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/classic-1440-reload-MFG-FIN-20261021_SIMULATED.json",
+      "bytes": 22262,
+      "sha256": "b4a8a871944624c66c0fd84c90eb87a136c47b992dc55204a7df54f660209619"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/classic-1440-reset-MFG-FIN-20261021_SIMULATED.json",
+      "bytes": 22262,
+      "sha256": "b4a8a871944624c66c0fd84c90eb87a136c47b992dc55204a7df54f660209619"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/classic-390-FI21-MFG-FIN-20261021_FI21_SIMULATED.txt",
+      "bytes": 1666,
+      "sha256": "859a9791c79f480dd6ec040d719a92e5d41f46dd095f5eb57396a89e3fd9bd64"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/classic-390-FI22-MFG-FIN-20261021_FI22_SIMULATED.txt",
+      "bytes": 1248,
+      "sha256": "61728394924e6a23277c883c03b639f1724988db2135027cf5803a19902fdc5c"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/classic-390-after-nav-MFG-FIN-20261021_SIMULATED.json",
+      "bytes": 33347,
+      "sha256": "0923fd6d8c12b4915aa71f9414c8a3a94ce25e1013b28c13bdd19e2ae74c2c32"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/classic-390-bank.png",
+      "bytes": 50275,
+      "sha256": "6358bbee8bb11e037c466766f54b5dce21d554673a8edee9ba327cd8cd145dc5"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/classic-390-before-nav-MFG-FIN-20261021_SIMULATED.json",
+      "bytes": 33347,
+      "sha256": "0923fd6d8c12b4915aa71f9414c8a3a94ce25e1013b28c13bdd19e2ae74c2c32"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/classic-390-budget.png",
+      "bytes": 38961,
+      "sha256": "39ba950900fcf682c35ea1088ea3201ff21639eb9d7a2c5120b43ae137187d7e"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/classic-390-evidence-MFG-FIN-20261021_SIMULATED.json",
+      "bytes": 33538,
+      "sha256": "24b60c732b0bbb1e0a0517129cb6fc4b555816f9e1aac50dc72f6a472380c850"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/classic-390-file-check.png",
+      "bytes": 28167,
+      "sha256": "a36ed7869648142a0fbaa5a2d222d9d6e2e3fff2c0c275d6182fd208c2f131ae"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/classic-390-initial.png",
+      "bytes": 69027,
+      "sha256": "ec6f72bb2a0b7dfb1ec6a2d9020386575b6160d3cfb24d6d6a80551b4d3e65da"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/classic-390-reload-MFG-FIN-20261021_SIMULATED.json",
+      "bytes": 22262,
+      "sha256": "b4a8a871944624c66c0fd84c90eb87a136c47b992dc55204a7df54f660209619"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/classic-390-reset-MFG-FIN-20261021_SIMULATED.json",
+      "bytes": 22262,
+      "sha256": "b4a8a871944624c66c0fd84c90eb87a136c47b992dc55204a7df54f660209619"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/fiori-1440-FI21-MFG-FIN-20261021_FI21_SIMULATED.txt",
+      "bytes": 1666,
+      "sha256": "859a9791c79f480dd6ec040d719a92e5d41f46dd095f5eb57396a89e3fd9bd64"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/fiori-1440-FI22-MFG-FIN-20261021_FI22_SIMULATED.txt",
+      "bytes": 1248,
+      "sha256": "61728394924e6a23277c883c03b639f1724988db2135027cf5803a19902fdc5c"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/fiori-1440-after-nav-MFG-FIN-20261021_SIMULATED.json",
+      "bytes": 33347,
+      "sha256": "0923fd6d8c12b4915aa71f9414c8a3a94ce25e1013b28c13bdd19e2ae74c2c32"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/fiori-1440-bank.png",
+      "bytes": 51610,
+      "sha256": "55319531cdf2ce97ad3d176922c6c5aae806bde19edef1034dd179f25998d2b6"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/fiori-1440-before-nav-MFG-FIN-20261021_SIMULATED.json",
+      "bytes": 33347,
+      "sha256": "0923fd6d8c12b4915aa71f9414c8a3a94ce25e1013b28c13bdd19e2ae74c2c32"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/fiori-1440-budget.png",
+      "bytes": 35246,
+      "sha256": "41c19bc6fe0ec349b7f8f910499a5d2100bd3d6595cbff0b7d2016cf69215cb7"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/fiori-1440-evidence-MFG-FIN-20261021_SIMULATED.json",
+      "bytes": 33538,
+      "sha256": "24b60c732b0bbb1e0a0517129cb6fc4b555816f9e1aac50dc72f6a472380c850"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/fiori-1440-file-check.png",
+      "bytes": 27082,
+      "sha256": "0a4f85b6e6bf4d8723e5702473b7daaaf02162be699714793d752a725a9e9cf7"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/fiori-1440-initial.png",
+      "bytes": 139851,
+      "sha256": "740967703d4024382406ddccaa73bfa9488744c3a935ad45cabda6a2cd736daf"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/fiori-1440-reload-MFG-FIN-20261021_SIMULATED.json",
+      "bytes": 22262,
+      "sha256": "b4a8a871944624c66c0fd84c90eb87a136c47b992dc55204a7df54f660209619"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/fiori-1440-reset-MFG-FIN-20261021_SIMULATED.json",
+      "bytes": 22262,
+      "sha256": "b4a8a871944624c66c0fd84c90eb87a136c47b992dc55204a7df54f660209619"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/fiori-390-FI21-MFG-FIN-20261021_FI21_SIMULATED.txt",
+      "bytes": 1666,
+      "sha256": "859a9791c79f480dd6ec040d719a92e5d41f46dd095f5eb57396a89e3fd9bd64"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/fiori-390-FI22-MFG-FIN-20261021_FI22_SIMULATED.txt",
+      "bytes": 1248,
+      "sha256": "61728394924e6a23277c883c03b639f1724988db2135027cf5803a19902fdc5c"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/fiori-390-after-nav-MFG-FIN-20261021_SIMULATED.json",
+      "bytes": 33347,
+      "sha256": "0923fd6d8c12b4915aa71f9414c8a3a94ce25e1013b28c13bdd19e2ae74c2c32"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/fiori-390-bank.png",
+      "bytes": 48848,
+      "sha256": "6a4911ddbd84cc97cd681e535941868978594eb9c4e66ccc7d594b5c557f011a"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/fiori-390-before-nav-MFG-FIN-20261021_SIMULATED.json",
+      "bytes": 33347,
+      "sha256": "0923fd6d8c12b4915aa71f9414c8a3a94ce25e1013b28c13bdd19e2ae74c2c32"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/fiori-390-budget.png",
+      "bytes": 36372,
+      "sha256": "a1f180ee1ea40b45389bbb6f1be773b328e71abf291f7124ebe04ea820937a77"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/fiori-390-evidence-MFG-FIN-20261021_SIMULATED.json",
+      "bytes": 33538,
+      "sha256": "24b60c732b0bbb1e0a0517129cb6fc4b555816f9e1aac50dc72f6a472380c850"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/fiori-390-file-check.png",
+      "bytes": 26932,
+      "sha256": "b9e8dc984a893b2be81d642313c986d103866e48518e6cfc9cb3857265a4db4e"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/fiori-390-initial.png",
+      "bytes": 68211,
+      "sha256": "9c9bb12cdf5be9bfdd0123119390ce5b79a9d3f76154b3ed851bb4bf37510c9f"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/fiori-390-reload-MFG-FIN-20261021_SIMULATED.json",
+      "bytes": 22262,
+      "sha256": "b4a8a871944624c66c0fd84c90eb87a136c47b992dc55204a7df54f660209619"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/fiori-390-reset-MFG-FIN-20261021_SIMULATED.json",
+      "bytes": 22262,
+      "sha256": "b4a8a871944624c66c0fd84c90eb87a136c47b992dc55204a7df54f660209619"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/results.json",
+      "bytes": 14527,
+      "sha256": "4d80aea0f84774a3c4eccd841d8f1dc5d9b0a057510a429ea0def86dd68e3f19"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/browser-final/server.log",
+      "bytes": 143,
+      "sha256": "7af75c3ea18498a13ae22bca995d1e0a46f565b78cd8aa56f864f6ec8449b67c"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/build-client.log",
+      "bytes": 1546,
+      "sha256": "69f57c06a28adda04165260fa3c54509721ee89297d77cd04c95bc0cb4c82842"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/build-server.log",
+      "bytes": 75,
+      "sha256": "33825365c1f26dfa4788a9605820c4889e12a845576e8fe6a5cb132b5634c623"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/command-results.initial.json",
+      "bytes": 2993,
+      "sha256": "f1be28e577715c162798318b4460ac53cc9a15f1608af31d2ebcf617f6983bf5"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/command-results.json",
+      "bytes": 3122,
+      "sha256": "f6677abdd026a5378f5456ff39b1ac8c9eb318bb5454b7aff78a846131ea22db"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/eslint-feature.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/eslint-strict.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/parity.log",
+      "bytes": 683,
+      "sha256": "82d3f7a037f51a82d30aa444cf95378d6f7525b3d65e87cc5289962d46d6655d"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/production-smoke-retry.log",
+      "bytes": 150,
+      "sha256": "a80b586331e2b3f506ca30c186100c1c0100cb2b76201d08f397b6778a4901d0"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/production-smoke.initial.log",
+      "bytes": 364,
+      "sha256": "5ae41ccedb9623667710daf9e849564c6be3121c6d06a5324117a859286e1e54"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/rc1-file-compatibility.log",
+      "bytes": 389,
+      "sha256": "65f9746fa47d5185b20e4434ff399ae007bc9b3bd433f6b0d3b90230f96c3fb3"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/reports.log",
+      "bytes": 187,
+      "sha256": "db013df71aa090392300327714acc58da8242ed61a1b7ff9008e670568d57df0"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/typecheck.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/ui-finance.log",
+      "bytes": 116,
+      "sha256": "412d654952ef6c34a859279100ce76a492eb22fea944e9a9941a0dd380441c0c"
+    },
+    {
+      "path": "docs/implementation/evidence/manufacturing-finance/v1-rc2/workflows-and-verifier.log",
+      "bytes": 1528,
+      "sha256": "d2582530ce06d8806cc3e79f963ca7759151375deac825f75fad57422edcfd4a"
+    }
+  ]
+}

@@ -1,0 +1,4923 @@
+{
+  "as_of": "2026-10-24",
+  "status": "PHASE2_EVIDENCE_CLOSURE_IN_PROGRESS",
+  "scope": "160 authored profiles and 227 variants already present in public/sap-reporting",
+  "counting_rule": "Profiles are unique authored IDs. Variants, technical extracts and synthetic rows never become profiles by arithmetic.",
+  "profiles": 160,
+  "unique_profile_ids": 160,
+  "variants": 227,
+  "profile_module_counts": {
+    "FI": 32,
+    "CO": 32,
+    "MM": 32,
+    "FI-AA": 8,
+    "PP": 20,
+    "SD": 17,
+    "QM": 10,
+    "PM": 9
+  },
+  "gate_counts": {
+    "identity_gate": {
+      "PASS": 159,
+      "GAP": 1
+    },
+    "layout_gate": {
+      "OBSERVED_OR_RECONSTRUCTED": 134,
+      "PROPOSED_ONLY": 26
+    },
+    "semantics_gate": {
+      "PASS": 137,
+      "GAP": 23
+    },
+    "reconciliation_gate": {
+      "DECLARED": 137,
+      "GAP": 23
+    },
+    "native_export_gate": {
+      "NOT_VERIFIED": 160
+    },
+    "target_release_gate": {
+      "UNKNOWN": 160
+    },
+    "sme_ifrs_gate": {
+      "NOT_RUN": 160
+    }
+  },
+  "phase2_ready_profiles": [],
+  "phase2_ready_count": 0,
+  "authoring_ready_profiles": [
+    "FI01",
+    "FI02",
+    "FI03",
+    "FI04",
+    "FI05",
+    "FI06",
+    "FI07",
+    "FI08",
+    "FI09",
+    "FI10",
+    "FI11",
+    "FI12",
+    "FI13",
+    "FI14",
+    "FI15",
+    "FI16",
+    "CO01",
+    "CO02",
+    "CO03",
+    "CO04",
+    "CO05",
+    "CO06",
+    "CO07",
+    "CO08",
+    "CO09",
+    "CO10",
+    "CO11",
+    "CO12",
+    "CO13",
+    "CO14",
+    "CO15",
+    "CO16",
+    "MM01",
+    "MM02",
+    "MM03",
+    "MM04",
+    "MM05",
+    "MM06",
+    "MM07",
+    "MM08",
+    "MM09",
+    "MM10",
+    "MM11",
+    "MM12",
+    "MM13",
+    "MM14",
+    "MM15",
+    "MM16",
+    "FI18",
+    "FI19",
+    "FI20",
+    "FI21",
+    "FI22",
+    "FI23",
+    "FI24",
+    "FI25",
+    "FI26",
+    "FI27",
+    "FI28",
+    "FI29",
+    "FI30",
+    "CO17",
+    "CO18",
+    "CO19",
+    "CO20",
+    "CO21",
+    "CO22",
+    "CO23",
+    "CO24",
+    "CO25",
+    "CO26",
+    "CO27",
+    "CO28",
+    "CO29",
+    "CO30",
+    "MM18",
+    "MM19",
+    "MM20",
+    "MM21",
+    "MM22",
+    "MM23",
+    "MM24",
+    "MM25",
+    "MM26",
+    "MM27",
+    "MM28",
+    "MM29",
+    "MM30",
+    "PP06",
+    "PP07",
+    "PP08",
+    "PP09",
+    "PP10",
+    "PP11",
+    "PP12",
+    "PP13",
+    "PP14",
+    "PP15",
+    "PP16",
+    "PP17",
+    "PP18",
+    "PP19",
+    "PP20",
+    "SD04",
+    "SD05",
+    "SD06",
+    "SD07",
+    "SD08",
+    "SD09",
+    "SD10",
+    "SD11",
+    "SD12",
+    "SD13",
+    "SD14",
+    "SD15",
+    "QM04",
+    "QM05",
+    "QM06",
+    "QM07",
+    "QM08",
+    "QM09",
+    "QM10",
+    "PM04",
+    "PM05",
+    "PM06",
+    "PM07",
+    "PM08",
+    "FI31",
+    "FI32",
+    "CO31",
+    "CO32",
+    "MM31",
+    "MM32",
+    "SD16",
+    "SD17",
+    "PM09",
+    "AA08"
+  ],
+  "authoring_ready_count": 137,
+  "variant_evidence": {
+    "variants_seen": 227,
+    "unique_variant_ids": 227,
+    "native_export_true": 0,
+    "full_sap_catalog_verified_true": 0,
+    "source_labels_complete_true": 69,
+    "observed_source_fields_positive": 0
+  },
+  "native_exports": 0,
+  "target_release": "UNKNOWN",
+  "full_company_catalog_verified": false,
+  "sap_sme_acceptance": "NOT_RUN",
+  "raw_input_register_records": 48,
+  "raw_input_received": 0,
+  "format_profiles": 48,
+  "format_profiles_with_native_sample": 0,
+  "external_blockers": [
+    "SAP edition/release and client are unknown",
+    "No authorized native SAP export is present",
+    "No full technical field catalog is verified",
+    "SAP SME and IFRS/business acceptance have not run",
+    "Excel desktop and live target-system reconciliation remain unverified"
+  ],
+  "source_hashes": {
+    "progress.json": "498d6de81099fd0849f85bb1583fc86da5f2732011cf7a97c379a50f80927a65",
+    "report-master-dictionary.json": "2ebe1a9a2b5313cf7e5f491bf0ea9f7ffdd76325a1dd7d98bed3d5175c963d22",
+    "raw-input-register.json": "b228855a0c9eae71836c3b470c48a034bcc22c8aa64e008bcb6398ef50f92e19",
+    "sap-export-format-profiles.json": "bea5bcd841461695ef6f959334fae99f56c7e6a09dc10c1be2e56162c5d24f83",
+    "priority-24.json": "c7ef5fab0d25fa8983314e37100710abcce5914097cd46d49db528a674b4e5bf"
+  },
+  "report_gates": [
+    {
+      "report_id": "FI01",
+      "module": "FI",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "FI02",
+      "module": "FI",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "FI03",
+      "module": "FI",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "FI04",
+      "module": "FI",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "FI05",
+      "module": "FI",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "FI06",
+      "module": "FI",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "FI07",
+      "module": "FI",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "PROPOSED_ONLY",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "CAPTURE_AUTHORIZED_NATIVE_LAYOUT_OR_KEEP_PROPOSED_LABEL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "FI08",
+      "module": "FI",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "FI09",
+      "module": "FI",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "PROPOSED_ONLY",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "CAPTURE_AUTHORIZED_NATIVE_LAYOUT_OR_KEEP_PROPOSED_LABEL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "FI10",
+      "module": "FI",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": false,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "FI11",
+      "module": "FI",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": false,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "FI12",
+      "module": "FI",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "FI13",
+      "module": "FI",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "FI14",
+      "module": "FI",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "FI15",
+      "module": "FI",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "FI16",
+      "module": "FI",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "CO01",
+      "module": "CO",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "CO02",
+      "module": "CO",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "CO03",
+      "module": "CO",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "CO04",
+      "module": "CO",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "CO05",
+      "module": "CO",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "PROPOSED_ONLY",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "CAPTURE_AUTHORIZED_NATIVE_LAYOUT_OR_KEEP_PROPOSED_LABEL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "CO06",
+      "module": "CO",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "CO07",
+      "module": "CO",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "CO08",
+      "module": "CO",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "CO09",
+      "module": "CO",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "CO10",
+      "module": "CO",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "CO11",
+      "module": "CO",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "CO12",
+      "module": "CO",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "CO13",
+      "module": "CO",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "CO14",
+      "module": "CO",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "CO15",
+      "module": "CO",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "CO16",
+      "module": "CO",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": false,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "PROPOSED_ONLY",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "CAPTURE_AUTHORIZED_NATIVE_LAYOUT_OR_KEEP_PROPOSED_LABEL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "MM01",
+      "module": "MM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "MM02",
+      "module": "MM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "MM03",
+      "module": "MM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "MM04",
+      "module": "MM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "PROPOSED_ONLY",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "CAPTURE_AUTHORIZED_NATIVE_LAYOUT_OR_KEEP_PROPOSED_LABEL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "MM05",
+      "module": "MM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "PROPOSED_ONLY",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "CAPTURE_AUTHORIZED_NATIVE_LAYOUT_OR_KEEP_PROPOSED_LABEL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "MM06",
+      "module": "MM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "MM07",
+      "module": "MM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "MM08",
+      "module": "MM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "MM09",
+      "module": "MM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "MM10",
+      "module": "MM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "MM11",
+      "module": "MM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "PROPOSED_ONLY",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "CAPTURE_AUTHORIZED_NATIVE_LAYOUT_OR_KEEP_PROPOSED_LABEL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "MM12",
+      "module": "MM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "MM13",
+      "module": "MM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "MM14",
+      "module": "MM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "MM15",
+      "module": "MM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "MM16",
+      "module": "MM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "AA01",
+      "module": "FI-AA",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": false
+      },
+      "missing_semantic_fields": [
+        "selection",
+        "reading",
+        "reconciliation",
+        "control",
+        "lineage",
+        "grain",
+        "keys",
+        "columns"
+      ],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "GAP",
+      "reconciliation_gate": "GAP",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": false,
+      "phase2_ready": false,
+      "next_actions": [
+        "COMPLETE_GRAIN_KEYS_COLUMNS_RECONCILIATION_CONTROL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "AA02",
+      "module": "FI-AA",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": false
+      },
+      "missing_semantic_fields": [
+        "selection",
+        "reading",
+        "reconciliation",
+        "control",
+        "lineage",
+        "grain",
+        "keys",
+        "columns"
+      ],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "GAP",
+      "reconciliation_gate": "GAP",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": false,
+      "phase2_ready": false,
+      "next_actions": [
+        "COMPLETE_GRAIN_KEYS_COLUMNS_RECONCILIATION_CONTROL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "AA03",
+      "module": "FI-AA",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": false
+      },
+      "missing_semantic_fields": [
+        "selection",
+        "reading",
+        "reconciliation",
+        "control",
+        "lineage",
+        "grain",
+        "keys",
+        "columns"
+      ],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "GAP",
+      "reconciliation_gate": "GAP",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": false,
+      "phase2_ready": false,
+      "next_actions": [
+        "COMPLETE_GRAIN_KEYS_COLUMNS_RECONCILIATION_CONTROL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "AA04",
+      "module": "FI-AA",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": false
+      },
+      "missing_semantic_fields": [
+        "selection",
+        "reading",
+        "reconciliation",
+        "control",
+        "lineage",
+        "grain",
+        "keys",
+        "columns"
+      ],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "GAP",
+      "reconciliation_gate": "GAP",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": false,
+      "phase2_ready": false,
+      "next_actions": [
+        "COMPLETE_GRAIN_KEYS_COLUMNS_RECONCILIATION_CONTROL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "AA05",
+      "module": "FI-AA",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": false
+      },
+      "missing_semantic_fields": [
+        "selection",
+        "reading",
+        "reconciliation",
+        "control",
+        "lineage",
+        "grain",
+        "keys",
+        "columns"
+      ],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "GAP",
+      "reconciliation_gate": "GAP",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": false,
+      "phase2_ready": false,
+      "next_actions": [
+        "COMPLETE_GRAIN_KEYS_COLUMNS_RECONCILIATION_CONTROL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "AA06",
+      "module": "FI-AA",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": false
+      },
+      "missing_semantic_fields": [
+        "selection",
+        "reading",
+        "reconciliation",
+        "control",
+        "lineage",
+        "grain",
+        "keys",
+        "columns"
+      ],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "GAP",
+      "reconciliation_gate": "GAP",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": false,
+      "phase2_ready": false,
+      "next_actions": [
+        "COMPLETE_GRAIN_KEYS_COLUMNS_RECONCILIATION_CONTROL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "AA07",
+      "module": "FI-AA",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": false
+      },
+      "missing_semantic_fields": [
+        "selection",
+        "reading",
+        "reconciliation",
+        "control",
+        "lineage",
+        "grain",
+        "keys",
+        "columns"
+      ],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "GAP",
+      "reconciliation_gate": "GAP",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": false,
+      "phase2_ready": false,
+      "next_actions": [
+        "COMPLETE_GRAIN_KEYS_COLUMNS_RECONCILIATION_CONTROL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "FI17",
+      "module": "FI",
+      "identity_evidence": {
+        "has_id_module_title": false,
+        "has_entrypoint": true,
+        "has_source_evidence": false
+      },
+      "missing_semantic_fields": [
+        "selection",
+        "reading",
+        "reconciliation",
+        "control",
+        "lineage",
+        "keys",
+        "columns"
+      ],
+      "identity_gate": "GAP",
+      "layout_gate": "PROPOSED_ONLY",
+      "semantics_gate": "GAP",
+      "reconciliation_gate": "GAP",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": false,
+      "phase2_ready": false,
+      "next_actions": [
+        "VERIFY_IDENTITY_TCODE_APP_OR_SOURCE",
+        "COMPLETE_GRAIN_KEYS_COLUMNS_RECONCILIATION_CONTROL",
+        "CAPTURE_AUTHORIZED_NATIVE_LAYOUT_OR_KEEP_PROPOSED_LABEL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "PP01",
+      "module": "PP",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": false
+      },
+      "missing_semantic_fields": [
+        "selection",
+        "reading",
+        "reconciliation",
+        "control",
+        "keys",
+        "columns"
+      ],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "GAP",
+      "reconciliation_gate": "GAP",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "COMPLETE_GRAIN_KEYS_COLUMNS_RECONCILIATION_CONTROL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "PP02",
+      "module": "PP",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": false
+      },
+      "missing_semantic_fields": [
+        "selection",
+        "reading",
+        "reconciliation",
+        "control",
+        "keys",
+        "columns"
+      ],
+      "identity_gate": "PASS",
+      "layout_gate": "PROPOSED_ONLY",
+      "semantics_gate": "GAP",
+      "reconciliation_gate": "GAP",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "COMPLETE_GRAIN_KEYS_COLUMNS_RECONCILIATION_CONTROL",
+        "CAPTURE_AUTHORIZED_NATIVE_LAYOUT_OR_KEEP_PROPOSED_LABEL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "SD01",
+      "module": "SD",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": false
+      },
+      "missing_semantic_fields": [
+        "selection",
+        "reading",
+        "reconciliation",
+        "control",
+        "keys",
+        "columns"
+      ],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "GAP",
+      "reconciliation_gate": "GAP",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "COMPLETE_GRAIN_KEYS_COLUMNS_RECONCILIATION_CONTROL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "SD02",
+      "module": "SD",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": false
+      },
+      "missing_semantic_fields": [
+        "selection",
+        "reading",
+        "reconciliation",
+        "control",
+        "keys",
+        "columns"
+      ],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "GAP",
+      "reconciliation_gate": "GAP",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "COMPLETE_GRAIN_KEYS_COLUMNS_RECONCILIATION_CONTROL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "QM01",
+      "module": "QM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": false
+      },
+      "missing_semantic_fields": [
+        "selection",
+        "reading",
+        "reconciliation",
+        "control",
+        "keys",
+        "columns"
+      ],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "GAP",
+      "reconciliation_gate": "GAP",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "COMPLETE_GRAIN_KEYS_COLUMNS_RECONCILIATION_CONTROL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "QM02",
+      "module": "QM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": false
+      },
+      "missing_semantic_fields": [
+        "selection",
+        "reading",
+        "reconciliation",
+        "control",
+        "keys",
+        "columns"
+      ],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "GAP",
+      "reconciliation_gate": "GAP",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "COMPLETE_GRAIN_KEYS_COLUMNS_RECONCILIATION_CONTROL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "PM01",
+      "module": "PM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": false
+      },
+      "missing_semantic_fields": [
+        "selection",
+        "reading",
+        "reconciliation",
+        "control",
+        "keys",
+        "columns"
+      ],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "GAP",
+      "reconciliation_gate": "GAP",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "COMPLETE_GRAIN_KEYS_COLUMNS_RECONCILIATION_CONTROL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "PM02",
+      "module": "PM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": false
+      },
+      "missing_semantic_fields": [
+        "selection",
+        "reading",
+        "reconciliation",
+        "control",
+        "keys",
+        "columns"
+      ],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "GAP",
+      "reconciliation_gate": "GAP",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "COMPLETE_GRAIN_KEYS_COLUMNS_RECONCILIATION_CONTROL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "QM03",
+      "module": "QM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": false
+      },
+      "missing_semantic_fields": [
+        "selection",
+        "reading",
+        "reconciliation",
+        "control",
+        "keys",
+        "columns"
+      ],
+      "identity_gate": "PASS",
+      "layout_gate": "PROPOSED_ONLY",
+      "semantics_gate": "GAP",
+      "reconciliation_gate": "GAP",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "COMPLETE_GRAIN_KEYS_COLUMNS_RECONCILIATION_CONTROL",
+        "CAPTURE_AUTHORIZED_NATIVE_LAYOUT_OR_KEEP_PROPOSED_LABEL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "PM03",
+      "module": "PM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": false
+      },
+      "missing_semantic_fields": [
+        "selection",
+        "reading",
+        "reconciliation",
+        "control",
+        "keys",
+        "columns"
+      ],
+      "identity_gate": "PASS",
+      "layout_gate": "PROPOSED_ONLY",
+      "semantics_gate": "GAP",
+      "reconciliation_gate": "GAP",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "COMPLETE_GRAIN_KEYS_COLUMNS_RECONCILIATION_CONTROL",
+        "CAPTURE_AUTHORIZED_NATIVE_LAYOUT_OR_KEEP_PROPOSED_LABEL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "SD03",
+      "module": "SD",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": false
+      },
+      "missing_semantic_fields": [
+        "selection",
+        "reading",
+        "reconciliation",
+        "control",
+        "keys",
+        "columns"
+      ],
+      "identity_gate": "PASS",
+      "layout_gate": "PROPOSED_ONLY",
+      "semantics_gate": "GAP",
+      "reconciliation_gate": "GAP",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": false,
+      "phase2_ready": false,
+      "next_actions": [
+        "COMPLETE_GRAIN_KEYS_COLUMNS_RECONCILIATION_CONTROL",
+        "CAPTURE_AUTHORIZED_NATIVE_LAYOUT_OR_KEEP_PROPOSED_LABEL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "MM17",
+      "module": "MM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": false
+      },
+      "missing_semantic_fields": [
+        "selection",
+        "reading",
+        "reconciliation",
+        "control",
+        "keys",
+        "columns"
+      ],
+      "identity_gate": "PASS",
+      "layout_gate": "PROPOSED_ONLY",
+      "semantics_gate": "GAP",
+      "reconciliation_gate": "GAP",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": false,
+      "phase2_ready": false,
+      "next_actions": [
+        "COMPLETE_GRAIN_KEYS_COLUMNS_RECONCILIATION_CONTROL",
+        "CAPTURE_AUTHORIZED_NATIVE_LAYOUT_OR_KEEP_PROPOSED_LABEL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "PP03",
+      "module": "PP",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": false
+      },
+      "missing_semantic_fields": [
+        "selection",
+        "reading",
+        "reconciliation",
+        "control",
+        "keys",
+        "columns"
+      ],
+      "identity_gate": "PASS",
+      "layout_gate": "PROPOSED_ONLY",
+      "semantics_gate": "GAP",
+      "reconciliation_gate": "GAP",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "COMPLETE_GRAIN_KEYS_COLUMNS_RECONCILIATION_CONTROL",
+        "CAPTURE_AUTHORIZED_NATIVE_LAYOUT_OR_KEEP_PROPOSED_LABEL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "PP04",
+      "module": "PP",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": false
+      },
+      "missing_semantic_fields": [
+        "selection",
+        "reading",
+        "reconciliation",
+        "control",
+        "keys",
+        "columns"
+      ],
+      "identity_gate": "PASS",
+      "layout_gate": "PROPOSED_ONLY",
+      "semantics_gate": "GAP",
+      "reconciliation_gate": "GAP",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "COMPLETE_GRAIN_KEYS_COLUMNS_RECONCILIATION_CONTROL",
+        "CAPTURE_AUTHORIZED_NATIVE_LAYOUT_OR_KEEP_PROPOSED_LABEL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "PP05",
+      "module": "PP",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": false
+      },
+      "missing_semantic_fields": [
+        "selection",
+        "reading",
+        "reconciliation",
+        "control",
+        "keys",
+        "columns"
+      ],
+      "identity_gate": "PASS",
+      "layout_gate": "PROPOSED_ONLY",
+      "semantics_gate": "GAP",
+      "reconciliation_gate": "GAP",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "COMPLETE_GRAIN_KEYS_COLUMNS_RECONCILIATION_CONTROL",
+        "CAPTURE_AUTHORIZED_NATIVE_LAYOUT_OR_KEEP_PROPOSED_LABEL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "FI18",
+      "module": "FI",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "FI19",
+      "module": "FI",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "FI20",
+      "module": "FI",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "FI21",
+      "module": "FI",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "FI22",
+      "module": "FI",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "FI23",
+      "module": "FI",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "FI24",
+      "module": "FI",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "FI25",
+      "module": "FI",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "FI26",
+      "module": "FI",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "FI27",
+      "module": "FI",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "FI28",
+      "module": "FI",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "FI29",
+      "module": "FI",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "FI30",
+      "module": "FI",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "CO17",
+      "module": "CO",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "CO18",
+      "module": "CO",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "CO19",
+      "module": "CO",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "CO20",
+      "module": "CO",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "CO21",
+      "module": "CO",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "CO22",
+      "module": "CO",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "CO23",
+      "module": "CO",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "CO24",
+      "module": "CO",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "CO25",
+      "module": "CO",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "CO26",
+      "module": "CO",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "CO27",
+      "module": "CO",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "CO28",
+      "module": "CO",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "CO29",
+      "module": "CO",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "CO30",
+      "module": "CO",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "MM18",
+      "module": "MM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "MM19",
+      "module": "MM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "MM20",
+      "module": "MM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "MM21",
+      "module": "MM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "MM22",
+      "module": "MM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "MM23",
+      "module": "MM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "MM24",
+      "module": "MM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "MM25",
+      "module": "MM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "MM26",
+      "module": "MM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "MM27",
+      "module": "MM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "MM28",
+      "module": "MM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "MM29",
+      "module": "MM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "MM30",
+      "module": "MM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "PP06",
+      "module": "PP",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "PP07",
+      "module": "PP",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "PP08",
+      "module": "PP",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "PP09",
+      "module": "PP",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "PP10",
+      "module": "PP",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "PP11",
+      "module": "PP",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "PP12",
+      "module": "PP",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "PP13",
+      "module": "PP",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "PP14",
+      "module": "PP",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "PP15",
+      "module": "PP",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "PP16",
+      "module": "PP",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "PP17",
+      "module": "PP",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "PP18",
+      "module": "PP",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "PP19",
+      "module": "PP",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "PP20",
+      "module": "PP",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "SD04",
+      "module": "SD",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "SD05",
+      "module": "SD",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "SD06",
+      "module": "SD",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "SD07",
+      "module": "SD",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "SD08",
+      "module": "SD",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "SD09",
+      "module": "SD",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "SD10",
+      "module": "SD",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "SD11",
+      "module": "SD",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "SD12",
+      "module": "SD",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "SD13",
+      "module": "SD",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "SD14",
+      "module": "SD",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "SD15",
+      "module": "SD",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "QM04",
+      "module": "QM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "QM05",
+      "module": "QM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "QM06",
+      "module": "QM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "QM07",
+      "module": "QM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "QM08",
+      "module": "QM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "QM09",
+      "module": "QM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "QM10",
+      "module": "QM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "PM04",
+      "module": "PM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "PM05",
+      "module": "PM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "PM06",
+      "module": "PM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "PM07",
+      "module": "PM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "PM08",
+      "module": "PM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "OBSERVED_OR_RECONSTRUCTED",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "FI31",
+      "module": "FI",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "PROPOSED_ONLY",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "CAPTURE_AUTHORIZED_NATIVE_LAYOUT_OR_KEEP_PROPOSED_LABEL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "FI32",
+      "module": "FI",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "PROPOSED_ONLY",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "CAPTURE_AUTHORIZED_NATIVE_LAYOUT_OR_KEEP_PROPOSED_LABEL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "CO31",
+      "module": "CO",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "PROPOSED_ONLY",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "CAPTURE_AUTHORIZED_NATIVE_LAYOUT_OR_KEEP_PROPOSED_LABEL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "CO32",
+      "module": "CO",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "PROPOSED_ONLY",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "CAPTURE_AUTHORIZED_NATIVE_LAYOUT_OR_KEEP_PROPOSED_LABEL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "MM31",
+      "module": "MM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "PROPOSED_ONLY",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "CAPTURE_AUTHORIZED_NATIVE_LAYOUT_OR_KEEP_PROPOSED_LABEL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "MM32",
+      "module": "MM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "PROPOSED_ONLY",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "CAPTURE_AUTHORIZED_NATIVE_LAYOUT_OR_KEEP_PROPOSED_LABEL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "SD16",
+      "module": "SD",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "PROPOSED_ONLY",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "CAPTURE_AUTHORIZED_NATIVE_LAYOUT_OR_KEEP_PROPOSED_LABEL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "SD17",
+      "module": "SD",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "PROPOSED_ONLY",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "CAPTURE_AUTHORIZED_NATIVE_LAYOUT_OR_KEEP_PROPOSED_LABEL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "PM09",
+      "module": "PM",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "PROPOSED_ONLY",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "CAPTURE_AUTHORIZED_NATIVE_LAYOUT_OR_KEEP_PROPOSED_LABEL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    },
+    {
+      "report_id": "AA08",
+      "module": "FI-AA",
+      "identity_evidence": {
+        "has_id_module_title": true,
+        "has_entrypoint": true,
+        "has_source_evidence": true
+      },
+      "missing_semantic_fields": [],
+      "identity_gate": "PASS",
+      "layout_gate": "PROPOSED_ONLY",
+      "semantics_gate": "PASS",
+      "reconciliation_gate": "DECLARED",
+      "native_export_gate": "NOT_VERIFIED",
+      "target_release_gate": "UNKNOWN",
+      "sme_ifrs_gate": "NOT_RUN",
+      "proposed_or_synthetic_signal": true,
+      "phase2_ready": false,
+      "next_actions": [
+        "CAPTURE_AUTHORIZED_NATIVE_LAYOUT_OR_KEEP_PROPOSED_LABEL",
+        "OBTAIN_AUTHORIZED_NATIVE_EXPORT",
+        "RECORD_TARGET_EDITION_RELEASE_CLIENT",
+        "RUN_SAP_SME_AND_IFRS_BUSINESS_REVIEW"
+      ]
+    }
+  ],
+  "remediation_queue": {
+    "as_of": "2026-10-24",
+    "status": "INTERNAL_REMEDIATION_QUEUE_EXTERNAL_EVIDENCE_BLOCKED",
+    "principle": "Close repository-level contract gaps first; do not mark native/release/SME gates complete from synthetic data.",
+    "queues": [
+      {
+        "gate": "IDENTITY",
+        "count": 1,
+        "report_ids": [
+          "FI17"
+        ],
+        "items": [
+          {
+            "report_id": "FI17",
+            "identity_evidence": {
+              "has_id_module_title": false,
+              "has_entrypoint": true,
+              "has_source_evidence": false
+            }
+          }
+        ],
+        "action": "Verify T-code/Fiori/source identity and preserve explicit UNKNOWN where no entrypoint is proven."
+      },
+      {
+        "gate": "SEMANTICS_AND_RECONCILIATION",
+        "count": 23,
+        "report_ids": [
+          "AA01",
+          "AA02",
+          "AA03",
+          "AA04",
+          "AA05",
+          "AA06",
+          "AA07",
+          "FI17",
+          "PP01",
+          "PP02",
+          "SD01",
+          "SD02",
+          "QM01",
+          "QM02",
+          "PM01",
+          "PM02",
+          "QM03",
+          "PM03",
+          "SD03",
+          "MM17",
+          "PP03",
+          "PP04",
+          "PP05"
+        ],
+        "items": [
+          {
+            "report_id": "AA01",
+            "missing_semantic_fields": [
+              "selection",
+              "reading",
+              "reconciliation",
+              "control",
+              "lineage",
+              "grain",
+              "keys",
+              "columns"
+            ]
+          },
+          {
+            "report_id": "AA02",
+            "missing_semantic_fields": [
+              "selection",
+              "reading",
+              "reconciliation",
+              "control",
+              "lineage",
+              "grain",
+              "keys",
+              "columns"
+            ]
+          },
+          {
+            "report_id": "AA03",
+            "missing_semantic_fields": [
+              "selection",
+              "reading",
+              "reconciliation",
+              "control",
+              "lineage",
+              "grain",
+              "keys",
+              "columns"
+            ]
+          },
+          {
+            "report_id": "AA04",
+            "missing_semantic_fields": [
+              "selection",
+              "reading",
+              "reconciliation",
+              "control",
+              "lineage",
+              "grain",
+              "keys",
+              "columns"
+            ]
+          },
+          {
+            "report_id": "AA05",
+            "missing_semantic_fields": [
+              "selection",
+              "reading",
+              "reconciliation",
+              "control",
+              "lineage",
+              "grain",
+              "keys",
+              "columns"
+            ]
+          },
+          {
+            "report_id": "AA06",
+            "missing_semantic_fields": [
+              "selection",
+              "reading",
+              "reconciliation",
+              "control",
+              "lineage",
+              "grain",
+              "keys",
+              "columns"
+            ]
+          },
+          {
+            "report_id": "AA07",
+            "missing_semantic_fields": [
+              "selection",
+              "reading",
+              "reconciliation",
+              "control",
+              "lineage",
+              "grain",
+              "keys",
+              "columns"
+            ]
+          },
+          {
+            "report_id": "FI17",
+            "missing_semantic_fields": [
+              "selection",
+              "reading",
+              "reconciliation",
+              "control",
+              "lineage",
+              "keys",
+              "columns"
+            ]
+          },
+          {
+            "report_id": "PP01",
+            "missing_semantic_fields": [
+              "selection",
+              "reading",
+              "reconciliation",
+              "control",
+              "keys",
+              "columns"
+            ]
+          },
+          {
+            "report_id": "PP02",
+            "missing_semantic_fields": [
+              "selection",
+              "reading",
+              "reconciliation",
+              "control",
+              "keys",
+              "columns"
+            ]
+          },
+          {
+            "report_id": "SD01",
+            "missing_semantic_fields": [
+              "selection",
+              "reading",
+              "reconciliation",
+              "control",
+              "keys",
+              "columns"
+            ]
+          },
+          {
+            "report_id": "SD02",
+            "missing_semantic_fields": [
+              "selection",
+              "reading",
+              "reconciliation",
+              "control",
+              "keys",
+              "columns"
+            ]
+          },
+          {
+            "report_id": "QM01",
+            "missing_semantic_fields": [
+              "selection",
+              "reading",
+              "reconciliation",
+              "control",
+              "keys",
+              "columns"
+            ]
+          },
+          {
+            "report_id": "QM02",
+            "missing_semantic_fields": [
+              "selection",
+              "reading",
+              "reconciliation",
+              "control",
+              "keys",
+              "columns"
+            ]
+          },
+          {
+            "report_id": "PM01",
+            "missing_semantic_fields": [
+              "selection",
+              "reading",
+              "reconciliation",
+              "control",
+              "keys",
+              "columns"
+            ]
+          },
+          {
+            "report_id": "PM02",
+            "missing_semantic_fields": [
+              "selection",
+              "reading",
+              "reconciliation",
+              "control",
+              "keys",
+              "columns"
+            ]
+          },
+          {
+            "report_id": "QM03",
+            "missing_semantic_fields": [
+              "selection",
+              "reading",
+              "reconciliation",
+              "control",
+              "keys",
+              "columns"
+            ]
+          },
+          {
+            "report_id": "PM03",
+            "missing_semantic_fields": [
+              "selection",
+              "reading",
+              "reconciliation",
+              "control",
+              "keys",
+              "columns"
+            ]
+          },
+          {
+            "report_id": "SD03",
+            "missing_semantic_fields": [
+              "selection",
+              "reading",
+              "reconciliation",
+              "control",
+              "keys",
+              "columns"
+            ]
+          },
+          {
+            "report_id": "MM17",
+            "missing_semantic_fields": [
+              "selection",
+              "reading",
+              "reconciliation",
+              "control",
+              "keys",
+              "columns"
+            ]
+          },
+          {
+            "report_id": "PP03",
+            "missing_semantic_fields": [
+              "selection",
+              "reading",
+              "reconciliation",
+              "control",
+              "keys",
+              "columns"
+            ]
+          },
+          {
+            "report_id": "PP04",
+            "missing_semantic_fields": [
+              "selection",
+              "reading",
+              "reconciliation",
+              "control",
+              "keys",
+              "columns"
+            ]
+          },
+          {
+            "report_id": "PP05",
+            "missing_semantic_fields": [
+              "selection",
+              "reading",
+              "reconciliation",
+              "control",
+              "keys",
+              "columns"
+            ]
+          }
+        ],
+        "action": "Complete grain, keys, columns, reconciliation and control; add a negative/cutoff fixture where a valid source rule exists."
+      },
+      {
+        "gate": "LAYOUT",
+        "count": 26,
+        "report_ids": [
+          "FI07",
+          "FI09",
+          "CO05",
+          "CO16",
+          "MM04",
+          "MM05",
+          "MM11",
+          "FI17",
+          "PP02",
+          "QM03",
+          "PM03",
+          "SD03",
+          "MM17",
+          "PP03",
+          "PP04",
+          "PP05",
+          "FI31",
+          "FI32",
+          "CO31",
+          "CO32",
+          "MM31",
+          "MM32",
+          "SD16",
+          "SD17",
+          "PM09",
+          "AA08"
+        ],
+        "items": [
+          {
+            "report_id": "FI07",
+            "layout_gate": "PROPOSED_ONLY"
+          },
+          {
+            "report_id": "FI09",
+            "layout_gate": "PROPOSED_ONLY"
+          },
+          {
+            "report_id": "CO05",
+            "layout_gate": "PROPOSED_ONLY"
+          },
+          {
+            "report_id": "CO16",
+            "layout_gate": "PROPOSED_ONLY"
+          },
+          {
+            "report_id": "MM04",
+            "layout_gate": "PROPOSED_ONLY"
+          },
+          {
+            "report_id": "MM05",
+            "layout_gate": "PROPOSED_ONLY"
+          },
+          {
+            "report_id": "MM11",
+            "layout_gate": "PROPOSED_ONLY"
+          },
+          {
+            "report_id": "FI17",
+            "layout_gate": "PROPOSED_ONLY"
+          },
+          {
+            "report_id": "PP02",
+            "layout_gate": "PROPOSED_ONLY"
+          },
+          {
+            "report_id": "QM03",
+            "layout_gate": "PROPOSED_ONLY"
+          },
+          {
+            "report_id": "PM03",
+            "layout_gate": "PROPOSED_ONLY"
+          },
+          {
+            "report_id": "SD03",
+            "layout_gate": "PROPOSED_ONLY"
+          },
+          {
+            "report_id": "MM17",
+            "layout_gate": "PROPOSED_ONLY"
+          },
+          {
+            "report_id": "PP03",
+            "layout_gate": "PROPOSED_ONLY"
+          },
+          {
+            "report_id": "PP04",
+            "layout_gate": "PROPOSED_ONLY"
+          },
+          {
+            "report_id": "PP05",
+            "layout_gate": "PROPOSED_ONLY"
+          },
+          {
+            "report_id": "FI31",
+            "layout_gate": "PROPOSED_ONLY"
+          },
+          {
+            "report_id": "FI32",
+            "layout_gate": "PROPOSED_ONLY"
+          },
+          {
+            "report_id": "CO31",
+            "layout_gate": "PROPOSED_ONLY"
+          },
+          {
+            "report_id": "CO32",
+            "layout_gate": "PROPOSED_ONLY"
+          },
+          {
+            "report_id": "MM31",
+            "layout_gate": "PROPOSED_ONLY"
+          },
+          {
+            "report_id": "MM32",
+            "layout_gate": "PROPOSED_ONLY"
+          },
+          {
+            "report_id": "SD16",
+            "layout_gate": "PROPOSED_ONLY"
+          },
+          {
+            "report_id": "SD17",
+            "layout_gate": "PROPOSED_ONLY"
+          },
+          {
+            "report_id": "PM09",
+            "layout_gate": "PROPOSED_ONLY"
+          },
+          {
+            "report_id": "AA08",
+            "layout_gate": "PROPOSED_ONLY"
+          }
+        ],
+        "action": "Keep proposed labels explicit until an authorized native layout or a bounded source reconstruction is read back."
+      },
+      {
+        "gate": "EXTERNAL_ACCEPTANCE",
+        "count": 160,
+        "report_ids": [
+          "FI01",
+          "FI02",
+          "FI03",
+          "FI04",
+          "FI05",
+          "FI06",
+          "FI07",
+          "FI08",
+          "FI09",
+          "FI10",
+          "FI11",
+          "FI12",
+          "FI13",
+          "FI14",
+          "FI15",
+          "FI16",
+          "CO01",
+          "CO02",
+          "CO03",
+          "CO04",
+          "CO05",
+          "CO06",
+          "CO07",
+          "CO08",
+          "CO09",
+          "CO10",
+          "CO11",
+          "CO12",
+          "CO13",
+          "CO14",
+          "CO15",
+          "CO16",
+          "MM01",
+          "MM02",
+          "MM03",
+          "MM04",
+          "MM05",
+          "MM06",
+          "MM07",
+          "MM08",
+          "MM09",
+          "MM10",
+          "MM11",
+          "MM12",
+          "MM13",
+          "MM14",
+          "MM15",
+          "MM16",
+          "AA01",
+          "AA02",
+          "AA03",
+          "AA04",
+          "AA05",
+          "AA06",
+          "AA07",
+          "FI17",
+          "PP01",
+          "PP02",
+          "SD01",
+          "SD02",
+          "QM01",
+          "QM02",
+          "PM01",
+          "PM02",
+          "QM03",
+          "PM03",
+          "SD03",
+          "MM17",
+          "PP03",
+          "PP04",
+          "PP05",
+          "FI18",
+          "FI19",
+          "FI20",
+          "FI21",
+          "FI22",
+          "FI23",
+          "FI24",
+          "FI25",
+          "FI26",
+          "FI27",
+          "FI28",
+          "FI29",
+          "FI30",
+          "CO17",
+          "CO18",
+          "CO19",
+          "CO20",
+          "CO21",
+          "CO22",
+          "CO23",
+          "CO24",
+          "CO25",
+          "CO26",
+          "CO27",
+          "CO28",
+          "CO29",
+          "CO30",
+          "MM18",
+          "MM19",
+          "MM20",
+          "MM21",
+          "MM22",
+          "MM23",
+          "MM24",
+          "MM25",
+          "MM26",
+          "MM27",
+          "MM28",
+          "MM29",
+          "MM30",
+          "PP06",
+          "PP07",
+          "PP08",
+          "PP09",
+          "PP10",
+          "PP11",
+          "PP12",
+          "PP13",
+          "PP14",
+          "PP15",
+          "PP16",
+          "PP17",
+          "PP18",
+          "PP19",
+          "PP20",
+          "SD04",
+          "SD05",
+          "SD06",
+          "SD07",
+          "SD08",
+          "SD09",
+          "SD10",
+          "SD11",
+          "SD12",
+          "SD13",
+          "SD14",
+          "SD15",
+          "QM04",
+          "QM05",
+          "QM06",
+          "QM07",
+          "QM08",
+          "QM09",
+          "QM10",
+          "PM04",
+          "PM05",
+          "PM06",
+          "PM07",
+          "PM08",
+          "FI31",
+          "FI32",
+          "CO31",
+          "CO32",
+          "MM31",
+          "MM32",
+          "SD16",
+          "SD17",
+          "PM09",
+          "AA08"
+        ],
+        "action": "Obtain native export, target release/client, technical catalog, Excel readback and SME/IFRS review."
+      }
+    ],
+    "ordering": [
+      "IDENTITY",
+      "SEMANTICS_AND_RECONCILIATION",
+      "LAYOUT",
+      "EXTERNAL_ACCEPTANCE"
+    ]
+  }
+}

@@ -24,6 +24,10 @@ Trạng thái: **planning baseline / đề xuất kỹ thuật để review**, k
 15. [Rủi ro, giới hạn, lợi thế dài hạn](14-RISKS-ASSUMPTIONS.md)
 16. [Hướng dẫn cho agent tiếp nối](15-AGENT-HANDOFF.md)
 17. [Nhật ký 07/10/2026](journal/2026-10-07.md)
+18. [Manufacturing Finance — năm quy trình FICO](19-MANUFACTURING-FINANCE.md)
+19. [Manufacturing Finance — checklist bằng chứng SAP/SME](20-MANUFACTURING-FINANCE-NATIVE-REVIEW.md)
+20. [Simulator v1 — phiếu review bản ứng viên Manufacturing Finance](21-SIMULATOR-V1-REVIEW.md)
+21. [Simulator v1 — bàn giao RC2, kiểm tra file đã lưu và vận hành local](22-SIMULATOR-V1-HANDOFF.md)
 
 ## Hợp đồng máy đọc và bằng chứng
 

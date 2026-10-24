@@ -7,7 +7,9 @@ export type AppHashRoute =
   | 'sod'
   | 'ml'
   | 'grir'
-  | 'ic';
+  | 'ic'
+  | 'manufacturing-finance'
+  | 'simulated-native';
 
 const HASH_MAP: Record<string, AppHashRoute> = {
   '/': 'cockpit',
@@ -20,6 +22,8 @@ const HASH_MAP: Record<string, AppHashRoute> = {
   '/ml': 'ml',
   '/grir': 'grir',
   '/ic': 'ic',
+  '/manufacturing-finance': 'manufacturing-finance',
+  '/simulated-native': 'simulated-native',
 };
 
 export const ROUTE_HASH: Record<AppHashRoute, string> = {
@@ -32,6 +36,8 @@ export const ROUTE_HASH: Record<AppHashRoute, string> = {
   ml: '#/ml',
   grir: '#/grir',
   ic: '#/ic',
+  'manufacturing-finance': '#/manufacturing-finance',
+  'simulated-native': '#/simulated-native',
 };
 
 export function parseHash(hash = typeof window !== 'undefined' ? window.location.hash : '#/'): AppHashRoute {

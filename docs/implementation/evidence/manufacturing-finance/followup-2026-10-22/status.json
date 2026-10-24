@@ -1,0 +1,161 @@
+{
+  "date": "2026-10-22",
+  "timezone": "Asia/Saigon",
+  "scope": "MFG-FIN-20261021",
+  "userDecision": "Chưa xác định — tiếp tục simulator và checklist SME",
+  "checks": [
+    {
+      "name": "lint:eslint:strict",
+      "status": "PASS",
+      "exitCode": 0,
+      "log": "lint-eslint-strict.log",
+      "sha256": "140d203c6c0d26f35f6b807173ba1c43336b6fda6b7fbd1a04c4d5f4655676cc"
+    },
+    {
+      "name": "lint",
+      "status": "PASS",
+      "exitCode": 0,
+      "log": "lint.log",
+      "sha256": "7f3594d7a965c703e6361ae50c0ef50cf9c344c621d801592b074b48554f4235"
+    },
+    {
+      "name": "test:manufacturing-finance",
+      "status": "PASS",
+      "exitCode": 0,
+      "log": "test-manufacturing-finance.log",
+      "sha256": "3918d7e8a4971284276247cb71604c6b1aa4a693cea7b4b2a1a3219d432a5721"
+    },
+    {
+      "name": "test:parity",
+      "status": "PASS",
+      "exitCode": 0,
+      "log": "test-parity.log",
+      "sha256": "e0b14a94d830efd058893539a006c20af4f9f2c89492d23ca35a5dfcab82ecc5"
+    },
+    {
+      "name": "test:a0",
+      "status": "PASS",
+      "exitCode": 0,
+      "log": "test-a0.log",
+      "sha256": "ad11b0b0e83f1ab8934ab8e1524268fac89ef864056c6850e7cf9303b55e6e70"
+    },
+    {
+      "name": "test:reports",
+      "status": "PASS",
+      "exitCode": 0,
+      "log": "test-reports.log",
+      "sha256": "6808646cf1bd1a7dbf97260062ba3da8bad6fb8637b3f3df17b1426abdc1b5c2"
+    },
+    {
+      "name": "test:ui-finance",
+      "status": "PASS",
+      "exitCode": 0,
+      "log": "test-ui-finance.log",
+      "sha256": "27e821a5797e7f4e218524556be69b63650bfa288de95c6022d7a31bd1b258c6"
+    },
+    {
+      "name": "test:s3",
+      "status": "PASS",
+      "exitCode": 0,
+      "log": "test-s3.log",
+      "sha256": "facdbb02a963316f5b59ad5e950b2818f74392c70ca1ae718dd0d26295443cee"
+    },
+    {
+      "name": "test:s4",
+      "status": "PASS",
+      "exitCode": 0,
+      "log": "test-s4.log",
+      "sha256": "c2546e5dd7e33a74fa8469b9ab70cf6b221ef7dbfb58112e44954e282a8f6e7c"
+    },
+    {
+      "name": "test:s5",
+      "status": "PASS",
+      "exitCode": 0,
+      "log": "test-s5.log",
+      "sha256": "71ef4bec628348414c8680889410368bb7ef5f3fad42e6b6130d2270ade23fe6"
+    },
+    {
+      "name": "test:s6",
+      "status": "PASS",
+      "exitCode": 0,
+      "log": "test-s6.log",
+      "sha256": "2dc3401df46734603ab1a987c345f5c7b02501437bc03f3309d8ea78ea6a7f28"
+    },
+    {
+      "name": "build",
+      "status": "PASS",
+      "exitCode": 0,
+      "log": "build.log",
+      "sha256": "e2f54bb20a30f53bcba592cc3a95898f0bd8040b0a8a56933f5ed67724dc1924"
+    },
+    {
+      "name": "eslint-feature",
+      "status": "PASS",
+      "exitCode": 0,
+      "log": "eslint-feature.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "production-smoke",
+      "status": "PASS",
+      "exitCode": 0,
+      "log": "production-smoke.log",
+      "sha256": "229148ac1b0ef8d80aad0c3842d7871b67a3f7adc1d4555780d386b37bb659b4"
+    }
+  ],
+  "behaviorGroups": 20,
+  "dependencyInstall": "npm ci --ignore-scripts --include=dev; locked versions restored before final checks",
+  "dependencies": [
+    {
+      "name": "vite",
+      "locked": "6.4.3",
+      "installed": "6.4.3"
+    },
+    {
+      "name": "eslint",
+      "locked": "9.39.5",
+      "installed": "9.39.5"
+    },
+    {
+      "name": "typescript-eslint",
+      "locked": "8.71.1",
+      "installed": "8.71.1"
+    },
+    {
+      "name": "@eslint/js",
+      "locked": "9.39.5",
+      "installed": "9.39.5"
+    },
+    {
+      "name": "@vitejs/plugin-react",
+      "locked": "5.2.0",
+      "installed": "5.2.0"
+    }
+  ],
+  "packageJsonSha256": "13bc84cf1b753b046e442f28cb11c5c4defb5f9282bc3b8998cfc3a7366dca73",
+  "packageLockSha256": "62f4f20ac56ae02aa2780199a8b880ee73eaf33d4878c07549aefc2493a0f139",
+  "featureSourceHashes": "11_OF_11_UNCHANGED_FROM_INITIAL_REVIEW",
+  "repositoryEvidenceDirectory": "D:/sava-erp-simulator/docs/implementation/evidence/manufacturing-finance/followup-2026-10-22/",
+  "browser": {
+    "status": "BLOCKED",
+    "reason": "Browser bootstrap still references missing browser/26.1016.51333/scripts/browser-service.mjs; installed plugin 26.911.61220",
+    "interaction": "NOT_RUN",
+    "downloadSavedFile": "NOT_RUN",
+    "visualReview": "NOT_RUN"
+  },
+  "obsidian": {
+    "status": "STAGING",
+    "rendered": "NOT_RUN"
+  },
+  "nativeChecklist": {
+    "status": "PREPARED_WITHOUT_NATIVE_DATA",
+    "file": "native-review-intake.json",
+    "workflows": 5
+  },
+  "acceptance": {
+    "sapNative": "NOT_RUN",
+    "editionRelease": "UNKNOWN",
+    "independentSme": "PENDING",
+    "business": "NOT_APPROVED"
+  }
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "name": "eslint-feature",
+    "exitCode": 0,
+    "log": "eslint-feature.log"
+  },
+  {
+    "name": "lint:eslint:strict",
+    "exitCode": 0,
+    "log": "lint-eslint-strict.log"
+  }
+]

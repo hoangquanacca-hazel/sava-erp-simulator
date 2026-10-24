@@ -1,0 +1,304 @@
+{
+  "date": "2026-10-22",
+  "scope": "SIMULATOR_V1_MANUFACTURING_FINANCE",
+  "method": "ISOLATED_HEADLESS_LOCALHOST",
+  "appBrowserPlugin": "BLOCKED_BOOTSTRAP_VERSION_PATH",
+  "headlessExecutable": "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe",
+  "scenarios": [
+    {
+      "id": "fiori-1440",
+      "theme": "fiori",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": "PASS",
+      "checks": [
+        "fresh route, first-visit guide, selected theme and responsive viewport",
+        "keyboard activation and invalid deposit transitions blocked",
+        "deposit 36m, invoice 120m, AR 84m, stale proposal blocked, notice history updated",
+        "bank 1:1 and 1:N, unmatched/ambiguous retained, manual mismatch blocked then cleared",
+        "AVC excess/blank blocked, warning accepted, commitment relieved into actual",
+        "supplier clearing retains 60m reciprocal IC balance and disables duplicate action",
+        "real JSON and FI21/FI22 downloads saved; byte hashes, report content and 18 headers verified",
+        "saved-file replay, independent hash mismatch and forged approval rejected without importing state",
+        "stale evidence warning and state preservation through route navigation",
+        "lesson reset restores state and form selections; full reload starts a clean RAM-only lesson",
+        "no uncaught browser JavaScript errors"
+      ],
+      "downloads": [
+        {
+          "file": "fiori-1440-evidence-MFG-FIN-20261021_SIMULATED.json",
+          "bytes": 33538,
+          "sha256": "24b60c732b0bbb1e0a0517129cb6fc4b555816f9e1aac50dc72f6a472380c850"
+        },
+        {
+          "file": "fiori-1440-FI21-MFG-FIN-20261021_FI21_SIMULATED.txt",
+          "bytes": 1666,
+          "sha256": "859a9791c79f480dd6ec040d719a92e5d41f46dd095f5eb57396a89e3fd9bd64"
+        },
+        {
+          "file": "fiori-1440-FI22-MFG-FIN-20261021_FI22_SIMULATED.txt",
+          "bytes": 1248,
+          "sha256": "61728394924e6a23277c883c03b639f1724988db2135027cf5803a19902fdc5c"
+        },
+        {
+          "file": "fiori-1440-before-nav-MFG-FIN-20261021_SIMULATED.json",
+          "bytes": 33347,
+          "sha256": "0923fd6d8c12b4915aa71f9414c8a3a94ce25e1013b28c13bdd19e2ae74c2c32"
+        },
+        {
+          "file": "fiori-1440-after-nav-MFG-FIN-20261021_SIMULATED.json",
+          "bytes": 33347,
+          "sha256": "0923fd6d8c12b4915aa71f9414c8a3a94ce25e1013b28c13bdd19e2ae74c2c32"
+        },
+        {
+          "file": "fiori-1440-reset-MFG-FIN-20261021_SIMULATED.json",
+          "bytes": 22262,
+          "sha256": "b4a8a871944624c66c0fd84c90eb87a136c47b992dc55204a7df54f660209619"
+        },
+        {
+          "file": "fiori-1440-reload-MFG-FIN-20261021_SIMULATED.json",
+          "bytes": 22262,
+          "sha256": "b4a8a871944624c66c0fd84c90eb87a136c47b992dc55204a7df54f660209619"
+        }
+      ],
+      "pageErrors": [],
+      "externalRequestsBlocked": [
+        "https://www.savafinlab.com.vn/brand/v1/brand.css",
+        "https://www.savafinlab.com.vn/brand/v1/sava-bar.js",
+        "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap",
+        "https://www.savafinlab.com.vn/brand/v1/logo-icon.svg",
+        "https://www.savafinlab.com.vn/brand/v1/logo-icon.svg",
+        "https://www.savafinlab.com.vn/brand/v1/logo-icon.svg",
+        "https://www.savafinlab.com.vn/brand/v1/brand.css",
+        "https://www.savafinlab.com.vn/brand/v1/sava-bar.js",
+        "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap",
+        "https://www.savafinlab.com.vn/brand/v1/logo-icon.svg"
+      ]
+    },
+    {
+      "id": "classic-1440",
+      "theme": "classic",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": "PASS",
+      "checks": [
+        "fresh route, first-visit guide, selected theme and responsive viewport",
+        "keyboard activation and invalid deposit transitions blocked",
+        "deposit 36m, invoice 120m, AR 84m, stale proposal blocked, notice history updated",
+        "bank 1:1 and 1:N, unmatched/ambiguous retained, manual mismatch blocked then cleared",
+        "AVC excess/blank blocked, warning accepted, commitment relieved into actual",
+        "supplier clearing retains 60m reciprocal IC balance and disables duplicate action",
+        "real JSON and FI21/FI22 downloads saved; byte hashes, report content and 18 headers verified",
+        "saved-file replay, independent hash mismatch and forged approval rejected without importing state",
+        "stale evidence warning and state preservation through route navigation",
+        "lesson reset restores state and form selections; full reload starts a clean RAM-only lesson",
+        "no uncaught browser JavaScript errors"
+      ],
+      "downloads": [
+        {
+          "file": "classic-1440-evidence-MFG-FIN-20261021_SIMULATED.json",
+          "bytes": 33538,
+          "sha256": "24b60c732b0bbb1e0a0517129cb6fc4b555816f9e1aac50dc72f6a472380c850"
+        },
+        {
+          "file": "classic-1440-FI21-MFG-FIN-20261021_FI21_SIMULATED.txt",
+          "bytes": 1666,
+          "sha256": "859a9791c79f480dd6ec040d719a92e5d41f46dd095f5eb57396a89e3fd9bd64"
+        },
+        {
+          "file": "classic-1440-FI22-MFG-FIN-20261021_FI22_SIMULATED.txt",
+          "bytes": 1248,
+          "sha256": "61728394924e6a23277c883c03b639f1724988db2135027cf5803a19902fdc5c"
+        },
+        {
+          "file": "classic-1440-before-nav-MFG-FIN-20261021_SIMULATED.json",
+          "bytes": 33347,
+          "sha256": "0923fd6d8c12b4915aa71f9414c8a3a94ce25e1013b28c13bdd19e2ae74c2c32"
+        },
+        {
+          "file": "classic-1440-after-nav-MFG-FIN-20261021_SIMULATED.json",
+          "bytes": 33347,
+          "sha256": "0923fd6d8c12b4915aa71f9414c8a3a94ce25e1013b28c13bdd19e2ae74c2c32"
+        },
+        {
+          "file": "classic-1440-reset-MFG-FIN-20261021_SIMULATED.json",
+          "bytes": 22262,
+          "sha256": "b4a8a871944624c66c0fd84c90eb87a136c47b992dc55204a7df54f660209619"
+        },
+        {
+          "file": "classic-1440-reload-MFG-FIN-20261021_SIMULATED.json",
+          "bytes": 22262,
+          "sha256": "b4a8a871944624c66c0fd84c90eb87a136c47b992dc55204a7df54f660209619"
+        }
+      ],
+      "pageErrors": [],
+      "externalRequestsBlocked": [
+        "https://www.savafinlab.com.vn/brand/v1/brand.css",
+        "https://www.savafinlab.com.vn/brand/v1/sava-bar.js",
+        "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap",
+        "https://www.savafinlab.com.vn/brand/v1/logo-icon.svg",
+        "https://www.savafinlab.com.vn/brand/v1/logo-icon.svg",
+        "https://www.savafinlab.com.vn/brand/v1/logo-icon.svg",
+        "https://www.savafinlab.com.vn/brand/v1/brand.css",
+        "https://www.savafinlab.com.vn/brand/v1/sava-bar.js",
+        "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap",
+        "https://www.savafinlab.com.vn/brand/v1/logo-icon.svg"
+      ]
+    },
+    {
+      "id": "fiori-390",
+      "theme": "fiori",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "checks": [
+        "fresh route, first-visit guide, selected theme and responsive viewport",
+        "keyboard activation and invalid deposit transitions blocked",
+        "deposit 36m, invoice 120m, AR 84m, stale proposal blocked, notice history updated",
+        "bank 1:1 and 1:N, unmatched/ambiguous retained, manual mismatch blocked then cleared",
+        "AVC excess/blank blocked, warning accepted, commitment relieved into actual",
+        "supplier clearing retains 60m reciprocal IC balance and disables duplicate action",
+        "real JSON and FI21/FI22 downloads saved; byte hashes, report content and 18 headers verified",
+        "saved-file replay, independent hash mismatch and forged approval rejected without importing state",
+        "stale evidence warning and state preservation through route navigation",
+        "lesson reset restores state and form selections; full reload starts a clean RAM-only lesson",
+        "no uncaught browser JavaScript errors"
+      ],
+      "downloads": [
+        {
+          "file": "fiori-390-evidence-MFG-FIN-20261021_SIMULATED.json",
+          "bytes": 33538,
+          "sha256": "24b60c732b0bbb1e0a0517129cb6fc4b555816f9e1aac50dc72f6a472380c850"
+        },
+        {
+          "file": "fiori-390-FI21-MFG-FIN-20261021_FI21_SIMULATED.txt",
+          "bytes": 1666,
+          "sha256": "859a9791c79f480dd6ec040d719a92e5d41f46dd095f5eb57396a89e3fd9bd64"
+        },
+        {
+          "file": "fiori-390-FI22-MFG-FIN-20261021_FI22_SIMULATED.txt",
+          "bytes": 1248,
+          "sha256": "61728394924e6a23277c883c03b639f1724988db2135027cf5803a19902fdc5c"
+        },
+        {
+          "file": "fiori-390-before-nav-MFG-FIN-20261021_SIMULATED.json",
+          "bytes": 33347,
+          "sha256": "0923fd6d8c12b4915aa71f9414c8a3a94ce25e1013b28c13bdd19e2ae74c2c32"
+        },
+        {
+          "file": "fiori-390-after-nav-MFG-FIN-20261021_SIMULATED.json",
+          "bytes": 33347,
+          "sha256": "0923fd6d8c12b4915aa71f9414c8a3a94ce25e1013b28c13bdd19e2ae74c2c32"
+        },
+        {
+          "file": "fiori-390-reset-MFG-FIN-20261021_SIMULATED.json",
+          "bytes": 22262,
+          "sha256": "b4a8a871944624c66c0fd84c90eb87a136c47b992dc55204a7df54f660209619"
+        },
+        {
+          "file": "fiori-390-reload-MFG-FIN-20261021_SIMULATED.json",
+          "bytes": 22262,
+          "sha256": "b4a8a871944624c66c0fd84c90eb87a136c47b992dc55204a7df54f660209619"
+        }
+      ],
+      "pageErrors": [],
+      "externalRequestsBlocked": [
+        "https://www.savafinlab.com.vn/brand/v1/brand.css",
+        "https://www.savafinlab.com.vn/brand/v1/sava-bar.js",
+        "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap",
+        "https://www.savafinlab.com.vn/brand/v1/logo-icon.svg",
+        "https://www.savafinlab.com.vn/brand/v1/logo-icon.svg",
+        "https://www.savafinlab.com.vn/brand/v1/logo-icon.svg",
+        "https://www.savafinlab.com.vn/brand/v1/brand.css",
+        "https://www.savafinlab.com.vn/brand/v1/sava-bar.js",
+        "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap",
+        "https://www.savafinlab.com.vn/brand/v1/logo-icon.svg"
+      ]
+    },
+    {
+      "id": "classic-390",
+      "theme": "classic",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "checks": [
+        "fresh route, first-visit guide, selected theme and responsive viewport",
+        "keyboard activation and invalid deposit transitions blocked",
+        "deposit 36m, invoice 120m, AR 84m, stale proposal blocked, notice history updated",
+        "bank 1:1 and 1:N, unmatched/ambiguous retained, manual mismatch blocked then cleared",
+        "AVC excess/blank blocked, warning accepted, commitment relieved into actual",
+        "supplier clearing retains 60m reciprocal IC balance and disables duplicate action",
+        "real JSON and FI21/FI22 downloads saved; byte hashes, report content and 18 headers verified",
+        "saved-file replay, independent hash mismatch and forged approval rejected without importing state",
+        "stale evidence warning and state preservation through route navigation",
+        "lesson reset restores state and form selections; full reload starts a clean RAM-only lesson",
+        "no uncaught browser JavaScript errors"
+      ],
+      "downloads": [
+        {
+          "file": "classic-390-evidence-MFG-FIN-20261021_SIMULATED.json",
+          "bytes": 33538,
+          "sha256": "24b60c732b0bbb1e0a0517129cb6fc4b555816f9e1aac50dc72f6a472380c850"
+        },
+        {
+          "file": "classic-390-FI21-MFG-FIN-20261021_FI21_SIMULATED.txt",
+          "bytes": 1666,
+          "sha256": "859a9791c79f480dd6ec040d719a92e5d41f46dd095f5eb57396a89e3fd9bd64"
+        },
+        {
+          "file": "classic-390-FI22-MFG-FIN-20261021_FI22_SIMULATED.txt",
+          "bytes": 1248,
+          "sha256": "61728394924e6a23277c883c03b639f1724988db2135027cf5803a19902fdc5c"
+        },
+        {
+          "file": "classic-390-before-nav-MFG-FIN-20261021_SIMULATED.json",
+          "bytes": 33347,
+          "sha256": "0923fd6d8c12b4915aa71f9414c8a3a94ce25e1013b28c13bdd19e2ae74c2c32"
+        },
+        {
+          "file": "classic-390-after-nav-MFG-FIN-20261021_SIMULATED.json",
+          "bytes": 33347,
+          "sha256": "0923fd6d8c12b4915aa71f9414c8a3a94ce25e1013b28c13bdd19e2ae74c2c32"
+        },
+        {
+          "file": "classic-390-reset-MFG-FIN-20261021_SIMULATED.json",
+          "bytes": 22262,
+          "sha256": "b4a8a871944624c66c0fd84c90eb87a136c47b992dc55204a7df54f660209619"
+        },
+        {
+          "file": "classic-390-reload-MFG-FIN-20261021_SIMULATED.json",
+          "bytes": 22262,
+          "sha256": "b4a8a871944624c66c0fd84c90eb87a136c47b992dc55204a7df54f660209619"
+        }
+      ],
+      "pageErrors": [],
+      "externalRequestsBlocked": [
+        "https://www.savafinlab.com.vn/brand/v1/brand.css",
+        "https://www.savafinlab.com.vn/brand/v1/sava-bar.js",
+        "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap",
+        "https://www.savafinlab.com.vn/brand/v1/logo-icon.svg",
+        "https://www.savafinlab.com.vn/brand/v1/logo-icon.svg",
+        "https://www.savafinlab.com.vn/brand/v1/logo-icon.svg",
+        "https://www.savafinlab.com.vn/brand/v1/brand.css",
+        "https://www.savafinlab.com.vn/brand/v1/sava-bar.js",
+        "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap",
+        "https://www.savafinlab.com.vn/brand/v1/logo-icon.svg"
+      ]
+    }
+  ],
+  "sapNative": "NOT_RUN",
+  "independentSme": "PENDING",
+  "learningAcceptance": "NOT_APPROVED",
+  "browserVersion": "155.0.4283.62",
+  "status": "PASS",
+  "crossThemeViewportEvidence": "BYTE_IDENTICAL",
+  "verifiedDownloads": 28
+}

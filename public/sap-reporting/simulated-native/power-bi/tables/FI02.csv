@@ -1,0 +1,3 @@
+ledger,company,year,doc,line,date,gl,profit_center,amount,currency,currency_type
+0L,1000,2026,190100001,001,2026-09-30,150000,PC1100,1000,USD,10
+0L,1000,2026,190100002,002,2026-09-30,150000,PC1100,-250,USD,10

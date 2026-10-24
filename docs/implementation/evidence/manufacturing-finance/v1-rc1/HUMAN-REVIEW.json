@@ -1,0 +1,12 @@
+{
+  "candidate": "manufacturing-finance-v1.0.0-rc.1",
+  "candidateManifestSha256": "a661176aa6d39b13bef8d0b64982518f9fb7d39eb89d43f8230086b439706b10",
+  "status": "PENDING_HUMAN_REVIEW",
+  "reviewer": null,
+  "reviewedAt": null,
+  "workflowsReviewed": [],
+  "reasoningAnswers": {},
+  "findings": [],
+  "learningUseApproval": null,
+  "sapNativeAcceptance": "NOT_RUN"
+}

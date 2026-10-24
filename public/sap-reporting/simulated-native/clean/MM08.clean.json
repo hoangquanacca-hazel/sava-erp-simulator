@@ -1,0 +1,112 @@
+{
+  "envelope_version": "simulated-native-envelope.v1",
+  "artifact_id": "SIMNATIVE-MM08-20261023",
+  "generated_at": "2026-10-23",
+  "provenance_class": "SIMULATED_NATIVE",
+  "source_kind": "GENERATED_SYNTHETIC",
+  "original_sap_export": false,
+  "native_acceptance": "NOT_RUN",
+  "business_acceptance": "NOT_APPROVED",
+  "target_release": "UNKNOWN",
+  "system": "SAVA_SIMULATOR",
+  "client": "000-DEMO-ONLY",
+  "scenario_id": "phase3-pilot-mm08",
+  "seed": "SAVA-MM08-20261023",
+  "ruleset_version": "simulated-native-rules.v1",
+  "source_profile_id": "MM08",
+  "contract_version": "phase3-entry-contract-2026-10-21",
+  "tcode_or_app": "ME80FN",
+  "title": "Lịch sử PO — GR, IR, reversal",
+  "module": "MM",
+  "grain": "Một dòng cho tổ hợp: po + item + event + year + doc + line. Thêm source_system/client; snapshot lưu dataset_id riêng.",
+  "keys": [
+    "po",
+    "item",
+    "event",
+    "year",
+    "doc",
+    "line"
+  ],
+  "columns": [
+    "po",
+    "item",
+    "event",
+    "year",
+    "doc",
+    "line",
+    "date",
+    "qty",
+    "uom",
+    "amount",
+    "currency",
+    "accounting_ref"
+  ],
+  "raw_sha256": "162d5989ce1fd055bb7ef0fc2c42133c1d9bc1e18e59ed1e6c5909d1795a6986",
+  "row_count": 2,
+  "control_totals": {
+    "item": 3,
+    "year": 4052,
+    "line": 3,
+    "qty": 30,
+    "amount": 750
+  },
+  "selection_context": {
+    "system_product": "SAVA simulator fixture",
+    "release": "UNKNOWN",
+    "language": "vi-VN",
+    "selection_variant": "SIMULATED_DEFAULT",
+    "cutoff": "2026-09-30",
+    "scope": "two deterministic teaching rows; not full population"
+  },
+  "limitations": [
+    "This artifact simulates an export-shaped payload; it is not an original SAP export.",
+    "Technical field names and layout order remain proposed until target-release evidence exists.",
+    "Native, reconciliation, owner, SME and IFRS/business acceptance remain open.",
+    "Production deployment is fail-closed and not authorized by this artifact."
+  ],
+  "layer": "CLEAN",
+  "rows": [
+    {
+      "po": "PO_DEMO_1",
+      "item": "001",
+      "event": "EVENT_DEMO_1",
+      "year": "2026",
+      "doc": "190100001",
+      "line": "001",
+      "date": "2026-09-30",
+      "qty": "10",
+      "uom": "EA",
+      "amount": "1000",
+      "currency": "USD",
+      "accounting_ref": "ACCOUNTING_REF_DEMO_1"
+    },
+    {
+      "po": "PO_DEMO_2",
+      "item": "002",
+      "event": "EVENT_DEMO_2",
+      "year": "2026",
+      "doc": "190100002",
+      "line": "002",
+      "date": "2026-09-30",
+      "qty": "20",
+      "uom": "EA",
+      "amount": "-250",
+      "currency": "USD",
+      "accounting_ref": "ACCOUNTING_REF_DEMO_2"
+    }
+  ],
+  "schema": {
+    "po": "text",
+    "item": "wholeNumber",
+    "event": "text",
+    "year": "wholeNumber",
+    "doc": "text",
+    "line": "wholeNumber",
+    "date": "wholeNumber",
+    "qty": "decimalNumber",
+    "uom": "text",
+    "amount": "decimalNumber",
+    "currency": "text",
+    "accounting_ref": "text"
+  }
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "name": "lint",
+    "exitCode": 0,
+    "log": "lint.log"
+  },
+  {
+    "name": "test:manufacturing-finance",
+    "exitCode": 0,
+    "log": "test-manufacturing-finance.log"
+  },
+  {
+    "name": "test:parity",
+    "exitCode": 0,
+    "log": "test-parity.log"
+  },
+  {
+    "name": "test:ui-finance",
+    "exitCode": 0,
+    "log": "test-ui-finance.log"
+  },
+  {
+    "name": "test:reports",
+    "exitCode": 0,
+    "log": "test-reports.log"
+  }
+]

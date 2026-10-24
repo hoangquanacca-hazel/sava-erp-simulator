@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "sava-manufacturing-finance-native-review-v1",
+  "preparedDate": "2026-10-22",
+  "status": "WAITING_FOR_AUTHORIZED_NATIVE_INPUT",
+  "currentAuthorizedWork": "SIMULATOR_AND_SME_CHECKLIST_ONLY",
+  "userDecision": "Chưa xác định — tiếp tục simulator và checklist SME",
+  "environment": {
+    "edition": "UNKNOWN",
+    "release": "UNKNOWN",
+    "sourceSystem": null,
+    "client": null,
+    "systemType": null,
+    "authorizedScopeReference": null,
+    "companyCodes": [],
+    "controllingArea": null,
+    "fiscalYearPeriod": null,
+    "ledgerApplicability": "UNKNOWN",
+    "currencies": [],
+    "accountMappingReference": null
+  },
+  "workflows": [
+    {"id": "SPECIAL_GL", "status": "NOT_RUN", "cases": ["REQUEST_NOTED_ONLY", "RECEIVE_AND_CLEAR", "OVER_CLEAR_OR_SCOPE_MISMATCH", "RETRY_OR_REVERSAL"], "evidence": [], "independentReviewer": null},
+    {"id": "F150", "status": "NOT_RUN", "cases": ["PROPOSAL_VS_NOTICE", "BLOCK_DUE_INTERVAL", "CHANGED_OPEN_ITEM", "RERUN"], "evidence": [], "independentReviewer": null},
+    {"id": "FEBAN", "status": "NOT_RUN", "cases": ["ONE_TO_ONE", "ONE_TO_MANY", "MISSING_AMBIGUOUS_REFERENCE", "POSTING_AREA_PARTIAL_FAILURE", "DUPLICATE_OR_SCOPE_MISMATCH"], "evidence": [], "independentReviewer": null},
+    {"id": "INTERNAL_ORDER_AVC", "status": "NOT_RUN", "cases": ["COMMITMENT", "ACTUAL_RELIEF", "WARNING_ERROR_THRESHOLD", "INACTIVE_OR_REVERSAL"], "evidence": [], "independentReviewer": null},
+    {"id": "CROSS_COMPANY_CLEARING", "status": "NOT_RUN", "cases": ["PAIRED_COMPANY_DOCUMENTS", "SUPPLIER_CLEARING_AND_OPEN_IC", "MISSING_MAPPING_OR_ONE_SIDE", "RETRY_OR_REVERSAL"], "evidence": [], "independentReviewer": null}
+  ],
+  "evidenceItemRequiredFields": ["caseId", "sourceKind", "environmentReference", "selection", "expectedOutcomeApprovalReference", "observedOutcome", "documentKeys", "filePath", "sha256", "operator", "reviewer"],
+  "businessAcceptance": "NOT_APPROVED",
+  "rules": ["No synthetic evidence labeled SAP-native", "No secrets or personal/bank account data", "No approval inferred from hash, simulator PASS, UI or Obsidian rendering", "Each workflow requires scoped independent review"]
+}

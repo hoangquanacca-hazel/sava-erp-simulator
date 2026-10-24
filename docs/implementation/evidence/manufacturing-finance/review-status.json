@@ -1,0 +1,161 @@
+{
+  "date": "2026-10-22",
+  "timezone": "Asia/Saigon",
+  "scope": "MFG-FIN-20261021",
+  "technicalChecks": [
+    {
+      "name": "lint",
+      "status": "PASS",
+      "log": "lint.log",
+      "sha256": "7f3594d7a965c703e6361ae50c0ef50cf9c344c621d801592b074b48554f4235"
+    },
+    {
+      "name": "test-manufacturing-finance",
+      "status": "PASS",
+      "log": "test-manufacturing-finance.log",
+      "sha256": "f469a5e54ca8df74f64c4b3164b35fada619432e7cd82e4fae5c7ae3c89ca4a0"
+    },
+    {
+      "name": "test-parity",
+      "status": "PASS",
+      "log": "test-parity.log",
+      "sha256": "e0b14a94d830efd058893539a006c20af4f9f2c89492d23ca35a5dfcab82ecc5"
+    },
+    {
+      "name": "test-a0",
+      "status": "PASS",
+      "log": "test-a0.log",
+      "sha256": "ad11b0b0e83f1ab8934ab8e1524268fac89ef864056c6850e7cf9303b55e6e70"
+    },
+    {
+      "name": "test-reports",
+      "status": "PASS",
+      "log": "test-reports.log",
+      "sha256": "6808646cf1bd1a7dbf97260062ba3da8bad6fb8637b3f3df17b1426abdc1b5c2"
+    },
+    {
+      "name": "test-ui-finance",
+      "status": "PASS",
+      "log": "test-ui-finance.log",
+      "sha256": "27e821a5797e7f4e218524556be69b63650bfa288de95c6022d7a31bd1b258c6"
+    },
+    {
+      "name": "test-s3",
+      "status": "PASS",
+      "log": "test-s3.log",
+      "sha256": "facdbb02a963316f5b59ad5e950b2818f74392c70ca1ae718dd0d26295443cee"
+    },
+    {
+      "name": "test-s4",
+      "status": "PASS",
+      "log": "test-s4.log",
+      "sha256": "c2546e5dd7e33a74fa8469b9ab70cf6b221ef7dbfb58112e44954e282a8f6e7c"
+    },
+    {
+      "name": "test-s5",
+      "status": "PASS",
+      "log": "test-s5.log",
+      "sha256": "71ef4bec628348414c8680889410368bb7ef5f3fad42e6b6130d2270ade23fe6"
+    },
+    {
+      "name": "test-s6",
+      "status": "PASS",
+      "log": "test-s6.log",
+      "sha256": "2dc3401df46734603ab1a987c345f5c7b02501437bc03f3309d8ea78ea6a7f28"
+    },
+    {
+      "name": "build",
+      "status": "PASS",
+      "log": "build.log",
+      "sha256": "ec039c0467ce4c6ab1ed98a0514710efa0111192b94f3efa4a9540ba3b0d9f3b"
+    },
+    {
+      "name": "test-start-unsandboxed",
+      "status": "PASS",
+      "log": "test-start-unsandboxed.log",
+      "sha256": "229148ac1b0ef8d80aad0c3842d7871b67a3f7adc1d4555780d386b37bb659b4"
+    }
+  ],
+  "behaviorGroups": 20,
+  "existingAccountingSources": "UNCHANGED_FROM_HEAD_AND_INITIAL_CLEAN_SOURCE_STATE",
+  "browser": {
+    "status": "BLOCKED",
+    "reason": "Browser runtime references missing 26.1016.51333/browser-service.mjs; installed version 26.911.61220",
+    "interaction": "NOT_RUN",
+    "visualReview": "NOT_RUN",
+    "downloadSavedFile": "NOT_RUN"
+  },
+  "eslint": {
+    "status": "NOT_RUN",
+    "reason": "Local eslint/dev dependencies missing; npx resolution interrupted; tsc is reported separately"
+  },
+  "productionSmoke": {
+    "status": "PASS",
+    "sandboxAttempt": "EACCES on localhost, readiness timeout; first/retry logs preserved",
+    "unsandboxedRerun": "PASS",
+    "browserAcceptance": false
+  },
+  "acceptance": {
+    "sapNative": "NOT_RUN",
+    "targetSapRelease": "UNKNOWN",
+    "independentSme": "PENDING",
+    "business": "NOT_APPROVED"
+  },
+  "evidence": {
+    "date": "2026-10-22",
+    "command": "npm run test:manufacturing-finance -- --write-evidence",
+    "checks": 20,
+    "evidenceFile": "MFG-FIN-20261021_SIMULATED.json",
+    "sha256": "93491e311887e6c1c74490881421e2c4ef5a8fd35b308550225400ba18294379",
+    "replay": "PASS",
+    "sapNative": "NOT_RUN",
+    "independentSme": "PENDING",
+    "business": "NOT_APPROVED"
+  },
+  "files": [
+    {
+      "path": "src/App.tsx",
+      "sha256": "541fcd614b57155989aca4bb9e2634df184dcdde9801fd4ce8165985eb53097e"
+    },
+    {
+      "path": "src/features/hashRoute.ts",
+      "sha256": "4c4a284c29fb84b3f2326972232939488fcc8b8001a02ff5aae70cc0a33fe097"
+    },
+    {
+      "path": "src/components/ModuleNav.tsx",
+      "sha256": "dd7b9b321aea2ee181e73b96af513a4d652a9deab916b45ea458be0a1aa072e8"
+    },
+    {
+      "path": "src/features/manufacturingFinance.ts",
+      "sha256": "d25b5aee993266e245c560a2e5c82ca2c8b06f788c4fb82bb026d1247757b826"
+    },
+    {
+      "path": "src/pages/ManufacturingFinancePage.tsx",
+      "sha256": "11a9c3fe8d79d8903338eb9794f4c09ad12cf50a9779d0efef2e077e871f031c"
+    },
+    {
+      "path": "src/reports/manufacturingFinance.ts",
+      "sha256": "92a643b3df55077bd14a19295b915fef0941f476b3b9dbdaed009389c843fdc8"
+    },
+    {
+      "path": "src/reports/manufacturingFinance.contracts.json",
+      "sha256": "6666f273f295402dc7c28c33957539f135452a4e839efab4454615da7247862c"
+    },
+    {
+      "path": "src/evidence/manufacturingFinance.ts",
+      "sha256": "b7985166848dd8e2c13f3ec4bc76f5efeaf3e3cce56be6d7017cfe29aae76a6e"
+    },
+    {
+      "path": "scripts/manufacturing-finance.tsx",
+      "sha256": "e5b78a99147b591fe3d4fef11500a1de3d5868749e44101314a29ca0d3f8946a"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "67bad75446d056b6f73781a8dde1f3ee882f3aefe03f5609839d5b30598c3aef"
+    },
+    {
+      "path": "package.json",
+      "sha256": "13bc84cf1b753b046e442f28cb11c5c4defb5f9282bc3b8998cfc3a7366dca73"
+    }
+  ]
+}

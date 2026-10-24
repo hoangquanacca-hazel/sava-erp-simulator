@@ -23,6 +23,19 @@
   to = "/.netlify/functions/health"
   status = 200
 
+# Keep the static Simulated Native pilot page ahead of the SPA catch-all.
+[[redirects]]
+  from = "/sap-reporting/simulated-native"
+  to = "/sap-reporting/simulated-native/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/sap-reporting/simulated-native/"
+  to = "/sap-reporting/simulated-native/index.html"
+  status = 200
+  force = true
+
 # SPA fallback
 [[redirects]]
   from = "/*"

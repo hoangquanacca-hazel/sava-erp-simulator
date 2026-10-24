@@ -11,6 +11,8 @@ export interface ModuleNavItem {
 
 export const MODULE_NAV: ModuleNavItem[] = [
   { route: 'cockpit', label: 'Cockpit 7 bước' },
+  { route: 'manufacturing-finance', label: 'Manufacturing Finance · 5 FICO' },
+  { route: 'simulated-native', label: 'Simulated Native · Phase 3' },
   { route: 'variance', label: 'Variance 5-type', flag: 'm1Variance' },
   { route: 'close', label: 'Đóng sổ cuối kỳ', flag: 'm2CloseCockpit' },
   { route: 'wip', label: 'WIP / KKA2', flag: 'm3WipSettlement' },

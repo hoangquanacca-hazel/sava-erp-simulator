@@ -42,6 +42,9 @@ jobs:
       - name: Parity M1–M8
         if: ${{ !cancelled() }}
         run: npm run test:parity
+      - name: Manufacturing finance workflows (simulation only)
+        if: ${{ !cancelled() }}
+        run: npm run test:manufacturing-finance
       - name: S1 cấu hình TT99
         if: ${{ !cancelled() }}
         run: npm run test:s1
@@ -90,6 +93,9 @@ jobs:
       - name: Thư viện template còn nguyên sau app build
         if: ${{ !cancelled() }}
         run: node scripts/verify-reporting-release.mjs
+      - name: Simulated Native package (SIMULATED_NATIVE, own manifest/sha256)
+        if: ${{ !cancelled() }}
+        run: npm run test:simulated-native
       - name: 150 hồ sơ và CSV/XLSX giữ đúng trường dữ liệu
         if: ${{ !cancelled() }}
         run: python3 scripts/test-sap-expansion-150.py

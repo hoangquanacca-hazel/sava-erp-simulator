@@ -1,0 +1,45 @@
+{
+  "banner": "SIMULATED_NATIVE | GENERATED_SYNTHETIC | NOT_SAP_NATIVE",
+  "report_id": "CO15",
+  "ordered_columns": [
+    "co_area",
+    "year",
+    "period",
+    "doc",
+    "line",
+    "customer",
+    "product",
+    "profit_center",
+    "cost_element",
+    "amount",
+    "currency"
+  ],
+  "rows": [
+    {
+      "co_area": "A100",
+      "year": "2026",
+      "period": "009",
+      "doc": "190100001",
+      "line": "001",
+      "customer": "CUST-0001",
+      "product": "FG-DEMO-01",
+      "profit_center": "PC1100",
+      "cost_element": "400000",
+      "amount": "1000",
+      "currency": "USD"
+    },
+    {
+      "co_area": "A100",
+      "year": "2026",
+      "period": "009",
+      "doc": "190100002",
+      "line": "002",
+      "customer": "CUST-0002",
+      "product": "FG-DEMO-01",
+      "profit_center": "PC1100",
+      "cost_element": "400000",
+      "amount": "-250",
+      "currency": "USD"
+    }
+  ]
+}

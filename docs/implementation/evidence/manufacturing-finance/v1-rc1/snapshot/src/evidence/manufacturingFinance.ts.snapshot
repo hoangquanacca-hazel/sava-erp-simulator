@@ -1,0 +1,34 @@
+import { createManufacturingFinance, executeFinance, financeControls, FINANCE_SCOPE, type FinanceState } from '../features/manufacturingFinance';
+import { financeReportText, manufacturingFinanceReports } from '../reports/manufacturingFinance';
+import { sha256Hex } from '../reports/core';
+
+export async function exportFinanceEvidence(input: FinanceState) {
+  const state = structuredClone(input);
+  let replay = createManufacturingFinance();
+  for (const event of state.history) {
+    const result = executeFinance(replay, event.command);
+    if (result.status !== 'SIMULATED') throw new Error('Training history cannot be replayed');
+    replay = result.state;
+  }
+  if (JSON.stringify(replay) !== JSON.stringify(state)) throw new Error('Training state differs from command replay');
+  const reports = await Promise.all(manufacturingFinanceReports(state).map(async report => {
+    const text = financeReportText(report);
+    return { ...report, text, sha256: await sha256Hex(new TextEncoder().encode(text)) };
+  }));
+  const payload = {
+    schema: 'sava-manufacturing-finance-evidence-v1', scope: FINANCE_SCOPE,
+    persistence: 'BROWSER_RAM_ONLY', identity: 'SELF_DECLARED_NOT_AUTHENTICATED',
+    infographic: 'FIVE_WORKFLOWS_FROM_USER_DESCRIPTION; ORIGINAL_IMAGE_NOT_AVAILABLE',
+    controls: financeControls(state), state, reports,
+    acceptance: { simulatedReplay: 'PASS', sapNative: 'NOT_RUN', targetRelease: 'UNKNOWN', independentSme: 'PENDING', business: 'NOT_APPROVED' },
+    limits: ['Synthetic fixture and local policy only; no SAP connection or native export.',
+      'Customer down payment only; no supplier/security-deposit lifecycle or tax/FX.',
+      'Dunning is a local notice simulation, no real scheduling, delivery, fee or ECL posting.',
+      'Bank clearing is single-stage; SAP posting areas and bank file parsing are not implemented.',
+      'One overall Internal Order budget; no annual/released budgets or SAP tolerance configuration.',
+      'Cross-company supplier clearing leaves reciprocal intercompany balances open; no consolidation elimination.',
+      'Hash and replay do not prove authentication, SME approval or SAP-native acceptance.'],
+  };
+  const text = JSON.stringify(payload, null, 2) + '\n';
+  return { fileName: `${FINANCE_SCOPE.id}_SIMULATED.json`, text, sha256: await sha256Hex(new TextEncoder().encode(text)) };
+}

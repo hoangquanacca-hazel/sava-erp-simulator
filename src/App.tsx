@@ -57,6 +57,7 @@ import { StepResult } from './features/stepGate';
 import { planStepRun } from './features/stepRun';
 import { buildAcdocaTable, InMemoryJournalRepository } from './ledger/journalRepository';
 import { postCkmlcp } from './features/materialLedger';
+import { createManufacturingFinance, executeFinance, type FinanceResult } from './features/manufacturingFinance';
 import {
   CheckCircle,
   Play,
@@ -79,11 +80,14 @@ const SodAuditPage = lazy(() => import('./pages/SodAuditPage'));
 const MaterialLedgerPage = lazy(() => import('./pages/MaterialLedgerPage'));
 const GrirPage = lazy(() => import('./pages/GrirPage'));
 const IntercompanyPage = lazy(() => import('./pages/IntercompanyPage'));
+const ManufacturingFinancePage = lazy(() => import('./pages/ManufacturingFinancePage'));
+const SimulatedNativePilotPage = lazy(() => import('./pages/SimulatedNativePilotPage'));
 
 const INITIAL_PARAMS: MTOParameters = PRESET_SCENARIOS[0].params;
 
 export default function App() {
   const [params, setParams] = useState<MTOParameters>(INITIAL_PARAMS);
+  const [financeSession, setFinanceSession] = useState<FinanceResult>(() => ({ state: createManufacturingFinance(), status: 'NO_CHANGE', message: 'Bắt đầu từ bước 1 hoặc thử một kiểm soát ngoại lệ.' }));
   const [currentScreen, setCurrentScreen] = useState<'setup' | 'simulation'>('setup');
   const [currentStepId, setCurrentStepId] = useState<number>(1);
   const [uiMode, setUiMode] = useState<UIMode>('fiori');
@@ -579,7 +583,18 @@ export default function App() {
 
       {/* Main Content Area */}
       <main className="flex-1 pb-16">
-        {route === 'variance' && flags.m1Variance ? (
+        {route === 'manufacturing-finance' ? (
+          <Suspense fallback={<div className="p-8 text-sm text-slate-400">Đang tải Manufacturing Finance…</div>}>
+            <ManufacturingFinancePage session={financeSession}
+              onCommand={command => setFinanceSession(previous => executeFinance(previous.state, command))}
+              onReset={() => setFinanceSession({ state: createManufacturingFinance(), status: 'NO_CHANGE', message: 'Đã đặt lại riêng bài tài chính.' })}
+              uiMode={uiMode} />
+          </Suspense>
+        ) : route === 'simulated-native' ? (
+          <Suspense fallback={<div className="p-8 text-sm text-slate-400">Đang tải Simulated Native…</div>}>
+            <SimulatedNativePilotPage uiMode={uiMode} />
+          </Suspense>
+        ) : route === 'variance' && flags.m1Variance ? (
           <Suspense fallback={<div className="p-8 text-sm text-slate-400">Đang tải Variance…</div>}>
             <VarianceWaterfallPage params={params} computed={computed} uiMode={uiMode} />
           </Suspense>

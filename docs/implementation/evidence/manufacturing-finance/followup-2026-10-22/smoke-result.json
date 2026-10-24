@@ -1,0 +1,5 @@
+{
+  "name": "production-smoke",
+  "exitCode": 0,
+  "log": "production-smoke.log"
+}

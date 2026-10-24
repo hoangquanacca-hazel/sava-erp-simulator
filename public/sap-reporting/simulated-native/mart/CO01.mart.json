@@ -1,0 +1,100 @@
+{
+  "envelope_version": "simulated-native-envelope.v1",
+  "artifact_id": "SIMNATIVE-CO01-20261023",
+  "generated_at": "2026-10-23",
+  "provenance_class": "SIMULATED_NATIVE",
+  "source_kind": "GENERATED_SYNTHETIC",
+  "original_sap_export": false,
+  "native_acceptance": "NOT_RUN",
+  "business_acceptance": "NOT_APPROVED",
+  "target_release": "UNKNOWN",
+  "system": "SAVA_SIMULATOR",
+  "client": "000-DEMO-ONLY",
+  "scenario_id": "phase3-pilot-co01",
+  "seed": "SAVA-CO01-20261023",
+  "ruleset_version": "simulated-native-rules.v1",
+  "source_profile_id": "CO01",
+  "contract_version": "phase3-entry-contract-2026-10-21",
+  "tcode_or_app": "KSB1 / KSB1N",
+  "title": "Chi tiết chi phí cost center thực tế",
+  "module": "CO",
+  "grain": "Một dòng cho tổ hợp: co_area + year + doc + line. Thêm source_system/client; snapshot lưu dataset_id riêng.",
+  "keys": [
+    "co_area",
+    "year",
+    "doc",
+    "line"
+  ],
+  "columns": [
+    "co_area",
+    "year",
+    "period",
+    "doc",
+    "line",
+    "cost_center",
+    "cost_element",
+    "amount",
+    "currency",
+    "activity",
+    "qty",
+    "uom"
+  ],
+  "raw_sha256": "db9b59fcff4f5afa410d92a3ba9752ed3d14839b7a81023ae29f7d793fb5878f",
+  "row_count": 2,
+  "control_totals": {
+    "year": 4052,
+    "period": 18,
+    "line": 3,
+    "amount": 750,
+    "qty": 30
+  },
+  "selection_context": {
+    "system_product": "SAVA simulator fixture",
+    "release": "UNKNOWN",
+    "language": "vi-VN",
+    "selection_variant": "SIMULATED_DEFAULT",
+    "cutoff": "2026-09-30",
+    "scope": "two deterministic teaching rows; not full population"
+  },
+  "limitations": [
+    "This artifact simulates an export-shaped payload; it is not an original SAP export.",
+    "Technical field names and layout order remain proposed until target-release evidence exists.",
+    "Native, reconciliation, owner, SME and IFRS/business acceptance remain open.",
+    "Production deployment is fail-closed and not authorized by this artifact."
+  ],
+  "layer": "MART",
+  "dataset_id": "CO01-SIM-20260930",
+  "fact_table": "co01_fact",
+  "rows": [
+    {
+      "co_area": "A100",
+      "year": "2026",
+      "period": "009",
+      "doc": "190100001",
+      "line": "001",
+      "cost_center": "CC1100",
+      "cost_element": "400000",
+      "amount": "1000",
+      "currency": "USD",
+      "activity": "MACHINE",
+      "qty": "10",
+      "uom": "EA"
+    },
+    {
+      "co_area": "A100",
+      "year": "2026",
+      "period": "009",
+      "doc": "190100002",
+      "line": "002",
+      "cost_center": "CC1100",
+      "cost_element": "400000",
+      "amount": "-250",
+      "currency": "USD",
+      "activity": "MACHINE",
+      "qty": "20",
+      "uom": "EA"
+    }
+  ],
+  "direct_join_allowed": false,
+  "join_status": "BLOCKED_PENDING_NATIVE_INPUT"
+}

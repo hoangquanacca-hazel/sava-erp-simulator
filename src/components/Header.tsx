@@ -130,7 +130,7 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <>
       <header
-        className={`sticky top-0 z-40 transition-colors shadow-md ${
+        className={`md:sticky md:top-0 z-40 transition-colors shadow-md ${
           isClassic
             ? 'bg-[#d4d0c8] text-[#000000] border-b-2 border-[#808080]'
             : 'bg-slate-900/95 backdrop-blur-md border-b border-slate-800'
@@ -274,7 +274,7 @@ export const Header: React.FC<HeaderProps> = ({
           </form>
 
           {/* Action Toolbar */}
-          <div className="flex items-center flex-wrap gap-2">
+          <div className="flex min-w-0 max-w-full items-center flex-wrap gap-2">
             {/* Simulated SAP License Concurrency Limit Badge */}
             <div
               className={`px-2.5 py-1 rounded-full border text-[11px] font-bold flex items-center gap-1.5 shadow-sm ${
@@ -373,7 +373,7 @@ export const Header: React.FC<HeaderProps> = ({
             </button>
 
             {/* Preset Selector */}
-            <div className="relative">
+            <div className="relative min-w-0 max-w-full">
               <select
                 aria-label="Chọn tình huống mẫu"
                 defaultValue=""
@@ -382,7 +382,7 @@ export const Header: React.FC<HeaderProps> = ({
                   if (found) onSelectPreset(found);
                   e.target.value = '';
                 }}
-                className={`text-xs rounded px-2.5 py-1.5 border focus:outline-none cursor-pointer font-medium ${
+                className={`max-w-full text-xs rounded px-2.5 py-1.5 border focus:outline-none cursor-pointer font-medium ${
                   isClassic
                     ? 'bg-white text-[#000000] border-[#7f9db9]'
                     : 'bg-slate-800 text-slate-200 border-slate-700 hover:bg-slate-750 focus:ring-1 focus:ring-cyan-500'

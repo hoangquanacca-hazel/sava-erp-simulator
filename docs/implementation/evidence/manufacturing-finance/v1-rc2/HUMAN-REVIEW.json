@@ -1,0 +1,25 @@
+{
+  "candidate": "manufacturing-finance-v1.0.0-rc.2",
+  "manifestSha256": "fe245441d49e8f7e076e9b857459e0db89a91b0073894b991198d4727539b8e4",
+  "status": "REVIEWED_WITH_OPEN_F150_QUESTION",
+  "reviewer": "Người dùng — phản hồi trong chat",
+  "reviewedAt": "2026-10-23",
+  "answers": {
+    "1": "Yêu cầu cọc mới chỉ gửi cho khách hàng; tiền chưa thực tế vào tài khoản nên chưa tăng tiền. Khoản cọc đã nhận chưa làm tăng doanh thu theo yêu cầu của chuẩn mực doanh thu IFRS gồm 5 bước; VAS cũng tương tự.",
+    "2": "Thông thường sau cấn trừ cọc hoặc clearing cần xem lại còn số dư hay không; khi hoàn thành thì số dư cọc thường phải hết. F150 người dùng chưa biết rõ vì ít sử dụng SAP.",
+    "3": "Đồng ý với kết quả trong bảng kiểm tra về item 002 và item 004; không lặp lại câu trả lời.",
+    "4": "Đồng ý với kết quả trong bảng kiểm tra về actual, commitment và assigned; không lặp lại câu trả lời.",
+    "5": "Đồng ý với kết quả trong bảng kiểm tra về thanh toán hộ và số dư giữa hai công ty; không lặp lại câu trả lời."
+  },
+  "findings": [
+    {
+      "id": "F150_REVIEW_OPEN",
+      "severity": "OPEN",
+      "description": "Người dùng chưa xác nhận cách đọc F150, dunning level, proposal/notice và các điều kiện sau clearing trong SAP thực tế.",
+      "action": "Giữ learningUseApproval chưa phê duyệt; nếu cần dùng SAP-native hoặc chốt nghiệp vụ thì cần SAP/Finance SME xác nhận theo release/configuration."
+    }
+  ],
+  "learningUseApproval": null,
+  "sapNative": "NOT_RUN",
+  "business": "NOT_APPROVED"
+}

@@ -1,0 +1,48 @@
+{
+  "banner": "SIMULATED_NATIVE | GENERATED_SYNTHETIC | NOT_SAP_NATIVE",
+  "report_id": "MM08",
+  "ordered_columns": [
+    "po",
+    "item",
+    "event",
+    "year",
+    "doc",
+    "line",
+    "date",
+    "qty",
+    "uom",
+    "amount",
+    "currency",
+    "accounting_ref"
+  ],
+  "rows": [
+    {
+      "po": "PO_DEMO_1",
+      "item": "001",
+      "event": "EVENT_DEMO_1",
+      "year": "2026",
+      "doc": "190100001",
+      "line": "001",
+      "date": "2026-09-30",
+      "qty": "10",
+      "uom": "EA",
+      "amount": "1000",
+      "currency": "USD",
+      "accounting_ref": "ACCOUNTING_REF_DEMO_1"
+    },
+    {
+      "po": "PO_DEMO_2",
+      "item": "002",
+      "event": "EVENT_DEMO_2",
+      "year": "2026",
+      "doc": "190100002",
+      "line": "002",
+      "date": "2026-09-30",
+      "qty": "20",
+      "uom": "EA",
+      "amount": "-250",
+      "currency": "USD",
+      "accounting_ref": "ACCOUNTING_REF_DEMO_2"
+    }
+  ]
+}

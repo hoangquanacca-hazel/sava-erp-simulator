@@ -1,0 +1,42 @@
+{
+  "banner": "SIMULATED_NATIVE | GENERATED_SYNTHETIC | NOT_SAP_NATIVE",
+  "report_id": "FI01",
+  "ordered_columns": [
+    "company",
+    "year",
+    "doc",
+    "line",
+    "date",
+    "gl",
+    "amount",
+    "currency",
+    "doc_amount",
+    "doc_currency"
+  ],
+  "rows": [
+    {
+      "company": "1000",
+      "year": "2026",
+      "doc": "190100001",
+      "line": "001",
+      "date": "2026-09-30",
+      "gl": "150000",
+      "amount": "1000",
+      "currency": "USD",
+      "doc_amount": "1000",
+      "doc_currency": "USD"
+    },
+    {
+      "company": "1000",
+      "year": "2026",
+      "doc": "190100002",
+      "line": "002",
+      "date": "2026-09-30",
+      "gl": "150000",
+      "amount": "-250",
+      "currency": "USD",
+      "doc_amount": "-250",
+      "doc_currency": "USD"
+    }
+  ]
+}

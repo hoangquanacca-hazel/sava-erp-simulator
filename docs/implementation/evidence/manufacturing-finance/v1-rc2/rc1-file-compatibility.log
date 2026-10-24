@@ -1,0 +1,20 @@
+{
+  "status": "VERIFIED_SIMULATION_ONLY",
+  "sha256": "24b60c732b0bbb1e0a0517129cb6fc4b555816f9e1aac50dc72f6a472380c850",
+  "hashCompared": false,
+  "revision": 12,
+  "documents": 18,
+  "reports": [
+    {
+      "id": "FI21",
+      "rows": 8
+    },
+    {
+      "id": "FI22",
+      "rows": 4
+    }
+  ],
+  "sapNative": "NOT_RUN",
+  "independentSme": "PENDING",
+  "business": "NOT_APPROVED"
+}

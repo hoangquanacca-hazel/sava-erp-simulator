@@ -1,0 +1,2 @@
+◇ injected env (0) from .env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+SAP MTO Simulator running on http://127.0.0.1:50061

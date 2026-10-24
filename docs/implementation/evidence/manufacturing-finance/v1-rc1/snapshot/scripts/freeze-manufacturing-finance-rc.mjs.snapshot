@@ -1,0 +1,75 @@
+/* global console, process */
+import fs from 'node:fs';
+import path from 'node:path';
+import { createHash } from 'node:crypto';
+import { execFileSync } from 'node:child_process';
+import assert from 'node:assert/strict';
+
+const root = path.resolve(import.meta.dirname, '..');
+const dir = 'docs/implementation/evidence/manufacturing-finance/v1-rc1';
+const manifestPath = `${dir}/RELEASE-MANIFEST.json`;
+const sha = p => createHash('sha256').update(fs.readFileSync(path.join(root, p))).digest('hex');
+const read = p => JSON.parse(fs.readFileSync(path.join(root, p), 'utf8').replace(/^\uFEFF/, ''));
+if (process.argv.includes('--verify')) {
+  const m = read(manifestPath);
+  for (const f of [...m.sourceFiles, ...m.buildFiles, ...m.evidenceFiles]) assert.equal(sha(f.path), f.sha256, `Changed: ${f.path}`);
+  assert.equal(fs.readFileSync(path.join(root, dir, 'RELEASE-MANIFEST.sha256'), 'utf8').trim(), sha(manifestPath));
+  console.log(`PASS frozen RC readback: ${m.sourceFiles.length} sources, ${m.buildFiles.length} build files, ${m.evidenceFiles.length} evidence files. Human review remains separate.`);
+  process.exit(0);
+}
+const browserDir = `${dir}/browser-final-v2`;
+const browser = read(`${browserDir}/results.json`);
+assert.equal(browser.status, 'PASS'); assert.equal(browser.scenarios.length, 4); assert.equal(browser.verifiedDownloads, 28);
+assert.equal(browser.crossThemeViewportEvidence, 'BYTE_IDENTICAL');
+for (const s of browser.scenarios) {
+  assert.equal(s.status, 'PASS'); assert.equal(s.checks.length, 10); assert.deepEqual(s.pageErrors, []);
+  for (const f of s.downloads) assert.equal(sha(`${browserDir}/${f.file}`), f.sha256);
+}
+const commands = read(`${dir}/command-results.json`);
+assert.equal(commands.length, 5); assert.ok(commands.every(c => c.exitCode === 0));
+assert.match(fs.readFileSync(path.join(root, dir, 'build.log'), 'utf8'), /built in/);
+assert.match(fs.readFileSync(path.join(root, dir, 'production-smoke.log'), 'utf8'), /PASS production/);
+const extra = read(`${dir}/extra-checks.json`); assert.ok(extra.every(c => c.exitCode === 0));
+const initial = read('docs/implementation/evidence/manufacturing-finance/review-status.json');
+for (const f of initial.files.filter(f => !['package.json', 'src/pages/ManufacturingFinancePage.tsx'].includes(f.path)))
+  assert.equal(sha(f.path), f.sha256, `Unexpected change to initial source: ${f.path}`);
+assert.equal(sha('package-lock.json'), '62f4f20ac56ae02aa2780199a8b880ee73eaf33d4878c07549aefc2493a0f139');
+
+const sources = ['src/App.tsx', 'src/components/ModuleNav.tsx', 'src/components/Header.tsx', 'src/features/hashRoute.ts',
+  'src/features/manufacturingFinance.ts', 'src/pages/ManufacturingFinancePage.tsx', 'src/reports/manufacturingFinance.ts',
+  'src/reports/manufacturingFinance.contracts.json', 'src/evidence/manufacturingFinance.ts', 'scripts/manufacturing-finance.tsx',
+  'scripts/manufacturing-finance-browser.mjs', 'scripts/freeze-manufacturing-finance-rc.mjs', 'package.json', 'package-lock.json',
+  '.github/workflows/ci.yml', 'docs/implementation/21-SIMULATOR-V1-REVIEW.md'];
+const build = ['dist/index.html', 'dist/server.mjs', ...fs.readdirSync(path.join(root, 'dist/assets')).filter(n => /\.(js|css)$/.test(n)).map(n => `dist/assets/${n}`)];
+const evidence = [...fs.readdirSync(path.join(root, browserDir)).map(n => `${browserDir}/${n}`),
+  ...commands.map(c => `${dir}/${c.log}`), ...extra.map(c => `${dir}/${c.log}`), `${dir}/build.log`, `${dir}/production-smoke.log`,
+  `${dir}/command-results.json`, `${dir}/extra-checks.json`];
+const entries = items => [...new Set(items)].sort().map(p => ({ path: p, bytes: fs.statSync(path.join(root, p)).size, sha256: sha(p) }));
+const manifest = {
+  candidate: 'manufacturing-finance-v1.0.0-rc.1', date: '2026-10-22', timezone: 'Asia/Saigon',
+  scope: 'Five-workflow learning simulator; no native SAP or production integration',
+  status: 'TECHNICALLY_VERIFIED_RC_HUMAN_REVIEW_PENDING',
+  baseHead: execFileSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' }).trim(),
+  checkout: 'DIRTY_WITH_PREEXISTING_CONCURRENT_WORK; FILE_HASH_FREEZE_IS_NOT_A_CLEAN_RELEASE_CHECKOUT',
+  technical: { browser: '4_OF_4_PASS', scenarioChecks: 40, savedDownloads: 28, crossThemeViewportEvidence: 'BYTE_IDENTICAL',
+    javascriptErrors: 0, commands: commands.length + extra.length + 2, browserVersion: browser.browserVersion,
+    viewports: ['1440x1000', '390x844'], themes: ['fiori', 'classic'] },
+  fixes: ['Responsive toolbar/preset widths', 'Lesson reset restores numeric input and clearing selections', 'Header scrolls naturally below md breakpoint'],
+  acceptance: { learningUse: 'PENDING_HUMAN_REVIEW', independentSme: 'PENDING', sapNative: 'NOT_RUN', targetRelease: 'UNKNOWN', business: 'NOT_APPROVED' },
+  humanReviewRecord: `${dir}/HUMAN-REVIEW.json`,
+  limits: ['App Browser plugin bootstrap still unavailable; isolated localhost headless fallback used.',
+    'No physical iPhone/Safari verification or learning-outcome study.', 'Third-party branding/fonts blocked in isolated tests.',
+    'Main bundle size warning and performance benchmark remain outside this focused milestone.',
+    'Pre-existing library navigation says 71 profiles while registry says 160; index.html preserved.',
+    'RAM-only training state, self-declared roles; no authenticated approval or durable accounting ledger.'],
+  sourceFiles: entries(sources), buildFiles: entries(build), evidenceFiles: entries(evidence),
+};
+const text = JSON.stringify(manifest, null, 2) + '\n';
+if (fs.existsSync(path.join(root, manifestPath))) assert.equal(fs.readFileSync(path.join(root, manifestPath), 'utf8'), text, 'Frozen candidate differs; use a new version');
+else fs.writeFileSync(path.join(root, manifestPath), text);
+fs.writeFileSync(path.join(root, dir, 'RELEASE-MANIFEST.sha256'), sha(manifestPath) + '\n');
+const reviewPath = path.join(root, dir, 'HUMAN-REVIEW.json');
+if (!fs.existsSync(reviewPath)) fs.writeFileSync(reviewPath, JSON.stringify({ candidate: manifest.candidate,
+  candidateManifestSha256: sha(manifestPath), status: 'PENDING_HUMAN_REVIEW', reviewer: null, reviewedAt: null,
+  workflowsReviewed: [], reasoningAnswers: {}, findings: [], learningUseApproval: null, sapNativeAcceptance: 'NOT_RUN' }, null, 2) + '\n');
+console.log(`FROZEN ${manifest.candidate}; SHA256 ${sha(manifestPath)}; human review PENDING.`);

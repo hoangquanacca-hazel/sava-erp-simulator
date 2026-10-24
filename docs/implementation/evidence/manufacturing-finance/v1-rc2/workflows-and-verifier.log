@@ -1,0 +1,16 @@
+PASS seed is isolated, deterministic, reconciled and namespace-qualified
+PASS invalid lifecycle commands and unknown action are atomic
+PASS request is noted-only; receipt does not create revenue; retries do not duplicate
+PASS invoice and deposit clearing leave AR 84m, no second revenue, independent of action order
+PASS dunning proposal retains blocked/not-due rows, does not issue or post, then stale proposal blocks
+PASS issued demo notices update history only; no repeat within interval, blocked items stay untouched
+PASS dunning boundaries use grace 3d, 30d escalation and 7d interval; cleared excluded
+PASS auto bank clearing handles 1:N without duplicating bank amount, leaves unmatched and ambiguous
+PASS auto-match never falls back to equal amounts, wrong currency/company/rule or empty reference
+PASS manual FEBAN confirmation checks scope/amount, preserves original reference and cannot post twice
+PASS AVC rejects invalid/excess/inactive commitments atomically; accepts boundary and warns at 90%
+PASS actual invoice relieves only new commitment, conserving assigned value and FI balance
+PASS cross-company payment balances per company, clears supplier not reciprocal IC, and retries are safe
+PASS FI21/FI22 reuse existing practice contract columns and keys exactly; new scope avoids legacy date
+PASS route and both theme walkthroughs show all workflows, acceptance labels and current controls
+PASS 49 manufacturing finance checks; deterministic replay and evidence hashes. SAP-native NOT_RUN; business NOT_APPROVED.
