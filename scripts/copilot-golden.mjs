@@ -48,12 +48,8 @@ for (const c of cases) {
   if (exp.tool === null) {
     ok = body.type === 'text';
   } else {
-    ok = body.type === 'tool' && body.tool === exp.tool;
-    if (ok && exp.input) {
-      for (const [k, v] of Object.entries(exp.input)) {
-        if (body.input?.[k] !== v) ok = false;
-      }
-    }
+    const matches = (want, inp) => body.type === 'tool' && body.tool === want.tool && (!want.input || Object.entries(want.input).every(([k, v]) => inp?.[k] === v));
+    ok = matches(exp, body.input) || (Array.isArray(exp.alt) && exp.alt.some((a) => matches(a, body.input)));
   }
   rows.push({ id: c.id, ok, got: body.type === 'tool' ? `${body.tool}${JSON.stringify(body.input ?? {})}` : `text`, want: exp.tool === null ? 'text' : `${exp.tool}${exp.input ? JSON.stringify(exp.input) : ''}` });
 }
