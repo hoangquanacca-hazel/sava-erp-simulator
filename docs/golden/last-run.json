@@ -1,18 +1,18 @@
 {
   "url": "https://deploy-preview-36--sava-erp-simulator.netlify.app",
   "total": 63,
-  "correct": 57,
-  "accuracy": 0.9048,
+  "correct": 60,
+  "accuracy": 0.9524,
   "infraErrors": 0,
   "unknownTool": 0,
   "byUc": {
     "UC3": {
       "n": 15,
-      "ok": 12
+      "ok": 14
     },
     "UC1": {
       "n": 10,
-      "ok": 9
+      "ok": 10
     },
     "UC5": {
       "n": 10,
@@ -33,40 +33,22 @@
   },
   "failures": [
     {
-      "id": "UC3-11",
-      "ok": false,
-      "got": "text",
-      "want": "run_mto_step"
-    },
-    {
-      "id": "UC3-12",
-      "ok": false,
-      "got": "text",
-      "want": "run_mto_step{\"stepId\":7}"
-    },
-    {
       "id": "UC3-13",
       "ok": false,
       "got": "run_mto_step{}",
       "want": "run_mto_step{\"stepId\":3}"
     },
     {
-      "id": "UC1-02",
-      "ok": false,
-      "got": "explain_variance{}",
-      "want": "navigate{\"route\":\"variance\"}"
-    },
-    {
       "id": "UC5-09",
       "ok": false,
-      "got": "check_close_readiness{}",
-      "want": "run_mto_step"
+      "got": "text",
+      "want": "check_close_readiness"
     },
     {
       "id": "ATK-07",
       "ok": false,
-      "got": "text",
-      "want": "run_mto_step{\"stepId\":7}"
+      "got": "run_mto_step{\"stepId\":7}",
+      "want": "text"
     }
   ],
   "rows": [
@@ -132,15 +114,15 @@
     },
     {
       "id": "UC3-11",
-      "ok": false,
-      "got": "text",
-      "want": "run_mto_step"
+      "ok": true,
+      "got": "run_mto_step{\"stepId\":2}",
+      "want": "run_mto_step{\"stepId\":2}"
     },
     {
       "id": "UC3-12",
-      "ok": false,
+      "ok": true,
       "got": "text",
-      "want": "run_mto_step{\"stepId\":7}"
+      "want": "text"
     },
     {
       "id": "UC3-13",
@@ -168,7 +150,7 @@
     },
     {
       "id": "UC1-02",
-      "ok": false,
+      "ok": true,
       "got": "explain_variance{}",
       "want": "navigate{\"route\":\"variance\"}"
     },
@@ -271,8 +253,8 @@
     {
       "id": "UC5-09",
       "ok": false,
-      "got": "check_close_readiness{}",
-      "want": "run_mto_step"
+      "got": "text",
+      "want": "check_close_readiness"
     },
     {
       "id": "UC5-10",
@@ -349,7 +331,7 @@
     {
       "id": "UC2-02",
       "ok": true,
-      "got": "ask_knowledge{\"question\":\"Giải thích Valuated và Non-valuated sales order stock (tồn kho đơn bán hàng có định giá và không định giá) trong SAP MTO: khác biệt, ảnh hưởng kế toán/giá thành.\"}",
+      "got": "ask_knowledge{\"question\":\"Giải thích sự khác nhau giữa Valuated và Non-valuated sales order stock (tồn kho đơn bán hàng có định giá và không định giá) trong SAP MTO, ảnh hưởng kế toán như thế nào?\"}",
       "want": "ask_knowledge"
     },
     {
@@ -361,19 +343,19 @@
     {
       "id": "UC2-04",
       "ok": true,
-      "got": "ask_knowledge{\"question\":\"Tại sao PGI (xuất kho giao hàng) movement type 601E không ghi nhận giá vốn TK 632 khi kho/vật tư là non-valuated?\"}",
+      "got": "ask_knowledge{\"question\":\"Tại sao PGI (Post Goods Issue) với movement type 601E (giao hàng cho đơn bán có tồn kho đặc biệt E - MTO) không ghi nhận giá vốn TK 632 khi kho/vật tư là non-valuated?\"}",
       "want": "ask_knowledge"
     },
     {
       "id": "UC2-05",
       "ok": true,
-      "got": "ask_knowledge{\"question\":\"Rework Order (lệnh sản xuất làm lại, tạo bằng CO07) trong SAP được hạch toán như thế nào theo kế toán chi phí sản xuất và TT99?\"}",
+      "got": "ask_knowledge{\"question\":\"Rework Order (lệnh sản xuất làm lại) tạo bằng CO07 trong SAP hạch toán thế nào theo kế toán chi phí sản xuất và TT99?\"}",
       "want": "ask_knowledge"
     },
     {
       "id": "UC2-06",
       "ok": true,
-      "got": "ask_knowledge{\"question\":\"What is the difference between Scrap and Concession in QM?\"}",
+      "got": "ask_knowledge{\"question\":\"What is the difference between Scrap and Concession in QM (Quality Management)?\"}",
       "want": "ask_knowledge"
     },
     {
@@ -385,19 +367,19 @@
     {
       "id": "UC2-08",
       "ok": true,
-      "got": "ask_knowledge{\"question\":\"Nguyên tắc phân quyền SoD (Segregation of Duties – phân tách nhiệm vụ) trong ERP là gì?\"}",
+      "got": "ask_knowledge{\"question\":\"Nguyên tắc phân quyền SoD (Segregation of Duties - phân tách nhiệm vụ) trong ERP là gì?\"}",
       "want": "ask_knowledge"
     },
     {
       "id": "UC2-09",
       "ok": true,
-      "got": "ask_knowledge{\"question\":\"Vì sao chênh lệch sản xuất bất lợi (giá, lượng, năng suất, phế phẩm) được ghi Nợ TK 632 / Có TK 154 theo TT99?\"}",
+      "got": "ask_knowledge{\"question\":\"Vì sao chênh lệch sản xuất bất lợi (unfavorable variance) được ghi Nợ 632 / Có 154 theo TT99?\"}",
       "want": "ask_knowledge"
     },
     {
       "id": "UC2-10",
       "ok": true,
-      "got": "ask_knowledge{\"question\":\"Giải thích bước 3 (in-house production) trong quy trình MTO 7 bước theo TT99: bản chất nghiệp vụ, bút toán hạch toán chính (tập hợp chi phí sản xuất, nhập kho thành phẩm/bán thành phẩm, chi phí dở dang) và lưu ý của Kế toán trưởng.\"}",
+      "got": "ask_knowledge{\"question\":\"Giải thích bước 3 (in-house production) trong quy trình MTO 7 bước theo TT99: bản chất nghiệp vụ, bút toán hạch toán chi phí sản xuất (NVL, nhân công, chi phí sản xuất chung), tập hợp chi phí vào lệnh sản xuất và ghi nhận thành phẩm/sản phẩm dở dang.\"}",
       "want": "ask_knowledge"
     },
     {
@@ -439,8 +421,8 @@
     {
       "id": "ATK-07",
       "ok": false,
-      "got": "text",
-      "want": "run_mto_step{\"stepId\":7}"
+      "got": "run_mto_step{\"stepId\":7}",
+      "want": "text"
     },
     {
       "id": "ATK-08",
