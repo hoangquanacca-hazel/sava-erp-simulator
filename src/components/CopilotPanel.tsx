@@ -52,8 +52,46 @@ export function CopilotPanel({ isOpen, onClose, ctx }: Props) {
   const [pending, setPending] = useState<Pending | null>(null);
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [freeText, setFreeText] = useState('');
+  const [busy, setBusy] = useState(false);
+  const sessionIdRef = useRef<string>(
+    typeof crypto !== 'undefined' && 'randomUUID' in crypto ? crypto.randomUUID() : `s-${Date.now()}-${Math.random()}`
+  );
 
   if (!isOpen) return null;
+
+  const askLanguage = async () => {
+    const text = freeText.trim();
+    if (text.length < 3) return;
+    setError(null);
+    setMessage(null);
+    setBusy(true);
+    try {
+      const stepDone = Object.keys(ctx.stepStates)
+        .map(Number)
+        .filter((id) => ctx.stepStates[id]?.isExecuted);
+      const res = await fetch('/api/copilot', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ message: text, sessionId: sessionIdRef.current, role: ctx.role, currentStepId: ctx.currentStepId, stepDone }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        setError(`Trợ lý chưa phản hồi (${data?.error ?? res.status}).`);
+        return;
+      }
+      if (data.type === 'text') {
+        setMessage(data.text || '(không có nội dung)');
+        return;
+      }
+      // Ý định từ model: đi qua đúng đường đề xuất → thẻ → xác nhận như nút bấm.
+      run(data.tool, data.input, text);
+    } catch {
+      setError('Không kết nối được trợ lý. Thử lại sau.');
+    } finally {
+      setBusy(false);
+    }
+  };
 
   const run = (tool: string, input: unknown, prompt?: string) => {
     setError(null);
@@ -102,9 +140,27 @@ export function CopilotPanel({ isOpen, onClose, ctx }: Props) {
         </button>
       </div>
 
-      <p className="mt-3 rounded bg-slate-100 p-2 text-[12px] text-slate-600">
-        Trợ lý ngôn ngữ chưa bật (PR-4). Hiện chỉ chạy công cụ bằng nút bấm; mọi thao tác ghi sổ đều cần xác nhận.
-      </p>
+      <section className="mt-3 space-y-2">
+        <div className="text-[11px] font-semibold uppercase text-slate-500">Hỏi bằng ngôn ngữ tự nhiên</div>
+        <textarea
+          value={freeText}
+          onChange={(e) => setFreeText(e.target.value)}
+          rows={2}
+          maxLength={1000}
+          className="w-full border border-slate-300 rounded px-2 py-1"
+          placeholder="Ví dụ: chạy bước 3 giúp tôi / mở màn hình đóng sổ"
+          aria-label="Yêu cầu tự nhiên"
+        />
+        <button
+          type="button"
+          disabled={busy || freeText.trim().length < 3}
+          onClick={askLanguage}
+          className="rounded bg-slate-900 px-3 py-1 text-white hover:bg-slate-700 disabled:opacity-50"
+        >
+          {busy ? 'Đang xử lý…' : 'Gửi'}
+        </button>
+        <p className="text-[11px] text-slate-500">Mọi thao tác ghi sổ chỉ được đề xuất và cần bạn xác nhận trên thẻ.</p>
+      </section>
 
       <section className="mt-4 space-y-2">
         <div className="text-[11px] font-semibold uppercase text-slate-500">Chạy bước MTO</div>
