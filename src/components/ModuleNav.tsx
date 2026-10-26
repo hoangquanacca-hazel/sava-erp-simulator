@@ -56,6 +56,16 @@ export const ModuleNav: React.FC<{
             </button>
           );
         })}
+        <a
+          href="/erp/"
+          className={`px-2.5 py-1 rounded text-[11px] font-semibold border whitespace-nowrap ${
+            isClassic
+              ? 'bg-white text-[#0a246a] border-[#7f9db9] hover:bg-[#dce6f5]'
+              : 'bg-slate-900 text-slate-300 border-slate-700 hover:border-cyan-700'
+          }`}
+        >
+          SAVA ERP (sổ thật)
+        </a>
       </div>
     </nav>
   );

@@ -23,6 +23,17 @@
   to = "/.netlify/functions/health"
   status = 200
 
+# SAVA ERP (QĐ-33): proxy sang site Netlify riêng, code ERP nằm ở repo private. Đặt trước SPA fallback.
+[[redirects]]
+  from = "/erp"
+  to = "https://sava-erp-demo.netlify.app/erp/"
+  status = 200
+
+[[redirects]]
+  from = "/erp/*"
+  to = "https://sava-erp-demo.netlify.app/erp/:splat"
+  status = 200
+
 # SPA fallback
 [[redirects]]
   from = "/*"
